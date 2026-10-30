@@ -19,8 +19,8 @@
   --minus-soft: rgba(86, 101, 95, 0.12);
   --marker: #ffe066;
   --marker-ink: var(--logo-ink); /* Schrift auf gelben Feldern: gleiches dunkles Grün wie im Logo */
-  --logo-ink: #0f1614; /* MYLE-Schrift im Logo: dunkles Grün wie der Seitenhintergrund im Dunkelmodus, hell und dunkel gleich */
-  --statt-hg: #0f1614; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem dunklen Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
+  --logo-ink: #12312a; /* MYLE-Schrift im Logo und Schrift auf gelben Feldern: dunkles Grün (Lukas, Abstufung 3), hell und dunkel gleich */
+  --statt-hg: #12312a; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
   --tile: #e3eee9;
   --punkt-hg: rgba(255, 255, 255, 0.75); --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
   --glas: rgba(236, 243, 240, 0.55); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(250, 252, 251, 0.62); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
