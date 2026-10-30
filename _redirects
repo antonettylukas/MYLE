@@ -1,0 +1,9 @@
+# Fenstersauger seit Update 51 nicht mehr auf der Seite: alte Links auf die Startseite
+/fenstersauger.html / 301
+/fenstersauger / 301
+/en/fenstersauger.html /en/ 301
+/en/fenstersauger /en/ 301
+/fr/fenstersauger.html /fr/ 301
+/fr/fenstersauger /fr/ 301
+/it/fenstersauger.html /it/ 301
+/it/fenstersauger /it/ 301
