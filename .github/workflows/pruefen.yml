@@ -1,0 +1,28 @@
+# Prüft jede Änderung. Was auf den Zweig "vorschau" kommt, geht nur dann auf "main"
+# (und damit über Cloudflare auf myle.life), wenn die Prüfung keine Fehler findet.
+name: Prüfen und online stellen
+
+on:
+  push:
+    branches: [vorschau, main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pruefen-${{ github.ref }}
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Website prüfen
+        run: python3 .github/pruefung/pruefe.py
+      - name: Online stellen (vorschau nach main)
+        if: github.ref == 'refs/heads/vorschau'
+        run: git push origin HEAD:main
