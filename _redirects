@@ -7,3 +7,5 @@
 /fr/fenstersauger /fr/ 301
 /it/fenstersauger.html /it/ 301
 /it/fenstersauger /it/ 301
+# Die Prüf-Dateien für GitHub gehören nicht zur Website
+/.github/* / 301
