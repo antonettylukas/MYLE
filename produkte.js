@@ -66,7 +66,7 @@ const ASIN = {
   "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
-  "wiz a60 e27 color": "B0FLX2T1Z9",
+  "wiz a60 e27 color": "B0FLX416G8",
   "philips hue white and color ambiance e27": "B0FJ8TQFGP",
   "midea portasplit cool": "B0GXDWTFR5",
   "bosch cool 4000": "B0BXT5H4FC",
@@ -119,7 +119,7 @@ const ASIN = {
   "haier i-pro serie 7 plus waschtrockner hwd100-bd14979u1": "B0BT4TNW2P",
   "aeg l9wef80690 waschtrockner": "B09CDPGXXV",
   "hisense wd5s1045bw waschtrockner": "B0BXFPSKNF",
-  "bosch serie 6 wng24442 waschtrockner": "B0FBSQD796",
+  "bosch serie 6 wng24443 waschtrockner": "B0HBQMP4HK",
   "cosori dual basket 8,5 l": "B0CHB7TNWH",
   "philips dual basket na352": "B0D4Q8QFTH",
   "tefal dual easy fry grill ey905d": "B0CW52TT95",
@@ -385,7 +385,7 @@ const PRODUKTE = [
         hinweis: "Waschen und Trocknen mit voller Ladung dauert gut 8 Stunden.",
         link: amazon("haier i-pro serie 7 plus waschtrockner hwd100-bd14979u1"),
         alternativen: [
-          { name: "Bosch Serie 6 WNG24442", preis: 800, text: "Das ältere Modell WNG24440 aus derselben Serie war Preistipp bei Stiftung Warentest (Note 2,1, Heft 11/2023). Wäscht 9 kg und trocknet 6 kg.", link: amazon("bosch serie 6 wng24442 waschtrockner") }
+          { name: "Bosch Serie 6 WNG24443", preis: 840, text: "Das ältere Modell WNG24440 aus derselben Serie war Preistipp bei Stiftung Warentest (Note 2,1, Heft 11/2023). Wäscht 10,5 kg und trocknet 6 kg.", link: amazon("bosch serie 6 wng24443 waschtrockner") }
         ]
       },
       {
@@ -541,7 +541,7 @@ const PRODUKTE = [
     nachteile: [
       "Thermostate, die direkt ins WLAN gehen, schneiden in Tests schwächer ab. Die besten Modelle brauchen eine Zentrale, die einmal extra kostet, wenn du noch keine hast",
       "Drehst du die Heizung schon jetzt jedes Mal selbst runter, sparst du weniger Geld. Dann hast du den Kaufpreis erst nach ein paar Jahren wieder drin, die Bequemlichkeit hast du aber sofort",
-      "Die Batterien halten laut Herstellern meist bis zu zwei Jahre. Das Shelly TRV lädst du stattdessen per USB-C auf"
+      "Die Batterien halten laut Herstellern meist bis zu zwei Jahre, dann wechselst du sie"
     ],
     profitipp: {
       titel: "So stellst du deinen Heizplan ein",
@@ -590,19 +590,6 @@ const PRODUKTE = [
         link: amazon("fritz smart thermo 302")
       },
       {
-        gruppe: "Ohne Zentrale",
-        stufe: "Oberklasse", spanne: "direkt ins WLAN, mit Akku",
-        name: "Shelly TRV", preis: 80, preisText: "ca. 70 bis 90 € pro Stück",
-        punkte: [
-          "Geht direkt in dein WLAN, ganz ohne Zentrale",
-          "Akku statt Batterien: Er hält laut Hersteller bis zu zwei Jahre, dann lädst du ihn per USB-C auf",
-          "Bei smarthomeassistent.de volle Punktzahl für die App"
-        ],
-        fuer: "Für dich, wenn du keine Lust mehr auf Batterien hast.",
-        hinweis: "Bei Stiftung Warentest (Heft 9/2023) nur ausreichend (Note 3,8), unter anderem weil der Frostschutz umständlich einzustellen ist. Bei smarthomeassistent.de befriedigend (Note 2,6). Ladekabel und Netzteil sind nicht dabei. Achte auf „Shelly TRV“ ohne „BLU“: Das BLU-Modell funkt per Bluetooth und braucht für WLAN ein Gateway.",
-        link: amazon("shelly trv heizkörperthermostat wlan")
-      },
-      {
         gruppe: "Mit Zentrale",
         stufe: "Günstig", spanne: "mit Aqara-Hub oder Matter",
         name: "Aqara W600", preis: 50, preisText: "ca. 45 bis 55 € pro Stück", empfohlen: true,
@@ -645,15 +632,16 @@ const PRODUKTE = [
         link: amazon("homematic ip evo heizkörperthermostat")
       }
     ],
+    ohneTeuer: { stufe: "Oberklasse", titel: "Lieber mit Zentrale", text: "Ein teureres Thermostat ohne Zentrale, das in Tests überzeugt und bei Amazon zu haben ist, habe ich nicht gefunden. Mit FRITZ!Box ist das FRITZ!-Modell schon die beste Wahl. Die Thermostate, die in Tests am besten abschneiden, brauchen eine Zentrale, schau dafür in die Gruppe „Mit Zentrale“." },
     fragen: [
       { f: "Wie viel spare ich wirklich?", a: "Mit einem Heizplan rund 10 Prozent der Heizkosten, sagt co2online. Als Faustregel spart jedes Grad weniger rund 6 Prozent Heizenergie. Wie viel es bei dir ist, hängt davon ab, wie oft du weg bist und wie du bisher heizt. Stiftung Warentest (Heft 9/2023) rechnet für eine eher schlecht gedämmte Wohnung mit 70 m² mit rund 100 € im Jahr. Rechne es unten im Rechner für dich aus." },
       { f: "Mit oder ohne Zentrale: Was passt zu mir?", a: "Ohne Zentrale ist der einfachste Einstieg: auspacken, mit dem WLAN verbinden, fertig. Das passt, wenn du nur wenige Heizkörper steuern willst und es günstig sein soll. Mit Zentrale zahlst du einmal etwas mehr, bekommst aber die Thermostate, die in Tests am besten abschneiden. Außerdem kannst du später Fensterkontakte oder ein Wandthermostat dazunehmen. Das lohnt sich vor allem, wenn du die ganze Wohnung ausstatten willst. Hast du eine FRITZ!Box, nimm das FRITZ!-Modell: Dann ist dein Router schon die Zentrale." },
-      { f: "Warum gibt es so wenige WLAN-Thermostate?", a: "WLAN braucht mehr Strom als die Funkarten, die Thermostate mit Zentrale nutzen. Das Shelly TRV hat einen Akku zum Aufladen. Wichtig: Dein Router muss WLAN mit 2,4 GHz haben. Das ist bei fast allen Routern so." },
+      { f: "Warum gibt es so wenige WLAN-Thermostate?", a: "WLAN braucht mehr Strom als die Funkarten, die Thermostate mit Zentrale nutzen. Wichtig: Dein Router muss WLAN mit 2,4 GHz haben. Das ist bei fast allen Routern so." },
       { f: "Passen sie auf meine Heizkörper?", a: "Auf fast alle normalen Heizkörperventile. Die meisten haben ein Gewinde nach dem Standard M30 x 1,5, darauf passen alle Modelle hier. Für andere Ventile, zum Beispiel von Danfoss, liegen oft Adapter bei, oder du bekommst sie für wenig Geld. Für eine Fußbodenheizung brauchst du dagegen ein Raumthermostat an der Wand." },
       { f: "Darf ich sie als Mieter einbauen?", a: "In der Regel ja, denn du veränderst nichts dauerhaft. Du schraubst nur den alten Drehregler ab und das neue Thermostat drauf. Wasser musst du dafür nicht ablassen, und einen Handwerker brauchst du auch nicht. Heb die alten Regler gut auf und schraub sie beim Auszug wieder dran. Im Zweifel fragst du kurz deinen Vermieter." },
       { f: "Was ist, wenn ich früher heimkomme?", a: "Kein Problem: Du drehst am Thermostat kurz höher oder tippst in der App auf wärmer. Ab dem nächsten Punkt in deinem Heizplan läuft wieder alles selbstständig. Manche Systeme merken über den Standort deines Handys sogar, wann du auf dem Heimweg bist." },
       { f: "Kühlt die Wohnung tagsüber nicht zu sehr aus?", a: "Nicht, wenn du auf 16 bis 17 Grad runterdrehst statt ganz aus. Unter 16 Grad sollte es nicht fallen: Sonst kühlen die Wände aus, Feuchtigkeit schlägt sich daran nieder, und das Risiko für Schimmel steigt. Die Wohnung danach wieder aufzuheizen, kostet weniger, als den ganzen Tag durchzuheizen." },
-      { f: "Was ist mit offenen Fenstern?", a: "Die meisten Empfehlungen hier merken, wenn die Temperatur beim Lüften plötzlich fällt, und drehen dann für eine Weile runter. Beim Bosch-Thermostat und beim Shelly TRV brauchst du dafür einen Fensterkontakt. So heizt du nicht aus dem Fenster hinaus." }
+      { f: "Was ist mit offenen Fenstern?", a: "Die meisten Empfehlungen hier merken, wenn die Temperatur beim Lüften plötzlich fällt, und drehen dann für eine Weile runter. Beim Bosch-Thermostat brauchst du dafür einen Fensterkontakt. So heizt du nicht aus dem Fenster hinaus." }
     ],
     rechner: "thermostate",
     video: "thermostate",
@@ -680,7 +668,7 @@ const PRODUKTE = [
     ],
     nachteile: [
       "Sie braucht viel Strom. Läuft sie an heißen Tagen viele Stunden, merkst du das auf der Stromrechnung, beim Monoblock deutlich mehr als bei der PortaSplit",
-      "So leise wie ein fest eingebautes Gerät ist keines der Geräte hier. Monoblöcke sind lauter als die PortaSplit",
+      "So leise wie ein fest eingebautes Gerät ist auch die PortaSplit nicht. Monoblöcke sind noch lauter",
       "Das Fenster bleibt einen Spalt offen. Mit einer Fensterdichtung kommt weniger warme Luft herein",
       "Die Geräte sind schwer, die PortaSplit wiegt laut Hersteller gut 32 Kilo. Zum Tragen seid ihr am besten zu zweit"
     ],
@@ -701,39 +689,22 @@ const PRODUKTE = [
         ],
         fuer: "Mein Tipp, wenn es leiser und sparsamer sein soll als mit einem Monoblock. Ich habe sie selbst und habe damit sehr gute Erfahrungen gemacht.",
         hinweis: "Bei Stiftung Warentest war sie nur befriedigend (3,3, Heft 6/2025), fest eingebaute Split-Geräte schnitten besser ab. Das Fenster bleibt einen Spalt offen, durch den die flache Leitung läuft. Und ab 2027 kommt sie wegen ihres Kältemittels nicht mehr neu auf den Markt, mehr dazu unten in den Fragen.",
-        link: amazon("midea portasplit"),
-        alternativen: [
-          { name: "Midea PortaSplit Cool", preis: 800, text: "Die kleinere Schwester kühlt nur und heizt nicht. Laut Hersteller hat sie 2,35 statt 3,5 Kilowatt und passt eher in kleinere Räume. Unabhängige Tests habe ich für sie noch nicht gefunden.", link: amazon("midea portasplit cool") }
-        ]
-      },
-      {
-        gruppe: "Monoblock",
-        stufe: "Mittelklasse", spanne: "450 bis 700 €",
-        name: "Bosch Cool 4000", preis: 570, preisText: "ca. 550 bis 600 €", empfohlen: true,
-        punkte: [
-          "Bei Que Choisir 2026 bekam er laut Stiftung Warentest die Bestnote fürs Kühlen und brauchte von den drei empfohlenen Geräten am wenigsten Strom",
-          "Laut Hersteller 2,6 Kilowatt für Räume bis 35 Quadratmeter",
-          "Arbeitet laut Hersteller mit Propan (R290), das dem Klima kaum schadet",
-          "Fernbedienung mit Timer, dazu ein Schlaf- und ein Ruhemodus"
-        ],
-        fuer: "Mein Tipp, wenn du nur an wenigen heißen Tagen kühlst und es günstiger sein soll als ein Split-Gerät.",
-        hinweis: "Wie alle Monoblöcke ist er lauter als ein Split-Gerät: Laut Hersteller hat er 64 Dezibel Schallleistung, die PortaSplit am Innengerät 59. Und weil er Luft aus dem Zimmer nach draußen bläst, strömt durch Ritzen warme Luft nach.",
-        link: amazon("bosch cool 4000")
+        link: amazon("midea portasplit")
       }
     ],
     ohneTeuer: { stufe: "Oberklasse", titel: "Fest eingebaut vom Fachbetrieb", text: "Noch leiser und sparsamer sind fest eingebaute Split-Geräte. Sie darf aber nur ein Fachbetrieb einbauen, und als Mieter brauchst du die Zustimmung deines Vermieters. Darum gibt es sie hier nicht zum Bestellen. Welche Geräte in Tests vorne liegen, steht unten in den Fragen." },
     fragen: [
-      { f: "Split oder Monoblock: Was passt zu mir?", a: "Kühlst du oft oder auch nachts, nimm ein Split-Gerät wie die PortaSplit. Es ist leiser und braucht weniger Strom, weil es die Wärme über das Außenteil nach draußen abgibt. Brauchst du die Kühlung nur an ein paar heißen Tagen im Jahr, reicht ein Monoblock. Er ist günstiger in der Anschaffung und schnell aufgestellt. Dafür ist er lauter, und weil er Luft aus dem Zimmer nach draußen bläst, strömt warme Luft von draußen nach. So sieht es auch Stiftung Warentest." },
-      { f: "Wie laut ist eine Klimaanlage im Zimmer?", a: "Am leisesten sind fest eingebaute Split-Geräte. Die Innengeräte der Testsieger haben laut Hersteller im leisesten Modus nur 19 Dezibel. Die PortaSplit ist lauter: Laut Hersteller sind es im Silent-Modus 39 Dezibel, in Tests war sie teils lauter. Monoblöcke sind noch lauter, weil bei ihnen alles im Zimmer steht, auch der Kompressor. Stiftung Warentest nennt selbst die empfohlenen Monoblöcke eher laut. Auf dem Energielabel steht die Schallleistung: bei der PortaSplit am Innengerät 59 Dezibel und beim Bosch 64. Fürs Schlafzimmer hilft der Schlafmodus, oder du kühlst es schon vor dem Schlafengehen herunter." },
-      { f: "Was kostet der Strom?", a: "Das hängt davon ab, wie oft und wie lange sie läuft. Ein Beispiel: Kühlst du einen Monat lang jeden Tag acht Stunden, braucht die PortaSplit nach Tests und Energielabel etwa 100 bis 140 Kilowattstunden. Bei 37 Cent pro Kilowattstunde, dem Schnitt in Deutschland, sind das etwa 35 bis 55 Euro. Die Monoblöcke hier brauchten im Test von Que Choisir umgerechnet fast doppelt so viel, für denselben Monat also etwa 70 bis 90 Euro. In Österreich und der Schweiz ist der Strom etwas günstiger. Den höheren Kaufpreis der PortaSplit holst du über den Strom erst nach vielen Jahren wieder herein. Im Alltag zählt mehr, dass sie leiser ist und keine warme Luft von draußen nachzieht." },
-      { f: "Kann die PortaSplit auch heizen?", a: "Ja, sie arbeitet wie eine kleine Wärmepumpe und heizt laut Hersteller, bis es draußen minus 10 Grad hat. Stiftung Warentest hat das Heizen allerdings nur bis plus 2 Grad draußen geprüft. So kannst du an kühlen Tagen im Frühling und Herbst einzelne Räume mit ihr wärmen. Die PortaSplit Cool kann nicht heizen." },
+      { f: "Split oder Monoblock: Was passt zu mir?", a: "Kühlst du oft oder auch nachts, nimm ein Split-Gerät wie die PortaSplit. Es ist leiser und braucht weniger Strom, weil es die Wärme über das Außenteil nach draußen abgibt. Brauchst du die Kühlung nur an ein paar heißen Tagen im Jahr, reicht ein Monoblock. Er ist günstiger in der Anschaffung und schnell aufgestellt. Dafür ist er lauter, und weil er Luft aus dem Zimmer nach draußen bläst, strömt warme Luft von draußen nach. So sieht es auch Stiftung Warentest. Warum hier gerade kein Monoblock steht, liest du unten bei der Frage, wie ich die Geräte ausgewählt habe." },
+      { f: "Wie laut ist eine Klimaanlage im Zimmer?", a: "Am leisesten sind fest eingebaute Split-Geräte. Die Innengeräte der Testsieger haben laut Hersteller im leisesten Modus nur 19 Dezibel. Die PortaSplit ist lauter: Laut Hersteller sind es im Silent-Modus 39 Dezibel, in Tests war sie teils lauter. Monoblöcke sind noch lauter, weil bei ihnen alles im Zimmer steht, auch der Kompressor. Stiftung Warentest nennt selbst die empfohlenen Monoblöcke eher laut. Auf dem Energielabel steht die Schallleistung: bei der PortaSplit am Innengerät 59 Dezibel, bei den Monoblöcken, die Stiftung Warentest empfiehlt, 62 bis 65. Fürs Schlafzimmer hilft der Schlafmodus, oder du kühlst es schon vor dem Schlafengehen herunter." },
+      { f: "Was kostet der Strom?", a: "Das hängt davon ab, wie oft und wie lange sie läuft. Ein Beispiel: Kühlst du einen Monat lang jeden Tag acht Stunden, braucht die PortaSplit nach Tests und Energielabel etwa 100 bis 140 Kilowattstunden. Bei 37 Cent pro Kilowattstunde, dem Schnitt in Deutschland, sind das etwa 35 bis 55 Euro. Die Monoblöcke, die Stiftung Warentest empfiehlt, brauchten im Test von Que Choisir umgerechnet fast doppelt so viel, für denselben Monat also etwa 70 bis 90 Euro. In Österreich und der Schweiz ist der Strom etwas günstiger. Den höheren Kaufpreis der PortaSplit holst du über den Strom erst nach vielen Jahren wieder herein. Im Alltag zählt mehr, dass sie leiser ist und keine warme Luft von draußen nachzieht." },
+      { f: "Kann die PortaSplit auch heizen?", a: "Ja, sie arbeitet wie eine kleine Wärmepumpe und heizt laut Hersteller, bis es draußen minus 10 Grad hat. Stiftung Warentest hat das Heizen allerdings nur bis plus 2 Grad draußen geprüft. So kannst du an kühlen Tagen im Frühling und Herbst einzelne Räume mit ihr wärmen." },
       { f: "Was ist mit fest eingebauten Split-Geräten?", a: "Sie sind am leisesten und am sparsamsten und können im Winter beim Heizen helfen. Bei Stiftung Warentest (Heft 6/2026) wurde bei den kleineren Geräten mit 2,5 Kilowatt das Mitsubishi Electric MSZ-RZ25VU Testsieger, Preistipp ist das Samsung AR70F09CAAWN. Bei den größeren mit 3,5 Kilowatt liegt das Daikin Perfera FTXM35A vorne, getestet 2025. Als grobe Hilfe nennt Stiftung Warentest 2,5 Kilowatt für etwa 25 Quadratmeter und 3,5 Kilowatt für etwa 35. Einbauen darf sie nur ein Fachbetrieb, darum findest du sie hier nicht zum Bestellen. Hol dir am besten früh im Jahr Angebote, denn ab der ersten Hitzewelle sind die Fachbetriebe schnell ausgebucht." },
-      { f: "Was ändert sich 2027 bei der PortaSplit?", a: "Die PortaSplit hier arbeitet mit dem Kältemittel R32. Wegen neuer EU-Regeln darf sie ab dem 1. Januar 2027 nicht mehr neu auf den Markt kommen. Geräte, die bis Ende 2026 in der EU sind, darf der Handel aber weiter verkaufen. Und wer eine hat, darf sie ohne Einschränkung weiter nutzen und reparieren lassen. Midea hat für 2027 eine neue PortaSplit mit Propan (R290) angekündigt, das dem Klima viel weniger schadet. Der Bosch arbeitet laut Hersteller schon mit Propan." },
+      { f: "Was ändert sich 2027 bei der PortaSplit?", a: "Die PortaSplit hier arbeitet mit dem Kältemittel R32. Wegen neuer EU-Regeln darf sie ab dem 1. Januar 2027 nicht mehr neu auf den Markt kommen. Geräte, die bis Ende 2026 in der EU sind, darf der Handel aber weiter verkaufen. Und wer eine hat, darf sie ohne Einschränkung weiter nutzen und reparieren lassen. Midea hat für 2027 eine neue PortaSplit mit Propan (R290) angekündigt, das dem Klima viel weniger schadet." },
       { f: "Darf ich als Mieter in Deutschland eine Klimaanlage aufstellen?", a: "Einen Monoblock darfst du in der Regel einfach aufstellen, denn du bohrst nichts und baust nichts um. Für ein fest eingebautes Split-Gerät brauchst du dagegen die Zustimmung deines Vermieters, am besten schriftlich. Dafür kommt nämlich ein Loch in die Wand und ein Außengerät an die Fassade. Bei der PortaSplit ist es nicht ganz eindeutig: Du bohrst nichts, aber das Außenteil hängt draußen. Ein Fachmann vom Eigentümerverband Haus & Grund hält das im Hochsommer auch ohne Zustimmung für zulässig, weil es nicht auf Dauer angelegt ist. Frag deinen Vermieter trotzdem am besten vorher. Und nimm Rücksicht auf die Nachbarn, vor allem nachts." },
       { f: "Und in einer Eigentumswohnung in Deutschland?", a: "Ein Split-Gerät mit Außengerät darfst du nicht einfach anbringen, du brauchst vorher einen Beschluss der Eigentümerversammlung. Seit einem Urteil des Bundesgerichtshofs vom Juli 2026 haben Eigentümer darauf aber in der Regel einen Anspruch. Das gilt, solange das Gerät die anderen nicht übermäßig stört, zum Beispiel durch Lärm, und nicht hässlich ins Auge fällt. Für einen Monoblock brauchst du keinen Beschluss, denn du baust nichts um. Bei der PortaSplit frag am besten vorher die Verwaltung." },
       { f: "Und in Österreich?", a: "Am einfachsten ist ein mobiles Gerät, denn es steht nur in deiner Wohnung. Willst du ein fest eingebautes Split-Gerät, musst du das als Mieter vorher deinem Vermieter anzeigen. Lehnt er nicht innerhalb von zwei Monaten ab, gilt das nach dem Mietrechtsgesetz als Zustimmung. Lehnt er ab, kommst du über Schlichtungsstelle oder Gericht nur selten weiter. Gehört dir eine Wohnung in einem Haus mit mehreren Eigentümern, brauchst du die Zustimmung der anderen. Ob du zusätzlich eine Bewilligung der Baubehörde brauchst, hängt vom Gerät, vom Lärm und vom Ort ab, etwa in einer Schutzzone. Frag am besten vorher bei deiner Gemeinde nach, in Wien bei der Baupolizei. Für mobile Geräte wie die PortaSplit braucht es laut dem Magazin profil oft keine Bewilligung. Frag aber auch hier zuerst deinen Vermieter." },
       { f: "Und in der Schweiz?", a: "Mobile Geräte mit Schlauch, die du nur einsteckst, brauchen keine Bewilligung. Im Kanton Zürich hat das der Regierungsrat ausdrücklich bestätigt. Ein fest eingebautes Split-Gerät braucht dagegen in den meisten Kantonen eine Baubewilligung, in Zürich in der Regel für das Außengerät. Als Mieter brauchst du für Änderungen an der Wohnung die schriftliche Zustimmung des Vermieters. Für die PortaSplit habe ich keine klare Regel gefunden, weil ihr Außenteil nur am Fenster hängt. Frag darum vorher deine Verwaltung und im Zweifel das Bauamt deiner Gemeinde. Und noch etwas: Die Geräte hier haben einen deutschen Stecker, der nicht in Schweizer Steckdosen passt. Ein passendes Angebot für die Schweiz habe ich darum gerade nicht, ich suche aber danach." },
-      { f: "Wie hast du die Geräte ausgewählt?", a: "Für die Split-Gruppe habe ich die Tests von Stiftung Warentest gelesen und dazu Tests von home&smart, smarthomeassistent und mobiFlip. Die PortaSplit war das einzige mobile Split-Gerät im Test von Stiftung Warentest, und ich nutze sie selbst. Monoblöcke testet Stiftung Warentest seit Jahren nicht mehr selbst. 2026 hat sie aber den großen Test der französischen Verbraucherzeitschrift Que Choisir ausgewertet und daraus drei Geräte empfohlen, die es in Deutschland gibt. Alle drei bekamen dort die Bestnote fürs Kühlen. Hier steht nur der Bosch, weil ich die anderen beiden bei Amazon nicht gefunden habe. Dazu habe ich die Angaben der Hersteller verglichen und Tests von Which? aus Großbritannien und vom VKI aus Österreich gelesen. Wirklich leise nennt keiner dieser Tests einen Monoblock, das sage ich dir lieber ehrlich." }
+      { f: "Wie hast du die Geräte ausgewählt?", a: "Für die Split-Geräte habe ich die Tests von Stiftung Warentest gelesen und dazu Tests von home&smart, smarthomeassistent und mobiFlip. Die PortaSplit war das einzige mobile Split-Gerät im Test von Stiftung Warentest, und ich nutze sie selbst. Monoblöcke testet Stiftung Warentest seit Jahren nicht mehr selbst. 2026 hat sie aber den großen Test der französischen Verbraucherzeitschrift Que Choisir ausgewertet und daraus drei Geräte empfohlen, die es in Deutschland gibt. Alle drei bekamen dort die Bestnote fürs Kühlen. Bei Amazon gibt es gerade keins davon, darum steht hier im Moment kein Monoblock. Dazu habe ich die Angaben der Hersteller verglichen und Tests von Which? aus Großbritannien und vom VKI aus Österreich gelesen. Wirklich leise nennt keiner dieser Tests einen Monoblock, das sage ich dir lieber ehrlich." }
     ],
     profitipp: {
       titel: "So kühlt sie besser und sparsamer",
@@ -844,15 +815,15 @@ const PRODUKTE = [
       {
         gruppe: "Ohne Zentrale",
         stufe: "Günstig", spanne: "direkt ins WLAN",
-        name: "WiZ A60 E27 Tunable White & Color", preis: 15, preisText: "ca. 12 bis 18 € pro Stück", empfohlen: true,
+        name: "WiZ A60 E27 Tunable White & Color", preis: 40, preisText: "ca. 35 bis 45 € für vier Lampen", empfohlen: true,
         punkte: [
           "Bei Stiftung Warentest gut (Note 2,2, Heft 2/2024): die beste Lampe ohne Zentrale und Preis- und Umwelttipp",
           "Geht direkt in dein WLAN, du kaufst nichts dazu",
           "Farbe und Weißtöne von warm bis kühl, mit Zeitplänen und Szenen in der WiZ-App",
           "Funktioniert mit Alexa und Google, über Matter auch mit Apple Home"
         ],
-        fuer: "Für dich, wenn du günstig und ohne Zubehör anfangen willst, zum Beispiel mit ein oder zwei Lampen.",
-        hinweis: "Dein Router braucht WLAN mit 2,4 GHz, das haben fast alle. Fiel im Test von Stiftung Warentest das Internet aus, reagierten die WLAN-Lampen nur verzögert.",
+        fuer: "Für dich, wenn du günstig und ohne Zubehör anfangen willst.",
+        hinweis: "Bei Amazon gibt es sie gerade nur im Viererpack. Dein Router braucht WLAN mit 2,4 GHz, das haben fast alle. Fiel im Test von Stiftung Warentest das Internet aus, reagierten die WLAN-Lampen nur verzögert.",
         link: amazon("wiz a60 e27 color")
       },
       {
@@ -1739,16 +1710,6 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Günstig", spanne: "unter 25 €",
-        name: "Vicmayun Akku-Reinigungsbürste", preis: 19,
-        punkte: [
-          "Teleskopstiel von 30 bis 120 cm für Dusche und Wanne",
-          "7 Aufsätze für Fliesen, Ecken und Waschbecken"
-        ],
-        fuer: "Für dich, wenn du wenig ausgeben willst. Ihr Stiel ist aber kürzer als bei der Mittelklasse.",
-        link: amazon("vicmayun reinigungsbürste")
-      },
-      {
         stufe: "Mittelklasse", spanne: "25 bis 40 €",
         name: "Kedoyoy 8-in-1 Akku-Reinigungsbürste", preis: 34, empfohlen: true,
         punkte: [
@@ -1756,7 +1717,7 @@ const PRODUKTE = [
           "Akku hält laut Hersteller bis zu 90 Minuten, geladen wird per USB-C",
           "8 Aufsätze, auch für Fugen und Ecken"
         ],
-        fuer: "Für die meisten Bäder. Mein Tipp, denn mit dem längeren Stiel schaffst du auch Wanne und Duschboden im Stehen.",
+        fuer: "Für die meisten Bäder. Mein Tipp, denn mit dem langen Stiel schaffst du auch Wanne und Duschboden im Stehen.",
         link: amazon("kedoyoy reinigungsbürste")
       },
       {
