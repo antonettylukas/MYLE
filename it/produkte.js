@@ -1094,7 +1094,7 @@ const PRODUKTE = [
         fuer: "Per la maggior parte delle case. Il mio consiglio, perché nel test è buono e costa molto meno del vincitore.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Anche lui “buono” per Stiftung Warentest (voto 2,4, numero 2/2026). La batteria va bene anche per molti apparecchi Bosch per casa e giardino.", link: amazon("bosch unlimited 7 bss715carp") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Anche lui “buono” per Stiftung Warentest (voto 2,4, numero 2/2025). La batteria va bene anche per molti apparecchi Bosch per casa e giardino.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {

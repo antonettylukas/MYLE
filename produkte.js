@@ -89,7 +89,7 @@ const ASIN = {
   "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "hansgrohe pulsify select s ecosmart": "B09S151KNJ",
   "grohe vitalio smartactive 130 cube": "B084728GQY",
-  "mysoda woody wassersprudler": "B09DGN7TJD",
+  "mysoda woody wassersprudler": "B0D4VHS4MC",
   "sodastream crystal 3.0": "B0BLSCTLBB",
   "grohe blue fizz starter set": "B0CM6RSSC5",
   "bosch serie 2 mums2ew00": "B08DHZL8R2",
@@ -124,15 +124,15 @@ const ASIN = {
   "philips dual basket na352": "B0D4Q8QFTH",
   "tefal dual easy fry grill ey905d": "B0CW52TT95",
   "cosori twinfry 10 l": "B0DJH7TPFY",
-  "ninja foodi max dual zone af400eu": "B09DGBJN2C",
-  "ninja double stack xl sl400eu": "B0CZPJ1HFP",
+  "ninja foodi max dual zone af400eu": "B09ZYLM43B",
+  "ninja double stack xl sl400eu": "B0CZY23DYB",
   "cosori turbo tower pro smart": "B0DPQ55RVS",
   "cosori iconic dual": "B0GJSQSBRN",
   "salcar trv801w": "B0CDZPB8RZ",
   "eurotronic comet wifi": "B08H8PTDW1",
   "fritz smart thermo 302": "B0G2T5J493",
   "shelly trv heizkörperthermostat wlan": "B0BS9SM67B",
-  "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
+  "aqara w600 heizkörperthermostat": "B0G7YBCW8K",
   "bosch smart home heizkörperthermostat ii +m": "B0DHGSL6FC",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "aeg 6000 ap61cb21db": "B0D7Q7HYBL",
@@ -142,17 +142,18 @@ const ASIN = {
   "gastroback 42507 reiskocher": "B0009KA4CA",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
   "rommelsbacher mrk 650 reiskocher": "B0FNRCHPNY",
-  "cosori reiskocher crc-r501": "B0BZY2HGW1",
+  "cosori reiskocher crc-r501": "B0C5JL8Z7B",
   "yum asia tsuki mini reiskocher": "B0B42Y9FBC",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
   "lékué elastische deckel": "B084DRTSDK",
-  "kobo clara bw": "B0D1KV8J76",
+  "kobo clara bw": "B0CZXYV8GT",
   "kobo libra colour": "B0CZXX465Z",
   "pocketbook verse pro": "B0CKDKYR8H",
   "pocketbook era color": "B0D17H31SH",
   "kindle 2026": "B0G4SM81G1",
   "kindle paperwhite 2026": "B0GV5TP9KW",
-  "kindle colorsoft 2026": "B0GV642G9D"
+  "kindle colorsoft 2026": "B0GV642G9D",
+  "laifen wave": "B0FFT6HJ8L"
 };
 
 const amazon = suche => ASIN[suche]
@@ -1158,7 +1159,7 @@ const PRODUKTE = [
         fuer: "Für die meisten Wohnungen. Mein Tipp, denn er ist im Test gut und kostet viel weniger als der Testsieger.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Bei Stiftung Warentest ebenfalls gut (Note 2,4, Heft 2/2026). Der Akku passt auch in viele Bosch-Geräte für Haus und Garten.", link: amazon("bosch unlimited 7 bss715carp") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Bei Stiftung Warentest ebenfalls gut (Note 2,4, Heft 2/2025). Der Akku passt auch in viele Bosch-Geräte für Haus und Garten.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
@@ -1988,10 +1989,7 @@ const PRODUKTE = [
         ],
         fuer: "Für dich, wenn du günstig umsteigen willst und dir ein Putzprogramm reicht.",
         hinweis: "Sie hat nur ein Putzprogramm, und der Akku hält laut Hersteller bis zu 14 Tage.",
-        link: amazon("philips sonicare 3100"),
-        alternativen: [
-          { name: "Silk'n SonicSmile Plus", preis: 25, text: "Preistipp bei Stiftung Warentest (gut, Note 2,3, Heft 12/2024) und noch günstiger. Einen Drucksensor hat sie nicht.", link: amazon("silk'n sonicsmile plus") }
-        ]
+        link: amazon("philips sonicare 3100")
       },
       {
         stufe: "Mittelklasse", spanne: "50 bis 120 €",

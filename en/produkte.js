@@ -1075,7 +1075,7 @@ const PRODUKTE = [
         fuer: "For most homes. My tip, because it's good in the test and costs much less than the test winner.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Also good at Stiftung Warentest (grade 2.4, issue 2/2026). The battery also fits many Bosch tools for home and garden.", link: amazon("bosch unlimited 7 bss715carp") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Also good at Stiftung Warentest (grade 2.4, issue 2/2025). The battery also fits many Bosch tools for home and garden.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
