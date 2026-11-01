@@ -397,6 +397,8 @@ a { color: var(--accent); }
   padding: 20px; scroll-margin-top: 28px;
 }
 .modell-leer { background: transparent; border-style: dashed; }
+/* Hinweiskarte, wenn im Amazon-Shop dieses Landes gerade kein Modell lieferbar ist (keinModell in produkte.js) */
+.modelle.modelle-keins { grid-template-columns: minmax(0, 1fr); max-width: 720px; }
 .modell.empfohlen { border: 2px solid var(--accent); padding: 19px; box-shadow: var(--shadow); }
 @media (min-width: 900px) { .modelle .modell { padding-top: 29px; } }
 .modelle .modell.empfohlen { padding-top: 28px; }

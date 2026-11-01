@@ -70,11 +70,14 @@
     const id = String(S.partnerId || "").trim();
     return /^DEINPARTNERTAG/.test(id) || !id ? String(u || "").replace(/[?&]tag=DEINPARTNERTAG-21/g, "") : String(u || "").replace(/DEINPARTNERTAG-21/g, id);
   };
-  const modelle = p => p.modelle || [];
-  const empfehlung = p => modelle(p).find(m => m.empfohlen) || modelle(p)[0] || null;
+  // keinModell (Feld in produkte.js): Im Amazon-Shop dieses Landes ist gerade keins der Modelle lieferbar.
+  // Dann zeigt die Seite statt der Modelle eine Hinweiskarte. Die Modelle bleiben in produkte.js stehen,
+  // damit der Rechner weiter mit ihren Preisen und Gruppen rechnet. Wird eins lieferbar, kommt keinModell wieder weg.
+  const alleModelle = p => p.modelle || [];
+  const modelle = p => p.keinModell ? [] : alleModelle(p);
+  const empfehlung = (p, ms = modelle(p)) => ms.find(m => m.empfohlen) || ms[0] || null;
   // Modelle nach "gruppe" sortiert, z. B. "Mit Wischwalze" und "Nur Saugen". Ohne Gruppen gibt es eine.
-  function gruppen(p) {
-    const ms = modelle(p);
+  function gruppen(p, ms = modelle(p)) {
     return [...new Set(ms.map(m => m.gruppe || ""))].map(name => {
       const info = (p.gruppen || []).find(g => g.name === name) || {};
       const gm = ms.filter(m => (m.gruppe || "") === name);
@@ -463,7 +466,8 @@
         </div>
       </section>`;
 
-    // Bei mehreren Gruppen (z. B. mit und ohne Wischen) schaltet man oben zwischen ihnen um
+    // Bei mehreren Gruppen (z. B. mit und ohne Wischen) schaltet man oben zwischen ihnen um.
+    // Ist im Shop dieses Landes gerade kein Modell lieferbar (keinModell), steht hier nur die Hinweiskarte.
     const mitAlternativen = ms.some(m => m.alternativen && m.alternativen.length);
     const modellBlock = ms.length ? `
       <section class="wrap p-block" id="modelle" aria-labelledby="modelle-titel">
@@ -478,6 +482,10 @@
           ${mitGruppen && g.text ? `<p class="gruppe-text">${esc(g.text)}</p>` : ""}
           <div class="modelle">${g.modelle.map((m, mi) => modellKarte(m, gi > 0 ? g.name : "", mi)).join("")}${gi === 0 && p.ohneTeuer ? leerKarte(p.ohneTeuer) : ""}</div>
         </div>`).join("")}
+      </section>` : p.keinModell ? `
+      <section class="wrap p-block" id="modelle" aria-labelledby="modelle-titel">
+        <h2 class="p-titel" id="modelle-titel">${t("Welches Modell passt zu dir?", "Which model is right for you?")}</h2>
+        <div class="modelle modelle-keins">${leerKarte(p.keinModell)}</div>
       </section>` : "";
 
     const rechnerBlock = r ? `
@@ -758,9 +766,11 @@
   // Alle Regler eines Rechners: die eigenen plus Kaufpreis und Stundenwert.
   // Den Kaufpreis stellt der Besucher selbst ein; der Startwert ist grob gerundet.
   function felderFuer(p, r) {
-    const empf = empfehlung(p);
+    // Auch mit keinModell kommen Startwert und Spanne des Kaufpreises von den (ausgeblendeten) Modellen
+    const ms = alleModelle(p);
+    const empf = empfehlung(p, ms);
     const preis = Number(empf ? empf.preis : p.preis) || 0;
-    const alle = [preis, ...modelle(p).map(m => Number(m.preis)).filter(Boolean)];
+    const alle = [preis, ...ms.map(m => Number(m.preis)).filter(Boolean)];
     const lo = Math.min(...alle), hi = Math.max(...alle);
     const step = hi < 60 ? 1 : hi < 400 ? 5 : 10;
     const runde = Math.max(step, preis < 100 ? 10 : preis < 1000 ? 50 : 100);
@@ -793,7 +803,9 @@
     const box = root.querySelector(".rechner");
     const felder = felderFuer(p, r);
     const w = Object.fromEntries(felder.map(f => [f.id, f.wert]));
-    const gs = gruppen(p);
+    // Mit keinModell gibt es die Gruppenwahl im Rechner nur, wenn sie die Rechnung ändert (Feld ohne, z. B. "Ohne Speicher")
+    const alleGs = gruppen(p, alleModelle(p));
+    const gs = !p.keinModell || alleGs.some(g => g.ohne) ? alleGs : [];
     let gruppe = 0;
     let letztes = null;
     // Regler, die bei einer Gruppe nicht zählen, z. B. Wischen bei Robotern, die nur saugen
