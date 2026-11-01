@@ -60,6 +60,7 @@ const ASIN = {
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
+  "bosch unlimited 10 bks1041rhf": "B0DB8QB2GW",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
   "lékué elastische deckel": "B084DRTSDK",
@@ -1075,7 +1076,7 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Petit budget", spanne: "jusqu’à 200\u00a0€",
-        name: "Bulelink Zenith G10", preis: 130, preisText: "env. 115 à 150\u00a0€",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "env. 115 à 150\u00a0€", empfohlen: true,
         punkte: [
           "«\u202fBien\u202f» chez testit.de (note 2,4, avril 2026)",
           "Lors du test, la batterie a tenu environ une heure au niveau le plus faible",
@@ -1087,36 +1088,22 @@ const PRODUKTE = [
         link: amazon("bulelink zenith g10")
       },
       {
-        stufe: "Milieu de gamme", spanne: "de 200 à 400\u00a0€",
-        name: "Rowenta X-Force Flex 13.60 Allergy", preis: 259, preisText: "env. 250 à 270\u00a0€", empfohlen: true,
-        punkte: [
-          "« Bon » chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (note 2,5, numéro 2/2025)",
-          "Le tube se plie\u202f: vous aspirez sous le canapé et le lit sans vous baisser",
-          "Batterie jusqu’à 60 minutes selon le fabricant",
-          "Se transforme en aspirateur à main pour le canapé, l’escalier et la voiture"
-        ],
-        fuer: "Pour la plupart des logements. Mon conseil, parce qu’il est bon dans le test et coûte beaucoup moins cher que le vainqueur.",
-        link: amazon("rowenta x-force flex 13.60 allergy"),
-        alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Également « bien » chez Stiftung Warentest (note 2,4, numéro 2/2025). La batterie convient aussi à de nombreux appareils Bosch pour la maison et le jardin.", link: amazon("bosch unlimited 7 bss715carp") }
-        ]
-      },
-      {
         stufe: "Haut de gamme", spanne: "à partir de 400\u00a0€",
-        name: "Bosch Unlimited 10 (BTS1042WAC)", preis: 600, preisText: "env. 480 à 700\u00a0€",
+        name: "Bosch Unlimited 10 (BKS1041RHF)", preis: 585, preisText: "env. 570 à 600\u00a0€",
         punkte: [
-          "Vainqueur du test chez Stiftung Warentest (note 2,2, numéro 2/2026)",
-          "Deux batteries, selon le fabricant jusqu’à 80 minutes chacune en puissance minimale",
-          "Se recharge en une heure environ",
+          "La version avec deuxième batterie et chargeur rapide (BTS1042WAC) a remporté le test de Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (note 2,2, numéro 2/2026)",
+          "Une batterie amovible, selon le fabricant jusqu’à 80 minutes en puissance minimale",
+          "Avec une brosse douce motorisée à LED pour les sols durs, une mini-turbobrosse et un suceur XXL pour le canapé",
           "Compresse la poussière dans le bac, vous le videz moins souvent"
         ],
-        fuer: "Pour les grands logements, les maisons sur plusieurs étages et les foyers avec animaux.",
-        link: amazon("bosch unlimited 10 bts1042wac")
+        fuer: "Pour les maisons sur plusieurs étages, surtout avec beaucoup de sols durs.",
+        hinweis: "Stiftung Warentest a testé la version BTS1042WAC, avec une deuxième batterie et un chargeur rapide. Sur amazon.fr, Amazon vend en ce moment cette version rose poudré avec une batterie. Selon le fabricant, elle se recharge en 4 heures environ.",
+        link: amazon("bosch unlimited 10 bks1041rhf")
       }
     ],
     fragen: [
       { f: "Remplace-t-il mon aspirateur classique\u202f?", a: "Un bon, oui, surtout sur les sols durs et les tapis pas trop épais. Selon Stiftung Warentest, les meilleurs aspirateurs sans fil rivalisent avec les aspirateurs classiques. Mais tous ne sont pas bons : dans le test du numéro 2/2026, certains appareils n’ont obtenu que « passable » ou « insuffisant »." },
-      { f: "Combien de temps tient la batterie\u202f?", a: "Ce qu’indiquent les fabricants vaut généralement pour la puissance la plus faible. En puissance maximale, c’est souvent seulement 10 à 15 minutes. Le Bosch Unlimited 10 est livré avec une deuxième batterie, vous aspirez donc deux fois plus longtemps." },
+      { f: "Combien de temps tient la batterie\u202f?", a: "Ce qu’indiquent les fabricants vaut généralement pour la puissance la plus faible. En puissance maximale, c’est souvent seulement 10 à 15 minutes. La batterie du Bosch Unlimited 10 s’échange\u202f: avec une deuxième, vous aspirez deux fois plus longtemps." },
       { f: "Comment vider le bac à poussière\u202f?", a: "Au-dessus de la poubelle, vous ouvrez le bac, et la poussière tombe. Cela fait un peu de poussière. Si vous êtes allergique à la poussière, videz-le de préférence dehors ou laissez quelqu’un d’autre le faire." },
       { f: "Vient-il à bout des poils d’animaux\u202f?", a: "Pas tous aussi bien. Chez Stiftung Warentest, le Bosch Unlimited 10, les deux modèles Miele et le Rowenta X-Force Flex 13.60 ont enlevé les poils d’animaux de façon fiable, d’autres avaient plus de mal. Si de longs cheveux s’enroulent autour de la brosse, vous les coupez et les retirez." },
       { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur. Depuis que j’en ai un, je n’aspire plus moi-même." },

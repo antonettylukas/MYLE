@@ -48,6 +48,7 @@ const ASIN = {
   "aeg 6000 ap61cb21db": "B0DXFMMBJ9",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
+  "bosch unlimited 10 bbs1041ggb": "B0DJD44QQM",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
   "cosori reiskocher crc-r501": "B0BZY2HGW1",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
@@ -1049,7 +1050,7 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Budget", spanne: "up to €200",
-        name: "Bulelink Zenith G10", preis: 130, preisText: "approx. €115 to €150",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "approx. €115 to €150", empfohlen: true,
         punkte: [
           "Good at testit.de (grade 2.4, April 2026)",
           "In the test, the battery lasted about an hour on the lowest setting",
@@ -1064,36 +1065,22 @@ const PRODUKTE = [
         ]
       },
       {
-        stufe: "Mid-range", spanne: "€200 to €400",
-        name: "Rowenta X-Force Flex 13.60 Allergy", preis: 259, preisText: "approx. €250 to €270", empfohlen: true,
-        punkte: [
-          "Good at Stiftung Warentest, Germany's best-known consumer tester (grade 2.5, issue 2/2025)",
-          "The tube bends: you vacuum under the sofa and bed without bending down",
-          "According to the manufacturer, the battery lasts up to 60 minutes",
-          "Turns into a handheld for the sofa, stairs and car"
-        ],
-        fuer: "For most homes. My tip, because it's good in the test and costs much less than the test winner.",
-        link: amazon("rowenta x-force flex 13.60 allergy"),
-        alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Also good at Stiftung Warentest (grade 2.4, issue 2/2025). The battery also fits many Bosch tools for home and garden.", link: amazon("bosch unlimited 7 bss715carp") }
-        ]
-      },
-      {
         stufe: "Premium", spanne: "from €400",
-        name: "Bosch Unlimited 10 (BTS1042WAC)", preis: 600, preisText: "approx. €480 to €700",
+        name: "Bosch Unlimited 10 (BBS1041GGB)", preis: 450, preisText: "approx. €420 to €470",
         punkte: [
-          "Test winner at Stiftung Warentest (grade 2.2, issue 2/2026)",
-          "Two batteries, according to the manufacturer up to 80 minutes each on the lowest setting",
-          "Charges in about an hour",
+          "The version with a second battery (BTS1042WAC) won the test at Stiftung Warentest, Germany's best-known consumer tester (grade 2.2, issue 2/2026)",
+          "One exchangeable battery, according to the manufacturer up to 80 minutes on the lowest setting",
+          "Charges in about an hour with the quick charger",
           "Compresses the dust in the container, so you empty it less often"
         ],
-        fuer: "For large homes, houses with several floors and households with pets.",
-        link: amazon("bosch unlimited 10 bts1042wac")
+        fuer: "For houses with several floors and households with pets.",
+        hinweis: "Stiftung Warentest tested the BTS1042WAC version, which comes with a second battery. Amazon UK sells the Unlimited 10 with one battery. At Which?, it lasted about 1 hour 15 minutes on the lowest setting.",
+        link: amazon("bosch unlimited 10 bbs1041ggb")
       }
     ],
     fragen: [
       { f: "Will it replace my normal vacuum cleaner?", a: "A good one does, especially on hard floors and carpets that aren't too thick. According to Stiftung Warentest, the best cordless vacuums keep up with classic vacuum cleaners. But not all of them are good: in the test in issue 2/2026, some models were only adequate or even poor." },
-      { f: "How long does the battery last?", a: "What manufacturers state usually applies to the lowest setting. On the highest setting it's often only 10 to 15 minutes. The Bosch Unlimited 10 comes with a second battery, so you can vacuum twice as long." },
+      { f: "How long does the battery last?", a: "What manufacturers state usually applies to the lowest setting. On the highest setting it's often only 10 to 15 minutes. The battery of the Bosch Unlimited 10 can be swapped, so with a second one you can vacuum twice as long." },
       { f: "How do I empty the dust container?", a: "Hold it over the bin and open the container, and the dust falls out. It gets a bit dusty. If you're allergic to house dust, it's best to empty it outside or let someone else do it." },
       { f: "Can it handle pet hair?", a: "Not all equally well. At Stiftung Warentest, the Bosch Unlimited 10, the two Miele models and the Rowenta X-Force Flex 13.60 reliably removed pet hair, while others struggled. If long hair wraps around the brush, you cut it open and pull it off." },
       { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum. Since I've had one, I don't vacuum myself any more." },

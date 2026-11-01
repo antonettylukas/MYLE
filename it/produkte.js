@@ -55,6 +55,7 @@ const ASIN = {
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
+  "bosch unlimited 10 bks1041rhf": "B0DB8QB2GW",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
   "cosori reiskocher crc-r501": "B0BZY2HGW1",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
@@ -1071,7 +1072,7 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Economico", spanne: "fino a 200\u00a0€",
-        name: "Bulelink Zenith G10", preis: 130, preisText: "circa da 115 a 150\u00a0€",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "circa da 115 a 150\u00a0€", empfohlen: true,
         punkte: [
           "“Buono” su testit.de (voto 2,4, aprile 2026)",
           "Nel test la batteria è durata circa un’ora al livello più basso",
@@ -1083,36 +1084,22 @@ const PRODUKTE = [
         link: amazon("bulelink zenith g10")
       },
       {
-        stufe: "Fascia media", spanne: "da 200 a 400\u00a0€",
-        name: "Rowenta X-Force Flex 13.60 Allergy", preis: 259, preisText: "circa da 250 a 270\u00a0€", empfohlen: true,
-        punkte: [
-          "“Buono” per Stiftung Warentest, il più noto istituto di test per consumatori in Germania (voto 2,5, numero 2/2025)",
-          "Il tubo si piega: aspiri sotto divano e letto senza chinarti",
-          "Batteria fino a 60 minuti secondo il produttore",
-          "Diventa un aspirabriciole per divano, scale e auto"
-        ],
-        fuer: "Per la maggior parte delle case. Il mio consiglio, perché nel test è buono e costa molto meno del vincitore.",
-        link: amazon("rowenta x-force flex 13.60 allergy"),
-        alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Anche lui “buono” per Stiftung Warentest (voto 2,4, numero 2/2025). La batteria va bene anche per molti apparecchi Bosch per casa e giardino.", link: amazon("bosch unlimited 7 bss715carp") }
-        ]
-      },
-      {
         stufe: "Fascia alta", spanne: "da 400\u00a0€",
-        name: "Bosch Unlimited 10 (BTS1042WAC)", preis: 600, preisText: "circa da 480 a 700\u00a0€",
+        name: "Bosch Unlimited 10 (BKS1041RHF)", preis: 570, preisText: "circa da 550 a 600\u00a0€",
         punkte: [
-          "Vincitore del test di Stiftung Warentest (voto 2,2, numero 2/2026)",
-          "Due batterie, secondo il produttore fino a 80 minuti ciascuna alla potenza minima",
-          "Si ricarica in circa un’ora",
+          "La versione con seconda batteria e caricatore rapido (BTS1042WAC) ha vinto il test di Stiftung Warentest, il più noto istituto di test per consumatori in Germania (voto 2,2, numero 2/2026)",
+          "Una batteria estraibile, secondo il produttore fino a 80 minuti alla potenza minima",
+          "Con spazzola morbida motorizzata con LED per pavimenti duri, mini spazzola motorizzata e bocchetta XXL per il divano",
           "Compatta la polvere nel contenitore, così lo svuoti meno spesso"
         ],
-        fuer: "Per case grandi, case su più piani e famiglie con animali.",
-        link: amazon("bosch unlimited 10 bts1042wac")
+        fuer: "Per case su più piani, soprattutto con tanti pavimenti duri.",
+        hinweis: "Stiftung Warentest ha testato la versione BTS1042WAC, con una seconda batteria e il caricatore rapido. Su amazon.it Amazon vende al momento questa versione rosa cipria con una batteria. Secondo il produttore si ricarica in circa 4 ore.",
+        link: amazon("bosch unlimited 10 bks1041rhf")
       }
     ],
     fragen: [
       { f: "Sostituisce il mio aspirapolvere normale?", a: "Uno buono sì, soprattutto su pavimenti duri e tappeti non troppo alti. Secondo Stiftung Warentest, i migliori aspirapolvere senza filo tengono il passo con quelli classici. Ma non tutti sono buoni: nel test del numero 2/2026 alcuni apparecchi erano solo “sufficiente” o “insufficiente”." },
-      { f: "Quanto dura la batteria?", a: "Quello che indicano i produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. Con il Bosch Unlimited 10 c’è una seconda batteria in dotazione, così aspiri il doppio del tempo." },
+      { f: "Quanto dura la batteria?", a: "Quello che indicano i produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. La batteria del Bosch Unlimited 10 si può cambiare: con una seconda aspiri il doppio del tempo." },
       { f: "Come svuoto il contenitore della polvere?", a: "Sopra il bidone apri il contenitore e la polvere cade fuori. Si alza un po’ di polvere. Se sei allergico alla polvere, svuotalo meglio all’aperto o lascia che lo faccia qualcun altro." },
       { f: "Se la cava con i peli di animali?", a: "Non tutti allo stesso modo. Per Stiftung Warentest il Bosch Unlimited 10, i due modelli Miele e il Rowenta X-Force Flex 13.60 hanno tolto i peli di animali in modo affidabile, altri hanno fatto più fatica. Se dei capelli lunghi si avvolgono intorno alla spazzola, li tagli e li togli." },
       { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere. Da quando ne ho uno, non passo più l’aspirapolvere io." },
