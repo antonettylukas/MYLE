@@ -74,7 +74,10 @@ const ASIN = {
   "pocketbook era color": "B0D1Y883G2",
   "kindle 2026": "B0G4SHPH5K",
   "kindle paperwhite 2026": "B0GV5YVVCD",
-  "kindle colorsoft 2026": "B0GV642G9D"
+  "kindle colorsoft 2026": "B0GV642G9D",
+  "cosori reiskocher crc-r501": "B0C5JL8Z7B",
+  "siemens eq500 classic tp511e19": "B0F4RFCH4P",
+  "bosch serie 4 mum58200": "B0DT7BBTCW"
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -256,6 +259,9 @@ const PRODUKTE = [
         "Le soir, le linge est sec. Sortez-le assez vite, il reste ainsi bien lisse"
       ]
     },
+    // Stand 01.11.2026: Keins dieser Modelle ist bei amazon.fr lieferbar, darum zeigt die Seite diese Hinweiskarte statt der Modelle.
+    // Wird eins lieferbar: keinModell löschen, seinen Link prüfen und die übrigen Modelle entfernen.
+    keinModell: { stufe: "amazon.fr", titel: "Pas disponible pour le moment", text: "Les lavantes-séchantes que je choisirais (Hisense WD5S1045BW, Haier I-Pro Serie 7 Plus, Bosch Serie 6 WNG24442 et AEG Serie 9000 L9WEF80690) ne sont pas disponibles sur amazon.fr en ce moment. Dès qu’une lavante-séchante que je peux vous recommander y sera disponible, vous la trouverez ici. D’ici là, le calculateur et les questions ci-dessous vous aident à choisir." },
     modelle: [
       {
         stufe: "Petit budget", spanne: "jusqu’à 550\u00a0€",
@@ -1057,7 +1063,7 @@ const PRODUKTE = [
         hinweis: "Il n’est pas rapide\u202f: dans le test, il lui a fallu 35 à 54 minutes selon la quantité et le riz.",
         link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuiseur à riz"),
         alternativen: [
-          { name: "Cosori Reiskocher (CRC-R501)", preis: 99, text: "Également « bien » chez Stiftung Warentest (numéro 5/2026), avec panier vapeur et de nombreux programmes. Mais lent : dans le test, il lui a fallu 43 à 68 minutes.", link: amazon("cosori reiskocher crc-r501", "cosori cuiseur à riz crc-r501") }
+          { name: "Cosori cuiseur à riz (CRC-R501)", preis: 99, text: "Également « bien » chez Stiftung Warentest (numéro 5/2026), avec panier vapeur et de nombreux programmes. Mais lent : dans le test, il lui a fallu 43 à 68 minutes.", link: amazon("cosori reiskocher crc-r501", "cosori cuiseur à riz crc-r501") }
         ]
       }
     ],
@@ -1092,11 +1098,11 @@ const PRODUKTE = [
     nachteile: [
       "Il faut quelques gestes rapides chaque jour : vider le marc et le bac d’égouttage, et rincer le circuit de lait après les boissons lactées",
       "Si vous aimez le café filtre ou les capsules bon marché du discounter, vous n’économisez pas d’argent",
-      "Elle coûte nettement plus cher à l’achat qu’une machine à capsules et prend de la place : les modèles présentés font 20 à 26 centimètres de large et 44 à 47 centimètres de profondeur"
+      "Elle coûte nettement plus cher à l’achat qu’une machine à capsules et prend de la place : les modèles présentés font 24 à 26 centimètres de large et 44 à 45 centimètres de profondeur"
     ],
     gruppen: [
       { name: "Avec carafe à lait", text: "Vous versez le lait dans une carafe et l’enclenchez à l’avant de la machine. Ensuite, vous mettez la carafe avec le reste de lait au réfrigérateur et la rincez régulièrement. Transvaser et rincer en vaut surtout la peine si vous buvez beaucoup de café au lait. On trouve de bons appareils avec carafe dès 400 euros environ." },
-      { name: "Avec tube à lait", text: "Un tube fin aspire le lait directement dans la brique de lait ou dans un récipient posé à côté de la machine. Vous ne transvasez rien et n’avez pas de carafe à rincer. C’est pourquoi le tube est préférable si vous ne buvez du café au lait que de temps en temps. Il doit toutefois être rincé après les boissons lactées et nettoyé à fond régulièrement, sinon des germes se forment. Les bons appareils avec tube coûtent plus cher : le moins cher présenté ici coûte un peu plus de 500 euros." }
+      { name: "Avec tube à lait", text: "Un tube fin aspire le lait directement dans la brique de lait ou dans un récipient posé à côté de la machine. Vous ne transvasez rien et n’avez pas de carafe à rincer. C’est pourquoi le tube est préférable si vous ne buvez du café au lait que de temps en temps. Il doit toutefois être rincé après les boissons lactées et nettoyé à fond régulièrement, sinon des germes se forment." }
     ],
     modelle: [
       {
@@ -1129,65 +1135,27 @@ const PRODUKTE = [
           { name: "De'Longhi Rivelia", preis: 600, text: "Gagnante du test à l’automne 2024 avec la même note 2,1. Elle a deux réservoirs à grains, pour passer vite d’une sorte à l’autre, et un écran tactile plus grand. Elle coûte généralement un peu plus cher. C’est l’EXAM440.55.B noire qui a été testée. Le lien mène à l’EXAM440.55.W blanche, elle aussi avec 16 boissons et deux réservoirs à grains selon De'Longhi.", link: amazon("de'longhi rivelia exam440.55.w", "de'longhi rivelia") }
         ]
       },
-      {
-        gruppe: "Avec carafe à lait",
-        stufe: "Haut de gamme", spanne: "à partir de 650 €",
-        name: "De'Longhi Eletta Explore Cold Brew", preis: 800, preisText: "ca. 800 bis 900 €",
-        punkte: [
-          "Gagnante du test chez Stiftung Warentest (bien, juillet 2026), avec l’Eletta Ultra, plus chère",
-          "Prépare aussi des boissons froides : mousse de lait froide et cold brew",
-          "Selon le fabricant, plus de 50 boissons, commande par écran tactile ou application",
-          "Vous pouvez retirer le groupe d’infusion pour le rincer"
-        ],
-        fuer: "Si vous voulez beaucoup de boissons différentes, froides aussi en été.",
-        hinweis: "Vérifiez que « Cold Brew » figure dans le nom. Selon De'Longhi, c’est cette version qui a obtenu la meilleure note. Le lien mène à l’ECAM450.65.G gris foncé.",
-        link: amazon("de'longhi eletta explore cold brew ecam450.65.g", "de'longhi eletta explore cold brew")
-      },
+      // amazon.fr (Stand 01.11.2026): Eletta Explore Cold Brew und Melitta Latticia OT gibt es dort nur ohne Angebot,
+      // die Nivona NICR 790 gar nicht und vom Siemens EQ500 nur den nicht getesteten TP511E19. Darum hat die Schlauch-Gruppe
+      // nur den TP511E19, das Schwestermodell des getesteten TP516DX3 (mit Hinweis). Die Eletta nennt ohneTeuer unten.
       {
         gruppe: "Avec tube à lait",
         stufe: "Petit budget", spanne: "jusqu’à 550 €",
-        name: "Melitta Latticia OT", preis: 550, preisText: "ca. 540 bis 600 €",
+        name: "Siemens EQ500 classic TP511E19", preis: 420, preisText: "ca. 390 bis 450 €", empfohlen: true,
         punkte: [
-          "Bien chez Stiftung Warentest (note 2,3, juin 2025)",
-          "Seulement 20 centimètres de large, elle trouve sa place même dans une petite cuisine",
-          "Cappuccino et latte macchiato d’une simple pression",
-          "Vous pouvez retirer le groupe d’infusion pour le rincer"
-        ],
-        fuer: "Si vous voulez un appareil avec tube et que votre cuisine manque de place.",
-        hinweis: "Il n’y a que cinq boissons d’une simple pression : café, cappuccino, latte macchiato, mousse de lait et eau chaude. Selon Melitta, vous nettoyez le tube en le plongeant dans un verre d’eau et en lançant le programme de nettoyage.",
-        link: amazon("melitta latticia ot f300-100", "melitta latticia ot")
-      },
-      {
-        gruppe: "Avec tube à lait",
-        stufe: "Milieu de gamme", spanne: "de 550 à 650 €",
-        name: "Siemens EQ500 TP516DX3", preis: 560, preisText: "ca. 545 bis 620 €",
-        punkte: [
-          "Bien chez Stiftung Warentest (note 2,3, juin 2025)",
+          "Modèle frère de l’EQ500 TP516DX3, qui a obtenu « bien » chez Stiftung Warentest (note 2,3, juin 2025)",
           "Selon Siemens, elle nettoie elle-même le circuit de lait à la vapeur après chaque boisson lactée",
-          "Commande par écran couleur ou application, jusqu’à 18 boissons selon Siemens",
+          "Écran couleur, cappuccino et latte macchiato d’une simple pression",
           "Vous pouvez retirer le groupe d’infusion pour le rincer"
         ],
-        fuer: "Si vous voulez un appareil avec tube qui se rince tout seul après chaque café au lait. C’est avec les machines à café Siemens que j’ai eu les meilleures expériences.",
-        hinweis: "Vous plongez le tube dans la brique de lait ou dans un récipient à lait. Vérifiez la référence « TP516DX3 » : l’EQ500 TP511E19, moins chère, n’a pas d’application et n’a pas été testée.",
-        link: amazon("siemens eq500 tp516dx3", "siemens eq500")
-      },
-      {
-        gruppe: "Avec tube à lait",
-        stufe: "Haut de gamme", spanne: "à partir de 650 €",
-        name: "Nivona NICR 790", preis: 750, preisText: "ca. 745 bis 850 €", empfohlen: true,
-        punkte: [
-          "Gagnante du test chez Stiftung Warentest (bien, note 2,0, juin 2025)",
-          "Selon Nivona, vous pouvez aussi la détartrer avec des produits sans acide sulfamique",
-          "Commande aussi par application via Bluetooth",
-          "Vous pouvez retirer le groupe d’infusion pour le rincer"
-        ],
-        fuer: "Mon conseil si vous voulez un appareil avec tube : elle a gagné le test.",
-        hinweis: "Les appareils avec tube plus chers n’ont pas fait mieux au test. Vous plongez le tube directement dans la brique de lait.",
-        link: amazon("nivona nicr 790", "nivona nicr 790")
+        fuer: "Mon conseil si vous voulez un appareil avec tube : son modèle frère a obtenu « bien » au test, et elle se rince toute seule après chaque café au lait. C’est avec les machines à café Siemens que j’ai eu les meilleures expériences.",
+        hinweis: "C’est la TP516DX3 qui a été testée. Selon Siemens, la TP511E19 nettoie elle aussi le circuit de lait à la vapeur, mais elle n’a pas d’application et propose moins de boissons. Vous plongez le tube dans la brique de lait ou dans un récipient à lait.",
+        link: amazon("siemens eq500 classic tp511e19", "siemens eq500 classic tp511e19")
       }
     ],
+    ohneTeuer: { stufe: "Haut de gamme", titel: "Pas disponible pour le moment", text: "La De'Longhi Eletta Explore Cold Brew, gagnante du test chez Stiftung Warentest (juillet 2026), n’est pas disponible sur amazon.fr en ce moment. Dès qu’elle le sera, vous la trouverez ici." },
     fragen: [
-      { f: "Tube ou carafe : lequel me convient ?", a: "Les deux peuvent être bons : chez Stiftung Warentest, il y a eu des gagnants avec les deux systèmes, la Nivona avec tube en 2025 et l’Eletta Explore avec carafe en 2026. La différence se joue au quotidien. La carafe, vous la remplissez, la mettez ensuite au réfrigérateur avec le reste de lait et la rincez régulièrement. Cela vaut surtout la peine si vous buvez beaucoup de café au lait. J’ai par exemple eu de bonnes expériences avec la De'Longhi Dynamica Plus, qui a une carafe. Si vous ne buvez un café au lait que de temps en temps, le tube est préférable : vous le plongez dans la brique de lait, sans rien transvaser. En contrepartie, il doit être rincé après les boissons lactées et nettoyé à fond régulièrement. Et avec une carafe, vous avez un bon appareil pour nettement moins cher." },
+      { f: "Tube ou carafe : lequel me convient ?", a: "Les deux peuvent être bons : chez Stiftung Warentest, il y a eu des gagnants avec les deux systèmes, la Nivona avec tube en 2025 et l’Eletta Explore avec carafe en 2026, mais aucune des deux n’est disponible sur amazon.fr en ce moment. La différence se joue au quotidien. La carafe, vous la remplissez, la mettez ensuite au réfrigérateur avec le reste de lait et la rincez régulièrement. Cela vaut surtout la peine si vous buvez beaucoup de café au lait. J’ai par exemple eu de bonnes expériences avec la De'Longhi Dynamica Plus, qui a une carafe. Si vous ne buvez un café au lait que de temps en temps, le tube est préférable : vous le plongez dans la brique de lait, sans rien transvaser. En contrepartie, il doit être rincé après les boissons lactées et nettoyé à fond régulièrement. Et avec une carafe, vous avez un bon appareil pour nettement moins cher." },
       { f: "Combien j’économise par rapport aux capsules ?", a: "Une capsule de marque coûte environ 40 centimes, une tasse de machine automatique avec grains, eau et électricité environ 15 centimes. Si vous buvez deux tasses par jour, cela fait environ 15 euros de moins par mois, environ 10 euros après détartrant et nettoyant. Avec des capsules bon marché de supermarché discount, il ne reste presque rien. Vous économisez le plus en remplaçant le café à emporter : un cappuccino au café coûte en moyenne presque 4 euros. Le calculateur vous montre ce que cela représente pour vous. Ce sont des prix allemands." },
       { f: "Est-ce rentable aussi par rapport au café filtre ?", a: "Honnêtement, pas côté argent. Selon Stiftung Warentest, le café filtre est la façon la moins chère de faire du café, notamment parce que la machine coûte peu. Toujours selon Warentest, une machine automatique n’est rentable que si l’on boit beaucoup de café. En échange, elle moud chaque tasse à la minute et vous prépare espresso et cappuccino d’une simple pression." },
       { f: "Combien de travail demande l’entretien ?", a: "Chaque jour, vous videz le marc et le bac d’égouttage, beaucoup d’appareils vous préviennent quand c’est le moment. Après les boissons lactées, vous rincez le circuit de lait, sur beaucoup d’appareils d’une simple pression, et la Siemens le fait toute seule. La carafe, vous la démontez et la rincez régulièrement ; pour le tube, il existe un programme de nettoyage. Une fois par semaine, vous retirez le groupe d’infusion et le rincez sous l’eau courante, sans liquide vaisselle. C’est possible sur tous les appareils présentés. Il faut détartrer quand l’appareil l’indique. Pour le détartrant, le nettoyant et les filtres à eau, comptez grosso modo 30 à 120 euros par an." },
@@ -1293,54 +1261,34 @@ const PRODUKTE = [
     nachteile: [
       "Il prend de la place : les petits modèles Bosch pèsent un peu moins de 5 kilos, les grandes machines 8 à 10 kilos. L’idéal est qu’il reste en place sur le plan de travail",
       "La plupart ne savent mixer et hacher qu’avec des accessoires : pour presque toutes les machines à bras pivotant, Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne, a dû acheter des accessoires en plus (numéro 12/2025)",
-      "Le nettoyage peut prendre du temps : selon Stiftung Warentest, certaines machines sont pénibles à nettoyer (numéro 12/2025). Selon le fabricant, le crochet et les fouets des modèles Bosch présentés ici passent au lave-vaisselle"
+      "Le nettoyage peut prendre du temps : selon Stiftung Warentest, certaines machines sont pénibles à nettoyer (numéro 12/2025)"
     ],
     modelle: [
-      {
-        stufe: "Petit budget", spanne: "jusqu’à 150 €",
-        name: "Bosch Serie 2 (MUMS2EW00)", preis: 105,
-        punkte: [
-          "Avec mouvement planétaire : le crochet et le fouet tournent et parcourent en même temps tout le bol",
-          "Bol en inox de 3,8 litres, selon le fabricant pour jusqu’à 2,4 kilos de pâte à gâteau ou 1,7 kilo de pâte levée",
-          "Crochet pétrisseur, fouet et batteur sont fournis et passent au lave-vaisselle selon le fabricant"
-        ],
-        fuer: "Si vous faites surtout des gâteaux, des pâtes à pizza et à pain et voulez dépenser peu.",
-        hinweis: "Il n’existe pas de test en laboratoire récent pour ce modèle. Le blender et le coupe-légumes ne sont pas fournis, vous pouvez les acheter en plus si besoin.",
-        link: amazon("bosch serie 2 mums2ew00", "bosch mums2ew00")
-      },
+      // amazon.fr (Stand 01.11.2026): Den getesteten Serie 4 MUM58W20 gibt es dort nicht, die Serie 2 MUMS2EW00 nur bei einem
+      // Drittanbieter zu auffälligem Preis, die Serie 6 MUMS6ZS13D gar nicht. Darum steht hier der MUM58200 aus derselben Serie 4,
+      // ohne Mixer und Gemüseschneider (mit Hinweis). Serie 2 und 6 nennt ohneTeuer unten.
       {
         stufe: "Milieu de gamme", spanne: "de 150 à 350 €",
-        name: "Bosch Serie 4 (MUM58W20)", preis: 224, empfohlen: true,
+        name: "Bosch Serie 4 (MUM58200)", preis: 160, empfohlen: true,
         punkte: [
-          "« Bon » chez Stiftung Warentest (note 2,5) et meilleur rapport qualité-prix (numéro 12/2025)",
+          "Modèle frère du MUM58W20, « bon » chez Stiftung Warentest (note 2,5) et meilleur rapport qualité-prix (numéro 12/2025)",
           "Bol en inox de 3,9 litres, selon le fabricant pour jusqu’à 2,7 kilos de pâte à gâteau ou 1,9 kilo de pâte levée",
-          "Avec coupe-légumes et 3 disques : il râpe et tranche les légumes",
-          "Avec blender (1,25 litre)"
+          "Avec mouvement planétaire : le crochet et le fouet tournent et parcourent en même temps tout le bol",
+          "Crochet pétrisseur, fouet et batteur sont fournis"
         ],
-        fuer: "Pour la plupart des gens. Mon conseil, parce qu’il était presque aussi bon que le vainqueur du test, coûte nettement moins cher et est déjà livré avec coupe-légumes et blender.",
-        hinweis: "Il n’a ni balance ni programmes. Pour hacher des noix ou des herbes par exemple, il vous faut un accessoire hachoir, à acheter en plus.",
-        link: amazon("bosch serie 4 mum58w20", "bosch mum58w20")
-      },
-      {
-        stufe: "Haut de gamme", spanne: "à partir de 350 €",
-        name: "Bosch Serie 6 (MUMS6ZS13D)", preis: 499,
-        punkte: [
-          "Vainqueur du test chez Stiftung Warentest parmi 10 robots pâtissiers sans fonction cuisson (bon, note 2,4, numéro 12/2025)",
-          "Grand bol de 5,5 litres, selon le fabricant pour jusqu’à 3,5 kilos de pâte à gâteau ou 2,5 kilos de pâte levée",
-          "Avec balance intégrée, minuteur et programmes automatiques",
-          "Avec coupe-légumes et disques pour les légumes"
-        ],
-        fuer: "Si vous pâtissez souvent et en grandes quantités et que la balance et les programmes comptent pour vous.",
-        hinweis: "Le blender et le hachoir ne sont pas fournis, vous devez les acheter en plus. Avec presque 8 kilos, il est lourd. Pour la plupart des gens, le milieu de gamme suffit largement.",
-        link: amazon("bosch serie 6 mums6zs13d", "bosch mums6zs13d")
+        fuer: "Pour la plupart des gens. Mon conseil, parce que son modèle frère était presque aussi bon que le vainqueur du test et qu’il coûte nettement moins cher.",
+        hinweis: "Stiftung Warentest a testé le MUM58W20, livré avec blender et coupe-légumes. Selon Bosch, ce modèle a lui aussi 1000 watts et un bol de 3,9 litres, mais il est livré sans blender ni coupe-légumes. Comme le MUM58W20, il n’a ni balance ni programmes.",
+        link: amazon("bosch serie 4 mum58200", "bosch mum58200")
       }
     ],
+    // ohneTeuer zeigt hier ausnahmsweise die anderen getesteten Preisklassen, die es bei amazon.fr gerade nicht zu einem normalen Preis gibt
+    ohneTeuer: { stufe: "Autres gammes", titel: "Pas disponible pour le moment", text: "Le vainqueur du test, le Bosch Serie 6 (MUMS6ZS13D, note 2,4, numéro 12/2025), et le Serie 2 (MUMS2EW00), moins cher, ne sont pas disponibles sur amazon.fr en ce moment, ou seulement à un prix bien plus élevé. Dès que l’un d’eux le sera, vous le trouverez ici." },
     fragen: [
       { f: "Un batteur électrique ne suffit-il pas ?", a: "Pour une pâte à gâteau ou de la chantilly de temps en temps, si. Mais une pâte levée se pétrit à la main pendant au moins 8 minutes, comme le conseillent la chaîne de supermarchés allemande REWE et l’administration du district de Göppingen. La machine la pétrit toute seule et vous avez les mains libres. Mais si vous ne pâtissez que quelques fois par an, honnêtement, économisez l’argent et gardez le batteur." },
       { f: "Pourquoi le KitchenAid n’est-il pas mon conseil ?", a: "Le KitchenAid Artisan n’a obtenu que « satisfaisant » chez Stiftung Warentest (note 2,7, numéro 12/2025). Il a bien réussi la chantilly et la pâte à gâteau, et il a très bien tenu dans le test d’endurance. Mais il ne sait mixer ou hacher qu’avec des accessoires, et il pèse un peu plus de 10 kilos. De plus, on peut se pincer les doigts dans la charnière de la tête. S’il vous plaît et que vous faites surtout des gâteaux, vous pouvez quand même le choisir." },
       { f: "Quelle quantité de pâte peut-il travailler ?", a: "Selon Bosch, la Serie 2 pétrit jusqu’à 1,7 kilo de pâte levée, la Serie 4 jusqu’à 1,9 et la Serie 6 jusqu’à 2,5 kilos. Pour la pâte à gâteau, c’est chaque fois plus : 2,4, 2,7 et 3,5 kilos. Pour un gâteau ou un pain, le plus petit suffit donc déjà." },
-      { f: "Peut-il aussi couper des légumes ?", a: "Oui, avec un coupe-légumes. Il râpe les légumes ou les coupe en rondelles, par exemple carottes, concombres ou pommes de terre. Il est fourni avec la Serie 4 et la Serie 6, pas avec la Serie 2. Pour les noix ou les herbes, il vous faut pour tous un accessoire hachoir séparé." },
-      { f: "Que fait de plus un robot cuiseur ?", a: "Il chauffe en mélangeant, vous y cuisinez des soupes, des sauces ou un risotto. Pour la pâtisserie, la machine présentée ici suffit, et son bol est plus grand : 3,8 à 5,5 litres au lieu d’environ 2 à 3 litres utiles. Si vous voulez aussi cuisiner, regardez la page « Robot cuiseur »." },
+      { f: "Peut-il aussi couper des légumes ?", a: "Oui, avec un coupe-légumes. Il râpe les légumes ou les coupe en rondelles, par exemple carottes, concombres ou pommes de terre. La Serie 4 présentée ici n’en est pas équipée. Pour les noix ou les herbes, il vous faut un accessoire hachoir séparé." },
+      { f: "Que fait de plus un robot cuiseur ?", a: "Il chauffe en mélangeant, vous y cuisinez des soupes, des sauces ou un risotto. Pour la pâtisserie, la machine présentée ici suffit, et son bol est plus grand : 3,9 litres au lieu d’environ 2 à 3 litres utiles. Si vous voulez aussi cuisiner, regardez la page « Robot cuiseur »." },
       { f: "Combien de temps fait-il vraiment gagner ?", a: "Honnêtement, aucun test ne l’a mesuré. Avec la machine, la pâte n’est prête qu’un peu plus vite : à la main, vous la pétrissez au moins 8 minutes, avec la machine au moins 5. La grande différence, c’est que vous n’avez pas besoin d’être là. Le calculateur vous montre ce que cela représente pour vous." }
     ],
     rechner: "kneten",

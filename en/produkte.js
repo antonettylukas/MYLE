@@ -1434,6 +1434,9 @@ const PRODUKTE = [
       "It only gets dirty grout and stubborn stains clean with a strong cleaner",
       "If you press too hard, it slows down or switches off"
     ],
+    // Stand 01.11.2026: Keins dieser Modelle ist bei amazon.co.uk lieferbar, darum zeigt die Seite diese Hinweiskarte statt der Modelle.
+    // Wird eins lieferbar: keinModell löschen, seinen Link prüfen und die übrigen Modelle entfernen.
+    keinModell: { stufe: "amazon.co.uk", titel: "Not available right now", text: "The brushes I would recommend (Vicmayun, Kedoyoy and HOTO Electric Spin Scrubber) are not available on amazon.co.uk at the moment. As soon as a brush I can recommend is available there, you'll find it here. Until then, the questions below help you choose." },
     modelle: [
       {
         stufe: "Budget", spanne: "under €25",

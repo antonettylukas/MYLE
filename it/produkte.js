@@ -72,6 +72,9 @@ const ASIN = {
   "cosori dual basket 8,5 l": "B0DJFJJ56B",
   "bosch smart home heizkörperthermostat ii +m": "B0DHGSL6FC",
   "gastroback 42507 reiskocher": "B0009KA4CA",
+  "siemens eq500 classic tp511e19": "B0F4RFCH4P",
+  "nivona nicr 790": "B09VLKTLFF",
+  "bosch serie 4 mum5xw20": "B083YCYMW4",
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -253,6 +256,9 @@ const PRODUKTE = [
         "La sera il bucato è asciutto. Tiralo fuori presto, così resta bello liscio"
       ]
     },
+    // Stand 01.11.2026: Keins dieser Modelle ist bei amazon.it lieferbar, darum zeigt die Seite diese Hinweiskarte statt der Modelle.
+    // Wird eins lieferbar: keinModell löschen, seinen Link prüfen und die übrigen Modelle entfernen.
+    keinModell: { stufe: "amazon.it", titel: "Al momento non disponibile", text: "Le lavasciuga che ti consiglierei (Hisense WD5S1045BW, Haier I-Pro Serie 7 Plus, Bosch Serie 6 WNG24442 e AEG Serie 9000 L9WEF80690) al momento su amazon.it non sono disponibili. Appena ci sarà una lavasciuga che posso consigliarti, la trovi qui. Nel frattempo ti aiutano a scegliere il calcolatore e le domande qui sotto." },
     modelle: [
       {
         stufe: "Economico", spanne: "fino a 550\u00a0€",
@@ -1112,11 +1118,11 @@ const PRODUKTE = [
     nachteile: [
       "Ogni giorno servono un paio di gesti veloci: svuotare i fondi e la vaschetta raccogligocce, e risciacquare il circuito del latte dopo le bevande con latte",
       "Se ti piace il caffè filtro o usi le capsule economiche del discount, non risparmi soldi",
-      "All’acquisto costa molto più di una macchina a capsule e occupa spazio: i modelli qui sono larghi da 20 a 26 centimetri e profondi da 44 a 47 centimetri"
+      "All’acquisto costa molto più di una macchina a capsule e occupa spazio: i modelli qui sono larghi da 24 a 26 centimetri e profondi da 44 a 47 centimetri"
     ],
     gruppen: [
       { name: "Con caraffa per il latte", text: "Versi il latte in una caraffa e la agganci sul davanti della macchina. Dopo metti la caraffa con il latte rimasto in frigorifero e la sciacqui regolarmente. Travasare e sciacquare conviene soprattutto se bevete molto caffè con latte. Apparecchi buoni con caraffa si trovano già intorno ai 400 euro." },
-      { name: "Con tubo del latte", text: "Un tubo sottile aspira il latte direttamente dal cartone del latte o da un contenitore accanto alla macchina. Non travasi nulla e non sciacqui nessuna caraffa. Per questo il tubo è meglio se bevi caffè con latte solo ogni tanto. Però va risciacquato dopo le bevande con latte e pulito a fondo regolarmente, altrimenti si formano germi. Gli apparecchi buoni con tubo costano di più: il più economico qui costa poco più di 500 euro." }
+      { name: "Con tubo del latte", text: "Un tubo sottile aspira il latte direttamente dal cartone del latte o da un contenitore accanto alla macchina. Non travasi nulla e non sciacqui nessuna caraffa. Per questo il tubo è meglio se bevi caffè con latte solo ogni tanto. Però va risciacquato dopo le bevande con latte e pulito a fondo regolarmente, altrimenti si formano germi." }
     ],
     modelle: [
       {
@@ -1149,47 +1155,22 @@ const PRODUKTE = [
           { name: "De'Longhi Rivelia", preis: 600, text: "Vincitrice del test nell’autunno 2024 con lo stesso voto 2,1. Ha due contenitori dei chicchi, così passi in fretta da una varietà all’altra, e un display touch più grande. Di solito costa un po’ di più. È stata testata la EXAM440.55.B nera. Il link porta alla EXAM440.55.W bianca, secondo De'Longhi anche lei con 16 bevande e due contenitori dei chicchi.", link: amazon("de'longhi rivelia exam440.55.w", "de'longhi rivelia") }
         ]
       },
-      {
-        gruppe: "Con caraffa per il latte",
-        stufe: "Fascia alta", spanne: "da 650 €",
-        name: "De'Longhi Eletta Explore Cold Brew", preis: 800, preisText: "ca. 800 bis 900 €",
-        punkte: [
-          "Vincitrice del test di Stiftung Warentest (buono, luglio 2026), insieme alla più costosa Eletta Ultra",
-          "Fa anche bevande fredde: schiuma di latte fredda e cold brew",
-          "Secondo il produttore oltre 50 bevande, comandi tramite display touch o app",
-          "Puoi estrarre il gruppo infusore per sciacquarlo"
-        ],
-        fuer: "Se vuoi tante bevande diverse, d’estate anche fredde.",
-        hinweis: "Controlla che nel nome ci sia “Cold Brew”. Secondo De'Longhi è questa versione ad aver avuto il voto migliore. Il link porta alla ECAM450.65.G grigio scuro.",
-        link: amazon("de'longhi eletta explore cold brew ecam450.65.g", "de'longhi eletta explore cold brew")
-      },
+      // amazon.it (Stand 01.11.2026): Eletta Explore Cold Brew und Melitta Latticia OT gibt es dort nur ohne Preis,
+      // vom Siemens EQ500 nur den nicht getesteten TP511E19, das Schwestermodell des getesteten TP516DX3 (mit Hinweis).
+      // Die Nivona bleibt (849 €, Drittanbieter, so viel wie bei amazon.de). Die Eletta nennt ohneTeuer unten.
       {
         gruppe: "Con tubo del latte",
         stufe: "Economico", spanne: "fino a 550 €",
-        name: "Melitta Latticia OT", preis: 550, preisText: "ca. 540 bis 600 €",
+        name: "Siemens EQ500 classic TP511E19", preis: 420, preisText: "ca. 390 bis 450 €",
         punkte: [
-          "Buono per Stiftung Warentest (voto 2,3, giugno 2025)",
-          "Larga solo 20 centimetri, sta anche in una cucina piccola",
-          "Cappuccino e latte macchiato premendo un tasto",
-          "Puoi estrarre il gruppo infusore per sciacquarlo"
-        ],
-        fuer: "Se vuoi un apparecchio con tubo e in cucina hai poco spazio.",
-        hinweis: "Premendo un tasto ci sono solo cinque bevande: caffè, cappuccino, latte macchiato, schiuma di latte e acqua calda. Secondo Melitta pulisci il tubo mettendolo in un bicchiere d’acqua e avviando il programma di pulizia.",
-        link: amazon("melitta latticia ot f300-100", "melitta latticia ot")
-      },
-      {
-        gruppe: "Con tubo del latte",
-        stufe: "Fascia media", spanne: "da 550 a 650 €",
-        name: "Siemens EQ500 TP516DX3", preis: 560, preisText: "ca. 545 bis 620 €",
-        punkte: [
-          "Buono per Stiftung Warentest (voto 2,3, giugno 2025)",
+          "Modello gemello della EQ500 TP516DX3, che per Stiftung Warentest è “buona” (voto 2,3, giugno 2025)",
           "Secondo Siemens pulisce da sola il circuito del latte con il vapore dopo ogni bevanda con latte",
-          "Comandi tramite display a colori o app, secondo Siemens fino a 18 bevande",
+          "Display a colori, cappuccino e latte macchiato premendo un tasto",
           "Puoi estrarre il gruppo infusore per sciacquarlo"
         ],
         fuer: "Se vuoi un apparecchio con tubo che si risciacqua da solo dopo ogni caffè con latte. Con le macchine da caffè Siemens ho avuto le esperienze migliori.",
-        hinweis: "Metti il tubo nel cartone del latte o in un contenitore per il latte. Controlla la sigla “TP516DX3”: la EQ500 TP511E19, più economica, non ha l’app e non è stata testata.",
-        link: amazon("siemens eq500 tp516dx3", "siemens eq500")
+        hinweis: "È stata testata la TP516DX3. Secondo Siemens anche la TP511E19 pulisce il circuito del latte con il vapore, ma non ha l’app e fa meno bevande. Metti il tubo nel cartone del latte o in un contenitore per il latte.",
+        link: amazon("siemens eq500 classic tp511e19", "siemens eq500 classic tp511e19")
       },
       {
         gruppe: "Con tubo del latte",
@@ -1206,8 +1187,9 @@ const PRODUKTE = [
         link: amazon("nivona nicr 790", "nivona nicr 790")
       }
     ],
+    ohneTeuer: { stufe: "Fascia alta", titel: "Al momento non disponibile", text: "La De'Longhi Eletta Explore Cold Brew, vincitrice del test di Stiftung Warentest (luglio 2026), al momento su amazon.it non è disponibile. Appena ci sarà, la trovi qui." },
     fragen: [
-      { f: "Tubo o caraffa: cosa fa per me?", a: "Possono essere buoni entrambi: da Stiftung Warentest ci sono stati vincitori con tutti e due i sistemi, la Nivona con tubo nel 2025 e la Eletta Explore con caraffa nel 2026. La differenza sta nell’uso di tutti i giorni. La caraffa la riempi, poi la metti in frigorifero con il latte rimasto e la sciacqui regolarmente. Conviene soprattutto se bevete molto caffè con latte. Io per esempio ho avuto buone esperienze con la De'Longhi Dynamica Plus, che ha una caraffa. Se bevi un caffè con latte solo ogni tanto, il tubo è meglio: lo metti nel cartone del latte e non travasi nulla. In cambio va risciacquato dopo le bevande con latte e pulito a fondo regolarmente. E con la caraffa hai un apparecchio buono a un prezzo molto più basso." },
+      { f: "Tubo o caraffa: cosa fa per me?", a: "Possono essere buoni entrambi: da Stiftung Warentest ci sono stati vincitori con tutti e due i sistemi, la Nivona con tubo nel 2025 e la Eletta Explore con caraffa nel 2026, che al momento su amazon.it non è disponibile. La differenza sta nell’uso di tutti i giorni. La caraffa la riempi, poi la metti in frigorifero con il latte rimasto e la sciacqui regolarmente. Conviene soprattutto se bevete molto caffè con latte. Io per esempio ho avuto buone esperienze con la De'Longhi Dynamica Plus, che ha una caraffa. Se bevi un caffè con latte solo ogni tanto, il tubo è meglio: lo metti nel cartone del latte e non travasi nulla. In cambio va risciacquato dopo le bevande con latte e pulito a fondo regolarmente. E con la caraffa hai un apparecchio buono a un prezzo molto più basso." },
       { f: "Quanto risparmio rispetto alle capsule?", a: "Una capsula di marca costa circa 40 centesimi, una tazza dalla macchina automatica con chicchi, acqua e corrente circa 15 centesimi. Se in casa bevete due tazze al giorno, sono circa 15 euro in meno al mese, circa 10 euro togliendo decalcificante e detergente. Con le capsule economiche del discount non resta quasi nulla. Risparmi di più se sostituisci il caffè fuori casa: un cappuccino al bar costa in media quasi 4 euro. Quanto conta per te lo mostra il calcolatore. Sono prezzi tedeschi." },
       { f: "Conviene anche rispetto al caffè filtro?", a: "Onestamente, per i soldi no. Secondo Stiftung Warentest il caffè filtro è il modo più economico di fare il caffè, anche perché la macchina costa poco. Sempre secondo Warentest, una macchina automatica conviene solo se si beve molto caffè. In cambio macina ogni tazza al momento e ti prepara espresso e cappuccino premendo un tasto." },
       { f: "Quanto lavoro richiede la pulizia?", a: "Ogni giorno svuoti i fondi e la vaschetta raccogligocce, molti apparecchi ti avvisano quando è il momento. Dopo le bevande con latte risciacqui il circuito del latte, su molti apparecchi premendo un tasto, la Siemens lo fa da sola. La caraffa la smonti e la sciacqui regolarmente, per il tubo c’è un programma di pulizia. Una volta alla settimana estrai il gruppo infusore e lo sciacqui sotto l’acqua corrente, senza detersivo. Si può fare con tutti gli apparecchi qui. Devi decalcificare quando l’apparecchio lo segnala. Per decalcificante, detergente e filtri dell’acqua calcola all’incirca da 30 a 120 euro all’anno." },
@@ -1313,7 +1295,7 @@ const PRODUKTE = [
     nachteile: [
       "Occupa spazio: i modelli Bosch piccoli pesano poco meno di 5 chili, le macchine grandi da 8 a 10 chili. L’ideale è che stia fissa sul piano di lavoro",
       "La maggior parte frulla e trita solo con accessori: per quasi tutte le macchine a braccio ribaltabile Stiftung Warentest, il più noto istituto di test per consumatori in Germania, ha dovuto comprare accessori in più (numero 12/2025)",
-      "Pulirla può richiedere tempo: secondo Stiftung Warentest alcune macchine sono faticose da pulire (numero 12/2025). Secondo il produttore, gancio e fruste dei modelli Bosch qui possono andare in lavastoviglie"
+      "Pulirla può richiedere tempo: secondo Stiftung Warentest alcune macchine sono faticose da pulire (numero 12/2025)"
     ],
     modelle: [
       {
@@ -1328,39 +1310,29 @@ const PRODUKTE = [
         hinweis: "Non c’è un test di laboratorio recente. Frullatore e affettaverdure non sono inclusi, se ti servono li compri a parte.",
         link: amazon("bosch serie 2 mums2ew00", "bosch mums2ew00")
       },
+      // amazon.it (Stand 01.11.2026): Den getesteten MUM58W20 und die Serie 6 MUMS6ZS13D gibt es dort nicht. Darum steht hier
+      // der MUM5XW20 aus derselben Serie 4, laut Bosch mit Mixer, Gemüseschneider und Waage (mit Hinweis). Die Serie 6 nennt ohneTeuer unten.
       {
         stufe: "Fascia media", spanne: "da 150 a 350 €",
-        name: "Bosch Serie 4 (MUM58W20)", preis: 224, empfohlen: true,
+        name: "Bosch Serie 4 (MUM5XW20)", preis: 240, empfohlen: true,
         punkte: [
-          "“Buona” per Stiftung Warentest (voto 2,5) e miglior rapporto qualità-prezzo (numero 12/2025)",
-          "Ciotola in acciaio inox da 3,9 litri, secondo il produttore per fino a 2,7 chili di impasto per torte o 1,9 chili di impasto lievitato",
-          "Con affettaverdure e 3 dischi: grattugia e affetta le verdure",
-          "Con frullatore (1,25 litri)"
+          "Modello gemello della MUM58W20, “buona” per Stiftung Warentest (voto 2,5) e miglior rapporto qualità-prezzo (numero 12/2025)",
+          "Ciotola in acciaio inox da 3,9 litri, secondo il produttore per fino a 2,7 chili di impasto",
+          "Con affettaverdure e dischi: grattugia e affetta le verdure",
+          "Con frullatore e bilancia integrata"
         ],
-        fuer: "Per la maggior parte delle persone. Il mio consiglio, perché nel test era buona quasi quanto la vincitrice, costa molto meno e ha già affettaverdure e frullatore.",
-        hinweis: "Non ha bilancia né programmi. Per tritare per esempio noci o erbe ti serve un accessorio tritatutto, da comprare a parte.",
-        link: amazon("bosch serie 4 mum58w20", "bosch mum58w20")
-      },
-      {
-        stufe: "Fascia alta", spanne: "da 350 €",
-        name: "Bosch Serie 6 (MUMS6ZS13D)", preis: 499,
-        punkte: [
-          "Vincitrice del test di Stiftung Warentest tra 10 impastatrici senza funzione di cottura (buona, voto 2,4, numero 12/2025)",
-          "Ciotola grande da 5,5 litri, secondo il produttore per fino a 3,5 chili di impasto per torte o 2,5 chili di impasto lievitato",
-          "Con bilancia integrata, timer e programmi automatici",
-          "Con affettaverdure e dischi per le verdure"
-        ],
-        fuer: "Se prepari dolci spesso e in grandi quantità e bilancia e programmi per te contano.",
-        hinweis: "Frullatore e tritatutto non sono inclusi, devi comprarli a parte. Con quasi 8 chili è pesante. Per la maggior parte delle persone la fascia media basta e avanza.",
-        link: amazon("bosch serie 6 mums6zs13d", "bosch mums6zs13d")
+        fuer: "Per la maggior parte delle persone. Il mio consiglio, perché la sua gemella nel test era buona quasi quanto la vincitrice. Costa molto meno della vincitrice e ha già affettaverdure e frullatore.",
+        hinweis: "Stiftung Warentest ha testato la MUM58W20. Secondo Bosch anche questo modello ha 1000 watt, la ciotola da 3,9 litri, frullatore e affettaverdure, e in più una bilancia integrata. Non ha programmi. Per tritare per esempio noci o erbe ti serve un accessorio tritatutto, da comprare a parte.",
+        link: amazon("bosch serie 4 mum5xw20", "bosch mum5xw20")
       }
     ],
+    ohneTeuer: { stufe: "Fascia alta", titel: "Al momento non disponibile", text: "La vincitrice del test di Stiftung Warentest, la Bosch Serie 6 (MUMS6ZS13D, voto 2,4, numero 12/2025), al momento su amazon.it non è disponibile. Appena ci sarà, la trovi qui." },
     fragen: [
       { f: "Non basta uno sbattitore elettrico?", a: "Per impasti per torte e panna ogni tanto sì. Ma l’impasto lievitato a mano lo lavori almeno 8 minuti, come consigliano la catena di supermercati tedesca REWE e l’ufficio distrettuale di Göppingen. La macchina lo impasta da sola e tu hai le mani libere. Ma se fai dolci solo poche volte all’anno, onestamente, risparmia i soldi e tieni lo sbattitore." },
       { f: "Perché la KitchenAid non è il mio consiglio?", a: "La KitchenAid Artisan per Stiftung Warentest è stata solo sufficiente (voto 2,7, numero 12/2025). Panna e impasto per torte li ha fatti bene, e nel test di durata ha resistito molto bene. Ma frulla o trita solo con accessori, e pesa poco più di 10 chili. Inoltre puoi schiacciarti le dita nella cerniera della testa. Se ti piace e prepari soprattutto torte, puoi comunque sceglierla." },
       { f: "Quanto impasto riesce a lavorare?", a: "Secondo Bosch la Serie 2 impasta fino a 1,7 chili di impasto lievitato, la Serie 4 fino a 1,9 e la Serie 6 fino a 2,5 chili. Di impasto per torte ne lavorano di più: 2,4, 2,7 e 3,5 chili. Per una torta o un pane basta quindi già la più piccola." },
-      { f: "Può anche tagliare le verdure?", a: "Sì, con un affettaverdure. Grattugia le verdure o le taglia a fette, per esempio carote, cetrioli o patate. È incluso con la Serie 4 e la Serie 6, non con la Serie 2. Per noci o erbe ti serve per tutte un accessorio tritatutto a parte." },
-      { f: "Cosa fa in più un robot da cucina con cottura?", a: "Scalda mentre mescola, così ci cucini zuppe, sughi o risotti. Per i dolci basta la macchina di questa pagina, e la sua ciotola è più grande: da 3,8 a 5,5 litri invece di circa 2 o 3 litri utili. Se vuoi anche cucinare, guarda la pagina “Robot da cucina con cottura”." },
+      { f: "Può anche tagliare le verdure?", a: "Sì, con un affettaverdure. Grattugia le verdure o le taglia a fette, per esempio carote, cetrioli o patate. È incluso con la Serie 4 di questa pagina, non con la Serie 2. Per noci o erbe ti serve per entrambe un accessorio tritatutto a parte." },
+      { f: "Cosa fa in più un robot da cucina con cottura?", a: "Scalda mentre mescola, così ci cucini zuppe, sughi o risotti. Per i dolci basta la macchina di questa pagina, e la sua ciotola è più grande: 3,8 o 3,9 litri invece di circa 2 o 3 litri utili. Se vuoi anche cucinare, guarda la pagina “Robot da cucina con cottura”." },
       { f: "Quanto tempo fa risparmiare davvero?", a: "Onestamente, nessun test l’ha misurato. Con la macchina l’impasto è pronto solo un po’ prima: a mano lo lavori almeno 8 minuti, con la macchina almeno 5. La grande differenza è che non devi starci tu. Quanto conta per te lo mostra il calcolatore." }
     ],
     rechner: "kneten",
