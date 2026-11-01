@@ -65,7 +65,9 @@ const ASIN = {
   "kindle paperwhite 2026": "B0GV5YVVCD",
   "kindle 2026": "B0G4SHPH5K",
   "kindle colorsoft 2026": "B0GV642G9D",
-  "gastroback 42507 reiskocher": "B0009KA4CA"
+  "gastroback 42507 reiskocher": "B0009KA4CA",
+  "bosch serie 6 wng25401gb waschtrockner": "B0CZS32HVH",
+  "bosch serie 6 mums6zm00g": "B0DBJ8YJ4N"
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -231,36 +233,23 @@ const PRODUKTE = [
         hinweis: "For washing and drying it uses more electricity and water than the AEG with its heat pump.",
         link: amazon("hisense wd5s1045bw waschtrockner", "hisense wd5s1045bw washer dryer")
       },
+      // amazon.co.uk (Stand 01.11.2026): Haier HWD100-BD14979U1, Bosch WNG24442 und AEG L9WEF80690 gibt es dort nicht.
+      // Darum steht hier der Bosch WNG25401GB aus derselben Serie 6 wie der getestete WNG24440. Die AEG nennt ohneTeuer unten.
       {
         stufe: "Mid-range", spanne: "€550 to €900",
-        name: "Haier I-Pro Serie 7 Plus (HWD100-BD14979U1)", preis: 650, preisText: "from approx. €640", empfohlen: true,
+        name: "Bosch Serie 6 (WNG25401GB)", preis: 850, empfohlen: true,
         punkte: [
-          "Washes 10 kg and dries 6 kg in one go",
-          "i-⁠Refresh steam programme: freshens up clothes and smooths out creases",
-          "With delay timer, and you can control it from the app",
-          "Doses detergent and fabric softener by itself"
+          "Washes 10.5 kg and dries 6 kg in one go",
+          "Spins at up to 1,400 rpm, with a delay timer",
+          "According to Bosch, it washes and dries small loads in 60 minutes",
+          "Its German sister model WNG24440 from the same series was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023)"
         ],
-        fuer: "For most households. My tip, because I have a Haier myself and never want to be without one again.",
-        hinweis: "Washing and drying a full load takes a good 8 hours.",
-        link: amazon("haier i-pro serie 7 plus waschtrockner hwd100-bd14979u1", "haier i-pro series 7 plus washer dryer hwd100-bd14979u1"),
-        alternativen: [
-          { name: "Bosch Serie 6 WNG24442", preis: 800, text: "The older WNG24440 from the same series was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023). Washes 9 kg and dries 6 kg.", link: amazon("bosch serie 6 wng24442 waschtrockner", "bosch serie 6 wng24442 washer dryer") }
-        ]
-      },
-      {
-        stufe: "Premium", spanne: "from €1,000",
-        name: "AEG Serie 9000 L9WEF80690", preis: 1100, preisText: "approx. €1,050 to €1,350",
-        punkte: [
-          "Dries with a heat pump, so it uses less electricity and water",
-          "Washes 9 kg and dries 6 kg in one go",
-          "With a steam programme to freshen up clothes",
-          "Test winner at Stiftung Warentest (grade 2.0, issue 11/2023)"
-        ],
-        fuer: "For you if you do a lot of washing and want to save electricity in the long run. In return you pay a lot more up front.",
-        hinweis: "Washing and drying a full load takes almost 10 hours. The test dates from 2023.",
-        link: amazon("aeg l9wef80690 waschtrockner", "aeg l9wef80690 washer dryer")
+        fuer: "For most households. My tip, because its sister model was the best-value tip in the test.",
+        hinweis: "Stiftung Warentest tested the WNG24440, which washes 9 kg, not this model. According to Bosch, it has no automatic detergent dosing and no app.",
+        link: amazon("bosch serie 6 wng25401gb waschtrockner", "bosch series 6 wng25401gb washer dryer")
       }
     ],
+    ohneTeuer: { stufe: "Premium", titel: "Not available right now", text: "The test winner at Stiftung Warentest, the AEG L9WEF80690 with a heat pump, is not available on amazon.co.uk at the moment. As soon as it is, you'll find it here." },
     fragen: [
       { f: "A washer dryer, or a separate washing machine and dryer?", a: "Two machines get more done at once: while the dryer is running, the washing machine is already washing the next load. But you need twice the space. A washer dryer fits where your washing machine is now, and you never have to move the wet laundry. That's exactly what makes it so convenient. If you wash several loads a day for a big family, two machines are the better choice." },
       { f: "How much laundry can it dry?", a: "Usually about 6 kg, even if it can wash 9 or 10 kg. 6 kg is, for example, around 40 T-shirts. If you want to wash and dry in one go, only put in as much as it can dry." },
@@ -1060,7 +1049,7 @@ const PRODUKTE = [
     ],
     gruppen: [
       { name: "With milk carafe", text: "You pour milk into a carafe and clip it onto the front of the machine. Afterwards you put the carafe with the leftover milk in the fridge and rinse it regularly. Pouring and rinsing are mainly worth it if you drink a lot of milk coffee. Good machines with a carafe start at around 400 euros." },
-      { name: "With milk tube", text: "A thin tube draws the milk straight from the milk carton or from a container next to the machine. You don't pour anything and don't rinse a carafe. That's why the tube is better if you only drink milk coffee now and then. But it has to be flushed after milk drinks and cleaned thoroughly on a regular basis, otherwise germs build up. Good machines with a tube cost more: the cheapest one here costs a little over 500 euros." }
+      { name: "With milk tube", text: "A thin tube draws the milk straight from the milk carton or from a container next to the machine. You don't pour anything and don't rinse a carafe. That's why the tube is better if you only drink milk coffee now and then. But it has to be flushed after milk drinks and cleaned thoroughly on a regular basis, otherwise germs build up. Good machines with a tube cost more: the one here costs a little over 500 euros." }
     ],
     modelle: [
       {
@@ -1110,51 +1099,25 @@ const PRODUKTE = [
       {
         gruppe: "With milk tube",
         stufe: "Budget", spanne: "up to €550",
-        name: "Melitta Latticia OT", preis: 550, preisText: "ca. 540 bis 600 €",
+        name: "Melitta Latticia OT", preis: 550, preisText: "ca. 540 bis 600 €", empfohlen: true,
         punkte: [
           "Good at Stiftung Warentest (grade 2.3, June 2025)",
           "Only 20 centimetres wide, so it fits in small kitchens too",
           "Cappuccino and latte macchiato at the push of a button",
           "You can take out the brewing unit to rinse it"
         ],
-        fuer: "If you want a machine with a tube and there's little space in your kitchen.",
+        fuer: "My tip if you want a machine with a tube: it did well in the test and is the narrowest machine here.",
         hinweis: "There are only five drinks at the push of a button: coffee, cappuccino, latte macchiato, milk foam and hot water. According to Melitta, you clean the tube by putting it in a glass of water and starting the cleaning programme.",
         link: amazon("melitta latticia ot f300-100", "melitta latticia ot")
-      },
-      {
-        gruppe: "With milk tube",
-        stufe: "Mid-range", spanne: "€550 to €650",
-        name: "Siemens EQ500 TP516DX3", preis: 560, preisText: "ca. 545 bis 620 €",
-        punkte: [
-          "Good at Stiftung Warentest (grade 2.3, June 2025)",
-          "According to Siemens, it cleans the milk system itself with steam after every milk drink",
-          "Operated by colour display or app, according to Siemens up to 18 drinks",
-          "You can take out the brewing unit to rinse it"
-        ],
-        fuer: "If you want a machine with a tube that flushes itself after every milk coffee. I've personally had the best experiences with Siemens coffee machines.",
-        hinweis: "You put the tube into the milk carton or into a milk container. Look for “TP516DX3”: the cheaper EQ500 TP511E19 has no app and was not tested.",
-        link: amazon("siemens eq500 tp516dx3", "siemens eq500")
-      },
-      {
-        gruppe: "With milk tube",
-        stufe: "Premium", spanne: "from €650",
-        name: "Nivona NICR 790", preis: 750, preisText: "ca. 745 bis 850 €", empfohlen: true,
-        punkte: [
-          "Test winner at Stiftung Warentest (good, grade 2.0, June 2025)",
-          "According to Nivona, you can also descale it with products without sulfamic acid",
-          "Can also be operated by app via Bluetooth",
-          "You can take out the brewing unit to rinse it"
-        ],
-        fuer: "My tip if you want a machine with a tube: it was test winner.",
-        hinweis: "More expensive machines with a tube did no better in the test. You put the tube straight into the milk carton.",
-        link: amazon("nivona nicr 790", "nivona nicr 790")
       }
+      // amazon.co.uk (Stand 01.11.2026): Siemens EQ500 TP516DX3 und Nivona NICR 790 gibt es dort nicht
+      // (vom EQ500 nur andere, nicht getestete Modelle zu auffälligen Preisen). Darum hat die Schlauch-Gruppe nur die Latticia.
     ],
     fragen: [
-      { f: "Tube or carafe: which suits me?", a: "Both can be good: Stiftung Warentest had test winners with both systems, the Nivona with a tube in 2025 and the Eletta Explore with a carafe in 2026. The difference is in everyday use. You fill the carafe, put it in the fridge with the leftover milk afterwards and rinse it regularly. That's mainly worth it if you drink a lot of milk coffee. I've had good experiences with the De'Longhi Dynamica Plus, for example, which has a carafe. If you only have a milk coffee now and then, the tube is better: you put it into the milk carton and don't pour anything. In return, it has to be flushed after milk drinks and cleaned thoroughly on a regular basis. And with a carafe you get a good machine for a lot less." },
+      { f: "Tube or carafe: which suits me?", a: "Both can be good: Stiftung Warentest had test winners with both systems, the Nivona with a tube in 2025, which is not available on amazon.co.uk at the moment, and the Eletta Explore with a carafe in 2026. The difference is in everyday use. You fill the carafe, put it in the fridge with the leftover milk afterwards and rinse it regularly. That's mainly worth it if you drink a lot of milk coffee. I've had good experiences with the De'Longhi Dynamica Plus, for example, which has a carafe. If you only have a milk coffee now and then, the tube is better: you put it into the milk carton and don't pour anything. In return, it has to be flushed after milk drinks and cleaned thoroughly on a regular basis. And with a carafe you get a good machine for a lot less." },
       { f: "How much do I save compared with capsules?", a: "A branded capsule costs around 40 cents, a cup from the bean-to-cup machine with beans, water and electricity about 15 cents. If you drink two cups a day, that's around 15 euros a month less, around 10 euros after descaler and cleaner. With cheap capsules from a discount supermarket, hardly anything is left. You save the most by replacing coffee on the go: a cappuccino in a café costs almost 4 euros on average. The calculator shows what it means for you. These are German prices." },
       { f: "Is it worth it compared with filter coffee too?", a: "Honestly, not in terms of money. According to Stiftung Warentest, filter coffee is the cheapest way to make coffee, partly because the machine costs little. According to Warentest, a bean-to-cup machine only pays off if a lot of coffee is drunk. In return, it grinds every cup fresh and makes you espresso and cappuccino at the push of a button." },
-      { f: "How much work is the cleaning?", a: "Every day you empty the coffee grounds and the drip tray; many machines tell you when it's time. After milk drinks you rinse the milk system, on many machines at the push of a button, and the Siemens does it by itself. You take the carafe apart regularly and rinse it; for the tube there is a cleaning programme. Once a week you take out the brewing unit and rinse it under running water, without washing-up liquid. That works on all the machines here. You have to descale when the machine tells you to. For descaler, cleaner and water filters, reckon with roughly 30 to 120 euros a year." },
+      { f: "How much work is the cleaning?", a: "Every day you empty the coffee grounds and the drip tray; many machines tell you when it's time. After milk drinks you rinse the milk system, on many machines at the push of a button. You take the carafe apart regularly and rinse it; for the tube there is a cleaning programme. Once a week you take out the brewing unit and rinse it under running water, without washing-up liquid. That works on all the machines here. You have to descale when the machine tells you to. For descaler, cleaner and water filters, reckon with roughly 30 to 120 euros a year." },
       { f: "Do I have to descale?", a: "Yes. Set the water hardness when you set it up; a test strip is usually included. Then the machine tells you in good time when it's due. With a water filter, according to the manufacturers, you have to descale less often. Use a product the manufacturer recommends for your machine. Stiftung Warentest advises descalers without sulfamic acid, because it harms aquatic life." },
       { f: "Which beans work?", a: "Espresso or crema beans, whichever you like. Don't use caramelised or flavoured beans: according to De'Longhi, they can clog the grinder. Very oily beans are no good either: according to Siemens, they don't slide into the grinder properly." },
       { f: "Why are all the machines with a carafe from De'Longhi?", a: "Because they did best in their price range at Stiftung Warentest: the Magnifica Start is one of the cheapest good machines, the Magnifica Evo Next came in just behind the test winners in 2025, and the Eletta Explore is the current test winner. Philips also makes a carafe, LatteGo, which you clip on and rinse quickly without any tube. But on the Philips 5500 that was tested, espresso and cappuccino only tasted average in the 2024 test." }
@@ -1273,54 +1236,33 @@ const PRODUKTE = [
     nachteile: [
       "It needs space: the small Bosch models weigh just under 5 kilos, large machines 8 to 10 kilos. Ideally it has a permanent spot on the worktop",
       "Most can only blend and chop with attachments: for almost all tilt-head machines, German consumer magazine Stiftung Warentest had to buy extra attachments for that (issue 12/2025)",
-      "Cleaning can take a while: according to Stiftung Warentest some machines are tedious to clean (issue 12/2025). According to the manufacturer, the dough hooks and whisks of the Bosch models here can go in the dishwasher"
+      "Cleaning can take a while: according to Stiftung Warentest some machines are tedious to clean (issue 12/2025)"
     ],
     modelle: [
-      {
-        stufe: "Budget", spanne: "up to €150",
-        name: "Bosch Serie 2 (MUMS2EW00)", preis: 105,
-        punkte: [
-          "With planetary mixing: the hook and whisk rotate and move around the whole bowl at the same time",
-          "Stainless steel bowl holding 3.8 litres, for up to 2.4 kilos of cake batter or 1.7 kilos of yeast dough according to the manufacturer",
-          "Dough hook, whisk and beater are included and, according to the manufacturer, dishwasher-safe"
-        ],
-        fuer: "If you mainly make cakes, pizza and bread dough and want to spend little.",
-        hinweis: "There is no current lab test for it. A blender and a vegetable slicer are not included; you can buy them separately if you need them.",
-        link: amazon("bosch serie 2 mums2ew00", "bosch mums2ew00")
-      },
-      {
-        stufe: "Mid-range", spanne: "€150 to €350",
-        name: "Bosch Serie 4 (MUM58W20)", preis: 224, empfohlen: true,
-        punkte: [
-          "Good at Stiftung Warentest (grade 2.5) and best value (issue 12/2025)",
-          "Stainless steel bowl holding 3.9 litres, for up to 2.7 kilos of cake batter or 1.9 kilos of yeast dough according to the manufacturer",
-          "With a continuous slicer and 3 discs: it grates and slices vegetables",
-          "With a blender attachment (1.25 litres)"
-        ],
-        fuer: "For most people. My tip, because in the test it was almost as good as the test winner, costs much less and already comes with a vegetable slicer and a blender.",
-        hinweis: "It has no scales and no programmes. To chop things like nuts or herbs, you need a chopper attachment, which you buy separately.",
-        link: amazon("bosch serie 4 mum58w20", "bosch mum58w20")
-      },
+      // amazon.co.uk (Stand 01.11.2026): Serie 2 MUMS2EW00, Serie 4 MUM58W20 und den getesteten MUMS6ZS13D gibt es dort nicht.
+      // Darum steht hier der MUMS6ZM00G aus derselben Serie 6, ohne Gemüseschneider. Serie 2 und 4 nennt ohneTeuer unten.
       {
         stufe: "Premium", spanne: "from €350",
-        name: "Bosch Serie 6 (MUMS6ZS13D)", preis: 499,
+        name: "Bosch Serie 6 (MUMS6ZM00G)", preis: 500, empfohlen: true,
         punkte: [
-          "Test winner at Stiftung Warentest among 10 stand mixers without a cooking function (good, grade 2.4, issue 12/2025)",
-          "Large bowl holding 5.5 litres, for up to 3.5 kilos of cake batter or 2.5 kilos of yeast dough according to the manufacturer",
+          "Sister model of the test winner at Stiftung Warentest among 10 stand mixers without a cooking function (MUMS6ZS13D: good, grade 2.4, issue 12/2025)",
+          "Large bowl holding 5.5 litres, for up to 3.5 kilos of cake batter according to Bosch",
           "With built-in scales, a timer and automatic programmes",
-          "With a continuous slicer and discs for vegetables"
+          "Kneading hook, beating whisk and stirring whisk are included"
         ],
-        fuer: "If you bake often and in large quantities and scales and programmes matter to you.",
-        hinweis: "A blender and a chopper are not included, you have to buy them separately. At just under 8 kilos it is heavy. For most people the mid-range is more than enough.",
-        link: amazon("bosch serie 6 mums6zs13d", "bosch mums6zs13d")
+        fuer: "If you bake often and in large quantities and scales and programmes matter to you. My tip, because it is the sister model of the test winner.",
+        hinweis: "Stiftung Warentest tested the MUMS6ZS13D, which also comes with a vegetable slicer. According to Bosch, this model also has 1600 watts, a 5.5-litre bowl and built-in scales, but no vegetable slicer. A blender and a chopper are not included either. At over 8 kilos it is heavy.",
+        link: amazon("bosch serie 6 mums6zm00g", "bosch mums6zm00g")
       }
     ],
+    // ohneTeuer zeigt hier ausnahmsweise die günstigeren getesteten Modelle, die es bei amazon.co.uk gerade nicht gibt
+    ohneTeuer: { stufe: "Cheaper models", titel: "Not available right now", text: "The Bosch Serie 4 (MUM58W20), good and best value at Stiftung Warentest (grade 2.5, issue 12/2025), and the cheaper Serie 2 (MUMS2EW00) are not available on amazon.co.uk at the moment. As soon as one of them is, you'll find it here." },
     fragen: [
       { f: "Isn't a hand mixer enough?", a: "For cake batter and cream now and then, yes. But you knead yeast dough by hand for at least 8 minutes, as the German supermarket chain REWE and the district office of Göppingen advise. The machine kneads it by itself and your hands are free. But if you only bake a few times a year, honestly, save the money and use the hand mixer." },
       { f: "Why isn't the KitchenAid my tip?", a: "The KitchenAid Artisan was only satisfactory at Stiftung Warentest (grade 2.7, issue 12/2025). It made cream and cake batter well, and it held up very well in the endurance test. But it can only blend or chop with attachments, and it weighs just over 10 kilos. You can also trap your fingers in the hinge of the head. If you like it and mainly bake cakes, you can still go for it." },
       { f: "How much dough can it handle?", a: "According to Bosch, the Serie 2 kneads up to 1.7 kilos of yeast dough, the Serie 4 up to 1.9 and the Serie 6 up to 2.5 kilos. Each manages more cake batter: 2.4, 2.7 and 3.5 kilos. So even the smallest is enough for a cake or a loaf of bread." },
-      { f: "Can it slice vegetables too?", a: "Yes, with a continuous slicer. It grates vegetables or cuts them into slices, for example carrots, cucumbers or potatoes. It comes with the Serie 4 and the Serie 6, but not with the Serie 2. For nuts or herbs you need a separate chopper attachment for all of them." },
-      { f: "What more can a food processor with cooking function do?", a: "It heats while it stirs, so you can cook soups, sauces or risotto in it. For baking the machine here is enough, and its bowl is bigger: 3.8 to 5.5 litres instead of about 2 to 3 litres usable. If you want to cook as well, take a look at the page “Food processor with cooking function”." },
+      { f: "Can it slice vegetables too?", a: "Yes, with a continuous slicer. It grates vegetables or cuts them into slices, for example carrots, cucumbers or potatoes. The Serie 6 here doesn't come with one. For nuts or herbs you need a separate chopper attachment." },
+      { f: "What more can a food processor with cooking function do?", a: "It heats while it stirs, so you can cook soups, sauces or risotto in it. For baking the machine here is enough, and its bowl is bigger: 5.5 litres instead of about 2 to 3 litres usable. If you want to cook as well, take a look at the page “Food processor with cooking function”." },
       { f: "How much time does it really save?", a: "Honestly, no test has measured that. The dough is only a little quicker with the machine: by hand you knead it for at least 8 minutes, with the machine for at least 5. The big difference is that you don't have to be there. The calculator shows how much that adds up to for you." }
     ],
     rechner: "kneten",
