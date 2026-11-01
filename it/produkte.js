@@ -17,7 +17,7 @@ const ASIN = {
   "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
-  "wiz a60 e27 color": "B0FLX2T1Z9",
+  "wiz a60 e27 color": "B0FJ8WNFDN",
   "philips hue white and color ambiance e27": "B0FJ8TQFGP",
   "midea portasplit": "B0D3PP64JS",
   "midea portasplit cool": "B0GXDWTFR5",
@@ -57,7 +57,7 @@ const ASIN = {
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
   "bosch unlimited 10 bks1041rhf": "B0DB8QB2GW",
-  "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
+  "panasonic sr-da152 reiskocher": "B0FX5HM1ZP",
   "cosori reiskocher crc-r501": "B0BZY2HGW1",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
   "lékué elastische deckel": "B084DRTSDK",
@@ -1062,54 +1062,23 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Economico", spanne: "fino a 70\u00a0€",
-        name: "Gastroback Design Reiskocher (42507)", preis: 61,
-        punkte: [
-          "Per Stiftung Warentest, il più noto istituto di test per consumatori in Germania, il cuociriso “buono” più economico (numero 5/2026)",
-          "Veloce: nel test era pronto in 16-34 minuti, a seconda della quantità e del riso",
-          "Con cestello per cuocere le verdure a vapore",
-          "Dopo tiene il riso in caldo"
-        ],
-        fuer: "Per te se vuoi semplicemente un buon riso, senza fronzoli.",
-        hinweis: "Senza timer e senza programmi: parte appena lo accendi.",
-        link: amazon("gastroback 42507 reiskocher", "gastroback 42507 cuociriso")
-      },
-      {
         stufe: "Fascia media", spanne: "da 70 a 150\u00a0€",
-        name: "Yum Asia Tsuki Mini", preis: 100, preisText: "circa 100 €", empfohlen: true,
+        name: "Panasonic SR-DA152", preis: 90, empfohlen: true,
         punkte: [
-          "Fuzzy logic: adatta da solo calore e tempo al riso",
-          "7 programmi, per esempio per riso a chicco lungo, per sushi e integrale, porridge e cottura lenta",
-          "Con timer fino a 24 ore, poi tiene il riso in caldo",
-          "Elegante e opaco, in bianco o grigio, con pentola interna in ceramica"
+          "Vincitore del test di Stiftung Warentest, il più noto istituto di test per consumatori in Germania (“buono”, voto 2,2, numero 5/2026)",
+          "Grande: 1,5 litri, abbastanza riso per tutta la famiglia",
+          "Con cestello per il vapore e timer fino a 24 ore",
+          "Secondo il produttore la pentola ha un rivestimento in ceramica senza PFAS e va in lavastoviglie"
         ],
-        fuer: "Per single e coppie. Il mio consiglio, perché ce l’ho anch’io ed è fantastico. È anche molto elegante, e puoi scegliere tra due colori.",
-        hinweis: "È piccolo: fino a 2,5 misurini di riso, bastano per 1 o 2 persone. Secondo il produttore il riso bianco richiede circa 30-40 minuti. La pentola in ceramica si lava a mano.",
-        link: amazon("yum asia tsuki mini reiskocher", "yum asia tsuki mini cuociriso"),
-        alternativen: [
-          { name: "Panasonic SR-DA152", preis: 90, text: "Vincitore del test di Stiftung Warentest (“buono”, voto 2,2, numero 5/2026). Più grande (1,5 litri), con timer e cestello per il vapore. La scelta migliore per le famiglie.", link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuociriso") },
-          { name: "Rommelsbacher MRK 650", preisText: "circa da 85 a 100\u00a0€", text: "Anche lui vincitore del test di Stiftung Warentest (“buono”, voto 2,2, numero 5/2026). Con 12 programmi, cestello per il vapore e partenza ritardata fino a 24 ore.", link: amazon("rommelsbacher mrk 650 reiskocher", "rommelsbacher mrk 650 cuociriso") },
-          { name: "Cosori Reiskocher (CRC-R501)", preis: 99, text: "Anche lui “buono” per Stiftung Warentest (numero 5/2026), con cestello per il vapore e tanti programmi. Però lento: nel test gli servivano 43-68 minuti.", link: amazon("cosori reiskocher crc-r501", "cosori cuociriso crc-r501") }
-        ]
-      },
-      {
-        stufe: "Fascia alta", spanne: "da 150\u00a0€",
-        name: "Yum Asia Bamboo", preis: 250, preisText: "circa 250\u00a0€",
-        punkte: [
-          "Scalda a induzione: si scalda la pentola stessa, non solo una piastra sotto. Così il calore si distribuisce in modo più uniforme",
-          "Pentola con rivestimento in ceramica",
-          "Tanti programmi per i tipi di riso, più vapore, cottura lenta e torte",
-          "Vincitore del test di ETM Testmagazin (“molto buono”, numero 1/2024)"
-        ],
-        fuer: "Per te se mangi riso molto spesso e vuoi il meglio.",
-        hinweis: "Stiftung Warentest non l’ha testato. Secondo ETM Testmagazin potrebbe tenere in caldo il riso meglio. Onestamente, per la maggior parte delle persone la fascia media basta e avanza.",
-        link: amazon("yum asia bamboo reiskocher induktion", "yum asia bamboo cuociriso induzione")
+        fuer: "Per la maggior parte delle persone, soprattutto per le famiglie. Il mio consiglio, perché è il vincitore del test.",
+        hinweis: "Non è veloce: nel test gli servivano 35-54 minuti, a seconda della quantità e del riso.",
+        link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuociriso")
       }
     ],
     fragen: [
       { f: "Quanta acqua ci va?", a: "Te lo indicano le tacche dentro la pentola. Metti il riso con il misurino in dotazione e versi l’acqua fino alla tacca giusta. Se ti attieni a questo, viene giusto quasi sempre." },
       { f: "Devo lavare il riso prima?", a: "Sì, sciacquarlo un attimo conviene: così si attacca meno e trabocca meno facilmente. Versalo in un colino e sciacqualo con acqua fredda finché l’acqua è quasi limpida." },
-      { f: "Posso cuocerci anche verdure o pesce?", a: "Sì, se il tuo apparecchio ha un cestello per il vapore. Quasi tutti ce l’hanno, lo Tsuki Mini no. Va sopra la pentola, e in molti apparecchi ci cuociono al vapore verdure o pesce mentre sotto cuoce il riso. Se le verdure restano croccanti dipende dall’apparecchio: nel test di Stiftung Warentest solo sei apparecchi hanno dato broccoli verdi e croccanti (numero 5/2026)." },
+      { f: "Posso cuocerci anche verdure o pesce?", a: "Sì, se il tuo apparecchio ha un cestello per il vapore. Quasi tutti ce l’hanno. Va sopra la pentola, e in molti apparecchi ci cuociono al vapore verdure o pesce mentre sotto cuoce il riso. Se le verdure restano croccanti dipende dall’apparecchio: nel test di Stiftung Warentest solo sei apparecchi hanno dato broccoli verdi e croccanti (numero 5/2026)." },
       { f: "Per quanto tempo il riso può restare in caldo?", a: "Non troppo. L’Istituto federale tedesco per la valutazione dei rischi consiglia di mangiare il cibo tenuto in caldo al massimo tre ore dopo la cottura, e nel frattempo deve restare sopra i 65 gradi. Metti subito gli avanzi in frigo e mangiali entro un giorno. Il riso cotto non dovrebbe restare tiepido in giro, altrimenti possono formarsi germi." },
       { f: "Il rivestimento è sicuro?", a: "Nella maggior parte degli apparecchi sì. Però Stiftung Warentest ha rilevato che in due cuociriso di Reishunger dal rivestimento si stacca molto più alluminio che negli altri apparecchi, anche se il limite viene rispettato (numero 5/2026). Per questo non consiglio questi apparecchi. Con qualsiasi apparecchio: niente cucchiai di metallo e niente spugne abrasive, perché il rivestimento duri a lungo." },
       { f: "Il riso del cuociriso è più buono?", a: "Dipende dall’apparecchio. Un cuociriso regola da solo il calore e passa al mantenimento in caldo appena l’acqua è assorbita. Ma non tutti lo fanno bene: nel test di Stiftung Warentest solo 6 cuociriso su 13 hanno cotto bene il riso, tra cui i due vincitori del test (numero 5/2026). In nessuno il riso si è attaccato." }

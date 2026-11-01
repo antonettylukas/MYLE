@@ -17,7 +17,7 @@ const ASIN = {
   "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
-  "wiz a60 e27 color": "B0FLX2T1Z9",
+  "wiz a60 e27 color": "B0FJ8WNFDN",
   "philips hue white and color ambiance e27": "B0FJ8TQFGP",
   "midea portasplit": "B0D3PP64JS",
   "midea portasplit cool": "B0GXDWTFR5",
@@ -1042,54 +1042,26 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Petit budget", spanne: "jusqu’à 70\u00a0€",
-        name: "Gastroback Design Reiskocher (42507)", preis: 61,
-        punkte: [
-          "Le cuiseur à riz « bien » le moins cher chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (numéro 5/2026)",
-          "Rapide : dans le test, il était prêt en 16 à 34 minutes selon la quantité et le riz",
-          "Avec panier vapeur pour les légumes",
-          "Garde ensuite le riz au chaud"
-        ],
-        fuer: "Pour vous si vous voulez simplement du bon riz, sans chichis.",
-        hinweis: "Sans minuterie ni programmes\u202f: il démarre dès que vous l’allumez.",
-        link: amazon("gastroback 42507 reiskocher", "gastroback 42507 cuiseur à riz")
-      },
-      {
         stufe: "Milieu de gamme", spanne: "de 70 à 150\u00a0€",
-        name: "Yum Asia Tsuki Mini", preis: 100, preisText: "env. 100 €", empfohlen: true,
+        name: "Panasonic SR-DA152", preis: 90, empfohlen: true,
         punkte: [
-          "Logique floue : il adapte lui-même la chaleur et le temps au riz",
-          "7 programmes, par exemple pour riz long, riz à sushi et riz complet, bouillie et cuisson lente",
-          "Avec minuterie jusqu’à 24 heures, puis il garde le riz au chaud",
-          "Élégant et mat, en blanc ou en gris, avec une cuve en céramique"
+          "Vainqueur du test chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (« bien », note 2,2, numéro 5/2026)",
+          "Grand\u202f: 1,5 litre, de quoi faire du riz pour toute la famille",
+          "Avec panier vapeur et minuterie jusqu’à 24 heures",
+          "Selon le fabricant, la cuve a un revêtement céramique sans PFAS et va au lave-vaisselle"
         ],
-        fuer: "Pour les personnes seules et les couples. Mon conseil, car je l’ai moi-même et je le trouve super. Il est aussi très élégant, et vous pouvez choisir entre deux couleurs.",
-        hinweis: "Il est petit : jusqu’à 2,5 verres doseurs de riz, de quoi nourrir 1 à 2 personnes. Selon le fabricant, le riz blanc demande environ 30 à 40 minutes. La cuve en céramique se lave à la main.",
-        link: amazon("yum asia tsuki mini reiskocher", "yum asia tsuki mini cuiseur à riz"),
+        fuer: "Pour la plupart des gens, surtout pour les familles. Mon conseil, parce qu’il est vainqueur du test.",
+        hinweis: "Il n’est pas rapide\u202f: dans le test, il lui a fallu 35 à 54 minutes selon la quantité et le riz.",
+        link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuiseur à riz"),
         alternativen: [
-          { name: "Panasonic SR-DA152", preis: 90, text: "Vainqueur du test chez Stiftung Warentest (« bien », note 2,2, numéro 5/2026). Plus grand (1,5 litre), avec minuterie et panier vapeur. Le meilleur choix pour les familles.", link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuiseur à riz") },
-          { name: "Rommelsbacher MRK 650", preisText: "env. 85 à 100\u00a0€", text: "Également vainqueur du test chez Stiftung Warentest (« bien », note 2,2, numéro 5/2026). Avec 12 programmes, un panier vapeur et un départ différé jusqu’à 24 heures.", link: amazon("rommelsbacher mrk 650 reiskocher", "rommelsbacher mrk 650 cuiseur à riz") },
           { name: "Cosori Reiskocher (CRC-R501)", preis: 99, text: "Également « bien » chez Stiftung Warentest (numéro 5/2026), avec panier vapeur et de nombreux programmes. Mais lent : dans le test, il lui a fallu 43 à 68 minutes.", link: amazon("cosori reiskocher crc-r501", "cosori cuiseur à riz crc-r501") }
         ]
-      },
-      {
-        stufe: "Haut de gamme", spanne: "à partir de 150\u00a0€",
-        name: "Yum Asia Bamboo", preis: 250, preisText: "env. 250\u00a0€",
-        punkte: [
-          "Chauffe par induction : c’est la cuve elle-même qui chauffe, pas seulement une plaque en dessous. La chaleur se répartit ainsi plus uniformément",
-          "Cuve avec revêtement céramique",
-          "De nombreux programmes pour les sortes de riz, plus vapeur, mijotage et cuisson de gâteaux",
-          "Vainqueur du test chez ETM Testmagazin (« très bien », numéro 1/2024)"
-        ],
-        fuer: "Pour vous si vous mangez très souvent du riz et voulez le meilleur.",
-        hinweis: "Stiftung Warentest ne l’a pas testé. Selon ETM Testmagazin, il pourrait mieux garder le riz au chaud. Honnêtement, pour la plupart, le milieu de gamme suffit largement.",
-        link: amazon("yum asia bamboo reiskocher induktion", "yum asia bamboo cuiseur à riz induction")
       }
     ],
     fragen: [
       { f: "Combien d’eau faut-il ajouter\u202f?", a: "Des repères à l’intérieur de la cuve vous l’indiquent. Vous mesurez le riz avec le gobelet fourni et versez l’eau jusqu’au repère correspondant. Tenez-vous-en à cela, et c’est juste presque à chaque fois." },
       { f: "Dois-je laver le riz avant\u202f?", a: "Oui, un rapide rinçage vaut le coup : il colle moins, et cela déborde moins facilement. Versez-le dans une passoire et rincez-le à l’eau froide jusqu’à ce que l’eau soit presque claire." },
-      { f: "Puis-je aussi y cuire des légumes ou du poisson\u202f?", a: "Oui, si votre appareil a un panier vapeur. Presque tous en ont un, pas le Tsuki Mini. Il se pose sur la cuve, et sur beaucoup d’appareils, des légumes ou du poisson y cuisent à la vapeur pendant que le riz cuit en dessous. Que les légumes restent croquants dépend de l’appareil : chez Stiftung Warentest, seuls six appareils ont réussi un brocoli vert et croquant (numéro 5/2026)." },
+      { f: "Puis-je aussi y cuire des légumes ou du poisson\u202f?", a: "Oui, si votre appareil a un panier vapeur. Presque tous en ont un. Il se pose sur la cuve, et sur beaucoup d’appareils, des légumes ou du poisson y cuisent à la vapeur pendant que le riz cuit en dessous. Que les légumes restent croquants dépend de l’appareil : chez Stiftung Warentest, seuls six appareils ont réussi un brocoli vert et croquant (numéro 5/2026)." },
       { f: "Combien de temps le riz peut-il rester au chaud\u202f?", a: "Pas trop longtemps. L’Institut fédéral allemand d’évaluation des risques conseille de manger un plat maintenu au chaud au plus tard trois heures après la cuisson, et il doit rester à plus de 65 degrés. Mettez vite les restes au réfrigérateur et mangez-les dans un délai d’un jour. Le riz cuit ne doit pas rester tiède à l’air libre, sinon des germes peuvent se développer." },
       { f: "Le revêtement est-il sans danger\u202f?", a: "Sur la plupart des appareils, oui. Mais Stiftung Warentest a constaté que nettement plus d’aluminium se libère du revêtement de deux cuiseurs à riz de Reishunger que sur les autres appareils, même si la valeur limite est respectée (numéro 5/2026). C’est pourquoi je ne recommande pas ces appareils. Quel que soit l’appareil : pas de cuillère en métal ni d’éponge à récurer, pour que le revêtement dure longtemps." },
       { f: "Le riz du cuiseur est-il meilleur\u202f?", a: "Cela dépend de l’appareil. Un cuiseur à riz règle lui-même la chaleur et passe en maintien au chaud dès que l’eau est absorbée. Mais tous ne le font pas bien : chez Stiftung Warentest, seuls 6 cuiseurs à riz sur 13 ont bien cuit le riz, dont les deux vainqueurs du test (numéro 5/2026). Dans aucun, le riz n’a attaché." }
