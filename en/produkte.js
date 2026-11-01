@@ -19,7 +19,7 @@ const ASIN = {
   "philips hue essential starter set e27": "B0FJXZJ9N7",
   "wiz a60 e27 color": "B0FLX2T1Z9",
   "philips hue white and color ambiance e27": "B0FJ8TQFGP",
-  "midea portasplit": "B0D3PP64JS",
+  "midea portasplit": "B0GYPN1724",
   "midea portasplit cool": "B0GXDWTFR5",
   "bosch cool 4000": "B0BXT6YV8K",
   "mysoda woody wassersprudler": "B09DGN7TJD",
@@ -29,9 +29,9 @@ const ASIN = {
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0G8172MJD",
   "mova v50 ultra complete": "B0DZ2YC2VG",
-  "dreame l40s pro ultra": "B0DY8V59LY",
-  "roborock q10 s5+": "B0DWK6P2GH",
-  "roborock q7 l5+": "B0DWMLMRWQ",
+  "dreame l40s pro ultra": "B0F59Z75R7",
+  "roborock q10 s5+": "B0DWMTWY3B",
+  "roborock q7 l5+": "B0DWMVY8CZ",
   "hisense wd5s1045bw waschtrockner": "B0BXFPSKNF",
   "philips dual basket na352": "B0D4Q8QFTH",
   "tefal dual easy fry grill ey905d": "B0CW52TT95",
@@ -42,7 +42,7 @@ const ASIN = {
   "salcar trv801w": "B0CDZPB8RZ",
   "eurotronic comet wifi": "B08H8PTDW1",
   "shelly trv heizkörperthermostat wlan": "B09RPVRQ3F",
-  "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
+  "aqara w600 heizkörperthermostat": "B0G7YBCW8K",
   "bosch smart home heizkörperthermostat ii +m": "B0DHGSL6FC",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "aeg 6000 ap61cb21db": "B0DXFMMBJ9",
@@ -51,6 +51,7 @@ const ASIN = {
   "bosch unlimited 10 bbs1041ggb": "B0DJD44QQM",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
   "cosori reiskocher crc-r501": "B0BZY2HGW1",
+  "yum asia tsuki mini reiskocher": "B0B42W8TLT",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
   "lékué elastische deckel": "B084DRTSDK",
   "ecovacs deebot t80 omni": "B0DZ64GW9Z",
@@ -107,73 +108,18 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        gruppe: "With mop roller",
-        stufe: "Budget", spanne: "up to €400",
-        name: "ECOVACS DEEBOT T80 OMNI", preis: 349, preisText: "approx. €335 to €350",
-        punkte: [
-          "The base station empties it and washes the mop roller with hot water",
-          "Mops thoroughly with a roller that lifts up on carpet",
-          "Finds its way around by laser, and hair hardly wraps around the brush",
-          "Grade 2.6 at smarthomeassistent.de, value for money grade 2.0"
-        ],
-        fuer: "For you if you want vacuuming and mopping, watch the price and mostly have hard floors.",
-        hinweis: "It cleans corners less well because its side brush doesn't extend. The roller only lifts 10 mm, and in the test it got stuck on deep-pile carpet.",
-        link: amazon("ecovacs deebot t80 omni"),
-        alternativen: [
-          { name: "ECOVACS DEEBOT T90 PRO OMNI", preis: 477, text: "A little pricier and better overall at smarthomeassistent.de (grade 2.3).", link: amazon("ecovacs deebot t90 pro omni") }
-        ]
-      },
-      {
-        gruppe: "With mop roller",
-        stufe: "Mid-range", spanne: "€400 to €700",
-        name: "MOVA Z60 Ultra Roller Complete", preis: 649, empfohlen: true,
-        punkte: [
-          "Very good at vacuuming and mopping in the test (grade 1.4, No. 2 at smarthomeassistent.de)",
-          "Mops with a roller that is rinsed with fresh water all the time as it drives. The base station washes it with water up to 80 °C",
-          "Climbs over thresholds up to 5 cm",
-          "Lifts the roller on carpet and seals it so nothing gets wet"
-        ],
-        fuer: "For most homes, including with pets. If you ask me, this is where you get the most for your money.",
-        hinweis: "The roller doesn't get right up to the skirting board: in tests a narrow strip along the wall was left when mopping.",
-        link: amazon("mova z60 ultra roller complete"),
-        alternativen: [
-          { name: "ECOVACS DEEBOT T90S PRO OMNI", preis: 599, text: "Mops just as well at smarthomeassistent.de (grade 1.0).", link: amazon("ecovacs deebot t90s pro omni") }
-        ]
-      },
-      {
-        gruppe: "With mop roller",
-        stufe: "Premium", spanne: "from €700",
-        name: "Dreame Aqua20 Pro Ultra Roller X Complete", preis: 1499, preisText: "approx. €1,500",
-        punkte: [
-          "Test winner at smarthomeassistent.de (grade 1.3)",
-          "Vacuums very powerfully and finds its way around superbly, including around obstacles",
-          "Mops with a roller and loosens dried-on stains with steam, which according to the manufacturer it heats to 180 °C",
-          "The base station washes the roller with 100 °C hot water. According to the maker it climbs thresholds up to 5 cm, two-step ones up to 10 cm"
-        ],
-        fuer: "For anyone who wants the best, above all at vacuuming and navigation.",
-        hinweis: "At mopping it scores lower in the test than the MOVA Z60 (grade 2.5 instead of 1.0). If mopping matters most to you, the extra cost is hardly worth it.",
-        link: amazon("dreame aqua20 pro ultra roller x complete"),
-        alternativen: [
-          { name: "Roborock Saros 20 Flow Complete", preis: 1299, text: "Grade 1.5 at smarthomeassistent.de, with the top grade for navigation (1.0). But it mops less well there (grade 3.4).", link: amazon("roborock saros 20 flow complete") },
-          { name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999, text: "Grade 1.7 at smarthomeassistent.de, and it mops very well there (grade 1.0). The base station needs no dust bags.", link: amazon("ecovacs deebot x12s omnicyclone") }
-        ]
-      },
-      {
         gruppe: "With rotating mops",
         stufe: "Budget", spanne: "up to €600",
-        name: "MOVA V50 Ultra Complete", preis: 529, empfohlen: true,
+        name: "Dreame L40s Pro Ultra", preis: 499, empfohlen: true,
         punkte: [
-          "Best model with rotating mops in its price range at smarthomeassistent.de (grade 1.9)",
-          "Mops very well in the test (grade 1.0), with warm water too",
-          "The base station washes the mop pads with 80 °C hot water and dries them with hot air",
-          "The mop pads and side brush extend, so they reach edges and corners"
+          "Grade 2.2 at smarthomeassistent.de, with very good value for money (grade 1.4)",
+          "Mops very well in the test (grade 1.0), along the edges too",
+          "The base station empties it, washes the mop pads and dries them",
+          "Picks up hair well in the test"
         ],
-        fuer: "For homes with lots of corners and edges, if you want thorough mopping. Only the premium models do better in the test.",
-        hinweis: "It doesn't always spot obstacles: in tests it missed flat objects and now and then bumped into chair and table legs. At smarthomeassistent.de it only gets grade 2.7 for navigation.",
-        link: amazon("mova v50 ultra complete"),
-        alternativen: [
-          { name: "Dreame L40s Pro Ultra", preis: 499, text: "A little cheaper and mops just as well at smarthomeassistent.de (grade 1.0, 2.2 overall).", link: amazon("dreame l40s pro ultra") }
-        ]
+        fuer: "For homes with lots of corners and edges, if you want thorough mopping and watch the price.",
+        hinweis: "At smarthomeassistent.de it finds its way around less well on carpet, especially deep-pile (grade 2.8 for navigation), and its battery life is below average.",
+        link: amazon("dreame l40s pro ultra")
       },
       {
         gruppe: "With rotating mops",
@@ -212,13 +158,12 @@ const PRODUKTE = [
     fragen: [
       { f: "Which tests do you base your robot picks on?", a: "For robot vacuums I rely on the detailed tests at smarthomeassistent.de. There every robot goes through the same trials, from carpet and hair to obstacles and door thresholds. Their grades work like German school grades: 1.0 is the best. I recommend the models that do best in their price range there, plus my own experience from 14 years. If a robot is tested again after an update, for example because its navigation has improved, the newer test is the one that counts for me." },
       { f: "Do I need the mopping function?", a: "With lots of hard floors like tiles, laminate or parquet, definitely: the floor stays clean and you never fill a bucket again. If you mostly have carpet, or you like mopping yourself anyway, a robot that only vacuums is enough. That one often costs only half as much." },
-      { f: "Mop roller or rotating mops: which is better?", a: "Both can mop very well: in the test the MOVA Z60 with a roller and the MOVA V50 with mop pads each get the top grade of 1.0 for mopping. The roller picks the dirty water straight back up, so it has to go back to the base station to be washed less often. The mop pads get into edges and corners better, but tend to spread dirty water around. If you have lots of corners, nooks and furniture edges, go for mop pads. If you mainly have open floor space, a roller is a good fit." },
+      { f: "Mop roller or rotating mops: which is better?", a: "Both can mop very well: at smarthomeassistent.de, for example, the MOVA Z60 with a roller and the Dreame L40s Pro Ultra with mop pads each get the top grade of 1.0 for mopping. The roller picks the dirty water straight back up, so it has to go back to the base station to be washed less often. The mop pads get into edges and corners better, but tend to spread dirty water around. If you have lots of corners, nooks and furniture edges, go for mop pads. If you mainly have open floor space, a roller is a good fit. Right now, though, I haven't found a roller model on amazon.co.uk that mops well in tests, so for now there isn't one on this page." },
       { f: "Does it get stuck on cables or socks?", a: "Models with a camera usually recognise cables, socks and shoes and drive around them, and many recognise pets too. Cheap models without a camera are more likely to run over a cable or get stuck, so you quickly tidy up first. A tangle of cables under the desk is best sorted out once, whatever the model." },
       { f: "Can I start it when I'm not at home?", a: "Yes, and that's exactly the trick. In the app you set up a schedule, for example Monday to Friday at 9 am. That's how I've been doing it for years. You can also start it from your phone when you're out." },
-      { f: "Can it get over door thresholds and carpet edges?", a: "Most models manage thresholds up to about 2 cm, good models like the MOVA Z60 up to about 5 cm. On carpet a mopping robot lifts its mop pads or roller so nothing gets wet." },
+      { f: "Can it get over door thresholds and carpet edges?", a: "Most models manage thresholds up to about 2 cm, good models like the Dreame X60 about 4 to 5 cm in tests. On carpet a mopping robot lifts its mop pads or roller so nothing gets wet." },
       { f: "What do I still have to do myself?", a: "Change the dust bag every few weeks and clean the brush now and then. With a mopping robot you also top up the fresh water and empty the dirty water as soon as it tells you. But don't leave the dirty water standing for days, or it starts to smell." },
       { f: "What does it cost to run?", a: "Bags, filters, brushes and the mop pads or roller wear out. According to a cost check by netzwelt.de, a robot vacuum and mop with a base station comes to about €45 to €185 a year, without mopping about €25 to €120. Electricity adds about €15 to €25 a year, a bit more for base stations with hot water and drying." },
-      { f: "I've never heard of MOVA. Is it a good brand?", a: "MOVA is a sister brand of Dreame; both belong to the Dreame Group. Their technology and app are very similar. The MOVA robots on this page score good to very good in the test." },
       { f: "Does it work on several floors?", a: "It remembers several maps. The base station stays in one place, though. You carry it to the other floor, and it can only empty itself again at the base station." },
       { f: "How loud is it?", a: "Usually about as loud as a conversation, so quieter than a normal vacuum cleaner. And because it runs while you're out, you won't notice it anyway. Only the base station is really loud for a few seconds while it empties the robot." }
     ],
@@ -378,28 +323,7 @@ const PRODUKTE = [
           "Good at Stiftung Warentest, Germany's best-known consumer tester (grade 2.3, issue 1/2025), test winner among machines with two baskets at the time"
         ],
         fuer: "For anyone who wants two baskets and watches the price.",
-        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8.5l"),
-        alternativen: [
-          { name: "Philips Dual Basket 3000 (NA352)", preis: 110, text: "One large 6-litre basket and a small 3-litre one. Good for a main dish plus a side.", link: amazon("philips dual basket na352") },
-          { name: "Tefal Dual Easy Fry & Grill", preis: 100, text: "Two baskets of 5.2 and 3.1 litres, with a grill function.", link: amazon("tefal dual easy fry grill ey905d") }
-        ]
-      },
-      {
-        stufe: "Mid-range", spanne: "€130 to €200",
-        name: "Cosori Dual Blaze TwinFry 10 L", preis: 180, preisText: "approx. €170 to €200",
-        punkte: [
-          "Two baskets of 5 litres each, or one large 10-litre basket when you take out the divider",
-          "Sync button: everything is ready at the same time",
-          "Sends a message to your phone via the app as soon as the food is ready",
-          "Heats from above and below, up to 240 °C"
-        ],
-        fuer: "For you if you want two baskets side by side or now and then need one big 10-litre basket.",
-        hinweis: "For safety reasons you can only start it on the machine itself, not via the app.",
-        link: amazon("cosori twinfry 10 l"),
-        alternativen: [
-          { name: "Ninja Foodi MAX Dual Zone (AF400)", preisText: "approx. €140 to €180", text: "Two baskets side by side, 9.5 litres in total, with Sync.", link: amazon("ninja foodi max dual zone af400eu") },
-          { name: "Ninja Double Stack XL", preisText: "from approx. €160", text: "Two baskets stacked on top of each other, so it takes up little worktop space.", link: amazon("ninja double stack xl sl400eu") }
-        ]
+        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8.5l")
       },
       {
         stufe: "Premium", spanne: "from €200",
@@ -412,10 +336,7 @@ const PRODUKTE = [
         ],
         fuer: "For most households, especially if worktop space is tight. My tip: it's the test winner among machines with two baskets, and I use it myself.",
         hinweis: "For safety reasons you can only start it on the device itself, not from the app.",
-        link: amazon("cosori turbo tower pro smart"),
-        alternativen: [
-          { name: "Cosori ICONIC Dual", preis: 369, text: "Stainless steel housing, baskets with a ceramic coating that the manufacturer says is PFAS-free. Nice if looks matter to you.", link: amazon("cosori iconic dual") }
-        ]
+        link: amazon("cosori turbo tower pro smart")
       }
     ],
     fragen: [
@@ -423,12 +344,12 @@ const PRODUKTE = [
       { f: "How much washing-up do I have afterwards?", a: "Practically none. Nothing burns on in an air fryer. You simply put the baskets in the dishwasher or give them a quick wipe with a damp cloth at the end. You skip all the washing-up of pans and pots." },
       { f: "Does it really taste better than from the pan?", a: "For me, yes: vegetables come out crunchier and taste more intense, chicken turns out tender every time. The hot air flows all around the food. So it browns quickly on the outside and stays juicy inside, without sitting in fat." },
       { f: "What exactly does the Sync button do?", a: "You set the temperature and time for each basket, for example chicken at 200 °C for 25 minutes and vegetables at 190 °C for 12 minutes. With Sync the basket with the shorter time starts later by itself. So both are ready at the same time, and nothing has to be kept warm." },
-      { f: "Do I get a message on my phone or watch?", a: "On your phone, yes, if the device has Wi-Fi: the TwinFry, for example, notifies you through the free VeSync app as soon as the food is ready. If your smartwatch shows your phone's notifications, you'll usually see the message there too. Devices without Wi-Fi just beep." },
+      { f: "Do I get a message on my phone or watch?", a: "On your phone, yes, if the device has Wi-Fi: then its app can send you a message, for example as soon as the food is ready. If your smartwatch shows your phone's notifications, you'll usually see the message there too. Devices without Wi-Fi just beep." },
       { f: "Do I have to shake or stir in between?", a: "You don't have to. But chips and vegetables turn out more evenly crispy if you give them a quick shake once halfway through. The Dual Basket reminds you with a beep. You can turn chicken legs once so they brown all over." },
       { f: "Wouldn't a machine with one basket be enough?", a: "If you usually make only one thing at a time, yes, and that's usually cheaper. One example is the 6.2-litre Cosori Clear Blaze with a viewing window. Two baskets are worth it as soon as you want the main dish and the side ready together." },
       { f: "Does it replace the oven too?", a: "For one to four portions, almost always. Chips, vegetables, chicken, fish and part-baked rolls even turn out faster. For pizza, tray bakes or a large bake you still need the oven." },
       { f: "Does it really save electricity?", a: "Yes, especially for smaller amounts. The baskets are small and heat up quickly, and preheating is usually not needed or only takes a few minutes. According to Stiftung Warentest (issue 9/2026), air fryers are almost twice as fast as an oven and use considerably less electricity." },
-      { f: "Is the coating safe?", a: "As far as we know today, yes. Many baskets have a non-stick coating made of PTFE, known as Teflon. According to Germany's Federal Institute for Risk Assessment (BfR), it is safe in normal use. It can only break down from around 360 °C, and an air fryer stays well below that. But PTFE is one of the PFAS, which harm the environment during production and disposal. If you'd rather avoid it, choose a machine with a PFAS-free ceramic coating. Cosori states this, for example, for the Turbo Tower Pro Smart and the ICONIC Dual. Whatever the model: no metal forks and no abrasive cleaners, and the coating will last a long time." }
+      { f: "Is the coating safe?", a: "As far as we know today, yes. Many baskets have a non-stick coating made of PTFE, known as Teflon. According to Germany's Federal Institute for Risk Assessment (BfR), it is safe in normal use. It can only break down from around 360 °C, and an air fryer stays well below that. But PTFE is one of the PFAS, which harm the environment during production and disposal. If you'd rather avoid it, choose a machine with a PFAS-free ceramic coating. Cosori states this, for example, for the Turbo Tower Pro Smart. Whatever the model: no metal forks and no abrasive cleaners, and the coating will last a long time." }
     ],
     rechner: "airfryer",
     video: "airfryer"
@@ -455,7 +376,7 @@ const PRODUKTE = [
     nachteile: [
       "Thermostats that connect straight to Wi-Fi do less well in tests. The best models need a hub, which is a one-off extra cost if you don't have one yet",
       "If you already turn the heating down yourself every time, you save less money. Then it takes a few years before the purchase price has paid for itself, but you get the convenience straight away",
-      "According to the manufacturers, the batteries usually last up to two years. The Shelly TRV you charge via USB-C instead"
+      "According to the manufacturers, the batteries usually last up to two years, then you change them"
     ],
     profitipp: {
       titel: "How to set up your heating plan",
@@ -468,7 +389,7 @@ const PRODUKTE = [
       ]
     },
     gruppen: [
-      { name: "Without a hub", text: "You connect these thermostats straight to your Wi-Fi or your FRITZ!Box. You don't buy anything extra and you're set up quickly. In return the Wi-Fi models do less well in tests. The FRITZ! model came close to the test winner at Stiftung Warentest (issue 9/2023).", ohne: "zentrale" },
+      { name: "Without a hub", text: "You connect these thermostats straight to your Wi-Fi. You don't buy anything extra and you're set up quickly. In return they do less well in tests than the thermostats with a hub.", ohne: "zentrale" },
       { name: "With a hub", text: "These thermostats talk to a small hub, also called a gateway, that is connected to your router. It is a one-off extra cost. For some models a device you may already have is enough, for example a HomePod mini or a Google Nest Hub (2nd generation). In return these thermostats do best in tests, and according to the manufacturers the batteries last up to two years." }
     ],
     modelle: [
@@ -482,39 +403,12 @@ const PRODUKTE = [
           "Notices when a window is open and turns down",
           "Clear app (Smart Life or Tuya) with a heating plan for every day"
         ],
-        fuer: "For you if you want it cheap and don't have a FRITZ!Box. I have it on my own radiator.",
+        fuer: "For you if you want it cheap, without a hub. I have it on my own radiator.",
         hinweis: "Satisfactory at smarthomeassistent.de (grade 3.1).",
         link: amazon("salcar trv801w"),
         alternativen: [
           { name: "Eurotronic Comet WiFi", preis: 35, text: "Satisfactory at Stiftung Warentest (grade 2.7, issue 9/2023). It notices when a window is open.", link: amazon("eurotronic comet wifi") }
         ]
-      },
-      {
-        gruppe: "Without a hub",
-        stufe: "Mid-range", spanne: "straight to the FRITZ!Box",
-        name: "FRITZ!Smart Thermo 302", preis: 50, preisText: "approx. €45 to €60 each", empfohlen: true,
-        punkte: [
-          "Best-value tip at Stiftung Warentest (good, grade 1.9, issue 9/2023)",
-          "Connects straight to your FRITZ!Box, so you don't need an extra hub",
-          "Notices when a window is open and turns down",
-          "Display on the device, and the batteries are included"
-        ],
-        fuer: "For you if your router is a FRITZ!Box. Then it's the best choice without an extra hub.",
-        hinweis: "It doesn't use Wi-Fi but DECT, like a cordless phone. That's why it only works with a FRITZ!Box with DECT, which most have. It used to be called FRITZ!DECT 302.",
-        link: amazon("fritz smart thermo 302")
-      },
-      {
-        gruppe: "Without a hub",
-        stufe: "Premium", spanne: "straight to your Wi-Fi, rechargeable",
-        name: "Shelly TRV", preis: 80, preisText: "approx. €70 to €90 each",
-        punkte: [
-          "Connects straight to your Wi-Fi, no hub at all",
-          "A rechargeable battery instead of batteries: according to the manufacturer it lasts up to two years, then you charge it via USB-C",
-          "Full marks for the app at smarthomeassistent.de"
-        ],
-        fuer: "For you if you're done with batteries.",
-        hinweis: "Only rated adequate by Stiftung Warentest (issue 9/2023, grade 3.8), partly because frost protection is fiddly to set up. Satisfactory at smarthomeassistent.de (grade 2.6). The charging cable and power adapter aren't included. Look for “Shelly TRV” without “BLU”: the BLU model uses Bluetooth and needs a gateway for Wi-Fi.",
-        link: amazon("shelly trv heizkörperthermostat wlan", "shelly trv wifi radiator thermostat")
       },
       {
         gruppe: "With a hub",
@@ -559,15 +453,16 @@ const PRODUKTE = [
         link: amazon("homematic ip evo heizkörperthermostat", "homematic ip evo radiator thermostat")
       }
     ],
+    ohneTeuer: { stufe: "Pricier thermostats", titel: "Better with a hub", text: "I haven't found a pricier thermostat without a hub that does well in tests and is available on amazon.co.uk. The thermostats that do best in tests need a hub: have a look at the “With a hub” group." },
     fragen: [
       { f: "How much do I really save?", a: "With a heating plan, around 10 per cent of your heating costs, according to co2online. As a rule of thumb, every degree less saves around 6 per cent of heating energy. How much it is for you depends on how often you're out and how you heat at the moment. For a poorly insulated 70 m² flat, Stiftung Warentest (issue 9/2023) reckons on around €100 a year. Work it out for yourself in the calculator below." },
-      { f: "With or without a hub: which suits me?", a: "Without a hub is the easiest start: unpack, connect to Wi-Fi, done. That suits you if you only want to control a few radiators and it should be cheap. With a hub you pay a bit more once, but you get the thermostats that do best in tests. You can also add window contacts or a wall thermostat later. That's worth it above all if you want to fit out the whole flat. If you have a FRITZ!Box, take the FRITZ! model: then your router already is the hub." },
-      { f: "Why are there so few Wi-Fi thermostats?", a: "Wi-Fi uses more power than the radio types that thermostats with a hub use. The Shelly TRV has a rechargeable battery. Important: your router needs 2.4 GHz Wi-Fi. That's the case with almost all routers." },
+      { f: "With or without a hub: which suits me?", a: "Without a hub is the easiest start: unpack, connect to Wi-Fi, done. That suits you if you only want to control a few radiators and it should be cheap. With a hub you pay a bit more once, but you get the thermostats that do best in tests. You can also add window contacts or a wall thermostat later. That's worth it above all if you want to fit out the whole flat." },
+      { f: "Why are there so few Wi-Fi thermostats?", a: "Wi-Fi uses more power than the radio types that thermostats with a hub use. Important: your router needs 2.4 GHz Wi-Fi. That's the case with almost all routers." },
       { f: "Will they fit my radiators?", a: "Almost all normal radiator valves. Most have an M30 x 1.5 standard thread, and all the models here fit on that. For other valves, for example from Danfoss, adapters are often included, or you can get them for little money. For underfloor heating, on the other hand, you need a room thermostat on the wall." },
       { f: "Can I fit them as a tenant?", a: "Usually yes, because you don't change anything permanently. You just unscrew the old dial and screw the new thermostat on. You don't have to drain any water, and you don't need a tradesperson either. Keep the old dials safe and screw them back on when you move out. If in doubt, have a quick word with your landlord." },
       { f: "What if I come home earlier?", a: "No problem: you briefly turn the thermostat up or tap warmer in the app. From the next point in your heating plan, everything runs by itself again. Some systems even use your phone's location to tell when you're on your way home." },
       { f: "Doesn't the flat get too cold during the day?", a: "Not if you turn it down to 16 to 17 degrees instead of right off. It shouldn't drop below 16 degrees: otherwise the walls cool down, moisture settles on them, and the risk of mould goes up. Heating the flat back up afterwards costs less than heating it all day long." },
-      { f: "What about open windows?", a: "Most of the picks here notice when the temperature suddenly drops while you air the room, and turn down for a while. The Bosch thermostat and the Shelly TRV need a window contact for this. So you're not heating the outdoors." }
+      { f: "What about open windows?", a: "Most of the picks here notice when the temperature suddenly drops while you air the room, and turn down for a while. The Bosch thermostat needs a window contact for this. So you're not heating the outdoors." }
     ],
     rechner: "thermostate",
     video: "thermostate",
@@ -594,7 +489,7 @@ const PRODUKTE = [
     ],
     nachteile: [
       "It uses a lot of electricity. If it runs for many hours on hot days, you will notice it on your bill, much more with a monoblock than with the PortaSplit",
-      "None of the units here is as quiet as a fixed unit. Monoblocks are louder than the PortaSplit",
+      "Even the PortaSplit is not as quiet as a fixed unit. Monoblocks are louder still",
       "The window stays open a crack. A window seal lets less warm air in",
       "The units are heavy: according to the manufacturer the PortaSplit weighs a good 32 kilos. It is best to carry it with two people"
     ],
@@ -615,39 +510,22 @@ const PRODUKTE = [
         ],
         fuer: "My tip if you want it quieter and more economical than a monoblock. I have one myself and have had very good experiences with it.",
         hinweis: "At Stiftung Warentest, Germany's best-known consumer tester, it was only rated satisfactory (3.3, issue 6/2025); fixed split units did better. The window stays open a crack for the flat line to pass through. And from 2027 it will no longer come onto the market new because of its refrigerant, more on this in the questions below.",
-        link: amazon("midea portasplit", "midea portasplit"),
-        alternativen: [
-          { name: "Midea PortaSplit Cool", preis: 800, text: "The smaller sister only cools and does not heat. According to the manufacturer it has 2.35 instead of 3.5 kilowatts and suits smaller rooms better. I have not found any independent tests of it yet.", link: amazon("midea portasplit cool", "midea portasplit cool") }
-        ]
-      },
-      {
-        gruppe: "Monoblock",
-        stufe: "Mid-range", spanne: "€450 to €700",
-        name: "Bosch Cool 4000", preis: 570, preisText: "approx. €550 to €600", empfohlen: true,
-        punkte: [
-          "At Que Choisir 2026 it got the top mark for cooling, according to Stiftung Warentest, and used the least electricity of the three recommended units",
-          "According to the manufacturer 2.6 kilowatts for rooms up to 35 square metres",
-          "According to the manufacturer it works with propane (R290), which hardly harms the climate",
-          "Remote control with timer, plus a sleep mode and a quiet mode"
-        ],
-        fuer: "My tip if you only need cooling on a few hot days and it should be cheaper than a split unit.",
-        hinweis: "Like all monoblocks it is louder than a split unit: according to the manufacturer it has a sound power of 64 decibels, the PortaSplit 59 at the indoor unit. And because it blows air from the room outside, warm air flows in through gaps.",
-        link: amazon("bosch cool 4000", "bosch cool 4000")
+        link: amazon("midea portasplit", "midea portasplit")
       }
     ],
     ohneTeuer: { stufe: "Premium", titel: "Fixed, installed by a specialist", text: "Fixed split units are even quieter and more economical. But only a certified specialist may install them, and as a tenant you need your landlord's consent. That is why you cannot order them here. Which units lead in tests is in the questions below." },
     fragen: [
-      { f: "Split or monoblock: which suits me?", a: "If you cool often or at night, take a split unit like the PortaSplit. It is quieter and uses less electricity because it releases the heat outside through the outdoor unit. If you only need cooling on a few hot days a year, a monoblock is enough. It is cheaper to buy and quick to set up. In return it is louder, and because it blows air from the room outside, warm air from outside flows back in. Stiftung Warentest sees it the same way." },
-      { f: "How loud is an air conditioner in the room?", a: "Fixed split units are the quietest. According to the manufacturers, the indoor units of the test winners have only 19 decibels in their quietest mode. The PortaSplit is louder: according to the manufacturer it is 39 decibels in Silent mode, and in tests it was sometimes louder. Monoblocks are louder still, because everything stands in the room with them, including the compressor. Stiftung Warentest calls even the recommended monoblocks rather loud. The energy label shows the sound power: 59 decibels at the indoor unit of the PortaSplit and 64 for the Bosch. For the bedroom, the sleep mode helps, or you cool it down before you go to bed." },
-      { f: "What does the electricity cost?", a: "That depends on how often and how long it runs. An example: if you cool for eight hours every day for a month, the PortaSplit uses about 100 to 140 kilowatt hours according to tests and the energy label. At 37 cents per kilowatt hour, the average in Germany, that is about €35 to €55. In the Que Choisir test, the monoblocks here used almost twice as much, so about €70 to €90 for the same month. In Austria and Switzerland electricity is somewhat cheaper. You only earn back the higher price of the PortaSplit through electricity after many years. In everyday life it matters more that it is quieter and does not pull warm air in from outside." },
-      { f: "Can the PortaSplit also heat?", a: "Yes, it works like a small heat pump and, according to the manufacturer, heats until it is minus 10 degrees outside. Stiftung Warentest only tested heating down to plus 2 degrees outside, though. So on cool days in spring and autumn you can warm single rooms with it. The PortaSplit Cool cannot heat." },
+      { f: "Split or monoblock: which suits me?", a: "If you cool often or at night, take a split unit like the PortaSplit. It is quieter and uses less electricity because it releases the heat outside through the outdoor unit. If you only need cooling on a few hot days a year, a monoblock is enough. It is cheaper to buy and quick to set up. In return it is louder, and because it blows air from the room outside, warm air from outside flows back in. Stiftung Warentest sees it the same way. You can read why there's no monoblock here at the moment further down, in the question about how I chose the units." },
+      { f: "How loud is an air conditioner in the room?", a: "Fixed split units are the quietest. According to the manufacturers, the indoor units of the test winners have only 19 decibels in their quietest mode. The PortaSplit is louder: according to the manufacturer it is 39 decibels in Silent mode, and in tests it was sometimes louder. Monoblocks are louder still, because everything stands in the room with them, including the compressor. Stiftung Warentest calls even the recommended monoblocks rather loud. The energy label shows the sound power: 59 decibels at the indoor unit of the PortaSplit, and 62 to 65 for the monoblocks that Stiftung Warentest recommends. For the bedroom, the sleep mode helps, or you cool it down before you go to bed." },
+      { f: "What does the electricity cost?", a: "That depends on how often and how long it runs. An example: if you cool for eight hours every day for a month, the PortaSplit uses about 100 to 140 kilowatt hours according to tests and the energy label. At 37 cents per kilowatt hour, the average in Germany, that is about €35 to €55. In the Que Choisir test, the monoblocks that Stiftung Warentest recommends used almost twice as much, so about €70 to €90 for the same month. In Austria and Switzerland electricity is somewhat cheaper. You only earn back the higher price of the PortaSplit through electricity after many years. In everyday life it matters more that it is quieter and does not pull warm air in from outside." },
+      { f: "Can the PortaSplit also heat?", a: "Yes, it works like a small heat pump and, according to the manufacturer, heats until it is minus 10 degrees outside. Stiftung Warentest only tested heating down to plus 2 degrees outside, though. So on cool days in spring and autumn you can warm single rooms with it." },
       { f: "What about fixed split units?", a: "They are the quietest and most economical and can help with heating in winter. At Stiftung Warentest (issue 6/2026) the Mitsubishi Electric MSZ-RZ25VU was test winner among the smaller units with 2.5 kilowatts, and the Samsung AR70F09CAAWN is the best-value tip. Among the larger ones with 3.5 kilowatts, the Daikin Perfera FTXM35A is ahead, tested in 2025. As a rough guide, Stiftung Warentest gives 2.5 kilowatts for about 25 square metres and 3.5 kilowatts for about 35. Only a certified specialist may install them, which is why you cannot order them here. It is best to get quotes early in the year, because once the first heatwave arrives the specialists are quickly booked up." },
-      { f: "What changes for the PortaSplit in 2027?", a: "The PortaSplit here works with the refrigerant R32. Because of new EU rules it may no longer come onto the market new from 1 January 2027. But shops may keep selling units that are in the EU by the end of 2026. And if you have one, you may keep using it and have it repaired without restriction. Midea has announced a new PortaSplit with propane (R290) for 2027, which harms the climate much less. According to the manufacturer, the Bosch already works with propane." },
+      { f: "What changes for the PortaSplit in 2027?", a: "The PortaSplit here works with the refrigerant R32. Because of new EU rules it may no longer come onto the market new from 1 January 2027. But shops may keep selling units that are in the EU by the end of 2026. And if you have one, you may keep using it and have it repaired without restriction. Midea has announced a new PortaSplit with propane (R290) for 2027, which harms the climate much less." },
       { f: "Can I set up an air conditioner as a tenant in Germany?", a: "You can usually just set up a monoblock, because you don't drill or change anything. For a fixed split unit, on the other hand, you need your landlord's consent, ideally in writing. That is because it needs a hole in the wall and an outdoor unit on the facade. With the PortaSplit it is not entirely clear: you don't drill anything, but the outdoor unit hangs outside. An expert from the German homeowners' association Haus & Grund thinks this is allowed in high summer even without consent, because it is not meant to be permanent. Still, it is best to ask your landlord beforehand. And be considerate of your neighbours, especially at night." },
       { f: "And in an owner-occupied flat in Germany?", a: "You may not simply put up a split unit with an outdoor unit; you first need a resolution of the owners' meeting. Since a ruling by the Federal Court of Justice in July 2026, however, owners are usually entitled to one. That applies as long as the unit doesn't disturb the others too much, for example with noise, and isn't an eyesore. For a monoblock you don't need a resolution, because you don't change anything. For the PortaSplit, it is best to ask the property management beforehand." },
       { f: "And in Austria?", a: "A portable unit is the easiest, because it only stands in your flat. If you want a fixed split unit, as a tenant you must notify your landlord beforehand. If they don't refuse within two months, under Austria's Tenancy Act that counts as consent. If they refuse, you rarely get further through the arbitration board or the courts. If you own a flat in a building with several owners, you need the consent of the others. Whether you also need a permit from the building authority depends on the unit, the noise and the location, for example in a protected zone. It is best to ask your municipality beforehand, in Vienna the building police. For portable units like the PortaSplit, according to the magazine profil, a permit is often not needed. But here too, ask your landlord first." },
-      { f: "And in Switzerland?", a: "Portable units with a hose that you just plug in don't need a permit. In the canton of Zurich the cantonal government confirmed this explicitly. A fixed split unit, on the other hand, needs a building permit in most cantons, in Zurich usually for the outdoor unit. As a tenant you need the landlord's written consent for changes to the flat. For the PortaSplit I found no clear rule, because its outdoor unit only hangs on the window. So ask your property management beforehand and, if in doubt, the building office of your municipality. And one more thing: the units here have a German plug that doesn't fit Swiss sockets. So I don't have a suitable offer for Switzerland right now, but I am looking for one." },
-      { f: "How did you choose the units?", a: "For the split group I read the tests by Stiftung Warentest and also tests by home&smart, smarthomeassistent and mobiFlip. The PortaSplit was the only portable split unit in the Stiftung Warentest test, and I use it myself. Stiftung Warentest has not tested monoblocks itself for years. In 2026, however, it evaluated the big test by the French consumer magazine Que Choisir and recommended three units from it that are available in Germany. All three got the top mark for cooling there. Only the Bosch is here, because I could not find the other two on Amazon. I also compared the manufacturers' specifications and read tests by the British consumer magazine Which? and the Austrian consumer association VKI. None of these tests calls a monoblock really quiet, and I'd rather tell you that honestly." }
+      { f: "And in Switzerland?", a: "Portable units with a hose that you just plug in don't need a permit. In the canton of Zurich the cantonal government confirmed this explicitly. A fixed split unit, on the other hand, needs a building permit in most cantons, in Zurich usually for the outdoor unit. As a tenant you need the landlord's written consent for changes to the flat. For the PortaSplit I found no clear rule, because its outdoor unit only hangs on the window. So ask your property management beforehand and, if in doubt, the building office of your municipality. And one more thing: the units here have a plug that doesn't fit Swiss sockets. So I don't have a suitable offer for Switzerland right now, but I am looking for one." },
+      { f: "How did you choose the units?", a: "For the split units I read the tests by Stiftung Warentest and also tests by home&smart, smarthomeassistent and mobiFlip. The PortaSplit was the only portable split unit in the Stiftung Warentest test, and I use it myself. Stiftung Warentest has not tested monoblocks itself for years. In 2026, however, it evaluated the big test by the French consumer magazine Que Choisir and recommended three units from it that are available in Germany. All three got the top mark for cooling there. On amazon.co.uk none of the three is available at the moment, which is why there is no monoblock here for now. I also compared the manufacturers' specifications and read tests by the British consumer magazine Which? and the Austrian consumer association VKI. None of these tests calls a monoblock really quiet, and I'd rather tell you that honestly." }
     ],
     profitipp: {
       titel: "How it cools better and more economically",
@@ -1115,19 +993,6 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Budget", spanne: "up to €70",
-        name: "Gastroback Design Reiskocher (42507)", preis: 61,
-        punkte: [
-          "The cheapest good rice cooker at Stiftung Warentest, Germany's best-known consumer tester (issue 5/2026)",
-          "Fast: in the test it was ready after 16 to 34 minutes, depending on the amount and the rice",
-          "With a steamer basket for vegetables",
-          "Keeps the rice warm afterwards"
-        ],
-        fuer: "For you if you simply want good rice, without any frills.",
-        hinweis: "No timer and no programmes: it starts as soon as you switch it on.",
-        link: amazon("gastroback 42507 reiskocher", "gastroback 42507 rice cooker")
-      },
-      {
         stufe: "Mid-range", spanne: "€70 to €150",
         name: "Yum Asia Tsuki Mini", preis: 100, preisText: "approx. €100", empfohlen: true,
         punkte: [
@@ -1140,9 +1005,7 @@ const PRODUKTE = [
         hinweis: "It's small: up to 2.5 measuring cups of rice, enough for 1 to 2 people. According to the manufacturer, white rice takes about 30 to 40 minutes. You wash the ceramic pot by hand.",
         link: amazon("yum asia tsuki mini reiskocher", "yum asia tsuki mini rice cooker"),
         alternativen: [
-          { name: "Panasonic SR-DA152", preis: 90, text: "Test winner at Stiftung Warentest (good, grade 2.2, issue 5/2026). Bigger (1.5 litres), with a timer and a steamer basket. The better choice for families.", link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 rice cooker") },
-          { name: "Rommelsbacher MRK 650", preisText: "approx. €85 to €100", text: "Also a test winner at Stiftung Warentest (good, grade 2.2, issue 5/2026). With 12 programmes, a steamer basket and a delay timer of up to 24 hours.", link: amazon("rommelsbacher mrk 650 reiskocher", "rommelsbacher mrk 650 rice cooker") },
-          { name: "Cosori Reiskocher (CRC-R501)", preis: 99, text: "Also good at Stiftung Warentest (issue 5/2026), with a steamer basket and lots of programmes. But slow: in the test it took 43 to 68 minutes.", link: amazon("cosori reiskocher crc-r501", "cosori rice cooker crc-r501") }
+          { name: "Cosori rice cooker (CRC-R501)", preis: 99, text: "Also good at Stiftung Warentest (issue 5/2026), with a steamer basket and lots of programmes. But slow: in the test it took 43 to 68 minutes.", link: amazon("cosori reiskocher crc-r501", "cosori rice cooker crc-r501") }
         ]
       },
       {
@@ -1484,40 +1347,15 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Budget", spanne: "up to €80",
-        name: "Mysoda Woody", preis: 65,
-        punkte: [
-          "Best value at German consumer magazine Stiftung Warentest (good, grade 2.3, issue 7/2025)",
-          "A gas cylinder is included. In the test it lasted for around 48 litres, more than any other good machine",
-          "Takes screw-in cylinders from many brands",
-          "Housing made of a renewable wood composite, according to the manufacturer"
-        ],
-        fuer: "To get started, if you want to begin cheaply and medium fizz is enough for you.",
-        hinweis: "It fizzes a little less strongly than the more expensive machines, only satisfactory in the test. The plastic bottle can't go in the dishwasher. Mysoda itself doesn't swap cylinders in Germany, so you use a screw-in cylinder from another provider. Ask in the shop first: some only swap their own brand.",
-        link: amazon("mysoda woody wassersprudler", "mysoda woody")
-      },
-      {
-        stufe: "Mid-range", spanne: "€80 to €120",
-        name: "SodaStream Crystal 3.0", preis: 100, empfohlen: true,
-        punkte: [
-          "Good at Stiftung Warentest (grade 1.8, issue 7/2025), just behind the test winner",
-          "Glass carafes instead of plastic: they can go in the dishwasher and don't age",
-          "You insert the Quick Connect cylinder with a lever. You can swap them at many shops"
-        ],
-        fuer: "For most people. My tip, because the carafes can go in the dishwasher and you can swap cylinders almost everywhere.",
-        hinweis: "A carafe holds 0.7 litres, but you can only carbonate up to the fill line, so about 0.6 litres at a time. That means you carbonate more often. The machine is about 45 cm tall. To insert the carafe, the top section rises, and then it is about 55 cm tall, which is often too tight under wall cupboards. It only takes cylinders with a Quick Connect fitting.",
-        link: amazon("sodastream crystal 3.0", "sodastream crystal 3.0")
-      },
-      {
         stufe: "Premium", spanne: "from €120",
-        name: "Grohe Blue Fizz", preis: 130,
+        name: "Grohe Blue Fizz", preis: 130, empfohlen: true,
         punkte: [
           "Test winner at Stiftung Warentest (good, grade 1.7, issue 7/2025)",
           "Fizzes the most strongly in the test, almost like sparkling water from the shop",
           "Three levels from gentle to strong, set with a dial",
           "Takes screw-in cylinders from many brands, not just Grohe's"
         ],
-        fuer: "If you like it really fizzy.",
+        fuer: "For most people, especially if you like it really fizzy. My tip, because it's the test winner.",
         hinweis: "Strong fizz needs more gas, so the cylinder runs out sooner. You wash the plastic bottle by hand. Stiftung Warentest found the handling only satisfactory. The more expensive “Advanced” version also shows how full the cylinder still is.",
         link: amazon("grohe blue fizz starter set", "grohe blue fizz")
       }
@@ -1526,11 +1364,11 @@ const PRODUKTE = [
       { f: "Do I save money with it?", a: "A lot compared with branded water, hardly anything compared with cheap supermarket water. When you make it yourself, you mainly pay for the gas, about 10 to 20 cents per litre depending on the cylinder and machine. In Germany, cheap sparkling water costs around 20 cents per litre, branded water often 60 cents or more. But the real gain is this: you don't carry anything any more. The calculator shows how much it makes for you." },
       { f: "Can I just use tap water?", a: "Yes. In Germany, Austria and Switzerland drinking water is one of the most strictly controlled foods, and its quality is good to very good. If the water has been standing in the pipes for more than four hours, for example overnight, let it run until it comes out of the tap noticeably cooler. That's what the German Environment Agency advises. How good it is where you live, your water supplier can tell you." },
       { f: "Glass bottle or plastic?", a: "Glass can go in the dishwasher, doesn't age and tastes neutral. You use it as long as it has no cracks or chips. Plastic is more robust, but usually may only be washed by hand. Every plastic bottle has a date printed on it by which you have to replace it, because the material ages. That's what Stiftung Warentest says." },
-      { f: "Where do I swap empty cylinders?", a: "You hand in the empty cylinder at a shop and only pay for the new filling. You can swap empty SodaStream cylinders at many retailers that sell SodaStream. The retailer search on the SodaStream website shows you where. For machines with a screw thread like the Woody and Grohe there are also swap cylinders from other providers, often cheaper. But watch out: some shops only swap their own brand." },
-      { f: "Which cylinder fits my machine?", a: "There are two fittings. You screw in screw-in cylinders; the pink Quick Connect cylinders just click in. New SodaStream machines like the Crystal 3.0 need Quick Connect. The Woody and Grohe Blue Fizz take screw-in cylinders, including from other brands, but no Quick Connect cylinders. Check the packaging when you buy." },
+      { f: "Where do I swap empty cylinders?", a: "You hand in the empty cylinder at a shop and only pay for the new filling. You can swap empty SodaStream cylinders at many retailers that sell SodaStream. The retailer search on the SodaStream website shows you where. For machines with a screw thread like the Grohe Blue Fizz there are also swap cylinders from other providers, often cheaper. But watch out: some shops only swap their own brand." },
+      { f: "Which cylinder fits my machine?", a: "There are two fittings. You screw in screw-in cylinders; the pink Quick Connect cylinders just click in. New SodaStream machines like the Crystal 3.0 need Quick Connect. The Grohe Blue Fizz takes screw-in cylinders, including from other brands, but no Quick Connect cylinders. Check the packaging when you buy." },
       { f: "How long does a cylinder last?", a: "In the Stiftung Warentest test the machines made 37 to 61 litres with one cylinder. How much it is for you depends on the machine and on how strongly you carbonate: the more fizz, the sooner the cylinder is empty." },
       { f: "How do I keep everything clean?", a: "Clean the nozzle regularly, otherwise slime-forming bacteria can settle there. Stiftung Warentest also advises pouring the sparkling water into a glass or a carafe to drink it, instead of drinking from the carbonating bottle. You just wipe the machine itself with a damp cloth; it doesn't belong in the dishwasher." },
-      { f: "Why isn't the Aarke included?", a: "The stainless steel Aarke Carbonator 3 looks stylish and was also good at Stiftung Warentest (issue 7/2025). But it scored worse than the three machines here and costs considerably more." }
+      { f: "Why isn't the Aarke included?", a: "The stainless steel Aarke Carbonator 3 looks stylish and was also good at Stiftung Warentest (issue 7/2025). But it scored worse than the Grohe Blue Fizz and costs considerably more." }
     ],
     profitipp: {
       titel: "Cold fizzes better",
