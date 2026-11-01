@@ -33,8 +33,8 @@ const ASIN = {
   "kedoyoy reinigungsbürste": "B0D3STRLBD",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
-  "mova z60 ultra roller complete": "B0G8172MJD",
-  "ecovacs deebot t90s pro omni": "B0H9S2WFHH",
+  "mova z60 ultra roller complete": "B0GTVD5WGW",
+  "ecovacs deebot t90s pro omni": "B0H94KQLMJ",
   "roborock saros 20 flow complete": "B0H83J9FWG",
   "ecovacs deebot x12s omnicyclone": "B0H98Y7FCY",
   "mova v50 ultra complete": "B0GWJY9SLX",
@@ -55,7 +55,7 @@ const ASIN = {
   "salcar trv801w": "B0CDZPB8RZ",
   "eurotronic comet wifi": "B08H8PTDW1",
   "fritz smart thermo 302": "B0DFWXY3VY",
-  "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
+  "aqara w600 heizkörperthermostat": "B0G7YBCW8K",
   "bosch smart home heizkörperthermostat ii +m": "B0DHGSL6FC",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
@@ -152,21 +152,17 @@ const PRODUKTE = [
       },
       {
         gruppe: "Avec rouleau laveur",
-        stufe: "Haut de gamme", spanne: "à partir de 700 €",
-        name: "Dreame Aqua20 Pro Ultra Roller X Complete", preis: 1499, preisText: "env. 1 500 €",
+        stufe: "Haut de gamme", spanne: "à partir de 700 €",
+        name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999,
         punkte: [
-          "Vainqueur du test chez smarthomeassistent.de (note 1,3)",
-          "Aspire très fort et s’oriente parfaitement, y compris autour des obstacles",
-          "Lave avec un rouleau et décolle les taches séchées à la vapeur, chauffée selon le fabricant à 180 °C",
-          "La station lave le rouleau à l’eau à 100 °C. Selon le fabricant, il franchit des seuils jusqu’à 5 cm, et jusqu’à 10 cm en deux marches"
+          "Note 1,7 chez smarthomeassistent.de, où il lave très bien (note 1,0)",
+          "A reconnu tous les obstacles du test (53 sur 53) et s’oriente bien (note 1,6)",
+          "La station le vide sans sacs à poussière, vous n’en achetez donc plus",
+          "Dans le test, les cheveux ne se sont emmêlés ni dans la brosse principale ni dans la brosse latérale"
         ],
-        fuer: "Pour tous ceux qui veulent le meilleur, surtout pour l’aspiration et la navigation.",
-        hinweis: "Pour le lavage, il obtient un moins bon résultat que le MOVA Z60 dans le test (note 2,5 au lieu de 1,0). Si le lavage du sol compte le plus pour vous, le surcoût ne vaut guère la peine.",
-        link: amazon("dreame aqua20 pro ultra roller x complete"),
-        alternativen: [
-          { name: "Roborock Saros 20 Flow Complete", preis: 1299, text: "Note 1,5 chez smarthomeassistent.de, avec la meilleure note pour la navigation (1,0). Mais il y lave moins bien (note 3,4).", link: amazon("roborock saros 20 flow complete") },
-          { name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999, text: "Note 1,7 chez smarthomeassistent.de, où il lave très bien (note 1,0). La station n’a pas besoin de sacs à poussière.", link: amazon("ecovacs deebot x12s omnicyclone") }
-        ]
+        fuer: "Pour vous si vous avez surtout des sols durs ou des tapis à poils ras et ne voulez plus acheter de sacs à poussière.",
+        hinweis: "Chez smarthomeassistent.de, il est resté coincé plusieurs fois sur les tapis à poils longs, et il ne nettoyait que moyennement les coins et les joints. Au total, le MOVA Z60, moins cher, y obtient un meilleur résultat (note 1,4).",
+        link: amazon("ecovacs deebot x12s omnicyclone")
       },
       {
         gruppe: "Avec serpillières rotatives",
@@ -180,10 +176,7 @@ const PRODUKTE = [
         ],
         fuer: "Pour les logements avec beaucoup de coins et de bords, si vous voulez laver à fond. Seul le haut de gamme fait mieux dans le test.",
         hinweis: "Il ne détecte pas toujours les obstacles : dans les tests, il a manqué des objets plats et a parfois heurté des pieds de chaises et de tables. Chez smarthomeassistent.de, il n’obtient que la note 2,7 pour la navigation.",
-        link: amazon("mova v50 ultra complete"),
-        alternativen: [
-          { name: "Dreame L40s Pro Ultra", preis: 499, text: "Un peu moins cher et lave aussi bien chez smarthomeassistent.de (note 1,0, 2,2 au total).", link: amazon("dreame l40s pro ultra") }
-        ]
+        link: amazon("mova v50 ultra complete")
       },
       {
         gruppe: "Avec serpillières rotatives",
@@ -197,31 +190,12 @@ const PRODUKTE = [
         ],
         fuer: "Pour tous ceux qui veulent le meilleur en aspiration et en lavage et ont beaucoup de coins et de bords.",
         hinweis: "De temps en temps, il commet de petites erreurs de navigation.",
-        link: amazon("dreame x60 pro ultra complete"),
-        alternativen: [
-          { name: "Roborock Saros 20", preis: 949, text: "Note 1,8 chez smarthomeassistent.de, avec la meilleure note pour la navigation (1,0). Haut d’à peine 8 cm, il passe sous les meubles bas. Mais il y lave mal (note 5,1).", link: amazon("roborock saros 20") }
-        ]
-      },
-      {
-        gruppe: "Aspirer seulement",
-        stufe: "Petit budget", spanne: "jusqu’à 250 €",
-        name: "Roborock Q10 S5+", preis: 210, empfohlen: true,
-        punkte: [
-          "La station le vide dans un sac de 2,7 litres",
-          "S’oriente bien grâce au laser, avec carte et programme dans l’appli",
-          "Très bon rapport qualité-prix dans le test (note 1,0 chez smarthomeassistent.de)"
-        ],
-        fuer: "Pour vous si vous lavez le sol vous-même ou avez surtout de la moquette à poils ras.",
-        hinweis: "Au total, il n’obtient qu’un résultat satisfaisant chez smarthomeassistent.de (note 3,1). Sur les tapis à poils longs, il s’y est bloqué plusieurs fois, et il nettoyait mal les coins. La station ne lave pas sa lingette, vous la rincez à la main.",
-        link: amazon("roborock q10 s5+"),
-        alternativen: [
-          { name: "Roborock Q7 L5+", preis: 180, text: "Un peu moins cher et, chez smarthomeassistent.de, il aspire même un peu mieux (note 2,6 au lieu de 3,0). Mais il n’y détecte aucun obstacle, et au total il n’obtient que la note 3,8.", link: amazon("roborock q7 l5+") }
-        ]
+        link: amazon("dreame x60 pro ultra complete")
       }
     ],
     fragen: [
       { f: "Sur quels tests vous basez-vous pour choisir les robots\u202f?", a: "Pour les robots aspirateurs, je me fie aux tests détaillés de smarthomeassistent.de. Chaque robot y passe les mêmes épreuves, des tapis et cheveux jusqu’aux obstacles et seuils de porte. Leurs notes fonctionnent comme les notes scolaires allemandes : 1,0 est la meilleure. Je recommande les modèles qui s’en sortent le mieux dans leur gamme de prix, et j’y ajoute ma propre expérience de 14 ans. Si un robot est testé à nouveau après une mise à jour, par exemple parce que sa navigation s’est améliorée, c’est le test le plus récent qui compte pour moi." },
-      { f: "Ai-je besoin de la fonction lavage\u202f?", a: "Avec beaucoup de sols durs comme le carrelage, le stratifié ou le parquet, absolument\u202f: le sol reste propre et vous ne remplissez plus jamais de seau. Si vous avez surtout de la moquette, ou si vous aimez de toute façon laver le sol vous-même, un robot qui aspire seulement suffit. Il coûte souvent moitié moins cher." },
+      { f: "Ai-je besoin de la fonction lavage\u202f?", a: "Avec beaucoup de sols durs comme le carrelage, le stratifié ou le parquet, absolument\u202f: le sol reste propre et vous ne remplissez plus jamais de seau. Si vous avez surtout de la moquette, ou si vous aimez de toute façon laver le sol vous-même, un robot qui aspire seulement suffirait. Mais en ce moment, je n’en trouve aucun sur amazon.fr qui soit convaincant dans les tests. Les robots laveurs de cette page peuvent aussi seulement aspirer\u202f: il suffit de le régler dans l’appli." },
       { f: "Rouleau laveur ou serpillières rotatives\u202f: lequel est le meilleur\u202f?", a: "Les deux peuvent très bien laver : dans le test, le MOVA Z60 avec rouleau et le MOVA V50 avec serpillières obtiennent chacun la meilleure note pour le lavage, 1,0. Le rouleau récupère aussitôt l’eau sale et doit donc retourner moins souvent à la station pour être lavé. Les serpillières vont mieux le long des bords et dans les coins, mais ont tendance à étaler l’eau sale. Si vous avez beaucoup de coins, de recoins et de bords de meubles, prenez des serpillières. Si vous avez surtout des surfaces dégagées, un rouleau convient bien." },
       { f: "Se bloque-t-il sur les câbles ou les chaussettes\u202f?", a: "Les modèles avec caméra reconnaissent le plus souvent câbles, chaussettes et chaussures et les contournent, beaucoup aussi les animaux. Les modèles bon marché sans caméra roulent plus facilement sur un câble ou restent coincés : vous rangez alors rapidement avant. Un nœud de câbles sous le bureau, mieux vaut le ranger une fois pour toutes, quel que soit le modèle." },
       { f: "Puis-je le lancer quand je ne suis pas à la maison\u202f?", a: "Oui, et c’est justement l’astuce. Dans l’appli, vous créez un programme, par exemple du lundi au vendredi à 9 h. C’est comme ça que je fais depuis des années. Vous pouvez aussi le lancer à distance depuis votre téléphone." },
@@ -388,11 +362,7 @@ const PRODUKTE = [
           "« Bon » chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (note 2,3, numéro 1/2025), vainqueur du test parmi les appareils à deux paniers à l’époque"
         ],
         fuer: "Pour tous ceux qui veulent deux paniers et font attention au prix.",
-        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8,5 l"),
-        alternativen: [
-          { name: "Philips Dual Basket 3000 (NA352)", preis: 110, text: "Un grand panier de 6 litres et un petit de 3. Idéal pour un plat principal et un accompagnement.", link: amazon("philips dual basket na352") },
-          { name: "Tefal Dual Easy Fry & Grill", preis: 100, text: "Deux paniers de 5,2 et 3,1 litres, avec fonction gril.", link: amazon("tefal dual easy fry grill ey905d") }
-        ]
+        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8,5 l")
       },
       {
         stufe: "Milieu de gamme", spanne: "de 130 à 200\u00a0€",
@@ -405,11 +375,7 @@ const PRODUKTE = [
         ],
         fuer: "Pour vous si vous voulez deux paniers côte à côte ou avez parfois besoin d’un grand panier de 10 litres.",
         hinweis: "Pour des raisons de sécurité, vous ne pouvez la lancer que sur l’appareil lui-même, pas via l’appli.",
-        link: amazon("cosori twinfry 10 l"),
-        alternativen: [
-          { name: "Ninja Foodi MAX Dual Zone (AF400)", preisText: "env. 140 à 180\u00a0€", text: "Deux paniers côte à côte, 9,5 litres au total, avec Sync.", link: amazon("ninja foodi max dual zone af400eu") },
-          { name: "Ninja Double Stack XL", preisText: "à partir d’env. 160\u00a0€", text: "Deux paniers superposés, il prend peu de place sur le plan de travail.", link: amazon("ninja double stack xl sl400eu") }
-        ]
+        link: amazon("cosori twinfry 10 l")
       },
       {
         stufe: "Haut de gamme", spanne: "à partir de 200\u00a0€",
@@ -422,10 +388,7 @@ const PRODUKTE = [
         ],
         fuer: "Pour la plupart des foyers, surtout si le plan de travail est petit. Mon conseil : c’est le vainqueur du test parmi les appareils à deux paniers, et je l’utilise moi-même.",
         hinweis: "Pour des raisons de sécurité, vous ne pouvez le démarrer que sur l’appareil, pas depuis l’appli.",
-        link: amazon("cosori turbo tower pro smart"),
-        alternativen: [
-          { name: "Cosori ICONIC Dual", preis: 369, text: "Boîtier en inox, paniers avec revêtement céramique, sans PFAS selon le fabricant. Bien si l’esthétique compte pour vous.", link: amazon("cosori iconic dual") }
-        ]
+        link: amazon("cosori turbo tower pro smart")
       }
     ],
     fragen: [
@@ -438,7 +401,7 @@ const PRODUKTE = [
       { f: "Un appareil à un seul panier ne suffirait-il pas\u202f?", a: "Si vous ne préparez généralement qu’une chose à la fois, oui, et c’est généralement moins cher. Un exemple : la Cosori Clear Blaze de 6,2 litres avec hublot. Deux paniers valent le coup dès que le plat principal et l’accompagnement doivent être prêts ensemble." },
       { f: "Remplace-t-elle aussi le four\u202f?", a: "Pour une à quatre portions, presque toujours. Frites, légumes, poulet, poisson et petits pains précuits y réussissent même plus vite. Pour la pizza, les gâteaux sur plaque ou un grand gratin, il vous faut toujours le four." },
       { f: "Économise-t-elle vraiment de l’électricité\u202f?", a: "Oui, surtout pour de petites quantités. Les paniers sont petits et chauffent vite, le préchauffage est généralement inutile ou ne dure que quelques minutes. Selon Stiftung Warentest (numéro 9/2026), les friteuses sans huile sont presque deux fois plus rapides qu’un four et consomment nettement moins d’électricité." },
-      { f: "Le revêtement est-il sans danger\u202f?", a: "Selon les connaissances actuelles, oui. Beaucoup de paniers ont un revêtement antiadhésif en PTFE, connu sous le nom de Téflon. Selon l’Institut fédéral allemand d’évaluation des risques (BfR), il est sans danger en utilisation normale. Il ne peut se décomposer qu’à partir d’environ 360 °C, et une friteuse sans huile reste bien en dessous. Mais le PTFE fait partie des PFAS, qui polluent l’environnement lors de la fabrication et de l’élimination. Si vous préférez vous en passer, choisissez un appareil avec un revêtement céramique sans PFAS. Cosori l’indique par exemple pour la Turbo Tower Pro Smart et l’ICONIC Dual. Quel que soit le modèle : pas de fourchette en métal ni de produit abrasif, et le revêtement durera longtemps." }
+      { f: "Le revêtement est-il sans danger\u202f?", a: "Selon les connaissances actuelles, oui. Beaucoup de paniers ont un revêtement antiadhésif en PTFE, connu sous le nom de Téflon. Selon l’Institut fédéral allemand d’évaluation des risques (BfR), il est sans danger en utilisation normale. Il ne peut se décomposer qu’à partir d’environ 360 °C, et une friteuse sans huile reste bien en dessous. Mais le PTFE fait partie des PFAS, qui polluent l’environnement lors de la fabrication et de l’élimination. Si vous préférez vous en passer, choisissez un appareil avec un revêtement céramique sans PFAS. Cosori l’indique par exemple pour la Turbo Tower Pro Smart. Quel que soit le modèle : pas de fourchette en métal ni de produit abrasif, et le revêtement durera longtemps." }
     ],
     rechner: "airfryer",
     video: "airfryer"
@@ -465,7 +428,7 @@ const PRODUKTE = [
     nachteile: [
       "Les têtes qui se connectent directement au Wi-Fi obtiennent de moins bons résultats dans les tests. Les meilleurs modèles ont besoin d’une centrale, qui coûte une fois en plus si vous n’en avez pas encore",
       "Si vous baissez déjà toujours le chauffage vous-même, vous économisez moins. Il faut alors quelques années avant que le prix d’achat soit rentabilisé, mais le confort, vous l’avez tout de suite",
-      "Selon les fabricants, les piles tiennent en général jusqu’à deux ans. Le Shelly TRV, lui, se recharge par USB-C"
+      "Selon les fabricants, les piles tiennent en général jusqu’à deux ans, ensuite vous les changez"
     ],
     profitipp: {
       titel: "Comment régler votre planning de chauffage",
@@ -478,7 +441,7 @@ const PRODUKTE = [
       ]
     },
     gruppen: [
-      { name: "Sans centrale", text: "Vous connectez ces têtes directement à votre Wi-Fi ou à votre FRITZ!Box. Vous n’achetez rien de plus et l’installation est vite faite. En revanche, les modèles Wi-Fi obtiennent de moins bons résultats dans les tests. Le modèle FRITZ! a fait presque aussi bien que le vainqueur du test chez Stiftung Warentest (numéro 9/2023).", ohne: "zentrale" },
+      { name: "Sans centrale", text: "Vous connectez ces têtes directement à votre Wi-Fi. Vous n’achetez rien de plus et l’installation est vite faite. En revanche, elles obtiennent de moins bons résultats dans les tests que les têtes avec centrale.", ohne: "zentrale" },
       { name: "Avec centrale", text: "Ces têtes communiquent avec une petite centrale, aussi appelée passerelle ou hub, reliée à votre routeur. Elle coûte une fois en plus. Pour certains modèles, un appareil que vous avez peut-être déjà suffit, par exemple un HomePod mini ou un Google Nest Hub (2e génération). En échange, ces têtes obtiennent les meilleurs résultats dans les tests, et selon les fabricants les piles tiennent jusqu’à deux ans." }
     ],
     modelle: [
@@ -492,39 +455,12 @@ const PRODUKTE = [
           "Détecte quand une fenêtre est ouverte et baisse alors le chauffage",
           "Appli claire (Smart Life ou Tuya) avec un planning de chauffage pour chaque jour"
         ],
-        fuer: "Pour vous si vous voulez quelque chose de pas cher et n’avez pas de FRITZ!Box. Je l’ai moi-même sur mon radiateur.",
+        fuer: "Pour vous si vous voulez quelque chose de pas cher, sans centrale. Je l’ai moi-même sur mon radiateur.",
         hinweis: "« Satisfaisant » chez smarthomeassistent.de (note 3,1).",
         link: amazon("salcar trv801w"),
         alternativen: [
           { name: "Eurotronic Comet WiFi", preis: 35, text: "« Satisfaisant » chez Stiftung Warentest (note 2,7, numéro 9/2023). Il détecte quand une fenêtre est ouverte.", link: amazon("eurotronic comet wifi") }
         ]
-      },
-      {
-        gruppe: "Sans centrale",
-        stufe: "Milieu de gamme", spanne: "directement à la FRITZ!Box",
-        name: "FRITZ!Smart Thermo 302", preis: 50, preisText: "env. 45 à 60\u00a0€ pièce", empfohlen: true,
-        punkte: [
-          "Meilleur rapport qualité-prix chez Stiftung Warentest («\u202fbon\u202f», note 1,9, numéro 9/2023)",
-          "Se connecte directement à votre FRITZ!Box, pas besoin de centrale supplémentaire",
-          "Détecte quand une fenêtre est ouverte et baisse alors le chauffage",
-          "Écran sur l’appareil, les piles sont fournies"
-        ],
-        fuer: "Pour vous si votre routeur est une FRITZ!Box. C’est alors le meilleur choix sans centrale supplémentaire.",
-        hinweis: "Il ne communique pas en Wi-Fi mais en DECT, comme un téléphone sans fil. C’est pourquoi il ne fonctionne qu’avec une FRITZ!Box équipée du DECT, ce qui est le cas de la plupart. Il s’appelait autrefois FRITZ!DECT 302.",
-        link: amazon("fritz smart thermo 302")
-      },
-      {
-        gruppe: "Sans centrale",
-        stufe: "Haut de gamme", spanne: "directement en Wi-Fi, avec batterie",
-        name: "Shelly TRV", preis: 80, preisText: "env. 70 à 90\u00a0€ pièce",
-        punkte: [
-          "Se connecte directement à votre Wi-Fi, sans aucune centrale",
-          "Batterie au lieu de piles : selon le fabricant, elle tient jusqu’à deux ans, puis vous la rechargez par USB-C",
-          "Note maximale pour l’appli chez smarthomeassistent.de"
-        ],
-        fuer: "Pour vous si vous en avez assez des piles.",
-        hinweis: "Seulement « passable » chez Stiftung Warentest (numéro 9/2023, note 3,8), notamment parce que la protection antigel est compliquée à régler. « Satisfaisant » chez smarthomeassistent.de (note 2,6). Le câble de charge et le bloc secteur ne sont pas fournis. Choisissez bien « Shelly TRV » sans « BLU » : le modèle BLU communique en Bluetooth et a besoin d’une passerelle pour le Wi-Fi.",
-        link: amazon("shelly trv heizkörperthermostat wlan", "shelly trv tête thermostatique wifi")
       },
       {
         gruppe: "Avec centrale",
@@ -569,15 +505,16 @@ const PRODUKTE = [
         link: amazon("homematic ip evo heizkörperthermostat", "homematic ip evo tête thermostatique")
       }
     ],
+    ohneTeuer: { stufe: "Têtes plus chères", titel: "Plutôt avec centrale", text: "Une tête plus chère sans centrale, convaincante dans les tests et disponible sur amazon.fr, je n’en ai pas trouvé. Les têtes qui obtiennent les meilleurs résultats dans les tests ont besoin d’une centrale\u202f: voyez le groupe «\u202fAvec centrale\u202f»." },
     fragen: [
       { f: "Combien est-ce que j’économise vraiment\u202f?", a: "Avec un planning de chauffage, environ 10 % des frais de chauffage, selon co2online. En règle générale, chaque degré en moins économise environ 6 % d’énergie de chauffage. Combien cela représente chez vous dépend de la fréquence de vos absences et de votre façon de chauffer aujourd’hui. Pour un logement de 70 m² mal isolé, Stiftung Warentest (numéro 9/2023) compte environ 100 € par an. Faites le calcul pour vous dans le calculateur ci-dessous." },
-      { f: "Avec ou sans centrale\u202f: que choisir\u202f?", a: "Sans centrale, c’est le démarrage le plus simple : vous déballez, connectez au Wi-Fi, c’est fini. Cela convient si vous ne voulez piloter que quelques radiateurs et que cela doit rester bon marché. Avec centrale, vous payez une fois un peu plus, mais vous obtenez les têtes qui ont les meilleurs résultats dans les tests. Vous pouvez aussi ajouter plus tard des contacts de fenêtre ou un thermostat mural. Cela vaut surtout la peine si vous voulez équiper tout le logement. Si vous avez une FRITZ!Box, prenez le modèle FRITZ! : votre routeur est alors déjà la centrale." },
-      { f: "Pourquoi y a-t-il si peu de têtes thermostatiques Wi-Fi\u202f?", a: "Le Wi-Fi consomme plus que les liaisons radio utilisées par les têtes avec centrale. Le Shelly TRV a une batterie rechargeable. Important : votre routeur doit avoir un Wi-Fi en 2,4 GHz. C’est le cas de presque tous les routeurs." },
+      { f: "Avec ou sans centrale\u202f: que choisir\u202f?", a: "Sans centrale, c’est le démarrage le plus simple : vous déballez, connectez au Wi-Fi, c’est fini. Cela convient si vous ne voulez piloter que quelques radiateurs et que cela doit rester bon marché. Avec centrale, vous payez une fois un peu plus, mais vous obtenez les têtes qui ont les meilleurs résultats dans les tests. Vous pouvez aussi ajouter plus tard des contacts de fenêtre ou un thermostat mural. Cela vaut surtout la peine si vous voulez équiper tout le logement." },
+      { f: "Pourquoi y a-t-il si peu de têtes thermostatiques Wi-Fi\u202f?", a: "Le Wi-Fi consomme plus que les liaisons radio utilisées par les têtes avec centrale. Important : votre routeur doit avoir un Wi-Fi en 2,4 GHz. C’est le cas de presque tous les routeurs." },
       { f: "Vont-elles sur mes radiateurs\u202f?", a: "Sur presque tous les robinets de radiateur classiques. La plupart ont un filetage au standard M30 x 1,5, et tous les modèles présentés ici s’y adaptent. Pour d’autres robinets, par exemple de Danfoss, des adaptateurs sont souvent fournis, ou vous les trouvez pour peu d’argent. Pour un chauffage au sol, en revanche, il vous faut un thermostat d’ambiance au mur." },
       { f: "Puis-je les installer en tant que locataire\u202f?", a: "En général oui, car vous ne modifiez rien de façon permanente. Vous dévissez simplement l’ancienne tête et vissez la nouvelle. Pas besoin de vidanger l’eau, ni de faire venir un artisan. Gardez bien les anciennes têtes et remettez-les en place en déménageant. En cas de doute, demandez rapidement à votre propriétaire." },
       { f: "Et si je rentre plus tôt\u202f?", a: "Pas de problème : vous montez rapidement la température sur la tête thermostatique ou touchez « plus chaud » dans l’appli. À partir du prochain créneau de votre planning, tout repart tout seul. Certains systèmes savent même grâce à la localisation de votre téléphone quand vous êtes sur le chemin du retour." },
       { f: "Le logement ne refroidit-il pas trop dans la journée\u202f?", a: "Pas si vous baissez à 16 ou 17 degrés au lieu d’éteindre complètement. Il ne faut pas descendre sous 16 degrés : sinon les murs refroidissent, l’humidité s’y dépose et le risque de moisissure augmente. Réchauffer le logement ensuite coûte moins cher que le chauffer toute la journée sans interruption." },
-      { f: "Et les fenêtres ouvertes\u202f?", a: "La plupart des recommandations présentées ici détectent quand la température chute brusquement pendant que vous aérez, et baissent alors le chauffage un moment. Le thermostat Bosch et le Shelly TRV ont besoin pour cela d’un contact de fenêtre. Vous ne chauffez ainsi pas l’extérieur." }
+      { f: "Et les fenêtres ouvertes\u202f?", a: "La plupart des recommandations présentées ici détectent quand la température chute brusquement pendant que vous aérez, et baissent alors le chauffage un moment. Le thermostat Bosch a besoin pour cela d’un contact de fenêtre. Vous ne chauffez ainsi pas l’extérieur." }
     ],
     rechner: "thermostate",
     video: "thermostate",
@@ -604,7 +541,7 @@ const PRODUKTE = [
     ],
     nachteile: [
       "Il consomme beaucoup d’électricité. S’il tourne de nombreuses heures par temps chaud, vous le remarquerez sur la facture, bien plus avec un monobloc qu’avec le PortaSplit",
-      "Aucun des appareils présentés ici n’est aussi silencieux qu’un appareil fixe. Les monoblocs sont plus bruyants que le PortaSplit",
+      "Même le PortaSplit n’est pas aussi silencieux qu’un appareil fixe. Les monoblocs sont encore plus bruyants",
       "La fenêtre reste entrouverte. Avec un joint de fenêtre, moins d’air chaud entre",
       "Les appareils sont lourds : selon le fabricant, le PortaSplit pèse un peu plus de 32 kilos. Pour le porter, mieux vaut être deux"
     ],
@@ -625,55 +562,22 @@ const PRODUKTE = [
         ],
         fuer: "Mon conseil si vous le voulez plus silencieux et plus économe qu’un monobloc. Je l’ai moi-même et j’en suis très content.",
         hinweis: "Chez Stiftung Warentest, il n’a obtenu que « satisfaisant » (3,3, numéro 6/2025), les splits fixes ont fait mieux. La fenêtre reste entrouverte pour laisser passer la liaison plate. Et à partir de 2027, il ne sera plus mis sur le marché neuf à cause de son fluide frigorigène, plus de détails dans les questions plus bas.",
-        link: amazon("midea portasplit", "midea portasplit"),
-        alternativen: [
-          { name: "Midea PortaSplit Cool", preis: 800, text: "La petite sœur ne fait que refroidir et ne chauffe pas. Selon le fabricant, elle a 2,35 au lieu de 3,5 kilowatts et convient plutôt aux petites pièces. Je n’ai pas encore trouvé de tests indépendants.", link: amazon("midea portasplit cool", "midea portasplit cool") }
-        ]
-      },
-      {
-        gruppe: "Monobloc",
-        stufe: "Petit budget", spanne: "jusqu’à 450 €",
-        name: "Ariston Mobis Plus 10", preis: 400, preisText: "env. 400 €",
-        punkte: [
-          "Dans le grand test 2026 du magazine Que Choisir, il a obtenu la meilleure note en refroidissement, selon Stiftung Warentest",
-          "Il y a consommé à peu près aussi peu d’électricité que le Bosch",
-          "Selon le fabricant 10 000 BTU, soit 2,9 kilowatts, et du propane (R290) comme fluide frigorigène, qui nuit très peu au climat"
-        ],
-        fuer: "Si le prix doit être le plus bas possible et que vous ne rafraîchissez que quelques jours de forte chaleur par an.",
-        hinweis: "Au classement général du test, il arrive derrière Bosch et Black+Decker. Et comme tous les monoblocs, il est plus bruyant qu’un split : selon le fabricant, sa puissance acoustique est de 62 décibels.",
-        link: amazon("ariston mobis plus 10", "ariston mobis plus 10")
-      },
-      {
-        gruppe: "Monobloc",
-        stufe: "Milieu de gamme", spanne: "450 à 700 €",
-        name: "Bosch Cool 4000", preis: 570, preisText: "env. 550 à 600 €", empfohlen: true,
-        punkte: [
-          "Chez Que Choisir 2026, il a obtenu la meilleure note en refroidissement, selon Stiftung Warentest, et a consommé moins que le Black+Decker",
-          "Selon le fabricant 2,6 kilowatts pour des pièces jusqu’à 35 mètres carrés",
-          "Selon le fabricant, il fonctionne au propane (R290), qui nuit très peu au climat",
-          "Télécommande avec minuterie, plus un mode nuit et un mode silencieux"
-        ],
-        fuer: "Mon conseil si vous ne rafraîchissez que quelques jours de forte chaleur et que ce doit être moins cher qu’un split.",
-        hinweis: "Comme tous les monoblocs, il est plus bruyant qu’un split : selon le fabricant, sa puissance acoustique est de 64 décibels, contre 59 pour l’unité intérieure du PortaSplit. Et comme il souffle l’air de la pièce vers l’extérieur, de l’air chaud entre par les interstices.",
-        link: amazon("bosch cool 4000", "bosch cool 4000"),
-        alternativen: [
-          { name: "Black+Decker BXAC9000E", preis: 690, text: "Dans le même test, il a refroidi tout aussi bien et a réparti le froid le plus uniformément dans la pièce. En revanche, il a consommé environ un quart d’électricité en plus.", link: amazon("black decker bxac9000e", "black decker bxac9000e") }
-        ]
+        link: amazon("midea portasplit", "midea portasplit")
       }
     ],
     ohneTeuer: { stufe: "Haut de gamme", titel: "Fixe, posé par un professionnel", text: "Les splits fixes sont encore plus silencieux et plus économes. Mais seul un professionnel certifié peut les installer, et en tant que locataire vous avez besoin de l’accord de votre propriétaire. C’est pourquoi vous ne pouvez pas les commander ici. Les appareils en tête des tests figurent dans les questions plus bas." },
     fragen: [
-      { f: "Split ou monobloc : lequel me convient ?", a: "Si vous rafraîchissez souvent ou la nuit, prenez un split comme le PortaSplit. Il est plus silencieux et consomme moins, car il rejette la chaleur dehors par l’unité extérieure. Si vous n’avez besoin de fraîcheur que quelques jours de forte chaleur par an, un monobloc suffit. Il est moins cher à l’achat et vite installé. En revanche, il est plus bruyant, et comme il souffle l’air de la pièce vers l’extérieur, de l’air chaud du dehors entre à sa place. Stiftung Warentest est du même avis." },
-      { f: "Quel bruit fait un climatiseur dans la pièce ?", a: "Les splits fixes sont les plus silencieux. Selon les fabricants, les unités intérieures des vainqueurs du test n’ont que 19 décibels dans leur mode le plus silencieux. Le PortaSplit est plus bruyant : selon le fabricant, 39 décibels en mode Silent, et dans les tests il était parfois plus bruyant. Les monoblocs le sont encore plus, car tout est dans la pièce, y compris le compresseur. Stiftung Warentest juge même les monoblocs recommandés plutôt bruyants. L’étiquette énergie indique la puissance acoustique : 59 décibels à l’unité intérieure du PortaSplit, 62 pour l’Ariston et 64 pour le Bosch. Pour la chambre, le mode nuit aide, ou vous la rafraîchissez avant d’aller vous coucher." },
-      { f: "Combien coûte l’électricité ?", a: "Cela dépend de la fréquence et de la durée d’utilisation. Un exemple : si vous rafraîchissez huit heures par jour pendant un mois, le PortaSplit consomme environ 100 à 140 kilowattheures selon les tests et l’étiquette énergie. À 37 centimes le kilowattheure, la moyenne en Allemagne, cela fait environ 35 à 55 €. Dans le test de Que Choisir, les monoblocs présentés ici consommaient presque deux fois plus, soit environ 70 à 90 € pour le même mois. En Autriche et en Suisse, l’électricité est un peu moins chère. Le prix plus élevé du PortaSplit ne se rentabilise par l’électricité qu’au bout de nombreuses années. Au quotidien, ce qui compte plus, c’est qu’il est plus silencieux et ne fait pas entrer d’air chaud du dehors." },
-      { f: "Le PortaSplit peut-il aussi chauffer ?", a: "Oui, il fonctionne comme une petite pompe à chaleur et, selon le fabricant, chauffe jusqu’à moins 10 degrés dehors. Stiftung Warentest n’a toutefois testé le chauffage que jusqu’à plus 2 degrés dehors. Ainsi, par les journées fraîches du printemps et de l’automne, vous pouvez chauffer certaines pièces avec lui. Le PortaSplit Cool ne peut pas chauffer." },
+      { f: "Split ou monobloc : lequel me convient ?", a: "Si vous rafraîchissez souvent ou la nuit, prenez un split comme le PortaSplit. Il est plus silencieux et consomme moins, car il rejette la chaleur dehors par l’unité extérieure. Si vous n’avez besoin de fraîcheur que quelques jours de forte chaleur par an, un monobloc suffit. Il est moins cher à l’achat et vite installé. En revanche, il est plus bruyant, et comme il souffle l’air de la pièce vers l’extérieur, de l’air chaud du dehors entre à sa place. Stiftung Warentest est du même avis. Pourquoi il n’y a en ce moment aucun monobloc ici, vous le lirez plus bas, à la question sur le choix des appareils." },
+      { f: "Quel bruit fait un climatiseur dans la pièce ?", a: "Les splits fixes sont les plus silencieux. Selon les fabricants, les unités intérieures des vainqueurs du test n’ont que 19 décibels dans leur mode le plus silencieux. Le PortaSplit est plus bruyant : selon le fabricant, 39 décibels en mode Silent, et dans les tests il était parfois plus bruyant. Les monoblocs le sont encore plus, car tout est dans la pièce, y compris le compresseur. Stiftung Warentest juge même les monoblocs recommandés plutôt bruyants. L’étiquette énergie indique la puissance acoustique : 59 décibels à l’unité intérieure du PortaSplit, 62 à 65 pour les monoblocs que recommande Stiftung Warentest. Pour la chambre, le mode nuit aide, ou vous la rafraîchissez avant d’aller vous coucher." },
+      { f: "Combien coûte l’électricité ?", a: "Cela dépend de la fréquence et de la durée d’utilisation. Un exemple : si vous rafraîchissez huit heures par jour pendant un mois, le PortaSplit consomme environ 100 à 140 kilowattheures selon les tests et l’étiquette énergie. À 37 centimes le kilowattheure, la moyenne en Allemagne, cela fait environ 35 à 55 €. Dans le test de Que Choisir, les monoblocs que recommande Stiftung Warentest consommaient presque deux fois plus, soit environ 70 à 90 € pour le même mois. En Autriche et en Suisse, l’électricité est un peu moins chère. Le prix plus élevé du PortaSplit ne se rentabilise par l’électricité qu’au bout de nombreuses années. Au quotidien, ce qui compte plus, c’est qu’il est plus silencieux et ne fait pas entrer d’air chaud du dehors." },
+      { f: "Le PortaSplit peut-il aussi chauffer ?", a: "Oui, il fonctionne comme une petite pompe à chaleur et, selon le fabricant, chauffe jusqu’à moins 10 degrés dehors. Stiftung Warentest n’a toutefois testé le chauffage que jusqu’à plus 2 degrés dehors. Ainsi, par les journées fraîches du printemps et de l’automne, vous pouvez chauffer certaines pièces avec lui." },
       { f: "Et les splits fixes ?", a: "Ce sont les plus silencieux et les plus économes, et ils peuvent aider à chauffer en hiver. Chez Stiftung Warentest (numéro 6/2026), le Mitsubishi Electric MSZ-RZ25VU est vainqueur parmi les petits appareils de 2,5 kilowatts, et le Samsung AR70F09CAAWN est le meilleur rapport qualité-prix. Parmi les plus grands de 3,5 kilowatts, le Daikin Perfera FTXM35A est en tête, testé en 2025. À titre indicatif, Stiftung Warentest compte 2,5 kilowatts pour environ 25 mètres carrés et 3,5 kilowatts pour environ 35. Seul un professionnel certifié peut les installer, c’est pourquoi vous ne pouvez pas les commander ici. Demandez de préférence des devis tôt dans l’année, car dès la première canicule les professionnels sont vite complets." },
-      { f: "Qu’est-ce qui change en 2027 pour le PortaSplit ?", a: "Le PortaSplit présenté ici utilise le fluide frigorigène R32. En raison de nouvelles règles européennes, il ne pourra plus être mis sur le marché neuf à partir du 1er janvier 2027. Les magasins peuvent toutefois continuer à vendre les appareils qui se trouvent dans l’UE d’ici fin 2026. Et si vous en avez un, vous pouvez continuer à l’utiliser et le faire réparer sans restriction. Midea a annoncé pour 2027 un nouveau PortaSplit au propane (R290), qui nuit beaucoup moins au climat. Selon les fabricants, Bosch et Ariston fonctionnent déjà au propane." },
+      { f: "Qu’est-ce qui change en 2027 pour le PortaSplit ?", a: "Le PortaSplit présenté ici utilise le fluide frigorigène R32. En raison de nouvelles règles européennes, il ne pourra plus être mis sur le marché neuf à partir du 1er janvier 2027. Les magasins peuvent toutefois continuer à vendre les appareils qui se trouvent dans l’UE d’ici fin 2026. Et si vous en avez un, vous pouvez continuer à l’utiliser et le faire réparer sans restriction. Midea a annoncé pour 2027 un nouveau PortaSplit au propane (R290), qui nuit beaucoup moins au climat." },
       { f: "Puis-je installer un climatiseur en tant que locataire en Allemagne ?", a: "Un monobloc, vous pouvez en général simplement l’installer, car vous ne percez rien et ne transformez rien. Pour un split fixe, en revanche, il vous faut l’accord de votre propriétaire, de préférence par écrit. Il faut en effet un trou dans le mur et une unité extérieure sur la façade. Pour le PortaSplit, ce n’est pas tout à fait clair : vous ne percez rien, mais l’unité extérieure est accrochée dehors. Un expert de l’association allemande de propriétaires Haus & Grund estime que c’est admis en plein été même sans accord, car ce n’est pas prévu pour durer. Demandez quand même de préférence à votre propriétaire avant. Et pensez aux voisins, surtout la nuit." },
       { f: "Et dans un appartement en copropriété en Allemagne ?", a: "Vous ne pouvez pas simplement poser un split avec unité extérieure, il vous faut d’abord une décision de l’assemblée des copropriétaires. Depuis un arrêt de la Cour fédérale de justice de juillet 2026, les copropriétaires y ont toutefois en règle générale droit. Cela vaut tant que l’appareil ne dérange pas trop les autres, par exemple par le bruit, et ne gâche pas l’aspect du bâtiment. Pour un monobloc, aucune décision n’est nécessaire, car vous ne transformez rien. Pour le PortaSplit, demandez de préférence au syndic avant." },
       { f: "Et en Autriche ?", a: "Le plus simple est un appareil mobile, car il reste dans votre logement. Si vous voulez un split fixe, en tant que locataire vous devez le signaler à l’avance à votre propriétaire. S’il ne refuse pas dans les deux mois, cela vaut accord selon la loi autrichienne sur les baux. S’il refuse, vous obtenez rarement gain de cause devant l’organe de conciliation ou le tribunal. Si vous êtes propriétaire d’un appartement dans un immeuble à plusieurs propriétaires, il vous faut l’accord des autres. Avoir besoin en plus d’une autorisation de l’autorité de construction dépend de l’appareil, du bruit et du lieu, par exemple dans une zone protégée. Renseignez-vous de préférence avant auprès de votre commune, à Vienne auprès de la police des constructions. Pour les appareils mobiles comme le PortaSplit, selon le magazine profil, une autorisation n’est souvent pas nécessaire. Mais là aussi, demandez d’abord à votre propriétaire." },
       { f: "Et en Suisse ?", a: "Les appareils mobiles avec tuyau que vous branchez simplement n’ont pas besoin d’autorisation. Dans le canton de Zurich, le Conseil d’État du canton l’a expressément confirmé. Un split fixe, en revanche, nécessite un permis de construire dans la plupart des cantons, à Zurich en général pour l’unité extérieure. En tant que locataire, il vous faut l’accord écrit du bailleur pour toute modification du logement. Pour le PortaSplit, je n’ai pas trouvé de règle claire, car son unité extérieure est seulement accrochée à la fenêtre. Demandez donc avant à votre gérance et, en cas de doute, au service des constructions de votre commune. Et encore une chose : les appareils présentés ici ont une fiche allemande qui ne rentre pas dans les prises suisses. Je n’ai donc pas d’offre adaptée pour la Suisse pour le moment, mais j’en cherche une." },
-      { f: "Comment avez-vous choisi les appareils ?", a: "Pour le groupe split, j’ai lu les tests de Stiftung Warentest ainsi que ceux de home&smart, smarthomeassistent et mobiFlip. Le PortaSplit était le seul split mobile du test de Stiftung Warentest, et je l’utilise moi-même. Stiftung Warentest ne teste plus elle-même les monoblocs depuis des années. En 2026, elle a toutefois évalué le grand test du magazine Que Choisir et en a recommandé trois appareils disponibles en Allemagne. Tous trois y ont obtenu la meilleure note en refroidissement, et tous trois sont ici. J’ai aussi comparé les données des fabricants et lu les tests du magazine britannique de consommateurs Which? et de l’association autrichienne de consommateurs VKI. Aucun de ces tests ne qualifie un monobloc de vraiment silencieux, je préfère vous le dire honnêtement." }
+      { f: "Comment avez-vous choisi les appareils ?", a: "Pour les splits, j’ai lu les tests de Stiftung Warentest ainsi que ceux de home&smart, smarthomeassistent et mobiFlip. Le PortaSplit était le seul split mobile du test de Stiftung Warentest, et je l’utilise moi-même. Stiftung Warentest ne teste plus elle-même les monoblocs depuis des années. En 2026, elle a toutefois évalué le grand test du magazine Que Choisir et en a recommandé trois appareils disponibles en Allemagne. Tous trois y ont obtenu la meilleure note en refroidissement. Sur amazon.fr, aucun des trois n’est disponible en ce moment, c’est pourquoi il n’y a pour l’instant pas de monobloc ici. J’ai aussi comparé les données des fabricants et lu les tests du magazine britannique de consommateurs Which? et de l’association autrichienne de consommateurs VKI. Aucun de ces tests ne qualifie un monobloc de vraiment silencieux, je préfère vous le dire honnêtement." }
     ],
     profitipp: {
       titel: "Pour qu’il rafraîchisse mieux et consomme moins",
@@ -1378,19 +1282,6 @@ const PRODUKTE = [
         fuer: "Pour la plupart des gens. Mon conseil, parce qu’il s’approche presque du Thermomix dans le test et que vous n’avez pas besoin d’abonnement pour les recettes.",
         hinweis: "Il n’a pas de balance, il vous faut donc une balance de cuisine en plus. Selon Test-Achats, il n’est que moyennement facile à nettoyer.",
         link: amazon("moulinex companion xl hf8401", "moulinex companion xl hf8401")
-      },
-      {
-        stufe: "Haut de gamme", spanne: "à partir de 800 €",
-        name: "WMF Avantgarde", preis: 1299,
-        punkte: [
-          "« Bon » chez Stiftung Warentest (numéro 2/2026), « bon » chez le magazine technique allemand CHIP (note 1,9, mai 2025)",
-          "Selon le fabricant, il vous guide pas à pas sur l’écran tactile avec un peu plus de 300 recettes",
-          "Avec balance intégrée, panier vapeur et Wi-Fi",
-          "Particulièrement silencieux, selon le fabricant"
-        ],
-        fuer: "Si vous voulez être guidé pas à pas dans les recettes et êtes prêt à dépenser plus pour cela.",
-        hinweis: "Il est lourd (8,5 kilos). CHIP estime que la cuisson peut encore progresser et trouve le choix de recettes restreint. Pour la plupart des gens, le milieu de gamme suffit largement.",
-        link: amazon("wmf avantgarde küchenmaschine kochfunktion", "WMF Avantgarde")
       }
     ],
     fragen: [
@@ -1399,7 +1290,7 @@ const PRODUKTE = [
       { f: "Et le Monsieur Cuisine de Lidl ?", a: "Lidl vend lui-même le Monsieur Cuisine Smart. Chez Stiftung Warentest, il a obtenu « satisfaisant » (note 2,8, numéro 1/2024), et chez Test-Achats c’est un bon rapport qualité-prix. Si vous le trouvez chez Lidl, c’est une alternative bon marché avec balance intégrée." },
       { f: "Peut-on y faire revenir des aliments ?", a: "Seulement en partie. Selon Stiftung Warentest, les arômes grillés n’apparaissent qu’à partir de 140 degrés. Le ClickChef n’atteint que 120 degrés, rien n’y dore vraiment. Pour un steak, une escalope ou des oignons croustillants, mieux vaut continuer à utiliser la poêle." },
       { f: "Les oignons tournent-ils en bouillie ?", a: "Facilement, oui. Chez Stiftung Warentest, presque tous les appareils ont raté le hachage des oignons (numéro 1/2024). Le mieux est de hacher les oignons en quelques brèves pressions sur la touche impulsion ou turbo et de vérifier entre-temps." },
-      { f: "Faut-il un abonnement pour les recettes ?", a: "Pas pour le Companion XL : les recettes sont dans l’application Moulinex gratuite. Pour le ClickChef, elles sont dans le livre de recettes, et selon le fabricant le WMF propose un peu plus de 300 recettes sur l’appareil. Avec le Thermomix, il vous faut l’abonnement Cookidoo pour la plupart des recettes ; sans abonnement, vous avez environ 200 recettes sur l’appareil selon Vorwerk." },
+      { f: "Faut-il un abonnement pour les recettes ?", a: "Pas pour le Companion XL : les recettes sont dans l’application Moulinex gratuite. Pour le ClickChef, elles sont dans le livre de recettes. Avec le Thermomix, il vous faut l’abonnement Cookidoo pour la plupart des recettes ; sans abonnement, vous avez environ 200 recettes sur l’appareil selon Vorwerk." },
       { f: "Combien de temps fait-il vraiment gagner ?", a: "Honnêtement, aucun test ne l’a mesuré. Le robot ne cuit pas forcément plus vite. Mais il vous évite de rester à côté et de remuer, et vous n’avez pas à couper oignons et légumes à la main. Pendant ce temps, vous mettez la table, rangez ou vous asseyez simplement. Le calculateur vous montre ce que cela représente pour vous." }
     ],
     rechner: "kochfunktion",
@@ -1582,7 +1473,7 @@ const PRODUKTE = [
     ],
     nachteile: [
       "Les grandes casseroles, poêles et plaques n’entrent généralement pas, vous les lavez toujours à la main",
-      "Il prend de la place sur le plan de travail : les appareils présentés font 42 à 55 centimètres de large et 44 à 50 centimètres de profondeur",
+      "Il prend de la place sur le plan de travail : l’appareil présenté fait 43 centimètres de large et 44 centimètres de profondeur",
       "Les petits lave-vaisselle obtiennent généralement de moins bons résultats aux tests que les grands et consomment plus d’eau et d’électricité par assiette. Il n’existe pas de tests indépendants des appareils présentés"
     ],
     gruppen: [
@@ -1590,20 +1481,6 @@ const PRODUKTE = [
       { name: "Avec réservoir d’eau", text: "Pas besoin de raccordement : avant chaque lavage, vous remplissez le réservoir de cinq litres, et l’eau usée s’écoule par un tuyau dans l’évier. En échange, il est plus petit et plus bruyant. Trois couverts y trouvent place, ce qui suffit surtout pour une personne." }
     ],
     modelle: [
-      {
-        gruppe: "Avec raccordement à l’eau",
-        stufe: "Petit budget", spanne: "jusqu’à 300 €",
-        name: "Bomann TSG 7405", preis: 255, preisText: "ca. 250 bis 260 €", empfohlen: true,
-        punkte: [
-          "Six couverts et cinq programmes, dont un programme rapide",
-          "Selon le fabricant, classe énergétique D, 6,5 litres d’eau par lavage et 47 décibels. Il est donc plus économe par assiette et nettement plus silencieux que les appareils à réservoir",
-          "La porte s’ouvre toute seule à la fin, la vaisselle sèche mieux",
-          "Si vous le souhaitez, il démarre 2, 4 ou 6 heures plus tard"
-        ],
-        fuer: "Mon conseil si vous avez une arrivée d’eau libre : six couverts y trouvent place, et vous n’avez jamais à remplir d’eau.",
-        hinweis: "Il n’existe pas de tests indépendants, les valeurs viennent du fabricant. Il n’a pas d’AquaStop, seulement une protection contre le débordement. Il existe en blanc et en noir.",
-        link: amazon("bomann tsg 7405", "bomann tsg 7405")
-      },
       {
         gruppe: "Avec réservoir d’eau",
         stufe: "Petit budget", spanne: "jusqu’à 300 €",
@@ -1615,17 +1492,14 @@ const PRODUKTE = [
         ],
         fuer: "Si vous n’avez pas d’arrivée d’eau libre ou ne voulez rien raccorder.",
         hinweis: "Avec 58 décibels, il est nettement plus bruyant que les appareils raccordés. Il n’existe pas de tests indépendants, les valeurs viennent du fabricant. Avant chaque lavage, placez bien le tuyau d’évacuation dans l’évier, sinon l’eau coule sur le plan de travail.",
-        link: amazon("bomann tsg 5702", "bomann tsg 5702"),
-        alternativen: [
-          { name: "Midea mini lave-vaisselle de table MDWMT201DW", preis: 250, text: "Selon Midea, lui aussi trois couverts et un réservoir de cinq litres, avec en plus une application. Il consomme un peu plus d’eau (5 au lieu de 4,2 litres par lavage).", link: amazon("midea mini tischgeschirrspüler wassertank", "midea mini lave-vaisselle de table réservoir") }
-        ]
+        link: amazon("bomann tsg 5702", "bomann tsg 5702")
       }
     ],
     fragen: [
-      { f: "Raccordement à l’eau ou réservoir : lequel me convient ?", a: "Si vous avez une arrivée d’eau libre sous l’évier, prenez un appareil raccordé. Six couverts y trouvent place et vous n’avez jamais à remplir d’eau. S’il n’y a pas de raccordement ou si vous ne voulez rien raccorder, prenez un appareil à réservoir. Il est plus petit et plus bruyant, et vous le remplissez avant chaque lavage. En échange, il se pose partout où il y a une prise et où le tuyau d’évacuation atteint l’évier." },
+      { f: "Raccordement à l’eau ou réservoir : lequel me convient ?", a: "Si vous avez une arrivée d’eau libre sous l’évier, prenez un appareil raccordé. Six couverts y trouvent place et vous n’avez jamais à remplir d’eau. S’il n’y a pas de raccordement ou si vous ne voulez rien raccorder, prenez un appareil à réservoir. Il est plus petit et plus bruyant, et vous le remplissez avant chaque lavage. En échange, il se pose partout où il y a une prise et où le tuyau d’évacuation atteint l’évier. Un appareil raccordé, je n’en trouve pas sur amazon.fr en ce moment, c’est pourquoi il n’y a ici que le Bomann TSG 5702 à réservoir. Vous pouvez toutefois aussi le raccorder à l’eau, les tuyaux sont fournis." },
       { f: "Comment raccorder un appareil à l’eau ?", a: "Le tuyau d’arrivée se branche sur une arrivée d’eau froide avec un filetage 3/4 de pouce, le plus souvent un robinet sous l’évier. S’il est déjà pris, par exemple par un lave-linge, un robinet double aide. Le tuyau d’évacuation se branche sur l’évacuation sous l’évier, il existe pour cela des raccords intermédiaires. Les tuyaux sont fournis, sur les appareils présentés ils mesurent environ 1,5 mètre. S’il vous manque un raccordement adapté, appelez un plombier." },
       { f: "Les casseroles et les grandes assiettes rentrent-elles ?", a: "Les grandes casseroles, poêles et plaques généralement pas, vous les lavez toujours à la main. Avant l’achat, mesurez votre plus grande assiette et comparez avec la notice : les grandes assiettes plates n’entrent pas toujours dans les petits appareils à réservoir." },
-      { f: "Économise-t-il de l’eau et de l’électricité par rapport à la vaisselle à la main ?", a: "Par rapport à la moyenne, oui, surtout pour l’eau. Dans une étude de l’Université de Bonn, les participants ont utilisé en moyenne 103 litres d’eau et 2,5 kWh d’énergie pour douze couverts lavés à la main, surtout pour l’eau chaude. Selon les fabricants, les appareils présentés consomment en programme éco l’équivalent de 13 à 20 litres et 1,0 à 1,3 kWh pour douze couverts. Si vous faites la vaisselle très économiquement à la main, vous consommez toutefois moins. Le plus économe reste un grand lave-vaisselle bien rempli : selon sa fiche technique, il ne lui faut qu’environ 8 litres et 0,5 kWh pour douze couverts." },
+      { f: "Économise-t-il de l’eau et de l’électricité par rapport à la vaisselle à la main ?", a: "Par rapport à la moyenne, oui, surtout pour l’eau. Dans une étude de l’Université de Bonn, les participants ont utilisé en moyenne 103 litres d’eau et 2,5 kWh d’énergie pour douze couverts lavés à la main, surtout pour l’eau chaude. Selon le fabricant, l’appareil présenté consomme en programme éco l’équivalent d’environ 17 litres et 1,2 kWh pour douze couverts. Si vous faites la vaisselle très économiquement à la main, vous consommez toutefois moins. Le plus économe reste un grand lave-vaisselle bien rempli : selon sa fiche technique, il ne lui faut qu’environ 8 litres et 0,5 kWh pour douze couverts." },
       { f: "À quoi faire attention avec un appareil à réservoir ?", a: "Remplissez le réservoir avant chaque lavage, le plus simple avec une carafe ou un verre doseur. Placez le tuyau d’évacuation dans l’évier et fixez-le pour qu’il ne glisse pas. Sinon, l’eau usée coule sur le plan de travail ou par terre. Beaucoup d’appareils à réservoir peuvent ensuite être raccordés à l’eau, le Bomann TSG 5702 est livré avec les tuyaux pour cela." },
       { f: "Pourquoi n’y a-t-il pas de notes de test ici ?", a: "Parce qu’il n’y a presque pas de tests. Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne, n’a pas testé de lave-vaisselle de table ces dernières années, ses tests actuels ne comportent que de grands appareils. Je n’ai pas non plus trouvé d’autres tests indépendants des appareils présentés. Je compare donc pour vous les données des fabricants, c’est-à-dire classe énergétique, eau, bruit et taille, et je vous dis honnêtement où les petits lave-vaisselle sont moins bons." },
       { f: "Et en Suisse ?", a: "Les appareils présentés sont conçus pour l’Allemagne et ont une fiche allemande. Elle ne rentre pas dans les prises suisses. C’est pourquoi je n’ai pas d’offre adaptée pour la Suisse pour le moment, mais j’en cherche une." }
@@ -1670,16 +1544,6 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Petit budget", spanne: "moins de 25\u00a0€",
-        name: "Brosse de nettoyage sans fil Vicmayun", preis: 19,
-        punkte: [
-          "Manche télescopique de 30 à 120 cm pour la douche et la baignoire",
-          "7 embouts pour le carrelage, les coins et le lavabo"
-        ],
-        fuer: "Si vous voulez dépenser peu. Son manche est toutefois plus court que celui du milieu de gamme.",
-        link: amazon("vicmayun reinigungsbürste", "vicmayun brosse nettoyage électrique")
-      },
-      {
         stufe: "Milieu de gamme", spanne: "de 25 à 40\u00a0€",
         name: "Brosse de nettoyage sans fil Kedoyoy 8 en 1", preis: 34, empfohlen: true,
         punkte: [
@@ -1687,7 +1551,7 @@ const PRODUKTE = [
           "Selon le fabricant, la batterie tient jusqu’à 90 minutes et se recharge en USB-C",
           "8 embouts, aussi pour les joints et les coins"
         ],
-        fuer: "Pour la plupart des salles de bain. Mon conseil, car avec le manche plus long vous faites aussi la baignoire et le bac de douche debout.",
+        fuer: "Pour la plupart des salles de bain. Mon conseil, car avec son long manche vous faites aussi la baignoire et le bac de douche debout.",
         link: amazon("kedoyoy reinigungsbürste", "kedoyoy brosse nettoyage électrique")
       },
       {
@@ -1942,8 +1806,7 @@ const PRODUKTE = [
         link: amazon("laifen wave pro"),
         alternativen: [
           { name: "Philips Sonicare 5500", preis: 80, text: "Vainqueur actuel du test chez Stiftung Warentest (« bien », note 1,7, numéro 12/2025). Elle vous avertit quand vous appuyez trop fort et a deux modes.", link: amazon("philips sonicare 5500") },
-          { name: "Oral-B iO Series 3N", preis: 70, text: "A été vainqueur du test chez Stiftung Warentest (« bien », note 1,9, numéro 12/2024). Un anneau lumineux vous montre quand vous appuyez trop fort. Trois modes, sans appli.", link: amazon("oral-b io series 3n") },
-          { name: "Laifen Wave", preis: 80, text: "Le modèle précédent, moins cher, « bien » chez Stiftung Warentest (note 2,2, numéro 12/2024). Mais il n’a pas de capteur de pression.", link: amazon("laifen wave") }
+          { name: "Oral-B iO Series 3N", preis: 70, text: "A été vainqueur du test chez Stiftung Warentest (« bien », note 1,9, numéro 12/2024). Un anneau lumineux vous montre quand vous appuyez trop fort. Trois modes, sans appli.", link: amazon("oral-b io series 3n") }
         ]
       },
       {

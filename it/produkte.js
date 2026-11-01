@@ -32,7 +32,8 @@ const ASIN = {
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
-  "mova z60 ultra roller complete": "B0G8172MJD",
+  "mova z60 ultra roller complete": "B0GTVD5WGW",
+  "ecovacs deebot t90s pro omni": "B0H94KQLMJ",
   "roborock saros 20 flow complete": "B0H83J9FWG",
   "ecovacs deebot x12s omnicyclone": "B0H98Y7FCY",
   "mova v50 ultra complete": "B0GWJY9SLX",
@@ -44,14 +45,14 @@ const ASIN = {
   "philips dual basket na352": "B0D4Q8QFTH",
   "tefal dual easy fry grill ey905d": "B0CW52TT95",
   "cosori twinfry 10 l": "B0DTTTWYQT",
-  "ninja foodi max dual zone af400eu": "B09DGBJN2C",
-  "ninja double stack xl sl400eu": "B0CZPJ1HFP",
+  "ninja foodi max dual zone af400eu": "B09ZYLM43B",
+  "ninja double stack xl sl400eu": "B0CZY23DYB",
   "cosori turbo tower pro smart": "B0DPPT99LJ",
   "salcar trv801w": "B0CDZPB8RZ",
   "eurotronic comet wifi": "B08H8PTDW1",
   "fritz smart thermo 302": "B0DFWXY3VY",
   "shelly trv heizkörperthermostat wlan": "B09RPVRQ3F",
-  "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
+  "aqara w600 heizkörperthermostat": "B0G7YBCW8K",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
@@ -148,38 +149,31 @@ const PRODUKTE = [
       },
       {
         gruppe: "Con rullo lavante",
-        stufe: "Fascia alta", spanne: "da 700 €",
-        name: "Dreame Aqua20 Pro Ultra Roller X Complete", preis: 1499, preisText: "circa 1.500 €",
+        stufe: "Fascia alta", spanne: "da 700 €",
+        name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999,
         punkte: [
-          "Vincitore del test su smarthomeassistent.de (voto 1,3)",
-          "Aspira con molta forza e si orienta benissimo, anche intorno agli ostacoli",
-          "Lava con un rullo e scioglie le macchie secche con il vapore, che secondo il produttore scalda a 180 °C",
-          "La base lava il rullo con acqua a 100 °C. Secondo il produttore supera soglie fino a 5 cm, quelle a due gradini fino a 10 cm"
+          "Voto 1,7 su smarthomeassistent.de, dove lava molto bene (voto 1,0)",
+          "Nel test ha riconosciuto tutti gli ostacoli (53 su 53) e si orienta bene (voto 1,6)",
+          "La base lo svuota senza sacchetti, così non devi più comprarne",
+          "Nel test i capelli non si sono aggrovigliati né nella spazzola principale né in quella laterale"
         ],
-        fuer: "Per chi vuole il meglio, soprattutto nell’aspirazione e nella navigazione.",
-        hinweis: "Nel lavaggio nel test fa peggio del MOVA Z60 (voto 2,5 invece di 1,0). Se per te conta soprattutto lavare i pavimenti, il sovrapprezzo conviene poco.",
-        link: amazon("dreame aqua20 pro ultra roller x complete"),
-        alternativen: [
-          { name: "Roborock Saros 20 Flow Complete", preis: 1299, text: "Voto 1,5 su smarthomeassistent.de, con il voto migliore per la navigazione (1,0). Però lì lava peggio (voto 3,4).", link: amazon("roborock saros 20 flow complete") },
-          { name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999, text: "Voto 1,7 su smarthomeassistent.de, dove lava molto bene (voto 1,0). La base non ha bisogno di sacchetti.", link: amazon("ecovacs deebot x12s omnicyclone") }
-        ]
+        fuer: "Per te se hai soprattutto pavimenti duri o tappeti a pelo corto e non vuoi più comprare sacchetti.",
+        hinweis: "Su smarthomeassistent.de si è bloccato più volte sui tappeti a pelo lungo, e negli angoli e nelle fughe puliva solo in modo discreto. Nel complesso lì il MOVA Z60, più economico, ottiene un risultato migliore (voto 1,4).",
+        link: amazon("ecovacs deebot x12s omnicyclone")
       },
       {
         gruppe: "Con mop rotanti",
-        stufe: "Economico", spanne: "fino a 600 €",
-        name: "MOVA V50 Ultra Complete", preis: 529, empfohlen: true,
+        stufe: "Economico", spanne: "fino a 600 €",
+        name: "Dreame L40s Pro Ultra", preis: 499, empfohlen: true,
         punkte: [
-          "Miglior modello con mop rotanti della sua fascia di prezzo su smarthomeassistent.de (voto 1,9)",
-          "Nel test lava molto bene (voto 1,0), anche con acqua calda",
-          "La base lava i mop con acqua a 80 °C e li asciuga con aria calda",
-          "I mop e la spazzola laterale escono e così arrivano a bordi e angoli"
+          "Voto 2,2 su smarthomeassistent.de, con un rapporto qualità-prezzo molto buono (voto 1,4)",
+          "Nel test lava molto bene (voto 1,0), anche lungo i bordi",
+          "La base lo svuota, lava i mop e li asciuga",
+          "Nel test raccoglie bene i capelli"
         ],
-        fuer: "Per case con molti angoli e bordi, se vuoi lavare a fondo. Solo la fascia alta fa meglio nel test.",
-        hinweis: "Non sempre riconosce gli ostacoli: nei test non ha visto oggetti piatti e ogni tanto è andato contro le gambe di sedie e tavoli. Su smarthomeassistent.de per la navigazione prende solo voto 2,7.",
-        link: amazon("mova v50 ultra complete"),
-        alternativen: [
-          { name: "Dreame L40s Pro Ultra", preis: 499, text: "Un po’ più economico e su smarthomeassistent.de lava altrettanto bene (voto 1,0, 2,2 nel complesso).", link: amazon("dreame l40s pro ultra") }
-        ]
+        fuer: "Per case con molti angoli e bordi, se vuoi lavare a fondo e guardi al prezzo.",
+        hinweis: "Su smarthomeassistent.de sui tappeti si orienta peggio, soprattutto su quelli a pelo lungo (voto 2,8 per la navigazione), e la batteria dura meno della media.",
+        link: amazon("dreame l40s pro ultra")
       },
       {
         gruppe: "Con mop rotanti",
@@ -193,38 +187,19 @@ const PRODUKTE = [
         ],
         fuer: "Per chi vuole il meglio nell’aspirazione e nel lavaggio e ha molti angoli e bordi.",
         hinweis: "Ogni tanto commette piccoli errori di navigazione.",
-        link: amazon("dreame x60 pro ultra complete"),
-        alternativen: [
-          { name: "Roborock Saros 20", preis: 949, text: "Voto 1,8 su smarthomeassistent.de, con il voto migliore per la navigazione (1,0). Alto appena 8 cm, passa sotto i mobili bassi. Però lì lava male (voto 5,1).", link: amazon("roborock saros 20") }
-        ]
-      },
-      {
-        gruppe: "Solo aspirazione",
-        stufe: "Economico", spanne: "fino a 250 €",
-        name: "Roborock Q10 S5+", preis: 210, empfohlen: true,
-        punkte: [
-          "La base lo svuota in un sacchetto da 2,7 litri",
-          "Si orienta bene col laser, con mappa e programmazione nell’app",
-          "Rapporto qualità-prezzo molto buono nel test (voto 1,0 su smarthomeassistent.de)"
-        ],
-        fuer: "Per te se i pavimenti li lavi da solo o hai soprattutto tappeti a pelo corto.",
-        hinweis: "Nel complesso su smarthomeassistent.de ottiene solo un risultato discreto (voto 3,1). Sui tappeti a pelo lungo lì si è bloccato più volte, e negli angoli puliva poco. La base non lava il suo panno, lo sciacqui a mano.",
-        link: amazon("roborock q10 s5+"),
-        alternativen: [
-          { name: "Roborock Q7 L5+", preis: 180, text: "Un po’ più economico e su smarthomeassistent.de aspira perfino un po’ meglio (voto 2,6 invece di 3,0). Però lì non riconosce nessun ostacolo, e nel complesso arriva solo a voto 3,8.", link: amazon("roborock q7 l5+") }
-        ]
+        link: amazon("dreame x60 pro ultra complete")
       }
     ],
     fragen: [
       { f: "In base a quali test scegli i robot?", a: "Per i robot aspirapolvere mi baso sui test approfonditi di smarthomeassistent.de. Lì ogni robot affronta le stesse prove, da tappeti e capelli fino a ostacoli e soglie delle porte. I loro voti funzionano come i voti scolastici tedeschi: 1,0 è il migliore. Consiglio i modelli che lì ottengono i risultati migliori nella loro fascia di prezzo, e ci aggiungo la mia esperienza di 14 anni. Se un robot viene testato di nuovo dopo un aggiornamento, per esempio perché la navigazione è migliorata, per me conta il test più recente." },
-      { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e non riempi mai più un secchio. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basta un robot che aspira e basta. Spesso costa la metà." },
-      { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test il MOVA Z60 con rullo e il MOVA V50 con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
+      { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e non riempi mai più un secchio. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basterebbe un robot che aspira e basta. Al momento però su amazon.it non ne trovo nessuno che convinca nei test. I robot lavapavimenti di questa pagina possono anche solo aspirare: basta impostarlo nell’app." },
+      { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test il MOVA Z60 con rullo e il Dreame L40s Pro Ultra con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
       { f: "Si blocca su cavi o calzini?", a: "I modelli con telecamera di solito riconoscono cavi, calzini e scarpe e li aggirano, molti anche gli animali. I modelli economici senza telecamera passano più facilmente sopra un cavo o restano bloccati: in quel caso metti un attimo in ordine prima. Un groviglio di cavi sotto la scrivania conviene comunque sistemarlo una volta per tutte, con qualsiasi modello." },
       { f: "Posso avviarlo quando non sono a casa?", a: "Sì, ed è proprio questo il trucco. Nell’app crei una programmazione, per esempio dal lunedì al venerdì alle 9. Io faccio così da anni. Puoi anche avviarlo dal telefono quando sei fuori." },
       { f: "Supera le soglie delle porte e i bordi dei tappeti?", a: "La maggior parte dei modelli supera soglie fino a circa 2 cm, i modelli buoni come il MOVA Z60 fino a circa 5 cm. Sui tappeti un robot lavapavimenti solleva i panni o il rullo, così non si bagna niente." },
       { f: "Cosa devo fare ancora io?", a: "Cambiare il sacchetto ogni qualche settimana e pulire ogni tanto la spazzola. Con un robot lavapavimenti in più: rabboccare l’acqua pulita e svuotare quella sporca appena te lo segnala. Però non lasciare l’acqua sporca ferma per giorni, altrimenti comincia a puzzare." },
       { f: "Quanto costa mantenerlo?", a: "Sacchetti, filtri, spazzole e mop o rullo si consumano. Secondo un calcolo dei costi di netzwelt.de, un robot aspirapolvere e lavapavimenti con base costa circa da 45 a 185 € all’anno, senza lavaggio circa da 25 a 120 €. La corrente aggiunge circa da 15 a 25 € all’anno, un po’ di più per le basi con acqua calda e asciugatura." },
-      { f: "Non conosco MOVA. È una buona marca?", a: "MOVA è un marchio gemello di Dreame, entrambi fanno parte del gruppo Dreame. Tecnologia e app si somigliano molto. I robot MOVA di questa pagina ottengono nei test risultati da buoni a molto buoni." },
+      { f: "Non conosco MOVA. È una buona marca?", a: "MOVA è un marchio gemello di Dreame, entrambi fanno parte del gruppo Dreame. Tecnologia e app si somigliano molto. Il MOVA Z60 di questa pagina nei test ottiene risultati molto buoni." },
       { f: "Funziona su più piani?", a: "Memorizza più mappe. La base però resta in un posto. Sull’altro piano lo porti tu, e svuotarsi può farlo solo quando torna alla base." },
       { f: "Quanto è rumoroso?", a: "Di solito più o meno come una conversazione, quindi meno di un aspirapolvere normale. E visto che lavora quando non ci sei, comunque non te ne accorgi. Solo la base è davvero rumorosa per qualche secondo mentre lo svuota." }
     ],
@@ -384,11 +359,7 @@ const PRODUKTE = [
           "“Buono” per Stiftung Warentest, il più noto istituto di test per consumatori in Germania (voto 2,3, numero 1/2025), all’epoca vincitrice del test tra gli apparecchi a due cestelli"
         ],
         fuer: "Per chi vuole due cestelli e guarda al prezzo.",
-        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8,5 l"),
-        alternativen: [
-          { name: "Philips Dual Basket 3000 (NA352)", preis: 110, text: "Un cestello grande da 6 litri e uno piccolo da 3. Ottima per piatto principale più contorno.", link: amazon("philips dual basket na352") },
-          { name: "Tefal Dual Easy Fry & Grill", preis: 100, text: "Due cestelli da 5,2 e 3,1 litri, con funzione grill.", link: amazon("tefal dual easy fry grill ey905d") }
-        ]
+        link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8,5 l")
       },
       {
         stufe: "Fascia media", spanne: "da 130 a 200\u00a0€",
@@ -418,10 +389,7 @@ const PRODUKTE = [
         ],
         fuer: "Per la maggior parte delle famiglie, soprattutto se il piano di lavoro è piccolo. Il mio consiglio: è la vincitrice del test tra gli apparecchi a due cestelli, e la uso io stesso.",
         hinweis: "Per motivi di sicurezza puoi avviarla solo direttamente sull’apparecchio, non dall’app.",
-        link: amazon("cosori turbo tower pro smart"),
-        alternativen: [
-          { name: "Cosori ICONIC Dual", preis: 369, text: "Scocca in acciaio inox, cestelli con rivestimento in ceramica, senza PFAS secondo il produttore. Bella se ci tieni all’estetica.", link: amazon("cosori iconic dual") }
-        ]
+        link: amazon("cosori turbo tower pro smart")
       }
     ],
     fragen: [
@@ -434,7 +402,7 @@ const PRODUKTE = [
       { f: "Non basterebbe un apparecchio con un solo cestello?", a: "Se di solito prepari una sola cosa alla volta, sì, e di solito costa meno. Un esempio è la Cosori Clear Blaze da 6,2 litri con oblò. Due cestelli convengono appena piatto principale e contorno devono essere pronti insieme." },
       { f: "Sostituisce anche il forno?", a: "Per una-quattro porzioni quasi sempre. Patatine, verdure, pollo, pesce e panini precotti vengono perfino più in fretta. Per pizza, torte in teglia o una grande pasta al forno ti serve ancora il forno." },
       { f: "Fa davvero risparmiare corrente?", a: "Sì, soprattutto per quantità piccole. I cestelli sono piccoli e si scaldano in fretta, il preriscaldamento di solito non serve o dura solo pochi minuti. Secondo Stiftung Warentest (numero 9/2026), le friggitrici ad aria sono quasi due volte più veloci di un forno e consumano molta meno corrente." },
-      { f: "Il rivestimento è sicuro?", a: "Per quanto se ne sa oggi, sì. Molti cestelli hanno un rivestimento antiaderente in PTFE, noto come Teflon. Secondo l’Istituto federale tedesco per la valutazione dei rischi (BfR), con un uso normale è sicuro. Può decomporsi solo da circa 360 °C, e una friggitrice ad aria resta ben al di sotto. Il PTFE però fa parte dei PFAS, che inquinano l’ambiente durante la produzione e lo smaltimento. Se preferisci farne a meno, scegli un apparecchio con rivestimento in ceramica senza PFAS. Cosori lo indica per esempio per la Turbo Tower Pro Smart e la ICONIC Dual. Con qualsiasi modello: niente forchette di metallo e niente prodotti abrasivi, così il rivestimento dura a lungo." }
+      { f: "Il rivestimento è sicuro?", a: "Per quanto se ne sa oggi, sì. Molti cestelli hanno un rivestimento antiaderente in PTFE, noto come Teflon. Secondo l’Istituto federale tedesco per la valutazione dei rischi (BfR), con un uso normale è sicuro. Può decomporsi solo da circa 360 °C, e una friggitrice ad aria resta ben al di sotto. Il PTFE però fa parte dei PFAS, che inquinano l’ambiente durante la produzione e lo smaltimento. Se preferisci farne a meno, scegli un apparecchio con rivestimento in ceramica senza PFAS. Cosori lo indica per esempio per la Turbo Tower Pro Smart. Con qualsiasi modello: niente forchette di metallo e niente prodotti abrasivi, così il rivestimento dura a lungo." }
     ],
     rechner: "airfryer",
     video: "airfryer"
@@ -461,7 +429,7 @@ const PRODUKTE = [
     nachteile: [
       "Le valvole che si collegano direttamente al Wi-Fi ottengono risultati peggiori nei test. I modelli migliori hanno bisogno di una centralina, che costa una volta in più se non ce l’hai ancora",
       "Se abbassi già sempre il riscaldamento da solo, risparmi meno. In quel caso ci vogliono alcuni anni prima di recuperare il prezzo d’acquisto, ma la comodità ce l’hai subito",
-      "Secondo i produttori le batterie di solito durano fino a due anni. Lo Shelly TRV invece lo ricarichi via USB-C"
+      "Secondo i produttori le batterie di solito durano fino a due anni, poi le cambi"
     ],
     profitipp: {
       titel: "Come impostare il tuo programma di riscaldamento",
@@ -474,7 +442,7 @@ const PRODUKTE = [
       ]
     },
     gruppen: [
-      { name: "Senza centralina", text: "Queste valvole le colleghi direttamente al tuo Wi-Fi o al tuo FRITZ!Box. Non compri nient’altro e sei pronto in poco tempo. In compenso nei test i modelli Wi-Fi ottengono risultati peggiori. Per Stiftung Warentest (numero 9/2023) il modello FRITZ! è andato quasi bene quanto il vincitore del test.", ohne: "zentrale" },
+      { name: "Senza centralina", text: "Queste valvole le colleghi direttamente al tuo Wi-Fi. Non compri nient’altro e sei pronto in poco tempo. In compenso nei test vanno peggio delle valvole con centralina.", ohne: "zentrale" },
       { name: "Con centralina", text: "Queste valvole comunicano con una piccola centralina, chiamata anche gateway o hub, collegata al tuo router. Costa una volta in più. Per alcuni modelli basta un apparecchio che forse hai già, per esempio un HomePod mini o un Google Nest Hub (2ª generazione). In cambio queste valvole ottengono i risultati migliori nei test, e secondo i produttori le batterie durano fino a due anni." }
     ],
     modelle: [
@@ -488,39 +456,12 @@ const PRODUKTE = [
           "Si accorge quando una finestra è aperta e abbassa il riscaldamento",
           "App chiara (Smart Life o Tuya) con un programma di riscaldamento per ogni giorno"
         ],
-        fuer: "Per te se vuoi spendere poco e non hai un FRITZ!Box. Ce l’ho io stesso sul mio termosifone.",
+        fuer: "Per te se vuoi spendere poco, senza centralina. Ce l’ho io stesso sul mio termosifone.",
         hinweis: "“Soddisfacente” su smarthomeassistent.de (voto 3,1).",
         link: amazon("salcar trv801w"),
         alternativen: [
           { name: "Eurotronic Comet WiFi", preis: 35, text: "“Soddisfacente” per Stiftung Warentest (voto 2,7, numero 9/2023). Si accorge quando una finestra è aperta.", link: amazon("eurotronic comet wifi") }
         ]
-      },
-      {
-        gruppe: "Senza centralina",
-        stufe: "Fascia media", spanne: "direttamente al FRITZ!Box",
-        name: "FRITZ!Smart Thermo 302", preis: 50, preisText: "circa da 45 a 60\u00a0€ l’una", empfohlen: true,
-        punkte: [
-          "Consiglio qualità-prezzo di Stiftung Warentest (“buono”, voto 1,9, numero 9/2023)",
-          "Si collega direttamente al tuo FRITZ!Box, non ti serve una centralina in più",
-          "Si accorge quando una finestra è aperta e abbassa il riscaldamento",
-          "Display sull’apparecchio, le batterie sono incluse"
-        ],
-        fuer: "Per te se il tuo router è un FRITZ!Box. In quel caso è la scelta migliore senza centralina in più.",
-        hinweis: "Non comunica via Wi-Fi ma via DECT, come un telefono cordless. Per questo funziona solo con un FRITZ!Box con DECT, che hanno quasi tutti. Prima si chiamava FRITZ!DECT 302.",
-        link: amazon("fritz smart thermo 302")
-      },
-      {
-        gruppe: "Senza centralina",
-        stufe: "Fascia alta", spanne: "direttamente al Wi-Fi, con batteria ricaricabile",
-        name: "Shelly TRV", preis: 80, preisText: "circa da 70 a 90\u00a0€ l’una",
-        punkte: [
-          "Si collega direttamente al tuo Wi-Fi, senza alcuna centralina",
-          "Batteria ricaricabile invece delle pile: secondo il produttore dura fino a due anni, poi la ricarichi via USB-C",
-          "Punteggio pieno per l’app su smarthomeassistent.de"
-        ],
-        fuer: "Per te se delle pile ne hai abbastanza.",
-        hinweis: "Solo “sufficiente” per Stiftung Warentest (numero 9/2023, voto 3,8), tra l’altro perché la protezione antigelo è scomoda da impostare. “Soddisfacente” su smarthomeassistent.de (voto 2,6). Cavo di ricarica e alimentatore non sono inclusi. Fai attenzione a “Shelly TRV” senza “BLU”: il modello BLU comunica via Bluetooth e per il Wi-Fi ha bisogno di un gateway.",
-        link: amazon("shelly trv heizkörperthermostat wlan", "shelly trv testa termostatica wifi")
       },
       {
         gruppe: "Con centralina",
@@ -549,31 +490,18 @@ const PRODUKTE = [
         fuer: "Per te se il design ti sta a cuore o hai già Bosch Smart Home.",
         hinweis: "Funziona tramite Matter su Thread, per esempio con un HomePod mini o un Google Nest Hub (2ª generazione), oppure con il Bosch Smart Home Controller II. Riconosce le finestre aperte solo con un contatto per finestre in più. Controlla che nel nome ci sia “[+M]”: il modello più vecchio senza questa sigla ha sempre bisogno del controller Bosch.",
         link: amazon("bosch smart home heizkörperthermostat ii +m", "bosch smart home termostato radiatore ii +m")
-      },
-      {
-        gruppe: "Con centralina",
-        stufe: "Fascia alta", spanne: "con centralina Homematic IP",
-        name: "Homematic IP Evo", preis: 78, preisText: "circa da 75 a 100\u00a0€ l’una",
-        punkte: [
-          "Vincitore del test di Stiftung Warentest (“buono”, voto 1,7, numero 9/2023)",
-          "Si accorge da solo quando una finestra è aperta e abbassa il riscaldamento",
-          "Display sull’apparecchio e funzione Boost quando deve scaldare in fretta",
-          "Un grande sistema: contatti per finestre, termostati da parete e molto altro"
-        ],
-        fuer: "Per te se vuoi attrezzare tutta la casa e ampliare in seguito.",
-        hinweis: "Ha bisogno di una centralina Homematic IP, per esempio l’Access Point, collegato al tuo router con un cavo. “Buono” su smarthomeassistent.de (voto 1,8).",
-        link: amazon("homematic ip evo heizkörperthermostat", "homematic ip evo testa termostatica")
       }
     ],
+    ohneTeuer: { stufe: "Valvole più care", titel: "Meglio con centralina", text: "Una valvola più cara senza centralina, che convinca nei test e che si trovi su amazon.it, non l’ho trovata. Le valvole che vanno meglio nei test hanno bisogno di una centralina: guarda il gruppo “Con centralina”." },
     fragen: [
       { f: "Quanto risparmio davvero?", a: "Con un programma di riscaldamento circa il 10% dei costi di riscaldamento, secondo co2online. Come regola generale, ogni grado in meno fa risparmiare circa il 6% di energia. Quanto sia nel tuo caso dipende da quanto spesso sei fuori e da come scaldi oggi. Per un appartamento di 70 m² poco isolato Stiftung Warentest (numero 9/2023) calcola circa 100 € all’anno. Fai il calcolo per te nel calcolatore qui sotto." },
-      { f: "Con o senza centralina: cosa fa per me?", a: "Senza centralina è il modo più semplice per iniziare: apri la confezione, colleghi al Wi-Fi, fatto. Va bene se vuoi controllare solo pochi termosifoni e spendere poco. Con la centralina paghi una volta un po’ di più, ma ottieni le valvole che vanno meglio nei test. Inoltre in seguito puoi aggiungere contatti per finestre o un termostato da parete. Conviene soprattutto se vuoi attrezzare tutta la casa. Se hai un FRITZ!Box, prendi il modello FRITZ!: allora il tuo router è già la centralina." },
-      { f: "Perché ci sono così poche valvole Wi-Fi?", a: "Il Wi-Fi consuma più energia dei sistemi radio usati dalle valvole con centralina. Lo Shelly TRV ha una batteria ricaricabile. Importante: il tuo router deve avere il Wi-Fi a 2,4 GHz. È così per quasi tutti i router." },
+      { f: "Con o senza centralina: cosa fa per me?", a: "Senza centralina è il modo più semplice per iniziare: apri la confezione, colleghi al Wi-Fi, fatto. Va bene se vuoi controllare solo pochi termosifoni e spendere poco. Con la centralina paghi una volta un po’ di più, ma ottieni le valvole che vanno meglio nei test. Inoltre in seguito puoi aggiungere contatti per finestre o un termostato da parete. Conviene soprattutto se vuoi attrezzare tutta la casa." },
+      { f: "Perché ci sono così poche valvole Wi-Fi?", a: "Il Wi-Fi consuma più energia dei sistemi radio usati dalle valvole con centralina. Importante: il tuo router deve avere il Wi-Fi a 2,4 GHz. È così per quasi tutti i router." },
       { f: "Vanno bene per i miei termosifoni?", a: "Per quasi tutte le normali valvole dei termosifoni. La maggior parte ha una filettatura standard M30 x 1,5, e tutti i modelli qui ci si avvitano. Per altre valvole, per esempio Danfoss, spesso ci sono adattatori in dotazione, o li trovi per pochi soldi. Per il riscaldamento a pavimento invece ti serve un termostato ambiente a parete." },
       { f: "Posso installarle se sono in affitto?", a: "Di solito sì, perché non modifichi nulla in modo permanente. Sviti soltanto la vecchia manopola e avviti la nuova valvola. Non devi scaricare l’acqua, e non ti serve nemmeno un idraulico. Conserva bene le vecchie manopole e rimettile quando traslochi. Nel dubbio, chiedi un attimo al tuo padrone di casa." },
       { f: "E se torno a casa prima?", a: "Nessun problema: alzi un attimo la temperatura sulla valvola o tocchi “più caldo” nell’app. Dal punto successivo del tuo programma va di nuovo tutto da sé. Alcuni sistemi capiscono persino dalla posizione del tuo telefono quando stai tornando a casa." },
       { f: "La casa non si raffredda troppo durante il giorno?", a: "No, se abbassi a 16-17 gradi invece di spegnere del tutto. Non dovrebbe scendere sotto i 16 gradi: altrimenti i muri si raffreddano, l’umidità vi si deposita e il rischio di muffa aumenta. Riscaldare di nuovo la casa dopo costa meno che scaldarla tutto il giorno senza pause." },
-      { f: "E con le finestre aperte?", a: "La maggior parte dei modelli consigliati qui si accorge quando la temperatura scende di colpo mentre arieggi, e abbassa il riscaldamento per un po’. Il termostato Bosch e lo Shelly TRV hanno bisogno per questo di un contatto per finestre. Così non scaldi l’aria fuori dalla finestra." }
+      { f: "E con le finestre aperte?", a: "La maggior parte dei modelli consigliati qui si accorge quando la temperatura scende di colpo mentre arieggi, e abbassa il riscaldamento per un po’. Il termostato Bosch ha bisogno per questo di un contatto per finestre. Così non scaldi l’aria fuori dalla finestra." }
     ],
     rechner: "thermostate",
     video: "thermostate",
@@ -1374,19 +1302,6 @@ const PRODUKTE = [
         fuer: "Per la maggior parte delle persone. Il mio consiglio, perché nel test si avvicina molto al Bimby e per le ricette non ti serve un abbonamento.",
         hinweis: "Non ha la bilancia, quindi ti serve anche una bilancia da cucina. Secondo Test-Achats è solo mediamente facile da pulire.",
         link: amazon("moulinex companion xl hf8401", "moulinex companion xl")
-      },
-      {
-        stufe: "Fascia alta", spanne: "da 800 €",
-        name: "WMF Avantgarde", preis: 1299,
-        punkte: [
-          "“Buono” per Stiftung Warentest (numero 2/2026), “buono” per la rivista tecnologica tedesca CHIP (voto 1,9, maggio 2025)",
-          "Secondo il produttore ti guida passo passo sul touchscreen con poco più di 300 ricette",
-          "Con bilancia integrata, cestello per il vapore e Wi-Fi",
-          "Particolarmente silenzioso, secondo il produttore"
-        ],
-        fuer: "Se vuoi farti guidare passo passo nelle ricette e per questo spendi volentieri di più.",
-        hinweis: "È pesante (8,5 chili). CHIP vede margini di miglioramento nella cottura e trova la scelta di ricette limitata. Per la maggior parte delle persone la fascia media basta e avanza.",
-        link: amazon("wmf avantgarde küchenmaschine kochfunktion", "WMF Avantgarde")
       }
     ],
     fragen: [
@@ -1395,7 +1310,7 @@ const PRODUKTE = [
       { f: "E il Monsieur Cuisine della Lidl?", a: "Il Monsieur Cuisine Smart lo vende la Lidl stessa. Per Stiftung Warentest è stato sufficiente (voto 2,8, numero 1/2024), e per Test-Achats è un consiglio qualità-prezzo. Se lo trovi alla Lidl, è un’alternativa economica con bilancia integrata." },
       { f: "Posso rosolare dentro?", a: "Solo in parte. Secondo Stiftung Warentest gli aromi di tostatura nascono solo da 140 gradi. Il ClickChef arriva solo a 120 gradi, e niente diventa davvero dorato. Per bistecca, cotoletta o cipolle croccanti è meglio continuare a usare la padella." },
       { f: "Le cipolle diventano una poltiglia?", a: "Facilmente, sì. Nel test di Stiftung Warentest quasi tutti gli apparecchi hanno sbagliato a tritare le cipolle (numero 1/2024). Il modo migliore è tritarle con pochi brevi colpi del tasto impulso o turbo e controllare ogni tanto." },
-      { f: "Mi serve un abbonamento per le ricette?", a: "Per il Companion XL no: le ricette sono nell’app Moulinex gratuita. Per il ClickChef sono nel ricettario, e secondo il produttore il WMF ha poco più di 300 ricette sull’apparecchio. Con il Bimby per la maggior parte delle ricette ti serve l’abbonamento Cookidoo, senza abbonamento secondo Vorwerk hai circa 200 ricette sull’apparecchio." },
+      { f: "Mi serve un abbonamento per le ricette?", a: "Per il Companion XL no: le ricette sono nell’app Moulinex gratuita. Per il ClickChef sono nel ricettario. Con il Bimby per la maggior parte delle ricette ti serve l’abbonamento Cookidoo, senza abbonamento secondo Vorwerk hai circa 200 ricette sull’apparecchio." },
       { f: "Quanto tempo fa risparmiare davvero?", a: "Onestamente, nessun test l’ha misurato. Il robot non cucina per forza più in fretta. Però ti risparmia di stare accanto a mescolare, e cipolle e verdure non le devi tagliare a mano. In quel tempo apparecchi la tavola, metti in ordine o semplicemente ti siedi. Quanto conta per te lo mostra il calcolatore." }
     ],
     rechner: "kochfunktion",
@@ -1503,19 +1418,6 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Economico", spanne: "fino a 80 €",
-        name: "Mysoda Woody", preis: 65,
-        punkte: [
-          "Miglior rapporto qualità-prezzo per Stiftung Warentest, il più noto istituto di test per consumatori in Germania (buono, voto 2,3, numero 7/2025)",
-          "Un cilindro di gas è incluso. Nel test è bastato per circa 48 litri, più che con qualsiasi altro apparecchio buono",
-          "Accetta i cilindri a vite di molte marche",
-          "Scocca in composito di legno rinnovabile, secondo il produttore"
-        ],
-        fuer: "Per iniziare, se vuoi spendere poco e ti basta un frizzante medio.",
-        hinweis: "Gasa un po’ meno forte degli apparecchi più cari, nel test solo sufficiente. La bottiglia di plastica non va in lavastoviglie. Mysoda stessa non cambia i cilindri in Germania, quindi usi un cilindro a vite di un altro fornitore. Chiedi prima in negozio: alcuni cambiano solo la propria marca.",
-        link: amazon("mysoda woody wassersprudler", "mysoda woody")
-      },
-      {
         stufe: "Fascia media", spanne: "da 80 a 120 €",
         name: "SodaStream Crystal 3.0", preis: 100, empfohlen: true,
         punkte: [
@@ -1545,8 +1447,8 @@ const PRODUKTE = [
       { f: "Risparmio soldi?", a: "Molti rispetto all’acqua di marca, quasi niente rispetto all’acqua frizzante economica del discount. Facendola tu, paghi soprattutto il gas, circa 10-20 centesimi al litro a seconda del cilindro e dell’apparecchio. In Germania l’acqua frizzante del discount costa circa 20 centesimi al litro, l’acqua di marca spesso 60 centesimi e più. Ma il vero guadagno è questo: non porti più niente. Il calcolatore ti mostra quanto conta per te." },
       { f: "Posso usare semplicemente l’acqua del rubinetto?", a: "Sì. In Germania, Austria e Svizzera l’acqua potabile è tra gli alimenti più controllati, la sua qualità è da buona a ottima. Se l’acqua è rimasta nei tubi per più di quattro ore, per esempio durante la notte, lasciala scorrere finché esce dal rubinetto sensibilmente più fresca. Lo consiglia l’Agenzia federale tedesca per l’ambiente. Quanto è buona da te, te lo dice il tuo gestore dell’acqua." },
       { f: "Bottiglia di vetro o di plastica?", a: "Il vetro va in lavastoviglie, non invecchia e ha un sapore neutro. Lo usi finché non ha crepe o scheggiature. La plastica è più robusta, ma di solito si lava solo a mano. Su ogni bottiglia di plastica c’è una data entro cui devi sostituirla, perché il materiale invecchia. Lo dice Stiftung Warentest." },
-      { f: "Dove cambio i cilindri vuoti?", a: "Consegni il cilindro vuoto in negozio e paghi solo la nuova ricarica. I cilindri SodaStream vuoti li cambi presso molti rivenditori che vendono SodaStream. La ricerca rivenditori sul sito di SodaStream ti mostra dove. Per gli apparecchi con attacco a vite come Woody e Grohe esistono anche cilindri di scambio di altri fornitori, spesso più economici. Ma attenzione: alcuni negozi cambiano solo la propria marca." },
-      { f: "Quale cilindro va bene per il mio apparecchio?", a: "Esistono due attacchi. I cilindri a vite li avviti, i cilindri rosa Quick Connect si inseriscono con un clic. I nuovi apparecchi SodaStream come il Crystal 3.0 richiedono Quick Connect. Woody e Grohe Blue Fizz accettano cilindri a vite, anche di altre marche, ma non i cilindri Quick Connect. Guarda la confezione quando compri." },
+      { f: "Dove cambio i cilindri vuoti?", a: "Consegni il cilindro vuoto in negozio e paghi solo la nuova ricarica. I cilindri SodaStream vuoti li cambi presso molti rivenditori che vendono SodaStream. La ricerca rivenditori sul sito di SodaStream ti mostra dove. Per gli apparecchi con attacco a vite come il Grohe Blue Fizz esistono anche cilindri di scambio di altri fornitori, spesso più economici. Ma attenzione: alcuni negozi cambiano solo la propria marca." },
+      { f: "Quale cilindro va bene per il mio apparecchio?", a: "Esistono due attacchi. I cilindri a vite li avviti, i cilindri rosa Quick Connect si inseriscono con un clic. I nuovi apparecchi SodaStream come il Crystal 3.0 richiedono Quick Connect. Il Grohe Blue Fizz accetta cilindri a vite, anche di altre marche, ma non i cilindri Quick Connect. Guarda la confezione quando compri." },
       { f: "Quanto dura un cilindro?", a: "Nel test di Stiftung Warentest gli apparecchi hanno fatto da 37 a 61 litri con un cilindro. Quanto sarà da te dipende dall’apparecchio e da quanto forte gasi: più bollicine, prima il cilindro è vuoto." },
       { f: "Come tengo tutto pulito?", a: "Pulisci regolarmente l’ugello, altrimenti possono annidarsi batteri che formano una patina viscida. Stiftung Warentest consiglia anche di versare l’acqua frizzante in un bicchiere o una caraffa per berla, invece di bere dalla bottiglia per gasare. L’apparecchio lo pulisci solo con un panno umido, non va in lavastoviglie." },
       { f: "Perché non c’è l’Aarke?", a: "L’Aarke Carbonator 3 in acciaio inox è elegante ed è stato anche lui buono per Stiftung Warentest (numero 7/2025). Ma ha ottenuto un risultato peggiore dei tre apparecchi qui e costa molto di più." }
@@ -1578,7 +1480,7 @@ const PRODUKTE = [
     ],
     nachteile: [
       "Pentole, padelle e teglie grandi di solito non ci stanno, quelle le lavi ancora a mano",
-      "Occupa spazio sul piano di lavoro: gli apparecchi qui sono larghi da 42 a 55 centimetri e profondi da 44 a 50 centimetri",
+      "Occupa spazio sul piano di lavoro: l’apparecchio qui è largo 55 centimetri e profondo 50 centimetri",
       "Nei test le lavastoviglie piccole vanno di solito peggio di quelle grandi e consumano più acqua e corrente per piatto. Test indipendenti degli apparecchi qui non ce ne sono"
     ],
     gruppen: [
@@ -1599,30 +1501,14 @@ const PRODUKTE = [
         fuer: "Il mio consiglio se hai un attacco dell’acqua libero: ci stanno sei coperti e non devi mai riempire acqua.",
         hinweis: "Test indipendenti non ce ne sono, i valori vengono dal produttore. Non ha l’AquaStop, solo una protezione antitraboccamento. C’è in bianco e in nero.",
         link: amazon("bomann tsg 7405", "bomann tsg 7405")
-      },
-      {
-        gruppe: "Con serbatoio d’acqua",
-        stufe: "Economico", spanne: "fino a 300 €",
-        name: "Bomann TSG 5702", preis: 239, preisText: "ca. 200 bis 300 €", empfohlen: true,
-        punkte: [
-          "Serbatoio da cinque litri: non ti serve un allacciamento, ma puoi collegarla più avanti, i tubi sono inclusi",
-          "Secondo il produttore l’apparecchio con serbatoio più parsimonioso che ho trovato: classe energetica C e 4,2 litri d’acqua per lavaggio",
-          "Tre coperti, larga solo 43 centimetri e profonda 44"
-        ],
-        fuer: "Se non hai un attacco dell’acqua libero o non vuoi collegare nulla.",
-        hinweis: "Con 58 decibel è molto più rumorosa degli apparecchi allacciati. Test indipendenti non ce ne sono, i valori vengono dal produttore. Prima di ogni lavaggio metti bene il tubo di scarico nel lavello, altrimenti l’acqua finisce sul piano di lavoro.",
-        link: amazon("bomann tsg 5702", "bomann tsg 5702"),
-        alternativen: [
-          { name: "Midea mini lavastoviglie da tavolo MDWMT201DW", preis: 250, text: "Secondo Midea anche lei tre coperti e un serbatoio da cinque litri, in più un’app. Consuma un po’ più acqua (5 invece di 4,2 litri per lavaggio).", link: amazon("midea mini tischgeschirrspüler wassertank", "midea mini lavastoviglie da tavolo serbatoio") }
-        ]
       }
     ],
     fragen: [
-      { f: "Allacciamento all’acqua o serbatoio: cosa fa per me?", a: "Se sotto il lavello hai un attacco libero, prendi un apparecchio allacciato. Così ci stanno sei coperti e non devi mai riempire acqua. Se non c’è un attacco o non vuoi collegare nulla, prendi un apparecchio con serbatoio. È più piccolo e più rumoroso, e prima di ogni lavaggio riempi l’acqua. In cambio sta ovunque ci sia una presa e il tubo di scarico arrivi al lavello." },
+      { f: "Allacciamento all’acqua o serbatoio: cosa fa per me?", a: "Se sotto il lavello hai un attacco libero, prendi un apparecchio allacciato. Così ci stanno sei coperti e non devi mai riempire acqua. Se non c’è un attacco o non vuoi collegare nulla, prendi un apparecchio con serbatoio. È più piccolo e più rumoroso, e prima di ogni lavaggio riempi l’acqua. In cambio sta ovunque ci sia una presa e il tubo di scarico arrivi al lavello. Un apparecchio con serbatoio al momento non lo trovo su amazon.it, per questo qui c’è solo la Bomann TSG 7405 con allacciamento." },
       { f: "Come collego un apparecchio all’acqua?", a: "Il tubo di carico va su un attacco dell’acqua fredda con filettatura da 3/4 di pollice, di solito un rubinetto sotto il lavello. Se è già occupato, per esempio dalla lavatrice, aiuta un rubinetto doppio. Il tubo di scarico lo colleghi allo scarico sotto il lavello, per questo ci sono raccordi intermedi con attacco. I tubi sono inclusi, negli apparecchi qui sono lunghi circa 1,5 metri. Se ti manca un attacco adatto, chiama un idraulico." },
       { f: "Ci stanno pentole e piatti grandi?", a: "Pentole, padelle e teglie grandi di solito no, quelle le lavi ancora a mano. Prima dell’acquisto misura il tuo piatto più grande e confrontalo con le istruzioni: nei piccoli apparecchi con serbatoio i piatti piani grandi non sempre ci stanno." },
-      { f: "Fa risparmiare acqua e corrente rispetto al lavaggio a mano?", a: "Rispetto alla media sì, soprattutto acqua. In uno studio dell’Università di Bonn i partecipanti hanno usato in media 103 litri d’acqua e 2,5 kWh di energia per dodici coperti lavati a mano, soprattutto per l’acqua calda. Secondo i produttori gli apparecchi qui consumano nel programma eco l’equivalente di 13-20 litri e 1,0-1,3 kWh per dodici coperti. Chi lava a mano in modo molto parsimonioso, però, consuma meno. La più parsimoniosa resta una lavastoviglie grande e piena: secondo la scheda tecnica le bastano circa 8 litri e 0,5 kWh per dodici coperti." },
-      { f: "A cosa devo fare attenzione con un apparecchio con serbatoio?", a: "Riempi il serbatoio prima di ogni lavaggio, il modo più semplice è con una caraffa o un misurino. Metti il tubo di scarico nel lavello e fissalo, così non scivola fuori. Altrimenti l’acqua di scarico finisce sul piano di lavoro o sul pavimento. Molti apparecchi con serbatoio si possono comunque allacciare all’acqua più avanti, con la Bomann TSG 5702 i tubi sono inclusi." },
+      { f: "Fa risparmiare acqua e corrente rispetto al lavaggio a mano?", a: "Rispetto alla media sì, soprattutto acqua. In uno studio dell’Università di Bonn i partecipanti hanno usato in media 103 litri d’acqua e 2,5 kWh di energia per dodici coperti lavati a mano, soprattutto per l’acqua calda. Secondo il produttore l’apparecchio qui consuma nel programma eco l’equivalente di circa 13 litri e 1,0 kWh per dodici coperti. Chi lava a mano in modo molto parsimonioso, però, consuma meno. La più parsimoniosa resta una lavastoviglie grande e piena: secondo la scheda tecnica le bastano circa 8 litri e 0,5 kWh per dodici coperti." },
+      { f: "A cosa devo fare attenzione con un apparecchio con serbatoio?", a: "Riempi il serbatoio prima di ogni lavaggio, il modo più semplice è con una caraffa o un misurino. Metti il tubo di scarico nel lavello e fissalo, così non scivola fuori. Altrimenti l’acqua di scarico finisce sul piano di lavoro o sul pavimento. Molti apparecchi con serbatoio si possono comunque allacciare all’acqua più avanti." },
       { f: "Perché qui non ci sono voti dei test?", a: "Perché test non ce ne sono quasi. Stiftung Warentest, il più noto istituto di test per consumatori in Germania, negli ultimi anni non ha testato lavastoviglie da tavolo, nei test attuali ci sono solo apparecchi grandi. Anche altrove non ho trovato test indipendenti degli apparecchi qui. Per questo confronto per te i dati dei produttori, cioè classe energetica, acqua, rumore e dimensioni, e ti dico onestamente dove le lavastoviglie piccole sono più deboli." },
       { f: "E in Svizzera?", a: "Gli apparecchi qui sono fatti per la Germania e hanno una spina tedesca. Non entra nelle prese svizzere. Per questo al momento non ho un’offerta adatta per la Svizzera, ma ne sto cercando una." }
     ],
@@ -1813,10 +1699,7 @@ const PRODUKTE = [
         ],
         fuer: "Per te se leggi soprattutto romanzi e compri su Amazon.",
         hinweis: "Non impermeabile e senza luce calda.",
-        link: amazon("kindle 2026"),
-        alternativen: [
-          { name: "PocketBook Verse Pro", preis: 160, text: "Quasi allo stesso prezzo, con luce calda e impermeabile. I libri della biblioteca li prendi in prestito direttamente sull’apparecchio.", link: amazon("pocketbook verse pro") }
-        ]
+        link: amazon("kindle 2026")
       },
       {
         stufe: "Fascia media", spanne: "da 170 a 260\u00a0€",
@@ -1919,10 +1802,7 @@ const PRODUKTE = [
         ],
         fuer: "Per te se vuoi passare all’elettrico spendendo poco e ti basta un solo programma.",
         hinweis: "Ha un solo programma di pulizia, e secondo il produttore la batteria dura fino a 14 giorni.",
-        link: amazon("philips sonicare 3100"),
-        alternativen: [
-          { name: "Silk'n SonicSmile Plus", preis: 25, text: "Miglior acquisto per Stiftung Warentest (“buono”, voto 2,3, numero 12/2024), e costa ancora meno. Non ha il sensore di pressione.", link: amazon("silk'n sonicsmile plus") }
-        ]
+        link: amazon("philips sonicare 3100")
       },
       {
         stufe: "Fascia media", spanne: "da 50 a 120 €",
