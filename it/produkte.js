@@ -14,6 +14,7 @@ const AMAZON_LAND = /^[a-z0-9-]+-\d\d$/i.test(SEITE.partnerIdShop || "") && !/^D
 // Amazon-Produktnummern (ASIN) bei amazon.it, nach dem deutschen Suchtext beim jeweiligen Link.
 // Fehlt ein Produkt hier, wurde es bei amazon.it nicht gefunden, dann führt der Link zur Suche.
 const ASIN = {
+  "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
   "wiz a60 e27 color": "B0FLX2T1Z9",
@@ -52,7 +53,6 @@ const ASIN = {
   "shelly trv heizkörperthermostat wlan": "B09RPVRQ3F",
   "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
-  "aeg ergorapido cx7-2-45an": "B0748MM3ZM",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
   "panasonic sr-da152 reiskocher": "B0FJFNMLCR",
@@ -1063,21 +1063,24 @@ const PRODUKTE = [
       "Il contenitore della polvere è piccolo, di solito meno di un litro. Quando lo svuoti si alza un po’ di polvere",
       "Dopo qualche anno la batteria cala, e una nuova costa in più. Controlla che esistano batterie di ricambio"
     ],
+    erfahrung: {
+      titel: "La mia esperienza",
+      bild: "", bildText: "Foto: il tuo aspirapolvere senza fili",
+      text: "Se hai un robot aspirapolvere, l’aspirapolvere senza fili ti serve comunque solo molto di rado. Per questo basta un modello economico. Io ad esempio ho il Bulelink Zenith G10 e ne sono molto soddisfatto."
+    },
     modelle: [
       {
         stufe: "Economico", spanne: "fino a 200\u00a0€",
-        name: "AEG Ergorapido CX7-2-45AN", preis: 150, preisText: "circa da 145 a 180\u00a0€",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "circa da 115 a 150\u00a0€",
         punkte: [
-          "2 in 1: l’aspirabriciole è dentro l’apparecchio, lo estrai e basta",
-          "Sta in piedi da solo, non ti serve un supporto a muro",
-          "Batteria fino a 45 minuti secondo il produttore"
+          "“Buono” su testit.de (voto 2,4, aprile 2026)",
+          "Nel test la batteria è durata circa un’ora al livello più basso",
+          "La batteria si può togliere",
+          "Sta in piedi da solo, non ti serve un supporto a muro"
         ],
-        fuer: "Per case piccole o come secondo aspirapolvere per le pulizie veloci.",
-        hinweis: "Solo “sufficiente” nel risultato parziale finora su smarthomeassistent.de (voto 3,6). Sui tappeti lì aspira peggio che sul laminato.",
-        link: amazon("aeg ergorapido cx7-2-45an"),
-        alternativen: [
-          { name: "AEG Serie 6000 (AP61CB21DB)", preis: 115, text: "La batteria si può togliere e sostituire.", link: amazon("aeg 6000 ap61cb21db") }
-        ]
+        fuer: "Il mio consiglio se hai già un robot aspirapolvere. Lo uso io stesso, ne parlo in “La mia esperienza”.",
+        hinweis: "Su testit.de i capelli si sono avvolti attorno alla spazzola e lungo i bordi è rimasto dello sporco.",
+        link: amazon("bulelink zenith g10")
       },
       {
         stufe: "Fascia media", spanne: "da 200 a 400\u00a0€",
@@ -1091,8 +1094,7 @@ const PRODUKTE = [
         fuer: "Per la maggior parte delle case. Il mio consiglio, perché nel test è buono e costa molto meno del vincitore.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Anche lui “buono” per Stiftung Warentest (voto 2,4, numero 2/2026). La batteria va bene anche per molti apparecchi Bosch per casa e giardino.", link: amazon("bosch unlimited 7 bss715carp") },
-          { name: "Miele Duoflex HX1 Cat & Dog", preis: 416, text: "“Buono” per Stiftung Warentest (voto 2,3, numero 2/2026).", link: amazon("miele duoflex hx1 cat dog") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Anche lui “buono” per Stiftung Warentest (voto 2,4, numero 2/2026). La batteria va bene anche per molti apparecchi Bosch per casa e giardino.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
@@ -1105,10 +1107,7 @@ const PRODUKTE = [
           "Compatta la polvere nel contenitore, così lo svuoti meno spesso"
         ],
         fuer: "Per case grandi, case su più piani e famiglie con animali.",
-        link: amazon("bosch unlimited 10 bts1042wac"),
-        alternativen: [
-          { name: "Miele Duoflex HX1 Total Care", preis: 470, text: "Anche lui “buono” per Stiftung Warentest (voto 2,3, numero 2/2026).", link: amazon("miele duoflex hx1 total care") }
-        ]
+        link: amazon("bosch unlimited 10 bts1042wac")
       }
     ],
     fragen: [

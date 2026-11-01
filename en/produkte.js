@@ -14,6 +14,7 @@ const AMAZON_LAND = /^[a-z0-9-]+-\d\d$/i.test(SEITE.partnerIdShop || "") && !/^D
 // Amazon-Produktnummern (ASIN) bei amazon.co.uk, nach dem deutschen Suchtext beim jeweiligen Link.
 // Fehlt ein Produkt hier, wurde es bei amazon.co.uk nicht gefunden, dann führt der Link zur Suche.
 const ASIN = {
+  "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
   "wiz a60 e27 color": "B0FLX2T1Z9",
@@ -1040,18 +1041,24 @@ const PRODUKTE = [
       "The dust container is small, usually under a litre. Emptying it gets a bit dusty",
       "After a few years the battery weakens, and a new one costs extra. Make sure replacement batteries are available"
     ],
+    erfahrung: {
+      titel: "My experience",
+      bild: "", bildText: "Photo: your cordless vacuum",
+      text: "If you have a robot vacuum, you only need a cordless vacuum very rarely anyway. A cheap model is enough for that. I have the Bulelink Zenith G10, for example, and I'm very happy with it."
+    },
     modelle: [
       {
         stufe: "Budget", spanne: "up to €200",
-        name: "AEG Ergorapido CX7-2-45AN", preis: 150, preisText: "approx. €145 to €180",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "approx. €115 to €150",
         punkte: [
-          "2-in-1: the handheld sits inside the vacuum, you simply take it out",
-          "Stands up on its own, so you don't need a wall bracket",
-          "According to the manufacturer, the battery lasts up to 45 minutes"
+          "Good at testit.de (grade 2.4, April 2026)",
+          "In the test, the battery lasted about an hour on the lowest setting",
+          "You can take the battery out",
+          "Stands up on its own, so you don't need a wall bracket"
         ],
-        fuer: "For small flats or as a second vacuum for quick jobs in between.",
-        hinweis: "Only adequate in the partial result so far at smarthomeassistent.de (grade 3.6). On carpet it vacuums less well there than on laminate.",
-        link: amazon("aeg ergorapido cx7-2-45an"),
+        fuer: "My tip if you already have a robot vacuum. I use it myself, more on that under “My experience”.",
+        hinweis: "At testit.de, hair got wrapped around the roller and dirt was left along the edges.",
+        link: amazon("bulelink zenith g10"),
         alternativen: [
           { name: "AEG Serie 6000 (AP61CB21DB)", preis: 115, text: "The battery can be removed and swapped.", link: amazon("aeg 6000 ap61cb21db") }
         ]
@@ -1068,8 +1075,7 @@ const PRODUKTE = [
         fuer: "For most homes. My tip, because it's good in the test and costs much less than the test winner.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Also good at Stiftung Warentest (grade 2.4, issue 2/2026). The battery also fits many Bosch tools for home and garden.", link: amazon("bosch unlimited 7 bss715carp") },
-          { name: "Miele Duoflex HX1 Cat & Dog", preis: 416, text: "Good at Stiftung Warentest (grade 2.3, issue 2/2026).", link: amazon("miele duoflex hx1 cat dog") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Also good at Stiftung Warentest (grade 2.4, issue 2/2026). The battery also fits many Bosch tools for home and garden.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
@@ -1082,10 +1088,7 @@ const PRODUKTE = [
           "Compresses the dust in the container, so you empty it less often"
         ],
         fuer: "For large homes, houses with several floors and households with pets.",
-        link: amazon("bosch unlimited 10 bts1042wac"),
-        alternativen: [
-          { name: "Miele Duoflex HX1 Total Care", preis: 470, text: "Also good at Stiftung Warentest (grade 2.3, issue 2/2026).", link: amazon("miele duoflex hx1 total care") }
-        ]
+        link: amazon("bosch unlimited 10 bts1042wac")
       }
     ],
     fragen: [

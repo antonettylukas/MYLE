@@ -63,6 +63,7 @@
 // Amazon-Produktnummern (ASIN) bei amazon.de, nach dem Suchtext beim jeweiligen Link.
 // Steht eine Nummer hier, führt der Link direkt zum Produkt, sonst zur Amazon-Suche.
 const ASIN = {
+  "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
   "wiz a60 e27 color": "B0FLX2T1Z9",
@@ -134,7 +135,6 @@ const ASIN = {
   "aqara w600 heizkörperthermostat": "B0FM3JJSQ6",
   "bosch smart home heizkörperthermostat ii +m": "B0DHGSL6FC",
   "homematic ip evo heizkörperthermostat": "B08YDVCBY9",
-  "aeg ergorapido cx7-2-45an": "B0748MM3ZM",
   "aeg 6000 ap61cb21db": "B0D7Q7HYBL",
   "rowenta x-force flex 13.60 allergy": "B0CYCHTGKC",
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
@@ -1124,18 +1124,24 @@ const PRODUKTE = [
       "Der Staubbehälter ist klein, meist unter einem Liter. Beim Leeren staubt es etwas",
       "Nach einigen Jahren lässt der Akku nach, und ein neuer kostet extra. Achte darauf, dass es Ersatz-Akkus gibt"
     ],
+    erfahrung: {
+      titel: "Meine Erfahrung",
+      bild: "", bildText: "Foto: dein Akkusauger",
+      text: "Hast du einen Saugroboter, brauchst du den Akkusauger sowieso nur sehr selten. Dafür reicht ein günstiges Modell. Ich habe zum Beispiel den Bulelink Zenith G10 und bin damit sehr zufrieden."
+    },
     modelle: [
       {
         stufe: "Günstig", spanne: "bis 200 €",
-        name: "AEG Ergorapido CX7-2-45AN", preis: 150, preisText: "ca. 145 bis 180 €",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "ca. 115 bis 150 €",
         punkte: [
-          "2-in-1: Der Handsauger steckt im Gerät, du nimmst ihn einfach heraus",
-          "Steht von allein, du brauchst keine Halterung an der Wand",
-          "Akku hält laut Hersteller bis zu 45 Minuten"
+          "Bei testit.de gut (Note 2,4, April 2026)",
+          "Im Test hielt der Akku auf schwächster Stufe rund eine Stunde",
+          "Den Akku kannst du herausnehmen",
+          "Steht von allein, du brauchst keine Halterung an der Wand"
         ],
-        fuer: "Für kleine Wohnungen oder als zweiten Sauger fürs Schnelle zwischendurch.",
-        hinweis: "Bei smarthomeassistent.de im bisherigen Teilergebnis nur ausreichend (Note 3,6). Auf Teppich saugt er dort schwächer als auf Laminat.",
-        link: amazon("aeg ergorapido cx7-2-45an"),
+        fuer: "Mein Tipp, wenn du schon einen Saugroboter hast. Ich nutze ihn selbst, mehr dazu unter „Meine Erfahrung“.",
+        hinweis: "Bei testit.de wickelten sich Haare um die Walze, und an Kanten blieb Schmutz liegen.",
+        link: amazon("bulelink zenith g10"),
         alternativen: [
           { name: "AEG Serie 6000 (AP61CB21DB)", preis: 115, text: "Der Akku lässt sich herausnehmen und wechseln.", link: amazon("aeg 6000 ap61cb21db") }
         ]
@@ -1152,8 +1158,7 @@ const PRODUKTE = [
         fuer: "Für die meisten Wohnungen. Mein Tipp, denn er ist im Test gut und kostet viel weniger als der Testsieger.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Bei Stiftung Warentest ebenfalls gut (Note 2,4, Heft 2/2026). Der Akku passt auch in viele Bosch-Geräte für Haus und Garten.", link: amazon("bosch unlimited 7 bss715carp") },
-          { name: "Miele Duoflex HX1 Cat & Dog", preis: 416, text: "Bei Stiftung Warentest gut (Note 2,3, Heft 2/2026).", link: amazon("miele duoflex hx1 cat dog") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Bei Stiftung Warentest ebenfalls gut (Note 2,4, Heft 2/2026). Der Akku passt auch in viele Bosch-Geräte für Haus und Garten.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
@@ -1166,10 +1171,7 @@ const PRODUKTE = [
           "Presst den Staub im Behälter zusammen, du leerst ihn seltener"
         ],
         fuer: "Für große Wohnungen, Häuser mit mehreren Etagen und Haushalte mit Tieren.",
-        link: amazon("bosch unlimited 10 bts1042wac"),
-        alternativen: [
-          { name: "Miele Duoflex HX1 Total Care", preis: 470, text: "Bei Stiftung Warentest ebenfalls gut (Note 2,3, Heft 2/2026).", link: amazon("miele duoflex hx1 total care") }
-        ]
+        link: amazon("bosch unlimited 10 bts1042wac")
       }
     ],
     fragen: [

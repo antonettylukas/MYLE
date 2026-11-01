@@ -14,6 +14,7 @@ const AMAZON_LAND = /^[a-z0-9-]+-\d\d$/i.test(SEITE.partnerIdShop || "") && !/^D
 // Amazon-Produktnummern (ASIN) bei amazon.fr, nach dem deutschen Suchtext beim jeweiligen Link.
 // Fehlt ein Produkt hier, wurde es bei amazon.fr nicht gefunden, dann führt der Link zur Suche.
 const ASIN = {
+  "bulelink zenith g10": "B0F13KXRG8",
   "philips hue starter set bridge pro e27": "B0FJYBSW14",
   "philips hue essential starter set e27": "B0FJXZJ9N7",
   "wiz a60 e27 color": "B0FLX2T1Z9",
@@ -65,8 +66,6 @@ const ASIN = {
   "cosori twinfry 10 l": "B0DTTTWYQT",
   "cosori dual basket 8,5 l": "B0DJFJJ56B",
   "bosch serie 6 wng24442 waschtrockner": "B0FBSQD796",
-  "aeg ergorapido cx7-2-45an": "B0748MM3ZM",
-  "aeg 6000 ap61cb21db": "B0D7Q7HYBL",
   "gastroback 42507 reiskocher": "B0009KA4CA",
   "kobo clara bw": "B0CZXYV8GT",
   "kobo libra colour": "B0CZXX465Z",
@@ -1068,21 +1067,24 @@ const PRODUKTE = [
       "Le bac à poussière est petit, généralement moins d’un litre. Le vider fait un peu de poussière",
       "Au bout de quelques années, la batterie faiblit, et une neuve coûte en plus. Vérifiez qu’il existe des batteries de rechange"
     ],
+    erfahrung: {
+      titel: "Mon expérience",
+      bild: "", bildText: "Photo\u202f: votre aspirateur balai",
+      text: "Si vous avez un aspirateur robot, vous n’aurez de toute façon que très rarement besoin d’un aspirateur balai. Un modèle bon marché suffit donc. J’ai par exemple le Bulelink Zenith G10 et j’en suis très satisfait."
+    },
     modelle: [
       {
         stufe: "Petit budget", spanne: "jusqu’à 200\u00a0€",
-        name: "AEG Ergorapido CX7-2-45AN", preis: 150, preisText: "env. 145 à 180\u00a0€",
+        name: "Bulelink Zenith G10", preis: 130, preisText: "env. 115 à 150\u00a0€",
         punkte: [
-          "2 en 1\u202f: l’aspirateur à main est intégré, vous le sortez simplement",
-          "Tient debout tout seul, pas besoin de support mural",
-          "Batterie jusqu’à 45 minutes selon le fabricant"
+          "«\u202fBien\u202f» chez testit.de (note 2,4, avril 2026)",
+          "Lors du test, la batterie a tenu environ une heure au niveau le plus faible",
+          "La batterie s’enlève",
+          "Tient debout tout seul, pas besoin de support mural"
         ],
-        fuer: "Pour les petits logements ou comme deuxième aspirateur pour les petits coups rapides.",
-        hinweis: "Seulement « passable » dans le résultat partiel actuel chez smarthomeassistent.de (note 3,6). Sur moquette, il y aspire moins bien que sur stratifié.",
-        link: amazon("aeg ergorapido cx7-2-45an"),
-        alternativen: [
-          { name: "AEG Serie 6000 (AP61CB21DB)", preis: 115, text: "La batterie s’enlève et se remplace.", link: amazon("aeg 6000 ap61cb21db") }
-        ]
+        fuer: "Mon conseil si vous avez déjà un aspirateur robot. Je l’utilise moi-même, j’en parle dans «\u202fMon expérience\u202f».",
+        hinweis: "Chez testit.de, des cheveux se sont enroulés autour de la brosse et de la saleté est restée le long des bords.",
+        link: amazon("bulelink zenith g10")
       },
       {
         stufe: "Milieu de gamme", spanne: "de 200 à 400\u00a0€",
@@ -1096,8 +1098,7 @@ const PRODUKTE = [
         fuer: "Pour la plupart des logements. Mon conseil, parce qu’il est bon dans le test et coûte beaucoup moins cher que le vainqueur.",
         link: amazon("rowenta x-force flex 13.60 allergy"),
         alternativen: [
-          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Également « bien » chez Stiftung Warentest (note 2,4, numéro 2/2026). La batterie convient aussi à de nombreux appareils Bosch pour la maison et le jardin.", link: amazon("bosch unlimited 7 bss715carp") },
-          { name: "Miele Duoflex HX1 Cat & Dog", preis: 416, text: "« Bien » chez Stiftung Warentest (note 2,3, numéro 2/2026).", link: amazon("miele duoflex hx1 cat dog") }
+          { name: "Bosch Unlimited 7 (BSS715CARP)", preis: 359, text: "Également « bien » chez Stiftung Warentest (note 2,4, numéro 2/2026). La batterie convient aussi à de nombreux appareils Bosch pour la maison et le jardin.", link: amazon("bosch unlimited 7 bss715carp") }
         ]
       },
       {
@@ -1110,10 +1111,7 @@ const PRODUKTE = [
           "Compresse la poussière dans le bac, vous le videz moins souvent"
         ],
         fuer: "Pour les grands logements, les maisons sur plusieurs étages et les foyers avec animaux.",
-        link: amazon("bosch unlimited 10 bts1042wac"),
-        alternativen: [
-          { name: "Miele Duoflex HX1 Total Care", preis: 470, text: "Également « bien » chez Stiftung Warentest (note 2,3, numéro 2/2026).", link: amazon("miele duoflex hx1 total care") }
-        ]
+        link: amazon("bosch unlimited 10 bts1042wac")
       }
     ],
     fragen: [
