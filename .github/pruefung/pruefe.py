@@ -35,7 +35,9 @@ for p in dateien(".html"):
     for ziel in re.findall(r'(?:href|src)="([^"#?]+)', t):
         if re.match(r"(https?:|mailto:|tel:|data:|javascript:|/)", ziel):
             continue
-        if not os.path.exists(os.path.normpath(os.path.join(os.path.dirname(p), ziel))):
+        pfad = os.path.normpath(os.path.join(os.path.dirname(p), ziel))
+        # Saubere Adressen ohne .html (wie Cloudflare sie ausliefert) zählen auch
+        if not (os.path.exists(pfad) or os.path.exists(pfad + ".html")):
             fehler.append(f"{p}: Verweis auf {ziel}, die Datei fehlt")
 for p in dateien(".css"):
     for ziel in re.findall(r"url\(['\"]?([^'\")]+)", lies(p)):

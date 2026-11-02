@@ -31,6 +31,8 @@
   const HAT_RECHNER = typeof RECHNER !== "undefined";
   const WENIG_BEWEGUNG = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Links auf eigene Seiten ohne .html (myle.life/saugroboter), so wie Cloudflare die Seiten ausliefert und
+  // wie sie in sitemap.xml stehen; "./" ist die Startseite der Sprache. Mit .html leitet Cloudflare nur um.
   // ---------- Kleine Helfer ----------
   const nf = (v, d = 0) => v.toLocaleString(ZAHLEN, { minimumFractionDigits: d, maximumFractionDigits: d });
   function esc(s) {
@@ -122,7 +124,7 @@
       ? `<span class="statt"><span>${esc(p.statt).replace(/^(statt|instead of)\s+/i, "<b>$1</b> ")}</span></span>`
       : `<span class="cat">${esc(p.kategorie)}</span>`;
     return `
-      <a class="karte" href="${esc(p.id)}.html" data-kategorie="${esc(p.kategorie)}">
+      <a class="karte" href="${esc(p.id)}" data-kategorie="${esc(p.kategorie)}">
         <div class="karte-bild">${p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">` : standbild(p)}</div>
         <div class="karte-text">
           ${ueber}
@@ -142,7 +144,7 @@
   const gemerkt = {};
   let pop = null, popKarte = null, popProdukt = null, popVideo = null, popStart = "", ruhe = null;
   let zeigeTimer = 0, wegTimer = 0, leerTimer = 0, zuletzt = 0;
-  const produktZu = k => PRODUKTE.find(x => `${x.id}.html` === k.getAttribute("href"));
+  const produktZu = k => PRODUKTE.find(x => x.id === k.getAttribute("href"));
 
   function vorschauFuer(container) {
     if (!MIT_MAUS || !HAT_VIDEOS || !container) return;
@@ -313,11 +315,11 @@
         </div>`;
   const kopf = document.getElementById("kopf");
   if (kopf) {
-    const nlLink = typ === "start" || typ === "produkt" ? "#newsletter" : "index.html#newsletter";
+    const nlLink = typ === "start" || typ === "produkt" ? "#newsletter" : "./#newsletter";
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
-        <a class="logo" href="index.html">${logo()}</a>
-        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="index.html#helfer">${t("Alle Helfer", "All helpers")}</a><a href="index.html#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}</nav>
+        <a class="logo" href="./">${logo()}</a>
+        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}</nav>
       </div></header>`;
     spracheSchalter();
   }
@@ -329,7 +331,7 @@
           "* Advertising link: if you buy through it, I get a small commission. The price stays the same for you. As an Amazon Associate I earn from qualifying purchases. All savings are estimates.")}</p></div>
         <div class="wrap fuss-zeile">
           <span>© ${new Date().getFullYear()} ${seitenName}</span>
-          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="index.html">${t("Startseite", "Home")}</a><a href="impressum.html">${t("Impressum", "Legal notice")}</a><a href="datenschutz.html">${t("Datenschutz", "Privacy policy")}</a></nav>
+          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="./">${t("Startseite", "Home")}</a><a href="impressum">${t("Impressum", "Legal notice")}</a><a href="datenschutz">${t("Datenschutz", "Privacy policy")}</a></nav>
         </div>
       </footer>`;
   }
@@ -375,7 +377,7 @@
           <span class="eyebrow">${t("Wer hier empfiehlt", "Who's recommending")}</span>
           <h2 id="um-titel">${esc(UM.titel)}</h2>
           ${(UM.text || []).map(t => `<p>${esc(t)}</p>`).join("")}
-          ${roboter ? `<a class="text-link" href="saugroboter.html">${t("Mein wichtigster Tipp: der Saugroboter", "My top tip: the robot vacuum")}</a>` : ""}
+          ${roboter ? `<a class="text-link" href="saugroboter">${t("Mein wichtigster Tipp: der Saugroboter", "My top tip: the robot vacuum")}</a>` : ""}
         </div>
         ${weitere.length ? `<div class="um-reihe">${weitere.map(f => foto(f.datei, f.text || "")).join("")}</div>` : ""}`;
     }
@@ -386,7 +388,7 @@
     const ziel = document.getElementById("produktseite");
     const p = PRODUKTE.find(x => x.id === document.body.dataset.produkt);
     if (!p) {
-      ziel.innerHTML = `<section class="wrap leer"><h1>${t("Dieses Produkt gibt es nicht (mehr).", "This product doesn't exist (any more).")}</h1><p><a href="index.html">${t("Zur Startseite", "Go to the home page")}</a></p></section>`;
+      ziel.innerHTML = `<section class="wrap leer"><h1>${t("Dieses Produkt gibt es nicht (mehr).", "This product doesn't exist (any more).")}</h1><p><a href="./">${t("Zur Startseite", "Go to the home page")}</a></p></section>`;
       return;
     }
     const r = HAT_RECHNER && RECHNER[p.rechner];
@@ -401,7 +403,7 @@
             <p class="empf-auch">${gs.slice(1).map((g, k) => `${abPreis(g) < abPreis(gs[0]) ? t("Lieber günstiger? ", "Prefer something cheaper? ") : t("Oder: ", "Or: ")}<a href="#modelle" data-gruppe="${k + 1}">${esc(g.name)}</a>`).join("<br>")}</p>` : "";
 
     const hero = `
-      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="index.html#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
+      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
       <section class="wrap p-hero">
         <div class="p-hero-text">
           <span class="eyebrow">${esc(p.kategorie)}</span>
@@ -511,7 +513,7 @@
       <section class="wrap p-block" aria-labelledby="weitere-titel">
         <h2 class="p-titel" id="weitere-titel">${t("Noch mehr Helfer für mehr Freizeit", "More helpers for more free time")}</h2>
         <div class="karten">${auswahl.map(karte).join("")}</div>
-        ${andere.length > auswahl.length ? `<p class="alle-helfer"><a href="index.html#helfer">${t("Alle {n} Helfer ansehen", "See all {n} helpers", { n: PRODUKTE.length })}</a></p>` : ""}
+        ${andere.length > auswahl.length ? `<p class="alle-helfer"><a href="./#helfer">${t("Alle {n} Helfer ansehen", "See all {n} helpers", { n: PRODUKTE.length })}</a></p>` : ""}
       </section>` : "";
 
     ziel.innerHTML = hero + sprung + erfBlock + muehBlock + modellBlock + rechnerBlock + fragenBlock + weitere +
@@ -724,7 +726,7 @@
             <input type="email" id="${id}" name="email" autocomplete="email" required placeholder="${t("name@beispiel.de", "name@example.com")}">
             <button class="buy" type="submit">${t("Anmelden", "Sign up")}</button>
           </div>
-          <p class="nl-klein">${t("Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Mehr dazu in der", "First you'll get an email to confirm your sign-up. You can unsubscribe with one click in every email. More about this in the")} <a href="datenschutz.html#newsletter">${t("Datenschutzerklärung", "privacy policy")}</a>.</p>
+          <p class="nl-klein">${t("Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Mehr dazu in der", "First you'll get an email to confirm your sign-up. You can unsubscribe with one click in every email. More about this in the")} <a href="datenschutz#newsletter">${t("Datenschutzerklärung", "privacy policy")}</a>.</p>
           <p class="nl-status" role="status" aria-live="polite"></p>
         </form>
       </div>`;
