@@ -108,6 +108,12 @@ for datei, adresse, alle in sitemap.seiten():
         fehler.append(f"{datei}: canonical fehlt oder zeigt nicht auf {adresse}")
     if f'<meta property="og:url" content="{adresse}">' not in t:
         fehler.append(f"{datei}: og:url fehlt oder zeigt nicht auf {adresse}")
+    # Vorschaubild für geteilte Links (WhatsApp, Facebook usw.): muss es im Ordner bilder/ geben
+    bild = re.search(r'<meta property="og:image" content="https://myle\.life/([^"?]+)', t)
+    if not bild:
+        fehler.append(f"{datei}: og:image fehlt")
+    elif not os.path.exists(bild.group(1)):
+        fehler.append(f"{datei}: og:image {bild.group(1)} gibt es nicht")
 if not os.path.exists("sitemap.xml") or lies("sitemap.xml") != sitemap.sitemap():
     fehler.append("sitemap.xml ist nicht auf dem Stand: python3 .github/pruefung/sitemap.py ausführen")
 for p in SPRACHEN:
