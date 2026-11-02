@@ -121,9 +121,11 @@ if not os.path.exists("sitemap.xml") or lies("sitemap.xml") != sitemap.sitemap()
 for p in SPRACHEN:
     if not os.path.exists(p + "404.html"):
         fehler.append(f"{p}404.html fehlt")
-# Bestätigung für die Google Search Console auf der Startseite: Verschwindet sie, verliert Lukas den Zugang
+# Bestätigungen für die Google Search Console und Pinterest auf der Startseite: Verschwinden sie, verliert Lukas den Zugang
 if '<meta name="google-site-verification" content="0bX6O5wxhHzRc-fr-dc0sXwMYfErLPbDG_i1_N1fq04" />' not in lies("index.html"):
     fehler.append("index.html: die Google-Bestätigung (google-site-verification) fehlt, sie muss immer im <head> stehen")
+if '<meta name="p:domain_verify" content="8ed2aeb5e21a67cf3b7b351a370d2077"/>' not in lies("index.html"):
+    fehler.append("index.html: die Pinterest-Bestätigung (p:domain_verify) fehlt, sie muss immer im <head> stehen")
 # Vorgerendert (für Suchmaschinen und KI-Suchen ohne JavaScript) und auf dem Stand, JSON-LD ohne Produkt- und
 # Bewertungsangaben (sonst: node .github/pruefung/vorrendern.js, Einzelheiten in vorgerendert.py)
 import vorgerendert
