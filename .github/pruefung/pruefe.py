@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Prüft die Website vor dem Online-Stellen, ganz ohne Internet:
 # fehlende Dateien, alle 4 Sprachen vollständig, Produktseiten passend zu produkte.js,
-# Amazon-Produktnummern im richtigen Format, gleiche ?v= überall, JavaScript ohne Syntaxfehler.
+# Amazon-Produktnummern im richtigen Format, gleiche ?v= überall, Angaben für Suchmaschinen, JavaScript ohne Syntaxfehler.
 import os, re, subprocess, sys
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -113,6 +113,10 @@ if not os.path.exists("sitemap.xml") or lies("sitemap.xml") != sitemap.sitemap()
 for p in SPRACHEN:
     if not os.path.exists(p + "404.html"):
         fehler.append(f"{p}404.html fehlt")
+# Vorgerendert (für Suchmaschinen und KI-Suchen ohne JavaScript) und auf dem Stand, JSON-LD ohne Produkt- und
+# Bewertungsangaben (sonst: node .github/pruefung/vorrendern.js, Einzelheiten in vorgerendert.py)
+import vorgerendert
+fehler += vorgerendert.fehler()
 
 # 8. JavaScript ohne Syntaxfehler
 for p in dateien(".js"):
