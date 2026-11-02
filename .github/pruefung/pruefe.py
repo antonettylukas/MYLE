@@ -98,7 +98,23 @@ for zeile in lies("_redirects").splitlines():
         if not (ziel == "" or os.path.exists(ziel) or os.path.exists(ziel + "index.html")):
             fehler.append(f"_redirects: Ziel {teile[1]} gibt es nicht")
 
-# 7. JavaScript ohne Syntaxfehler
+# 7. Für Suchmaschinen: jede Seite mit hreflang hat canonical und og:url auf ihre eigene Adresse,
+#    und sitemap.xml ist auf dem Stand (sonst: python3 .github/pruefung/sitemap.py)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sitemap
+for datei, adresse, alle in sitemap.seiten():
+    t = lies(datei)
+    if f'<link rel="canonical" href="{adresse}">' not in t:
+        fehler.append(f"{datei}: canonical fehlt oder zeigt nicht auf {adresse}")
+    if f'<meta property="og:url" content="{adresse}">' not in t:
+        fehler.append(f"{datei}: og:url fehlt oder zeigt nicht auf {adresse}")
+if not os.path.exists("sitemap.xml") or lies("sitemap.xml") != sitemap.sitemap():
+    fehler.append("sitemap.xml ist nicht auf dem Stand: python3 .github/pruefung/sitemap.py ausführen")
+for p in SPRACHEN:
+    if not os.path.exists(p + "404.html"):
+        fehler.append(f"{p}404.html fehlt")
+
+# 8. JavaScript ohne Syntaxfehler
 for p in dateien(".js"):
     r = subprocess.run(["node", "--check", p], capture_output=True, text=True)
     if r.returncode:
