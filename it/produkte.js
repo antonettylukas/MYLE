@@ -58,7 +58,7 @@ const ASIN = {
   "bosch unlimited 7 bss715carp": "B0BW15D2FS",
   "bosch unlimited 10 bks1041rhf": "B0DB8QB2GW",
   "panasonic sr-da152 reiskocher": "B0FX5HM1ZP",
-  "cosori reiskocher crc-r501": "B0BZY2HGW1",
+  "cosori reiskocher crc-r501": "B0C5JL8Z7B",
   "yum asia bamboo reiskocher induktion": "B07WHD5P27",
   "lékué elastische deckel": "B084DRTSDK",
   "kindle 2026": "B0G4SHPH5K",
@@ -1084,7 +1084,10 @@ const PRODUKTE = [
         ],
         fuer: "Per la maggior parte delle persone, soprattutto per le famiglie. Il mio consiglio, perché è il vincitore del test.",
         hinweis: "Non è veloce: nel test gli servivano 35-54 minuti, a seconda della quantità e del riso.",
-        link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuociriso")
+        link: amazon("panasonic sr-da152 reiskocher", "panasonic sr-da152 cuociriso"),
+        alternativen: [
+          { name: "Cosori cuociriso (CRC-R501)", preis: 88, text: "Anche lui “buono” per Stiftung Warentest (numero 5/2026), con cestello per il vapore e tanti programmi. Però lento: nel test gli servivano 43-68 minuti.", link: amazon("cosori reiskocher crc-r501", "cosori cuociriso crc-r501") }
+        ]
       }
     ],
     fragen: [

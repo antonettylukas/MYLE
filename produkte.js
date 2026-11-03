@@ -80,6 +80,7 @@ const ASIN = {
   "de'longhi eletta explore cold brew ecam450.65.g": "B0C6PXJBRC",
   "siemens eq500 tp516dx3": "B0CF5T1VBF",
   "nivona nicr 790": "B09VLKTLFF",
+  "nivona nicr 793": "B0DZXVG6SN",
   "solakon onlite 900": "B0H6QRNTCF",
   "sunniva 920 ecoflow": "B0D9SW4VCJ",
   "bomann tsg 7405": "B0DPX186Z2",
@@ -227,23 +228,22 @@ const PRODUKTE = [
           { name: "ECOVACS DEEBOT T90S PRO OMNI", preis: 599, text: "Wischt bei smarthomeassistent.de genauso gut (Note 1,0).", link: amazon("ecovacs deebot t90s pro omni") }
         ]
       },
-      // Stand 02.11.2026: Der Dreame Aqua20 Pro Ultra Roller X Complete (B0H6GKD2DJ) ist bei amazon.de gerade nicht lieferbar.
-      // Darum steht hier der ECOVACS DEEBOT X12S OmniCyclone, vorher „Auch gut“ auf dieser Karte.
       {
         gruppe: "Mit Wischwalze",
         stufe: "Oberklasse", spanne: "ab 700 €",
-        name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999,
+        name: "Dreame Aqua20 Pro Ultra Roller X Complete", preis: 1499, preisText: "ca. 1.500 €",
         punkte: [
-          "Bei smarthomeassistent.de Note 1,7, und er wischt dort sehr gut (Note 1,0)",
-          "Hat im Test alle 53 Hindernisse erkannt und findet sich gut zurecht (Note 1,6)",
-          "Die Station saugt ihn ohne Staubbeutel leer, du kaufst also keine Beutel mehr",
-          "Im Test haben sich weder in der Hauptbürste noch in der Seitenbürste Haare verheddert"
+          "Testsieger bei smarthomeassistent.de (Note 1,3)",
+          "Saugt sehr stark und findet sich hervorragend zurecht, auch um Hindernisse herum",
+          "Wischt mit einer Walze und löst angetrocknete Flecken mit Dampf, den er laut Hersteller auf 180 °C erhitzt",
+          "Station wäscht die Walze mit 100 °C heißem Wasser. Laut Hersteller klettert er über Schwellen bis 5 cm, über zweistufige bis 10 cm"
         ],
-        fuer: "Für dich, wenn du vor allem Hartboden oder kurzflorige Teppiche hast und keine Staubbeutel mehr kaufen willst.",
-        hinweis: "Bei smarthomeassistent.de blieb er auf langflorigen Teppichen mehrmals hängen, und Ecken und Fugen reinigte er nur mittelmäßig. Insgesamt schneidet dort der günstigere MOVA Z60 besser ab (Note 1,4).",
-        link: amazon("ecovacs deebot x12s omnicyclone"),
+        fuer: "Für alle, die das Beste wollen, vor allem beim Saugen und bei der Navigation.",
+        hinweis: "Beim Wischen schneidet er im Test schwächer ab als der MOVA Z60 (Note 2,5 statt 1,0). Wenn dir vor allem das Wischen wichtig ist, lohnt sich der Aufpreis darum kaum.",
+        link: amazon("dreame aqua20 pro ultra roller x complete"),
         alternativen: [
-          { name: "Roborock Saros 20 Flow Complete", preis: 1299, text: "Bei smarthomeassistent.de Note 1,5 mit der Bestnote für die Navigation (1,0). Wischt dort aber schwächer (Note 3,4).", link: amazon("roborock saros 20 flow complete") }
+          { name: "Roborock Saros 20 Flow Complete", preis: 1299, text: "Bei smarthomeassistent.de Note 1,5 mit der Bestnote für die Navigation (1,0). Wischt dort aber schwächer (Note 3,4).", link: amazon("roborock saros 20 flow complete") },
+          { name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999, text: "Bei smarthomeassistent.de Note 1,7, und er wischt dort sehr gut (Note 1,0). Die Station braucht keine Staubbeutel.", link: amazon("ecovacs deebot x12s omnicyclone") }
         ]
       },
       {
@@ -1336,19 +1336,21 @@ const PRODUKTE = [
         hinweis: "Den Schlauch steckst du in die Milchpackung oder in einen Milchbehälter. Achte auf „TP516DX3“: Die günstigere EQ500 TP511E19 hat keine App und wurde nicht getestet.",
         link: amazon("siemens eq500 tp516dx3")
       },
+      // Stand 03.11.2026: Die getestete NICR 790 (B09VLKTLFF) gibt es bei amazon.de gerade nur bei Drittanbietern, und Amazon
+      // nennt den Preis „höher als üblich“. Darum steht hier die NICR 793 in Grau, laut Nivona gleich ausgestattet.
       {
         gruppe: "Mit Milchschlauch",
         stufe: "Oberklasse", spanne: "ab 650 €",
-        name: "Nivona NICR 790", preis: 750, preisText: "ca. 745 bis 850 €", empfohlen: true,
+        name: "Nivona NICR 793", preis: 750, preisText: "ca. 745 bis 850 €", empfohlen: true,
         punkte: [
-          "Testsieger bei Stiftung Warentest (gut, Note 2,0, Juni 2025)",
+          "Schwestermodell der NICR 790, Testsieger bei Stiftung Warentest (gut, Note 2,0, Juni 2025)",
           "Laut Nivona entkalkst du ihn auch mit Mitteln ohne Sulfamidsäure",
           "Bedienung auch per App über Bluetooth",
           "Die Brühgruppe kannst du zum Ausspülen herausnehmen"
         ],
-        fuer: "Mein Tipp, wenn du ein Gerät mit Schlauch willst: Er war Testsieger.",
-        hinweis: "Teurere Geräte mit Schlauch schnitten im Test nicht besser ab. Den Schlauch steckst du direkt in die Milchpackung.",
-        link: amazon("nivona nicr 790")
+        fuer: "Mein Tipp, wenn du ein Gerät mit Schlauch willst: Sein Schwestermodell war Testsieger.",
+        hinweis: "Getestet wurde die NICR 790 in Schwarz. Die NICR 793 in Grau ist laut Nivona gleich ausgestattet. Teurere Geräte mit Schlauch schnitten im Test nicht besser ab. Den Schlauch steckst du direkt in die Milchpackung.",
+        link: amazon("nivona nicr 793")
       }
     ],
     fragen: [
