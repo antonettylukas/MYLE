@@ -2,6 +2,10 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. -->
+<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MYLE – make your life easier</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -29,9 +33,9 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103g">
-<link rel="stylesheet" href="../videos.css?v=20261103g">
-<!--vr:07fc87f161721751--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/it/#website","url":"https://myle.life/it/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Apparecchi per chi non ha voglia di faccende di casa o ha di meglio da fare con il suo tempo. Per ognuno un consiglio onesto per un budget piccolo, medio e grande, e quasi sempre un calcolatore che ti mostra se conviene a te.","inLanguage":"it","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/it/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
+<link rel="stylesheet" href="../style.css?v=20261103h">
+<link rel="stylesheet" href="../videos.css?v=20261103h">
+<!--vr:8262516bc0fab81b--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/it/#website","url":"https://myle.life/it/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Apparecchi per chi non ha voglia di faccende di casa o ha di meglio da fare con il suo tempo. Per ognuno un consiglio onesto per un budget piccolo, medio e grande, e quasi sempre un calcolatore che ti mostra se conviene a te.","inLanguage":"it","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/it/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
 </head>
 <body data-seite="start">
 <div id="kopf"><!--vr--><header class="top"><div class="wrap">
@@ -286,12 +290,12 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261103g"></script>
-<script src="produkte.js?v=20261103g"></script>
-<script src="rechner.js?v=20261103g"></script>
-<script src="videos-texte.js?v=20261103g"></script>
-<script src="../videos.js?v=20261103g"></script>
-<script src="ui-texte.js?v=20261103g"></script>
-<script src="../app.js?v=20261103g"></script>
+<script src="einstellungen.js?v=20261103h"></script>
+<script src="produkte.js?v=20261103h"></script>
+<script src="rechner.js?v=20261103h"></script>
+<script src="videos-texte.js?v=20261103h"></script>
+<script src="../videos.js?v=20261103h"></script>
+<script src="ui-texte.js?v=20261103h"></script>
+<script src="../app.js?v=20261103h"></script>
 </body>
 </html>

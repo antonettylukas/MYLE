@@ -2,6 +2,10 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. -->
+<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Politique de confidentialité · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -12,7 +16,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103g">
+<link rel="stylesheet" href="../style.css?v=20261103h">
 </head>
 <body>
 <div id="kopf"></div>
@@ -34,7 +38,8 @@
   <p>Pour de simples statistiques de visite, j’utilise Cloudflare Web Analytics. Pour cela, votre navigateur charge un petit script de Cloudflare (static.cloudflareinsights.com) lorsque vous ouvrez le site. Il ne dépose aucun cookie, n’enregistre rien sur votre appareil et ne crée aucun profil de vous. Je ne vois que des chiffres agrégés, par exemple combien de fois une page a été consultée, de quelle page venaient les visiteurs, depuis quel pays et avec quel navigateur. La base juridique est l’art. 6, par. 1, let. f RGPD (intérêt légitime à améliorer le service).</p>
 
   <h2>4. Stockage dans le navigateur</h2>
-  <p>Lorsque vous cliquez sur un lien vers une autre page de MYLE, le site dépose brièvement un repère dans le stockage de session de votre navigateur (sessionStorage)&#8239;: quelle page vous ouvrez et quand. Ainsi, la nouvelle page commence en haut et non au milieu du texte. Le repère est supprimé dès l’ouverture de la nouvelle page, au plus tard à la fermeture de l’onglet. Il n’est transmis ni à moi ni à personne d’autre. Ce stockage est techniquement nécessaire à la fonction demandée et ne requiert donc pas de consentement (art. 5, par. 3 de la directive ePrivacy). Le site n’utilise aucun autre cookie ni stockage.</p>
+  <p>Lorsque vous cliquez sur un lien vers une autre page de MYLE, le site dépose brièvement un repère dans le stockage de session de votre navigateur (sessionStorage)&#8239;: quelle page vous ouvrez et quand. Ainsi, la nouvelle page commence en haut et non au milieu du texte. Le repère est supprimé dès l’ouverture de la nouvelle page, au plus tard à la fermeture de l’onglet. Il n’est transmis ni à moi ni à personne d’autre. Ce stockage est techniquement nécessaire à la fonction demandée et ne requiert donc pas de consentement (art. 5, par. 3 de la directive ePrivacy).</p>
+  <p>Pour mes propres appareils, je désactive les statistiques de visites afin que mes visites ne faussent pas les chiffres. Vous pouvez le faire aussi&#8239;: si vous ouvrez une fois le lien <a href="/fr/?nicht-zaehlen">myle.life/fr/?nicht-zaehlen</a>, le site enregistre l’entrée «&#8239;myle-nicht-zaehlen&#8239;» dans le stockage de votre navigateur (localStorage). Tant qu’elle existe, votre navigateur ne charge plus le script de statistiques de Cloudflare. L’entrée ne contient que cette seule valeur et n’est transmise ni à moi ni à d’autres. Vous la supprimez avec <a href="/fr/?wieder-zaehlen">myle.life/fr/?wieder-zaehlen</a> ou en effaçant les données du site dans votre navigateur. Ce stockage est lui aussi nécessaire à la fonction que vous avez demandée et ne requiert pas de consentement (§ 25, al. 2, n° 2 TDDDG, art. 5, par. 3 de la directive ePrivacy). Sans ce lien, le site ne crée aucun stockage durable et n’utilise aucun autre cookie ni stockage.</p>
 
   <h2>5. Polices de caractères</h2>
   <p>Les polices de ce site (Bricolage Grotesque et Figtree) sont stockées directement sur ce serveur. Lorsque vous ouvrez le site, aucune connexion n’est établie avec Google ni avec un autre fournisseur de polices.</p>
@@ -57,8 +62,8 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261103g"></script>
-<script src="ui-texte.js?v=20261103g"></script>
-<script src="../app.js?v=20261103g"></script>
+<script src="einstellungen.js?v=20261103h"></script>
+<script src="ui-texte.js?v=20261103h"></script>
+<script src="../app.js?v=20261103h"></script>
 </body>
 </html>

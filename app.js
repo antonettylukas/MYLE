@@ -31,6 +31,35 @@
   const HAT_RECHNER = typeof RECHNER !== "undefined";
   const WENIG_BEWEGUNG = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // „Mich nicht zählen“ (Lukas 03.11.2026): ?nicht-zaehlen bzw. ?wieder-zaehlen hat das kleine Skript oben im <head>
+  // schon gemerkt bzw. gelöscht. Hier nur kurz bestätigen und den Zusatz aus der Adresse nehmen.
+  (() => {
+    const q = location.search;
+    const aus = /[?&]nicht-zaehlen(=|&|$)/.test(q), an = /[?&]wieder-zaehlen(=|&|$)/.test(q);
+    if (!aus && !an) return;
+    let gespeichert = false;
+    try { gespeichert = !!localStorage.getItem("myle-nicht-zaehlen") === aus; } catch (e) { /* Speicher gesperrt */ }
+    const text = !gespeichert
+      ? t("Das hat nicht geklappt: Dein Browser lässt die Seite nichts speichern (zum Beispiel im privaten Fenster).", "That didn't work: your browser doesn't let the site store anything (for example in a private window).")
+      : aus ? t("Erledigt: Dieser Browser wird in der Besucherstatistik nicht mehr gezählt.", "Done: this browser is no longer counted in the visitor statistics.")
+      : t("Erledigt: Dieser Browser wird wieder gezählt.", "Done: this browser is counted again.");
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete("nicht-zaehlen"); u.searchParams.delete("wieder-zaehlen");
+      history.replaceState(history.state, "", u.pathname + u.search + u.hash);
+    } catch (e) { /* egal */ }
+    const zeige = () => {
+      const d = document.createElement("div");
+      d.className = "zaehl-hinweis"; d.setAttribute("role", "status"); d.textContent = text;
+      const zu = document.createElement("button");
+      zu.type = "button"; zu.textContent = "×"; zu.setAttribute("aria-label", t("Schließen", "Close"));
+      zu.addEventListener("click", () => d.remove());
+      d.appendChild(zu); document.body.appendChild(d);
+      setTimeout(() => d.remove(), 12000);
+    };
+    if (document.body) zeige(); else document.addEventListener("DOMContentLoaded", zeige);
+  })();
+
   // Links auf eigene Seiten ohne .html (myle.life/saugroboter), so wie Cloudflare die Seiten ausliefert und
   // wie sie in sitemap.xml stehen; "./" ist die Startseite der Sprache. Mit .html leitet Cloudflare nur um.
   // ---------- Kleine Helfer ----------

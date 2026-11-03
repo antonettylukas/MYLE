@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. -->
+<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy policy · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -12,7 +16,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103g">
+<link rel="stylesheet" href="../style.css?v=20261103h">
 </head>
 <body>
 <div id="kopf"></div>
@@ -34,7 +38,8 @@
   <p>For simple visitor statistics I use Cloudflare Web Analytics. For this, your browser loads a small script from Cloudflare (static.cloudflareinsights.com) when you open the site. It sets no cookies, stores nothing on your device and creates no profile of you. I only see aggregated numbers, for example how often a page was viewed, which page visitors came from, from which country and with which browser. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in improving the service).</p>
 
   <h2>4. Browser storage</h2>
-  <p>When you click a link to another MYLE page, the website briefly stores a marker in your browser's session storage (sessionStorage): which page you are opening and when. This makes the new page start at the top instead of in the middle of the text. The marker is deleted as soon as the new page opens, at the latest when you close the tab. It is not sent to me or anyone else. This storage is technically necessary for the function you asked for and therefore needs no consent (Art. 5(3) ePrivacy Directive). The website uses no other cookies or storage.</p>
+  <p>When you click a link to another MYLE page, the website briefly stores a marker in your browser's session storage (sessionStorage): which page you are opening and when. This makes the new page start at the top instead of in the middle of the text. The marker is deleted as soon as the new page opens, at the latest when you close the tab. It is not sent to me or anyone else. This storage is technically necessary for the function you asked for and therefore needs no consent (Art. 5(3) ePrivacy Directive).</p>
+  <p>I switch off the visitor statistics for my own devices so that my visits do not distort the numbers. You can do this too: if you open the link <a href="/en/?nicht-zaehlen">myle.life/en/?nicht-zaehlen</a> once, the website stores the entry “myle-nicht-zaehlen” in your browser’s storage (localStorage). As long as it is there, your browser no longer loads the Cloudflare statistics script. The entry contains only this one value and is not sent to me or anyone else. You remove it again with <a href="/en/?wieder-zaehlen">myle.life/en/?wieder-zaehlen</a> or by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive). Without this link the website creates no lasting storage, and it uses no other cookies or storage.</p>
 
   <h2>5. Fonts</h2>
   <p>The fonts on this website (Bricolage Grotesque and Figtree) are stored directly on this server. When you open the site, no connection is made to Google or any other font provider.</p>
@@ -57,7 +62,7 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261103g"></script>
-<script src="../app.js?v=20261103g"></script>
+<script src="einstellungen.js?v=20261103h"></script>
+<script src="../app.js?v=20261103h"></script>
 </body>
 </html>

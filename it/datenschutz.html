@@ -2,6 +2,10 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. -->
+<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Informativa sulla privacy · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -12,7 +16,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103g">
+<link rel="stylesheet" href="../style.css?v=20261103h">
 </head>
 <body>
 <div id="kopf"></div>
@@ -34,7 +38,8 @@
   <p>Per semplici statistiche delle visite uso Cloudflare Web Analytics. A questo scopo, quando apri il sito, il tuo browser carica un piccolo script di Cloudflare (static.cloudflareinsights.com). Non imposta cookie, non salva nulla sul tuo dispositivo e non crea alcun profilo su di te. Vedo solo numeri aggregati, per esempio quante volte una pagina è stata vista, da quale pagina sono arrivati i visitatori, da quale paese e con quale browser. La base giuridica è l’art. 6, par. 1, lett. f GDPR (legittimo interesse a migliorare il servizio).</p>
 
   <h2>4. Memoria del browser</h2>
-  <p>Quando clicchi su un link verso un’altra pagina di MYLE, il sito salva per poco tempo un promemoria nella memoria di sessione del tuo browser (sessionStorage): quale pagina apri e quando. Così la nuova pagina parte dall’alto e non a metà del testo. Il promemoria viene cancellato appena si apre la nuova pagina, al più tardi quando chiudi la scheda. Non viene trasmesso né a me né ad altri. Questa memoria è tecnicamente necessaria per la funzione richiesta e quindi non richiede consenso (art. 5, par. 3 direttiva ePrivacy). Il sito non usa altri cookie né altre memorie.</p>
+  <p>Quando clicchi su un link verso un’altra pagina di MYLE, il sito salva per poco tempo un promemoria nella memoria di sessione del tuo browser (sessionStorage): quale pagina apri e quando. Così la nuova pagina parte dall’alto e non a metà del testo. Il promemoria viene cancellato appena si apre la nuova pagina, al più tardi quando chiudi la scheda. Non viene trasmesso né a me né ad altri. Questa memoria è tecnicamente necessaria per la funzione richiesta e quindi non richiede consenso (art. 5, par. 3 direttiva ePrivacy).</p>
+  <p>Per i miei dispositivi disattivo le statistiche delle visite, così le mie visite non falsano i numeri. Puoi farlo anche tu: se apri una volta il link <a href="/it/?nicht-zaehlen">myle.life/it/?nicht-zaehlen</a>, il sito salva nella memoria del tuo browser (localStorage) la voce “myle-nicht-zaehlen”. Finché c’è, il tuo browser non carica più lo script delle statistiche di Cloudflare. La voce contiene solo questo valore e non viene trasmessa né a me né ad altri. La togli con <a href="/it/?wieder-zaehlen">myle.life/it/?wieder-zaehlen</a> oppure cancellando i dati del sito nel tuo browser. Anche questa memoria è necessaria per la funzione che hai chiesto e non richiede consenso (§ 25, comma 2, n. 2 TDDDG, art. 5, par. 3 della direttiva ePrivacy). Senza questo link il sito non crea alcuna memoria duratura e non usa altri cookie né altre memorie.</p>
 
   <h2>5. Caratteri</h2>
   <p>I caratteri di questo sito (Bricolage Grotesque e Figtree) sono salvati direttamente su questo server. Quando apri il sito non viene stabilita alcuna connessione con Google o con altri fornitori di caratteri.</p>
@@ -57,8 +62,8 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261103g"></script>
-<script src="ui-texte.js?v=20261103g"></script>
-<script src="../app.js?v=20261103g"></script>
+<script src="einstellungen.js?v=20261103h"></script>
+<script src="ui-texte.js?v=20261103h"></script>
+<script src="../app.js?v=20261103h"></script>
 </body>
 </html>
