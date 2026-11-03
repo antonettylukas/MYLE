@@ -106,7 +106,7 @@ const ASIN = {
   "hoto electric spin scrubber": "B0CPXQ4XQK",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
-  "mova z60 ultra roller complete": "B0G8172MJD",
+  "mova z60 ultra roller complete": "B0GTVD5WGW",
   "ecovacs deebot t90s pro omni": "B0H94KQLMJ",
   "dreame aqua20 pro ultra roller x complete": "B0H6GKD2DJ",
   "roborock saros 20 flow complete": "B0H83J9FWG",
