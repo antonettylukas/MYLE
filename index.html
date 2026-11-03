@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
      (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
-     myle.life/?wieder-zaehlen nimmt das zurück. -->
-<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
+     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie. -->
+<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Bestätigungen für die Google Search Console und Pinterest. Müssen für immer hier stehen bleiben, sonst verliert Lukas den Zugang (pruefe.py prüft das). -->
 <meta name="google-site-verification" content="0bX6O5wxhHzRc-fr-dc0sXwMYfErLPbDG_i1_N1fq04" />
@@ -36,9 +36,9 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=20261103h">
-<link rel="stylesheet" href="videos.css?v=20261103h">
-<!--vr:db1415cadf21d62e--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/#website","url":"https://myle.life/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Helfer für alle, die keine Lust auf Hausarbeit haben oder mit ihrer Zeit Besseres vorhaben. Zu jedem eine ehrliche Empfehlung für kleines, mittleres und großes Budget und fast immer ein Rechner, der zeigt, ob es sich für dich lohnt.","inLanguage":"de","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
+<link rel="stylesheet" href="style.css?v=20261103i">
+<link rel="stylesheet" href="videos.css?v=20261103i">
+<!--vr:9600300783881a22--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/#website","url":"https://myle.life/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Helfer für alle, die keine Lust auf Hausarbeit haben oder mit ihrer Zeit Besseres vorhaben. Zu jedem eine ehrliche Empfehlung für kleines, mittleres und großes Budget und fast immer ein Rechner, der zeigt, ob es sich für dich lohnt.","inLanguage":"de","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
 </head>
 <body data-seite="start">
 <div id="kopf"><!--vr--><header class="top"><div class="wrap">
@@ -293,10 +293,10 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261103h"></script>
-<script src="produkte.js?v=20261103h"></script>
-<script src="rechner.js?v=20261103h"></script>
-<script src="videos.js?v=20261103h"></script>
-<script src="app.js?v=20261103h"></script>
+<script src="einstellungen.js?v=20261103i"></script>
+<script src="produkte.js?v=20261103i"></script>
+<script src="rechner.js?v=20261103i"></script>
+<script src="videos.js?v=20261103i"></script>
+<script src="app.js?v=20261103i"></script>
 </body>
 </html>

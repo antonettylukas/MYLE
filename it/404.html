@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
      (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
-     myle.life/?wieder-zaehlen nimmt das zurück. -->
-<script>try{var q=location.search,k="myle-nicht-zaehlen";if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);if(localStorage.getItem(k)){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}}catch(e){}</script>
+     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie. -->
+<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- Diese Seite zeigt Cloudflare bei jeder Adresse, die es nicht gibt, mit Status 404.
      base sorgt dafür, dass Stil, Skripte und Links auch unter tiefen Adressen wie /it/a/b/c stimmen. -->
@@ -17,7 +17,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103h">
+<link rel="stylesheet" href="../style.css?v=20261103i">
 </head>
 <body>
 <div id="kopf"></div>
@@ -30,8 +30,8 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261103h"></script>
-<script src="ui-texte.js?v=20261103h"></script>
-<script src="../app.js?v=20261103h"></script>
+<script src="einstellungen.js?v=20261103i"></script>
+<script src="ui-texte.js?v=20261103i"></script>
+<script src="../app.js?v=20261103i"></script>
 </body>
 </html>
