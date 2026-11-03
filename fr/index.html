@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
      (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
-     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie. -->
-<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
+     ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
+<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MYLE – make your life easier</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -33,9 +34,9 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=20261103i">
-<link rel="stylesheet" href="../videos.css?v=20261103i">
-<!--vr:b5f516807f0c0331--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/fr/#website","url":"https://myle.life/fr/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Des appareils pour tous ceux qui n’ont pas envie de faire le ménage ou qui ont mieux à faire de leur temps. Pour chacun, un conseil honnête pour un petit, un moyen et un grand budget, et presque toujours un calculateur qui montre si cela vaut le coup pour vous.","inLanguage":"fr","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/fr/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
+<link rel="stylesheet" href="../style.css?v=20261103j">
+<link rel="stylesheet" href="../videos.css?v=20261103j">
+<!--vr:832b618878ee0c82--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://myle.life/fr/#website","url":"https://myle.life/fr/","name":"MYLE","alternateName":"MYLE – make your life easier","description":"Des appareils pour tous ceux qui n’ont pas envie de faire le ménage ou qui ont mieux à faire de leur temps. Pour chacun, un conseil honnête pour un petit, un moyen et un grand budget, et presque toujours un calculateur qui montre si cela vaut le coup pour vous.","inLanguage":"fr","publisher":{"@id":"https://myle.life/#lukas"}},{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/fr/#ueber-mich","image":"https://myle.life/bilder/lukas-trekking.webp"}]}</script><!--/vr-->
 </head>
 <body data-seite="start">
 <div id="kopf"><!--vr--><header class="top"><div class="wrap">
@@ -290,12 +291,12 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261103i"></script>
-<script src="produkte.js?v=20261103i"></script>
-<script src="rechner.js?v=20261103i"></script>
-<script src="videos-texte.js?v=20261103i"></script>
-<script src="../videos.js?v=20261103i"></script>
-<script src="ui-texte.js?v=20261103i"></script>
-<script src="../app.js?v=20261103i"></script>
+<script src="einstellungen.js?v=20261103j"></script>
+<script src="produkte.js?v=20261103j"></script>
+<script src="rechner.js?v=20261103j"></script>
+<script src="videos-texte.js?v=20261103j"></script>
+<script src="../videos.js?v=20261103j"></script>
+<script src="ui-texte.js?v=20261103j"></script>
+<script src="../app.js?v=20261103j"></script>
 </body>
 </html>
