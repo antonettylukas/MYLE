@@ -402,6 +402,20 @@
     const andereGruppen = mitGruppen ? `
             <p class="empf-auch">${gs.slice(1).map((g, k) => `${abPreis(g) < abPreis(gs[0]) ? t("Lieber günstiger? ", "Prefer something cheaper? ") : t("Oder: ", "Or: ")}<a href="#modelle" data-gruppe="${k + 1}">${esc(g.name)}</a>`).join("<br>")}</p>` : "";
 
+    // Nur am Handy (style.css): Dort kommen die Empfehlungen direkt nach dem Kopf (Version A). Diese Kachel oben sagt,
+    // was nach den Produkten noch folgt, mit Sprungmarken (Lukas 03.11.2026).
+    const danachTeile = [
+      p.erfahrung && ["#erfahrung", t("Meine Erfahrung", "My experience")],
+      p.profitipp && [p.erfahrung ? "#tipp" : "#erfahrung", t("Mein Tipp", "My tip")],
+      ["#muehe-titel", t("Was es dir abnimmt", "What it takes off your hands")],
+      r && ["#rechner", t("Rechner", "Calculator")],
+      p.fragen && p.fragen.length && ["#fragen", t("Fragen und Antworten", "Questions and answers")]
+    ].filter(Boolean);
+    const danach = ms.length || p.keinModell ? `
+          <div class="danach">
+            <span class="danach-titel"><span aria-hidden="true">↓</span> ${t("Nach den Produkten findest du noch", "After the products you'll also find")}</span>
+            <ul>${danachTeile.map(([h, x]) => `<li><a href="${h}">${x}</a></li>`).join("")}</ul>
+          </div>` : "";
     const hero = `
       <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
       <section class="wrap p-hero">
@@ -410,7 +424,7 @@
           <h1>${esc(p.name)}</h1>
           <p class="lead">${esc(p.kurz)}</p>
           <p class="leise">${esc(p.warum)}</p>
-          ${badges(p)}
+          ${badges(p)}${danach}
           ${empf ? `
           <div class="empf-box">
             <span class="empf-label">${t("Meine Empfehlung", "My recommendation")}</span>
@@ -446,12 +460,12 @@
         </div>
       </div>` : "";
     const tipp = p.profitipp ? `
-      <div class="profitipp">
+      <div class="profitipp" id="tipp">
         <strong>${esc(p.profitipp.titel)}</strong>
         ${p.profitipp.text ? `<p>${esc(p.profitipp.text)}</p>` : ""}
         ${p.profitipp.liste ? `<ol>${p.profitipp.liste.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}
       </div>` : "";
-    const erfBlock = erfahrung || tipp ? `<section class="wrap p-block p-erfahrung${erfahrung && tipp ? " zwei" : ""}">${erfahrung}${tipp}</section>` : "";
+    const erfBlock = erfahrung || tipp ? `<section class="wrap p-block p-erfahrung${erfahrung && tipp ? " zwei" : ""}" id="erfahrung">${erfahrung}${tipp}</section>` : "";
 
     const aufwand = p.muehe ? `
       <div class="aufwand" aria-label="${t("Aufwand im Vergleich", "Effort compared")}">
