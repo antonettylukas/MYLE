@@ -68,9 +68,13 @@
   const slug = s => String(s).toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const kurzname = p => p.kurzname || p.name.split(" ").slice(-1)[0];
   // Solange in einstellungen.js noch keine echte Partner-ID steht, bekommen die Amazon-Links gar keinen tag.
+  // Eigene Tracking-ID pro Produktseite (einstellungen.js: trackingIds), damit Amazon PartnerNet die Klicks und Käufe
+  // pro Seite getrennt zählt. Ohne Eintrag bleibt die normale Partner-ID. Es werden keine Daten der Besucher erfasst.
+  const SEITEN_ID = (S.trackingIds || {})[document.body.dataset.produkt || ""];
   const partnerLink = u => {
     const id = String(S.partnerId || "").trim();
-    return /^DEINPARTNERTAG/.test(id) || !id ? String(u || "").replace(/[?&]tag=DEINPARTNERTAG-21/g, "") : String(u || "").replace(/DEINPARTNERTAG-21/g, id);
+    const link = /^DEINPARTNERTAG/.test(id) || !id ? String(u || "").replace(/[?&]tag=DEINPARTNERTAG-21/g, "") : String(u || "").replace(/DEINPARTNERTAG-21/g, id);
+    return SEITEN_ID && /^[a-z0-9-]+-2[01]$/.test(String(SEITEN_ID).trim()) ? link.replace(/([?&]tag=)[^&#]+/, "$1" + String(SEITEN_ID).trim()) : link;
   };
   // keinModell (Feld in produkte.js): Im Amazon-Shop dieses Landes ist gerade keins der Modelle lieferbar.
   // Dann zeigt die Seite statt der Modelle eine Hinweiskarte. Die Modelle bleiben in produkte.js stehen,

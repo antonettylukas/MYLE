@@ -12,6 +12,9 @@ const SEITE = {
   // Solange hier "DEINPARTNERTAG-21" steht, führen die Links zu amazon.de mit der deutschen Partner-ID oben.
   amazonShop: "www.amazon.co.uk",
   partnerIdShop: "myleuk-21",
+  // Eigene Tracking-IDs pro Produktseite aus Amazon.co.uk Associates (wie in einstellungen.js), z. B. saugroboter: "myleuksaug-21".
+  trackingIds: {
+  },
   preisstand: "Oktober 2026"
 };
 

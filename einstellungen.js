@@ -16,6 +16,12 @@ const SEITE = {
   // Sie wird automatisch in alle Amazon-Links eingesetzt.
   partnerId: "myle03e-21",
 
+  // Eigene Tracking-IDs pro Produktseite (anlegen in PartnerNet: Konto-Einstellungen > Tracking-IDs verwalten).
+  // Dann zeigt PartnerNet die Klicks und Käufe getrennt pro Seite. Beispiel: saugroboter: "mylesaug-21",
+  // Seiten ohne Eintrag nutzen die Partner-ID oben.
+  trackingIds: {
+  },
+
   // Wann du die Preise zuletzt geprüft hast. Nur für dich, auf der Seite stehen keine Preise.
   preisstand: "Oktober 2026"
 };
