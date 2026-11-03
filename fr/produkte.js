@@ -88,8 +88,8 @@ const amazon = (suche, landSuche) => AMAZON_LAND
 const PRODUKTE = [
   {
     id: "saugroboter",
-    name: "Robot aspirateur",
-    kurzname: "un robot aspirateur",
+    name: "Robot aspirateur laveur",
+    kurzname: "un robot aspirateur laveur",
     kategorie: "Maison",
     symbol: "🤖",
     bild: "",
@@ -110,7 +110,7 @@ const PRODUKTE = [
     ],
     erfahrung: {
       titel: "Mon expérience après 14 ans",
-      bild: "", bildText: "Photo\u202f: vous avec votre robot aspirateur",
+      bild: "", bildText: "Photo\u202f: vous avec votre robot aspirateur laveur",
       text: "J’utilise des robots aspirateurs depuis 14 ans et, depuis, je n’ai plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante\u202f: régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un appartement propre."
     },
     gruppen: [
@@ -197,7 +197,7 @@ const PRODUKTE = [
       }
     ],
     fragen: [
-      { f: "Sur quels tests vous basez-vous pour choisir les robots\u202f?", a: "Pour les robots aspirateurs, je me fie aux tests détaillés de smarthomeassistent.de. Chaque robot y passe les mêmes épreuves, des tapis et cheveux jusqu’aux obstacles et seuils de porte. Leurs notes fonctionnent comme les notes scolaires allemandes : 1,0 est la meilleure. Je recommande les modèles qui s’en sortent le mieux dans leur gamme de prix, et j’y ajoute ma propre expérience de 14 ans. Si un robot est testé à nouveau après une mise à jour, par exemple parce que sa navigation s’est améliorée, c’est le test le plus récent qui compte pour moi." },
+      { f: "Sur quels tests vous basez-vous pour choisir les robots\u202f?", a: "Pour les robots aspirateurs laveurs, je me fie aux tests détaillés de smarthomeassistent.de. Chaque robot y passe les mêmes épreuves, des tapis et cheveux jusqu’aux obstacles et seuils de porte. Leurs notes fonctionnent comme les notes scolaires allemandes : 1,0 est la meilleure. Je recommande les modèles qui s’en sortent le mieux dans leur gamme de prix, et j’y ajoute ma propre expérience de 14 ans. Si un robot est testé à nouveau après une mise à jour, par exemple parce que sa navigation s’est améliorée, c’est le test le plus récent qui compte pour moi." },
       { f: "Ai-je besoin de la fonction lavage\u202f?", a: "Avec beaucoup de sols durs comme le carrelage, le stratifié ou le parquet, absolument\u202f: le sol reste propre et vous ne remplissez plus jamais de seau. Si vous avez surtout de la moquette, ou si vous aimez de toute façon laver le sol vous-même, un robot qui aspire seulement suffirait. Mais en ce moment, je n’en trouve aucun sur amazon.fr qui soit convaincant dans les tests. Les robots laveurs de cette page peuvent aussi seulement aspirer\u202f: il suffit de le régler dans l’appli." },
       { f: "Rouleau laveur ou serpillières rotatives\u202f: lequel est le meilleur\u202f?", a: "Les deux peuvent très bien laver : dans le test, le MOVA Z60 avec rouleau et le MOVA V50 avec serpillières obtiennent chacun la meilleure note pour le lavage, 1,0. Le rouleau récupère aussitôt l’eau sale et doit donc retourner moins souvent à la station pour être lavé. Les serpillières vont mieux le long des bords et dans les coins, mais ont tendance à étaler l’eau sale. Si vous avez beaucoup de coins, de recoins et de bords de meubles, prenez des serpillières. Si vous avez surtout des surfaces dégagées, un rouleau convient bien." },
       { f: "Se bloque-t-il sur les câbles ou les chaussettes\u202f?", a: "Les modèles avec caméra reconnaissent le plus souvent câbles, chaussettes et chaussures et les contournent, beaucoup aussi les animaux. Les modèles bon marché sans caméra roulent plus facilement sur un câble ou restent coincés : vous rangez alors rapidement avant. Un nœud de câbles sous le bureau, mieux vaut le ranger une fois pour toutes, quel que soit le modèle." },
@@ -974,7 +974,7 @@ const PRODUKTE = [
     fuer: [
       "Vous aspirez souvent entre deux, par exemple des miettes ou des poils d’animaux",
       "Vous avez des escaliers ou plusieurs étages",
-      "Vous voulez aussi nettoyer vite le canapé et la voiture, ou un robot aspirateur est trop cher pour vous en ce moment"
+      "Vous voulez aussi nettoyer vite le canapé et la voiture, ou un robot aspirateur laveur est trop cher pour vous en ce moment"
     ],
     nachteile: [
       "L’autonomie indiquée par les fabricants vaut généralement pour la puissance la plus faible. En puissance maximale, c’est souvent seulement 10 à 15 minutes. Si vous avez un grand logement, choisissez un modèle avec une deuxième batterie",
@@ -1019,7 +1019,7 @@ const PRODUKTE = [
       { f: "Combien de temps tient la batterie\u202f?", a: "Ce qu’indiquent les fabricants vaut généralement pour la puissance la plus faible. En puissance maximale, c’est souvent seulement 10 à 15 minutes. La batterie du Bosch Unlimited 10 s’échange\u202f: avec une deuxième, vous aspirez deux fois plus longtemps." },
       { f: "Comment vider le bac à poussière\u202f?", a: "Au-dessus de la poubelle, vous ouvrez le bac, et la poussière tombe. Cela fait un peu de poussière. Si vous êtes allergique à la poussière, videz-le de préférence dehors ou laissez quelqu’un d’autre le faire." },
       { f: "Vient-il à bout des poils d’animaux\u202f?", a: "Pas tous aussi bien. Chez Stiftung Warentest, le Bosch Unlimited 10, les deux modèles Miele et le Rowenta X-Force Flex 13.60 ont enlevé les poils d’animaux de façon fiable, d’autres avaient plus de mal. Si de longs cheveux s’enroulent autour de la brosse, vous les coupez et les retirez." },
-      { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur. Depuis que j’en ai un, je n’aspire plus moi-même." },
+      { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur laveur. Depuis que j’en ai un, je n’aspire plus moi-même." },
       { f: "Combien de temps dure un tel appareil\u202f?", a: "En général, c’est la batterie qui faiblit en premier, souvent au bout de quelques années. Vérifiez donc que vous pouvez la changer et qu’il existe des batteries de rechange. Bosch donne même dix ans de garantie sur le moteur de l’Unlimited 10." }
     ],
     rechner: "akkusauger",

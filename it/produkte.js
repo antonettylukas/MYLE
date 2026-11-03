@@ -85,8 +85,8 @@ const amazon = (suche, landSuche) => AMAZON_LAND
 const PRODUKTE = [
   {
     id: "saugroboter",
-    name: "Robot aspirapolvere",
-    kurzname: "un robot aspirapolvere",
+    name: "Robot aspirapolvere lavapavimenti",
+    kurzname: "un robot aspirapolvere lavapavimenti",
     kategorie: "Casa",
     symbol: "🤖",
     bild: "",
@@ -107,7 +107,7 @@ const PRODUKTE = [
     ],
     erfahrung: {
       titel: "La mia esperienza dopo 14 anni",
-      bild: "", bildText: "Foto: tu con il tuo robot aspirapolvere",
+      bild: "", bildText: "Foto: tu con il tuo robot aspirapolvere lavapavimenti",
       text: "Uso robot aspirapolvere da 14 anni e da allora non ho mai più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
     },
     gruppen: [
@@ -194,7 +194,7 @@ const PRODUKTE = [
       }
     ],
     fragen: [
-      { f: "In base a quali test scegli i robot?", a: "Per i robot aspirapolvere mi baso sui test approfonditi di smarthomeassistent.de. Lì ogni robot affronta le stesse prove, da tappeti e capelli fino a ostacoli e soglie delle porte. I loro voti funzionano come i voti scolastici tedeschi: 1,0 è il migliore. Consiglio i modelli che lì ottengono i risultati migliori nella loro fascia di prezzo, e ci aggiungo la mia esperienza di 14 anni. Se un robot viene testato di nuovo dopo un aggiornamento, per esempio perché la navigazione è migliorata, per me conta il test più recente." },
+      { f: "In base a quali test scegli i robot?", a: "Per i robot aspirapolvere lavapavimenti mi baso sui test approfonditi di smarthomeassistent.de. Lì ogni robot affronta le stesse prove, da tappeti e capelli fino a ostacoli e soglie delle porte. I loro voti funzionano come i voti scolastici tedeschi: 1,0 è il migliore. Consiglio i modelli che lì ottengono i risultati migliori nella loro fascia di prezzo, e ci aggiungo la mia esperienza di 14 anni. Se un robot viene testato di nuovo dopo un aggiornamento, per esempio perché la navigazione è migliorata, per me conta il test più recente." },
       { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e non riempi mai più un secchio. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basterebbe un robot che aspira e basta. Al momento però su amazon.it non ne trovo nessuno che convinca nei test. I robot lavapavimenti di questa pagina possono anche solo aspirare: basta impostarlo nell’app." },
       { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test il MOVA Z60 con rullo e il Dreame L40s Pro Ultra con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
       { f: "Si blocca su cavi o calzini?", a: "I modelli con telecamera di solito riconoscono cavi, calzini e scarpe e li aggirano, molti anche gli animali. I modelli economici senza telecamera passano più facilmente sopra un cavo o restano bloccati: in quel caso metti un attimo in ordine prima. Un groviglio di cavi sotto la scrivania conviene comunque sistemarlo una volta per tutte, con qualsiasi modello." },
@@ -997,7 +997,7 @@ const PRODUKTE = [
     fuer: [
       "Aspiri spesso al volo, per esempio briciole o peli di animali",
       "Hai scale o più piani",
-      "Vuoi pulire in fretta anche divano e auto, o un robot aspirapolvere per ora è troppo caro per te"
+      "Vuoi pulire in fretta anche divano e auto, o un robot aspirapolvere lavapavimenti per ora è troppo caro per te"
     ],
     nachteile: [
       "L’autonomia indicata dai produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. Se hai una casa grande, scegli un modello con una seconda batteria",
@@ -1019,7 +1019,7 @@ const PRODUKTE = [
           "La batteria si può togliere",
           "Sta in piedi da solo, non ti serve un supporto a muro"
         ],
-        fuer: "Il mio consiglio se hai già un robot aspirapolvere. Lo uso io stesso, ne parlo in “La mia esperienza”.",
+        fuer: "Il mio consiglio se hai già un robot aspirapolvere lavapavimenti. Lo uso io stesso, ne parlo in “La mia esperienza”.",
         hinweis: "Su testit.de i capelli si sono avvolti attorno alla spazzola e lungo i bordi è rimasto dello sporco.",
         link: amazon("bulelink zenith g10")
       },
@@ -1042,7 +1042,7 @@ const PRODUKTE = [
       { f: "Quanto dura la batteria?", a: "Quello che indicano i produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. La batteria del Bosch Unlimited 10 si può cambiare: con una seconda aspiri il doppio del tempo." },
       { f: "Come svuoto il contenitore della polvere?", a: "Sopra il bidone apri il contenitore e la polvere cade fuori. Si alza un po’ di polvere. Se sei allergico alla polvere, svuotalo meglio all’aperto o lascia che lo faccia qualcun altro." },
       { f: "Se la cava con i peli di animali?", a: "Non tutti allo stesso modo. Per Stiftung Warentest il Bosch Unlimited 10, i due modelli Miele e il Rowenta X-Force Flex 13.60 hanno tolto i peli di animali in modo affidabile, altri hanno fatto più fatica. Se dei capelli lunghi si avvolgono intorno alla spazzola, li tagli e li togli." },
-      { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere. Da quando ne ho uno, non passo più l’aspirapolvere io." },
+      { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere lavapavimenti. Da quando ne ho uno, non passo più l’aspirapolvere io." },
       { f: "Quanto dura un apparecchio così?", a: "Di solito la prima a calare è la batteria, spesso dopo qualche anno. Controlla quindi che si possa cambiare e che esistano batterie di ricambio. Bosch dà addirittura dieci anni di garanzia sul motore dell’Unlimited 10." }
     ],
     rechner: "akkusauger",

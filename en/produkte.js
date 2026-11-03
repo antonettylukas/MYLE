@@ -78,8 +78,8 @@ const amazon = (suche, landSuche) => AMAZON_LAND
 const PRODUKTE = [
   {
     id: "saugroboter",
-    name: "Robot vacuum",
-    kurzname: "a robot vacuum",
+    name: "Robot vacuum and mop",
+    kurzname: "a robot vacuum and mop",
     kategorie: "Household",
     symbol: "🤖",
     bild: "",
@@ -100,7 +100,7 @@ const PRODUKTE = [
     ],
     erfahrung: {
       titel: "My experience after 14 years",
-      bild: "", bildText: "Photo: you with your robot vacuum",
+      bild: "", bildText: "Photo: you with your robot vacuum and mop",
       text: "I've been using robot vacuums for 14 years and haven't had to vacuum or mop myself a single time since. The most important trick: set a schedule. Then it cleans while I'm at work, and every evening I come home to a clean flat."
     },
     gruppen: [
@@ -158,7 +158,7 @@ const PRODUKTE = [
       }
     ],
     fragen: [
-      { f: "Which tests do you base your robot picks on?", a: "For robot vacuums I rely on the detailed tests at smarthomeassistent.de. There every robot goes through the same trials, from carpet and hair to obstacles and door thresholds. Their grades work like German school grades: 1.0 is the best. I recommend the models that do best in their price range there, plus my own experience from 14 years. If a robot is tested again after an update, for example because its navigation has improved, the newer test is the one that counts for me." },
+      { f: "Which tests do you base your robot picks on?", a: "For robot vacuums and mops I rely on the detailed tests at smarthomeassistent.de. There every robot goes through the same trials, from carpet and hair to obstacles and door thresholds. Their grades work like German school grades: 1.0 is the best. I recommend the models that do best in their price range there, plus my own experience from 14 years. If a robot is tested again after an update, for example because its navigation has improved, the newer test is the one that counts for me." },
       { f: "Do I need the mopping function?", a: "With lots of hard floors like tiles, laminate or parquet, definitely: the floor stays clean and you never fill a bucket again. If you mostly have carpet, or you like mopping yourself anyway, a robot that only vacuums is enough. That one often costs only half as much." },
       { f: "Mop roller or rotating mops: which is better?", a: "Both can mop very well: at smarthomeassistent.de, for example, the MOVA Z60 with a roller and the Dreame L40s Pro Ultra with mop pads each get the top grade of 1.0 for mopping. The roller picks the dirty water straight back up, so it has to go back to the base station to be washed less often. The mop pads get into edges and corners better, but tend to spread dirty water around. If you have lots of corners, nooks and furniture edges, go for mop pads. If you mainly have open floor space, a roller is a good fit. Right now, though, I haven't found a roller model on amazon.co.uk that mops well in tests, so for now there isn't one on this page." },
       { f: "Does it get stuck on cables or socks?", a: "Models with a camera usually recognise cables, socks and shoes and drive around them, and many recognise pets too. Cheap models without a camera are more likely to run over a cable or get stuck, so you quickly tidy up first. A tangle of cables under the desk is best sorted out once, whatever the model." },
@@ -905,7 +905,7 @@ const PRODUKTE = [
     fuer: [
       "You often vacuum in between, for example crumbs or pet hair",
       "You have stairs or several floors",
-      "You want to get the sofa and car clean quickly too, or a robot vacuum is too expensive for you right now"
+      "You want to get the sofa and car clean quickly too, or a robot vacuum and mop is too expensive for you right now"
     ],
     nachteile: [
       "The battery life manufacturers state usually applies to the lowest setting. On the highest setting it's often only 10 to 15 minutes. If you have a large home, choose a model with a second battery",
@@ -927,7 +927,7 @@ const PRODUKTE = [
           "You can take the battery out",
           "Stands up on its own, so you don't need a wall bracket"
         ],
-        fuer: "My tip if you already have a robot vacuum. I use it myself, more on that under “My experience”.",
+        fuer: "My tip if you already have a robot vacuum and mop. I use it myself, more on that under “My experience”.",
         hinweis: "At testit.de, hair got wrapped around the roller and dirt was left along the edges.",
         link: amazon("bulelink zenith g10"),
         alternativen: [
@@ -953,7 +953,7 @@ const PRODUKTE = [
       { f: "How long does the battery last?", a: "What manufacturers state usually applies to the lowest setting. On the highest setting it's often only 10 to 15 minutes. The battery of the Bosch Unlimited 10 can be swapped, so with a second one you can vacuum twice as long." },
       { f: "How do I empty the dust container?", a: "Hold it over the bin and open the container, and the dust falls out. It gets a bit dusty. If you're allergic to house dust, it's best to empty it outside or let someone else do it." },
       { f: "Can it handle pet hair?", a: "Not all equally well. At Stiftung Warentest, the Bosch Unlimited 10, the two Miele models and the Rowenta X-Force Flex 13.60 reliably removed pet hair, while others struggled. If long hair wraps around the brush, you cut it open and pull it off." },
-      { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum. Since I've had one, I don't vacuum myself any more." },
+      { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum and mop. Since I've had one, I don't vacuum myself any more." },
       { f: "How long does a vacuum like this last?", a: "Usually the battery is the first thing to weaken, often after a few years. So make sure you can replace it and that replacement batteries are available. Bosch even gives a ten-year guarantee on the motor of the Unlimited 10." }
     ],
     rechner: "akkusauger",

@@ -14,7 +14,7 @@ const STROM_QUELLEN = " Le sigle sul cursore del prezzo della corrente: Italia 4
 
 const RECHNER = {
   saugroboter: {
-    mit: "un robot aspirapolvere",
+    mit: "un robot aspirapolvere lavapavimenti",
     felder: [
       { id: "m2", label: "Quanto è grande casa tua?", min: 20, max: 200, step: 5, wert: 70, einheit: "m²", schnitt: [73, 103, 114, 129] },
       { id: "saugen", label: "Quante volte passi l’aspirapolvere a settimana?", min: 0, max: 7, step: 1, wert: 2, einheit: "×" },

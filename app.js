@@ -377,7 +377,7 @@
           <span class="eyebrow">${t("Wer hier empfiehlt", "Who's recommending")}</span>
           <h2 id="um-titel">${esc(UM.titel)}</h2>
           ${(UM.text || []).map(t => `<p>${esc(t)}</p>`).join("")}
-          ${roboter ? `<a class="text-link" href="saugroboter">${t("Mein wichtigster Tipp: der Saugroboter", "My top tip: the robot vacuum")}</a>` : ""}
+          ${roboter ? `<a class="text-link" href="saugroboter">${t("Mein wichtigster Tipp: der Saug- und Wischroboter", "My top tip: the robot vacuum and mop")}</a>` : ""}
         </div>
         ${weitere.length ? `<div class="um-reihe">${weitere.map(f => foto(f.datei, f.text || "")).join("")}</div>` : ""}`;
     }
@@ -402,14 +402,6 @@
     const andereGruppen = mitGruppen ? `
             <p class="empf-auch">${gs.slice(1).map((g, k) => `${abPreis(g) < abPreis(gs[0]) ? t("Lieber günstiger? ", "Prefer something cheaper? ") : t("Oder: ", "Or: ")}<a href="#modelle" data-gruppe="${k + 1}">${esc(g.name)}</a>`).join("<br>")}</p>` : "";
 
-    // Nur am Handy (style.css): Hinweis im ersten Bildschirm, dass die Empfehlungen weiter unten kommen (Lukas 03.11.2026, Version B).
-    // Am Computer sieht man sie früh genug. Bei nur einem Modell steht die Empfehlung schon oben im Kasten.
-    const abschnitt = t("Was es dir abnimmt", "What it takes off your hands");
-    const wegweiser = ms.length > 1 ? `
-          <p class="wegweiser"><span class="wegweiser-pfeil" aria-hidden="true">↓</span><span>${p.erfahrung
-            ? t("Meine Empfehlungen für jede Preisklasse kommen weiter unten, nach meiner Erfahrung und dem Abschnitt „{a}“.", "My recommendations for every price range come further down, after my experience and the section “{a}”.", { a: abschnitt })
-            : t("Meine Empfehlungen für jede Preisklasse kommen weiter unten, nach dem Abschnitt „{a}“.", "My recommendations for every price range come further down, after the section “{a}”.", { a: abschnitt })}
-            <a class="wegweiser-link" href="#modelle">${t("Direkt dorthin", "Jump there")}</a></span></p>` : "";
     const hero = `
       <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
       <section class="wrap p-hero">
@@ -418,7 +410,7 @@
           <h1>${esc(p.name)}</h1>
           <p class="lead">${esc(p.kurz)}</p>
           <p class="leise">${esc(p.warum)}</p>
-          ${badges(p)}${wegweiser}
+          ${badges(p)}
           ${empf ? `
           <div class="empf-box">
             <span class="empf-label">${t("Meine Empfehlung", "My recommendation")}</span>

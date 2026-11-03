@@ -164,7 +164,8 @@ const amazon = suche => ASIN[suche]
 const PRODUKTE = [
   {
     id: "saugroboter",
-    name: "Saugroboter",
+    name: "Saug- und Wischroboter",
+    kurzname: "Saug- und Wischroboter",
     kategorie: "Haushalt",
     symbol: "🤖",
     bild: "",
@@ -185,7 +186,7 @@ const PRODUKTE = [
     ],
     erfahrung: {
       titel: "Meine Erfahrung nach 14 Jahren",
-      bild: "", bildText: "Foto: du mit deinem Saugroboter",
+      bild: "", bildText: "Foto: du mit deinem Saug- und Wischroboter",
       text: "Ich nutze seit 14 Jahren Saugroboter und musste seitdem kein einziges Mal mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
     },
     gruppen: [
@@ -298,7 +299,7 @@ const PRODUKTE = [
       }
     ],
     fragen: [
-      { f: "Nach welchen Tests wählst du die Roboter aus?", a: "Bei Saugrobotern verlasse ich mich auf die ausführlichen Tests von smarthomeassistent.de. Dort durchläuft jeder Roboter dieselben Prüfungen, von Teppich und Haaren bis zu Hindernissen und Türschwellen. Ich empfehle dir die Modelle, die dort in ihrer Preisklasse am besten abschneiden, und dazu kommt meine eigene Erfahrung aus 14 Jahren. Wird ein Roboter nach einem Update nochmal getestet, zum Beispiel weil die Navigation besser geworden ist, zählt für mich der neuere Test." },
+      { f: "Nach welchen Tests wählst du die Roboter aus?", a: "Bei Saug- und Wischrobotern verlasse ich mich auf die ausführlichen Tests von smarthomeassistent.de. Dort durchläuft jeder Roboter dieselben Prüfungen, von Teppich und Haaren bis zu Hindernissen und Türschwellen. Ich empfehle dir die Modelle, die dort in ihrer Preisklasse am besten abschneiden, und dazu kommt meine eigene Erfahrung aus 14 Jahren. Wird ein Roboter nach einem Update nochmal getestet, zum Beispiel weil die Navigation besser geworden ist, zählt für mich der neuere Test." },
       { f: "Brauche ich die Wischfunktion?", a: "Bei viel Hartboden wie Fliesen, Laminat oder Parkett auf jeden Fall: Der Boden bleibt sauber, und du füllst nie wieder einen Eimer. Hast du vor allem Teppich, oder wischt du ohnehin gern selbst, reicht ein Roboter, der nur saugt. Der kostet oft nur die Hälfte." },
       { f: "Wischwalze oder rotierende Mopps: Was ist besser?", a: "Beide können sehr gut wischen: Im Test bekommen der MOVA Z60 mit Walze und der MOVA V50 mit Mopps beim Wischen jeweils die Bestnote 1,0. Die Walze nimmt das Schmutzwasser sofort wieder auf und muss deshalb seltener zum Auswaschen zur Station. Die Mopps kommen besser an Kanten und in Ecken, verteilen Schmutzwasser aber eher. Hast du viele Ecken, Nischen und Möbelkanten, nimm Mopps. Hast du vor allem offene Flächen, passt eine Walze gut." },
       { f: "Bleibt er an Kabeln oder Socken hängen?", a: "Modelle mit Kamera erkennen Kabel, Socken und Schuhe meist und fahren drumherum, viele auch Haustiere. Günstige Modelle ohne Kamera fahren eher mal über ein Kabel oder bleiben hängen, dann räumst du vorher kurz auf. Einen Kabelsalat unterm Schreibtisch räumst du bei jedem Modell besser einmal auf." },
@@ -1090,7 +1091,7 @@ const PRODUKTE = [
     fuer: [
       "Du saugst oft zwischendurch, zum Beispiel Krümel oder Tierhaare",
       "Du hast Treppen oder mehrere Etagen",
-      "Du willst auch Sofa und Auto schnell sauber bekommen, oder ein Saugroboter ist dir gerade zu teuer"
+      "Du willst auch Sofa und Auto schnell sauber bekommen, oder ein Saug- und Wischroboter ist dir gerade zu teuer"
     ],
     nachteile: [
       "Die Akkuzeit, die Hersteller angeben, gilt meist für die schwächste Stufe. Auf höchster Stufe sind es oft nur 10 bis 15 Minuten. Hast du eine große Wohnung, nimm ein Modell mit zweitem Akku",
@@ -1112,7 +1113,7 @@ const PRODUKTE = [
           "Den Akku kannst du herausnehmen",
           "Steht von allein, du brauchst keine Halterung an der Wand"
         ],
-        fuer: "Mein Tipp, wenn du schon einen Saugroboter hast. Ich nutze ihn selbst, mehr dazu unter „Meine Erfahrung“.",
+        fuer: "Mein Tipp, wenn du schon einen Saug- und Wischroboter hast. Ich nutze ihn selbst, mehr dazu unter „Meine Erfahrung“.",
         hinweis: "Bei testit.de wickelten sich Haare um die Walze, und an Kanten blieb Schmutz liegen.",
         link: amazon("bulelink zenith g10"),
         alternativen: [
@@ -1152,7 +1153,7 @@ const PRODUKTE = [
       { f: "Wie lange hält der Akku?", a: "Was die Hersteller angeben, gilt meist für die schwächste Stufe. Auf höchster Stufe sind es oft nur 10 bis 15 Minuten. Beim Bosch Unlimited 10 liegt ein zweiter Akku bei, damit saugst du doppelt so lange." },
       { f: "Wie leere ich den Staubbehälter?", a: "Über dem Mülleimer öffnest du den Behälter, dann fällt der Staub heraus. Dabei staubt es etwas. Wenn du eine Hausstauballergie hast, leere ihn am besten draußen oder lass das jemand anderen machen." },
       { f: "Schafft er Tierhaare?", a: "Nicht jeder gleich gut. Bei Stiftung Warentest entfernten der Bosch Unlimited 10, die beiden Miele-Modelle und der Rowenta X-Force Flex 13.60 Tierhaare zuverlässig, andere schwächelten dabei. Wickeln sich lange Haare um die Bürste, schneidest du sie auf und ziehst sie ab." },
-      { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saugroboter an. Seit ich einen habe, sauge ich nicht mehr selbst." },
+      { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saug- und Wischroboter an. Seit ich einen habe, sauge ich nicht mehr selbst." },
       { f: "Wie lange hält so ein Gerät?", a: "Meist lässt zuerst der Akku nach, oft nach einigen Jahren. Achte deshalb darauf, dass du ihn wechseln kannst und es Ersatz-Akkus gibt. Bosch gibt beim Unlimited 10 sogar zehn Jahre Garantie auf den Motor." }
     ],
     rechner: "akkusauger",

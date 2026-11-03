@@ -15,7 +15,7 @@ const STROM_QUELLEN = " Les lettres sur le curseur du prix de l’électricité\
 
 const RECHNER = {
   saugroboter: {
-    mit: "un robot aspirateur",
+    mit: "un robot aspirateur laveur",
     felder: [
       { id: "m2", label: "Quelle est la surface de votre logement\u202f?", min: 20, max: 200, step: 5, wert: 70, einheit: "m²", schnitt: [73, 103, 114, 129] },
       { id: "saugen", label: "Combien de fois passez-vous l’aspirateur par semaine\u202f?", min: 0, max: 7, step: 1, wert: 2, einheit: "×" },

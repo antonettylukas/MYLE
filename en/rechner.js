@@ -14,7 +14,7 @@ const STROM_QUELLEN = " The letters on the electricity price slider: United King
 
 const RECHNER = {
   saugroboter: {
-    mit: "a robot vacuum",
+    mit: "a robot vacuum and mop",
     felder: [
       { id: "m2", label: "How big is your home?", min: 20, max: 200, step: 5, wert: 70, einheit: "m²", schnitt: [73, 103, 114, 129] },
       { id: "saugen", label: "How often do you vacuum per week?", min: 0, max: 7, step: 1, wert: 2, einheit: "×" },

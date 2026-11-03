@@ -28,7 +28,7 @@ const STROM_QUELLEN = " Die Kürzel am Strompreis-Regler: Deutschland 37 Cent pr
 
 const RECHNER = {
   saugroboter: {
-    mit: "einem Saugroboter",
+    mit: "einem Saug- und Wischroboter",
     felder: [
       { id: "m2", label: "Wie groß ist deine Wohnung?", min: 20, max: 200, step: 5, wert: 70, einheit: "m²", schnitt: [73, 103, 114, 129] },
       { id: "saugen", label: "Wie oft saugst du pro Woche?", min: 0, max: 7, step: 1, wert: 2, einheit: "×" },
