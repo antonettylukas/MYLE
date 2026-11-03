@@ -101,7 +101,7 @@ const PRODUKTE = [
     erfahrung: {
       titel: "My experience after 14 years",
       bild: "", bildText: "Photo: you with your robot vacuum and mop",
-      text: "I've been using robot vacuums for 14 years and haven't had to vacuum or mop myself a single time since. The most important trick: set a schedule. Then it cleans while I'm at work, and every evening I come home to a clean flat."
+      text: "I've been using robot vacuums for 14 years and have hardly ever had to vacuum or mop myself since. The most important trick: set a schedule. Then it cleans while I'm at work, and every evening I come home to a clean flat."
     },
     gruppen: [
       { name: "With mop roller", text: "A roller mops the floor and is rinsed with fresh water all the time as it goes. That way it picks the dirty water straight back up and has to go back to the base station to be washed less often. On the other hand, on many models it doesn't get as close to edges and into corners." },
@@ -953,7 +953,7 @@ const PRODUKTE = [
       { f: "How long does the battery last?", a: "What manufacturers state usually applies to the lowest setting. On the highest setting it's often only 10 to 15 minutes. The battery of the Bosch Unlimited 10 can be swapped, so with a second one you can vacuum twice as long." },
       { f: "How do I empty the dust container?", a: "Hold it over the bin and open the container, and the dust falls out. It gets a bit dusty. If you're allergic to house dust, it's best to empty it outside or let someone else do it." },
       { f: "Can it handle pet hair?", a: "Not all equally well. At Stiftung Warentest, the Bosch Unlimited 10, the two Miele models and the Rowenta X-Force Flex 13.60 reliably removed pet hair, while others struggled. If long hair wraps around the brush, you cut it open and pull it off." },
-      { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum and mop. Since I've had one, I don't vacuum myself any more." },
+      { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum and mop. Since I've had one, I hardly ever vacuum myself." },
       { f: "How long does a vacuum like this last?", a: "Usually the battery is the first thing to weaken, often after a few years. So make sure you can replace it and that replacement batteries are available. Bosch even gives a ten-year guarantee on the motor of the Unlimited 10." }
     ],
     rechner: "akkusauger",

@@ -111,7 +111,7 @@ const PRODUKTE = [
     erfahrung: {
       titel: "Mon expérience après 14 ans",
       bild: "", bildText: "Photo\u202f: vous avec votre robot aspirateur laveur",
-      text: "J’utilise des robots aspirateurs depuis 14 ans et, depuis, je n’ai plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante\u202f: régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un appartement propre."
+      text: "J’utilise des robots aspirateurs depuis 14 ans et, depuis, je n’ai presque plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante\u202f: régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un appartement propre."
     },
     gruppen: [
       { name: "Avec rouleau laveur", text: "Un rouleau lave le sol et il est rincé en continu à l’eau propre pendant qu’il roule. Il récupère ainsi aussitôt l’eau sale et doit retourner moins souvent à la station pour être lavé. En revanche, sur beaucoup de modèles, il va moins près des bords et dans les coins." },
@@ -1019,7 +1019,7 @@ const PRODUKTE = [
       { f: "Combien de temps tient la batterie\u202f?", a: "Ce qu’indiquent les fabricants vaut généralement pour la puissance la plus faible. En puissance maximale, c’est souvent seulement 10 à 15 minutes. La batterie du Bosch Unlimited 10 s’échange\u202f: avec une deuxième, vous aspirez deux fois plus longtemps." },
       { f: "Comment vider le bac à poussière\u202f?", a: "Au-dessus de la poubelle, vous ouvrez le bac, et la poussière tombe. Cela fait un peu de poussière. Si vous êtes allergique à la poussière, videz-le de préférence dehors ou laissez quelqu’un d’autre le faire." },
       { f: "Vient-il à bout des poils d’animaux\u202f?", a: "Pas tous aussi bien. Chez Stiftung Warentest, le Bosch Unlimited 10, les deux modèles Miele et le Rowenta X-Force Flex 13.60 ont enlevé les poils d’animaux de façon fiable, d’autres avaient plus de mal. Si de longs cheveux s’enroulent autour de la brosse, vous les coupez et les retirez." },
-      { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur laveur. Depuis que j’en ai un, je n’aspire plus moi-même." },
+      { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur laveur. Depuis que j’en ai un, je n’aspire presque plus jamais moi-même." },
       { f: "Combien de temps dure un tel appareil\u202f?", a: "En général, c’est la batterie qui faiblit en premier, souvent au bout de quelques années. Vérifiez donc que vous pouvez la changer et qu’il existe des batteries de rechange. Bosch donne même dix ans de garantie sur le moteur de l’Unlimited 10." }
     ],
     rechner: "akkusauger",

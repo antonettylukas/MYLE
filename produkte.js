@@ -187,7 +187,7 @@ const PRODUKTE = [
     erfahrung: {
       titel: "Meine Erfahrung nach 14 Jahren",
       bild: "", bildText: "Foto: du mit deinem Saug- und Wischroboter",
-      text: "Ich nutze seit 14 Jahren Saugroboter und musste seitdem kein einziges Mal mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
+      text: "Ich nutze seit 14 Jahren Saugroboter und musste seitdem so gut wie nie mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
     },
     gruppen: [
       { name: "Mit Wischwalze", text: "Eine Walze wischt den Boden und wird dabei laufend mit frischem Wasser gespült. So nimmt sie das Schmutzwasser gleich wieder auf und muss seltener zum Auswaschen zur Station. Dafür kommt sie bei vielen Modellen nicht so nah an Kanten und in Ecken." },
@@ -1153,7 +1153,7 @@ const PRODUKTE = [
       { f: "Wie lange hält der Akku?", a: "Was die Hersteller angeben, gilt meist für die schwächste Stufe. Auf höchster Stufe sind es oft nur 10 bis 15 Minuten. Beim Bosch Unlimited 10 liegt ein zweiter Akku bei, damit saugst du doppelt so lange." },
       { f: "Wie leere ich den Staubbehälter?", a: "Über dem Mülleimer öffnest du den Behälter, dann fällt der Staub heraus. Dabei staubt es etwas. Wenn du eine Hausstauballergie hast, leere ihn am besten draußen oder lass das jemand anderen machen." },
       { f: "Schafft er Tierhaare?", a: "Nicht jeder gleich gut. Bei Stiftung Warentest entfernten der Bosch Unlimited 10, die beiden Miele-Modelle und der Rowenta X-Force Flex 13.60 Tierhaare zuverlässig, andere schwächelten dabei. Wickeln sich lange Haare um die Bürste, schneidest du sie auf und ziehst sie ab." },
-      { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saug- und Wischroboter an. Seit ich einen habe, sauge ich nicht mehr selbst." },
+      { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saug- und Wischroboter an. Seit ich einen habe, sauge ich so gut wie nie mehr selbst." },
       { f: "Wie lange hält so ein Gerät?", a: "Meist lässt zuerst der Akku nach, oft nach einigen Jahren. Achte deshalb darauf, dass du ihn wechseln kannst und es Ersatz-Akkus gibt. Bosch gibt beim Unlimited 10 sogar zehn Jahre Garantie auf den Motor." }
     ],
     rechner: "akkusauger",

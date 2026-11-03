@@ -108,7 +108,7 @@ const PRODUKTE = [
     erfahrung: {
       titel: "La mia esperienza dopo 14 anni",
       bild: "", bildText: "Foto: tu con il tuo robot aspirapolvere lavapavimenti",
-      text: "Uso robot aspirapolvere da 14 anni e da allora non ho mai più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
+      text: "Uso robot aspirapolvere da 14 anni e da allora non ho quasi mai più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
     },
     gruppen: [
       { name: "Con rullo lavante", text: "Un rullo lava il pavimento e, mentre si muove, viene risciacquato di continuo con acqua pulita. Così raccoglie subito l’acqua sporca e deve tornare meno spesso alla base per essere lavato. In compenso, in molti modelli arriva meno vicino ai bordi e negli angoli." },
@@ -1042,7 +1042,7 @@ const PRODUKTE = [
       { f: "Quanto dura la batteria?", a: "Quello che indicano i produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. La batteria del Bosch Unlimited 10 si può cambiare: con una seconda aspiri il doppio del tempo." },
       { f: "Come svuoto il contenitore della polvere?", a: "Sopra il bidone apri il contenitore e la polvere cade fuori. Si alza un po’ di polvere. Se sei allergico alla polvere, svuotalo meglio all’aperto o lascia che lo faccia qualcun altro." },
       { f: "Se la cava con i peli di animali?", a: "Non tutti allo stesso modo. Per Stiftung Warentest il Bosch Unlimited 10, i due modelli Miele e il Rowenta X-Force Flex 13.60 hanno tolto i peli di animali in modo affidabile, altri hanno fatto più fatica. Se dei capelli lunghi si avvolgono intorno alla spazzola, li tagli e li togli." },
-      { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere lavapavimenti. Da quando ne ho uno, non passo più l’aspirapolvere io." },
+      { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere lavapavimenti. Da quando ne ho uno, non passo quasi mai l’aspirapolvere io." },
       { f: "Quanto dura un apparecchio così?", a: "Di solito la prima a calare è la batteria, spesso dopo qualche anno. Controlla quindi che si possa cambiare e che esistano batterie di ricambio. Bosch dà addirittura dieci anni di garanzia sul motore dell’Unlimited 10." }
     ],
     rechner: "akkusauger",
