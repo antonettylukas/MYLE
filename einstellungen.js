@@ -20,6 +20,25 @@ const SEITE = {
   // Dann zeigt PartnerNet die Klicks und Käufe getrennt pro Seite. Beispiel: saugroboter: "mylesaug-21",
   // Seiten ohne Eintrag nutzen die Partner-ID oben.
   trackingIds: {
+    "airfryer": "mylefry-21",
+    "akkusauger": "myleakku-21",
+    "balkonkraftwerk": "mylebalkon-21",
+    "kaffeevollautomat": "mylekaffee-21",
+    "kindle": "mylelesen-21",
+    "klimaanlage": "myleklima-21",
+    "kuechenmaschine": "mylekueche-21",
+    "kuechenmaschine-kochfunktion": "mylekoch-21",
+    "mini-geschirrspueler": "mylespueler-21",
+    "reinigungsbuerste": "mylebuerste-21",
+    "reiskocher": "mylereis-21",
+    "saugroboter": "mylesaug-21",
+    "smarte-lampen": "mylelampe-21",
+    "sparduschkopf": "myledusche-21",
+    "stretchdeckel": "mylestretch-21",
+    "thermostate": "mylethermo-21",
+    "waschtrockner": "mylewasch-21",
+    "wassersprudler": "mylesprudel-21",
+    "zahnbuerste": "mylezahn-21"
   },
 
   // Wann du die Preise zuletzt geprüft hast. Nur für dich, auf der Seite stehen keine Preise.
