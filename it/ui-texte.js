@@ -86,7 +86,7 @@ const UI_TEXTE = {
   "Deine E-Mail-Adresse": "Il tuo indirizzo e-mail",
   "name@beispiel.de": "nome@esempio.it",
   "Anmelden": "Iscriviti",
-  "Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Mehr dazu in der": "Prima ricevi un’e-mail in cui confermi l’iscrizione. Puoi disiscriverti con un clic in ogni e-mail. Maggiori informazioni nella",
+  "Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Ich zähle nur anonym, wie oft Mails geöffnet und Links geklickt werden. Mehr dazu in der": "Prima ricevi un’e-mail in cui confermi l’iscrizione. Puoi disiscriverti con un clic in ogni e-mail. Conto solo in modo anonimo quante e-mail vengono aperte e quanti link cliccati. Maggiori informazioni nella",
   "Datenschutzerklärung": "Privacy Policy",
   "Bitte gib eine gültige E-Mail-Adresse ein.": "Inserisci un indirizzo e-mail valido.",
   "Danke! Die Anmeldung ist noch nicht freigeschaltet, deine Adresse wurde nicht gespeichert. Schau bald wieder vorbei.": "Grazie! L’iscrizione non è ancora attiva, il tuo indirizzo non è stato salvato. Torna presto a trovarci.",
