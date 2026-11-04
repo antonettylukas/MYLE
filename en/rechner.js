@@ -613,6 +613,11 @@ const RECHNER = {
           { wert: "manchmal", label: "I sometimes turn it down" },
           { wert: "immer", label: "I always turn it down myself" }
         ] },
+      { id: "abrechnung", label: "How do you pay for your heating?", typ: "auswahl", wert: "eigen",
+        optionen: [
+          { wert: "eigen", label: "Own heating, e.g. gas boiler" },
+          { wert: "zentral", label: "Central heating with a heating bill" }
+        ] },
       { id: "heizkoerper", label: "How many radiators do you want to fit?", min: 1, max: 12, step: 1, wert: 4, einheit: "pcs" },
       { id: "zentrale", label: "How much does the hub cost?", hinweis: "If you already have a suitable hub, set it to €0.", min: 0, max: 150, step: 5, wert: 50, einheit: "€" }
     ],
@@ -636,7 +641,7 @@ const RECHNER = {
         ] }
       };
       const p = PROFILE[w.bisher];
-      const heizkostenWeniger = w.heizkosten * p.anteil;
+      const heizkostenWeniger = w.heizkosten * p.anteil * (w.abrechnung === "zentral" ? 0.6 : 1);
       return {
         // Ein Thermostat von Hand drehen dauert etwa 15 Sekunden, zweimal am Tag
         minutenProWoche: p.drehen * w.heizkoerper * 2 * 7 * 0.25,
@@ -652,6 +657,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "With a heating plan you save about 10% of your heating costs on average (co2online, German Environment Agency). If your heating has mostly been left on, I calculate with 12%; if you sometimes turn it down yourself, 8%; and if you always do, 4%. For comparison: every degree less saves around 6% of heating energy. Batteries cost about €1 per thermostat per year, and I subtract that. Turning a radiator down and back up by hand takes about 15 seconds, twice a day. You save that time if you turn them yourself now. The numbers under the slider for heating costs: the average size of a home in Germany (Federal Statistical Office, Microcensus 2022), multiplied by the cost of gas heating according to co2online's Heizspiegel 2026 (billing year 2025), around €17 per m² a year. That's about €1,250 for 1 person, €1,750 for 2, €1,950 for 3 and €2,200 for 4 or more people. With a heat pump it's much less, with district heating a bit more. For thermostats with a hub, its price is added once."
+    annahmen: "With a heating plan you save about 10% of your heating costs on average (co2online, German Environment Agency). If your heating has mostly been left on, I calculate with 12%; if you sometimes turn it down yourself, 8%; and if you always do, 4%. For comparison: every degree less saves around 6% of heating energy. Batteries cost about €1 per thermostat per year, and I subtract that. Turning a radiator down and back up by hand takes about 15 seconds, twice a day. You save that time if you turn them yourself now. The numbers under the slider for heating costs: the average size of a home in Germany (Federal Statistical Office, Microcensus 2022), multiplied by the cost of gas heating according to co2online's Heizspiegel 2026 (billing year 2025), around €17 per m² a year. That's about €1,250 for 1 person, €1,750 for 2, €1,950 for 3 and €2,200 for 4 or more people. With a heat pump it's much less, with district heating a bit more. For thermostats with a hub, its price is added once. With central heating in a block of flats, only part of the costs is split by consumption: 50 to 70% in Germany, at least 55% in Austria and usually 50 to 70% in Switzerland. If you choose “Central heating with a heating bill”, I therefore only count 60% of the saving."
   }
 };

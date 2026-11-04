@@ -613,6 +613,11 @@ const RECHNER = {
           { wert: "manchmal", label: "A volte lo abbasso" },
           { wert: "immer", label: "Lo abbasso sempre io" }
         ] },
+      { id: "abrechnung", label: "Come paghi il riscaldamento?", typ: "auswahl", wert: "eigen",
+        optionen: [
+          { wert: "eigen", label: "Riscaldamento autonomo, es. caldaia a gas" },
+          { wert: "zentral", label: "Centralizzato con conteggio" }
+        ] },
       { id: "heizkoerper", label: "Quanti termosifoni vuoi attrezzare?", min: 1, max: 12, step: 1, wert: 4, einheit: "pezzi" },
       { id: "zentrale", label: "Quanto costa la centralina?", hinweis: "Se hai già una centralina adatta, imposta 0\u00a0€.", min: 0, max: 150, step: 5, wert: 50, einheit: "€" }
     ],
@@ -636,7 +641,7 @@ const RECHNER = {
         ] }
       };
       const p = PROFILE[w.bisher];
-      const heizkostenWeniger = w.heizkosten * p.anteil;
+      const heizkostenWeniger = w.heizkosten * p.anteil * (w.abrechnung === "zentral" ? 0.6 : 1);
       return {
         // Ein Thermostat von Hand drehen dauert etwa 15 Sekunden, zweimal am Tag
         minutenProWoche: p.drehen * w.heizkoerper * 2 * 7 * 0.25,
@@ -652,6 +657,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Con un programma di riscaldamento risparmi in media circa il 10% delle spese di riscaldamento (co2online, Agenzia federale per l’ambiente). Se il tuo riscaldamento finora resta quasi sempre acceso, calcolo il 12%; se a volte lo abbassi da solo, l’8%; e se lo abbassi sempre, il 4%. Per confronto: ogni grado in meno fa risparmiare circa il 6% di energia. Le batterie costano circa 1\u00a0€ per valvola all’anno, e lo tolgo. Abbassare e rialzare a mano un termosifone richiede circa 15 secondi, due volte al giorno. Questo tempo lo risparmi se finora giri tu le manopole. I numeri sotto il cursore delle spese di riscaldamento: quanto è grande in media un appartamento in Germania (Ufficio federale di statistica, microcensimento 2022), moltiplicato per il costo di un riscaldamento a gas secondo l’Heizspiegel 2026 di co2online (anno di conteggio 2025), circa 17\u00a0€ per m² all’anno. Sono circa 1.250\u00a0€ per 1 persona, 1.750\u00a0€ per 2, 1.950\u00a0€ per 3 e 2.200\u00a0€ per 4 o più persone. Con una pompa di calore è molto meno, con il teleriscaldamento un po’ di più. Per le valvole con centralina, il suo prezzo si aggiunge una volta."
+    annahmen: "Con un programma di riscaldamento risparmi in media circa il 10% delle spese di riscaldamento (co2online, Agenzia federale per l’ambiente). Se il tuo riscaldamento finora resta quasi sempre acceso, calcolo il 12%; se a volte lo abbassi da solo, l’8%; e se lo abbassi sempre, il 4%. Per confronto: ogni grado in meno fa risparmiare circa il 6% di energia. Le batterie costano circa 1\u00a0€ per valvola all’anno, e lo tolgo. Abbassare e rialzare a mano un termosifone richiede circa 15 secondi, due volte al giorno. Questo tempo lo risparmi se finora giri tu le manopole. I numeri sotto il cursore delle spese di riscaldamento: quanto è grande in media un appartamento in Germania (Ufficio federale di statistica, microcensimento 2022), moltiplicato per il costo di un riscaldamento a gas secondo l’Heizspiegel 2026 di co2online (anno di conteggio 2025), circa 17\u00a0€ per m² all’anno. Sono circa 1.250\u00a0€ per 1 persona, 1.750\u00a0€ per 2, 1.950\u00a0€ per 3 e 2.200\u00a0€ per 4 o più persone. Con una pompa di calore è molto meno, con il teleriscaldamento un po’ di più. Per le valvole con centralina, il suo prezzo si aggiunge una volta. Con un riscaldamento centralizzato in un condominio solo una parte dei costi viene ripartita in base al consumo: dal 50 al 70% in Germania, almeno il 55% in Austria e di solito dal 50 al 70% in Svizzera. Se scegli „Centralizzato con conteggio“, conto quindi solo il 60% del risparmio."
   }
 };

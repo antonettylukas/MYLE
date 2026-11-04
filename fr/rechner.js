@@ -614,6 +614,11 @@ const RECHNER = {
           { wert: "manchmal", label: "Je baisse parfois" },
           { wert: "immer", label: "Je baisse toujours moi-même" }
         ] },
+      { id: "abrechnung", label: "Comment payez-vous votre chauffage ?", typ: "auswahl", wert: "eigen",
+        optionen: [
+          { wert: "eigen", label: "Chauffage individuel, p. ex. chaudière à gaz" },
+          { wert: "zentral", label: "Chauffage central avec décompte" }
+        ] },
       { id: "heizkoerper", label: "Combien de radiateurs voulez-vous équiper\u202f?", min: 1, max: 12, step: 1, wert: 4, einheit: "pièces" },
       { id: "zentrale", label: "Combien coûte la centrale\u202f?", hinweis: "Si vous avez déjà une centrale compatible, réglez sur 0\u00a0€.", min: 0, max: 150, step: 5, wert: 50, einheit: "€" }
     ],
@@ -637,7 +642,7 @@ const RECHNER = {
         ] }
       };
       const p = PROFILE[w.bisher];
-      const heizkostenWeniger = w.heizkosten * p.anteil;
+      const heizkostenWeniger = w.heizkosten * p.anteil * (w.abrechnung === "zentral" ? 0.6 : 1);
       return {
         // Ein Thermostat von Hand drehen dauert etwa 15 Sekunden, zweimal am Tag
         minutenProWoche: p.drehen * w.heizkoerper * 2 * 7 * 0.25,
@@ -653,6 +658,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Avec un planning de chauffage, vous économisez en moyenne environ 10\u00a0% de frais de chauffage (co2online, Agence fédérale de l’environnement). Si votre chauffage tourne presque toujours, je compte 12\u00a0%\u202f; si vous baissez parfois vous-même, 8\u00a0%\u202f; et si vous baissez toujours, 4\u00a0%. À titre de comparaison\u202f: chaque degré en moins économise environ 6\u00a0% d’énergie de chauffage. Les piles coûtent environ 1\u00a0€ par tête thermostatique et par an, je le déduis. Baisser puis remonter un radiateur à la main prend environ 15 secondes, deux fois par jour. Ce temps, vous l’économisez si vous tournez vous-même aujourd’hui. Les chiffres sous le curseur des frais de chauffage\u202f: la surface moyenne d’un logement en Allemagne (Office fédéral de la statistique, microrecensement 2022), multipliée par le coût d’un chauffage au gaz selon le Heizspiegel 2026 de co2online (année de décompte 2025), environ 17\u00a0€ par m² et par an. Cela fait environ 1\u202f250\u00a0€ pour 1 personne, 1\u202f750\u00a0€ pour 2, 1\u202f950\u00a0€ pour 3 et 2\u202f200\u00a0€ pour 4 personnes ou plus. Avec une pompe à chaleur, c’est nettement moins, avec un chauffage urbain un peu plus. Pour les têtes avec centrale, son prix s’ajoute une fois."
+    annahmen: "Avec un planning de chauffage, vous économisez en moyenne environ 10\u00a0% de frais de chauffage (co2online, Agence fédérale de l’environnement). Si votre chauffage tourne presque toujours, je compte 12\u00a0%\u202f; si vous baissez parfois vous-même, 8\u00a0%\u202f; et si vous baissez toujours, 4\u00a0%. À titre de comparaison\u202f: chaque degré en moins économise environ 6\u00a0% d’énergie de chauffage. Les piles coûtent environ 1\u00a0€ par tête thermostatique et par an, je le déduis. Baisser puis remonter un radiateur à la main prend environ 15 secondes, deux fois par jour. Ce temps, vous l’économisez si vous tournez vous-même aujourd’hui. Les chiffres sous le curseur des frais de chauffage\u202f: la surface moyenne d’un logement en Allemagne (Office fédéral de la statistique, microrecensement 2022), multipliée par le coût d’un chauffage au gaz selon le Heizspiegel 2026 de co2online (année de décompte 2025), environ 17\u00a0€ par m² et par an. Cela fait environ 1\u202f250\u00a0€ pour 1 personne, 1\u202f750\u00a0€ pour 2, 1\u202f950\u00a0€ pour 3 et 2\u202f200\u00a0€ pour 4 personnes ou plus. Avec une pompe à chaleur, c’est nettement moins, avec un chauffage urbain un peu plus. Pour les têtes avec centrale, son prix s’ajoute une fois. Avec un chauffage central dans un immeuble, seule une partie des frais est répartie selon la consommation : 50 à 70 % en Allemagne, au moins 55 % en Autriche et le plus souvent 50 à 70 % en Suisse. Si vous choisissez « Chauffage central avec décompte », je ne compte donc que 60 % de l’économie."
   }
 };

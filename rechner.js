@@ -627,6 +627,11 @@ const RECHNER = {
           { wert: "manchmal", label: "Drehe manchmal runter" },
           { wert: "immer", label: "Drehe immer selbst runter" }
         ] },
+      { id: "abrechnung", label: "Wie bezahlst du deine Heizung?", typ: "auswahl", wert: "eigen",
+        optionen: [
+          { wert: "eigen", label: "Eigene Heizung, z. B. Gastherme" },
+          { wert: "zentral", label: "Zentralheizung mit Abrechnung" }
+        ] },
       { id: "heizkoerper", label: "Wie viele Heizkörper willst du ausstatten?", min: 1, max: 12, step: 1, wert: 4, einheit: "Stück" },
       { id: "zentrale", label: "Was kostet die Zentrale?", hinweis: "Hast du schon eine passende Zentrale, stell 0 € ein.", min: 0, max: 150, step: 5, wert: 50, einheit: "€" }
     ],
@@ -650,7 +655,7 @@ const RECHNER = {
         ] }
       };
       const p = PROFILE[w.bisher];
-      const heizkostenWeniger = w.heizkosten * p.anteil;
+      const heizkostenWeniger = w.heizkosten * p.anteil * (w.abrechnung === "zentral" ? 0.6 : 1);
       return {
         // Ein Thermostat von Hand drehen dauert etwa 15 Sekunden, zweimal am Tag
         minutenProWoche: p.drehen * w.heizkoerper * 2 * 7 * 0.25,
@@ -666,6 +671,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Mit einem Heizplan sparst du im Schnitt etwa 10 % Heizkosten (co2online, Umweltbundesamt). Läuft deine Heizung bisher meist durch, rechne ich mit 12 %, drehst du manchmal selbst runter mit 8 % und immer mit 4 %. Zum Vergleich: Jedes Grad weniger spart rund 6 % Heizenergie. Batterien kosten etwa 1 € pro Thermostat und Jahr, das ziehe ich ab. Einen Heizkörper von Hand runter- und wieder hochdrehen dauert etwa 15 Sekunden, zweimal am Tag. Diese Zeit sparst du, wenn du bisher selbst drehst. Die Zahlen unter dem Regler für die Heizkosten: So groß ist eine Wohnung im Schnitt (Statistisches Bundesamt, Mikrozensus 2022), mal die Kosten einer Gasheizung laut Heizspiegel 2026 von co2online (Abrechnungsjahr 2025), rund 17 € pro m² im Jahr. Das sind etwa 1.250 € bei 1 Person, 1.750 € bei 2, 1.950 € bei 3 und 2.200 € bei 4 oder mehr Personen. Mit Wärmepumpe ist es deutlich weniger, mit Fernwärme etwas mehr. Bei Thermostaten mit Zentrale kommt ihr Preis einmal dazu."
+    annahmen: "Mit einem Heizplan sparst du im Schnitt etwa 10 % Heizkosten (co2online, Umweltbundesamt). Läuft deine Heizung bisher meist durch, rechne ich mit 12 %, drehst du manchmal selbst runter mit 8 % und immer mit 4 %. Zum Vergleich: Jedes Grad weniger spart rund 6 % Heizenergie. Batterien kosten etwa 1 € pro Thermostat und Jahr, das ziehe ich ab. Einen Heizkörper von Hand runter- und wieder hochdrehen dauert etwa 15 Sekunden, zweimal am Tag. Diese Zeit sparst du, wenn du bisher selbst drehst. Die Zahlen unter dem Regler für die Heizkosten: So groß ist eine Wohnung im Schnitt (Statistisches Bundesamt, Mikrozensus 2022), mal die Kosten einer Gasheizung laut Heizspiegel 2026 von co2online (Abrechnungsjahr 2025), rund 17 € pro m² im Jahr. Das sind etwa 1.250 € bei 1 Person, 1.750 € bei 2, 1.950 € bei 3 und 2.200 € bei 4 oder mehr Personen. Mit Wärmepumpe ist es deutlich weniger, mit Fernwärme etwas mehr. Bei Thermostaten mit Zentrale kommt ihr Preis einmal dazu. Bei einer Zentralheizung im Mehrfamilienhaus wird nur ein Teil der Kosten nach Verbrauch verteilt, in Deutschland 50 bis 70 %, in Österreich mindestens 55 % und in der Schweiz meist 50 bis 70 %. Wählst du „Zentralheizung mit Abrechnung“, rechne ich darum nur mit 60 % der Ersparnis."
   }
 };
