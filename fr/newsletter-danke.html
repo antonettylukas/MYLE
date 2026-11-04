@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
+     ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
+<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Merci pour votre inscription · MYLE</title>
+<!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
+     (zum Beispiel Dark Reader oder dem Nachtmodus von Brave), dass sie die Farben nicht selbst umrechnen sollen. -->
+<meta name="color-scheme" content="light dark">
+<meta name="darkreader-lock">
+<!-- Danke-Seite nach der Bestätigung der Newsletter-Anmeldung (Brevo leitet hierher weiter). Nicht für Suchmaschinen. -->
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=20261104w">
+</head>
+<body>
+<div id="kopf"></div>
+
+<main class="wrap legal">
+  <h1>Merci, c’est confirmé !</h1>
+  <p>Votre inscription à la newsletter est confirmée.</p>
+  <p>Chaque fois que je découvre un nouvel appareil qui me convainc, je vous envoie un court e-mail. Deux fois par mois au maximum, et vous pouvez vous désinscrire à tout moment.</p>
+  <p>En attendant, vous pouvez continuer à découvrir :</p>
+  <ul>
+    <li><a href="geschenke">Idées cadeaux qui simplifient le quotidien</a></li>
+    <li><a href="ratgeber">Guides : des réponses courtes aux questions fréquentes</a></li>
+    <li><a href="./#helfer">Tous les appareils sur la page d’accueil</a></li>
+  </ul>
+</main>
+
+<div id="fuss"></div>
+
+<script src="einstellungen.js?v=20261104w"></script>
+<script src="ui-texte.js?v=20261104w"></script>
+<script src="../app.js?v=20261104w"></script>
+</body>
+</html>
