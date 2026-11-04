@@ -333,6 +333,8 @@ const PRODUKTE = [
       { name: "Stiftung Warentest: asciugatrice con aiuto per lo stiro (giugno 2007)", text: "il vapore fa risparmiare circa metà del tempo di stiro" },
       { name: "Associazione tedesca dei produttori di cosmetici e detersivi (IKW): dati sul bucato in Germania", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "circa 90 lavaggi a persona all’anno, per il calcolatore (in tedesco)" },
       { name: "Comunicato dell’IKW su come risparmiare lavando, asciugando e lavando i piatti (ottobre 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 lavaggi all’anno in una famiglia di quattro persone, per il calcolatore (in tedesco)" },
+      { name: "ARERA: prezzo di riferimento per i clienti vulnerabili (ottobre-dicembre 2026)", url: "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-373-nel-iv-trimestre-2026-per-i-clienti-vulnerabili", text: "43 centesimi al kWh tasse incluse per il cliente tipo, per il cursore del prezzo della corrente" },
+      { name: "ElCom, Commissione federale dell’energia elettrica: newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/it/sd-web/znXqHISH0pFP/Newsletter_09-2025_IT.pdf", text: "27,7 centesimi di franco al kWh per una famiglia tipo in Svizzera nel 2026, per il cursore del prezzo della corrente" },
       { name: "Dati dei produttori ed etichette energetiche UE", text: "capacità, durata dei programmi e consumi dei modelli" }
     ],
     rechner: "waschtrockner",
@@ -439,6 +441,8 @@ const PRODUKTE = [
       { name: "Istituto federale tedesco per la valutazione dei rischi (BfR): domande e risposte sulle pentole con rivestimento antiaderente in PTFE (dicembre 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "sicuro con un uso normale, si decompone solo da circa 360 °C (in tedesco)" },
       { name: "Altri test", text: "tra cui netzwelt.de, homeandsmart.de, Tech Advisor e Que Choisir" },
       { name: "Öko-Institut, Öko-Test e inside-digital.de", text: "consumi di forno, fornelli, friggitrice e friggitrice ad aria, per il calcolatore" },
+      { name: "ARERA: prezzo di riferimento per i clienti vulnerabili (ottobre-dicembre 2026)", url: "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-373-nel-iv-trimestre-2026-per-i-clienti-vulnerabili", text: "43 centesimi al kWh tasse incluse per il cliente tipo, per il cursore del prezzo della corrente" },
+      { name: "ElCom, Commissione federale dell’energia elettrica: newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/it/sd-web/znXqHISH0pFP/Newsletter_09-2025_IT.pdf", text: "27,7 centesimi di franco al kWh per una famiglia tipo in Svizzera nel 2026, per il cursore del prezzo della corrente" },
       { name: "Dati dei produttori", text: "cestelli, capacità e funzioni dei modelli, “senza PFAS” secondo Cosori" }
     ],
     zubehoer: [
@@ -888,6 +892,17 @@ const PRODUKTE = [
       { f: "Perché il test è del 2023?", a: "Stiftung Warentest ha testato i soffioni a risparmio l’ultima volta a marzo 2023 (numero 4/2023), un test più recente non c’è. Due dei modelli più parsimoniosi di allora non sono più in vendita. I tre qui sono ancora disponibili." },
       { f: "Perché non c’è il soffione di Ikea?", a: "L’Ikea Brogrund è stato buono per Stiftung Warentest ed era tra i soffioni buoni più economici del test. Però si trova solo da Ikea, quindi qui non posso metterlo come link. Se ci passi comunque, è una buona scelta." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: test dei soffioni a risparmio (numero 4/2023)", text: "Duravit e Hansgrohe buoni (voto 1,9 ciascuno), Grohe e Ikea Brogrund buoni, i tre modelli qui tra 8,2 e 8,8 litri al minuto, fino a 345 € di risparmio a persona all’anno in un caso esemplare" },
+      { name: "Centrali dei consumatori tedesche (Verbraucherzentrale, 2025 e 2026)", text: "scaldabagni istantanei idraulici da circa 8 litri al minuto e come riconoscerli, portata dei soffioni vecchi, prova del secchio" },
+      { name: "co2online: quanto fa risparmiare davvero un soffione a risparmio (febbraio 2026)", url: "https://www.co2online.de/energie-sparen/wasser-sparen/wasserspartipps/sparduschkopf/", text: "almeno 8 litri al minuto per gli scaldabagni istantanei idraulici, filettature standard (in tedesco)" },
+      { name: "ORF, radiotelevisione pubblica austriaca, e associazione degli inquilini di Berlino (2023)", text: "prova del secchio, il cambio conviene sopra i 10 litri al minuto, comfort e calcare" },
+      { name: "Associazione tedesca dell’energia e dell’acqua (BDEW): analisi dei prezzi della corrente (agosto 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 centesimi al kWh per una famiglia che consuma 3.500 kWh all’anno, per il calcolatore (in tedesco)" },
+      { name: "Ufficio federale di statistica tedesco (Destatis): comunicato del 30 settembre 2026", url: "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/09/PD26_345_61243.html", text: "gas naturale per le famiglie 11,58 centesimi al kWh nel primo semestre 2026, simile ai dati del BDEW, per il calcolatore (in tedesco)" },
+      { name: "Agenzia federale tedesca per l’ambiente (UBA): acqua del rubinetto (aprile 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "un centesimo per circa 5 litri d’acqua del rubinetto, con la fognatura circa 60 centesimi per oltre 100 litri, per il calcolatore (in tedesco)" },
+      { name: "ÖKO-TEST e calcolatore doccia delle centrali dei consumatori", text: "acqua e fognatura insieme circa 4 € al metro cubo, per il calcolatore" },
+      { name: "Dati dei produttori", text: "tipi di getto, ugelli anticalcare e idoneità per gli scaldabagni istantanei" }
+    ],
     profitipp: {
       titel: "Prima misura, poi cambia",
       text: "Così sai in un minuto se un soffione a risparmio conviene davvero per te:",
@@ -1089,6 +1104,15 @@ const PRODUKTE = [
       { f: "Se la cava con i peli di animali?", a: "Non tutti allo stesso modo. Per Stiftung Warentest il Bosch Unlimited 10, i due modelli Miele e il Rowenta X-Force Flex 13.60 hanno tolto i peli di animali in modo affidabile, altri hanno fatto più fatica. Se dei capelli lunghi si avvolgono intorno alla spazzola, li tagli e li togli." },
       { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere lavapavimenti. Da quando ne ho uno, non passo quasi mai l’aspirapolvere io." },
       { f: "Quanto dura un apparecchio così?", a: "Di solito la prima a calare è la batteria, spesso dopo qualche anno. Controlla quindi che si possa cambiare e che esistano batterie di ricambio. Bosch dà addirittura dieci anni di garanzia sul motore dell’Unlimited 10." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test degli aspirapolvere senza filo (numero 2/2026)", text: "Bosch Unlimited 10 BTS1042WAC vincitore (voto 2,2), peli di animali e autonomia alla potenza massima, alcuni apparecchi solo “sufficiente” o “insufficiente”" },
+      { name: "Stiftung Warentest: test degli aspirapolvere senza filo (numero 2/2025)", text: "Rowenta X-Force Flex 13.60 “buono” (voto 2,5), anche con i peli di animali" },
+      { name: "testit.de: test del Bulelink Zenith G10 (aprile 2026)", text: "voto 2,4, batteria circa un’ora al livello più basso, capelli attorno alla spazzola, sporco lungo i bordi" },
+      { name: "Altri test", text: "tra cui homeandsmart.de, TechRadar ed ETM Testmagazin, su autonomia, ricarica e contenitore della polvere" },
+      { name: "SRF Kassensturz (televisione svizzera) e Apotheken Umschau (rivista tedesca di salute)", text: "polvere quando lo svuoti, consiglio per chi è allergico" },
+      { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
+      { name: "Dati dei produttori", text: "autonomia, tempi di ricarica e batteria estraibile, dieci anni di garanzia sul motore del Bosch Unlimited 10" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1446,7 +1470,16 @@ const PRODUKTE = [
       { f: "Quale cilindro va bene per il mio apparecchio?", a: "Esistono due attacchi. I cilindri a vite li avviti, i cilindri rosa Quick Connect si inseriscono con un clic. I nuovi apparecchi SodaStream come il Crystal 3.0 richiedono Quick Connect. Il Grohe Blue Fizz accetta cilindri a vite, anche di altre marche, ma non i cilindri Quick Connect. Guarda la confezione quando compri." },
       { f: "Quanto dura un cilindro?", a: "Nel test di Stiftung Warentest gli apparecchi hanno fatto da 37 a 61 litri con un cilindro. Quanto sarà da te dipende dall’apparecchio e da quanto forte gasi: più bollicine, prima il cilindro è vuoto." },
       { f: "Come tengo tutto pulito?", a: "Pulisci regolarmente l’ugello, altrimenti possono annidarsi batteri che formano una patina viscida. Stiftung Warentest consiglia anche di versare l’acqua frizzante in un bicchiere o una caraffa per berla, invece di bere dalla bottiglia per gasare. L’apparecchio lo pulisci solo con un panno umido, non va in lavastoviglie." },
-      { f: "Perché non c’è l’Aarke?", a: "L’Aarke Carbonator 3 in acciaio inox è elegante ed è stato anche lui buono per Stiftung Warentest (numero 7/2025). Ma ha ottenuto un risultato peggiore dei tre apparecchi qui e costa molto di più." }
+      { f: "Perché non c’è l’Aarke?", a: "L’Aarke Carbonator 3 in acciaio inox è elegante ed è stato anche lui buono per Stiftung Warentest (numero 7/2025). Ma ha ottenuto un risultato peggiore dei due apparecchi qui e costa molto di più." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test dei gasatori d’acqua (numero 7/2025)", text: "Grohe Blue Fizz vincitore (voto 1,7), SodaStream Crystal 3.0 (voto 1,8), Aarke Carbonator 3 buono, da 37 a 61 litri per cilindro, consigli su bottiglie, pulizia e acqua fredda" },
+      { name: "Agenzia federale tedesca per l’ambiente (UBA): acqua del rubinetto (aprile 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "qualità molto buona, lasciarla prima scorrere dopo più di 4 ore nei tubi, un centesimo per circa 5 litri (in tedesco)" },
+      { name: "Ministero austriaco degli Affari sociali e della Salute: rapporto 2024 sull’acqua potabile (ottobre 2025)", url: "https://www.sozialministerium.gv.at/Services/Aktuelles/Archiv-2025/Trinkwasserbericht-2024---%C3%96sterreichs-Trinkwasser-bleibt-von-h%C3%B6chster-Qualit%C3%A4t.html", text: "qualità eccellente, oltre il 98% dei campioni conformi (in tedesco)" },
+      { name: "Ufficio federale della sicurezza alimentare e di veterinaria (USAV): acqua potabile", url: "https://www.blv.admin.ch/it/acqua-potabile", text: "qualità buona, tra gli alimenti più controllati" },
+      { name: "Associazione tedesca delle fonti minerali (2025 e 2026)", text: "poco meno di 130 litri di acqua minerale a persona all’anno, di cui oltre il 70% frizzante, per il calcolatore" },
+      { name: "Finanztip, ÖKO-TEST e prezzi nei negozi tedeschi (ottobre 2026)", text: "acqua frizzante del discount circa 20 centesimi, acqua di marca spesso 60 centesimi e più, gas circa 10-20 centesimi al litro, per il calcolatore" },
+      { name: "Dati dei produttori", text: "attacchi, cilindri e bottiglie degli apparecchi, ricerca rivenditori SodaStream" }
     ],
     profitipp: {
       titel: "Fredda frizza meglio",
@@ -1506,6 +1539,14 @@ const PRODUKTE = [
       { f: "A cosa devo fare attenzione con un apparecchio con serbatoio?", a: "Riempi il serbatoio prima di ogni lavaggio, il modo più semplice è con una caraffa o un misurino. Metti il tubo di scarico nel lavello e fissalo, così non scivola fuori. Altrimenti l’acqua di scarico finisce sul piano di lavoro o sul pavimento. Molti apparecchi con serbatoio si possono comunque allacciare all’acqua più avanti." },
       { f: "Perché qui non ci sono voti dei test?", a: "Perché test non ce ne sono quasi. Stiftung Warentest, il più noto istituto di test per consumatori in Germania, negli ultimi anni non ha testato lavastoviglie da tavolo, nei test attuali ci sono solo apparecchi grandi. Anche altrove non ho trovato test indipendenti degli apparecchi qui. Per questo confronto per te i dati dei produttori, cioè classe energetica, acqua, rumore e dimensioni, e ti dico onestamente dove le lavastoviglie piccole sono più deboli." },
       { f: "E in Svizzera?", a: "Gli apparecchi qui sono fatti per la Germania e hanno una spina tedesca. Non entra nelle prese svizzere. Per questo al momento non ho un’offerta adatta per la Svizzera, ma ne sto cercando una." }
+    ],
+    quellen: [
+      { name: "Università di Bonn: studio “A European Comparison of Cleaning Dishes by Hand”", text: "113 partecipanti hanno lavato a mano dodici coperti, in media con 103 litri d’acqua e 2,5 kWh in 79 minuti, per il calcolatore" },
+      { name: "Università di Bonn: comunicato sull’uso poco efficiente delle lavastoviglie (febbraio 2011)", url: "https://www.uni-bonn.de/de/universitaet/presse-kommunikation/presseservice/archiv-pressemitteilungen/2011/058-2011", text: "200 famiglie in quattro paesi, con la macchina in media il 50% di acqua e il 28% di energia in meno che a mano, il prelavaggio costa molto, molte macchine lavorano mezze vuote (in tedesco)" },
+      { name: "Stiftung Warentest: test delle lavastoviglie (numero 4/2026)", text: "nessun apparecchio da tavolo nel test, quelli larghi 60 cm vanno meglio di quelli stretti da 45 cm" },
+      { name: "Which?, associazione britannica dei consumatori: guida alle lavastoviglie compatte (novembre 2025)", text: "gli apparecchi compatti di solito vanno peggio nei test e consumano più acqua e corrente per piatto" },
+      { name: "Guide di Coolblue, Vattenfall, t-online e minihaushalt.de", text: "allacciamento all’acqua con filettatura da 3/4 di pollice, doppia valvola, scarico, serbatoio e cosa ci sta dentro" },
+      { name: "Dati dei produttori e schede prodotto UE", text: "classe energetica, acqua, rumore e dimensioni degli apparecchi, più una lavastoviglie grande per confronto" }
     ],
     profitipp: {
       titel: "Per un lavaggio pulito e parsimonioso",

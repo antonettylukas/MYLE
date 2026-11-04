@@ -7,10 +7,10 @@
 
 // Average electricity price per country, as marks on the electricity price slider (sources in STROM_QUELLEN)
 const STROM_LAENDER = [
-  { wert: 0.31, kurz: "UK", name: "United Kingdom", zusatz: "26.3p" },
+  { wert: 0.31, kurz: "GB", name: "Great Britain", zusatz: "26.3p" },
   { wert: 0.41, kurz: "IE", name: "Ireland" }
 ];
-const STROM_QUELLEN = " The letters on the electricity price slider: United Kingdom 26.3p per kWh, about €0.31 (Ofgem price cap from October 2026), Ireland about 41 cents (Selectra price index, October 2026).";
+const STROM_QUELLEN = " The letters on the electricity price slider: Great Britain 26.3p per kWh, about €0.31 (Ofgem price cap from October 2026), Ireland about 41 cents (Selectra price index, October 2026).";
 
 const RECHNER = {
   saugroboter: {
@@ -65,7 +65,7 @@ const RECHNER = {
           { wert: "fritteuse", label: "Deep fryer" }
         ] },
       { id: "anzahl", label: "How often would you cook with it?", min: 1, max: 14, step: 1, wert: 4, einheit: "× per week" },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in the United Kingdom (UK) and Ireland (IE)." }
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
     ],
     berechne(w) {
       const PROFILE = {
@@ -202,7 +202,7 @@ const RECHNER = {
     felder: [
       { id: "ladungen", label: "How often do you do the washing per week?", min: 1, max: 10, step: 1, wert: 3, einheit: "× per week", schnitt: [2, 3, 3.5, 4] },
       { id: "buegeln", label: "How many items do you iron per week?", min: 0, max: 20, step: 1, wert: 4, einheit: "items" },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in the United Kingdom (UK) and Ireland (IE)." }
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
     ],
     berechne(w) {
       const stromMonat = ((w.ladungen * 52) / 12) * 2.2 * w.strom;
@@ -514,7 +514,7 @@ const RECHNER = {
           { wert: "ostwest", label: "East or west" }
         ] },
       { id: "verbrauch", label: "How much electricity do you use per year?", hinweis: "It is on your electricity bill.", min: 800, max: 6000, step: 100, wert: 1900, einheit: "kWh per year", schnitt: [1200, 1900, 2400, 2600], schnittHinweis: "The numbers on the slider show the average for a flat with 1, 2, 3 and 4 people (German Stromspiegel 2025, without hot water from electricity)." },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in the United Kingdom (UK) and Ireland (IE)." },
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." },
       { id: "speicher", label: "How much does your battery cost?", hinweis: "You can see the current price on Amazon. Add a reading head for the electricity meter if none is included.", min: 300, max: 1500, step: 10, wert: 450, einheit: "€" }
     ],
     berechne(w) {

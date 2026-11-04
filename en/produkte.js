@@ -278,6 +278,8 @@ const PRODUKTE = [
       { name: "Stiftung Warentest: dryer with ironing aid (June 2007)", text: "steam saves around half of the ironing time" },
       { name: "German Cosmetic, Toiletry, Perfumery and Detergent Association (IKW): washing figures for Germany", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "about 90 washes per person a year, for the calculator (in German)" },
       { name: "IKW press release on saving money when washing, drying and dishwashing (October 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 washes a year in a four-person household, for the calculator (in German)" },
+      { name: "Ofgem: energy price cap from 1 October to 31 December 2026", url: "https://www.ofgem.gov.uk/publications/changes-energy-price-cap-between-1-october-and-31-december-2026", text: "26.32p per kWh by direct debit, average for England, Scotland and Wales, for the electricity price slider" },
+      { name: "Selectra: Irish electricity price index (October 2026)", text: "about 41 cents per kWh in Ireland, for the electricity price slider" },
       { name: "Manufacturer information and EU energy labels", text: "capacity, programme times and power use of the models" }
     ],
     rechner: "waschtrockner",
@@ -367,6 +369,8 @@ const PRODUKTE = [
       { name: "German Federal Institute for Risk Assessment (BfR): questions and answers on PTFE non-stick cookware (December 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "safe in normal use, only breaks down from around 360 °C (in German)" },
       { name: "Other tests", text: "including netzwelt.de, homeandsmart.de, Tech Advisor and Que Choisir" },
       { name: "Öko-Institut, Öko-Test and inside-digital.de", text: "power use of oven, hob, deep fryer and air fryer, for the calculator" },
+      { name: "Ofgem: energy price cap from 1 October to 31 December 2026", url: "https://www.ofgem.gov.uk/publications/changes-energy-price-cap-between-1-october-and-31-december-2026", text: "26.32p per kWh by direct debit, average for England, Scotland and Wales, for the electricity price slider" },
+      { name: "Selectra: Irish electricity price index (October 2026)", text: "about 41 cents per kWh in Ireland, for the electricity price slider" },
       { name: "Manufacturer information", text: "baskets, capacities and features of the models, “PFAS-free” according to Cosori" }
     ],
     rechner: "airfryer",
@@ -791,6 +795,17 @@ const PRODUKTE = [
       { f: "Why is the test from 2023?", a: "Stiftung Warentest last tested water-saving shower heads in March 2023 (issue 4/2023); there is no newer test. Two of the most economical models at the time are no longer available. The three here are still available." },
       { f: "Why isn't the Ikea shower head included?", a: "The Ikea Brogrund was good at Stiftung Warentest and one of the cheapest good shower heads in the test. But it's only available at Ikea, so I can't link it here. If you're passing by anyway, it's a good choice." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: water-saving shower heads test (issue 4/2023)", text: "Duravit and Hansgrohe both good (grade 1.9), Grohe and Ikea Brogrund good, the three models here at 8.2 to 8.8 litres per minute, savings of up to €345 per person a year in a model case" },
+      { name: "German consumer advice centres (Verbraucherzentrale, 2025 and 2026)", text: "hydraulic instantaneous water heaters from about 8 litres per minute and how to recognise them, flow of older shower heads, bucket test" },
+      { name: "co2online: how much a water-saving shower head really saves (February 2026)", url: "https://www.co2online.de/energie-sparen/wasser-sparen/wasserspartipps/sparduschkopf/", text: "at least 8 litres per minute for hydraulic instantaneous water heaters, standardised threads (in German)" },
+      { name: "Austrian broadcaster ORF and Berlin Tenants’ Association (2023)", text: "bucket test, swapping pays off above 10 litres per minute, shower comfort and limescale" },
+      { name: "German Association of Energy and Water Industries (BDEW): electricity price analysis (August 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 cents per kWh for a household using 3,500 kWh a year, for the calculator (in German)" },
+      { name: "Federal Statistical Office of Germany (Destatis): press release of 30 September 2026", url: "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/09/PD26_345_61243.html", text: "natural gas for households 11.58 cents per kWh in the first half of 2026, similar to BDEW, for the calculator (in German)" },
+      { name: "German Environment Agency (UBA): tap water (April 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "one cent buys about 5 litres of tap water, with sewage charges around 60 cents for over 100 litres, for the calculator (in German)" },
+      { name: "ÖKO-TEST and the consumer advice centres’ shower calculator", text: "water and sewage together around €4 per cubic metre, for the calculator" },
+      { name: "Manufacturer information", text: "spray modes, anti-limescale nubs and suitability for instantaneous water heaters" }
+    ],
     profitipp: {
       titel: "Measure first, then swap",
       text: "This way you know in one minute whether a water-saving shower head is worth it for you at all:",
@@ -995,6 +1010,16 @@ const PRODUKTE = [
       { f: "Can it handle pet hair?", a: "Not all equally well. At Stiftung Warentest, the Bosch Unlimited 10, the two Miele models and the Rowenta X-Force Flex 13.60 reliably removed pet hair, while others struggled. If long hair wraps around the brush, you cut it open and pull it off." },
       { f: "Are there any that mop at the same time?", a: "Yes, so-called wet and dry vacuums, for example from Tineco or Dreame. They vacuum and mop at the same time and are worth it with lots of hard floors. But if you don't want to do anything yourself any more, take a look at the robot vacuum and mop. Since I've had one, I hardly ever vacuum myself." },
       { f: "How long does a vacuum like this last?", a: "Usually the battery is the first thing to weaken, often after a few years. So make sure you can replace it and that replacement batteries are available. Bosch even gives a ten-year guarantee on the motor of the Unlimited 10." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: cordless vacuums test (issue 2/2026)", text: "test winner Bosch Unlimited 10 BTS1042WAC (grade 2.2), pet hair and battery life on the highest setting, some models only adequate or poor" },
+      { name: "Stiftung Warentest: cordless vacuums test (issue 2/2025)", text: "Rowenta X-Force Flex 13.60 good (grade 2.5), including with pet hair" },
+      { name: "testit.de: Bulelink Zenith G10 review (April 2026)", text: "grade 2.4, battery about an hour on the lowest setting, hair around the roller, dirt along the edges" },
+      { name: "Which?: Bosch Unlimited 10 review", text: "about 1 hour 15 minutes on the lowest setting" },
+      { name: "Other tests", text: "including homeandsmart.de, TechRadar and ETM Testmagazin, on battery life, charging time and dust container" },
+      { name: "SRF Kassensturz (Swiss TV) and Apotheken Umschau (German health magazine)", text: "dust when emptying, tip for people with allergies" },
+      { name: "Federal Statistical Office of Germany (Destatis): living space by household size", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensus 2022, for the averages in the calculator (page in German)" },
+      { name: "Manufacturer information", text: "battery life, charging time and swappable batteries of the models, ten-year motor guarantee on the Bosch Unlimited 10" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1358,6 +1383,15 @@ const PRODUKTE = [
       { f: "How do I keep everything clean?", a: "Clean the nozzle regularly, otherwise slime-forming bacteria can settle there. Stiftung Warentest also advises pouring the sparkling water into a glass or a carafe to drink it, instead of drinking from the carbonating bottle. You just wipe the machine itself with a damp cloth; it doesn't belong in the dishwasher." },
       { f: "Why isn't the Aarke included?", a: "The stainless steel Aarke Carbonator 3 looks stylish and was also good at Stiftung Warentest (issue 7/2025). But it scored worse than the Grohe Blue Fizz and costs considerably more." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: sparkling water makers test (issue 7/2025)", text: "test winner Grohe Blue Fizz (grade 1.7), Aarke Carbonator 3 good, 37 to 61 litres per cylinder, tips on bottles, cleaning and cold water" },
+      { name: "German Environment Agency (UBA): tap water (April 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "very good quality, let it run first after more than 4 hours in the pipes, one cent for about 5 litres (in German)" },
+      { name: "Austrian Ministry of Social Affairs and Health: drinking water report 2024 (October 2025)", url: "https://www.sozialministerium.gv.at/Services/Aktuelles/Archiv-2025/Trinkwasserbericht-2024---%C3%96sterreichs-Trinkwasser-bleibt-von-h%C3%B6chster-Qualit%C3%A4t.html", text: "excellent quality, over 98 per cent of samples meet the requirements (in German)" },
+      { name: "Swiss Federal Food Safety and Veterinary Office (FSVO): drinking water", url: "https://www.blv.admin.ch/de/trinkwasser", text: "good quality, among the most strictly controlled foods (in German)" },
+      { name: "Association of German Mineral Springs (2025 and 2026)", text: "just under 130 litres of mineral water per person a year, a good 70 per cent of it sparkling, for the calculator" },
+      { name: "Finanztip, ÖKO-TEST and German shop prices (October 2026)", text: "cheap sparkling water around 20 cents, branded water often 60 cents or more, gas about 10 to 20 cents per litre, for the calculator" },
+      { name: "Manufacturer information", text: "fittings, cylinders and bottles of the machines, SodaStream retailer search" }
+    ],
     profitipp: {
       titel: "Cold fizzes better",
       text: "Cold water absorbs the carbon dioxide much better. Put the filled bottle in the fridge for a while before carbonating, and it will fizz more strongly."
@@ -1435,6 +1469,14 @@ const PRODUKTE = [
       { f: "What do I need to watch out for with a tank machine?", a: "Fill the tank before every wash, easiest with a jug or a measuring cup. Put the drain hose into the sink and secure it so it doesn't slip out. Otherwise the waste water runs onto the worktop or the floor. You can still connect many tank machines to a water supply later; the Bomann TSG 5702 comes with the hoses for this." },
       { f: "Why are there no test grades here?", a: "Because there are hardly any tests. Stiftung Warentest, Germany's best-known consumer tester, hasn't tested countertop dishwashers in recent years; its current tests only include big machines. I haven't found any other independent tests of the machines here either. So I compare the manufacturers' figures for you, meaning energy class, water, noise and size, and tell you honestly where small dishwashers fall short." },
       { f: "And in Switzerland?", a: "The machines here are made for Germany and have a German plug. It doesn't fit Swiss sockets. That's why I don't have a suitable offer for Switzerland right now, but I'm looking for one." }
+    ],
+    quellen: [
+      { name: "University of Bonn: study “A European Comparison of Cleaning Dishes by Hand”", text: "113 participants washed twelve place settings by hand, on average with 103 litres of water and 2.5 kWh in 79 minutes, for the calculator" },
+      { name: "University of Bonn: press release on how inefficiently consumers use their dishwashers (February 2011)", url: "https://www.uni-bonn.de/de/universitaet/presse-kommunikation/presseservice/archiv-pressemitteilungen/2011/058-2011", text: "200 households in four countries, on average 50 per cent less water and 28 per cent less energy with the machine than by hand, pre-rinsing costs a lot, many machines run only half full (in German)" },
+      { name: "Stiftung Warentest: dishwashers test (issue 4/2026)", text: "no countertop machines in the test, 60 cm wide machines do better than narrow 45 cm ones" },
+      { name: "Which?: how to buy the best compact dishwasher (November 2025)", text: "compact machines usually do worse in tests and use more water and electricity per plate" },
+      { name: "Guides from Coolblue, Vattenfall, t-online and minihaushalt.de", text: "water connection with a 3/4-inch thread, double valve, drain, tank and what fits inside" },
+      { name: "Manufacturer information and EU product data sheets", text: "energy class, water, noise and size of the machines, plus a big dishwasher for comparison" }
     ],
     profitipp: {
       titel: "How to get it clean and economical",

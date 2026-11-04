@@ -446,6 +446,9 @@ const PRODUKTE = [
       { name: "Stiftung Warentest: Trockner mit Bügelhilfe (Juni 2007)", text: "Dampf spart rund die Hälfte der Bügelzeit" },
       { name: "Industrieverband Körperpflege- und Waschmittel (IKW): Zahlen zum Waschen in Deutschland", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "im Schnitt 90 Wäschen pro Person und Jahr, für den Rechner" },
       { name: "IKW-Pressemitteilung „Mit 7 Tipps mehr als 400 Euro sparen beim Waschen, Trocknen und Spülen“ (Oktober 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 Wäschen im Jahr im Vier-Personen-Haushalt, für den Rechner" },
+      { name: "BDEW (Bundesverband der Energie- und Wasserwirtschaft): Strompreisanalyse August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 Cent pro kWh für Haushalte in Deutschland, für den Strompreis-Regler" },
+      { name: "E-Control (österreichische Regulierungsbehörde): Strompreismonitor Januar 2026", url: "https://www.e-control.at/documents/1785851/1811582/preismonitor_jan_26.pdf/b2376bf8-3337-4ba0-ad26-f98a443ab871?t=1767782911898", text: "im Schnitt etwa 30 Cent pro kWh bei den Landesversorgern in Österreich, für den Strompreis-Regler" },
+      { name: "ElCom (Eidgenössische Elektrizitätskommission): Newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 Rappen pro kWh für einen typischen Haushalt in der Schweiz 2026, für den Strompreis-Regler" },
       { name: "Herstellerangaben und EU-Energielabel", text: "Fassungsvermögen, Programmdauer und Stromverbrauch der Modelle" }
     ],
     rechner: "waschtrockner",
@@ -559,6 +562,9 @@ const PRODUKTE = [
       { name: "Bundesinstitut für Risikobewertung: Fragen und Antworten zu Geschirr mit Antihaftbeschichtung aus PTFE (Dezember 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "bei normalem Gebrauch unbedenklich, zersetzt sich erst ab etwa 360 °C" },
       { name: "Weitere Tests", text: "unter anderem von netzwelt.de, homeandsmart.de, Tech Advisor und Que Choisir" },
       { name: "Öko-Institut, Öko-Test und inside-digital.de", text: "Stromverbrauch von Backofen, Herd, Fritteuse und Airfryer, für den Rechner" },
+      { name: "BDEW (Bundesverband der Energie- und Wasserwirtschaft): Strompreisanalyse August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 Cent pro kWh für Haushalte in Deutschland, für den Strompreis-Regler" },
+      { name: "E-Control (österreichische Regulierungsbehörde): Strompreismonitor Januar 2026", url: "https://www.e-control.at/documents/1785851/1811582/preismonitor_jan_26.pdf/b2376bf8-3337-4ba0-ad26-f98a443ab871?t=1767782911898", text: "im Schnitt etwa 30 Cent pro kWh bei den Landesversorgern in Österreich, für den Strompreis-Regler" },
+      { name: "ElCom (Eidgenössische Elektrizitätskommission): Newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 Rappen pro kWh für einen typischen Haushalt in der Schweiz 2026, für den Strompreis-Regler" },
       { name: "Herstellerangaben", text: "Körbe, Liter und Funktionen der Modelle, „ohne PFAS“ laut Cosori" }
     ],
     zubehoer: [
@@ -999,6 +1005,18 @@ const PRODUKTE = [
       { f: "Warum ist der Test von 2023?", a: "Stiftung Warentest hat Sparduschköpfe zuletzt im März 2023 getestet (Heft 4/2023), einen neueren Test gibt es nicht. Zwei der damals sparsamsten Modelle gibt es inzwischen nicht mehr zu kaufen. Die drei hier sind weiter erhältlich." },
       { f: "Warum ist der Duschkopf von Ikea nicht dabei?", a: "Der Ikea Brogrund war bei Stiftung Warentest gut und einer der günstigsten guten Duschköpfe im Test. Es gibt ihn aber nur bei Ikea, darum kann ich ihn hier nicht verlinken. Kommst du sowieso dort vorbei, ist er eine gute Wahl." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: Sparduschköpfe im Test (Heft 4/2023)", text: "Duravit und Hansgrohe je gut (Note 1,9), Grohe und Ikea Brogrund gut, die drei Modelle hier mit 8,2 bis 8,8 Litern pro Minute, bis zu 345 € Ersparnis pro Person und Jahr im Modellfall" },
+      { name: "Verbraucherzentrale NRW und Verbraucherzentrale Bundesverband (2025 und 2026)", text: "hydraulische Durchlauferhitzer ab etwa 8 Litern pro Minute und wie du sie erkennst, Durchfluss älterer Duschköpfe, Eimertest" },
+      { name: "co2online: „Sparduschkopf im Test: Wie viel spart er wirklich?“ (Februar 2026)", url: "https://www.co2online.de/energie-sparen/wasser-sparen/wasserspartipps/sparduschkopf/", text: "mindestens 8 Liter pro Minute bei hydraulischen Durchlauferhitzern, genormte Gewinde, Tausch auch zur Miete" },
+      { name: "ORF und Berliner Mieterverein (2023)", text: "Eimertest, Tausch lohnt sich bei mehr als 10 Litern pro Minute, Duschkomfort und Kalk" },
+      { name: "Deutscher Mieterbund und ista", text: "Duschkopf in der Mietwohnung selbst tauschen und den alten für den Auszug aufheben" },
+      { name: "BDEW (Bundesverband der Energie- und Wasserwirtschaft): Strompreisanalyse August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 Cent pro kWh für einen Haushalt mit 3.500 kWh im Jahr, für den Rechner" },
+      { name: "Statistisches Bundesamt: Pressemitteilung vom 30. September 2026", url: "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/09/PD26_345_61243.html", text: "Erdgas für Haushalte 11,58 Cent pro kWh im 1. Halbjahr 2026, ähnlich wie beim BDEW, für den Rechner" },
+      { name: "Umweltbundesamt: „Trinkwasser aus der Leitung: nachhaltig, gesund, günstig“ (April 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "ein Cent für etwa 5 Liter Trinkwasser, mit Abwassergebühr rund 60 Cent für über 100 Liter, für den Rechner" },
+      { name: "ÖKO-TEST und Duschrechner der Verbraucherzentrale", text: "Wasser und Abwasser zusammen rund 4 € pro Kubikmeter, für den Rechner" },
+      { name: "Herstellerangaben", text: "Strahlarten, Noppen gegen Kalk und Eignung für Durchlauferhitzer" }
+    ],
     profitipp: {
       titel: "Erst messen, dann tauschen",
       text: "So weißt du in einer Minute, ob sich ein Sparduschkopf für dich überhaupt lohnt:",
@@ -1212,6 +1230,15 @@ const PRODUKTE = [
       { f: "Schafft er Tierhaare?", a: "Nicht jeder gleich gut. Bei Stiftung Warentest entfernten der Bosch Unlimited 10, die beiden Miele-Modelle und der Rowenta X-Force Flex 13.60 Tierhaare zuverlässig, andere schwächelten dabei. Wickeln sich lange Haare um die Bürste, schneidest du sie auf und ziehst sie ab." },
       { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saug- und Wischroboter an. Seit ich einen habe, sauge ich so gut wie nie mehr selbst." },
       { f: "Wie lange hält so ein Gerät?", a: "Meist lässt zuerst der Akku nach, oft nach einigen Jahren. Achte deshalb darauf, dass du ihn wechseln kannst und es Ersatz-Akkus gibt. Bosch gibt beim Unlimited 10 sogar zehn Jahre Garantie auf den Motor." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Akku-Staubsauger im Test (Heft 2/2026)", text: "Testsieger Bosch Unlimited 10 BTS1042WAC (Note 2,2), Tierhaare und Akkulaufzeit auf höchster Stufe, manche Geräte nur ausreichend oder mangelhaft" },
+      { name: "Stiftung Warentest: Akku-Staubsauger im Test (Heft 2/2025)", text: "Rowenta X-Force Flex 13.60 Allergy gut (Note 2,5), auch bei Tierhaaren, Bosch Unlimited 7 gut (Note 2,4)" },
+      { name: "testit.de: Test Bulelink Zenith G10 (April 2026)", text: "Note 2,4, Akku rund eine Stunde auf schwächster Stufe, Haare an der Walze, Schmutz an Kanten" },
+      { name: "Weitere Tests", text: "unter anderem homeandsmart.de, TechRadar und ETM Testmagazin, zu Akkulaufzeit, Ladezeit und Staubbehälter" },
+      { name: "SRF Kassensturz und Apotheken Umschau", text: "Staub beim Leeren, Tipp für Allergiker" },
+      { name: "Statistisches Bundesamt: Wohnfläche nach Haushaltsgröße", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Mikrozensus 2022, für die Durchschnittswerte im Rechner" },
+      { name: "Herstellerangaben", text: "Akkulaufzeit, Ladezeit und Wechselakkus der Modelle, zehn Jahre Garantie auf den Motor beim Bosch Unlimited 10" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1658,6 +1685,16 @@ const PRODUKTE = [
       { f: "Wie halte ich alles sauber?", a: "Reinige die Düse regelmäßig, sonst können sich dort schleimbildende Bakterien ansiedeln. Stiftung Warentest rät außerdem, das Sprudelwasser zum Trinken in ein Glas oder eine Karaffe umzufüllen, statt aus der Sprudelflasche zu trinken. Das Gerät selbst wischst du nur feucht ab, es gehört nicht in die Spülmaschine." },
       { f: "Warum ist der Aarke nicht dabei?", a: "Der Aarke Carbonator 3 aus Edelstahl sieht schick aus und war bei Stiftung Warentest auch gut (Heft 7/2025). Er schnitt aber schlechter ab als die drei Geräte hier und kostet deutlich mehr." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: Wassersprudler im Test (Heft 7/2025)", text: "Testsieger Grohe Blue Fizz (Note 1,7), SodaStream Crystal 3.0 (Note 1,8), Preis-Leistungs-Sieger Mysoda Woody (Note 2,3), Aarke Carbonator 3 gut, 37 bis 61 Liter pro Zylinder, dazu Tipps zu Flaschen, Reinigung und kaltem Wasser" },
+      { name: "Umweltbundesamt: „Trinkwasser aus der Leitung: nachhaltig, gesund, günstig“ (April 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "sehr gute Qualität, nach über 4 Stunden in der Leitung erst ablaufen lassen, ein Cent für etwa 5 Liter" },
+      { name: "Sozialministerium Österreich: Trinkwasserbericht 2024 (Oktober 2025)", url: "https://www.sozialministerium.gv.at/Services/Aktuelles/Archiv-2025/Trinkwasserbericht-2024---%C3%96sterreichs-Trinkwasser-bleibt-von-h%C3%B6chster-Qualit%C3%A4t.html", text: "Qualität ausgezeichnet, über 98 Prozent der Proben erfüllen die Vorgaben" },
+      { name: "Bundesamt für Lebensmittelsicherheit und Veterinärwesen (BLV): Trinkwasser", url: "https://www.blv.admin.ch/de/trinkwasser", text: "gute Qualität, gehört zu den am strengsten kontrollierten Lebensmitteln" },
+      { name: "Verband Deutscher Mineralbrunnen (2025 und 2026)", text: "knapp 130 Liter Mineralwasser pro Kopf im Jahr, gut 70 Prozent davon mit Kohlensäure, für den Rechner" },
+      { name: "Finanztip, ÖKO-TEST und Preise im Handel (Oktober 2026)", text: "Sprudel vom Discounter um 20 Cent, Markenwasser oft 60 Cent und mehr, Gas etwa 10 bis 20 Cent pro Liter, für den Rechner" },
+      { name: "SRF Kassensturz (November 2024)", text: "Zylindertausch in der Schweiz bei Migros, Coop, Lidl und Spar" },
+      { name: "Hersteller- und Händlerangaben", text: "Anschlüsse, Zylinder und Flaschen der Geräte, Zylindertausch bei Rossmann, Interspar und MPREIS" }
+    ],
     profitipp: {
       titel: "Kalt sprudelt besser",
       text: "Kaltes Wasser nimmt die Kohlensäure deutlich besser auf. Stell die gefüllte Flasche vor dem Sprudeln eine Weile in den Kühlschrank, dann prickelt es stärker."
@@ -1731,6 +1768,14 @@ const PRODUKTE = [
       { f: "Was muss ich bei einem Gerät mit Tank beachten?", a: "Füll den Tank vor jedem Spülen, am einfachsten mit einer Kanne oder einem Messbecher. Leg den Ablaufschlauch ins Spülbecken und sichere ihn, damit er nicht herausrutscht. Sonst läuft das Abwasser auf die Arbeitsplatte oder den Boden. Viele Tankgeräte kannst du später trotzdem an einen Wasseranschluss hängen, beim Bomann TSG 5702 liegen die Schläuche dafür bei." },
       { f: "Warum gibt es hier keine Testnoten?", a: "Weil es kaum Tests gibt. Stiftung Warentest hat in den letzten Jahren keine Tischgeschirrspüler getestet, in den aktuellen Tests stehen nur große Geräte. Auch sonst habe ich für die Geräte hier keine unabhängigen Tests gefunden. Darum vergleiche ich für dich die Angaben der Hersteller, also Energieklasse, Wasser, Lautstärke und Größe, und sage dir ehrlich, wo kleine Spülmaschinen schwächeln." },
       { f: "Und in der Schweiz?", a: "Die Geräte hier sind für Deutschland gemacht und haben einen deutschen Stecker. Der passt nicht in Schweizer Steckdosen. Ein passendes Angebot für die Schweiz habe ich darum gerade nicht, ich suche aber danach." }
+    ],
+    quellen: [
+      { name: "Universität Bonn: Studie „A European Comparison of Cleaning Dishes by Hand“", text: "113 Teilnehmer spülten zwölf Gedecke von Hand, im Schnitt mit 103 Litern Wasser und 2,5 kWh in 79 Minuten, für den Rechner" },
+      { name: "Universität Bonn: Pressemitteilung „Verbraucher nutzen ihre Spülmaschinen zu ineffizient“ (Februar 2011)", url: "https://www.uni-bonn.de/de/universitaet/presse-kommunikation/presseservice/archiv-pressemitteilungen/2011/058-2011", text: "200 Haushalte in vier Ländern, mit der Maschine im Schnitt 50 Prozent weniger Wasser und 28 Prozent weniger Energie als von Hand, Vorspülen kostet viel, viele Maschinen laufen nur halb voll" },
+      { name: "Stiftung Warentest: Geschirrspüler im Test (Heft 4/2026)", text: "keine Tischgeräte im Test, Geräte mit 60 cm Breite schneiden besser ab als schmale mit 45 cm" },
+      { name: "Which? (britische Verbraucherorganisation): Ratgeber zu kompakten Spülmaschinen (November 2025)", text: "kompakte Geräte schneiden in Tests meist schwächer ab und brauchen pro Teller mehr Wasser und Strom" },
+      { name: "Ratgeber von Coolblue, Vattenfall, t-online und minihaushalt.de", text: "Wasseranschluss mit 3/4-Zoll-Gewinde, Doppelventil, Ablauf, Tank und was hineinpasst" },
+      { name: "Herstellerangaben und EU-Datenblätter", text: "Energieklasse, Wasser, Lautstärke und Maße der Geräte, dazu eine große Spülmaschine zum Vergleich" }
     ],
     profitipp: {
       titel: "So spült sie sauber und sparsam",

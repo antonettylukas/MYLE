@@ -338,6 +338,9 @@ const PRODUKTE = [
       { name: "Stiftung Warentest\u202f: sèche-linge avec aide au repassage (juin 2007)", text: "la vapeur fait gagner environ la moitié du temps de repassage" },
       { name: "Association allemande des fabricants de cosmétiques et de lessives (IKW)\u202f: chiffres de la lessive en Allemagne", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "environ 90 lessives par personne et par an, pour le calculateur (en allemand)" },
       { name: "Communiqué de l’IKW sur les économies au lavage, au séchage et à la vaisselle (octobre 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 lessives par an dans un foyer de quatre personnes, pour le calculateur (en allemand)" },
+      { name: "EDF\u202f: tarif bleu, option base (août 2026)", text: "0,20\u00a0€ le kWh TTC en France (6 kVA), pour le curseur du prix de l’électricité" },
+      { name: "Eurostat\u202f: prix de l’électricité des ménages (2e semestre 2025)", text: "environ 0,35\u00a0€ le kWh taxes comprises en Belgique, pour le curseur du prix de l’électricité" },
+      { name: "ElCom, Commission fédérale de l’électricité\u202f: newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/fr/sd-web/znXqHISH0pFP/Newsletter_09-2025_FR.pdf", text: "27,7 centimes le kWh pour un ménage type en Suisse en 2026, pour le curseur du prix de l’électricité" },
       { name: "Données des fabricants et étiquettes énergie de l’UE", text: "capacité, durée des programmes et consommation des modèles" }
     ],
     rechner: "waschtrockner",
@@ -440,6 +443,9 @@ const PRODUKTE = [
       { name: "Institut fédéral allemand d’évaluation des risques (BfR)\u202f: questions et réponses sur les ustensiles à revêtement antiadhésif en PTFE (décembre 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "sans danger en utilisation normale, ne se décompose qu’à partir d’environ 360 °C (en allemand)" },
       { name: "Autres tests", text: "notamment netzwelt.de, homeandsmart.de, Tech Advisor et Que Choisir" },
       { name: "Öko-Institut, Öko-Test et inside-digital.de", text: "consommation du four, des plaques, de la friteuse et de la friteuse sans huile, pour le calculateur" },
+      { name: "EDF\u202f: tarif bleu, option base (août 2026)", text: "0,20\u00a0€ le kWh TTC en France (6 kVA), pour le curseur du prix de l’électricité" },
+      { name: "Eurostat\u202f: prix de l’électricité des ménages (2e semestre 2025)", text: "environ 0,35\u00a0€ le kWh taxes comprises en Belgique, pour le curseur du prix de l’électricité" },
+      { name: "ElCom, Commission fédérale de l’électricité\u202f: newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/fr/sd-web/znXqHISH0pFP/Newsletter_09-2025_FR.pdf", text: "27,7 centimes le kWh pour un ménage type en Suisse en 2026, pour le curseur du prix de l’électricité" },
       { name: "Données des fabricants", text: "paniers, contenances et fonctions des modèles, «\u202fsans PFAS\u202f» selon Cosori" }
     ],
     zubehoer: [
@@ -867,6 +873,17 @@ const PRODUKTE = [
       { f: "Pourquoi le test date-t-il de 2023 ?", a: "Stiftung Warentest a testé les pommeaux économiques pour la dernière fois en mars 2023 (numéro 4/2023), il n’existe pas de test plus récent. Deux des modèles les plus économes de l’époque ne sont plus en vente. Les trois présentés ici sont toujours disponibles." },
       { f: "Pourquoi le pommeau d’Ikea n’est-il pas là ?", a: "L’Ikea Brogrund a obtenu « bien » chez Stiftung Warentest et était l’un des bons pommeaux les moins chers du test. Mais on ne le trouve que chez Ikea, je ne peux donc pas le mettre en lien ici. Si vous y passez de toute façon, c’est un bon choix." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des pommeaux de douche économiques (numéro 4/2023)", text: "Duravit et Hansgrohe «\u202fbien\u202f» (note 1,9 chacun), Grohe et Ikea Brogrund «\u202fbien\u202f», les trois modèles présentés ici entre 8,2 et 8,8 litres par minute, jusqu’à 345\u00a0€ d’économie par personne et par an dans un cas type" },
+      { name: "Centrales de consommateurs allemandes (Verbraucherzentrale, 2025 et 2026)", text: "chauffe-eau instantanés hydrauliques à partir d’environ 8 litres par minute et comment les reconnaître, débit des anciens pommeaux, test du seau" },
+      { name: "co2online\u202f: combien économise vraiment un pommeau économique (février 2026)", url: "https://www.co2online.de/energie-sparen/wasser-sparen/wasserspartipps/sparduschkopf/", text: "au moins 8 litres par minute pour les chauffe-eau instantanés hydrauliques, filetages normalisés (en allemand)" },
+      { name: "ORF, radiotélévision publique autrichienne, et association des locataires de Berlin (2023)", text: "test du seau, le changement vaut le coup au-delà de 10 litres par minute, confort et calcaire" },
+      { name: "Fédération allemande de l’énergie et de l’eau (BDEW)\u202f: analyse des prix de l’électricité (août 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 centimes le kWh pour un ménage consommant 3\u202f500 kWh par an, pour le calculateur (en allemand)" },
+      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: communiqué du 30 septembre 2026", url: "https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/09/PD26_345_61243.html", text: "gaz naturel pour les ménages 11,58 centimes le kWh au premier semestre 2026, proche des chiffres du BDEW, pour le calculateur (en allemand)" },
+      { name: "Agence fédérale allemande de l’environnement (UBA)\u202f: l’eau du robinet (avril 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "un centime pour environ 5 litres d’eau du robinet, avec l’assainissement environ 60 centimes pour plus de 100 litres, pour le calculateur (en allemand)" },
+      { name: "ÖKO-TEST et simulateur de douche des centrales de consommateurs", text: "eau et assainissement environ 4\u00a0€ le mètre cube, pour le calculateur" },
+      { name: "Données des fabricants", text: "types de jet, picots anticalcaire et compatibilité avec les chauffe-eau instantanés" }
+    ],
     profitipp: {
       titel: "D’abord mesurer, ensuite changer",
       text: "Ainsi, vous savez en une minute si un pommeau économique vaut vraiment le coup pour vous :",
@@ -1068,6 +1085,15 @@ const PRODUKTE = [
       { f: "Vient-il à bout des poils d’animaux\u202f?", a: "Pas tous aussi bien. Chez Stiftung Warentest, le Bosch Unlimited 10, les deux modèles Miele et le Rowenta X-Force Flex 13.60 ont enlevé les poils d’animaux de façon fiable, d’autres avaient plus de mal. Si de longs cheveux s’enroulent autour de la brosse, vous les coupez et les retirez." },
       { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur laveur. Depuis que j’en ai un, je n’aspire presque plus jamais moi-même." },
       { f: "Combien de temps dure un tel appareil\u202f?", a: "En général, c’est la batterie qui faiblit en premier, souvent au bout de quelques années. Vérifiez donc que vous pouvez la changer et qu’il existe des batteries de rechange. Bosch donne même dix ans de garantie sur le moteur de l’Unlimited 10." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des aspirateurs sans fil (numéro 2/2026)", text: "vainqueur Bosch Unlimited 10 BTS1042WAC (note 2,2), poils d’animaux et autonomie en puissance maximale, certains appareils seulement «\u202fpassable\u202f» ou «\u202finsuffisant\u202f»" },
+      { name: "Stiftung Warentest\u202f: test des aspirateurs sans fil (numéro 2/2025)", text: "Rowenta X-Force Flex 13.60 «\u202fbien\u202f» (note 2,5), y compris pour les poils d’animaux" },
+      { name: "testit.de\u202f: test du Bulelink Zenith G10 (avril 2026)", text: "note 2,4, batterie environ une heure au niveau le plus faible, cheveux autour de la brosse, saleté le long des bords" },
+      { name: "Autres tests", text: "notamment homeandsmart.de, TechRadar et ETM Testmagazin, sur l’autonomie, la recharge et le bac à poussière" },
+      { name: "SRF Kassensturz (télévision suisse) et Apotheken Umschau (magazine de santé allemand)", text: "poussière au vidage, conseil pour les personnes allergiques" },
+      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
+      { name: "Données des fabricants", text: "autonomie, temps de charge et batterie amovible, garantie de dix ans sur le moteur du Bosch Unlimited 10" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1416,6 +1442,15 @@ const PRODUKTE = [
       { f: "Comment garder tout propre ?", a: "Nettoyez régulièrement la buse, sinon des bactéries qui forment un film visqueux peuvent s’y installer. Stiftung Warentest conseille aussi de verser l’eau pétillante dans un verre ou une carafe pour la boire, au lieu de boire à la bouteille de gazéification. L’appareil lui-même se nettoie simplement avec un chiffon humide, il ne va pas au lave-vaisselle." },
       { f: "Pourquoi l’Aarke n’est-il pas là ?", a: "L’Aarke Carbonator 3 en inox est élégant et a aussi obtenu « bien » chez Stiftung Warentest (numéro 7/2025). Mais il a obtenu un moins bon résultat que les trois appareils présentés ici et coûte nettement plus cher." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des machines à eau pétillante (numéro 7/2025)", text: "vainqueur Grohe Blue Fizz (note 1,7), SodaStream Crystal 3.0 (note 1,8), meilleur rapport qualité-prix Mysoda Woody (note 2,3), Aarke Carbonator 3 «\u202fbien\u202f», de 37 à 61 litres par bouteille de gaz, conseils sur les bouteilles, le nettoyage et l’eau froide" },
+      { name: "Agence fédérale allemande de l’environnement (UBA)\u202f: l’eau du robinet (avril 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/trinkwasser-aus-der-leitung-nachhaltig-gesund", text: "très bonne qualité, la laisser d’abord couler après plus de 4 heures dans les tuyaux, un centime pour environ 5 litres (en allemand)" },
+      { name: "Ministère autrichien des Affaires sociales et de la Santé\u202f: rapport 2024 sur l’eau potable (octobre 2025)", url: "https://www.sozialministerium.gv.at/Services/Aktuelles/Archiv-2025/Trinkwasserbericht-2024---%C3%96sterreichs-Trinkwasser-bleibt-von-h%C3%B6chster-Qualit%C3%A4t.html", text: "qualité excellente, plus de 98\u00a0% des échantillons conformes (en allemand)" },
+      { name: "Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV)\u202f: eau potable", url: "https://www.blv.admin.ch/fr/eau-potable", text: "bonne qualité, l’un des aliments les plus strictement contrôlés" },
+      { name: "Association allemande des sources minérales (2025 et 2026)", text: "un peu moins de 130 litres d’eau minérale par personne et par an, dont plus de 70\u00a0% gazeuse, pour le calculateur" },
+      { name: "Finanztip, ÖKO-TEST et prix en magasin en Allemagne (octobre 2026)", text: "eau gazeuse du discounter environ 20 centimes, eau de marque souvent 60 centimes et plus, gaz environ 10 à 20 centimes le litre, pour le calculateur" },
+      { name: "Données des fabricants", text: "raccords, bouteilles de gaz et bouteilles des appareils, recherche de revendeurs SodaStream" }
+    ],
     profitipp: {
       titel: "Le froid pétille mieux",
       text: "L’eau froide absorbe nettement mieux le gaz carbonique. Mettez la bouteille remplie un moment au réfrigérateur avant de gazéifier, et elle pétillera plus fort."
@@ -1473,6 +1508,14 @@ const PRODUKTE = [
       { f: "À quoi faire attention avec un appareil à réservoir ?", a: "Remplissez le réservoir avant chaque lavage, le plus simple avec une carafe ou un verre doseur. Placez le tuyau d’évacuation dans l’évier et fixez-le pour qu’il ne glisse pas. Sinon, l’eau usée coule sur le plan de travail ou par terre. Beaucoup d’appareils à réservoir peuvent ensuite être raccordés à l’eau, le Bomann TSG 5702 est livré avec les tuyaux pour cela." },
       { f: "Pourquoi n’y a-t-il pas de notes de test ici ?", a: "Parce qu’il n’y a presque pas de tests. Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne, n’a pas testé de lave-vaisselle de table ces dernières années, ses tests actuels ne comportent que de grands appareils. Je n’ai pas non plus trouvé d’autres tests indépendants des appareils présentés. Je compare donc pour vous les données des fabricants, c’est-à-dire classe énergétique, eau, bruit et taille, et je vous dis honnêtement où les petits lave-vaisselle sont moins bons." },
       { f: "Et en Suisse ?", a: "Les appareils présentés sont conçus pour l’Allemagne et ont une fiche allemande. Elle ne rentre pas dans les prises suisses. C’est pourquoi je n’ai pas d’offre adaptée pour la Suisse pour le moment, mais j’en cherche une." }
+    ],
+    quellen: [
+      { name: "Université de Bonn\u202f: étude «\u202fA European Comparison of Cleaning Dishes by Hand\u202f»", text: "113 participants ont lavé douze couverts à la main, en moyenne avec 103 litres d’eau et 2,5 kWh en 79 minutes, pour le calculateur" },
+      { name: "Université de Bonn\u202f: communiqué sur l’utilisation peu efficace des lave-vaisselle (février 2011)", url: "https://www.uni-bonn.de/de/universitaet/presse-kommunikation/presseservice/archiv-pressemitteilungen/2011/058-2011", text: "200 foyers dans quatre pays, avec la machine en moyenne 50\u00a0% d’eau et 28\u00a0% d’énergie en moins qu’à la main, le prélavage coûte cher, beaucoup de machines tournent à moitié vides (en allemand)" },
+      { name: "Stiftung Warentest\u202f: test des lave-vaisselle (numéro 4/2026)", text: "aucun appareil de table dans le test, les appareils de 60 cm de large font mieux que les étroits de 45 cm" },
+      { name: "Which?, association britannique de consommateurs\u202f: guide des lave-vaisselle compacts (novembre 2025)", text: "les appareils compacts obtiennent généralement de moins bons résultats et consomment plus d’eau et d’électricité par assiette" },
+      { name: "Guides de Coolblue, Vattenfall, t-online et minihaushalt.de", text: "raccordement à l’eau avec filetage 3/4 de pouce, double vanne, évacuation, réservoir et ce qui rentre dedans" },
+      { name: "Données des fabricants et fiches produit de l’UE", text: "classe énergétique, eau, bruit et dimensions des appareils, plus un grand lave-vaisselle pour comparer" }
     ],
     profitipp: {
       titel: "Pour un lavage propre et économe",
