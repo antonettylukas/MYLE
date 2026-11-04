@@ -200,5 +200,111 @@ const RATGEBER = [
       { name: "ElCom (Swiss Federal Electricity Commission): newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27.7 centimes per kWh for a typical household in Switzerland in 2026" },
       { name: "Manufacturer information", text: "preheating and programmes according to Cosori" }
     ]
+  },
+  {
+    id: "saugroboter-haustiere",
+    produkt: "saugroboter",
+    geprueft: "2026-11-04",
+    titel: "Robot vacuum with pets: what matters?",
+    frage: "Robot vacuum with pets: what matters?",
+    seitenTitel: "Robot vacuum with pets: what matters?",
+    beschreibung: "Which brush, base station and camera a robot vacuum and mop needs with a dog or cat, how your pet gets used to it and when it's not for you.",
+    kurzantwort: "Three things: a brush that pet hair hardly wraps around, a base station that empties it, and a camera that usually recognises dog poo and drives around it. In the app you also block off the bowl, litter tray and sleeping spot. With a pet it's especially worth it: if you vacuum every day because of the hair, my calculator says it saves you around two hours a week on 60 m².",
+    abschnitte: [
+      {
+        titel: "How much time you save with a pet",
+        absaetze: [
+          "If you vacuum every day because of the hair, my calculator says it saves you just under two hours a week on 60 m², including getting ready. If you also mop once a week, it's just over two. That adds up to 99 to 119 hours a year; if you vacuum twice and mop once a week, it's 45.",
+          "The robot, on the other hand, runs every day on a schedule, and you hardly have to do anything for it."
+        ]
+      },
+      {
+        titel: "My experience after 14 years",
+        art: "erfahrung",
+        absaetze: [
+          "I've been using robot vacuums for 14 years and since then I've hardly ever had to vacuum or mop myself. The most important trick: set a schedule. Then it cleans while I'm at work, and I come home to a clean flat every evening."
+        ]
+      },
+      {
+        titel: "A brush that hair hardly wraps around",
+        absaetze: [
+          "Pet hair quickly wraps around bristle brushes. Main brushes made of rubber or with an anti-tangle system are better. Long hair can still get caught on them sometimes, though.",
+          "On hard floors many robots clean well; on carpet the difference shows. According to Stiftung Warentest, the rating for picking up fibres on carpet is what matters for pet owners. The grades there range from good to poor."
+        ]
+      },
+      {
+        titel: "A base station that empties it",
+        absaetze: [
+          "The bin in the robot is small and quickly full of fur. Without a base station you'll often empty it yourself every day with a pet. A base station empties it after cleaning, and you only change the bag now and then.",
+          "Depending on the model, that's due every few weeks to months, sooner with a pet that sheds. The bag usually closes when you take it out, so you hardly come into contact with dust and hair."
+        ]
+      },
+      {
+        titel: "A camera that recognises dog poo",
+        absaetze: [
+          "If a robot drives through dog poo or vomit, it spreads it all over your home. Without a camera it usually can't recognise anything like that. Models with a camera and AI usually recognise it and drive around it: in tests with fake dog poo, good models avoided almost all of it.",
+          "There's no guarantee, though. The runnier and flatter an accident is, the more likely even a camera will miss it. If your pet is still young, already old or currently ill, take a quick look at the floor before it starts."
+        ]
+      },
+      {
+        titel: "Block off the bowl, litter tray and sleeping spot",
+        absaetze: [
+          "In the app, set up no-go zones around the food and water bowls, the litter tray and the sleeping spot. That way the robot leaves the bowls alone, and your pet has places where it isn't disturbed.",
+          "A no-go zone at the litter tray makes double sense: clumps and damp litter don't belong in the robot."
+        ]
+      },
+      {
+        titel: "How to get your pet used to the robot",
+        absaetze: [
+          "At around 55 to 70 decibels a robot is quieter than a normal vacuum cleaner. Only the base station gets loud for a moment when it empties it. Still, get your pet used to it in small steps.",
+          "First let your pet sniff the robot while it's switched off. Then start it in another room, on a quiet setting and while you're at home. If your pet stays calm or gets curious, give it a treat. Never force it towards the robot.",
+          "A retreat the robot can't reach is important. Only once your pet stays relaxed do you let it run on a schedule while you're out, with a dog for example during the walk."
+        ]
+      },
+      {
+        titel: "More often with a pet: the brush",
+        absaetze: [
+          "With a pet, check the main brush about once a week and pull off any hair that has wrapped around it. Some manufacturers say every two weeks, which can be too rarely with a pet that sheds. Hair also collects on the side brush and wheels."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Which models I recommend, including for homes with pets, and how much time you save with your own numbers is on my robot vacuum and mop page.",
+      knopf: "To the robot vacuum and mop with calculator"
+    },
+    wannNicht: [
+      "Your pet often has accidents, for example because it isn't house-trained yet, and you don't want a model with a camera.",
+      "Your pet still panics as soon as the robot moves, even after weeks of gentle getting used to it.",
+      "There's no room for the base station: without it you'll often empty the bin yourself every day with a pet.",
+      "You mainly have deep-pile carpet: many robots don't get hair out of it well, and some get stuck.",
+      "Bowls, beds and toys are somewhere different every day, and you don't want to tidy them away or block them off in the app."
+    ],
+    fragen: [
+      { f: "Does the robot recognise dog poo?", a: "With a camera and AI usually yes, but there's no guarantee. In tests with fake poo, good models almost always drove around it. Even they are more likely to miss runny things like vomit, and without a camera a robot usually can't recognise anything like that." },
+      { f: "Will my dog or cat be afraid of the robot?", a: "Some pets are at first, even though it's quieter than a normal vacuum cleaner. With patience many get used to it: first get to know it switched off, then let it run in the next room while you're there." },
+      { f: "Can it vacuum up cat litter?", a: "It can vacuum up loose, dry litter. Clumps and damp litter don't belong in the robot, though. So block off a small zone around the litter tray, and it won't go there at all." },
+      { f: "Does the robot help with a pet hair allergy?", a: "It can reduce the exposure because it vacuums regularly. Look for a genuine HEPA filter and a base station with a bag: then the fine dust stays in the device, and you hardly come into contact with it when changing the bag. It can't treat an allergy, though." },
+      { f: "How much suction power do I need for pet hair?", a: "The recommendations vary widely: in guides you'll read anything from a few thousand to over 20,000 pascals. The test result on carpet is more reliable, because that's where the differences show. The brush matters at least as much." }
+    ],
+    quellen: [
+      { name: "My calculator on the robot vacuum and mop page", text: "the times for 60 m² with daily vacuuming with and without mopping and with vacuuming twice and mopping once, the assumptions are listed there under “How I calculate”" },
+      { name: "Stiftung Warentest: robot vacuums test (June 2026)", text: "obstacle test with a fake dog poo, for pet owners picking up fibres on carpet counts (from good to poor), downgrade for problems with long hair, far more good robots for hard floors than for carpet" },
+      { name: "Stiftung Warentest: robot vacuum and mop test (December 2025)", text: "most robots don't convince on carpet" },
+      { name: "c't (heise): robot vacuums with obstacle detection test (December 2021)", text: "three robots with an AI camera always reliably avoided fake dog and cat poo" },
+      { name: "Reviewed: iRobot Roomba j7+ versus Samsung Jetbot AI+ (June 2023)", text: "test with fake dog poo, the Roomba without a single mishap, the Jetbot briefly bumped one and then avoided it" },
+      { name: "smarthomeassistent.de: does a robot vacuum recognise cat vomit? (May 2023)", text: "avoids fake poo, no guarantee with vomit, no known robot recognises flat, runny accidents, otherwise it spreads the mess around the home" },
+      { name: "smarthomeassistent.de: robot vacuums for pet hair (August 2026) and self-emptying station with or without dust bag (June 2023)", text: "you remove tangled hair by hand, a bag lasts one to several months, closes when taken out and helps allergy sufferers" },
+      { name: "netzwelt.de: robot vacuums for pet hair (February 2026)", text: "hair gets caught in bristles, rubber and anti-tangle brushes are better, without a station empty several times a day, bag after about two months, AI detection for pets that aren't house-trained, HEPA filter, run during walk time, no-go zones at the sleeping spot" },
+      { name: "netzwelt.de: robot vacuums for carpets (February 2026)", text: "deep pile pushes even top models to their limits" },
+      { name: "saugroboter-portal.de: which main brushes do robot vacuums have? (September 2026)", text: "long hair wraps around bristles faster, it gets caught much less on rubber brushes, the better choice with pets" },
+      { name: "home&smart: robot vacuums for pet hair and robot vacuums for allergy sufferers (both October 2026)", text: "rubber main brushes and anti-tangle systems, small dust bins in the robot, suction from 20,000 Pa with several pets, HEPA filter from class H13, dust sealed airtight in the bag" },
+      { name: "testundtipps.de: robot vacuum maintenance (October 2026)", text: "clean the main brush every week or every two weeks depending on the manufacturer, with pets and long hair that can be too rarely, bag every 2 to 4 months" },
+      { name: "tink: robot vacuums with dogs and cats (October 2026)", text: "get to know it switched off first, start in the next room, at first only when you're there, retreats, treats and patience" },
+      { name: "robo-freunde.de: cats and robot vacuums, robot vacuums for cat litter and robot vacuums and cat vomit (2023)", text: "getting used to it in small steps, never force, no-go zones around bowl and litter tray, check the floor before starting, the runnier, the harder it is to recognise" },
+      { name: "Mähroboter Guru: getting a cat used to a robot vacuum (July 2024)", text: "let it sniff while switched off, start in the next room on a quiet setting, treats, never force, supervised at first, then on a schedule" },
+      { name: "netzwelt.de: robot vacuum noise (February 2026) and self-emptying stations (March 2026)", text: "usually 60 to 70 dB, the station 80 to 90 dB for a few seconds, bags close themselves when taken out and last two to three months, pet hair creates a particularly large amount of dirt" },
+      { name: "smarthomeassistent.de: quiet robot vacuums (August 2026) and testsiegertv.com: self-emptying stations (July 2021)", text: "usually 55 to 65 dB, emptying in the station up to 90 dB for a few seconds" },
+      { name: "Manufacturer information and manufacturer guides", text: "Ecovacs (no guarantee with pet poo, no-go zones around beds and litter trays, never vacuum up wet or clumped litter, dry litter is fine), Dreame (flat, wet accidents hard to recognise, no-go zones around litter tray, beds and bowls, check the floor briefly), MOVA (bags fill faster with pets, remove hair from brushes and wheels possibly every week), Roborock (regularly remove hair from the wheel axles and the side brush), Ecovacs (pet hair wraps around the wheel axle)" }
+    ]
   }
 ];

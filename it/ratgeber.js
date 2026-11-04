@@ -200,5 +200,111 @@ const RATGEBER = [
       { name: "ElCom (Commissione federale dell’energia elettrica): newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 centesimi per kWh per una famiglia tipo in Svizzera nel 2026" },
       { name: "Dati dei produttori", text: "preriscaldamento e programmi secondo Cosori" }
     ]
+  },
+  {
+    id: "saugroboter-haustiere",
+    produkt: "saugroboter",
+    geprueft: "2026-11-04",
+    titel: "Robot aspirapolvere con animali: cosa conta?",
+    frage: "Robot aspirapolvere con animali: cosa conta?",
+    seitenTitel: "Robot aspirapolvere con animali: cosa conta?",
+    beschreibung: "Quale spazzola, base e telecamera servono a un robot aspirapolvere lavapavimenti con cane o gatto, come si abitua il tuo animale e quando non fa per te.",
+    kurzantwort: "Tre cose: una spazzola intorno a cui i peli si avvolgono poco, una base che lo svuota e una telecamera che di solito riconosce la cacca del cane e ci gira intorno. Nell’app blocchi anche ciotola, lettiera e cuccia. Proprio con un animale conviene: se passi l’aspirapolvere ogni giorno per via dei peli, secondo il mio calcolatore su 60 m² ti fa risparmiare circa due ore a settimana.",
+    abschnitte: [
+      {
+        titel: "Quanto tempo risparmi con un animale",
+        absaetze: [
+          "Se passi l’aspirapolvere ogni giorno per via dei peli, secondo il mio calcolatore su 60 m² ti fa risparmiare poco meno di due ore a settimana, preparazione compresa. Se lavi anche i pavimenti una volta a settimana, sono poco più di due. In un anno fanno 99–119 ore; con due passate di aspirapolvere e un lavaggio a settimana sono 45.",
+          "Il robot invece pulisce ogni giorno secondo la programmazione, e tu non devi fare quasi niente."
+        ]
+      },
+      {
+        titel: "La mia esperienza dopo 14 anni",
+        art: "erfahrung",
+        absaetze: [
+          "Uso robot aspirapolvere da 14 anni e da allora non ho quasi più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
+        ]
+      },
+      {
+        titel: "Una spazzola intorno a cui i peli si avvolgono poco",
+        absaetze: [
+          "I peli degli animali si avvolgono in fretta intorno alle spazzole con setole. Meglio le spazzole principali in gomma o con un sistema anti-groviglio. Anche lì, però, i peli lunghi a volte restano impigliati.",
+          "Sui pavimenti duri molti robot puliscono bene, sui tappeti si vede la differenza. Secondo Stiftung Warentest, per chi ha animali conta il voto per la raccolta delle fibre sui tappeti. Lì i voti vanno da buono a insufficiente."
+        ]
+      },
+      {
+        titel: "Una base che lo svuota",
+        absaetze: [
+          "Il contenitore nel robot è piccolo e con il pelo si riempie in fretta. Senza base, con un animale spesso lo svuoti da solo ogni giorno. Una base lo svuota dopo la pulizia, e tu cambi solo ogni tanto il sacchetto.",
+          "A seconda del modello va fatto ogni qualche settimana o mese, prima con un animale che perde molto pelo. Di solito il sacchetto si chiude quando lo estrai, così non tocchi quasi polvere e peli."
+        ]
+      },
+      {
+        titel: "Una telecamera che riconosce la cacca del cane",
+        absaetze: [
+          "Se un robot passa sopra la cacca del cane o del vomito, lo spande per tutta la casa. Senza telecamera, di norma non riconosce cose del genere. I modelli con telecamera e IA di solito le riconoscono e ci girano intorno: nei test con cacche finte, i modelli buoni le hanno evitate quasi tutte.",
+          "Una garanzia però non c’è. Più un incidente è liquido e piatto, più è facile che sfugga anche a una telecamera. Se il tuo animale è ancora giovane, già anziano o in questo momento malato, dai una rapida occhiata al pavimento prima della partenza."
+        ]
+      },
+      {
+        titel: "Bloccare ciotola, lettiera e cuccia",
+        absaetze: [
+          "Nell’app crea delle zone vietate intorno alle ciotole di cibo e acqua, alla lettiera e alla cuccia. Così il robot lascia stare le ciotole, e il tuo animale ha dei posti dove nessuno lo disturba.",
+          "Alla lettiera la zona vietata serve due volte: grumi e lettiera umida non devono finire nel robot."
+        ]
+      },
+      {
+        titel: "Come abituare il tuo animale al robot",
+        absaetze: [
+          "Con circa 55–70 decibel un robot è più silenzioso di un normale aspirapolvere. Diventa rumorosa per un attimo solo la base, quando lo svuota. Abitua comunque il tuo animale a piccoli passi.",
+          "Prima lascia che il tuo animale annusi il robot spento. Poi fallo partire in un’altra stanza, a potenza bassa e mentre sei in casa. Se il tuo animale resta tranquillo o si incuriosisce, dagli un premio. Non costringerlo mai ad avvicinarsi al robot.",
+          "È importante un rifugio dove il robot non arriva. Solo quando il tuo animale resta rilassato lo fai partire con la programmazione mentre sei fuori, con un cane per esempio durante la passeggiata."
+        ]
+      },
+      {
+        titel: "Con un animale più spesso: la spazzola",
+        absaetze: [
+          "Con un animale controlla la spazzola principale circa una volta a settimana e togli i peli avvolti. Alcuni produttori indicano ogni due settimane, che con un animale che perde molto pelo può essere troppo poco. I peli si accumulano anche sulla spazzola laterale e sulle ruote."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quali modelli consiglio, anche per le case con animali, e quanto tempo risparmi con i tuoi numeri lo trovi nella mia pagina sul robot aspirapolvere lavapavimenti.",
+      knopf: "Al robot aspirapolvere lavapavimenti con calcolatore"
+    },
+    wannNicht: [
+      "Al tuo animale capitano spesso incidenti, per esempio perché non sa ancora fare i bisogni fuori, e non vuoi un modello con telecamera.",
+      "Il tuo animale va ancora nel panico appena il robot si muove, anche dopo settimane di abitudine graduale.",
+      "Manca lo spazio per la base: senza, con un animale spesso svuoti il contenitore da solo ogni giorno.",
+      "In casa hai soprattutto moquette a pelo lungo: lì molti robot non tirano fuori bene i peli, e alcuni si impantanano.",
+      "Ciotole, cucce e giochi sono ogni giorno in un posto diverso, e non vuoi né metterli via né bloccarli nell’app."
+    ],
+    fragen: [
+      { f: "Il robot riconosce la cacca del cane?", a: "Con telecamera e IA di solito sì, ma una garanzia non c’è. Nei test con cacche finte i modelli buoni ci sono quasi sempre girati intorno. Anche a loro sfugge più facilmente qualcosa di liquido come il vomito, e senza telecamera un robot di norma non riconosce cose del genere." },
+      { f: "Il mio cane o il mio gatto avrà paura del robot?", a: "Alcuni animali all’inizio sì, anche se è più silenzioso di un normale aspirapolvere. Con pazienza molti si abituano: prima conoscerlo spento, poi farlo girare nella stanza accanto mentre ci sei." },
+      { f: "Può aspirare la lettiera del gatto?", a: "La lettiera asciutta e sparsa la può aspirare. Grumi e lettiera umida però non devono finire nel robot. Blocca quindi una piccola zona intorno alla lettiera, così non ci va proprio." },
+      { f: "Il robot aiuta con l’allergia al pelo degli animali?", a: "Può ridurre l’esposizione, perché aspira regolarmente. Scegli un vero filtro HEPA e una base con sacchetto: così la polvere fine resta nell’apparecchio, e quando cambi il sacchetto non la tocchi quasi. Curare un’allergia, però, non può." },
+      { f: "Quanta potenza di aspirazione serve per i peli degli animali?", a: "I consigli sono molto diversi: nelle guide si legge di tutto, da qualche migliaio a oltre 20.000 pascal. Più affidabile è il risultato dei test sui tappeti, perché lì si vedono le differenze. La spazzola conta almeno altrettanto." }
+    ],
+    quellen: [
+      { name: "Il mio calcolatore nella pagina del robot aspirapolvere lavapavimenti", text: "i tempi per 60 m² con aspirapolvere ogni giorno con e senza lavaggio e con due passate e un lavaggio, le ipotesi sono lì sotto „Come calcolo“" },
+      { name: "Stiftung Warentest: test dei robot aspirapolvere (giugno 2026)", text: "test degli ostacoli con una cacca di cane finta, per chi ha animali conta la raccolta delle fibre sui tappeti (da buono a insufficiente), voto più basso per problemi con i peli lunghi, molti più robot buoni per pavimenti duri che per tappeti" },
+      { name: "Stiftung Warentest: test dei robot aspirapolvere lavapavimenti (dicembre 2025)", text: "sui tappeti la maggior parte dei robot non convince" },
+      { name: "c’t (heise): test dei robot aspirapolvere con riconoscimento degli ostacoli (dicembre 2021)", text: "tre robot con telecamera IA hanno sempre evitato con sicurezza cacche finte di cane e gatto" },
+      { name: "Reviewed: iRobot Roomba j7+ contro Samsung Jetbot AI+ (giugno 2023)", text: "test con cacche di cane finte, il Roomba senza nessun incidente, il Jetbot ne ha toccata una per un attimo e poi l’ha evitata" },
+      { name: "smarthomeassistent.de: un robot aspirapolvere riconosce il vomito di gatto? (maggio 2023)", text: "evita le cacche finte, nessuna garanzia con il vomito, nessun robot conosciuto riconosce incidenti piatti e liquidi, altrimenti spande il disastro per casa" },
+      { name: "smarthomeassistent.de: robot aspirapolvere per peli di animali (agosto 2026) e base di svuotamento con o senza sacchetto (giugno 2023)", text: "i peli aggrovigliati si tolgono a mano, un sacchetto dura da uno a più mesi, si chiude quando lo estrai e aiuta chi soffre di allergie" },
+      { name: "netzwelt.de: robot aspirapolvere per peli di animali (febbraio 2026)", text: "i peli si impigliano nelle setole, meglio spazzole in gomma e anti-groviglio, senza base svuotare più volte al giorno, sacchetto dopo circa due mesi, riconoscimento IA per animali che non sanno ancora fare i bisogni fuori, filtro HEPA, pulizia durante la passeggiata, zone vietate alla cuccia" },
+      { name: "netzwelt.de: robot aspirapolvere per tappeti (febbraio 2026)", text: "il pelo lungo mette in difficoltà anche i modelli di fascia alta" },
+      { name: "saugroboter-portal.de: quali spazzole principali hanno i robot aspirapolvere? (settembre 2026)", text: "i peli lunghi si avvolgono più in fretta intorno alle setole, sulle spazzole in gomma si impigliano molto meno, la scelta migliore con animali" },
+      { name: "home&smart: robot aspirapolvere contro i peli di animali e robot aspirapolvere per allergici (entrambi ottobre 2026)", text: "spazzole principali gommate e sistemi anti-groviglio, piccoli contenitori della polvere nel robot, aspirazione da 20.000 Pa con più animali, filtro HEPA dalla classe H13, polvere chiusa ermeticamente nel sacchetto" },
+      { name: "testundtipps.de: manutenzione dei robot aspirapolvere (ottobre 2026)", text: "pulire la spazzola principale ogni settimana o ogni due settimane a seconda del produttore, con animali e peli lunghi può essere troppo poco, sacchetto ogni 2–4 mesi" },
+      { name: "tink: robot aspirapolvere con cane e gatto (ottobre 2026)", text: "prima conoscerlo spento, farlo partire nella stanza accanto, all’inizio solo quando ci sei, rifugi, premi e pazienza" },
+      { name: "robo-freunde.de: gatto e robot aspirapolvere, robot aspirapolvere per la lettiera e robot aspirapolvere e vomito di gatto (2023)", text: "abitudine a piccoli passi, mai costringere, zone vietate intorno a ciotola e lettiera, controllare il pavimento prima della partenza, più è liquido, più è difficile riconoscerlo" },
+      { name: "Mähroboter Guru: abituare un gatto al robot aspirapolvere (luglio 2024)", text: "farlo annusare spento, partire nella stanza accanto a potenza bassa, premi, mai costringere, prima sotto controllo, poi con la programmazione" },
+      { name: "netzwelt.de: rumorosità dei robot aspirapolvere (febbraio 2026) e basi di svuotamento (marzo 2026)", text: "di solito 60–70 dB, la base 80–90 dB per qualche secondo, i sacchetti si chiudono da soli quando li estrai e durano due o tre mesi, con i peli degli animali si accumula molto sporco" },
+      { name: "smarthomeassistent.de: robot aspirapolvere silenziosi (agosto 2026) e testsiegertv.com: basi di svuotamento (luglio 2021)", text: "di solito 55–65 dB, svuotamento nella base fino a 90 dB per qualche secondo" },
+      { name: "Dati e guide dei produttori", text: "Ecovacs (nessuna garanzia con gli escrementi, zone vietate intorno a cucce e lettiera, mai aspirare lettiera bagnata o agglomerata, quella asciutta sì), Dreame (incidenti piatti e umidi difficili da riconoscere, zone vietate intorno a lettiera, cucce e ciotole, controllare rapidamente il pavimento), MOVA (sacchetti pieni prima con animali, togliere i peli da spazzole e ruote anche ogni settimana), Roborock (togliere regolarmente i peli dagli assi delle ruote e dalla spazzola laterale), Ecovacs (i peli si avvolgono intorno all’asse della ruota)" }
+    ]
   }
 ];

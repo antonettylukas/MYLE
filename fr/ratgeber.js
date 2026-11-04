@@ -200,5 +200,111 @@ const RATGEBER = [
       { name: "ElCom (Commission fédérale de l’électricité) : newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 centimes le kWh pour un ménage type en Suisse en 2026" },
       { name: "Indications des fabricants", text: "préchauffage et programmes selon Cosori" }
     ]
+  },
+  {
+    id: "saugroboter-haustiere",
+    produkt: "saugroboter",
+    geprueft: "2026-11-04",
+    titel: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
+    frage: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
+    seitenTitel: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
+    beschreibung: "La brosse, la station et la caméra dont un robot aspirateur laveur a besoin avec un chien ou un chat, comment votre animal s’y habitue et quand il ne vous convient pas.",
+    kurzantwort: "Trois choses : une brosse autour de laquelle les poils s’enroulent à peine, une station qui le vide, et une caméra qui reconnaît le plus souvent les crottes de chien et les contourne. Dans l’appli, vous bloquez en plus la gamelle, la litière et le coin couchage. Avec un animal, il vaut particulièrement le coup : si vous passez l’aspirateur tous les jours à cause des poils, mon calculateur indique qu’il vous fait gagner environ deux heures par semaine sur 60 m².",
+    abschnitte: [
+      {
+        titel: "Le temps gagné avec un animal",
+        absaetze: [
+          "Si vous passez l’aspirateur tous les jours à cause des poils, mon calculateur indique qu’il vous fait gagner un peu moins de deux heures par semaine sur 60 m², préparation comprise. Si vous passez en plus la serpillière une fois par semaine, c’est un peu plus de deux heures. Cela fait 99 à 119 heures par an ; avec deux passages d’aspirateur et un de serpillière par semaine, 45.",
+          "Le robot, lui, passe tous les jours selon le programme, et vous n’avez presque rien à faire pour cela."
+        ]
+      },
+      {
+        titel: "Mon expérience après 14 ans",
+        art: "erfahrung",
+        absaetze: [
+          "J’utilise des robots aspirateurs depuis 14 ans et depuis, je n’ai presque plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante : régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un logement propre."
+        ]
+      },
+      {
+        titel: "Une brosse autour de laquelle les poils s’enroulent à peine",
+        absaetze: [
+          "Les poils d’animaux s’enroulent vite autour des brosses à poils. Les brosses principales en caoutchouc ou avec un système anti-emmêlement sont meilleures. Les poils longs peuvent quand même parfois s’y accrocher.",
+          "Sur sol dur, beaucoup de robots nettoient bien ; sur tapis, la différence se voit. Selon Stiftung Warentest, ce qui compte pour les propriétaires d’animaux, c’est la note pour le ramassage des fibres sur tapis. Les notes y vont de bon à insuffisant."
+        ]
+      },
+      {
+        titel: "Une station qui le vide",
+        absaetze: [
+          "Le bac du robot est petit et vite plein de poils. Sans station, avec un animal, vous le videz souvent vous-même tous les jours. Une station le vide après le nettoyage, et vous ne changez plus le sac que de temps en temps.",
+          "Selon le modèle, c’est à faire toutes les quelques semaines à quelques mois, plus tôt avec un animal qui perd ses poils. Le plus souvent, le sac se ferme quand vous le retirez, vous ne touchez ainsi presque pas à la poussière et aux poils."
+        ]
+      },
+      {
+        titel: "Une caméra qui reconnaît les crottes de chien",
+        absaetze: [
+          "Si un robot passe dans une crotte de chien ou un vomi, il l’étale dans tout le logement. Sans caméra, il ne reconnaît en général pas ce genre de chose. Les modèles avec caméra et IA le reconnaissent le plus souvent et le contournent : dans des tests avec de fausses crottes de chien, les bons modèles les ont presque toutes évitées.",
+          "Il n’y a cependant aucune garantie. Plus un accident est liquide et plat, plus même une caméra risque de le manquer. Si votre animal est encore jeune, déjà âgé ou malade en ce moment, jetez un rapide coup d’œil au sol avant le départ."
+        ]
+      },
+      {
+        titel: "Bloquer la gamelle, la litière et le coin couchage",
+        absaetze: [
+          "Dans l’appli, créez des zones interdites autour des gamelles d’eau et de nourriture, de la litière et du coin couchage. Le robot laisse ainsi les gamelles tranquilles, et votre animal a des endroits où il n’est pas dérangé.",
+          "À la litière, la zone interdite est doublement utile : les grumeaux et la litière humide n’ont rien à faire dans le robot."
+        ]
+      },
+      {
+        titel: "Comment habituer votre animal au robot",
+        absaetze: [
+          "Avec environ 55 à 70 décibels, un robot est plus silencieux qu’un aspirateur normal. Seule la station devient bruyante un court instant quand elle le vide. Habituez quand même votre animal par petites étapes.",
+          "Laissez d’abord votre animal renifler le robot éteint. Ensuite, démarrez-le dans une autre pièce, en mode silencieux et pendant que vous êtes à la maison. Si votre animal reste calme ou devient curieux, donnez-lui une friandise. Ne le forcez jamais à s’approcher du robot.",
+          "Un refuge que le robot ne peut pas atteindre est important. Ce n’est que lorsque votre animal reste détendu que vous le laissez rouler selon le programme pendant votre absence, avec un chien par exemple pendant la promenade."
+        ]
+      },
+      {
+        titel: "Plus souvent avec un animal : la brosse",
+        absaetze: [
+          "Avec un animal, regardez la brosse principale environ une fois par semaine et retirez les poils enroulés. Certains fabricants indiquent toutes les deux semaines, ce qui peut être trop rare avec un animal qui perd ses poils. Des poils s’accumulent aussi sur la brosse latérale et les roues."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Les modèles que je recommande, y compris pour les foyers avec animaux, et le temps que vous gagnez avec vos propres chiffres se trouvent sur ma page du robot aspirateur laveur.",
+      knopf: "Vers le robot aspirateur laveur et son calculateur"
+    },
+    wannNicht: [
+      "Votre animal a souvent des accidents, par exemple parce qu’il n’est pas encore propre, et vous ne voulez pas de modèle avec caméra.",
+      "Votre animal panique encore dès que le robot roule, même après des semaines d’habituation en douceur.",
+      "La place manque pour la station : sans elle, avec un animal, vous videz souvent le bac vous-même tous les jours.",
+      "Vous avez surtout de la moquette à poils longs : beaucoup de robots n’en retirent pas bien les poils, et certains s’y enlisent.",
+      "Gamelles, paniers et jouets sont chaque jour ailleurs, et vous ne voulez ni les ranger ni les bloquer dans l’appli."
+    ],
+    fragen: [
+      { f: "Le robot reconnaît-il les crottes de chien ?", a: "Avec une caméra et l’IA, le plus souvent oui, mais il n’y a aucune garantie. Dans des tests avec de fausses crottes, les bons modèles les ont presque toujours contournées. Même eux manquent plus facilement ce qui est liquide comme un vomi, et sans caméra un robot ne reconnaît en général pas ce genre de chose." },
+      { f: "Mon chien ou mon chat aura-t-il peur du robot ?", a: "Certains animaux au début, oui, même s’il est plus silencieux qu’un aspirateur normal. Avec de la patience, beaucoup s’y habituent : d’abord le découvrir éteint, puis le laisser rouler dans la pièce d’à côté pendant que vous êtes là." },
+      { f: "Peut-il aspirer la litière pour chat ?", a: "Il peut aspirer la litière sèche et éparpillée. Les grumeaux et la litière humide n’ont cependant rien à faire dans le robot. Bloquez donc une petite zone autour de la litière, il n’y ira alors pas du tout." },
+      { f: "Le robot aide-t-il en cas d’allergie aux poils d’animaux ?", a: "Il peut réduire l’exposition, car il aspire régulièrement. Choisissez un vrai filtre HEPA et une station avec sac : la poussière fine reste alors dans l’appareil, et vous n’y touchez presque pas en changeant le sac. Il ne peut cependant pas traiter une allergie." },
+      { f: "Quelle puissance d’aspiration faut-il pour les poils d’animaux ?", a: "Les recommandations varient énormément : dans les guides, on lit de quelques milliers à plus de 20 000 pascals. Le résultat des tests sur tapis est plus fiable, car c’est là que se voient les différences. La brosse compte au moins autant." }
+    ],
+    quellen: [
+      { name: "Mon calculateur sur la page du robot aspirateur laveur", text: "les temps pour 60 m² avec aspirateur tous les jours avec et sans serpillière et avec deux passages d’aspirateur et un de serpillière, les hypothèses y figurent sous « Comment je calcule »" },
+      { name: "Stiftung Warentest : test des robots aspirateurs (juin 2026)", text: "test d’obstacles avec une fausse crotte de chien, pour les propriétaires d’animaux compte le ramassage des fibres sur tapis (de bon à insuffisant), déclassement en cas de problème avec les poils longs, bien plus de bons robots pour sol dur que pour tapis" },
+      { name: "Stiftung Warentest : test des robots aspirateurs laveurs (décembre 2025)", text: "la plupart des robots ne convainquent pas sur tapis" },
+      { name: "c’t (heise) : test des robots aspirateurs avec détection d’obstacles (décembre 2021)", text: "trois robots avec caméra IA ont toujours évité de façon sûre de fausses crottes de chien et de chat" },
+      { name: "Reviewed : iRobot Roomba j7+ contre Samsung Jetbot AI+ (juin 2023)", text: "test avec de fausses crottes de chien, le Roomba sans aucun accroc, le Jetbot en a touché une brièvement avant de l’éviter" },
+      { name: "smarthomeassistent.de : un robot aspirateur reconnaît-il le vomi de chat ? (mai 2023)", text: "contourne les fausses crottes, aucune garantie avec le vomi, aucun robot connu ne reconnaît les accidents plats et liquides, sinon il étale le dégât dans le logement" },
+      { name: "smarthomeassistent.de : robots aspirateurs pour poils d’animaux (août 2026) et station de vidage avec ou sans sac (juin 2023)", text: "on retire à la main les poils emmêlés, un sac tient un à plusieurs mois, se ferme quand on le retire et aide les allergiques" },
+      { name: "netzwelt.de : robots aspirateurs pour poils d’animaux (février 2026)", text: "les poils se prennent dans les poils de brosse, les brosses en caoutchouc et anti-emmêlement sont meilleures, sans station vider plusieurs fois par jour, sac après environ deux mois, détection IA pour les animaux pas encore propres, filtre HEPA, passage pendant la promenade, zones interdites au coin couchage" },
+      { name: "netzwelt.de : robots aspirateurs pour tapis (février 2026)", text: "les poils longs poussent même les modèles haut de gamme à leurs limites" },
+      { name: "saugroboter-portal.de : quelles brosses principales pour les robots aspirateurs ? (septembre 2026)", text: "les poils longs s’enroulent plus vite autour des poils de brosse, ils s’accrochent bien moins aux brosses en caoutchouc, le meilleur choix avec des animaux" },
+      { name: "home&smart : robots aspirateurs contre les poils d’animaux et robots aspirateurs pour allergiques (tous deux octobre 2026)", text: "brosses principales caoutchoutées et systèmes anti-emmêlement, petits bacs à poussière dans le robot, aspiration à partir de 20 000 Pa avec plusieurs animaux, filtre HEPA à partir de la classe H13, poussière enfermée hermétiquement dans le sac" },
+      { name: "testundtipps.de : entretien des robots aspirateurs (octobre 2026)", text: "nettoyer la brosse principale chaque semaine ou toutes les deux semaines selon le fabricant, avec des animaux et des poils longs cela peut être trop rare, sac tous les 2 à 4 mois" },
+      { name: "tink : robots aspirateurs avec chien et chat (octobre 2026)", text: "le découvrir d’abord éteint, le démarrer dans la pièce d’à côté, au début seulement quand vous êtes là, refuges, friandises et patience" },
+      { name: "robo-freunde.de : chat et robot aspirateur, robots aspirateurs pour litière et robot aspirateur et vomi de chat (2023)", text: "habituation par petites étapes, ne jamais forcer, zones interdites autour de la gamelle et de la litière, vérifier le sol avant le départ, plus c’est liquide, plus c’est difficile à reconnaître" },
+      { name: "Mähroboter Guru : habituer un chat à un robot aspirateur (juillet 2024)", text: "le laisser renifler éteint, démarrer dans la pièce d’à côté en mode silencieux, friandises, ne jamais forcer, d’abord sous surveillance, puis selon le programme" },
+      { name: "netzwelt.de : bruit des robots aspirateurs (février 2026) et stations de vidage (mars 2026)", text: "le plus souvent 60 à 70 dB, la station 80 à 90 dB pendant quelques secondes, les sacs se ferment seuls quand on les retire et tiennent deux à trois mois, les poils d’animaux font beaucoup de saleté" },
+      { name: "smarthomeassistent.de : robots aspirateurs silencieux (août 2026) et testsiegertv.com : stations de vidage (juillet 2021)", text: "le plus souvent 55 à 65 dB, vidage dans la station jusqu’à 90 dB pendant quelques secondes" },
+      { name: "Indications et guides des fabricants", text: "Ecovacs (aucune garantie avec les crottes, zones interdites autour des paniers et de la litière, ne jamais aspirer de litière mouillée ou agglomérée, la litière sèche oui), Dreame (accidents plats et humides difficiles à reconnaître, zones interdites autour de la litière, des paniers et des gamelles, vérifier rapidement le sol), MOVA (sacs plus vite pleins avec des animaux, retirer les poils des brosses et des roues éventuellement chaque semaine), Roborock (retirer régulièrement les poils autour des axes de roues et de la brosse latérale), Ecovacs (les poils s’enroulent autour de l’axe de roue)" }
+    ]
   }
 ];

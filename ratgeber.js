@@ -278,5 +278,111 @@ const RATGEBER = [
       { name: "ElCom (Eidgenössische Elektrizitätskommission): Newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 Rappen pro kWh für einen typischen Haushalt in der Schweiz 2026" },
       { name: "Herstellerangaben", text: "Vorheizen und Programme laut Cosori" }
     ]
+  },
+  {
+    id: "saugroboter-haustiere",
+    produkt: "saugroboter",
+    geprueft: "2026-11-04",
+    titel: "Saugroboter mit Haustieren: Worauf kommt es an?",
+    frage: "Saugroboter mit Haustieren: Worauf kommt es an?",
+    seitenTitel: "Saugroboter mit Haustieren: Worauf kommt es an?",
+    beschreibung: "Welche Bürste, Station und Kamera ein Saug- und Wischroboter mit Hund oder Katze braucht, wie sich dein Tier an ihn gewöhnt und wann er nichts für dich ist.",
+    kurzantwort: "Auf drei Dinge: eine Bürste, um die sich Tierhaare kaum wickeln, eine Station, die ihn leer saugt, und eine Kamera, die Hundehaufen meist erkennt und umfährt. In der App sperrst du dazu Napf, Katzenklo und Schlafplatz. Gerade mit Tier lohnt er sich: Saugst du wegen der Haare täglich, spart er dir bei 60 m² laut meinem Rechner rund zwei Stunden pro Woche.",
+    abschnitte: [
+      {
+        titel: "So viel Zeit sparst du mit Tier",
+        absaetze: [
+          "Saugst du wegen der Haare jeden Tag, spart er dir bei 60 m² laut meinem Rechner knapp zwei Stunden pro Woche, samt Vorbereitung. Wischst du dazu einmal pro Woche, sind es gut zwei. Im Jahr kommen so 99 bis 119 Stunden zusammen, bei zweimal Saugen und einmal Wischen sind es 45.",
+          "Der Roboter fährt dagegen jeden Tag nach Zeitplan, und du musst dafür so gut wie nichts tun."
+        ]
+      },
+      {
+        titel: "Meine Erfahrung nach 14 Jahren",
+        art: "erfahrung",
+        absaetze: [
+          "Ich nutze seit 14 Jahren Saugroboter und musste seitdem so gut wie nie mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
+        ]
+      },
+      {
+        titel: "Eine Bürste, um die sich Haare kaum wickeln",
+        absaetze: [
+          "Um Bürsten mit Borsten wickeln sich Tierhaare schnell. Besser sind Hauptbürsten aus Gummi oder mit einem System gegen Verheddern. Lange Haare bleiben aber auch daran manchmal hängen.",
+          "Auf Hartboden putzen viele Roboter gut, auf Teppich zeigt sich der Unterschied. Wichtig für Tierhalter ist laut Stiftung Warentest das Urteil „Aufnehmen von Fasern“ auf Teppich. Dort reichen die Noten von gut bis mangelhaft."
+        ]
+      },
+      {
+        titel: "Eine Station, die ihn leer saugt",
+        absaetze: [
+          "Der Behälter im Roboter ist klein und mit Fell schnell voll. Ohne Station leerst du ihn mit Tier oft jeden Tag selbst. Eine Station saugt ihn nach dem Putzen leer, und du wechselst nur noch ab und zu den Beutel.",
+          "Das ist je nach Modell alle paar Wochen bis Monate fällig, mit haarendem Tier eher früher. Meist schließt sich der Beutel beim Herausnehmen, so kommst du mit Staub und Haaren kaum in Berührung."
+        ]
+      },
+      {
+        titel: "Eine Kamera, die Hundehaufen erkennt",
+        absaetze: [
+          "Fährt ein Roboter durch einen Hundehaufen oder Erbrochenes, verteilt er es in der ganzen Wohnung. Ohne Kamera erkennt er so etwas in der Regel nicht. Modelle mit Kamera und KI erkennen es meist und fahren drumherum: In Tests mit nachgebauten Hundehaufen umfuhren gute Modelle fast alle.",
+          "Eine Garantie gibt es aber nicht. Je flüssiger und flacher ein Malheur ist, desto eher übersieht es auch eine Kamera. Ist dein Tier noch jung, schon alt oder gerade krank, wirf vor dem Start kurz einen Blick auf den Boden."
+        ]
+      },
+      {
+        titel: "Napf, Katzenklo und Schlafplatz sperren",
+        absaetze: [
+          "Leg in der App Sperrzonen um Futter- und Wassernapf, Katzenklo und Schlafplatz an. So lässt der Roboter die Näpfe stehen, und dein Tier hat Plätze, an denen es ungestört bleibt.",
+          "Am Katzenklo ist die Sperrzone doppelt sinnvoll: Klumpen und feuchte Streu gehören nicht in den Roboter."
+        ]
+      },
+      {
+        titel: "So gewöhnst du dein Tier an den Roboter",
+        absaetze: [
+          "Mit etwa 55 bis 70 Dezibel ist ein Roboter leiser als ein normaler Staubsauger. Kurz laut wird nur die Station, wenn sie ihn leer saugt. Gewöhn dein Tier trotzdem in kleinen Schritten an ihn.",
+          "Lass dein Tier den Roboter zuerst ausgeschaltet beschnuppern. Danach startest du ihn in einem anderen Raum, auf leiser Stufe und während du zu Hause bist. Bleibt dein Tier ruhig oder wird es neugierig, gibt es ein Leckerli. Zwing es nie zum Roboter hin.",
+          "Wichtig ist ein Rückzugsort, an den der Roboter nicht kommt. Erst wenn dein Tier entspannt bleibt, lässt du ihn nach Zeitplan fahren, während du unterwegs bist, beim Hund zum Beispiel während der Gassirunde."
+        ]
+      },
+      {
+        titel: "Mit Tier öfter dran: die Bürste",
+        absaetze: [
+          "Schau dir die Hauptbürste mit Tier etwa einmal pro Woche an und zieh aufgewickelte Haare ab. Manche Hersteller nennen alle zwei Wochen, mit haarendem Tier kann das zu selten sein. Auch an Seitenbürste und Rädern sammeln sich Haare."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Welche Modelle ich empfehle, auch für Haushalte mit Haustieren, und wie viel Zeit du mit deinen eigenen Zahlen sparst, siehst du auf meiner Seite zum Saug- und Wischroboter.",
+      knopf: "Zum Saug- und Wischroboter mit Rechner"
+    },
+    wannNicht: [
+      "Deinem Tier passiert öfter ein Malheur, etwa weil es noch nicht stubenrein ist, und du willst kein Modell mit Kamera.",
+      "Dein Tier gerät auch nach Wochen behutsamer Gewöhnung noch in Panik, sobald der Roboter fährt.",
+      "Für die Station fehlt der Platz: Ohne sie leerst du den Behälter mit Tier oft jeden Tag selbst.",
+      "Bei dir liegt vor allem Hochflor-Teppich: Dort holen viele Roboter Haare nicht gut heraus, und manche fahren sich fest.",
+      "Näpfe, Körbchen und Spielzeug liegen jeden Tag woanders, und du willst sie weder wegräumen noch in der App sperren."
+    ],
+    fragen: [
+      { f: "Erkennt der Roboter Hundekot?", a: "Mit Kamera und KI meist ja, eine Garantie gibt es aber nicht. In Tests mit nachgebauten Haufen fuhren gute Modelle fast immer drumherum. Flüssiges wie Erbrochenes übersehen auch sie eher, und ohne Kamera erkennt ein Roboter so etwas in der Regel nicht." },
+      { f: "Hat mein Hund oder meine Katze Angst vor dem Roboter?", a: "Manche Tiere anfangs schon, auch wenn er leiser ist als ein normaler Staubsauger. Mit Geduld gewöhnen sich viele daran: erst ausgeschaltet kennenlernen, dann im Nebenraum laufen lassen, während du da bist." },
+      { f: "Kann er Katzenstreu aufsaugen?", a: "Lose, trockene Streu kann er aufsaugen. Klumpen und feuchte Streu gehören aber nicht in den Roboter. Sperr darum eine kleine Zone ums Katzenklo, dann fährt er dort gar nicht erst hin." },
+      { f: "Hilft der Roboter bei einer Tierhaarallergie?", a: "Er kann die Belastung senken, weil er regelmäßig saugt. Achte auf einen echten HEPA-Filter und eine Station mit Beutel: Dann bleibt der feine Staub im Gerät, und beim Wechseln kommst du mit ihm kaum in Berührung. Behandeln kann er eine Allergie aber nicht." },
+      { f: "Wie viel Saugkraft brauche ich für Tierhaare?", a: "Die Empfehlungen gehen weit auseinander: In Ratgebern liest du alles von ein paar tausend bis über 20.000 Pascal. Verlässlicher ist das Testergebnis auf Teppich, denn dort zeigen sich die Unterschiede. Die Bürste ist mindestens genauso wichtig." }
+    ],
+    quellen: [
+      { name: "Mein Rechner auf der Seite zum Saug- und Wischroboter", text: "die Zeiten für 60 m² bei täglichem Saugen mit und ohne Wischen und bei zweimal Saugen und einmal Wischen, die Annahmen stehen dort unter „So rechne ich“" },
+      { name: "Stiftung Warentest: Saugroboter im Test (Juni 2026)", text: "Hindernistest mit einer Hundekot-Attrappe, für Tierhalter zählt das Aufnehmen von Fasern auf Teppich (von gut bis mangelhaft), Abwertung bei Störung durch lange Haare, für Hartboden gibt es deutlich mehr gute Roboter als für Teppich" },
+      { name: "Stiftung Warentest: Saug-Wisch-Roboter im Test (Dezember 2025)", text: "auf Teppich überzeugen die meisten Roboter nicht" },
+      { name: "c't (heise): Saugroboter mit Hinderniserkennung im Test (Dezember 2021)", text: "drei Roboter mit KI-Kamera umfuhren Attrappen von Hunde- und Katzenkot stets sicher" },
+      { name: "Reviewed: iRobot Roomba j7+ gegen Samsung Jetbot AI+ (Juni 2023)", text: "Test mit nachgebauten Hundehaufen, der Roomba ohne eine Panne, der Jetbot stieß einen Haufen kurz an und wich dann aus" },
+      { name: "smarthomeassistent.de: Erkennt ein Saugroboter Katzenkotze? (Mai 2023)", text: "Kot-Attrappen umfahren, keine Garantie bei Erbrochenem, flaches, flüssiges erkennt kein bekannter Roboter, sonst verteilt er das Malheur in der Wohnung" },
+      { name: "smarthomeassistent.de: Saugroboter für Tierhaare (August 2026) und Absaugstation mit oder ohne Staubbeutel (Juni 2023)", text: "verhedderte Haare entfernst du von Hand, ein Beutel hält einen bis mehrere Monate, schließt sich beim Herausnehmen und hilft Allergikern" },
+      { name: "netzwelt.de: Saugroboter für Tierhaare (Februar 2026)", text: "in Borsten verfangen sich Haare, Gummibürsten und Bürsten gegen Verheddern sind besser, ohne Station mehrfach täglich leeren, Beutel nach etwa zwei Monaten, KI-Erkennung für Tiere, die nicht stubenrein sind, HEPA-Filter, Lauf in der Gassizeit, Sperrzonen am Schlafplatz" },
+      { name: "netzwelt.de: Saugroboter für Teppiche (Februar 2026)", text: "Hochflor bringt selbst Oberklasse-Modelle an ihre Grenzen" },
+      { name: "saugroboter-portal.de: Welche Hauptbürsten gibt es bei Saugrobotern? (September 2026)", text: "um Borsten wickeln sich lange Haare schneller, an Gummibürsten verfangen sie sich deutlich weniger, mit Tieren die bessere Wahl" },
+      { name: "home&smart: Saugroboter gegen Tierhaare und Saugroboter für Allergiker (beide Oktober 2026)", text: "gummierte Hauptbürsten und Systeme gegen Verheddern, kleine Staubbehälter im Roboter, Saugkraft ab 20.000 Pa bei mehreren Tieren, HEPA-Filter ab Klasse H13, Staub im Beutel luftdicht verschlossen" },
+      { name: "testundtipps.de: Saugroboter-Wartung (Oktober 2026)", text: "Hauptbürste je nach Hersteller jede Woche oder alle zwei Wochen reinigen, mit Tieren und langen Haaren kann das zu selten sein, Beutel alle 2 bis 4 Monate" },
+      { name: "tink: Saugroboter mit Hund und Katze (Oktober 2026)", text: "erst ausgeschaltet kennenlernen lassen, im Nebenraum starten, anfangs nur, wenn du da bist, Rückzugsorte, Leckerli und Geduld" },
+      { name: "robo-freunde.de: Katze und Saugroboter, Saugroboter für Katzenstreu und Saugroboter und Katzenkotze (2023)", text: "Gewöhnung in kleinen Schritten, nie zwingen, Sperrzonen um Napf und Katzenklo, Boden vor dem Start prüfen, je flüssiger, desto schwerer erkennt er es" },
+      { name: "Mähroboter Guru: Katze an Saugroboter gewöhnen (Juli 2024)", text: "ausgeschaltet beschnuppern lassen, im Nebenraum auf leiser Stufe starten, Leckerli, nie zwingen, erst unter Aufsicht, dann nach Zeitplan" },
+      { name: "netzwelt.de: Saugroboter-Lautstärke (Februar 2026) und Absaugstationen (März 2026)", text: "meist 60 bis 70 dB, die Station einige Sekunden 80 bis 90 dB, Beutel schließen sich bei der Entnahme selbst und halten zwei bis drei Monate, mit Tierhaaren fällt besonders viel Schmutz an" },
+      { name: "smarthomeassistent.de: Leiser Saugroboter (August 2026) und testsiegertv.com: Absaugstationen (Juli 2021)", text: "meist 55 bis 65 dB, Absaugen in der Station ein paar Sekunden lang bis 90 dB" },
+      { name: "Herstellerangaben und Ratgeber der Hersteller", text: "Ecovacs (keine Garantie bei Tierkot, Sperrzonen um Körbchen und Katzenklo, nasse oder verklumpte Streu nie aufsaugen, trockene Streu schon), Dreame (flache, feuchte Malheurs schwer zu erkennen, Sperrzonen um Katzenklo, Körbchen und Näpfe, Boden kurz prüfen), MOVA (Beutel mit Haustieren schneller voll, Haare an Bürsten und Rädern eventuell jede Woche entfernen), Roborock (Haare um die Radachsen und an der Seitenbürste regelmäßig entfernen), Ecovacs (Tierhaare wickeln sich um die Radachse)" }
+    ]
   }
 ];
