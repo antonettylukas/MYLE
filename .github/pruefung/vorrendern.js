@@ -87,7 +87,8 @@ function holeTeile(SITE) {
     }));
     graph = [
       { "@type": "WebPage", "@id": `${url}#seite`, url, name: meta("og:title") || h1, description: meta("description"),
-        inLanguage: lang, isPartOf: website, breadcrumb: { "@id": `${url}#brotkrumen` }, author: person },
+        inLanguage: lang, isPartOf: website, breadcrumb: { "@id": `${url}#brotkrumen` }, author: person,
+        dateModified: (document.querySelector(".geprueft time") || { getAttribute: () => undefined }).getAttribute("datetime") },
       { "@type": "BreadcrumbList", "@id": `${url}#brotkrumen`, itemListElement: [
         { "@type": "ListItem", position: 1, name: text(document.querySelector(".brotkrumen a")), item: start },
         { "@type": "ListItem", position: 2, name: h1, item: url }] },

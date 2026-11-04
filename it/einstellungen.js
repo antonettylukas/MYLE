@@ -15,6 +15,8 @@ const SEITE = {
   // Eigene Tracking-IDs pro Produktseite aus Programma di affiliazione Amazon.it (wie in einstellungen.js), z. B. saugroboter: "myleitsaug-21".
   trackingIds: {
   },
+  // Wann alle Empfehlungen zuletzt geprüft wurden (wie in einstellungen.js), Jahr-Monat-Tag.
+  geprueft: "2026-11-04",
   preisstand: "Oktober 2026"
 };
 

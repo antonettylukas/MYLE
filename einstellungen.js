@@ -41,6 +41,10 @@ const SEITE = {
     "zahnbuerste": "mylezahn-21"
   },
 
+  // Wann alle Empfehlungen zuletzt geprüft wurden (Verfügbarkeit bei Amazon, Testergebnisse), Jahr-Monat-Tag.
+  // Steht auf jeder Produktseite als „Zuletzt geprüft: Monat Jahr“ und für Google im Feld dateModified.
+  geprueft: "2026-11-04",
+
   // Wann du die Preise zuletzt geprüft hast. Nur für dich, auf der Seite stehen keine Preise.
   preisstand: "Oktober 2026"
 };

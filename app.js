@@ -523,6 +523,7 @@
         <h2 class="p-titel" id="modelle-titel">${t("Welches Modell passt zu dir?", "Which model is right for you?")}</h2>
         <p class="p-intro">${t("Für jede Preisklasse eine Empfehlung{alt}. Den aktuellen Preis siehst du jeweils bei Amazon.", "One recommendation for each price range{alt}. You can see the current price on Amazon.",
           { alt: mitAlternativen ? t(", dazu gute Alternativen anderer Marken", ", plus good alternatives from other brands") : "" })}</p>
+        ${geprueftZeile(p)}
         ${mitGruppen ? `<div class="gruppen-wahl" role="group" aria-labelledby="modelle-titel">${gs.map((g, gi) => `
           <button type="button" class="gruppe-knopf" data-gruppe="${gi}" aria-pressed="${gi === 0}" aria-controls="gruppe-${gi}"><strong>${esc(g.name)}</strong></button>`).join("")}
         </div>` : ""}
@@ -554,6 +555,15 @@
         <div class="faq">${p.fragen.map(q => `<details class="frage"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
       </section>` : "";
 
+    // Quellen (Feld quellen in produkte.js): die Tests und Seiten, auf die sich die Seite beruft, zum Anklicken
+    const qs = (p.quellen || []).filter(q => q && q.name && /^https:\/\//.test(q.url || ""));
+    const quellenBlock = qs.length ? `
+      <section class="wrap p-block" id="quellen" aria-labelledby="quellen-titel">
+        <h2 class="p-titel" id="quellen-titel">${t("Meine Quellen", "My sources")}</h2>
+        <p class="p-intro">${t("Auf diese Tests und Seiten stützen sich meine Empfehlungen.", "My recommendations are based on these tests and pages.")}</p>
+        <ul class="quellen">${qs.map(q => `<li><a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>${q.text ? ` <span class="quelle-text">${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>
+      </section>` : "";
+
     // Unten höchstens vier andere Helfer: erst die aus derselben Kategorie, dann die übrigen
     const andere = PRODUKTE.filter(x => x.id !== p.id);
     const auswahl = [...andere.filter(x => x.kategorie === p.kategorie), ...andere.filter(x => x.kategorie !== p.kategorie)].slice(0, 4);
@@ -564,7 +574,7 @@
         ${andere.length > auswahl.length ? `<p class="alle-helfer"><a href="./#helfer">${t("Alle {n} Helfer ansehen", "See all {n} helpers", { n: PRODUKTE.length })}</a></p>` : ""}
       </section>` : "";
 
-    ziel.innerHTML = hero + sprung + erfBlock + muehBlock + modellBlock + rechnerBlock + fragenBlock + weitere +
+    ziel.innerHTML = hero + sprung + erfBlock + muehBlock + modellBlock + rechnerBlock + fragenBlock + quellenBlock + weitere +
       `<section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
 
     if (video) baueVideo(p, video, ziel.querySelector("[data-video]"));
@@ -604,6 +614,14 @@
       if (gk) zeigeGruppe(Number(gk.dataset.gruppe));
       if (ev.target.closest('a[href="#rechner"]')) rechnerAuf();
     });
+  }
+
+  // „Zuletzt geprüft: November 2026“ unter der Einleitung der Modelle. Datum aus produkte.js (Feld geprueft) oder einstellungen.js.
+  function geprueftZeile(p) {
+    const d = String(p.geprueft || S.geprueft || "");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) return "";
+    const monat = new Date(d + "T12:00:00Z").toLocaleDateString(ZAHLEN, { month: "long", year: "numeric", timeZone: "UTC" });
+    return `<p class="geprueft">${t("Zuletzt geprüft", "Last checked")}${DOPPELPUNKT} <time datetime="${d}">${monat}</time></p>`;
   }
 
   // Zubehör, das Lukas zum Produkt dazu empfiehlt (Feld zubehoer in produkte.js), z. B. der Ölsprüher beim Airfryer
