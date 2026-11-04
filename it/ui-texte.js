@@ -59,6 +59,7 @@ const UI_TEXTE = {
   "Erledigt: Dieser Browser wird wieder gezählt.": "Fatto: questo browser viene di nuovo contato.",
   "Das hat nicht geklappt: Dein Browser lässt die Seite nichts speichern (zum Beispiel im privaten Fenster).": "Non ha funzionato: il tuo browser non permette al sito di salvare nulla (per esempio in una finestra privata).",
   "Schließen": "Chiudi",
+  "Das empfehle ich dir dazu": "Ti consiglio anche",
   "Was es dir abnimmt": "Cosa fa al posto tuo",
   "Nach den Produkten findest du noch": "Dopo i prodotti trovi anche",
   "Meine Erfahrung": "La mia esperienza",

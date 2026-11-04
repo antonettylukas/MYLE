@@ -56,6 +56,7 @@
   vergleich   Optional, nur ohne Rechner: { vorherTitel, vorher: [...], nachher: [...] } für „Bisher / Mit …“
   video       Welches Erklärvideo gezeigt wird (steht in videos.js)
   profitipp   Optional: ein hervorgehobener Tipp mit titel, text und liste
+  zubehoer    Optional: Zubehör, das du dazu empfiehlst, unter den Modellen: [{ name, text, link }]
   erfahrung   Optional: deine eigene Erfahrung mit titel, text und bild
   preisstand  Optional: wann du die Preise dieses Produkts zuletzt geprüft hast (nur für dich)
 */
@@ -154,7 +155,8 @@ const ASIN = {
   "kindle 2026": "B0G4SM81G1",
   "kindle paperwhite 2026": "B0GV5TP9KW",
   "kindle colorsoft 2026": "B0GV642G9D",
-  "laifen wave": "B0FFT6HJ8L"
+  "laifen wave": "B0FFT6HJ8L",
+  "beta noble ölsprüher": "B0G1TKXGBV"
 };
 
 const amazon = suche => ASIN[suche]
@@ -517,6 +519,9 @@ const PRODUKTE = [
       { f: "Ersetzt er auch den Backofen?", a: "Für ein bis vier Portionen fast immer. Pommes, Gemüse, Hähnchen, Fisch und Aufbackbrötchen gelingen sogar schneller. Für Pizza, Blechkuchen oder einen großen Auflauf brauchst du den Ofen weiter." },
       { f: "Spart er wirklich Strom?", a: "Ja, vor allem bei kleineren Mengen. Die Körbe sind klein und schnell heiß, Vorheizen ist meist nicht nötig oder dauert nur ein paar Minuten. Laut Stiftung Warentest (Heft 9/2026) sind Airfryer fast doppelt so schnell wie ein Backofen und brauchen deutlich weniger Strom." },
       { f: "Ist die Beschichtung unbedenklich?", a: "Nach heutigem Wissen ja. Viele Körbe haben eine Antihaft-Beschichtung aus PTFE, bekannt als Teflon. Laut Bundesinstitut für Risikobewertung ist sie bei normalem Gebrauch unbedenklich. Zersetzen kann sie sich erst ab etwa 360 °C, ein Airfryer bleibt deutlich darunter. PTFE gehört aber zu den PFAS, die bei Herstellung und Entsorgung die Umwelt belasten. Wenn du darauf verzichten willst, nimm ein Gerät mit Keramik-Beschichtung ohne PFAS. Das gibt Cosori zum Beispiel für den Turbo Tower Pro Smart und den ICONIC Dual an. Egal bei welchem Modell: Keine Metallgabel und kein Scheuermittel, dann hält die Beschichtung lange." }
+    ],
+    zubehoer: [
+      { name: "BETA NOBLE Ölsprüher, 100 ml", text: "Damit sprühst du ganz wenig Öl gleichmäßig auf Gemüse, Kartoffeln oder Hähnchen, statt es aus der Flasche zu gießen. Glasflasche zum Nachfüllen, ohne Treibgas. Passt für Olivenöl, Sonnenblumenöl und auch für die Pfanne.", link: amazon("beta noble ölsprüher") }
     ],
     rechner: "airfryer",
     video: "airfryer"

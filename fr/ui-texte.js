@@ -59,6 +59,7 @@ const UI_TEXTE = {
   "Erledigt: Dieser Browser wird wieder gezählt.": "C’est fait : ce navigateur est de nouveau compté.",
   "Das hat nicht geklappt: Dein Browser lässt die Seite nichts speichern (zum Beispiel im privaten Fenster).": "Cela n’a pas fonctionné : votre navigateur ne permet pas au site d’enregistrer quoi que ce soit (par exemple en navigation privée).",
   "Schließen": "Fermer",
+  "Das empfehle ich dir dazu": "Je vous recommande aussi",
   "Was es dir abnimmt": "Ce qu’il fait à votre place",
   "Nach den Produkten findest du noch": "Après les produits, vous trouverez aussi",
   "Meine Erfahrung": "Mon expérience",

@@ -75,6 +75,7 @@ const ASIN = {
   "siemens eq500 classic tp511e19": "B0F4RFCH4P",
   "nivona nicr 790": "B09VLKTLFF",
   "bosch serie 4 mum5xw20": "B083YCYMW4",
+  "beta noble ölsprüher": "B0G1TKXGBV"
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -409,6 +410,9 @@ const PRODUKTE = [
       { f: "Sostituisce anche il forno?", a: "Per una-quattro porzioni quasi sempre. Patatine, verdure, pollo, pesce e panini precotti vengono perfino più in fretta. Per pizza, torte in teglia o una grande pasta al forno ti serve ancora il forno." },
       { f: "Fa davvero risparmiare corrente?", a: "Sì, soprattutto per quantità piccole. I cestelli sono piccoli e si scaldano in fretta, il preriscaldamento di solito non serve o dura solo pochi minuti. Secondo Stiftung Warentest (numero 9/2026), le friggitrici ad aria sono quasi due volte più veloci di un forno e consumano molta meno corrente." },
       { f: "Il rivestimento è sicuro?", a: "Per quanto se ne sa oggi, sì. Molti cestelli hanno un rivestimento antiaderente in PTFE, noto come Teflon. Secondo l’Istituto federale tedesco per la valutazione dei rischi (BfR), con un uso normale è sicuro. Può decomporsi solo da circa 360 °C, e una friggitrice ad aria resta ben al di sotto. Il PTFE però fa parte dei PFAS, che inquinano l’ambiente durante la produzione e lo smaltimento. Se preferisci farne a meno, scegli un apparecchio con rivestimento in ceramica senza PFAS. Cosori lo indica per esempio per la Turbo Tower Pro Smart. Con qualsiasi modello: niente forchette di metallo e niente prodotti abrasivi, così il rivestimento dura a lungo." }
+    ],
+    zubehoer: [
+      { name: "Spruzzino per olio BETA NOBLE, 100 ml", text: "Con questo spruzzi pochissimo olio in modo uniforme su verdure, patate o pollo, invece di versarlo dalla bottiglia. Bottiglia in vetro ricaricabile, senza gas propellente. Va bene per olio d’oliva, olio di semi di girasole e anche per la padella.", link: amazon("beta noble ölsprüher", "beta noble spruzzino olio") }
     ],
     rechner: "airfryer",
     video: "airfryer"

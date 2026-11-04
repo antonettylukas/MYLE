@@ -531,6 +531,7 @@
           ${mitGruppen && g.text ? `<p class="gruppe-text">${esc(g.text)}</p>` : ""}
           <div class="modelle">${g.modelle.map((m, mi) => modellKarte(m, gi > 0 ? g.name : "", mi)).join("")}${gi === 0 && p.ohneTeuer ? leerKarte(p.ohneTeuer) : ""}</div>
         </div>`).join("")}
+        ${zubehoerBlock(p)}
       </section>` : p.keinModell ? `
       <section class="wrap p-block" id="modelle" aria-labelledby="modelle-titel">
         <h2 class="p-titel" id="modelle-titel">${t("Welches Modell passt zu dir?", "Which model is right for you?")}</h2>
@@ -603,6 +604,26 @@
       if (gk) zeigeGruppe(Number(gk.dataset.gruppe));
       if (ev.target.closest('a[href="#rechner"]')) rechnerAuf();
     });
+  }
+
+  // Zubehör, das Lukas zum Produkt dazu empfiehlt (Feld zubehoer in produkte.js), z. B. der Ölsprüher beim Airfryer
+  function zubehoerBlock(p) {
+    const z = (p.zubehoer || []).filter(x => x && x.name && x.link);
+    if (!z.length) return "";
+    return `
+        <div class="zubehoer">
+          <h3 class="zubehoer-titel">${t("Das empfehle ich dir dazu", "I also recommend")}</h3>
+          <div class="zubehoer-liste">${z.map(x => `
+            <article class="zubehoer-karte">
+              <h4>${esc(x.name)}</h4>
+              ${x.text ? `<p>${esc(x.text)}</p>` : ""}
+              <div class="modell-knoepfe">
+                <a class="buy buy-zweit" href="${esc(partnerLink(x.link))}" target="_blank" rel="sponsored nofollow noopener">${PREIS_KNOPF}</a>
+                ${WERBELINK}
+              </div>
+            </article>`).join("")}
+          </div>
+        </div>`;
   }
 
   // vorsilbe: Name der Gruppe, damit die Sprungadressen eindeutig bleiben (#guenstig, #nur-saugen-guenstig)

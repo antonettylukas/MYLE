@@ -77,7 +77,8 @@ const ASIN = {
   "kindle colorsoft 2026": "B0GV642G9D",
   "cosori reiskocher crc-r501": "B0C5JL8Z7B",
   "siemens eq500 classic tp511e19": "B0F4RFCH4P",
-  "bosch serie 4 mum58200": "B0DT7BBTCW"
+  "bosch serie 4 mum58200": "B0DT7BBTCW",
+  "beta noble ölsprüher": "B0G1TKXGBV"
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -408,6 +409,9 @@ const PRODUKTE = [
       { f: "Remplace-t-elle aussi le four\u202f?", a: "Pour une à quatre portions, presque toujours. Frites, légumes, poulet, poisson et petits pains précuits y réussissent même plus vite. Pour la pizza, les gâteaux sur plaque ou un grand gratin, il vous faut toujours le four." },
       { f: "Économise-t-elle vraiment de l’électricité\u202f?", a: "Oui, surtout pour de petites quantités. Les paniers sont petits et chauffent vite, le préchauffage est généralement inutile ou ne dure que quelques minutes. Selon Stiftung Warentest (numéro 9/2026), les friteuses sans huile sont presque deux fois plus rapides qu’un four et consomment nettement moins d’électricité." },
       { f: "Le revêtement est-il sans danger\u202f?", a: "Selon les connaissances actuelles, oui. Beaucoup de paniers ont un revêtement antiadhésif en PTFE, connu sous le nom de Téflon. Selon l’Institut fédéral allemand d’évaluation des risques (BfR), il est sans danger en utilisation normale. Il ne peut se décomposer qu’à partir d’environ 360 °C, et une friteuse sans huile reste bien en dessous. Mais le PTFE fait partie des PFAS, qui polluent l’environnement lors de la fabrication et de l’élimination. Si vous préférez vous en passer, choisissez un appareil avec un revêtement céramique sans PFAS. Cosori l’indique par exemple pour la Turbo Tower Pro Smart. Quel que soit le modèle : pas de fourchette en métal ni de produit abrasif, et le revêtement durera longtemps." }
+    ],
+    zubehoer: [
+      { name: "Pulvérisateur d’huile BETA NOBLE, 100 ml", text: "Il vous permet de vaporiser très peu d’huile, de façon régulière, sur les légumes, les pommes de terre ou le poulet, au lieu de la verser directement de la bouteille. Flacon en verre rechargeable, sans gaz propulseur. Convient à l’huile d’olive, à l’huile de tournesol et aussi pour la poêle.", link: amazon("beta noble ölsprüher", "beta noble pulvérisateur huile") }
     ],
     rechner: "airfryer",
     video: "airfryer"

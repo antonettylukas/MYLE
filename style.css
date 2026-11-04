@@ -677,3 +677,12 @@ footer a { color: var(--muted); }
 /* Bestätigung für myle.life/?nicht-zaehlen und ?wieder-zaehlen (Lukas 03.11.2026) */
 .zaehl-hinweis { position: fixed; left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 50; max-width: 560px; margin: 0 auto; display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px 12px 16px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 12px 30px -12px rgba(0,0,0,.35); font-weight: 600; }
 .zaehl-hinweis button { margin-left: auto; flex: none; border: 0; background: none; color: inherit; font: inherit; font-size: 1.3rem; line-height: 1; padding: 0 4px; cursor: pointer; }
+
+/* Zubehör unter den Modellen („Das empfehle ich dir dazu“), z. B. Ölsprüher beim Airfryer (Lukas 04.11.2026) */
+.zubehoer { margin-top: 26px; }
+.zubehoer-titel { font-size: 1.15rem; margin: 0 0 10px; }
+.zubehoer-liste { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.zubehoer-karte { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.zubehoer-karte h4 { margin: 0; font-size: 1.02rem; }
+.zubehoer-karte p { margin: 0; color: var(--muted); }
+.zubehoer-karte .modell-knoepfe { margin-top: auto; }
