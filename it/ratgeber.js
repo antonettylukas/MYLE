@@ -105,5 +105,100 @@ const RATGEBER = [
       { name: "netzwelt.de: navigazione dei robot aspirapolvere e robot per tappeti (febbraio 2026)", text: "laser già su modelli più economici, mappe e zone vietate nell’app, pelo lungo e frange come limite" },
       { name: "Dati dei produttori e istruzioni", text: "spazio davanti e accanto alla base secondo Roborock (Q5 Pro, Q8 Max+), Kärcher (RCV 5) ed Ecovacs, dimensioni delle basi secondo Kärcher e Anker, rumorosità secondo Hoover, Anker ed Ecovacs, corrente, bordi dei tappeti e soglie secondo Anker" }
     ]
+  },
+  {
+    id: "airfryer-oder-backofen",
+    produkt: "airfryer",
+    geprueft: "2026-11-04",
+    titel: "Friggitrice ad aria o forno: cosa costa meno?",
+    frage: "Friggitrice ad aria o forno: cosa costa meno?",
+    seitenTitel: "Friggitrice ad aria o forno: cosa costa meno?",
+    beschreibung: "Quanta corrente consumano friggitrice ad aria e forno per ogni piatto, quanto fa in centesimi e quando il forno la raggiunge.",
+    kurzantwort: "Per piccole quantità la friggitrice ad aria costa meno: nei test consuma spesso solo metà della corrente per piatto, o anche meno. A 37 centesimi per kWh risparmi così circa 13–33 centesimi a piatto. Se per una grande quantità servono più giri, il forno va altrettanto bene o costa persino meno.",
+    abschnitte: [
+      {
+        titel: "Quanta corrente consuma un piatto",
+        absaetze: [
+          "Diversi test e confronti mostrano quanta corrente consuma lo stesso piatto nella friggitrice ad aria e nel forno. Ho calcolato i costi a 37 centesimi per kWh, la media in Germania. In Austria e in Svizzera la corrente costa circa 30 centesimi, quindi lì ogni piatto costa un po’ meno."
+        ],
+        tabelle: {
+          kopf: ["Piatto","Friggitrice ad aria","Forno","Fonte"],
+          zeilen: [
+            ["Patatine, 2 porzioni","0,29 kWh (11 centesimi)","0,86 kWh (32 centesimi)","Which?, 2026"],
+            ["Patatine, 1 porzione","0,35 kWh (13 centesimi)","0,7 kWh (26 centesimi)","inside digital, 2025"],
+            ["Patata al forno","0,39 kWh (15 centesimi)","1,08 kWh (40 centesimi)","Which?, 2026"],
+            ["Pollo intero","0,54 kWh (20 centesimi)","1,16 kWh (43 centesimi)","Which?, 2026"],
+            ["Ali di pollo","0,2–0,3 kWh (7–11 centesimi)","1,0–1,2 kWh (37–44 centesimi)","stromguide.com tramite VOL.AT, 2025"]
+          ]
+        }
+      },
+      {
+        titel: "Perché la friggitrice ad aria consuma meno",
+        absaetze: [
+          "La sua camera di cottura è piccola, e l’aria calda arriva in fretta. Di solito non devi preriscaldare, o solo per qualche minuto, mentre un forno ci mette circa 10–15 minuti. Anche la cottura vera e propria di solito dura meno. Secondo Stiftung Warentest le friggitrici ad aria sono più veloci dei forni e consumano meno corrente."
+        ]
+      },
+      {
+        titel: "Quando il forno la raggiunge",
+        absaetze: [
+          "Il vantaggio vale finché tutto entra nel cestello in un solo giro. Se cucini per tante persone e ti servono due o tre giri, il risparmio si riduce, e per grandi quantità il forno va altrettanto bene o costa meno.",
+          "Per pizza, torte in teglia o un grande gratin il forno resta comunque la scelta migliore. Lì conta la superficie, e la friggitrice ad aria non ce l’ha."
+        ]
+      },
+      {
+        titel: "Quanto fa in un anno",
+        absaetze: [
+          "Se quattro volte a settimana prepari un piatto nella friggitrice ad aria invece che nel forno, secondo il mio calcolatore risparmi circa 42 euro all’anno a 37 centesimi per kWh. A 30 centesimi per kWh sono circa 34 euro. Se cucini un pasto caldo solo una volta a settimana, sono poco più di 10 euro.",
+          "Solo per la corrente, quindi, una friggitrice ad aria conviene poco. Guadagni di più in tempo: niente preriscaldamento, niente teglie da strofinare e quasi niente da lavare, secondo il mio calcolatore circa 18 minuti a piatto."
+        ]
+      },
+      {
+        titel: "La mia esperienza",
+        art: "erfahrung",
+        absaetze: [
+          "Da quando ho la mia friggitrice ad aria non ho più usato le padelle. E tutto è più buono: le verdure sono più croccanti e hanno più sapore, il pollo viene perfettamente tenero ogni volta. In più non ho praticamente più niente da lavare. Non si attacca mai niente, i cestelli li metto semplicemente in lavastoviglie o alla fine li passo con un panno umido."
+        ]
+      },
+      {
+        titel: "Se resti con il forno",
+        absaetze: [
+          "Anche con il forno puoi risparmiare corrente. Per la maggior parte dei piatti non devi preriscaldarlo, solo per alcuni impasti come il pan di Spagna o i biscotti. Con la funzione ventilata imposti la temperatura circa 20 gradi più bassa che con il calore statico, e così consumi meno. E con le cotture lunghe spegnilo 5–10 minuti prima: il calore residuo continua a cuocere."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quanto risparmi con il tuo prezzo della corrente e i tuoi piatti, e quali friggitrici ad aria consiglio, lo trovi nella mia pagina sulla friggitrice ad aria.",
+      knopf: "Alla friggitrice ad aria con calcolatore"
+    },
+    wannNicht: [
+      "Di solito cucini per quattro o più persone alla volta e nella friggitrice ad aria dovresti fare più giri.",
+      "Prepari soprattutto pizza, torte in teglia o grandi gratin.",
+      "Vuoi solo risparmiare corrente: sono pochi centesimi a piatto, e ci vuole un po’ prima di recuperare il prezzo d’acquisto.",
+      "Cucini caldo solo di rado: allora in un anno risparmi solo pochi euro.",
+      "Sul piano di lavoro non c’è spazio per un altro apparecchio."
+    ],
+    fragen: [
+      { f: "Devo preriscaldare la friggitrice ad aria?", a: "Di solito no, o solo per qualche minuto. Un forno ci mette circa 10–15 minuti." },
+      { f: "Quanto costa un piatto nella friggitrice ad aria?", a: "Di solito consuma 0,2–0,5 kWh, quindi a 37 centesimi per kWh circa 7–20 centesimi. Nel forno la stessa quantità consuma spesso il doppio o di più." },
+      { f: "Il forno ventilato è altrettanto parsimonioso?", a: "La funzione ventilata consuma meno del calore statico, perché puoi impostare circa 20 gradi in meno. Per piccole quantità la friggitrice ad aria resta comunque più parsimoniosa, perché scalda uno spazio molto più piccolo." },
+      { f: "Una friggitrice ad aria conviene per una persona sola?", a: "Proprio in quel caso. Con porzioni piccole la differenza rispetto al forno è massima. Se di solito prepari una cosa alla volta, basta un modello con un solo cestello." }
+    ],
+    quellen: [
+      { name: "Which?: „Air fryer vs oven“ (ottobre 2026)", text: "corrente misurata per piatto, patatine, patata al forno e pollo intero, nella friggitrice ad aria meno della metà, con più giri il vantaggio si riduce" },
+      { name: "Choice: friggitrice ad aria contro forno (ottobre 2023)", text: "tre piatti a confronto, nella friggitrice ad aria circa metà della corrente all’ora, il forno con 15 minuti di preriscaldamento" },
+      { name: "inside digital: falsi miti sulla friggitrice ad aria (novembre 2025)", text: "patatine circa 0,35 kWh nella friggitrice ad aria, circa 0,7 kWh nel forno, per grandi quantità meglio il forno" },
+      { name: "VOL.AT con dati di stromguide.com (ottobre 2025)", text: "ali di pollo 1,0–1,2 kWh nel forno, 0,2–0,3 kWh nella friggitrice ad aria, il forno per famiglie con grandi quantità" },
+      { name: "testundtipps.de: friggitrice ad aria o forno (agosto 2026)", text: "preriscaldamento 2–3 minuti invece di 10–15, patatine 0,3–0,5 kWh a giro, per grandi quantità più o meno alla pari" },
+      { name: "home&smart (novembre 2026) e Utopia (agosto 2026)", text: "più giri riducono il risparmio, solo per la corrente una friggitrice ad aria conviene poco" },
+      { name: "Stiftung Warentest: test delle friggitrici ad aria (settembre 2026)", text: "le friggitrici ad aria cuociono più in fretta dei forni e consumano meno, molte non cuociono in modo uniforme una grande porzione di patatine" },
+      { name: "ÖKO-TEST: risparmiare energia con il forno (gennaio 2026)", text: "preriscaldamento di solito inutile, 20 gradi in meno con il ventilato, con cotture lunghe spegnere 10 minuti prima" },
+      { name: "Centro federale tedesco per l’alimentazione, tramite dpa e Utopia (agosto 2024)", text: "20–30 gradi in meno con il ventilato, senza preriscaldamento oltre il 20 per cento di energia in meno, spegnere 5–10 minuti prima" },
+      { name: "oesterreich.gv.at: piani cottura e forni (marzo 2025)", url: "https://www.oesterreich.gv.at/de/themen/umwelt_und_klima/energie_und_ressourcen_sparen/2/Seite.2430150", text: "con il ventilato fino al 20 per cento di energia in meno, spegnere in tempo e sfruttare il calore residuo" },
+      { name: "Il mio calcolatore nella pagina della friggitrice ad aria", text: "forno circa 1,0 kWh e friggitrice ad aria circa 0,45 kWh per piatto, 18 minuti in meno rispetto al forno per preriscaldamento, teglia e piatti da lavare, le ipotesi sono lì sotto „Come calcolo“" },
+      { name: "BDEW (associazione tedesca dell’energia e dell’acqua): analisi dei prezzi della corrente agosto 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 centesimi per kWh per le famiglie in Germania" },
+      { name: "E-Control (autorità di regolazione austriaca): monitor dei prezzi della corrente gennaio 2026", url: "https://www.e-control.at/documents/1785851/1811582/preismonitor_jan_26.pdf/b2376bf8-3337-4ba0-ad26-f98a443ab871?t=1767782911898", text: "in media circa 30 centesimi per kWh presso i fornitori regionali in Austria" },
+      { name: "ElCom (Commissione federale dell’energia elettrica): newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 centesimi per kWh per una famiglia tipo in Svizzera nel 2026" },
+      { name: "Dati dei produttori", text: "preriscaldamento e programmi secondo Cosori" }
+    ]
   }
 ];

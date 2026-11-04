@@ -540,6 +540,11 @@
           <h2>${esc(a.titel)}</h2>
           ${(a.absaetze || []).map(x => `<p>${esc(x)}</p>`).join("")}
           ${a.punkte && a.punkte.length ? `<ul>${a.punkte.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+          ${a.tabelle && a.tabelle.kopf && a.tabelle.zeilen ? `
+          <div class="ratgeber-tabelle"><table>
+            <thead><tr>${a.tabelle.kopf.map(k => `<th scope="col">${esc(k)}</th>`).join("")}</tr></thead>
+            <tbody>${a.tabelle.zeilen.map(z => `<tr>${z.map((c, i) => i === 0 ? `<th scope="row">${esc(c)}</th>` : `<td data-titel="${esc(a.tabelle.kopf[i] || "")}">${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>
+          </table></div>` : ""}
         </section>`).join("")}
         ${r.wannNicht && r.wannNicht.length ? `<section class="ratgeber-wann-nicht">${liste(esc(r.wannNichtTitel || t("Wann eher nicht", "When it's not the right choice")), r.wannNicht, "nachteile")}</section>` : ""}
       </article>

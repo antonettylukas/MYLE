@@ -727,3 +727,22 @@ footer a { color: var(--muted); }
 .ratgeber-knoepfe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
 .ratgeber-karte .karte-name { font-size: 1.2rem; font-size: clamp(1.05rem, 5.5cqi, 1.3rem); }
 .ratgeber-liste.intro h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4.2vw, 2.7rem); line-height: 1.1; margin: 8px 0 22px; }
+.ratgeber-tabelle { margin: 4px 0 12px; overflow-x: auto; }
+.ratgeber-tabelle table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.ratgeber-tabelle th, .ratgeber-tabelle td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.ratgeber-tabelle thead th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: var(--tile); }
+.ratgeber-tabelle tbody tr:last-child > * { border-bottom: 0; }
+.ratgeber-tabelle tbody th { font-weight: 700; }
+.ratgeber-tabelle td:last-child { color: var(--muted); font-size: 0.86rem; }
+/* Am Handy: jedes Gericht als eigene kleine Karte, die Spaltentitel stehen vor den Werten */
+@media (max-width: 620px) {
+  .ratgeber-tabelle table, .ratgeber-tabelle tbody, .ratgeber-tabelle tr, .ratgeber-tabelle th, .ratgeber-tabelle td { display: block; }
+  .ratgeber-tabelle table { background: none; border: 0; border-radius: 0; }
+  .ratgeber-tabelle thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .ratgeber-tabelle tr { margin-bottom: 10px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .ratgeber-tabelle th, .ratgeber-tabelle td { padding: 2px 0; border: 0; }
+  .ratgeber-tabelle tbody th { margin-bottom: 4px; font-size: 1rem; }
+  .ratgeber-tabelle td { display: flex; gap: 12px; justify-content: space-between; }
+  .ratgeber-tabelle td::before { content: attr(data-titel); color: var(--muted); }
+  .ratgeber-tabelle td:last-child { margin-top: 4px; font-size: 0.82rem; }
+}

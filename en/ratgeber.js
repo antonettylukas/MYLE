@@ -105,5 +105,100 @@ const RATGEBER = [
       { name: "netzwelt.de: robot vacuum navigation and robot vacuums for carpets (February 2026)", text: "laser already on cheaper models, maps and no-go zones in the app, deep pile and fringes as the limit" },
       { name: "Manufacturer information and manuals", text: "space in front of and beside the base station according to Roborock (Q5 Pro, Q8 Max+), Kärcher (RCV 5) and Ecovacs, station sizes according to Kärcher and Anker, noise according to Hoover, Anker and Ecovacs, electricity, rug edges and thresholds according to Anker" }
     ]
+  },
+  {
+    id: "airfryer-oder-backofen",
+    produkt: "airfryer",
+    geprueft: "2026-11-04",
+    titel: "Air fryer or oven: which is cheaper?",
+    frage: "Air fryer or oven: which is cheaper?",
+    seitenTitel: "Air fryer or oven: which is cheaper?",
+    beschreibung: "How much electricity an air fryer and an oven use per dish, what that means in cents and when the oven catches up.",
+    kurzantwort: "For small amounts the air fryer is cheaper: in tests it often uses only half the electricity per dish, or even less. At 37 cents per kWh you save around 13 to 33 cents per dish. If a large amount needs several batches, the oven is just as good or even cheaper.",
+    abschnitte: [
+      {
+        titel: "How much electricity a dish uses",
+        absaetze: [
+          "Several tests and comparisons show how much electricity the same dish uses in an air fryer and in an oven. I worked out the costs at 37 cents per kWh, the average in Germany. In Austria and Switzerland electricity costs around 30 cents, so each dish costs a little less there."
+        ],
+        tabelle: {
+          kopf: ["Dish","Air fryer","Oven","Source"],
+          zeilen: [
+            ["Chips, 2 portions","0.29 kWh (11 cents)","0.86 kWh (32 cents)","Which?, 2026"],
+            ["Chips, 1 portion","0.35 kWh (13 cents)","0.7 kWh (26 cents)","inside digital, 2025"],
+            ["Jacket potato","0.39 kWh (15 cents)","1.08 kWh (40 cents)","Which?, 2026"],
+            ["Whole chicken","0.54 kWh (20 cents)","1.16 kWh (43 cents)","Which?, 2026"],
+            ["Chicken wings","0.2 to 0.3 kWh (7 to 11 cents)","1.0 to 1.2 kWh (37 to 44 cents)","stromguide.com via VOL.AT, 2025"]
+          ]
+        }
+      },
+      {
+        titel: "Why the air fryer uses less",
+        absaetze: [
+          "Its cooking space is small, and the hot air is there quickly. Usually you don't need to preheat at all, or only for a few minutes, whereas an oven takes about 10 to 15 minutes. The cooking itself is usually shorter too. According to Stiftung Warentest, air fryers are faster than ovens and use less electricity."
+        ]
+      },
+      {
+        titel: "When the oven catches up",
+        absaetze: [
+          "The advantage holds as long as everything fits in the basket in one go. If you cook for lots of people and need two or three batches, the saving shrinks, and for large amounts the oven is just as good or cheaper.",
+          "For pizza, traybakes or a big bake, the oven is the better choice anyway. There, space is what counts, and the air fryer doesn't have it."
+        ]
+      },
+      {
+        titel: "What it adds up to in a year",
+        absaetze: [
+          "If you cook a dish in the air fryer instead of the oven four times a week, my calculator says you save around 42 euros a year at 37 cents per kWh. At 30 cents per kWh it's around 34 euros. If you only cook a hot meal once a week, it's just over 10 euros.",
+          "So electricity alone is hardly a reason to buy an air fryer. You gain more in time: no preheating, no scrubbing baking trays and hardly any washing-up, about 18 minutes per dish according to my calculator."
+        ]
+      },
+      {
+        titel: "My experience",
+        art: "erfahrung",
+        absaetze: [
+          "Since I got my air fryer, I haven't used my frying pans. And everything tastes better: vegetables come out crunchier and taste more intense, chicken turns out perfectly tender every time. On top of that, I have practically no washing-up any more. Nothing ever burns on, and I simply put the baskets in the dishwasher or wipe them out with a damp cloth at the end."
+        ]
+      },
+      {
+        titel: "If you stick with the oven",
+        absaetze: [
+          "You can save electricity with the oven too. For most dishes you don't need to preheat it, only for some doughs such as sponge cake or biscuits. With fan mode you set the temperature about 20 degrees lower than with conventional top and bottom heat, and so use less electricity. And with long cooking times, switch it off 5 to 10 minutes early: the residual heat keeps cooking."
+        ]
+      }
+    ],
+    verweis: {
+      text: "How much you save with your own electricity price and dishes, and which air fryers I recommend, is on my air fryer page.",
+      knopf: "To the air fryer with calculator"
+    },
+    wannNicht: [
+      "You usually cook for four or more people at once and would need several batches in the air fryer.",
+      "You mainly bake pizza, traybakes or big bakes.",
+      "You only want to save electricity: it's a matter of cents per dish, and it takes a while before that pays back the purchase price.",
+      "You rarely cook hot meals: then you only save a few euros a year.",
+      "There's no room on your worktop for another appliance."
+    ],
+    fragen: [
+      { f: "Do I need to preheat an air fryer?", a: "Usually not, or only for a few minutes. An oven takes about 10 to 15 minutes." },
+      { f: "How much does a dish in the air fryer cost?", a: "It usually uses 0.2 to 0.5 kWh, so at 37 cents per kWh about 7 to 20 cents. In the oven the same amount often uses twice as much or more." },
+      { f: "Is fan mode in the oven just as economical?", a: "Fan mode uses less electricity than top and bottom heat because you can set it about 20 degrees lower. For small amounts the air fryer still uses less, because it heats a much smaller space." },
+      { f: "Is an air fryer worth it for one person?", a: "Especially then. With small portions the difference from the oven is greatest. If you usually cook only one thing at a time, a single-basket model is enough." }
+    ],
+    quellen: [
+      { name: "Which?: “Air fryer vs oven” (October 2026)", text: "electricity measured per dish, chips, jacket potato and whole chicken, less than half in the air fryer, the advantage shrinks with several batches" },
+      { name: "Choice: air fryer versus oven (October 2023)", text: "three dishes compared, about half the electricity per hour in the air fryer, the oven with 15 minutes of preheating" },
+      { name: "inside digital: air fryer myths (November 2025)", text: "chips about 0.35 kWh in the air fryer, about 0.7 kWh in the oven, the oven is better for large amounts" },
+      { name: "VOL.AT with figures from stromguide.com (October 2025)", text: "chicken wings 1.0 to 1.2 kWh in the oven, 0.2 to 0.3 kWh in the air fryer, the oven for families cooking large amounts" },
+      { name: "testundtipps.de: air fryer or oven (August 2026)", text: "preheating 2 to 3 minutes instead of 10 to 15, chips 0.3 to 0.5 kWh per batch, roughly level for large amounts" },
+      { name: "home&smart (November 2026) and Utopia (August 2026)", text: "several batches reduce the saving, electricity alone is hardly a reason for an air fryer" },
+      { name: "Stiftung Warentest: air fryers test (September 2026)", text: "air fryers cook faster than ovens and use less electricity, many don't cook a large portion of chips evenly" },
+      { name: "ÖKO-TEST: saving energy with the oven (January 2026)", text: "preheating usually unnecessary, 20 degrees less with fan mode, switch off 10 minutes early with long cooking times" },
+      { name: "German Federal Centre for Nutrition, via dpa and Utopia (August 2024)", text: "20 to 30 degrees less with fan mode, over 20 percent less energy without preheating, switch off 5 to 10 minutes early" },
+      { name: "oesterreich.gv.at: cookers and ovens (March 2025)", url: "https://www.oesterreich.gv.at/de/themen/umwelt_und_klima/energie_und_ressourcen_sparen/2/Seite.2430150", text: "up to 20 percent less energy with fan mode, switch off in time and use the residual heat" },
+      { name: "My calculator on the air fryer page", text: "oven about 1.0 kWh and air fryer about 0.45 kWh per dish, 18 minutes less than the oven for preheating, trays and washing-up, the assumptions are listed there under “How I calculate”" },
+      { name: "BDEW (German Association of Energy and Water Industries): electricity price analysis August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 cents per kWh for households in Germany" },
+      { name: "E-Control (Austrian regulator): electricity price monitor January 2026", url: "https://www.e-control.at/documents/1785851/1811582/preismonitor_jan_26.pdf/b2376bf8-3337-4ba0-ad26-f98a443ab871?t=1767782911898", text: "on average about 30 cents per kWh from the regional suppliers in Austria" },
+      { name: "ElCom (Swiss Federal Electricity Commission): newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27.7 centimes per kWh for a typical household in Switzerland in 2026" },
+      { name: "Manufacturer information", text: "preheating and programmes according to Cosori" }
+    ]
   }
 ];

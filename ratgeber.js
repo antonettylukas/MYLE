@@ -183,5 +183,100 @@ const RATGEBER = [
     ],
     geprueft: "2026-11-04",
     seitenTitel: "Lohnt sich ein Saugroboter für eine kleine Wohnung?"
+  },
+  {
+    id: "airfryer-oder-backofen",
+    produkt: "airfryer",
+    geprueft: "2026-11-04",
+    titel: "Airfryer oder Backofen: Was ist günstiger?",
+    frage: "Airfryer oder Backofen: Was ist günstiger?",
+    seitenTitel: "Airfryer oder Backofen: Was ist günstiger?",
+    beschreibung: "Wie viel Strom Airfryer und Backofen pro Gericht brauchen, was das in Cent ausmacht und wann der Backofen gleichzieht.",
+    kurzantwort: "Für kleine Mengen ist der Airfryer günstiger: In Tests braucht er pro Gericht oft nur die Hälfte des Stroms oder noch weniger. Bei 37 Cent pro kWh sparst du so etwa 13 bis 33 Cent pro Gericht. Brauchst du für eine große Menge mehrere Durchgänge, ist der Backofen gleich gut oder sogar günstiger.",
+    abschnitte: [
+      {
+        titel: "So viel Strom braucht ein Gericht",
+        absaetze: [
+          "Mehrere Tests und Vergleiche zeigen, wie viel Strom dasselbe Gericht im Airfryer und im Backofen braucht. Die Kosten habe ich mit 37 Cent pro kWh gerechnet, dem Durchschnitt in Deutschland. In Österreich und der Schweiz liegt der Strompreis bei etwa 30 Cent, dort kostet jedes Gericht etwas weniger."
+        ],
+        tabelle: {
+          kopf: ["Gericht","Airfryer","Backofen","Quelle"],
+          zeilen: [
+            ["Pommes, 2 Portionen","0,29 kWh (11 Cent)","0,86 kWh (32 Cent)","Which?, 2026"],
+            ["Pommes, 1 Portion","0,35 kWh (13 Cent)","0,7 kWh (26 Cent)","inside digital, 2025"],
+            ["Ofenkartoffel","0,39 kWh (15 Cent)","1,08 kWh (40 Cent)","Which?, 2026"],
+            ["Ganzes Hähnchen","0,54 kWh (20 Cent)","1,16 kWh (43 Cent)","Which?, 2026"],
+            ["Chicken Wings","0,2 bis 0,3 kWh (7 bis 11 Cent)","1,0 bis 1,2 kWh (37 bis 44 Cent)","stromguide.com über VOL.AT, 2025"]
+          ]
+        }
+      },
+      {
+        titel: "Warum der Airfryer sparsamer ist",
+        absaetze: [
+          "Sein Garraum ist klein, und die heiße Luft ist schnell da. Vorheizen musst du meist gar nicht oder nur ein paar Minuten, ein Backofen braucht dafür etwa 10 bis 15 Minuten. Auch das Garen selbst dauert meist kürzer. Laut Stiftung Warentest sind Airfryer schneller als Backöfen und sparsamer im Stromverbrauch."
+        ]
+      },
+      {
+        titel: "Wann der Backofen gleichzieht",
+        absaetze: [
+          "Der Vorteil gilt, solange alles in einem Durchgang in den Korb passt. Kochst du für viele und brauchst zwei oder drei Durchgänge, schrumpft die Ersparnis, und bei großen Mengen ist der Backofen gleich gut oder günstiger.",
+          "Für Pizza, Blechkuchen oder einen großen Auflauf bleibt der Ofen ohnehin die bessere Wahl. Dort zählt Fläche, und die hat der Airfryer nicht."
+        ]
+      },
+      {
+        titel: "Was das im Jahr ausmacht",
+        absaetze: [
+          "Machst du viermal pro Woche ein Gericht im Airfryer statt im Backofen, sparst du laut meinem Rechner bei 37 Cent pro kWh rund 42 Euro im Jahr. Bei 30 Cent pro kWh sind es rund 34 Euro. Kochst du nur einmal pro Woche warm, sind es gut 10 Euro.",
+          "Nur wegen des Stroms lohnt sich ein Airfryer darum kaum. Mehr gewinnst du an Zeit: kein Vorheizen, kein Blech schrubben und kaum Abwasch, laut meinem Rechner etwa 18 Minuten pro Gericht."
+        ]
+      },
+      {
+        titel: "Meine Erfahrung",
+        art: "erfahrung",
+        absaetze: [
+          "Seit ich meinen Airfryer habe, habe ich meine Pfannen nicht mehr benutzt. Und alles schmeckt besser: Gemüse wird knackiger und schmeckt intensiver, Hähnchen wird jedes Mal perfekt zart. Dazu habe ich quasi keinen Abwasch mehr. Es brennt nie etwas an, die Körbe packe ich einfach in die Spülmaschine oder wische sie am Ende mit einem feuchten Lappen aus."
+        ]
+      },
+      {
+        titel: "Wenn du beim Backofen bleibst",
+        absaetze: [
+          "Auch mit dem Ofen kannst du Strom sparen. Für die meisten Gerichte musst du ihn nicht vorheizen, nur bei manchen Teigen wie Biskuit oder Plätzchen. Mit Umluft stellst du die Temperatur etwa 20 Grad niedriger ein als bei Ober- und Unterhitze und sparst so Strom. Und bei langen Garzeiten schaltest du ihn 5 bis 10 Minuten früher aus, die Restwärme gart weiter."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Wie viel du mit deinem Strompreis und deinen Gerichten sparst und welche Airfryer ich empfehle, siehst du auf meiner Airfryer-Seite.",
+      knopf: "Zum Airfryer mit Rechner"
+    },
+    wannNicht: [
+      "Du kochst meist für vier oder mehr Personen auf einmal und müsstest im Airfryer mehrere Durchgänge machen.",
+      "Du backst vor allem Pizza, Blechkuchen oder große Aufläufe.",
+      "Du willst nur Strom sparen: Pro Gericht sind es Cent-Beträge, und bis sie den Kaufpreis wieder einspielen, dauert es eine Weile.",
+      "Du kochst nur selten warm: Dann sparst du im Jahr nur wenige Euro.",
+      "Auf deiner Arbeitsfläche ist kein Platz für ein weiteres Gerät."
+    ],
+    fragen: [
+      { f: "Muss ich einen Airfryer vorheizen?", a: "Meist nicht, oder nur ein paar Minuten. Ein Backofen braucht dafür etwa 10 bis 15 Minuten." },
+      { f: "Wie viel kostet ein Gericht im Airfryer?", a: "Meist braucht es 0,2 bis 0,5 kWh, bei 37 Cent pro kWh also etwa 7 bis 20 Cent. Im Backofen ist es für die gleiche Menge oft doppelt so viel oder mehr." },
+      { f: "Ist Umluft im Backofen genauso sparsam?", a: "Umluft spart gegenüber Ober- und Unterhitze Strom, weil du etwa 20 Grad niedriger einstellen kannst. Für kleine Mengen bleibt der Airfryer trotzdem sparsamer, weil er einen viel kleineren Raum aufheizt." },
+      { f: "Lohnt sich ein Airfryer für eine Person?", a: "Gerade dann. Bei kleinen Portionen ist der Unterschied zum Backofen am größten. Machst du meist nur eine Sache auf einmal, reicht ein Gerät mit einem Korb." }
+    ],
+    quellen: [
+      { name: "Which?: „Air fryer vs oven“ (Oktober 2026)", text: "Strom pro Gericht gemessen, Pommes, Ofenkartoffel und ganzes Hähnchen, im Airfryer weniger als die Hälfte, bei mehreren Durchgängen schrumpft der Vorteil" },
+      { name: "Choice: Air fryer gegen Backofen (Oktober 2023)", text: "drei Gerichte im Vergleich, im Airfryer etwa halb so viel Strom pro Stunde, der Backofen mit 15 Minuten Vorheizen" },
+      { name: "inside digital: Mythen rund um den Airfryer (November 2025)", text: "Pommes im Airfryer etwa 0,35 kWh, im Backofen etwa 0,7 kWh, für große Mengen eher den Backofen" },
+      { name: "VOL.AT mit Zahlen von stromguide.com (Oktober 2025)", text: "Chicken Wings im Backofen 1,0 bis 1,2 kWh, im Airfryer 0,2 bis 0,3 kWh, für Familien mit großen Mengen der Backofen" },
+      { name: "testundtipps.de: Heißluftfritteuse oder Backofen (August 2026)", text: "Vorheizen 2 bis 3 Minuten statt 10 bis 15, je Durchgang Pommes 0,3 bis 0,5 kWh, bei großen Mengen etwa gleichauf" },
+      { name: "home&smart (November 2026) und Utopia (August 2026)", text: "mehrere Durchgänge schmälern die Ersparnis, nur wegen des Stroms lohnt sich ein Airfryer kaum" },
+      { name: "Stiftung Warentest: Heißluftfritteusen im Test (September 2026)", text: "Airfryer garen schneller als Backöfen und sind sparsamer, eine große Pommes-Portion garen viele nicht gleichmäßig" },
+      { name: "ÖKO-TEST: Energie sparen beim Backofen (Januar 2026)", text: "Vorheizen meist unnötig, mit Umluft 20 Grad weniger, bei langen Garzeiten 10 Minuten früher ausschalten" },
+      { name: "Bundeszentrum für Ernährung, über dpa und Utopia (August 2024)", text: "mit Umluft 20 bis 30 Grad weniger, ohne Vorheizen über 20 Prozent weniger Energie, 5 bis 10 Minuten früher ausschalten" },
+      { name: "oesterreich.gv.at: Herde und Backöfen (März 2025)", url: "https://www.oesterreich.gv.at/de/themen/umwelt_und_klima/energie_und_ressourcen_sparen/2/Seite.2430150", text: "mit Umluft bis zu 20 Prozent weniger Energie, rechtzeitig abschalten und die Restwärme nutzen" },
+      { name: "Mein Rechner auf der Airfryer-Seite", text: "Backofen etwa 1,0 kWh und Airfryer etwa 0,45 kWh pro Gericht, gegenüber dem Backofen 18 Minuten weniger für Vorheizen, Blech und Abwasch, die Annahmen stehen dort unter „So rechne ich“" },
+      { name: "BDEW (Bundesverband der Energie- und Wasserwirtschaft): Strompreisanalyse August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 Cent pro kWh für Haushalte in Deutschland" },
+      { name: "E-Control (österreichische Regulierungsbehörde): Strompreismonitor Januar 2026", url: "https://www.e-control.at/documents/1785851/1811582/preismonitor_jan_26.pdf/b2376bf8-3337-4ba0-ad26-f98a443ab871?t=1767782911898", text: "im Schnitt etwa 30 Cent pro kWh bei den Landesversorgern in Österreich" },
+      { name: "ElCom (Eidgenössische Elektrizitätskommission): Newsletter 9/2025", url: "https://www.elcom.admin.ch/dam/de/sd-web/znXqHISH0pFP/Newsletter_09-2025_D.pdf", text: "27,7 Rappen pro kWh für einen typischen Haushalt in der Schweiz 2026" },
+      { name: "Herstellerangaben", text: "Vorheizen und Programme laut Cosori" }
+    ]
   }
 ];
