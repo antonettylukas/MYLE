@@ -384,5 +384,95 @@ const RATGEBER = [
       { name: "smarthomeassistent.de: Leiser Saugroboter (August 2026) und testsiegertv.com: Absaugstationen (Juli 2021)", text: "meist 55 bis 65 dB, Absaugen in der Station ein paar Sekunden lang bis 90 dB" },
       { name: "Herstellerangaben und Ratgeber der Hersteller", text: "Ecovacs (keine Garantie bei Tierkot, Sperrzonen um Körbchen und Katzenklo, nasse oder verklumpte Streu nie aufsaugen, trockene Streu schon), Dreame (flache, feuchte Malheurs schwer zu erkennen, Sperrzonen um Katzenklo, Körbchen und Näpfe, Boden kurz prüfen), MOVA (Beutel mit Haustieren schneller voll, Haare an Bürsten und Rädern eventuell jede Woche entfernen), Roborock (Haare um die Radachsen und an der Seitenbürste regelmäßig entfernen), Ecovacs (Tierhaare wickeln sich um die Radachse)" }
     ]
+  },
+  {
+    id: "waschtrockner-oder-waschmaschine-und-trockner",
+    produkt: "waschtrockner",
+    geprueft: "2026-11-04",
+    titel: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
+    frage: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
+    seitenTitel: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
+    beschreibung: "Platz, Strom, Wasser und Zeit im Vergleich: wann ein Waschtrockner besser passt, wann Waschmaschine und Wärmepumpentrockner, und was das im Monat ausmacht.",
+    kurzantwort: "Hast du wenig Platz, ist der Waschtrockner die bequemere Wahl: ein Gerät, kein Umräumen, morgens rein und abends trocken. Hast du Platz für zwei Geräte und wäschst viel, sind Waschmaschine und Wärmepumpentrockner besser. Sie trocknen mehr auf einmal und brauchen fürs Trocknen oft nur die Hälfte des Stroms oder weniger.",
+    abschnitte: [
+      {
+        titel: "Platz: ein Gerät oder zwei",
+        absaetze: [
+          "Ein Waschtrockner passt genau dorthin, wo sonst die Waschmaschine steht, und braucht dieselben Anschlüsse. Zwei Geräte nebeneinander brauchen doppelt so viel Stellfläche.",
+          "Es geht aber auch platzsparend: Mit einem Zwischenbausatz stellst du den Trockner auf die Waschmaschine, nie umgekehrt. Dann brauchen beide nur die Fläche einer Waschmaschine, dafür Platz nach oben. Ohne Bausatz kann der Trockner beim Schleudern verrutschen."
+        ]
+      },
+      {
+        titel: "Wie viel du auf einmal trocknen kannst",
+        absaetze: [
+          "Ein Waschtrockner wäscht meist 7 bis 10 kg, trocknet aber nur 4 bis 6 kg. Eine volle Waschladung braucht also bis zu zwei Trockengänge, oder du hängst den Rest auf. Willst du in einem Rutsch waschen und trocknen, füllst du ihn darum nur gut halb.",
+          "Ein eigener Trockner trocknet dagegen eine volle Ladung auf einmal. Und während er trocknet, wäscht die Maschine schon die nächste."
+        ]
+      },
+      {
+        titel: "Strom und Wasser",
+        absaetze: [
+          "Den größten Unterschied macht das Trocknen. Ein Wärmepumpentrockner braucht für eine volle Ladung meist etwa 1 bis 2 kWh. Ein Waschtrockner ohne Wärmepumpe braucht gut 2 kWh, und das für nur 6 kg. Für dieselbe Wäsche braucht der Wärmepumpentrockner darum oft nur die Hälfte des Stroms oder weniger.",
+          "Viele Waschtrockner kühlen beim Trocknen außerdem mit Leitungswasser. Deshalb brauchen sie mehr Wasser als Waschmaschine und Trockner zusammen.",
+          "Es gibt auch Waschtrockner mit Wärmepumpe. Sie brauchen weniger Strom und Wasser, und bei Stiftung Warentest war 2023 ein solches Modell Testsieger."
+        ]
+      },
+      {
+        titel: "Zeit: Was schneller fertig ist",
+        absaetze: [
+          "Gegenüber dem Wäscheständer sparen dir beide Lösungen Zeit: Aufhängen und Abnehmen kosten bei drei Wäschen pro Woche laut meinem Rechner rund eine halbe Stunde pro Woche.",
+          "Waschen und Trocknen dauern im Waschtrockner mit voller Ladung oft 8 Stunden und mehr. Im Test von Konsument brauchten Wärmepumpentrockner für eine volle Ladung gut 2 bis gut 3 Stunden, dazu kommt das Waschen davor.",
+          "Das muss dich aber nicht stören: Mit der Endzeit startet der Waschtrockner so, dass er fertig ist, wenn du heimkommst. Willst du an einem Tag mehrere Ladungen schaffen, sind zwei Geräte schneller."
+        ]
+      },
+      {
+        titel: "Meine Erfahrung",
+        art: "erfahrung",
+        absaetze: [
+          "Ich habe einen Waschtrockner von Haier und will nie wieder ohne. Morgens kommt die Wäsche rein, und wenn ich von der Arbeit komme, ist sie gewaschen und getrocknet. Bügeln muss ich auch nicht mehr: Das Dampfprogramm i-⁠Refresh macht die Kleidung frisch, und sie kommt vor allem faltenfrei raus."
+        ]
+      },
+      {
+        titel: "Was es kostet",
+        absaetze: [
+          "In der Anschaffung ist ein Waschtrockner oft günstiger als Waschmaschine und Trockner zusammen. Dafür kostet das Trocknen mehr Strom: Bei drei Ladungen pro Woche und 37 Cent pro kWh sind es laut meinem Rechner gut 10 € im Monat, bei 30 Cent knapp 9 €.",
+          "Ein Wärmepumpentrockner käme für dieselbe Wäsche oft mit der Hälfte oder weniger aus. Laut Stiftung Warentest können die höheren Betriebskosten den günstigeren Kaufpreis eines Waschtrockners über die Jahre wieder aufzehren."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Welchen Waschtrockner ich empfehle und was er dir mit deinen eigenen Zahlen an Zeit spart und an Strom kostet, siehst du auf meiner Waschtrockner-Seite.",
+      knopf: "Zum Waschtrockner mit Rechner"
+    },
+    wannNicht: [
+      "Du wäschst für eine große Familie mehrere Ladungen am Tag.",
+      "Du willst volle Ladungen in einem Rutsch waschen und trocknen.",
+      "Du hast Platz für zwei Geräte, nebeneinander oder gestapelt, und willst möglichst wenig Strom und Wasser verbrauchen.",
+      "Du brauchst die Wäsche oft schnell wieder: Waschen und Trocknen dauern zusammen meist 8 Stunden und mehr.",
+      "Dir ist besonders gleichmäßig trockene Wäsche wichtig: Viele Waschtrockner trocknen nicht so gut wie ein eigener Trockner."
+    ],
+    fragen: [
+      { f: "Kann ich den Trockner auf die Waschmaschine stellen?", a: "Ja, mit einem passenden Zwischenbausatz und immer mit dem Trockner oben. Der Rahmen hält ihn fest und fängt die Vibrationen beim Schleudern ab. Am einfachsten klappt das mit zwei Geräten derselben Marke und Größe." },
+      { f: "Trocknet ein Waschtrockner so gut wie ein Trockner?", a: "Meist nicht ganz: In Tests trocknen viele Waschtrockner ungleichmäßiger, und manchmal bleibt die Wäsche etwas feucht. Die besten Modelle schneiden aber gut ab. Wichtig ist, dass du ihn zum Trocknen nicht zu voll machst." },
+      { f: "Warum braucht ein Waschtrockner beim Trocknen Wasser?", a: "Viele kühlen den warmen, feuchten Dampf mit Leitungswasser ab, damit er kondensiert und abläuft. Das sind je nach Gerät etliche Liter pro Trockengang. Es gibt aber auch Modelle, die dafür kein Wasser brauchen, etwa mit Wärmepumpe." },
+      { f: "Lohnt sich ein Waschtrockner mit Wärmepumpe?", a: "Wenn du oft trocknest, ja. Er braucht weniger Strom und Wasser: Stiftung Warentest rechnete beim Testsieger von 2023 mit rund 760 € weniger Betriebskosten in zehn Jahren als bei den getesteten Geräten von Bosch und Siemens. Dafür kostet er in der Anschaffung deutlich mehr." }
+    ],
+    quellen: [
+      { name: "Mein Rechner auf der Seite zum Waschtrockner", text: "die Stromkosten fürs Trocknen bei drei Ladungen pro Woche mit 2,2 kWh pro Ladung und die Zeit fürs Aufhängen und Abnehmen, die Annahmen stehen dort unter „So rechne ich“" },
+      { name: "Verbraucherzentrale: Waschtrockner, Kombigeräte sind platzsparende Stromfresser (August 2026)", url: "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/waschtrockner-kombigeraete-sind-platzsparende-stromfresser-37060", text: "mehr Strom und Wasser als Waschmaschine und Trockner, Kühlen mit Wasser, wäscht 7 bis 9 kg und trocknet 4 bis 6 kg, sinnvoll vor allem in sehr kleinen Wohnungen" },
+      { name: "Umweltbundesamt: Wäschetrockner (März 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/elektrogeraete/waeschetrockner", text: "Wärmepumpentrockner 73 bis 97 kWh pro 100 Trocknungen, ältere Geräte rund 340 kWh, Waschtrockner weniger effizient als zwei Einzelgeräte" },
+      { name: "co2online: Stromverbrauch von Trockner und Waschmaschine (April 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "sparsamste Wärmepumpentrockner um 156 kWh im Jahr bei 7 kg, bis zu 80 % weniger Strom als ein Kondenstrockner" },
+      { name: "HEA (Fachgemeinschaft für effiziente Energieanwendung): Waschtrockner", text: "Kühlwasser je nach Gerät 9 bis 35 Liter pro Trockengang, zum Trocknen nur die Hälfte bis zwei Drittel der Waschladung, eine volle Waschladung braucht bis zu zwei Trockengänge, Wärmepumpe spart Strom und Kühlwasser" },
+      { name: "Stiftung Warentest: Waschtrockner im Test (Oktober 2023, aktualisiert August 2026)", text: "ein Programm dauerte über neun Stunden, in der Anschaffung oft günstiger als zwei Geräte, die Betriebskosten können das mit der Zeit aufzehren" },
+      { name: "t-online (Oktober 2023) und desired.de (Februar 2025) zum Waschtrockner-Test von Stiftung Warentest (Heft 11/2023)", text: "Testsieger AEG mit Wärmepumpe, niedrigster Strom- und Wasserverbrauch, rund 760 € weniger Betriebskosten in zehn Jahren als die Geräte von Bosch und Siemens" },
+      { name: "Stiftung Warentest: Wäschetrockner im Test (September 2026)", text: "die Wärmepumpe senkt den Stromverbrauch erheblich, Kondens- und Ablufttrockner sind überholte Stromfresser" },
+      { name: "Konsument (VKI): Wäschetrockner-Test (September 2026)", text: "Wärmepumpentrockner für 8 kg Baumwolle schranktrocken 0,90 bis 1,82 kWh, Programmdauer 136 bis 192 Minuten" },
+      { name: "Which?: Washer-dryer or washing machine and tumble dryer (Oktober 2026)", text: "im Jahr 216 Pfund Strom für einen Waschtrockner gegen 118 Pfund für Waschmaschine und Wärmepumpentrockner, 7,5 Liter Wasser pro kg beim Trocknen, die meisten Waschtrockner trocknen schlechter als ein Trockner" },
+      { name: "T3: Do washer dryers work as well as separates? (Februar 2022)", text: "trocknen schlechter, Wäsche bleibt oft feucht, mit zwei Geräten wäscht die nächste Ladung, während die erste trocknet" },
+      { name: "Trusted Reviews: Washer dryer vs separates", text: "zwei Geräte brauchen etwa doppelt so viel Stellfläche und laufen gleichzeitig, Waschtrockner trocknen oft ungleichmäßig" },
+      { name: "Utopia: Waschtrockner, das sind die Vor- und Nachteile (März 2023)", text: "trocknet meist nur 4 bis 6 kg, mehr Strom und Wasser, eher für kleine Haushalte" },
+      { name: "Waschmaschinen-Kompass: Trockner auf Waschmaschine stellen (Oktober 2026)", text: "Verbindungsrahmen nötig, Trockner immer oben, ohne Rahmen kann er verrutschen" },
+      { name: "Herstellerangaben und Energielabel", text: "Stapeln laut Siemens und Samsung (Trockner oben, passender Bausatz, gleiche Marke), Fassungsvermögen, Programmdauer und Strom fürs Waschen und Trocknen laut Energielabel von Haier, Hisense, Bosch und AEG" }
+    ]
   }
 ];

@@ -306,5 +306,95 @@ const RATGEBER = [
       { name: "smarthomeassistent.de : robots aspirateurs silencieux (août 2026) et testsiegertv.com : stations de vidage (juillet 2021)", text: "le plus souvent 55 à 65 dB, vidage dans la station jusqu’à 90 dB pendant quelques secondes" },
       { name: "Indications et guides des fabricants", text: "Ecovacs (aucune garantie avec les crottes, zones interdites autour des paniers et de la litière, ne jamais aspirer de litière mouillée ou agglomérée, la litière sèche oui), Dreame (accidents plats et humides difficiles à reconnaître, zones interdites autour de la litière, des paniers et des gamelles, vérifier rapidement le sol), MOVA (sacs plus vite pleins avec des animaux, retirer les poils des brosses et des roues éventuellement chaque semaine), Roborock (retirer régulièrement les poils autour des axes de roues et de la brosse latérale), Ecovacs (les poils s’enroulent autour de l’axe de roue)" }
     ]
+  },
+  {
+    id: "waschtrockner-oder-waschmaschine-und-trockner",
+    produkt: "waschtrockner",
+    geprueft: "2026-11-04",
+    titel: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
+    frage: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
+    seitenTitel: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
+    beschreibung: "Place, électricité, eau et temps comparés : quand une lavante-séchante convient mieux, quand un lave-linge et un sèche-linge à pompe à chaleur, et ce que cela représente par mois.",
+    kurzantwort: "Si vous manquez de place, la lavante-séchante est le choix le plus pratique : un seul appareil, pas de linge à transvaser, dedans le matin et sec le soir. Si vous avez la place pour deux appareils et lavez beaucoup, un lave-linge et un sèche-linge à pompe à chaleur sont meilleurs. Ils sèchent plus de linge à la fois et consomment souvent moitié moins d’électricité pour le séchage, voire moins.",
+    abschnitte: [
+      {
+        titel: "La place : un appareil ou deux",
+        absaetze: [
+          "Une lavante-séchante se place exactement là où irait sinon le lave-linge et demande les mêmes raccordements. Deux appareils côte à côte prennent deux fois plus de surface au sol.",
+          "On peut aussi gagner de la place : avec un kit de superposition, vous posez le sèche-linge sur le lave-linge, jamais l’inverse. Les deux n’occupent alors que la surface d’un lave-linge, mais demandent de la place en hauteur. Sans kit, le sèche-linge peut glisser pendant l’essorage."
+        ]
+      },
+      {
+        titel: "Combien de linge vous pouvez sécher à la fois",
+        absaetze: [
+          "Une lavante-séchante lave le plus souvent 7 à 10 kg, mais n’en sèche que 4 à 6. Une charge de lavage complète demande donc jusqu’à deux séchages, ou vous étendez le reste. Si vous voulez laver et sécher d’une traite, ne la remplissez donc qu’un peu plus qu’à moitié.",
+          "Un sèche-linge séparé sèche en revanche une charge complète d’un coup. Et pendant qu’il sèche, le lave-linge lave déjà la suivante."
+        ]
+      },
+      {
+        titel: "Électricité et eau",
+        absaetze: [
+          "C’est le séchage qui fait la plus grande différence. Un sèche-linge à pompe à chaleur consomme le plus souvent environ 1 à 2 kWh pour une charge complète. Une lavante-séchante sans pompe à chaleur consomme un peu plus de 2 kWh, et cela pour seulement 6 kg. Pour le même linge, le sèche-linge à pompe à chaleur consomme donc souvent moitié moins d’électricité, voire moins.",
+          "Beaucoup de lavantes-séchantes refroidissent en plus avec l’eau du robinet pendant le séchage. C’est pourquoi elles consomment plus d’eau qu’un lave-linge et un sèche-linge réunis.",
+          "Il existe aussi des lavantes-séchantes avec pompe à chaleur. Elles consomment moins d’électricité et d’eau, et chez Stiftung Warentest, un tel modèle a été vainqueur du test en 2023."
+        ]
+      },
+      {
+        titel: "Le temps : ce qui est prêt le plus vite",
+        absaetze: [
+          "Par rapport à l’étendoir, les deux solutions vous font gagner du temps : avec trois lessives par semaine, étendre et ramasser le linge prend environ une demi-heure par semaine selon mon calculateur.",
+          "Laver et sécher dans une lavante-séchante avec une charge complète prend souvent 8 heures ou plus. Dans le test de Konsument, les sèche-linge à pompe à chaleur ont eu besoin d’un peu plus de 2 à un peu plus de 3 heures pour une charge complète, plus le lavage avant.",
+          "Cela n’a pas forcément d’importance : avec la fonction fin différée, la lavante-séchante démarre de façon à avoir fini quand vous rentrez. Si vous voulez faire plusieurs lessives dans la journée, deux appareils sont plus rapides."
+        ]
+      },
+      {
+        titel: "Mon expérience",
+        art: "erfahrung",
+        absaetze: [
+          "J’ai une lavante-séchante Haier et je ne veux plus jamais m’en passer. Le matin, le linge va dedans, et quand je rentre du travail, il est lavé et séché. Je n’ai plus besoin de repasser non plus : le programme vapeur i-⁠Refresh rafraîchit les vêtements, et surtout ils ressortent sans plis."
+        ]
+      },
+      {
+        titel: "Ce que cela coûte",
+        absaetze: [
+          "À l’achat, une lavante-séchante est souvent moins chère qu’un lave-linge et un sèche-linge réunis. Le séchage coûte en revanche plus d’électricité : avec trois lessives par semaine à 37 centimes le kWh, mon calculateur indique un peu plus de 10 € par mois, à 30 centimes un peu moins de 9 €.",
+          "Un sèche-linge à pompe à chaleur s’en sortirait souvent avec la moitié ou moins pour le même linge. Selon Stiftung Warentest, les frais de fonctionnement plus élevés peuvent effacer au fil des ans le prix d’achat plus bas d’une lavante-séchante."
+        ]
+      }
+    ],
+    verweis: {
+      text: "La lavante-séchante que je recommande, le temps qu’elle vous fait gagner et l’électricité qu’elle coûte avec vos propres chiffres se trouvent sur ma page de la lavante-séchante.",
+      knopf: "Vers la lavante-séchante et son calculateur"
+    },
+    wannNicht: [
+      "Vous faites plusieurs lessives par jour pour une grande famille.",
+      "Vous voulez laver et sécher des charges complètes d’une traite.",
+      "Vous avez la place pour deux appareils, côte à côte ou superposés, et voulez consommer le moins d’électricité et d’eau possible.",
+      "Vous avez souvent besoin de votre linge rapidement : laver et sécher prennent ensemble le plus souvent 8 heures ou plus.",
+      "Un linge séché de façon bien homogène compte beaucoup pour vous : beaucoup de lavantes-séchantes sèchent moins bien qu’un sèche-linge séparé."
+    ],
+    fragen: [
+      { f: "Puis-je poser le sèche-linge sur le lave-linge ?", a: "Oui, avec un kit de superposition adapté et toujours avec le sèche-linge en haut. Le cadre le maintient et absorbe les vibrations pendant l’essorage. Le plus simple, c’est avec deux appareils de la même marque et de la même taille." },
+      { f: "Une lavante-séchante sèche-t-elle aussi bien qu’un sèche-linge ?", a: "Le plus souvent pas tout à fait : dans les tests, beaucoup de lavantes-séchantes sèchent de façon moins homogène, et parfois le linge reste un peu humide. Les meilleurs modèles s’en sortent cependant bien. L’important est de ne pas trop la remplir pour le séchage." },
+      { f: "Pourquoi une lavante-séchante a-t-elle besoin d’eau pour sécher ?", a: "Beaucoup refroidissent la vapeur chaude et humide avec l’eau du robinet pour qu’elle se condense et s’écoule. Selon l’appareil, cela fait un bon nombre de litres par séchage. Il existe aussi des modèles qui n’ont pas besoin d’eau pour cela, par exemple avec pompe à chaleur." },
+      { f: "Une lavante-séchante avec pompe à chaleur vaut-elle le coup ?", a: "Si vous séchez souvent, oui. Elle consomme moins d’électricité et d’eau : pour le vainqueur du test 2023, Stiftung Warentest a calculé environ 760 € de frais de fonctionnement en moins sur dix ans par rapport aux appareils de Bosch et Siemens testés. En contrepartie, elle coûte nettement plus cher à l’achat." }
+    ],
+    quellen: [
+      { name: "Mon calculateur sur la page de la lavante-séchante", text: "le coût de l’électricité pour le séchage avec trois lessives par semaine à 2,2 kWh par charge et le temps pour étendre et ramasser le linge, les hypothèses y figurent sous « Comment je calcule »" },
+      { name: "Verbraucherzentrale : les lavantes-séchantes, des appareils combinés compacts mais gourmands (août 2026)", url: "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/waschtrockner-kombigeraete-sind-platzsparende-stromfresser-37060", text: "plus d’électricité et d’eau qu’un lave-linge et un sèche-linge, refroidissement à l’eau, lave 7 à 9 kg et sèche 4 à 6 kg, surtout utile dans les très petits logements" },
+      { name: "Agence fédérale allemande de l’environnement (Umweltbundesamt) : sèche-linge (mars 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/elektrogeraete/waeschetrockner", text: "sèche-linge à pompe à chaleur 73 à 97 kWh pour 100 séchages, appareils anciens environ 340 kWh, lavantes-séchantes moins efficaces que deux appareils séparés" },
+      { name: "co2online : consommation du sèche-linge et du lave-linge (avril 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "les sèche-linge à pompe à chaleur les plus sobres autour de 156 kWh par an pour 7 kg, jusqu’à 80 % d’électricité en moins qu’un sèche-linge à condensation" },
+      { name: "HEA (association allemande pour l’utilisation efficace de l’énergie) : lavantes-séchantes", text: "eau de refroidissement 9 à 35 litres par séchage selon l’appareil, seulement la moitié aux deux tiers de la charge de lavage peut être séchée, une charge complète demande jusqu’à deux séchages, la pompe à chaleur économise électricité et eau de refroidissement" },
+      { name: "Stiftung Warentest : test des lavantes-séchantes (octobre 2023, mis à jour en août 2026)", text: "un programme a duré plus de neuf heures, souvent moins chère à l’achat que deux appareils, les frais de fonctionnement peuvent l’effacer avec le temps" },
+      { name: "t-online (octobre 2023) et desired.de (février 2025) sur le test des lavantes-séchantes de Stiftung Warentest (numéro 11/2023)", text: "vainqueur AEG avec pompe à chaleur, consommation d’électricité et d’eau la plus basse, environ 760 € de frais de fonctionnement en moins sur dix ans que les appareils de Bosch et Siemens" },
+      { name: "Stiftung Warentest : test des sèche-linge (septembre 2026)", text: "la pompe à chaleur réduit nettement la consommation, les sèche-linge à condensation et à évacuation sont des gouffres à électricité dépassés" },
+      { name: "Konsument (VKI) : test des sèche-linge (septembre 2026)", text: "sèche-linge à pompe à chaleur pour 8 kg de coton sec à ranger 0,90 à 1,82 kWh, durée du programme 136 à 192 minutes" },
+      { name: "Which? : lavante-séchante ou lave-linge et sèche-linge (octobre 2026)", text: "216 livres d’électricité par an pour une lavante-séchante contre 118 livres pour un lave-linge et un sèche-linge à pompe à chaleur, 7,5 litres d’eau par kg au séchage, la plupart des lavantes-séchantes sèchent moins bien qu’un sèche-linge" },
+      { name: "T3 : les lavantes-séchantes valent-elles deux appareils séparés ? (février 2022)", text: "sèchent moins bien, le linge reste souvent humide, avec deux appareils la lessive suivante se lave pendant que la première sèche" },
+      { name: "Trusted Reviews : lavante-séchante contre appareils séparés", text: "deux appareils prennent environ deux fois plus de place et fonctionnent en même temps, les lavantes-séchantes sèchent souvent de façon inégale" },
+      { name: "Utopia : lavante-séchante, les avantages et les inconvénients (mars 2023)", text: "ne sèche le plus souvent que 4 à 6 kg, plus d’électricité et d’eau, plutôt pour les petits foyers" },
+      { name: "Waschmaschinen-Kompass : poser le sèche-linge sur le lave-linge (octobre 2026)", text: "cadre de liaison nécessaire, sèche-linge toujours en haut, sans cadre il peut glisser" },
+      { name: "Indications des fabricants et étiquettes énergie", text: "superposition selon Siemens et Samsung (sèche-linge en haut, kit adapté, même marque), capacité, durée des programmes et électricité pour le lavage et le séchage selon les étiquettes énergie de Haier, Hisense, Bosch et AEG" }
+    ]
   }
 ];

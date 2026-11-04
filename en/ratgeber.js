@@ -306,5 +306,95 @@ const RATGEBER = [
       { name: "smarthomeassistent.de: quiet robot vacuums (August 2026) and testsiegertv.com: self-emptying stations (July 2021)", text: "usually 55 to 65 dB, emptying in the station up to 90 dB for a few seconds" },
       { name: "Manufacturer information and manufacturer guides", text: "Ecovacs (no guarantee with pet poo, no-go zones around beds and litter trays, never vacuum up wet or clumped litter, dry litter is fine), Dreame (flat, wet accidents hard to recognise, no-go zones around litter tray, beds and bowls, check the floor briefly), MOVA (bags fill faster with pets, remove hair from brushes and wheels possibly every week), Roborock (regularly remove hair from the wheel axles and the side brush), Ecovacs (pet hair wraps around the wheel axle)" }
     ]
+  },
+  {
+    id: "waschtrockner-oder-waschmaschine-und-trockner",
+    produkt: "waschtrockner",
+    geprueft: "2026-11-04",
+    titel: "Washer dryer or washing machine and tumble dryer: which is better?",
+    frage: "Washer dryer or washing machine and tumble dryer: which is better?",
+    seitenTitel: "Washer dryer or washing machine and tumble dryer: which is better?",
+    beschreibung: "Space, electricity, water and time compared: when a washer dryer suits you better, when a washing machine and heat pump dryer do, and what it means per month.",
+    kurzantwort: "If you're short of space, the washer dryer is the more convenient choice: one machine, no moving laundry across, in in the morning and dry in the evening. If you have room for two machines and do a lot of washing, a washing machine and heat pump dryer are better. They dry more at once and often use only half the electricity for drying, or less.",
+    abschnitte: [
+      {
+        titel: "Space: one machine or two",
+        absaetze: [
+          "A washer dryer fits exactly where the washing machine would otherwise go and needs the same connections. Two machines side by side need twice as much floor space.",
+          "It can be space-saving too, though: with a stacking kit you put the dryer on top of the washing machine, never the other way round. Then both only need the footprint of one washing machine, but room upwards. Without a kit, the dryer can slip during the spin cycle."
+        ]
+      },
+      {
+        titel: "How much you can dry at once",
+        absaetze: [
+          "A washer dryer usually washes 7 to 10 kg but only dries 4 to 6 kg. So a full wash load needs up to two drying cycles, or you hang the rest up. If you want to wash and dry in one go, only fill it a little over half.",
+          "A separate dryer, on the other hand, dries a full load at once. And while it's drying, the washing machine is already washing the next one."
+        ]
+      },
+      {
+        titel: "Electricity and water",
+        absaetze: [
+          "Drying makes the biggest difference. A heat pump dryer usually uses about 1 to 2 kWh for a full load. A washer dryer without a heat pump uses just over 2 kWh, and that for only 6 kg. So for the same laundry the heat pump dryer often uses only half the electricity, or less.",
+          "Many washer dryers also cool with tap water while drying. That's why they use more water than a washing machine and dryer together.",
+          "There are also washer dryers with a heat pump. They use less electricity and water, and at Stiftung Warentest one such model was the test winner in 2023."
+        ]
+      },
+      {
+        titel: "Time: what's done faster",
+        absaetze: [
+          "Compared with a clothes horse, both options save you time: with three loads a week, hanging up and taking down takes around half an hour a week according to my calculator.",
+          "Washing and drying in a washer dryer with a full load often take 8 hours or more. In the Konsument test, heat pump dryers needed just over 2 to just over 3 hours for a full load, plus the wash beforehand.",
+          "That needn't bother you, though: with the end-time function, the washer dryer starts so that it's finished when you get home. If you want to get through several loads in one day, two machines are faster."
+        ]
+      },
+      {
+        titel: "My experience",
+        art: "erfahrung",
+        absaetze: [
+          "I have a Haier washer dryer and never want to be without one again. The laundry goes in in the morning, and when I get home from work it's washed and dried. I don't have to iron any more either: the i-⁠Refresh steam programme freshens up the clothes, and above all they come out crease-free."
+        ]
+      },
+      {
+        titel: "What it costs",
+        absaetze: [
+          "To buy, a washer dryer is often cheaper than a washing machine and dryer together. Drying, however, costs more electricity: with three loads a week at 37 cents per kWh, my calculator says it's just over €10 a month, at 30 cents just under €9.",
+          "A heat pump dryer would often manage the same laundry with half or less. According to Stiftung Warentest, the higher running costs can eat up a washer dryer's lower purchase price over the years."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Which washer dryer I recommend, and how much time it saves you and electricity it costs with your own numbers, is on my washer dryer page.",
+      knopf: "To the washer dryer with calculator"
+    },
+    wannNicht: [
+      "You wash several loads a day for a large family.",
+      "You want to wash and dry full loads in one go.",
+      "You have room for two machines, side by side or stacked, and want to use as little electricity and water as possible.",
+      "You often need the laundry back quickly: washing and drying together usually take 8 hours or more.",
+      "Evenly dried laundry is especially important to you: many washer dryers don't dry as well as a separate dryer."
+    ],
+    fragen: [
+      { f: "Can I put the dryer on top of the washing machine?", a: "Yes, with a suitable stacking kit and always with the dryer on top. The frame holds it in place and absorbs the vibrations during the spin cycle. It's easiest with two machines of the same brand and size." },
+      { f: "Does a washer dryer dry as well as a tumble dryer?", a: "Usually not quite: in tests many washer dryers dry less evenly, and sometimes the laundry stays a little damp. The best models do well, though. The important thing is not to overfill it for drying." },
+      { f: "Why does a washer dryer need water for drying?", a: "Many cool the warm, moist steam with tap water so that it condenses and drains away. Depending on the machine, that's quite a few litres per drying cycle. But there are also models that don't need water for this, for example ones with a heat pump." },
+      { f: "Is a washer dryer with a heat pump worth it?", a: "If you dry often, yes. It uses less electricity and water: for the 2023 test winner, Stiftung Warentest calculated around €760 lower running costs over ten years than the Bosch and Siemens machines it tested. In return it costs considerably more to buy." }
+    ],
+    quellen: [
+      { name: "My calculator on the washer dryer page", text: "the electricity cost of drying with three loads a week at 2.2 kWh per load and the time for hanging up and taking down, the assumptions are listed there under “How I calculate”" },
+      { name: "Verbraucherzentrale: washer dryers, combination machines are space-saving power guzzlers (August 2026)", url: "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/waschtrockner-kombigeraete-sind-platzsparende-stromfresser-37060", text: "more electricity and water than a washing machine and dryer, cooling with water, washes 7 to 9 kg and dries 4 to 6 kg, mainly sensible in very small flats" },
+      { name: "German Environment Agency (Umweltbundesamt): tumble dryers (March 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/elektrogeraete/waeschetrockner", text: "heat pump dryers 73 to 97 kWh per 100 drying cycles, older machines around 340 kWh, washer dryers less efficient than two separate machines" },
+      { name: "co2online: electricity use of tumble dryers and washing machines (April 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "most economical heat pump dryers around 156 kWh a year at 7 kg, up to 80 % less electricity than a condenser dryer" },
+      { name: "HEA (German association for efficient energy use): washer dryers", text: "cooling water 9 to 35 litres per drying cycle depending on the machine, only half to two thirds of the wash load can be dried, a full wash load needs up to two drying cycles, a heat pump saves electricity and cooling water" },
+      { name: "Stiftung Warentest: washer dryers test (October 2023, updated August 2026)", text: "one programme took over nine hours, often cheaper to buy than two machines, running costs can eat that up over time" },
+      { name: "t-online (October 2023) and desired.de (February 2025) on the Stiftung Warentest washer dryer test (issue 11/2023)", text: "test winner AEG with heat pump, lowest electricity and water use, around €760 lower running costs over ten years than the Bosch and Siemens machines" },
+      { name: "Stiftung Warentest: tumble dryers test (September 2026)", text: "the heat pump cuts electricity use considerably, condenser and vented dryers are outdated power guzzlers" },
+      { name: "Konsument (VKI): tumble dryer test (September 2026)", text: "heat pump dryers for 8 kg cotton cupboard-dry 0.90 to 1.82 kWh, programme time 136 to 192 minutes" },
+      { name: "Which?: washer-dryer or washing machine and tumble dryer (October 2026)", text: "£216 a year in electricity for a washer dryer against £118 for a washing machine and heat pump dryer, 7.5 litres of water per kg when drying, most washer dryers dry worse than a tumble dryer" },
+      { name: "T3: do washer dryers work as well as separates? (February 2022)", text: "dry worse, laundry often stays damp, with two machines the next load washes while the first is drying" },
+      { name: "Trusted Reviews: washer dryer vs separates", text: "two machines need about twice the floor space and run at the same time, washer dryers often dry unevenly" },
+      { name: "Utopia: washer dryers, the pros and cons (March 2023)", text: "usually only dries 4 to 6 kg, more electricity and water, rather for small households" },
+      { name: "Waschmaschinen-Kompass: putting a dryer on a washing machine (October 2026)", text: "stacking frame needed, dryer always on top, without a frame it can slip" },
+      { name: "Manufacturer information and energy labels", text: "stacking according to Siemens and Samsung (dryer on top, suitable kit, same brand), capacity, programme time and electricity for washing and drying according to the energy labels of Haier, Hisense, Bosch and AEG" }
+    ]
   }
 ];

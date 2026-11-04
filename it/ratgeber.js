@@ -306,5 +306,95 @@ const RATGEBER = [
       { name: "smarthomeassistent.de: robot aspirapolvere silenziosi (agosto 2026) e testsiegertv.com: basi di svuotamento (luglio 2021)", text: "di solito 55–65 dB, svuotamento nella base fino a 90 dB per qualche secondo" },
       { name: "Dati e guide dei produttori", text: "Ecovacs (nessuna garanzia con gli escrementi, zone vietate intorno a cucce e lettiera, mai aspirare lettiera bagnata o agglomerata, quella asciutta sì), Dreame (incidenti piatti e umidi difficili da riconoscere, zone vietate intorno a lettiera, cucce e ciotole, controllare rapidamente il pavimento), MOVA (sacchetti pieni prima con animali, togliere i peli da spazzole e ruote anche ogni settimana), Roborock (togliere regolarmente i peli dagli assi delle ruote e dalla spazzola laterale), Ecovacs (i peli si avvolgono intorno all’asse della ruota)" }
     ]
+  },
+  {
+    id: "waschtrockner-oder-waschmaschine-und-trockner",
+    produkt: "waschtrockner",
+    geprueft: "2026-11-04",
+    titel: "Lavasciuga o lavatrice e asciugatrice: cosa è meglio?",
+    frage: "Lavasciuga o lavatrice e asciugatrice: cosa è meglio?",
+    seitenTitel: "Lavasciuga o lavatrice e asciugatrice: cosa è meglio?",
+    beschreibung: "Spazio, corrente, acqua e tempo a confronto: quando conviene una lavasciuga, quando lavatrice e asciugatrice a pompa di calore, e quanto fa al mese.",
+    kurzantwort: "Se hai poco spazio, la lavasciuga è la scelta più comoda: un solo apparecchio, niente bucato da spostare, dentro la mattina e asciutto la sera. Se hai spazio per due apparecchi e lavi molto, lavatrice e asciugatrice a pompa di calore sono meglio. Asciugano di più in una volta e per asciugare consumano spesso solo metà della corrente, o anche meno.",
+    abschnitte: [
+      {
+        titel: "Spazio: un apparecchio o due",
+        absaetze: [
+          "Una lavasciuga va esattamente dove altrimenti starebbe la lavatrice e richiede gli stessi attacchi. Due apparecchi uno accanto all’altro occupano il doppio della superficie.",
+          "Si può però anche risparmiare spazio: con un kit di sovrapposizione metti l’asciugatrice sopra la lavatrice, mai il contrario. Così occupano solo la superficie di una lavatrice, ma serve spazio in altezza. Senza kit l’asciugatrice può spostarsi durante la centrifuga."
+        ]
+      },
+      {
+        titel: "Quanto puoi asciugare in una volta",
+        absaetze: [
+          "Una lavasciuga di solito lava 7–10 kg, ma ne asciuga solo 4–6. Un carico di lavaggio pieno richiede quindi fino a due asciugature, oppure stendi il resto. Se vuoi lavare e asciugare in un colpo solo, riempila quindi poco più di metà.",
+          "Un’asciugatrice separata invece asciuga un carico pieno in una volta. E mentre asciuga, la lavatrice sta già lavando il successivo."
+        ]
+      },
+      {
+        titel: "Corrente e acqua",
+        absaetze: [
+          "La differenza più grande la fa l’asciugatura. Un’asciugatrice a pompa di calore consuma di solito circa 1–2 kWh per un carico pieno. Una lavasciuga senza pompa di calore consuma poco più di 2 kWh, e solo per 6 kg. Per lo stesso bucato l’asciugatrice a pompa di calore consuma quindi spesso solo metà della corrente, o anche meno.",
+          "Molte lavasciuga durante l’asciugatura raffreddano inoltre con l’acqua del rubinetto. Per questo consumano più acqua di lavatrice e asciugatrice insieme.",
+          "Esistono anche lavasciuga con pompa di calore. Consumano meno corrente e acqua, e da Stiftung Warentest nel 2023 un modello di questo tipo è stato il migliore del test."
+        ]
+      },
+      {
+        titel: "Tempo: cosa è pronto prima",
+        absaetze: [
+          "Rispetto allo stendibiancheria, entrambe le soluzioni ti fanno risparmiare tempo: con tre lavatrici a settimana, stendere e ritirare il bucato richiede circa mezz’ora a settimana secondo il mio calcolatore.",
+          "Lavare e asciugare in una lavasciuga a pieno carico richiede spesso 8 ore e più. Nel test di Konsument le asciugatrici a pompa di calore hanno impiegato da poco più di 2 a poco più di 3 ore per un carico pieno, più il lavaggio prima.",
+          "Questo però non deve disturbarti: con la funzione ora di fine la lavasciuga parte in modo da finire quando torni a casa. Se vuoi fare più carichi nello stesso giorno, due apparecchi sono più veloci."
+        ]
+      },
+      {
+        titel: "La mia esperienza",
+        art: "erfahrung",
+        absaetze: [
+          "Ho una lavasciuga Haier e non voglio mai più farne a meno. La mattina metto dentro il bucato, e quando torno dal lavoro è lavato e asciugato. Non devo più nemmeno stirare: il programma a vapore i-⁠Refresh rinfresca i vestiti e soprattutto escono senza pieghe."
+        ]
+      },
+      {
+        titel: "Quanto costa",
+        absaetze: [
+          "All’acquisto una lavasciuga costa spesso meno di lavatrice e asciugatrice insieme. In compenso asciugare consuma più corrente: con tre carichi a settimana a 37 centesimi per kWh, secondo il mio calcolatore sono poco più di 10 € al mese, a 30 centesimi poco meno di 9 €.",
+          "Un’asciugatrice a pompa di calore se la caverebbe spesso con metà o meno per lo stesso bucato. Secondo Stiftung Warentest, i costi di esercizio più alti possono annullare negli anni il prezzo d’acquisto più basso di una lavasciuga."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quale lavasciuga consiglio, quanto tempo ti fa risparmiare e quanta corrente costa con i tuoi numeri lo trovi nella mia pagina sulla lavasciuga.",
+      knopf: "Alla lavasciuga con calcolatore"
+    },
+    wannNicht: [
+      "Fai più lavatrici al giorno per una famiglia numerosa.",
+      "Vuoi lavare e asciugare carichi pieni in un colpo solo.",
+      "Hai spazio per due apparecchi, affiancati o sovrapposti, e vuoi consumare meno corrente e acqua possibile.",
+      "Ti serve spesso il bucato in fretta: lavare e asciugare insieme richiedono di solito 8 ore e più.",
+      "Per te conta molto un bucato asciugato in modo uniforme: molte lavasciuga asciugano meno bene di un’asciugatrice separata."
+    ],
+    fragen: [
+      { f: "Posso mettere l’asciugatrice sopra la lavatrice?", a: "Sì, con un kit di sovrapposizione adatto e sempre con l’asciugatrice sopra. Il telaio la tiene ferma e assorbe le vibrazioni durante la centrifuga. È più semplice con due apparecchi della stessa marca e misura." },
+      { f: "Una lavasciuga asciuga bene come un’asciugatrice?", a: "Di solito non del tutto: nei test molte lavasciuga asciugano in modo meno uniforme, e a volte il bucato resta un po’ umido. I modelli migliori però vanno bene. L’importante è non riempirla troppo per asciugare." },
+      { f: "Perché una lavasciuga ha bisogno di acqua per asciugare?", a: "Molte raffreddano il vapore caldo e umido con l’acqua del rubinetto, così condensa e scorre via. A seconda dell’apparecchio sono parecchi litri per asciugatura. Ci sono però anche modelli che non ne hanno bisogno, per esempio quelli con pompa di calore." },
+      { f: "Conviene una lavasciuga con pompa di calore?", a: "Se asciughi spesso, sì. Consuma meno corrente e acqua: per il migliore del test 2023 Stiftung Warentest ha calcolato circa 760 € di costi di esercizio in meno in dieci anni rispetto agli apparecchi di Bosch e Siemens testati. In compenso costa decisamente di più all’acquisto." }
+    ],
+    quellen: [
+      { name: "Il mio calcolatore nella pagina della lavasciuga", text: "il costo della corrente per asciugare con tre carichi a settimana a 2,2 kWh per carico e il tempo per stendere e ritirare il bucato, le ipotesi sono lì sotto „Come calcolo“" },
+      { name: "Verbraucherzentrale: lavasciuga, apparecchi combinati salvaspazio ma energivori (agosto 2026)", url: "https://www.verbraucherzentrale.de/wissen/energie/strom-sparen/waschtrockner-kombigeraete-sind-platzsparende-stromfresser-37060", text: "più corrente e acqua di lavatrice e asciugatrice, raffreddamento ad acqua, lava 7–9 kg e asciuga 4–6 kg, utile soprattutto in case molto piccole" },
+      { name: "Agenzia federale tedesca per l’ambiente (Umweltbundesamt): asciugatrici (marzo 2026)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/elektrogeraete/waeschetrockner", text: "asciugatrici a pompa di calore 73–97 kWh per 100 asciugature, apparecchi vecchi circa 340 kWh, lavasciuga meno efficienti di due apparecchi separati" },
+      { name: "co2online: consumo di asciugatrice e lavatrice (aprile 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "le asciugatrici a pompa di calore più parsimoniose intorno a 156 kWh all’anno per 7 kg, fino all’80 % di corrente in meno rispetto a un’asciugatrice a condensazione" },
+      { name: "HEA (associazione tedesca per l’uso efficiente dell’energia): lavasciuga", text: "acqua di raffreddamento 9–35 litri per asciugatura a seconda dell’apparecchio, si può asciugare solo da metà a due terzi del carico di lavaggio, un carico pieno richiede fino a due asciugature, la pompa di calore risparmia corrente e acqua di raffreddamento" },
+      { name: "Stiftung Warentest: test delle lavasciuga (ottobre 2023, aggiornato ad agosto 2026)", text: "un programma è durato oltre nove ore, all’acquisto spesso meno cara di due apparecchi, i costi di esercizio possono annullarlo nel tempo" },
+      { name: "t-online (ottobre 2023) e desired.de (febbraio 2025) sul test delle lavasciuga di Stiftung Warentest (numero 11/2023)", text: "migliore del test AEG con pompa di calore, consumo di corrente e acqua più basso, circa 760 € di costi di esercizio in meno in dieci anni rispetto agli apparecchi di Bosch e Siemens" },
+      { name: "Stiftung Warentest: test delle asciugatrici (settembre 2026)", text: "la pompa di calore riduce molto il consumo, le asciugatrici a condensazione e a evacuazione sono energivore superate" },
+      { name: "Konsument (VKI): test delle asciugatrici (settembre 2026)", text: "asciugatrici a pompa di calore per 8 kg di cotone asciutto da armadio 0,90–1,82 kWh, durata del programma 136–192 minuti" },
+      { name: "Which?: lavasciuga o lavatrice e asciugatrice (ottobre 2026)", text: "216 sterline di corrente all’anno per una lavasciuga contro 118 sterline per lavatrice e asciugatrice a pompa di calore, 7,5 litri d’acqua per kg in asciugatura, la maggior parte delle lavasciuga asciuga peggio di un’asciugatrice" },
+      { name: "T3: le lavasciuga funzionano bene come due apparecchi separati? (febbraio 2022)", text: "asciugano peggio, il bucato resta spesso umido, con due apparecchi il carico successivo si lava mentre il primo asciuga" },
+      { name: "Trusted Reviews: lavasciuga contro apparecchi separati", text: "due apparecchi occupano circa il doppio dello spazio e funzionano contemporaneamente, le lavasciuga asciugano spesso in modo non uniforme" },
+      { name: "Utopia: lavasciuga, vantaggi e svantaggi (marzo 2023)", text: "di solito asciuga solo 4–6 kg, più corrente e acqua, piuttosto per famiglie piccole" },
+      { name: "Waschmaschinen-Kompass: mettere l’asciugatrice sopra la lavatrice (ottobre 2026)", text: "serve un telaio di collegamento, asciugatrice sempre sopra, senza telaio può spostarsi" },
+      { name: "Dati dei produttori ed etichette energetiche", text: "sovrapposizione secondo Siemens e Samsung (asciugatrice sopra, kit adatto, stessa marca), capacità, durata dei programmi e corrente per lavare e asciugare secondo le etichette energetiche di Haier, Hisense, Bosch e AEG" }
+    ]
   }
 ];
