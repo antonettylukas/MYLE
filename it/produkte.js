@@ -208,18 +208,18 @@ const PRODUKTE = [
       { f: "Quanto è rumoroso?", a: "Di solito più o meno come una conversazione, quindi meno di un aspirapolvere normale. E visto che lavora quando non ci sei, comunque non te ne accorgi. Solo la base è davvero rumorosa per qualche secondo mentre lo svuota." }
     ],
     quellen: [
-      { name: "smarthomeassistent.de: classifica dei robot aspirapolvere (ottobre 2026)", text: "Tutti i modelli testati, per voto complessivo" },
-      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T80 OMNI (luglio 2026)", text: "Voto 2,6" },
-      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90 PRO OMNI (agosto 2026)", text: "Voto 2,3" },
-      { name: "smarthomeassistent.de: test del MOVA Z60 Ultra Roller Complete (ottobre 2026)", text: "Voto 1,4" },
-      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90S PRO OMNI (ottobre 2026)", text: "Voto 1,8" },
-      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT X12S OmniCyclone (ottobre 2026)", text: "Voto 1,7" },
-      { name: "smarthomeassistent.de: test del Dreame L40s Pro Ultra (luglio 2026)", text: "Voto 2,2" },
-      { name: "smarthomeassistent.de: nuovo test del Dreame X60 Pro Ultra Complete (novembre 2026)", text: "Voto 1,6 dopo un aggiornamento del firmware" },
-      { name: "Altri test pratici", text: "Tra cui homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com e cybershack.com.au" },
-      { name: "netzwelt.de: calcolo dei costi dei robot aspirapolvere (febbraio 2026)", text: "Costi di mantenimento all’anno" },
-      { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
-      { name: "Dati dei produttori", text: "Indicati in questa pagina con “secondo il produttore”" }
+      { name: "smarthomeassistent.de: classifica dei robot aspirapolvere (ottobre 2026)", text: "tutti i modelli testati, per voto complessivo" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T80 OMNI (luglio 2026)", text: "voto 2,6" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90 PRO OMNI (agosto 2026)", text: "voto 2,3" },
+      { name: "smarthomeassistent.de: test del MOVA Z60 Ultra Roller Complete (ottobre 2026)", text: "voto 1,4" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90S PRO OMNI (ottobre 2026)", text: "voto 1,8" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT X12S OmniCyclone (ottobre 2026)", text: "voto 1,7" },
+      { name: "smarthomeassistent.de: test del Dreame L40s Pro Ultra (luglio 2026)", text: "voto 2,2" },
+      { name: "smarthomeassistent.de: nuovo test del Dreame X60 Pro Ultra Complete (novembre 2026)", text: "voto 1,6 dopo un aggiornamento del firmware" },
+      { name: "Altri test pratici", text: "tra cui homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com e cybershack.com.au" },
+      { name: "netzwelt.de: calcolo dei costi dei robot aspirapolvere (febbraio 2026)", text: "costi di mantenimento all’anno" },
+      { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
+      { name: "Dati dei produttori", text: "indicati in questa pagina con “secondo il produttore”" }
     ],
     rechner: "saugroboter",
     video: "saugroboter",
@@ -327,6 +327,14 @@ const PRODUKTE = [
       { f: "Cosa devo tenere pulito?", a: "Ogni tanto sciacqua il filtro dei pelucchi in basso vicino alla pompa e la vaschetta del detersivo, e pulisci la guarnizione in gomma dell’oblò. Una volta al mese un programma caldo a cestello vuoto la mantiene fresca." },
       { f: "Serve un allacciamento speciale?", a: "No. Le servono lo stesso attacco dell’acqua, lo stesso scarico e la stessa presa di una lavatrice. Quindi la metti semplicemente al suo posto." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: test delle lavasciuga (numero 11/2023)", text: "vincitrice AEG L9WEF80690 (voto 2,0), consiglio qualità-prezzo Bosch WNG24440 (voto 2,1)" },
+      { name: "ETM Testmagazin (numero 10/2024)", text: "Hisense WD5S1045BW molto buona, 93 punti su 100" },
+      { name: "Stiftung Warentest: asciugatrice con aiuto per lo stiro (giugno 2007)", text: "il vapore fa risparmiare circa metà del tempo di stiro" },
+      { name: "Associazione tedesca dei produttori di cosmetici e detersivi (IKW): dati sul bucato in Germania", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "circa 90 lavaggi a persona all’anno, per il calcolatore (in tedesco)" },
+      { name: "Comunicato dell’IKW su come risparmiare lavando, asciugando e lavando i piatti (ottobre 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 lavaggi all’anno in una famiglia di quattro persone, per il calcolatore (in tedesco)" },
+      { name: "Dati dei produttori ed etichette energetiche UE", text: "capacità, durata dei programmi e consumi dei modelli" }
+    ],
     rechner: "waschtrockner",
     video: "waschtrockner"
   },
@@ -424,6 +432,14 @@ const PRODUKTE = [
       { f: "Sostituisce anche il forno?", a: "Per una-quattro porzioni quasi sempre. Patatine, verdure, pollo, pesce e panini precotti vengono perfino più in fretta. Per pizza, torte in teglia o una grande pasta al forno ti serve ancora il forno." },
       { f: "Fa davvero risparmiare corrente?", a: "Sì, soprattutto per quantità piccole. I cestelli sono piccoli e si scaldano in fretta, il preriscaldamento di solito non serve o dura solo pochi minuti. Secondo Stiftung Warentest (numero 9/2026), le friggitrici ad aria sono quasi due volte più veloci di un forno e consumano molta meno corrente." },
       { f: "Il rivestimento è sicuro?", a: "Per quanto se ne sa oggi, sì. Molti cestelli hanno un rivestimento antiaderente in PTFE, noto come Teflon. Secondo l’Istituto federale tedesco per la valutazione dei rischi (BfR), con un uso normale è sicuro. Può decomporsi solo da circa 360 °C, e una friggitrice ad aria resta ben al di sotto. Il PTFE però fa parte dei PFAS, che inquinano l’ambiente durante la produzione e lo smaltimento. Se preferisci farne a meno, scegli un apparecchio con rivestimento in ceramica senza PFAS. Cosori lo indica per esempio per la Turbo Tower Pro Smart. Con qualsiasi modello: niente forchette di metallo e niente prodotti abrasivi, così il rivestimento dura a lungo." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test delle friggitrici ad aria (numero 1/2025)", text: "Cosori Dual Basket 8,5 L “buono” (voto 2,3), all’epoca vincitrice tra gli apparecchi a due cestelli" },
+      { name: "Stiftung Warentest: test delle friggitrici ad aria (numero 9/2026)", text: "Cosori Turbo Tower Pro Smart vincitrice tra gli apparecchi a due cestelli (voto 2,2), quasi due volte più veloce di un forno" },
+      { name: "Istituto federale tedesco per la valutazione dei rischi (BfR): domande e risposte sulle pentole con rivestimento antiaderente in PTFE (dicembre 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "sicuro con un uso normale, si decompone solo da circa 360 °C (in tedesco)" },
+      { name: "Altri test", text: "tra cui netzwelt.de, homeandsmart.de, Tech Advisor e Que Choisir" },
+      { name: "Öko-Institut, Öko-Test e inside-digital.de", text: "consumi di forno, fornelli, friggitrice e friggitrice ad aria, per il calcolatore" },
+      { name: "Dati dei produttori", text: "cestelli, capacità e funzioni dei modelli, “senza PFAS” secondo Cosori" }
     ],
     zubehoer: [
       { name: "Spruzzino per olio BETA NOBLE, 100 ml", text: "Con questo spruzzi pochissimo olio in modo uniforme su verdure, patate o pollo, invece di versarlo dalla bottiglia. Bottiglia in vetro ricaricabile, senza gas propellente. Va bene per olio d’oliva, olio di semi di girasole e anche per la padella.", link: amazon("beta noble ölsprüher", "beta noble spruzzino olio") }
@@ -526,6 +542,17 @@ const PRODUKTE = [
       { f: "E se torno a casa prima?", a: "Nessun problema: alzi un attimo la temperatura sulla valvola o tocchi “più caldo” nell’app. Dal punto successivo del tuo programma va di nuovo tutto da sé. Alcuni sistemi capiscono persino dalla posizione del tuo telefono quando stai tornando a casa." },
       { f: "La casa non si raffredda troppo durante il giorno?", a: "No, se abbassi a 16-17 gradi invece di spegnere del tutto. Non dovrebbe scendere sotto i 16 gradi: altrimenti i muri si raffreddano, l’umidità vi si deposita e il rischio di muffa aumenta. Riscaldare di nuovo la casa dopo costa meno che scaldarla tutto il giorno senza pause." },
       { f: "E con le finestre aperte?", a: "La maggior parte dei modelli consigliati qui si accorge quando la temperatura scende di colpo mentre arieggi, e abbassa il riscaldamento per un po’. Il termostato Bosch ha bisogno per questo di un contatto per finestre. Così non scaldi l’aria fuori dalla finestra." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test delle valvole termostatiche (numero 9/2023)", text: "Eurotronic Comet WiFi voto 2,7, circa 100 € di risparmio all’anno per 70 m²" },
+      { name: "smarthomeassistent.de: classifica delle valvole termostatiche (ottobre 2026)", text: "Aqara W600 al primo posto e Bosch II [+M] entrambe voto 1,4" },
+      { name: "smarthomeassistent.de: test della SALCAR TRV801W (settembre 2026)", text: "voto 3,1" },
+      { name: "co2online: comunicato sulle valvole termostatiche programmabili (ottobre 2023)", url: "https://www.co2online.de/presse/heizkosten-senken-10-prozent-weniger-durch-programmierbare-thermostate/", text: "circa il 10% di spese di riscaldamento in meno (in tedesco)" },
+      { name: "Agenzia federale tedesca per l’ambiente (UBA): riscaldare nel modo giusto", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "le valvole programmabili fanno risparmiare circa il 10% di energia (in tedesco)" },
+      { name: "co2online: Heizspiegel 2026, costi di riscaldamento (settembre 2026)", url: "https://www.co2online.de/presse/heizen-wird-teurer-neuer-heizspiegel-zeigt-sparpotenziale-von-bis-zu-1000-euro-pro-jahr/", text: "riscaldamento a gas 1.170 € all’anno per 70 m², per il calcolatore (in tedesco)" },
+      { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
+      { name: "Centrale dei consumatori di Amburgo e Agenzia tedesca per l’energia (dena)", text: "circa il 6% di energia in meno per ogni grado, consigli sulla temperatura" },
+      { name: "Dati dei produttori", text: "durata delle batterie e funzioni dei modelli" }
     ],
     rechner: "thermostate",
     video: "thermostate",

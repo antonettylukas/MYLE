@@ -170,17 +170,17 @@ const PRODUKTE = [
       { f: "How loud is it?", a: "Usually about as loud as a conversation, so quieter than a normal vacuum cleaner. And because it runs while you're out, you won't notice it anyway. Only the base station is really loud for a few seconds while it empties the robot." }
     ],
     quellen: [
-      { name: "smarthomeassistent.de: robot vacuum ranking (October 2026)", text: "All tested models by overall grade" },
-      { name: "smarthomeassistent.de: Dreame L40s Pro Ultra review (July 2026)", text: "Grade 2.2" },
-      { name: "smarthomeassistent.de: Dreame X60 Pro Ultra Complete re-test (November 2026)", text: "Grade 1.6 after a firmware update" },
-      { name: "smarthomeassistent.de: Roborock Saros 20 review (August 2026)", text: "Grade 1.8" },
-      { name: "smarthomeassistent.de: Roborock Q10 S5+ review (July 2026)", text: "Grade 3.1" },
-      { name: "smarthomeassistent.de: Roborock Q7 L5+ review (May 2026)", text: "Grade 3.8" },
-      { name: "smarthomeassistent.de: MOVA Z60 Ultra Roller Complete review (October 2026)", text: "Grade 1.4" },
-      { name: "Other hands-on tests", text: "Including homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com and cybershack.com.au" },
-      { name: "netzwelt.de: robot vacuum cost check (February 2026)", text: "Running costs per year" },
+      { name: "smarthomeassistent.de: robot vacuum ranking (October 2026)", text: "all tested models by overall grade" },
+      { name: "smarthomeassistent.de: Dreame L40s Pro Ultra review (July 2026)", text: "grade 2.2" },
+      { name: "smarthomeassistent.de: Dreame X60 Pro Ultra Complete re-test (November 2026)", text: "grade 1.6 after a firmware update" },
+      { name: "smarthomeassistent.de: Roborock Saros 20 review (August 2026)", text: "grade 1.8" },
+      { name: "smarthomeassistent.de: Roborock Q10 S5+ review (July 2026)", text: "grade 3.1" },
+      { name: "smarthomeassistent.de: Roborock Q7 L5+ review (May 2026)", text: "grade 3.8" },
+      { name: "smarthomeassistent.de: MOVA Z60 Ultra Roller Complete review (October 2026)", text: "grade 1.4" },
+      { name: "Other hands-on tests", text: "including homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com and cybershack.com.au" },
+      { name: "netzwelt.de: robot vacuum cost check (February 2026)", text: "running costs per year" },
       { name: "Federal Statistical Office of Germany (Destatis): living space by household size", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensus 2022, for the averages in the calculator (page in German)" },
-      { name: "Manufacturer information", text: "Marked “according to the manufacturer” on this page" }
+      { name: "Manufacturer information", text: "marked “according to the manufacturer” on this page" }
     ],
     rechner: "saugroboter",
     video: "saugroboter",
@@ -272,6 +272,14 @@ const PRODUKTE = [
       { f: "What do I need to keep clean?", a: "Now and then rinse out the lint filter at the bottom by the pump and the detergent drawer, and wipe the rubber seal on the door. A hot programme with an empty drum once a month keeps it fresh." },
       { f: "Does it need a special connection?", a: "No. It needs the same water supply, the same drain and the same socket as a washing machine. So you simply put it in its place." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: washer dryers test (issue 11/2023)", text: "test winner AEG L9WEF80690 (grade 2.0), best-value tip Bosch WNG24440 (grade 2.1), the German sister model of the WNG25401GB" },
+      { name: "ETM Testmagazin (issue 10/2024)", text: "Hisense WD5S1045BW very good, 93 out of 100 points" },
+      { name: "Stiftung Warentest: dryer with ironing aid (June 2007)", text: "steam saves around half of the ironing time" },
+      { name: "German Cosmetic, Toiletry, Perfumery and Detergent Association (IKW): washing figures for Germany", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "about 90 washes per person a year, for the calculator (in German)" },
+      { name: "IKW press release on saving money when washing, drying and dishwashing (October 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 washes a year in a four-person household, for the calculator (in German)" },
+      { name: "Manufacturer information and EU energy labels", text: "capacity, programme times and power use of the models" }
+    ],
     rechner: "waschtrockner",
     video: "waschtrockner"
   },
@@ -352,6 +360,14 @@ const PRODUKTE = [
       { f: "Does it replace the oven too?", a: "For one to four portions, almost always. Chips, vegetables, chicken, fish and part-baked rolls even turn out faster. For pizza, tray bakes or a large bake you still need the oven." },
       { f: "Does it really save electricity?", a: "Yes, especially for smaller amounts. The baskets are small and heat up quickly, and preheating is usually not needed or only takes a few minutes. According to Stiftung Warentest (issue 9/2026), air fryers are almost twice as fast as an oven and use considerably less electricity." },
       { f: "Is the coating safe?", a: "As far as we know today, yes. Many baskets have a non-stick coating made of PTFE, known as Teflon. According to Germany's Federal Institute for Risk Assessment (BfR), it is safe in normal use. It can only break down from around 360 °C, and an air fryer stays well below that. But PTFE is one of the PFAS, which harm the environment during production and disposal. If you'd rather avoid it, choose a machine with a PFAS-free ceramic coating. Cosori states this, for example, for the Turbo Tower Pro Smart. Whatever the model: no metal forks and no abrasive cleaners, and the coating will last a long time." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: air fryers test (issue 1/2025)", text: "Cosori Dual Basket 8,5 L good (grade 2.3), at the time test winner with two baskets" },
+      { name: "Stiftung Warentest: air fryers test (issue 9/2026)", text: "Cosori Turbo Tower Pro Smart test winner with two baskets (grade 2.2), air fryers almost twice as fast as an oven" },
+      { name: "German Federal Institute for Risk Assessment (BfR): questions and answers on PTFE non-stick cookware (December 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "safe in normal use, only breaks down from around 360 °C (in German)" },
+      { name: "Other tests", text: "including netzwelt.de, homeandsmart.de, Tech Advisor and Que Choisir" },
+      { name: "Öko-Institut, Öko-Test and inside-digital.de", text: "power use of oven, hob, deep fryer and air fryer, for the calculator" },
+      { name: "Manufacturer information", text: "baskets, capacities and features of the models, “PFAS-free” according to Cosori" }
     ],
     rechner: "airfryer",
     video: "airfryer"
@@ -465,6 +481,17 @@ const PRODUKTE = [
       { f: "What if I come home earlier?", a: "No problem: you briefly turn the thermostat up or tap warmer in the app. From the next point in your heating plan, everything runs by itself again. Some systems even use your phone's location to tell when you're on your way home." },
       { f: "Doesn't the flat get too cold during the day?", a: "Not if you turn it down to 16 to 17 degrees instead of right off. It shouldn't drop below 16 degrees: otherwise the walls cool down, moisture settles on them, and the risk of mould goes up. Heating the flat back up afterwards costs less than heating it all day long." },
       { f: "What about open windows?", a: "Most of the picks here notice when the temperature suddenly drops while you air the room, and turn down for a while. The Bosch thermostat needs a window contact for this. So you're not heating the outdoors." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: radiator thermostats test (issue 9/2023)", text: "test winner Homematic IP Evo (grade 1.7), Eurotronic Comet WiFi (grade 2.7), around €100 a year saved for 70 m²" },
+      { name: "smarthomeassistent.de: radiator thermostat ranking (October 2026)", text: "Aqara W600 in first place and Bosch II [+M] both grade 1.4, Homematic IP Evo grade 1.8" },
+      { name: "smarthomeassistent.de: SALCAR TRV801W review (September 2026)", text: "grade 3.1" },
+      { name: "co2online press release: 10 per cent lower heating costs with programmable thermostats (October 2023)", url: "https://www.co2online.de/presse/heizkosten-senken-10-prozent-weniger-durch-programmierbare-thermostate/", text: "around 10 per cent lower heating costs (in German)" },
+      { name: "German Environment Agency (UBA): heating the right way", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "programmable thermostats save about 10% energy (in German)" },
+      { name: "co2online: Heizspiegel 2026 heating cost survey (September 2026)", url: "https://www.co2online.de/presse/heizen-wird-teurer-neuer-heizspiegel-zeigt-sparpotenziale-von-bis-zu-1000-euro-pro-jahr/", text: "gas heating €1,170 a year for 70 m², for the calculator (in German)" },
+      { name: "Federal Statistical Office of Germany (Destatis): living space by household size", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensus 2022, for the averages in the calculator (page in German)" },
+      { name: "Hamburg Consumer Centre and German Energy Agency (dena)", text: "around 6 per cent less heating energy per degree, room temperature tips" },
+      { name: "Manufacturer information", text: "battery life and features of the models" }
     ],
     rechner: "thermostate",
     video: "thermostate",

@@ -317,9 +317,9 @@ const PRODUKTE = [
       { f: "Wie laut ist er?", a: "Meist etwa so laut wie ein Gespräch und damit leiser als ein normaler Staubsauger. Und weil er läuft, wenn du nicht da bist, bekommst du davon ohnehin nichts mit. Nur die Station ist beim Absaugen ein paar Sekunden richtig laut." }
     ],
     quellen: [
-      { name: "smarthomeassistent.de: Saugroboter-Bestenliste (Oktober 2026)", text: "Alle getesteten Modelle nach Gesamtnote" },
-      { name: "smarthomeassistent.de: Saugroboter bis 600 € (Oktober 2026)", text: "Die besten Modelle dieser Preisklasse" },
-      { name: "smarthomeassistent.de: Saugroboter bis 800 € (Oktober 2026)", text: "Die besten Modelle dieser Preisklasse" },
+      { name: "smarthomeassistent.de: Saugroboter-Bestenliste (Oktober 2026)", text: "alle getesteten Modelle nach Gesamtnote" },
+      { name: "smarthomeassistent.de: Saugroboter bis 600 € (Oktober 2026)", text: "die besten Modelle dieser Preisklasse" },
+      { name: "smarthomeassistent.de: Saugroboter bis 800 € (Oktober 2026)", text: "die besten Modelle dieser Preisklasse" },
       { name: "smarthomeassistent.de: Test ECOVACS DEEBOT T80 OMNI (Juli 2026)", text: "Note 2,6" },
       { name: "smarthomeassistent.de: Test ECOVACS DEEBOT T90 PRO OMNI (August 2026)", text: "Note 2,3" },
       { name: "smarthomeassistent.de: Test MOVA Z60 Ultra Roller Complete (Oktober 2026)", text: "Note 1,4" },
@@ -333,10 +333,10 @@ const PRODUKTE = [
       { name: "smarthomeassistent.de: Test Roborock Saros 20 (August 2026)", text: "Note 1,8" },
       { name: "smarthomeassistent.de: Test Roborock Q10 S5+ (Juli 2026)", text: "Note 3,1" },
       { name: "smarthomeassistent.de: Test Roborock Q7 L5+ (Mai 2026)", text: "Note 3,8" },
-      { name: "Weitere Praxistests", text: "Unter anderem von homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com und cybershack.com.au" },
+      { name: "Weitere Praxistests", text: "unter anderem von homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com und cybershack.com.au" },
       { name: "netzwelt.de: Saugroboter im Kosten-Check (Februar 2026)", text: "Unterhaltskosten pro Jahr" },
       { name: "Statistisches Bundesamt: Wohnfläche nach Haushaltsgröße", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Mikrozensus 2022, für die Durchschnittswerte im Rechner" },
-      { name: "Herstellerangaben", text: "Auf dieser Seite mit „laut Hersteller“ gekennzeichnet" }
+      { name: "Herstellerangaben", text: "auf dieser Seite mit „laut Hersteller“ gekennzeichnet" }
     ],
     rechner: "saugroboter",
     video: "saugroboter",
@@ -439,6 +439,14 @@ const PRODUKTE = [
       { f: "Was kostet das Trocknen?", a: "Ohne Wärmepumpe braucht ein Trockengang je nach Gerät gut 2 bis 2,5 kWh Strom. Das sind bei 35 Cent pro kWh rund 75 Cent. Bei drei Ladungen pro Woche kommst du auf etwa 10 € im Monat. Ein Gerät mit Wärmepumpe wie der AEG braucht weniger Strom und Wasser: Stiftung Warentest rechnet bei ihm mit rund 760 € weniger Betriebskosten in zehn Jahren als bei den getesteten Geräten von Bosch und Siemens." },
       { f: "Was muss ich sauber halten?", a: "Ab und zu das Flusensieb unten an der Pumpe und das Waschmittelfach ausspülen und die Gummidichtung an der Tür abwischen. Einmal im Monat ein heißes Programm mit leerer Trommel hält ihn frisch." },
       { f: "Braucht er einen besonderen Anschluss?", a: "Nein. Er braucht denselben Wasseranschluss, denselben Abfluss und dieselbe Steckdose wie eine Waschmaschine. Du stellst ihn also einfach an ihren Platz." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Waschtrockner im Test (Heft 11/2023)", text: "Testsieger AEG L9WEF80690 (Note 2,0), Preistipp Bosch WNG24440 (Note 2,1)" },
+      { name: "ETM Testmagazin (Heft 10/2024)", text: "Hisense WD5S1045BW sehr gut, 93 von 100 Punkten" },
+      { name: "Stiftung Warentest: Trockner mit Bügelhilfe (Juni 2007)", text: "Dampf spart rund die Hälfte der Bügelzeit" },
+      { name: "Industrieverband Körperpflege- und Waschmittel (IKW): Zahlen zum Waschen in Deutschland", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "im Schnitt 90 Wäschen pro Person und Jahr, für den Rechner" },
+      { name: "IKW-Pressemitteilung „Mit 7 Tipps mehr als 400 Euro sparen beim Waschen, Trocknen und Spülen“ (Oktober 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 Wäschen im Jahr im Vier-Personen-Haushalt, für den Rechner" },
+      { name: "Herstellerangaben und EU-Energielabel", text: "Fassungsvermögen, Programmdauer und Stromverbrauch der Modelle" }
     ],
     rechner: "waschtrockner",
     video: "waschtrockner"
@@ -544,6 +552,14 @@ const PRODUKTE = [
       { f: "Ersetzt er auch den Backofen?", a: "Für ein bis vier Portionen fast immer. Pommes, Gemüse, Hähnchen, Fisch und Aufbackbrötchen gelingen sogar schneller. Für Pizza, Blechkuchen oder einen großen Auflauf brauchst du den Ofen weiter." },
       { f: "Spart er wirklich Strom?", a: "Ja, vor allem bei kleineren Mengen. Die Körbe sind klein und schnell heiß, Vorheizen ist meist nicht nötig oder dauert nur ein paar Minuten. Laut Stiftung Warentest (Heft 9/2026) sind Airfryer fast doppelt so schnell wie ein Backofen und brauchen deutlich weniger Strom." },
       { f: "Ist die Beschichtung unbedenklich?", a: "Nach heutigem Wissen ja. Viele Körbe haben eine Antihaft-Beschichtung aus PTFE, bekannt als Teflon. Laut Bundesinstitut für Risikobewertung ist sie bei normalem Gebrauch unbedenklich. Zersetzen kann sie sich erst ab etwa 360 °C, ein Airfryer bleibt deutlich darunter. PTFE gehört aber zu den PFAS, die bei Herstellung und Entsorgung die Umwelt belasten. Wenn du darauf verzichten willst, nimm ein Gerät mit Keramik-Beschichtung ohne PFAS. Das gibt Cosori zum Beispiel für den Turbo Tower Pro Smart und den ICONIC Dual an. Egal bei welchem Modell: Keine Metallgabel und kein Scheuermittel, dann hält die Beschichtung lange." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Heißluftfritteusen im Test (Heft 1/2025)", text: "Cosori Dual Basket 8,5 L gut (Note 2,3), damals Testsieger mit zwei Körben" },
+      { name: "Stiftung Warentest: Heißluftfritteusen im Test (Heft 9/2026)", text: "Cosori Turbo Tower Pro Smart Testsieger mit zwei Körben (Note 2,2), Airfryer fast doppelt so schnell wie der Backofen" },
+      { name: "Bundesinstitut für Risikobewertung: Fragen und Antworten zu Geschirr mit Antihaftbeschichtung aus PTFE (Dezember 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "bei normalem Gebrauch unbedenklich, zersetzt sich erst ab etwa 360 °C" },
+      { name: "Weitere Tests", text: "unter anderem von netzwelt.de, homeandsmart.de, Tech Advisor und Que Choisir" },
+      { name: "Öko-Institut, Öko-Test und inside-digital.de", text: "Stromverbrauch von Backofen, Herd, Fritteuse und Airfryer, für den Rechner" },
+      { name: "Herstellerangaben", text: "Körbe, Liter und Funktionen der Modelle, „ohne PFAS“ laut Cosori" }
     ],
     zubehoer: [
       { name: "BETA NOBLE Ölsprüher, 100 ml", text: "Damit sprühst du ganz wenig Öl gleichmäßig auf Gemüse, Kartoffeln oder Hähnchen, statt es aus der Flasche zu gießen. Glasflasche zum Nachfüllen, ohne Treibgas. Passt für Olivenöl, Sonnenblumenöl und auch für die Pfanne.", link: amazon("beta noble ölsprüher") }
@@ -674,6 +690,17 @@ const PRODUKTE = [
       { f: "Was ist, wenn ich früher heimkomme?", a: "Kein Problem: Du drehst am Thermostat kurz höher oder tippst in der App auf wärmer. Ab dem nächsten Punkt in deinem Heizplan läuft wieder alles selbstständig. Manche Systeme merken über den Standort deines Handys sogar, wann du auf dem Heimweg bist." },
       { f: "Kühlt die Wohnung tagsüber nicht zu sehr aus?", a: "Nicht, wenn du auf 16 bis 17 Grad runterdrehst statt ganz aus. Unter 16 Grad sollte es nicht fallen: Sonst kühlen die Wände aus, Feuchtigkeit schlägt sich daran nieder, und das Risiko für Schimmel steigt. Die Wohnung danach wieder aufzuheizen, kostet weniger, als den ganzen Tag durchzuheizen." },
       { f: "Was ist mit offenen Fenstern?", a: "Die meisten Empfehlungen hier merken, wenn die Temperatur beim Lüften plötzlich fällt, und drehen dann für eine Weile runter. Beim Bosch-Thermostat brauchst du dafür einen Fensterkontakt. So heizt du nicht aus dem Fenster hinaus." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Heizkörperthermostate im Test (Heft 9/2023)", text: "Testsieger Homematic IP Evo (Note 1,7), Preistipp FRITZ!Smart Thermo 302 (Note 1,9), Eurotronic Comet WiFi (Note 2,7), rund 100 € im Jahr gespart bei 70 m²" },
+      { name: "smarthomeassistent.de: Bestenliste Heizkörperthermostate (Oktober 2026)", text: "Aqara W600 auf Platz 1 und Bosch II [+M] je Note 1,4, Homematic IP Evo Note 1,8" },
+      { name: "smarthomeassistent.de: Test SALCAR TRV801W (September 2026)", text: "Note 3,1" },
+      { name: "co2online: Heizkosten senken, 10 Prozent weniger durch programmierbare Thermostate (Oktober 2023)", url: "https://www.co2online.de/presse/heizkosten-senken-10-prozent-weniger-durch-programmierbare-thermostate/", text: "rund 10 Prozent weniger Heizkosten" },
+      { name: "Umweltbundesamt: Richtiges Heizen schützt das Klima und den Geldbeutel", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "programmierbare Thermostate sparen etwa 10 % Energie" },
+      { name: "co2online: Heizspiegel 2026 (September 2026)", url: "https://www.co2online.de/presse/heizen-wird-teurer-neuer-heizspiegel-zeigt-sparpotenziale-von-bis-zu-1000-euro-pro-jahr/", text: "Gasheizung 1.170 € im Jahr für 70 m², für den Rechner" },
+      { name: "Statistisches Bundesamt: Wohnfläche nach Haushaltsgröße", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Mikrozensus 2022, für die Durchschnittswerte im Rechner" },
+      { name: "Verbraucherzentrale Hamburg und Deutsche Energie-Agentur (dena)", text: "rund 6 Prozent weniger Heizenergie pro Grad, Tipps zur Raumtemperatur" },
+      { name: "Herstellerangaben", text: "Batterielaufzeit und Funktionen der Modelle" }
     ],
     rechner: "thermostate",
     video: "thermostate",

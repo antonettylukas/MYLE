@@ -211,20 +211,20 @@ const PRODUKTE = [
       { f: "Est-il bruyant\u202f?", a: "En général à peu près autant qu’une conversation, donc moins qu’un aspirateur normal. Et comme il tourne quand vous n’êtes pas là, vous ne le remarquez de toute façon pas. Seule la station est vraiment bruyante pendant quelques secondes quand elle le vide." }
     ],
     quellen: [
-      { name: "smarthomeassistent.de\u202f: classement des robots aspirateurs (octobre 2026)", text: "Tous les modèles testés, par note globale" },
-      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 600 € (octobre 2026)", text: "Les meilleurs modèles de cette gamme de prix" },
-      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 800 € (octobre 2026)", text: "Les meilleurs modèles de cette gamme de prix" },
-      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T80 OMNI (juillet 2026)", text: "Note 2,6" },
-      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90 PRO OMNI (août 2026)", text: "Note 2,3" },
-      { name: "smarthomeassistent.de\u202f: test du MOVA Z60 Ultra Roller Complete (octobre 2026)", text: "Note 1,4" },
-      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90S PRO OMNI (octobre 2026)", text: "Note 1,8" },
-      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT X12S OmniCyclone (octobre 2026)", text: "Note 1,7" },
-      { name: "smarthomeassistent.de\u202f: test du MOVA V50 Ultra Complete (août 2026)", text: "Note 1,9" },
-      { name: "smarthomeassistent.de\u202f: nouveau test du Dreame X60 Pro Ultra Complete (novembre 2026)", text: "Note 1,6 après une mise à jour du firmware" },
-      { name: "Autres tests pratiques", text: "Notamment homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com et cybershack.com.au" },
-      { name: "netzwelt.de\u202f: calcul des coûts des robots aspirateurs (février 2026)", text: "Coûts d’entretien par an" },
-      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
-      { name: "Données des fabricants", text: "Signalées sur cette page par «\u202fselon le fabricant\u202f»" }
+      { name: "smarthomeassistent.de\u202f: classement des robots aspirateurs (octobre 2026)", text: "tous les modèles testés, par note globale" },
+      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 600 € (octobre 2026)", text: "les meilleurs modèles de cette gamme de prix" },
+      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 800 € (octobre 2026)", text: "les meilleurs modèles de cette gamme de prix" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T80 OMNI (juillet 2026)", text: "note 2,6" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90 PRO OMNI (août 2026)", text: "note 2,3" },
+      { name: "smarthomeassistent.de\u202f: test du MOVA Z60 Ultra Roller Complete (octobre 2026)", text: "note 1,4" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90S PRO OMNI (octobre 2026)", text: "note 1,8" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT X12S OmniCyclone (octobre 2026)", text: "note 1,7" },
+      { name: "smarthomeassistent.de\u202f: test du MOVA V50 Ultra Complete (août 2026)", text: "note 1,9" },
+      { name: "smarthomeassistent.de\u202f: nouveau test du Dreame X60 Pro Ultra Complete (novembre 2026)", text: "note 1,6 après une mise à jour du firmware" },
+      { name: "Autres tests pratiques", text: "notamment homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com et cybershack.com.au" },
+      { name: "netzwelt.de\u202f: calcul des coûts des robots aspirateurs (février 2026)", text: "coûts d’entretien par an" },
+      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
+      { name: "Données des fabricants", text: "signalées sur cette page par «\u202fselon le fabricant\u202f»" }
     ],
     rechner: "saugroboter",
     video: "saugroboter",
@@ -332,6 +332,14 @@ const PRODUKTE = [
       { f: "Que dois-je garder propre\u202f?", a: "De temps en temps, rincez le filtre à peluches en bas près de la pompe et le bac à lessive, et essuyez le joint en caoutchouc de la porte. Un programme chaud à tambour vide une fois par mois la garde fraîche." },
       { f: "A-t-elle besoin d’un branchement spécial\u202f?", a: "Non. Elle a besoin de la même arrivée d’eau, de la même évacuation et de la même prise qu’un lave-linge. Vous la mettez donc simplement à sa place." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des lavantes-séchantes (numéro 11/2023)", text: "vainqueur AEG L9WEF80690 (note 2,0), meilleur rapport qualité-prix Bosch WNG24440 (note 2,1)" },
+      { name: "ETM Testmagazin (numéro 10/2024)", text: "Hisense WD5S1045BW très bon, 93 points sur 100" },
+      { name: "Stiftung Warentest\u202f: sèche-linge avec aide au repassage (juin 2007)", text: "la vapeur fait gagner environ la moitié du temps de repassage" },
+      { name: "Association allemande des fabricants de cosmétiques et de lessives (IKW)\u202f: chiffres de la lessive en Allemagne", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "environ 90 lessives par personne et par an, pour le calculateur (en allemand)" },
+      { name: "Communiqué de l’IKW sur les économies au lavage, au séchage et à la vaisselle (octobre 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 lessives par an dans un foyer de quatre personnes, pour le calculateur (en allemand)" },
+      { name: "Données des fabricants et étiquettes énergie de l’UE", text: "capacité, durée des programmes et consommation des modèles" }
+    ],
     rechner: "waschtrockner",
     video: "waschtrockner"
   },
@@ -425,6 +433,14 @@ const PRODUKTE = [
       { f: "Remplace-t-elle aussi le four\u202f?", a: "Pour une à quatre portions, presque toujours. Frites, légumes, poulet, poisson et petits pains précuits y réussissent même plus vite. Pour la pizza, les gâteaux sur plaque ou un grand gratin, il vous faut toujours le four." },
       { f: "Économise-t-elle vraiment de l’électricité\u202f?", a: "Oui, surtout pour de petites quantités. Les paniers sont petits et chauffent vite, le préchauffage est généralement inutile ou ne dure que quelques minutes. Selon Stiftung Warentest (numéro 9/2026), les friteuses sans huile sont presque deux fois plus rapides qu’un four et consomment nettement moins d’électricité." },
       { f: "Le revêtement est-il sans danger\u202f?", a: "Selon les connaissances actuelles, oui. Beaucoup de paniers ont un revêtement antiadhésif en PTFE, connu sous le nom de Téflon. Selon l’Institut fédéral allemand d’évaluation des risques (BfR), il est sans danger en utilisation normale. Il ne peut se décomposer qu’à partir d’environ 360 °C, et une friteuse sans huile reste bien en dessous. Mais le PTFE fait partie des PFAS, qui polluent l’environnement lors de la fabrication et de l’élimination. Si vous préférez vous en passer, choisissez un appareil avec un revêtement céramique sans PFAS. Cosori l’indique par exemple pour la Turbo Tower Pro Smart. Quel que soit le modèle : pas de fourchette en métal ni de produit abrasif, et le revêtement durera longtemps." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des friteuses sans huile (numéro 1/2025)", text: "Cosori Dual Basket 8,5 L «\u202fbon\u202f» (note 2,3), à l’époque vainqueur parmi les appareils à deux paniers" },
+      { name: "Stiftung Warentest\u202f: test des friteuses sans huile (numéro 9/2026)", text: "Cosori Turbo Tower Pro Smart vainqueur parmi les appareils à deux paniers (note 2,2), presque deux fois plus rapide qu’un four" },
+      { name: "Institut fédéral allemand d’évaluation des risques (BfR)\u202f: questions et réponses sur les ustensiles à revêtement antiadhésif en PTFE (décembre 2018)", url: "https://www.bfr.bund.de/cm/343/ausgewaehlte-fragen-und-antworten-zu-geschirr-mit-antihaftbeschichtung-aus-ptfe-fuer-das-braten-kochen-und-backen.pdf", text: "sans danger en utilisation normale, ne se décompose qu’à partir d’environ 360 °C (en allemand)" },
+      { name: "Autres tests", text: "notamment netzwelt.de, homeandsmart.de, Tech Advisor et Que Choisir" },
+      { name: "Öko-Institut, Öko-Test et inside-digital.de", text: "consommation du four, des plaques, de la friteuse et de la friteuse sans huile, pour le calculateur" },
+      { name: "Données des fabricants", text: "paniers, contenances et fonctions des modèles, «\u202fsans PFAS\u202f» selon Cosori" }
     ],
     zubehoer: [
       { name: "Pulvérisateur d’huile BETA NOBLE, 100 ml", text: "Il vous permet de vaporiser très peu d’huile, de façon régulière, sur les légumes, les pommes de terre ou le poulet, au lieu de la verser directement de la bouteille. Flacon en verre rechargeable, sans gaz propulseur. Convient à l’huile d’olive, à l’huile de tournesol et aussi pour la poêle.", link: amazon("beta noble ölsprüher", "beta noble pulvérisateur huile") }
@@ -541,6 +557,17 @@ const PRODUKTE = [
       { f: "Et si je rentre plus tôt\u202f?", a: "Pas de problème : vous montez rapidement la température sur la tête thermostatique ou touchez « plus chaud » dans l’appli. À partir du prochain créneau de votre planning, tout repart tout seul. Certains systèmes savent même grâce à la localisation de votre téléphone quand vous êtes sur le chemin du retour." },
       { f: "Le logement ne refroidit-il pas trop dans la journée\u202f?", a: "Pas si vous baissez à 16 ou 17 degrés au lieu d’éteindre complètement. Il ne faut pas descendre sous 16 degrés : sinon les murs refroidissent, l’humidité s’y dépose et le risque de moisissure augmente. Réchauffer le logement ensuite coûte moins cher que le chauffer toute la journée sans interruption." },
       { f: "Et les fenêtres ouvertes\u202f?", a: "La plupart des recommandations présentées ici détectent quand la température chute brusquement pendant que vous aérez, et baissent alors le chauffage un moment. Le thermostat Bosch a besoin pour cela d’un contact de fenêtre. Vous ne chauffez ainsi pas l’extérieur." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des têtes thermostatiques (numéro 9/2023)", text: "vainqueur Homematic IP Evo (note 1,7), Eurotronic Comet WiFi (note 2,7), environ 100\u00a0€ d’économie par an pour 70 m²" },
+      { name: "smarthomeassistent.de\u202f: classement des têtes thermostatiques (octobre 2026)", text: "Aqara W600 à la première place et Bosch II [+M] note 1,4 chacun, Homematic IP Evo note 1,8" },
+      { name: "smarthomeassistent.de\u202f: test du SALCAR TRV801W (septembre 2026)", text: "note 3,1" },
+      { name: "co2online\u202f: communiqué sur les thermostats programmables (octobre 2023)", url: "https://www.co2online.de/presse/heizkosten-senken-10-prozent-weniger-durch-programmierbare-thermostate/", text: "environ 10\u00a0% de frais de chauffage en moins (en allemand)" },
+      { name: "Agence fédérale allemande de l’environnement (UBA)\u202f: bien chauffer", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "les thermostats programmables économisent environ 10\u00a0% d’énergie (en allemand)" },
+      { name: "co2online\u202f: Heizspiegel 2026, coûts de chauffage (septembre 2026)", url: "https://www.co2online.de/presse/heizen-wird-teurer-neuer-heizspiegel-zeigt-sparpotenziale-von-bis-zu-1000-euro-pro-jahr/", text: "chauffage au gaz 1\u202f170\u00a0€ par an pour 70 m², pour le calculateur (en allemand)" },
+      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
+      { name: "Centre de consommateurs de Hambourg et Agence allemande de l’énergie (dena)", text: "environ 6\u00a0% d’énergie de chauffage en moins par degré, conseils de température" },
+      { name: "Données des fabricants", text: "autonomie des piles et fonctions des modèles" }
     ],
     rechner: "thermostate",
     video: "thermostate",
