@@ -82,7 +82,7 @@ const UEBER_MICH = {
 const NEWSLETTER = {
   titel: "Neue Helfer per Mail",
   text: "Immer wenn ich einen neuen Helfer entdecke, der mich überzeugt, schreibe ich dir eine kurze Mail. Höchstens zweimal im Monat, und du kannst dich jederzeit wieder abmelden.",
-  formularAdresse: "",
+  formularAdresse: "https://ef46dae9.sibforms.com/serve/MUIFAI7Ryxojbb-kbyHc1skYW8IGy_XaIf2MkBIFuttr9S98Cf0LmrE19jB3bqmC0GCl2b5ldjHAz0cKly_AcOv3Tq3f-6gEHvD2YoRc3-ewS5nGE5toqTBvnc5AJwUXOM3vrJFIkuz6h5lU0KEb_g8Gy1ybmGuj0nBH3Ckoyr6FLx9pu-PmXD5eOynP3U5RgBexxMA7slk2Sd_XEg==?isAjax=1",
   feldName: "EMAIL",
-  zusatzFelder: { email_address_check: "", locale: "de" }
+  zusatzFelder: { email_address_check: "", locale: "de", html_type: "simple" }
 };

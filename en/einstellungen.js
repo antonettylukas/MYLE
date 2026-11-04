@@ -42,7 +42,7 @@ const UEBER_MICH = {
 const NEWSLETTER = {
   titel: "New helpers by email",
   text: "Whenever I discover a new helper that convinces me, I'll send you a short email. Twice a month at most, and you can unsubscribe any time.",
-  formularAdresse: "",
+  formularAdresse: "https://ef46dae9.sibforms.com/serve/MUIFALyS3T8vlqv-XVLIhIky9iORA_K57y3BiYZF1STOu5tVGDrD4r-AcGyg1FKlq8QI2htCKC73oHyx1GmuNsBASH4Rn72fjjFgRQM-FmOMozQpcA4IhxBBkDcDDmgrXoWmm_VJwccfg7fWT5AduQ8gv0j8OLJqB_GitrZzDEJ4Z6SVhGPeay_18X0O9ssSw8euP6hvYkXRClWSdw==?isAjax=1",
   feldName: "EMAIL",
-  zusatzFelder: { email_address_check: "", locale: "en" }
+  zusatzFelder: { email_address_check: "", locale: "en", html_type: "simple" }
 };

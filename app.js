@@ -883,7 +883,7 @@
             <input type="email" id="${id}" name="email" autocomplete="email" required placeholder="${t("name@beispiel.de", "name@example.com")}">
             <button class="buy" type="submit">${t("Anmelden", "Sign up")}</button>
           </div>
-          <p class="nl-klein">${t("Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Mehr dazu in der", "First you'll get an email to confirm your sign-up. You can unsubscribe with one click in every email. More about this in the")} <a href="datenschutz#newsletter">${t("Datenschutzerklärung", "privacy policy")}</a>.</p>
+          <p class="nl-klein">${t("Du bekommst zuerst eine Mail, in der du die Anmeldung bestätigst. Abmelden geht mit einem Klick in jeder Mail. Ich zähle nur anonym, wie oft Mails geöffnet und Links geklickt werden. Mehr dazu in der", "First you'll get an email to confirm your sign-up. You can unsubscribe with one click in every email. I only count anonymously how often emails are opened and links clicked. More about this in the")} <a href="datenschutz#newsletter">${t("Datenschutzerklärung", "privacy policy")}</a>.</p>
           <p class="nl-status" role="status" aria-live="polite"></p>
         </form>
       </div>`;
