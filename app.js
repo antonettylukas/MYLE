@@ -562,7 +562,8 @@
       <section class="wrap p-block" id="quellen" aria-labelledby="quellen-titel">
         <h2 class="p-titel" id="quellen-titel">${t("Meine Quellen", "My sources")}</h2>
         <p class="p-intro">${t("Auf diese Tests und Seiten stützen sich meine Empfehlungen.", "My recommendations are based on these tests and pages.")}</p>
-        <ul class="quellen">${qs.map(q => `<li>${q.url ? `<a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>` : esc(q.name)}${q.text ? ` <span class="quelle-text">${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>
+        ${(liste => qs.length > 6 ? `<details class="quellen-details"><summary>${t("Alle {n} Quellen anzeigen", "Show all {n} sources", { n: qs.length })}</summary>${liste}</details>` : liste)(
+          `<ul class="quellen">${qs.map(q => `<li>${q.url ? `<a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>` : esc(q.name)}${q.text ? `<span class="quelle-text">, ${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>`)}
       </section>` : "";
 
     // Unten höchstens vier andere Helfer: erst die aus derselben Kategorie, dann die übrigen

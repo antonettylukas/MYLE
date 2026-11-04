@@ -63,6 +63,7 @@ const UI_TEXTE = {
   "Zuletzt geprüft": "Dernière vérification",
   "Meine Quellen": "Mes sources",
   "Auf diese Tests und Seiten stützen sich meine Empfehlungen.": "Mes recommandations s’appuient sur ces tests et ces pages.",
+  "Alle {n} Quellen anzeigen": "Afficher les {n} sources",
   "Was es dir abnimmt": "Ce qu’il fait à votre place",
   "Nach den Produkten findest du noch": "Après les produits, vous trouverez aussi",
   "Meine Erfahrung": "Mon expérience",

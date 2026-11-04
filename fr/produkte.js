@@ -210,6 +210,22 @@ const PRODUKTE = [
       { f: "Fonctionne-t-il sur plusieurs étages\u202f?", a: "Il mémorise plusieurs cartes. Mais la station reste au même endroit. Vous le portez à l’autre étage, et il ne peut se vider qu’une fois revenu à la station." },
       { f: "Est-il bruyant\u202f?", a: "En général à peu près autant qu’une conversation, donc moins qu’un aspirateur normal. Et comme il tourne quand vous n’êtes pas là, vous ne le remarquez de toute façon pas. Seule la station est vraiment bruyante pendant quelques secondes quand elle le vide." }
     ],
+    quellen: [
+      { name: "smarthomeassistent.de\u202f: classement des robots aspirateurs (octobre 2026)", text: "Tous les modèles testés, par note globale" },
+      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 600 € (octobre 2026)", text: "Les meilleurs modèles de cette gamme de prix" },
+      { name: "smarthomeassistent.de\u202f: robots aspirateurs jusqu’à 800 € (octobre 2026)", text: "Les meilleurs modèles de cette gamme de prix" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T80 OMNI (juillet 2026)", text: "Note 2,6" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90 PRO OMNI (août 2026)", text: "Note 2,3" },
+      { name: "smarthomeassistent.de\u202f: test du MOVA Z60 Ultra Roller Complete (octobre 2026)", text: "Note 1,4" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT T90S PRO OMNI (octobre 2026)", text: "Note 1,8" },
+      { name: "smarthomeassistent.de\u202f: test de l’ECOVACS DEEBOT X12S OmniCyclone (octobre 2026)", text: "Note 1,7" },
+      { name: "smarthomeassistent.de\u202f: test du MOVA V50 Ultra Complete (août 2026)", text: "Note 1,9" },
+      { name: "smarthomeassistent.de\u202f: nouveau test du Dreame X60 Pro Ultra Complete (novembre 2026)", text: "Note 1,6 après une mise à jour du firmware" },
+      { name: "Autres tests pratiques", text: "Notamment homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com et cybershack.com.au" },
+      { name: "netzwelt.de\u202f: calcul des coûts des robots aspirateurs (février 2026)", text: "Coûts d’entretien par an" },
+      { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
+      { name: "Données des fabricants", text: "Signalées sur cette page par «\u202fselon le fabricant\u202f»" }
+    ],
     rechner: "saugroboter",
     video: "saugroboter",
     profitipp: {

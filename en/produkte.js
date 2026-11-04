@@ -169,6 +169,19 @@ const PRODUKTE = [
       { f: "Does it work on several floors?", a: "It remembers several maps. The base station stays in one place, though. You carry it to the other floor, and it can only empty itself again at the base station." },
       { f: "How loud is it?", a: "Usually about as loud as a conversation, so quieter than a normal vacuum cleaner. And because it runs while you're out, you won't notice it anyway. Only the base station is really loud for a few seconds while it empties the robot." }
     ],
+    quellen: [
+      { name: "smarthomeassistent.de: robot vacuum ranking (October 2026)", text: "All tested models by overall grade" },
+      { name: "smarthomeassistent.de: Dreame L40s Pro Ultra review (July 2026)", text: "Grade 2.2" },
+      { name: "smarthomeassistent.de: Dreame X60 Pro Ultra Complete re-test (November 2026)", text: "Grade 1.6 after a firmware update" },
+      { name: "smarthomeassistent.de: Roborock Saros 20 review (August 2026)", text: "Grade 1.8" },
+      { name: "smarthomeassistent.de: Roborock Q10 S5+ review (July 2026)", text: "Grade 3.1" },
+      { name: "smarthomeassistent.de: Roborock Q7 L5+ review (May 2026)", text: "Grade 3.8" },
+      { name: "smarthomeassistent.de: MOVA Z60 Ultra Roller Complete review (October 2026)", text: "Grade 1.4" },
+      { name: "Other hands-on tests", text: "Including homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com and cybershack.com.au" },
+      { name: "netzwelt.de: robot vacuum cost check (February 2026)", text: "Running costs per year" },
+      { name: "Federal Statistical Office of Germany (Destatis): living space by household size", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensus 2022, for the averages in the calculator (page in German)" },
+      { name: "Manufacturer information", text: "Marked “according to the manufacturer” on this page" }
+    ],
     rechner: "saugroboter",
     video: "saugroboter",
     profitipp: {

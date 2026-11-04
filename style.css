@@ -692,3 +692,4 @@ footer a { color: var(--muted); }
 .quellen { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; max-width: 72ch; }
 .quellen a { font-weight: 600; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .quelle-text { color: var(--muted); }
+.quellen-details summary { cursor: pointer; font-weight: 700; color: var(--accent); margin-bottom: 10px; }

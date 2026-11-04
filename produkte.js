@@ -316,6 +316,28 @@ const PRODUKTE = [
       { f: "Funktioniert er auf mehreren Etagen?", a: "Er merkt sich mehrere Karten. Die Station bleibt aber an einem Ort. Auf die andere Etage trägst du ihn, und leer saugen kann er sich erst wieder an der Station." },
       { f: "Wie laut ist er?", a: "Meist etwa so laut wie ein Gespräch und damit leiser als ein normaler Staubsauger. Und weil er läuft, wenn du nicht da bist, bekommst du davon ohnehin nichts mit. Nur die Station ist beim Absaugen ein paar Sekunden richtig laut." }
     ],
+    quellen: [
+      { name: "smarthomeassistent.de: Saugroboter-Bestenliste (Oktober 2026)", text: "Alle getesteten Modelle nach Gesamtnote" },
+      { name: "smarthomeassistent.de: Saugroboter bis 600 € (Oktober 2026)", text: "Die besten Modelle dieser Preisklasse" },
+      { name: "smarthomeassistent.de: Saugroboter bis 800 € (Oktober 2026)", text: "Die besten Modelle dieser Preisklasse" },
+      { name: "smarthomeassistent.de: Test ECOVACS DEEBOT T80 OMNI (Juli 2026)", text: "Note 2,6" },
+      { name: "smarthomeassistent.de: Test ECOVACS DEEBOT T90 PRO OMNI (August 2026)", text: "Note 2,3" },
+      { name: "smarthomeassistent.de: Test MOVA Z60 Ultra Roller Complete (Oktober 2026)", text: "Note 1,4" },
+      { name: "smarthomeassistent.de: Test ECOVACS DEEBOT T90S PRO OMNI (Oktober 2026)", text: "Note 1,8" },
+      { name: "smarthomeassistent.de: Test Dreame Aqua20 Pro Ultra Roller X Complete (Oktober 2026)", text: "Note 1,3" },
+      { name: "smarthomeassistent.de: Test Roborock Saros 20 Flow Complete (Oktober 2026)", text: "Note 1,5" },
+      { name: "smarthomeassistent.de: Test ECOVACS DEEBOT X12S OmniCyclone (Oktober 2026)", text: "Note 1,7" },
+      { name: "smarthomeassistent.de: Test MOVA V50 Ultra Complete (August 2026)", text: "Note 1,9" },
+      { name: "smarthomeassistent.de: Test Dreame L40s Pro Ultra (Juli 2026)", text: "Note 2,2" },
+      { name: "smarthomeassistent.de: Nachtest Dreame X60 Pro Ultra Complete (November 2026)", text: "Note 1,6 nach einem Firmware-Update" },
+      { name: "smarthomeassistent.de: Test Roborock Saros 20 (August 2026)", text: "Note 1,8" },
+      { name: "smarthomeassistent.de: Test Roborock Q10 S5+ (Juli 2026)", text: "Note 3,1" },
+      { name: "smarthomeassistent.de: Test Roborock Q7 L5+ (Mai 2026)", text: "Note 3,8" },
+      { name: "Weitere Praxistests", text: "Unter anderem von homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com und cybershack.com.au" },
+      { name: "netzwelt.de: Saugroboter im Kosten-Check (Februar 2026)", text: "Unterhaltskosten pro Jahr" },
+      { name: "Statistisches Bundesamt: Wohnfläche nach Haushaltsgröße", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Mikrozensus 2022, für die Durchschnittswerte im Rechner" },
+      { name: "Herstellerangaben", text: "Auf dieser Seite mit „laut Hersteller“ gekennzeichnet" }
+    ],
     rechner: "saugroboter",
     video: "saugroboter",
     profitipp: {

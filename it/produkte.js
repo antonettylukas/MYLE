@@ -207,6 +207,20 @@ const PRODUKTE = [
       { f: "Funziona su più piani?", a: "Memorizza più mappe. La base però resta in un posto. Sull’altro piano lo porti tu, e svuotarsi può farlo solo quando torna alla base." },
       { f: "Quanto è rumoroso?", a: "Di solito più o meno come una conversazione, quindi meno di un aspirapolvere normale. E visto che lavora quando non ci sei, comunque non te ne accorgi. Solo la base è davvero rumorosa per qualche secondo mentre lo svuota." }
     ],
+    quellen: [
+      { name: "smarthomeassistent.de: classifica dei robot aspirapolvere (ottobre 2026)", text: "Tutti i modelli testati, per voto complessivo" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T80 OMNI (luglio 2026)", text: "Voto 2,6" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90 PRO OMNI (agosto 2026)", text: "Voto 2,3" },
+      { name: "smarthomeassistent.de: test del MOVA Z60 Ultra Roller Complete (ottobre 2026)", text: "Voto 1,4" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90S PRO OMNI (ottobre 2026)", text: "Voto 1,8" },
+      { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT X12S OmniCyclone (ottobre 2026)", text: "Voto 1,7" },
+      { name: "smarthomeassistent.de: test del Dreame L40s Pro Ultra (luglio 2026)", text: "Voto 2,2" },
+      { name: "smarthomeassistent.de: nuovo test del Dreame X60 Pro Ultra Complete (novembre 2026)", text: "Voto 1,6 dopo un aggiornamento del firmware" },
+      { name: "Altri test pratici", text: "Tra cui homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com e cybershack.com.au" },
+      { name: "netzwelt.de: calcolo dei costi dei robot aspirapolvere (febbraio 2026)", text: "Costi di mantenimento all’anno" },
+      { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
+      { name: "Dati dei produttori", text: "Indicati in questa pagina con “secondo il produttore”" }
+    ],
     rechner: "saugroboter",
     video: "saugroboter",
     profitipp: {
