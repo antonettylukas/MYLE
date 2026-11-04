@@ -348,7 +348,7 @@
         </div>`;
   const kopf = document.getElementById("kopf");
   if (kopf) {
-    const nlLink = typ === "start" || typ === "produkt" || typ === "geschenke" ? "#newsletter" : "./#newsletter";
+    const nlLink = ["start", "produkt", "geschenke", "ratgeber", "ratgeber-liste"].includes(typ) ? "#newsletter" : "./#newsletter";
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
         <a class="logo" href="./">${logo()}</a>
@@ -372,6 +372,8 @@
   if (typ === "start") baueStart();
   if (typ === "produkt") baueProduktseite();
   if (typ === "geschenke") baueGeschenke();
+  if (typ === "ratgeber") baueRatgeber();
+  if (typ === "ratgeber-liste") baueRatgeberListe();
   document.querySelectorAll("[data-newsletter]").forEach(baueNewsletter);
   springeZumAnker();
   seitenwechsel();
@@ -480,6 +482,95 @@
       </section>` : ""}
       <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
     einfrieren(ziel);
+  }
+
+  // „Meine Quellen“ für Produkt- und Ratgeberseiten. Einträge ohne url stehen nur als Text da.
+  function quellenAbschnitt(quellen, intro) {
+    const qs = (quellen || []).filter(q => q && q.name && (!q.url || /^https:\/\//.test(q.url)));
+    return qs.length ? `
+      <section class="wrap p-block" id="quellen" aria-labelledby="quellen-titel">
+        <h2 class="p-titel" id="quellen-titel">${t("Meine Quellen", "My sources")}</h2>
+        <p class="p-intro">${intro}</p>
+        ${(liste => qs.length > 6 ? `<details class="quellen-details"><summary>${t("Alle {n} Quellen anzeigen", "Show all {n} sources", { n: qs.length })}</summary>${liste}</details>` : liste)(
+          `<ul class="quellen">${qs.map(q => `<li>${q.url ? `<a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>` : esc(q.name)}${q.text ? `<span class="quelle-text">, ${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>`)}
+      </section>` : "";
+  }
+
+  // ---------- Ratgeber (myle.life/ratgeber und myle.life/ratgeber-<thema>, Texte in ratgeber.js) ----------
+  // Jeder Ratgeber beantwortet eine Frage: kurze Antwort oben, dann Abschnitte, „Wann eher nicht“, Verweis auf die
+  // passende Produktseite mit Rechner, Fragen und Antworten und „Meine Quellen“.
+  function datumText(d) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(String(d || "")) ? new Date(d + "T12:00:00Z").toLocaleDateString(ZAHLEN, { month: "long", year: "numeric", timeZone: "UTC" }) : "";
+  }
+  function baueRatgeber() {
+    const ziel = document.getElementById("ratgeberseite");
+    const R = typeof RATGEBER !== "undefined" ? RATGEBER : [];
+    const r = R.find(x => x.id === document.body.dataset.ratgeber);
+    if (!ziel || !r) return;
+    const p = PRODUKTE.find(x => x.id === r.produkt);
+    const krume = `<nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><a href="ratgeber">${t("Ratgeber", "Guides")}</a></nav>`;
+    const monat = datumText(r.geprueft);
+    const produktKarte = p ? `
+      <aside class="wrap ratgeber-produkt">
+        <div>
+          <span class="eyebrow">${t("Meine Empfehlung dazu", "My recommendation")}</span>
+          <strong>${esc(p.name)}</strong>
+          <p>${esc(r.produktText || p.nutzen || p.kurz)}</p>
+        </div>
+        <div class="ratgeber-knoepfe">
+          <a class="buy" href="${esc(p.id)}">${t("Zur Empfehlung", "See my recommendation")}</a>
+          ${p.rechner ? `<a class="text-link" href="${esc(p.id)}#rechner">${t("Für deinen Haushalt ausrechnen", "Work it out for your household")}</a>` : ""}
+        </div>
+      </aside>` : "";
+    ziel.innerHTML = `${krume}
+      <article class="wrap ratgeber-text">
+        <span class="eyebrow">${t("Ratgeber", "Guide")}</span>
+        <h1>${esc(r.frage)}</h1>
+        <p class="ratgeber-von">${t("Von {name}", "By {name}", { name: esc((UM && UM.name) || "Lukas") })}${monat ? ` · ${t("Zuletzt geprüft", "Last checked")}${DOPPELPUNKT} <time class="geprueft-datum" datetime="${esc(r.geprueft)}">${monat}</time>` : ""}</p>
+        <div class="ratgeber-antwort"><span class="block-titel">${t("Kurz gesagt", "In short")}</span>${(Array.isArray(r.kurzantwort) ? r.kurzantwort : [r.kurzantwort]).map(x => `<p>${esc(x)}</p>`).join("")}</div>
+        ${(r.abschnitte || []).map(a => `
+        <section>
+          <h2>${esc(a.titel)}</h2>
+          ${(a.absaetze || []).map(x => `<p>${esc(x)}</p>`).join("")}
+          ${a.punkte && a.punkte.length ? `<ul>${a.punkte.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+        </section>`).join("")}
+        ${r.wannNicht && r.wannNicht.length ? `<section class="ratgeber-wann-nicht">${liste(esc(r.wannNichtTitel || t("Wann eher nicht", "When it's not the right choice")), r.wannNicht, "nachteile")}</section>` : ""}
+      </article>
+      ${produktKarte}
+      ${(r.fragen || []).length ? `
+      <section class="wrap p-block" id="fragen" aria-labelledby="fragen-titel">
+        <h2 class="p-titel" id="fragen-titel">${t("Fragen und Antworten", "Questions and answers")}</h2>
+        <div class="faq">${r.fragen.map(q => `<details class="frage"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
+      </section>` : ""}
+      ${quellenAbschnitt(r.quellen, t("Auf diese Tests und Seiten stütze ich mich in diesem Ratgeber.", "This guide is based on these tests and pages."))}
+      ${ratgeberListe(R.filter(x => x.id !== r.id), t("Weitere Ratgeber", "More guides"))}
+      <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
+  }
+  function ratgeberListe(R, titel, mitH1) {
+    if (!R.length) return "";
+    const kopf = mitH1 ? `<span class="eyebrow">${t("Ratgeber", "Guides")}</span><h1>${titel}</h1>` : `<h2 class="p-titel">${titel}</h2>`;
+    return `
+      <section class="wrap p-block ratgeber-liste${mitH1 ? " intro" : ""}">
+        ${kopf}
+        <div class="karten">${R.map(r => `
+          <a class="karte ratgeber-karte" href="ratgeber-${esc(r.id)}">
+            <div class="karte-text">
+              <span class="cat">${t("Ratgeber", "Guide")}</span>
+              <span class="karte-name">${esc(r.frage)}</span>
+              <span class="karte-zeile">${esc(Array.isArray(r.kurzantwort) ? r.kurzantwort[0] : r.kurzantwort)}</span>
+              <span class="karte-fuss"><span class="mehr">${t("Lesen", "Read")}</span></span>
+            </div>
+          </a>`).join("")}
+        </div>
+      </section>`;
+  }
+  function baueRatgeberListe() {
+    const ziel = document.getElementById("ratgeberseite");
+    const R = typeof RATGEBER !== "undefined" ? RATGEBER : [];
+    if (!ziel) return;
+    ziel.innerHTML = `<nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${t("Ratgeber", "Guides")}</span></nav>
+      ${ratgeberListe(R, t("Ehrliche Antworten auf die Frage: Lohnt sich das?", "Honest answers to the question: is it worth it?"), true)}
+      <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
   }
 
   // ---------- Produktseite ----------
@@ -624,14 +715,7 @@
 
     // Quellen (Feld quellen in produkte.js): die Tests und Seiten, auf die sich die Seite beruft, zum Anklicken
     // Lukas 04.11.2026: Testseiten mit eigenen Affiliate-Links nur als Text nennen (ohne url), Links nur zu neutralen Seiten
-    const qs = (p.quellen || []).filter(q => q && q.name && (!q.url || /^https:\/\//.test(q.url)));
-    const quellenBlock = qs.length ? `
-      <section class="wrap p-block" id="quellen" aria-labelledby="quellen-titel">
-        <h2 class="p-titel" id="quellen-titel">${t("Meine Quellen", "My sources")}</h2>
-        <p class="p-intro">${t("Auf diese Tests und Seiten stützen sich meine Empfehlungen.", "My recommendations are based on these tests and pages.")}</p>
-        ${(liste => qs.length > 6 ? `<details class="quellen-details"><summary>${t("Alle {n} Quellen anzeigen", "Show all {n} sources", { n: qs.length })}</summary>${liste}</details>` : liste)(
-          `<ul class="quellen">${qs.map(q => `<li>${q.url ? `<a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>` : esc(q.name)}${q.text ? `<span class="quelle-text">, ${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>`)}
-      </section>` : "";
+    const quellenBlock = quellenAbschnitt(p.quellen, t("Auf diese Tests und Seiten stützen sich meine Empfehlungen.", "My recommendations are based on these tests and pages."));
 
     // Unten höchstens vier andere Helfer: erst die aus derselben Kategorie, dann die übrigen
     const andere = PRODUKTE.filter(x => x.id !== p.id);

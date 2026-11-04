@@ -709,3 +709,21 @@ footer a { color: var(--muted); }
 .saison-symbol { font-size: 1.6rem; line-height: 1; }
 .saison-hinweis strong { display: block; font-family: var(--font-display); font-size: 1.02rem; }
 .saison-hinweis strong + span { display: block; font-size: 0.88rem; color: var(--accent); font-weight: 700; }
+
+/* Ratgeber-Seiten (myle.life/ratgeber und /ratgeber-<thema>) */
+.ratgeber-text { max-width: 760px; padding-block: 36px 8px; }
+.ratgeber-text h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4.2vw, 2.7rem); line-height: 1.1; letter-spacing: -0.02em; margin: 8px 0 10px; text-wrap: balance; }
+.ratgeber-text .eyebrow { display: block; }
+.ratgeber-von { margin: 0 0 22px; font-size: 0.9rem; color: var(--muted); }
+.ratgeber-antwort { padding: 18px 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); }
+.ratgeber-antwort p { margin: 6px 0 0; font-size: 1.06rem; line-height: 1.55; }
+.ratgeber-text section { margin-top: 30px; }
+.ratgeber-text h2 { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.2; margin: 0 0 10px; }
+.ratgeber-text section p { margin: 0 0 12px; line-height: 1.65; }
+.ratgeber-text section ul { margin: 0 0 12px; padding-left: 1.2em; line-height: 1.6; }
+.ratgeber-produkt { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; max-width: 760px; margin-top: 28px; padding: 20px 22px; border-radius: var(--radius); background: var(--karte-hg); border: 1px solid var(--karte-rand); box-shadow: var(--karte-schatten); }
+.ratgeber-produkt strong { display: block; font-family: var(--font-display); font-size: 1.25rem; margin: 4px 0; }
+.ratgeber-produkt p { margin: 0; color: var(--muted); }
+.ratgeber-knoepfe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.ratgeber-karte .karte-name { font-size: 1.2rem; font-size: clamp(1.05rem, 5.5cqi, 1.3rem); }
+.ratgeber-liste.intro h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4.2vw, 2.7rem); line-height: 1.1; margin: 8px 0 22px; }

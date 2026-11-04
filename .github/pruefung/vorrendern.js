@@ -61,6 +61,7 @@ function holeTeile(SITE) {
   const teile = { kopf: aussen("body > header.top"), fuss: aussen("body > footer") };
   if (typ === "produkt") teile.produktseite = innen("main#produktseite");
   if (typ === "geschenke") teile.geschenkseite = innen("main#geschenkseite");
+  if (typ === "ratgeber" || typ === "ratgeber-liste") teile.ratgeberseite = innen("main#ratgeberseite");
   if (typ === "start") { teile.uebersicht = innen("#uebersicht"); teile["ueber-mich"] = innen("#ueber-mich"); }
 
   const lang = document.documentElement.lang;
@@ -89,7 +90,7 @@ function holeTeile(SITE) {
     graph = [
       { "@type": "WebPage", "@id": `${url}#seite`, url, name: meta("og:title") || h1, description: meta("description"),
         inLanguage: lang, isPartOf: website, breadcrumb: { "@id": `${url}#brotkrumen` }, author: person,
-        dateModified: (document.querySelector(".geprueft time") || { getAttribute: () => undefined }).getAttribute("datetime") },
+        dateModified: (document.querySelector(".geprueft time, .geprueft-datum") || { getAttribute: () => undefined }).getAttribute("datetime") },
       { "@type": "BreadcrumbList", "@id": `${url}#brotkrumen`, itemListElement: [
         { "@type": "ListItem", position: 1, name: text(document.querySelector(".brotkrumen a")), item: start },
         { "@type": "ListItem", position: 2, name: h1, item: url }] },
@@ -111,7 +112,7 @@ function einsetzen(quelle, { teile, ld }, summe, datei) {
   rein(/<\/head>/, () => `<!--vr:${summe}--><script type="application/ld+json">${json}</script><!--/vr-->\n</head>`);
   for (const [id, html] of Object.entries(teile)) {
     if (html == null) throw new Error(`${datei}: Teil ${id} fehlt nach dem Rendern`);
-    if (id === "produktseite" || id === "geschenkseite") rein(new RegExp(`(<main id="${id}">[\\s\\S]*?)(<\\/main>)`), (m, a, b) => `${a}${block(html)}\n${b}`);
+    if (["produktseite", "geschenkseite", "ratgeberseite"].includes(id)) rein(new RegExp(`(<main id="${id}">[\\s\\S]*?)(<\\/main>)`), (m, a, b) => `${a}${block(html)}\n${b}`);
     else if (id === "kopf" || id === "fuss") rein(new RegExp(`<div id="${id}"></div>`), () => `<div id="${id}">${block(html)}</div>`);
     else rein(new RegExp(`(<div[^>]*\\bid="${id}"[^>]*>)(</div>)`), (m, a, b) => `${a}${block(html)}${b}`);
   }

@@ -146,5 +146,17 @@ const UI_TEXTE = {
   // Geschenke-Seite (04.11.2026)
   "Geschenkideen": "Idee regalo",
   "Geschenke, die Zeit schenken": "Regali che regalano tempo",
-  "Meine Ideen für Weihnachten": "Le mie idee per Natale"
+  "Meine Ideen für Weihnachten": "Le mie idee per Natale",
+  // Ratgeber-Seiten (04.11.2026)
+  "Ratgeber": "Guide",
+  "Meine Empfehlung dazu": "Il mio consiglio",
+  "Zur Empfehlung": "Vai al mio consiglio",
+  "Für deinen Haushalt ausrechnen": "Calcola per la tua casa",
+  "Von {name}": "Di {name}",
+  "Kurz gesagt": "In breve",
+  "Wann eher nicht": "Quando è meglio di no",
+  "Auf diese Tests und Seiten stütze ich mich in diesem Ratgeber.": "Questa guida si basa su questi test e queste pagine.",
+  "Weitere Ratgeber": "Altre guide",
+  "Lesen": "Leggi",
+  "Ehrliche Antworten auf die Frage: Lohnt sich das?": "Risposte oneste alla domanda: ne vale la pena?"
 };

@@ -146,5 +146,17 @@ const UI_TEXTE = {
   // Geschenke-Seite (04.11.2026)
   "Geschenkideen": "Idées cadeaux",
   "Geschenke, die Zeit schenken": "Des cadeaux qui font gagner du temps",
-  "Meine Ideen für Weihnachten": "Mes idées pour Noël"
+  "Meine Ideen für Weihnachten": "Mes idées pour Noël",
+  // Ratgeber-Seiten (04.11.2026)
+  "Ratgeber": "Conseils",
+  "Meine Empfehlung dazu": "Ma recommandation",
+  "Zur Empfehlung": "Voir ma recommandation",
+  "Für deinen Haushalt ausrechnen": "Calculer pour votre foyer",
+  "Von {name}": "Par {name}",
+  "Kurz gesagt": "En bref",
+  "Wann eher nicht": "Quand ce n’est pas le bon choix",
+  "Auf diese Tests und Seiten stütze ich mich in diesem Ratgeber.": "Ce guide s’appuie sur ces tests et ces pages.",
+  "Weitere Ratgeber": "Autres conseils",
+  "Lesen": "Lire",
+  "Ehrliche Antworten auf die Frage: Lohnt sich das?": "Des réponses honnêtes à la question : est-ce que ça vaut le coup ?"
 };
