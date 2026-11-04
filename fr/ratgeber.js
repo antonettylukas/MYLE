@@ -222,8 +222,7 @@ const RATGEBER = [
         titel: "Mon expérience avec mon chat",
         art: "erfahrung",
         absaetze: [
-          "J’ai acheté mon premier robot aspirateur entre autres à cause du chat que j’avais à l’époque. Il éparpillait sans arrêt de la litière dans l’appartement, et ça me rendait fou. À l’époque, dans mon premier et mon deuxième logement, le robot m’a beaucoup aidé avec la litière.",
-          "J’utilise des robots aspirateurs depuis 14 ans et depuis, je n’ai presque plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante : régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un logement propre."
+          "J’ai acheté mon premier robot aspirateur entre autres à cause du chat que j’avais à l’époque. Il éparpillait sans arrêt de la litière dans l’appartement, et ça me rendait fou. À l’époque, dans mon premier et mon deuxième logement, le robot m’a beaucoup aidé avec la litière."
         ]
       },
       {
@@ -396,6 +395,103 @@ const RATGEBER = [
       { name: "Utopia : lavante-séchante, les avantages et les inconvénients (mars 2023)", text: "ne sèche le plus souvent que 4 à 6 kg, plus d’électricité et d’eau, plutôt pour les petits foyers" },
       { name: "Waschmaschinen-Kompass : poser le sèche-linge sur le lave-linge (octobre 2026)", text: "cadre de liaison nécessaire, sèche-linge toujours en haut, sans cadre il peut glisser" },
       { name: "Indications des fabricants et étiquettes énergie", text: "superposition selon Siemens et Samsung (sèche-linge en haut, kit adapté, même marque), capacité, durée des programmes et électricité pour le lavage et le séchage selon les étiquettes énergie de Haier, Hisense, Bosch et AEG" }
+    ]
+  },
+  {
+    id: "smarte-thermostate-mietwohnung",
+    produkt: "thermostate",
+    geprueft: "2026-11-04",
+    titel: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
+    frage: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
+    seitenTitel: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
+    beschreibung: "Ce que vous économisez en tant que locataire avec des têtes thermostatiques connectées, ce qui en arrive sur votre décompte de chauffage, si vous avez le droit de les installer et quand elles rapportent moins.",
+    kurzantwort: "Le plus souvent oui : vous les vissez sans artisan et les démontez en partant, et vous rentrez chaque jour dans un logement chaud. Avec un programme de chauffage, vous économisez en plus environ 10 pour cent d’énergie de chauffage. Avec un chauffage central, il en arrive le plus souvent la moitié à un peu plus des deux tiers sur votre décompte, car seule une partie des coûts est répartie selon la consommation.",
+    abschnitte: [
+      {
+        titel: "Ce que vous économisez avec un programme de chauffage",
+        absaetze: [
+          "Les têtes thermostatiques connectées chauffent selon votre programme : chaud quand vous êtes là, baissé quand vous dormez ou travaillez. Selon l’Agence fédérale allemande de l’environnement et co2online, vous économisez ainsi environ 10 pour cent d’énergie de chauffage. L’ADAC compte en pratique 5 à 8 pour cent.",
+          "Combien cela fait chez vous dépend de la fréquence de vos absences et de votre façon de chauffer jusqu’ici. En règle générale, chaque degré en moins économise environ 6 pour cent d’énergie de chauffage. Si votre chauffage tourne jusqu’ici le plus souvent en continu, vous économisez davantage. Si vous baissez déjà vous-même chaque radiateur de façon fiable, vous économisez moins."
+        ]
+      },
+      {
+        titel: "Ce qui en arrive sur votre décompte",
+        absaetze: [
+          "Si vous avez votre propre chaudière à gaz dans le logement, vous payez le plus souvent votre gaz directement au fournisseur. Toute l’économie vous revient alors.",
+          "Avec un chauffage central, en revanche, seule une partie des coûts est répartie selon votre consommation, le reste selon la surface. En Allemagne, c’est 50 à 70 pour cent, en Autriche au moins 55 pour cent des coûts d’énergie. En Suisse, c’est le plus souvent 50 à 70 pour cent si votre immeuble facture selon la consommation. Vous voyez la répartition chez vous sur votre décompte de chauffage, aux frais de base et aux frais de consommation.",
+          "Un exemple : si vous payez 1 000 € par an pour le chauffage, 10 pour cent font 100 €. Si 50 à 70 pour cent sont répartis selon la consommation chez vous, il vous en revient environ 50 à 70 €.",
+          "Dans certains immeubles, rien n’est réparti selon la consommation, seulement selon la surface, en Suisse par exemple souvent dans les immeubles anciens. C’est alors surtout l’immeuble entier qui économise, et il ne vous en revient que peu."
+        ]
+      },
+      {
+        titel: "Comment voir si cela fonctionne",
+        absaetze: [
+          "En Allemagne, les compteurs de chauffage doivent pouvoir être relevés à distance à partir de 2027. Dès que c’est le cas, vous recevez chaque mois une information sur votre consommation. Vous voyez ainsi mois après mois si votre programme de chauffage fonctionne."
+        ]
+      },
+      {
+        titel: "Avez-vous le droit de les installer en tant que locataire ?",
+        absaetze: [
+          "En Allemagne, en règle générale oui, même sans l’accord de votre propriétaire. Vous remplacez seulement la molette sur la vanne par la tête thermostatique connectée. Pas besoin de vidanger l’eau, ni de faire venir un artisan.",
+          "Gardez bien les anciennes molettes et revissez-les en partant. Vous emportez alors vos têtes thermostatiques connectées dans votre prochain logement. En Autriche et en Suisse, le mieux est de demander rapidement à votre propriétaire."
+        ]
+      },
+      {
+        titel: "Vont-elles sur vos radiateurs ?",
+        absaetze: [
+          "Sur presque tous les radiateurs normaux. La plupart des vannes ont un filetage à la norme M30 x 1,5. Pour les autres, par exemple de Danfoss, des adaptateurs sont souvent fournis. Pour un chauffage au sol, il vous faut en revanche un thermostat d’ambiance au mur."
+        ]
+      },
+      {
+        titel: "Plus pratique qu’à la main",
+        absaetze: [
+          "À cela s’ajoute le confort : peu avant votre retour, le logement est déjà chaud. Pendant que vous travaillez, les têtes thermostatiques baissent de façon autonome, et vous ne pouvez plus oublier de le faire.",
+          "Si vous baissez jusqu’ici chaque radiateur le matin et le remontez le soir, mon calculateur indique que vous gagnez environ un quart d’heure par semaine avec quatre radiateurs.",
+          "Pour commencer, un programme pour les jours de semaine et un pour le week-end suffisent. Réglez par exemple 21 degrés le matin et le soir, 16 à 17 degrés quand vous êtes absent, et la nuit 16 à 18 degrés dans la chambre. Il ne devrait pas faire moins de 16 degrés, sinon le risque de moisissures augmente."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Les têtes thermostatiques que je recommande, avec et sans passerelle, et ce qu’elles vous font économiser avec vos propres chiffres se trouvent sur ma page des têtes thermostatiques connectées.",
+      knopf: "Vers les têtes thermostatiques et leur calculateur"
+    },
+    wannNicht: [
+      "Vous avez un chauffage au sol : il vous faut alors un thermostat d’ambiance au mur.",
+      "Dans votre immeuble, les frais de chauffage sont répartis seulement selon la surface : il ne vous revient alors que peu de l’économie.",
+      "Vous baissez déjà chaque radiateur de façon fiable quand vous partez : vous économisez alors surtout de l’effort et moins d’argent.",
+      "Vous êtes presque toujours à la maison la journée : le programme baisse alors surtout la nuit, et vous économisez moins."
+    ],
+    fragen: [
+      { f: "Que faire quand je déménage ?", a: "Vous dévissez les têtes thermostatiques connectées et remettez les anciennes molettes. Cela prend quelques minutes par radiateur. Vous emportez les têtes connectées, elles vont aussi sur la plupart des radiateurs de votre nouveau logement." },
+      { f: "Perturbent-elles le répartiteur de frais de chauffage ?", a: "Non. Le répartiteur est fixé sur le radiateur et mesure la chaleur qu’il dégage. La tête thermostatique, elle, va sur la vanne. Si vous chauffez moins, le répartiteur affiche simplement moins. Vous ne devriez ni l’enlever ni le couvrir." },
+      { f: "Ai-je besoin d’une passerelle ?", a: "Pas forcément. Certaines têtes se connectent directement au Wi-Fi, et avec une FRITZ!Box votre routeur sert déjà de passerelle. Dans les tests, ce sont cependant les modèles avec passerelle qui s’en sortent le mieux. La passerelle coûte une fois en plus, et en cas de déménagement vous l’emportez simplement." },
+      { f: "Quand aurai-je rentabilisé le prix d’achat ?", a: "Cela dépend du nombre de radiateurs que vous équipez et de ce qui vous en revient. Selon Stiftung Warentest, l’achat n’est rentable qu’à long terme ; dans son exemple avec cinq têtes, l’ADAC arrive à un peu moins de quatre ans. Avec un chauffage central, cela prend plus de temps, car seule une partie de l’économie vous revient. Le confort, en revanche, vous l’avez dès le premier jour." }
+    ],
+    quellen: [
+      { name: "Agence fédérale allemande de l’environnement (Umweltbundesamt) : chauffage, température ambiante (octobre 2023)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "les thermostats programmables économisent environ 10 % d’énergie, baisser lors de plusieurs heures d’absence et la nuit, 17 °C dans la chambre" },
+      { name: "Verbraucherzentrale Hamburg : bien chauffé tout l’hiver (décembre 2025)", url: "https://www.vzhh.de/themen/bauen-wohnen-energie/heizung/gut-geheizt-durch-den-winter", text: "chaque degré en moins économise environ 6 pour cent d’énergie de chauffage, pas moins de 16 °C sinon des moisissures peuvent se former, les têtes connectées s’installent aussi en location" },
+      { name: "co2online : communiqué sur les thermostats programmables (octobre 2023)", text: "environ dix pour cent de frais de chauffage en moins, les locataires n’ont pas besoin de l’autorisation du propriétaire, remettre les anciennes têtes avant de partir" },
+      { name: "ADAC : têtes thermostatiques connectées (octobre 2026)", text: "en pratique 5 à 8 pour cent de frais de chauffage en moins, les locataires peuvent en général les installer eux-mêmes, garder les anciennes têtes et les remettre en partant, le chauffage au sol demande un thermostat d’ambiance, dans l’exemple avec cinq têtes rentabilisé après un peu moins de quatre ans" },
+      { name: "ista : têtes connectées entre efficacité énergétique et protection des données (octobre 2026)", text: "remplacer seulement la tête ne demande en général pas l’accord du propriétaire, remettre l’état d’origine en partant" },
+      { name: "Ordonnance allemande sur les frais de chauffage (Heizkostenverordnung), § 7 et § 6a", url: "https://www.gesetze-im-internet.de/heizkostenv/__7.html", text: "au moins 50 et au plus 70 pour cent des frais d’un chauffage central selon la consommation, le reste selon la surface, avec des compteurs relevables à distance une information mensuelle sur la consommation depuis 2022" },
+      { name: "mein-nebenkostenrechner.de : § 7 de l’ordonnance sur les frais de chauffage (septembre 2026)", text: "le propriétaire choisit entre 50 et 70 pour cent selon la consommation, par exemple 50/50 ou 30/70, dans certains immeubles anciens au fioul ou au gaz 70 pour cent sont obligatoires" },
+      { name: "mietrecht.org : répartition des frais de base et de consommation", text: "50 à 70 pour cent selon la consommation, les frais de base selon la surface habitable ou le volume bâti" },
+      { name: "Arbeiterkammer Wien : décompte de chauffage selon la HeizKG", url: "https://wien.arbeiterkammer.at/beratung/Wohnen/Heizkostenabrechnung/Heizkostenabrechnung_nach_dem_HeizKG.html", text: "s’applique aux immeubles d’au moins quatre logements avec chauffage commun, pas aux chaudières individuelles au gaz, 55 à 85 pour cent des coûts d’énergie selon la consommation, les autres frais selon la surface" },
+      { name: "Loi autrichienne sur le décompte des frais de chauffage (Heizkostenabrechnungsgesetz), § 10 (jusline.at)", text: "au moins 55 et au plus 85 pour cent des coûts d’énergie selon la consommation, le reste selon la surface utile" },
+      { name: "ista Autriche et Techem Autriche sur la loi sur le décompte des frais de chauffage", text: "au moins 55 pour cent des coûts d’énergie selon la consommation, les frais de base donc au plus 45 pour cent, ne s’applique pas aux chauffages d’étage" },
+      { name: "WEKA Suisse : clés de répartition des charges (juin 2025)", text: "frais de base le plus souvent 30 à 50 pour cent des frais de chauffage, le décompte selon la consommation est surtout obligatoire pour les constructions neuves et les rénovations complètes, sinon le plus souvent réparti selon la surface" },
+      { name: "ista Suisse : brochure sur le décompte de chauffage", text: "frais de base 30 à 50 pour cent selon la surface habitable, le reste selon la consommation" },
+      { name: "Office fédéral de l’énergie : modèle de décompte individuel des frais de chauffage (2004)", text: "frais de base 30 à 50 pour cent, frais selon la consommation 50 à 70 pour cent" },
+      { name: "Conférence des directeurs cantonaux de l’énergie : aide à l’application EN-113 (décembre 2018)", text: "décompte selon la consommation obligatoire pour les constructions neuves et les rénovations complètes à partir de cinq logements, certains cantons ont supprimé l’obligation d’équiper les immeubles existants" },
+      { name: "Blick : décompte de chauffage dans les immeubles anciens (octobre 2022) et un décompte qui fâche (décembre 2022)", text: "dans les immeubles anciens sans compteur de chaleur, souvent réparti selon les mètres carrés ou cubes, quelle que soit la consommation de chacun" },
+      { name: "Berliner Mieterverein : fourniture de gaz (Cour fédérale de justice, juin 2018) et appareils de mesure pour le décompte de chauffage (septembre 2025)", text: "avec un raccordement au gaz propre, le contrat de fourniture est conclu entre le fournisseur et le locataire, les répartiteurs sont directement sur le radiateur, l’affichage dépend aussi des vannes thermostatiques, la manipulation est punissable" },
+      { name: "Berliner MieterGemeinschaft : répartiteurs de frais de chauffage", text: "fixé au milieu du radiateur, les appareils électroniques mesurent la différence entre le radiateur et l’air ambiant, les habillages et les rideaux faussent l’affichage" },
+      { name: "Gewobag : informations sur les répartiteurs de frais de chauffage (août 2025)", text: "mesure directement sur le radiateur la température ambiante et celle du radiateur, est plombé" },
+      { name: "ista : information mensuelle sur la consommation (octobre 2026), Haufe et Haus & Grund Chemnitz", text: "équiper ou remplacer d’ici le 31.12.2026 les compteurs non relevables à distance, dès l’installation de compteurs relevables à distance une information mensuelle sur la consommation" },
+      { name: "Stiftung Warentest : test des têtes thermostatiques connectées (numéro 9/2023)", text: "l’achat n’est rentable qu’à long terme, les modèles avec passerelle en tête, le modèle FRITZ! presque aussi bon que le vainqueur" },
+      { name: "smarthomeassistent.de : classement des têtes thermostatiques (octobre 2026)", text: "places 1 et 2 avec passerelle, aucun modèle Wi-Fi direct parmi les dix premiers" },
+      { name: "homeandsmart : changer une tête thermostatique", text: "la plupart des vannes avec filetage M30 x 1,5, adaptateurs pour les autres, pas de vidange, pas d’artisan, fait en quelques minutes, le chauffage au sol demande un thermostat d’ambiance" },
+      { name: "Indications des fabricants", text: "filetage M30 x 1,5 et adaptateurs fournis, par exemple pour les vannes Danfoss, selon eQ-3 (Homematic IP), AVM (FRITZ!) et Bosch, montage sans vidange et sans outil spécial selon eQ-3" }
     ]
   }
 ];

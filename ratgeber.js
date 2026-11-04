@@ -300,8 +300,7 @@ const RATGEBER = [
         titel: "Meine Erfahrung mit Kater",
         art: "erfahrung",
         absaetze: [
-          "Meinen ersten Saugroboter habe ich mir unter anderem wegen meines Katers gekauft, den ich zu der Zeit hatte. Der hat ständig Katzenstreu in der Wohnung verteilt, und das hat mich wahnsinnig gemacht. In meiner ersten und zweiten Wohnung damals hat mir der Roboter mit dem Katzenstreu sehr geholfen.",
-          "Ich nutze seit 14 Jahren Saugroboter und musste seitdem so gut wie nie mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
+          "Meinen ersten Saugroboter habe ich mir unter anderem wegen meines Katers gekauft, den ich zu der Zeit hatte. Der hat ständig Katzenstreu in der Wohnung verteilt, und das hat mich wahnsinnig gemacht. In meiner ersten und zweiten Wohnung damals hat mir der Roboter mit dem Katzenstreu sehr geholfen."
         ]
       },
       {
@@ -474,6 +473,103 @@ const RATGEBER = [
       { name: "Utopia: Waschtrockner, das sind die Vor- und Nachteile (März 2023)", text: "trocknet meist nur 4 bis 6 kg, mehr Strom und Wasser, eher für kleine Haushalte" },
       { name: "Waschmaschinen-Kompass: Trockner auf Waschmaschine stellen (Oktober 2026)", text: "Verbindungsrahmen nötig, Trockner immer oben, ohne Rahmen kann er verrutschen" },
       { name: "Herstellerangaben und Energielabel", text: "Stapeln laut Siemens und Samsung (Trockner oben, passender Bausatz, gleiche Marke), Fassungsvermögen, Programmdauer und Strom fürs Waschen und Trocknen laut Energielabel von Haier, Hisense, Bosch und AEG" }
+    ]
+  },
+  {
+    id: "smarte-thermostate-mietwohnung",
+    produkt: "thermostate",
+    geprueft: "2026-11-04",
+    titel: "Lohnen sich smarte Thermostate in der Mietwohnung?",
+    frage: "Lohnen sich smarte Thermostate in der Mietwohnung?",
+    seitenTitel: "Lohnen sich smarte Thermostate in der Mietwohnung?",
+    beschreibung: "Was du als Mieter mit smarten Thermostaten sparst, was davon auf der Heizkostenabrechnung ankommt, ob du sie einbauen darfst und wann sie weniger bringen.",
+    kurzantwort: "Meistens ja: Du schraubst sie ohne Handwerker an und beim Auszug wieder ab, und du kommst jeden Tag in eine warme Wohnung. Mit einem Heizplan sparst du außerdem rund 10 Prozent Heizenergie. Bei einer Zentralheizung kommt davon auf deiner Abrechnung meist die Hälfte bis gut zwei Drittel an, weil nur ein Teil der Kosten nach Verbrauch verteilt wird.",
+    abschnitte: [
+      {
+        titel: "Was du mit einem Heizplan sparst",
+        absaetze: [
+          "Smarte Thermostate heizen nach deinem Plan: warm, wenn du da bist, und runtergedreht, wenn du schläfst oder arbeitest. Laut Umweltbundesamt und co2online sparst du damit rund 10 Prozent Heizenergie. Der ADAC rechnet in der Praxis mit 5 bis 8 Prozent.",
+          "Wie viel es bei dir ist, hängt davon ab, wie oft du weg bist und wie du bisher heizt. Als Faustregel spart jedes Grad weniger rund 6 Prozent Heizenergie. Läuft deine Heizung bisher meist durch, sparst du mehr. Drehst du schon jeden Heizkörper zuverlässig selbst runter, sparst du weniger."
+        ]
+      },
+      {
+        titel: "Was davon auf deiner Abrechnung ankommt",
+        absaetze: [
+          "Hast du eine eigene Gastherme in der Wohnung, zahlst du dein Gas meist direkt beim Versorger. Dann kommt die ganze Ersparnis bei dir an.",
+          "Bei einer Zentralheizung wird dagegen nur ein Teil der Kosten nach deinem Verbrauch verteilt, der Rest nach der Fläche. In Deutschland sind es 50 bis 70 Prozent, in Österreich mindestens 55 Prozent der Energiekosten. In der Schweiz sind es meist 50 bis 70 Prozent, wenn dein Haus nach Verbrauch abrechnet. Wie es bei dir aufgeteilt ist, siehst du auf deiner Heizkostenabrechnung an den Grund- und Verbrauchskosten.",
+          "Ein Beispiel: Zahlst du 1.000 € im Jahr fürs Heizen, sind 10 Prozent davon 100 €. Werden bei dir 50 bis 70 Prozent nach Verbrauch verteilt, kommen davon etwa 50 bis 70 € bei dir an.",
+          "In manchen Häusern wird gar nicht nach Verbrauch abgerechnet, sondern nur nach Fläche, in der Schweiz zum Beispiel oft in älteren Häusern. Dann spart vor allem das ganze Haus, und bei dir kommt nur wenig an."
+        ]
+      },
+      {
+        titel: "So siehst du, ob es wirkt",
+        absaetze: [
+          "In Deutschland müssen die Zähler für die Heizkosten ab 2027 aus der Ferne ablesbar sein. Sobald sie das sind, bekommst du jeden Monat eine Verbrauchsinfo. So siehst du Monat für Monat, ob dein Heizplan wirkt."
+        ]
+      },
+      {
+        titel: "Darfst du sie als Mieter einbauen?",
+        absaetze: [
+          "In Deutschland in der Regel ja, auch ohne Zustimmung deines Vermieters. Du tauschst nur den Drehregler am Ventil gegen das smarte Thermostat. Wasser musst du dafür nicht ablassen, und einen Handwerker brauchst du nicht.",
+          "Heb die alten Regler gut auf und schraub sie beim Auszug wieder dran. Deine smarten Thermostate nimmst du dann in die nächste Wohnung mit. In Österreich und der Schweiz fragst du am besten kurz deinen Vermieter."
+        ]
+      },
+      {
+        titel: "Passen sie auf deine Heizkörper?",
+        absaetze: [
+          "Auf fast alle normalen Heizkörper. Die meisten Ventile haben ein Gewinde nach dem Standard M30 x 1,5. Für andere, zum Beispiel von Danfoss, liegen oft Adapter bei. Für eine Fußbodenheizung brauchst du dagegen ein Raumthermostat an der Wand."
+        ]
+      },
+      {
+        titel: "Bequemer als von Hand",
+        absaetze: [
+          "Dazu kommt die Bequemlichkeit: Kurz bevor du heimkommst, ist die Wohnung schon warm. Während du arbeitest, drehen die Thermostate selbstständig runter, und vergessen kannst du es auch nicht mehr.",
+          "Drehst du bisher jeden Heizkörper morgens runter und abends wieder hoch, sparst du bei vier Heizkörpern laut meinem Rechner rund eine Viertelstunde pro Woche.",
+          "Für den Anfang reicht ein Plan für die Werktage und einer fürs Wochenende. Stell zum Beispiel morgens und abends 21 Grad ein, 16 bis 17 Grad, wenn du weg bist, und nachts im Schlafzimmer 16 bis 18 Grad. Kälter als 16 Grad sollte es nicht werden, sonst steigt das Risiko für Schimmel."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Welche Thermostate ich empfehle, mit und ohne Zentrale, und was sie dir mit deinen eigenen Zahlen sparen, siehst du auf meiner Seite zu den smarten Heizkörper-Thermostaten.",
+      knopf: "Zu den Thermostaten mit Rechner"
+    },
+    wannNicht: [
+      "Du hast eine Fußbodenheizung: Dafür brauchst du ein Raumthermostat an der Wand.",
+      "In deinem Haus werden die Heizkosten nur nach Fläche verteilt: Dann kommt von der Ersparnis bei dir nur wenig an.",
+      "Du drehst schon jetzt jeden Heizkörper zuverlässig runter, wenn du gehst: Dann sparst du vor allem Mühe und weniger Geld.",
+      "Du bist tagsüber fast immer zu Hause: Dann senkt der Heizplan vor allem nachts ab, und du sparst weniger."
+    ],
+    fragen: [
+      { f: "Was mache ich beim Auszug?", a: "Du schraubst die smarten Thermostate ab und die alten Drehregler wieder dran. Das geht pro Heizkörper in wenigen Minuten. Die smarten Thermostate nimmst du mit, sie passen auch in der neuen Wohnung auf die meisten Heizkörper." },
+      { f: "Stören sie den Heizkostenverteiler?", a: "Nein. Der Heizkostenverteiler sitzt auf dem Heizkörper und misst, wie viel Wärme der Heizkörper abgibt. Das Thermostat kommt dagegen ans Ventil. Heizt du weniger, zeigt der Verteiler einfach weniger an. Abnehmen oder verdecken solltest du ihn nicht." },
+      { f: "Brauche ich eine Zentrale?", a: "Nicht unbedingt. Manche Thermostate gehen direkt ins WLAN, und mit einer FRITZ!Box ist dein Router schon die Zentrale. Am besten schneiden in Tests aber Modelle mit Zentrale ab. Die Zentrale kostet einmal extra, und beim Umzug nimmst du sie einfach mit." },
+      { f: "Wann habe ich den Kaufpreis wieder drin?", a: "Das hängt davon ab, wie viele Heizkörper du ausstattest und was bei dir ankommt. Laut Stiftung Warentest rechnet sich die Anschaffung erst langfristig, der ADAC kommt in seinem Beispiel mit fünf Thermostaten auf knapp vier Jahre. Bei einer Zentralheizung dauert es länger, weil nur ein Teil der Ersparnis bei dir ankommt. Die Bequemlichkeit hast du dagegen ab dem ersten Tag." }
+    ],
+    quellen: [
+      { name: "Umweltbundesamt: Heizen, Raumtemperatur (Oktober 2023)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "programmierbare Thermostate sparen etwa 10 % Energie, bei einigen Stunden Abwesenheit und nachts absenken, im Schlafzimmer 17 °C" },
+      { name: "Verbraucherzentrale Hamburg: Gut geheizt durch den Winter (Dezember 2025)", url: "https://www.vzhh.de/themen/bauen-wohnen-energie/heizung/gut-geheizt-durch-den-winter", text: "jedes Grad weniger spart etwa 6 Prozent Heizenergie, kälter als 16 °C sollte es nicht sein, sonst kann sich Schimmel bilden, smarte Thermostate lassen sich auch in Mietwohnungen nachrüsten" },
+      { name: "co2online: Pressemitteilung zu programmierbaren Thermostaten (Oktober 2023)", text: "rund zehn Prozent weniger Heizkosten, Mieter brauchen keine Genehmigung des Vermieters, die alten Thermostate vor dem Auszug wieder anbringen" },
+      { name: "ADAC: Smarte Heizkörperthermostate (Oktober 2026)", text: "in der Praxis 5 bis 8 Prozent weniger Heizkosten, Mieter können sie in der Regel selbst einbauen, alte Thermostate aufheben und beim Auszug zurückbauen, Fußbodenheizung braucht ein Raumthermostat, im Beispiel mit fünf Thermostaten nach knapp vier Jahren bezahlt" },
+      { name: "ista: Smarte Thermostate zwischen Energieeffizienz und Datenschutz (Oktober 2026)", text: "nur den Thermostatkopf zu tauschen braucht in der Regel keine Zustimmung des Vermieters, beim Auszug den ursprünglichen Zustand wiederherstellen" },
+      { name: "Heizkostenverordnung, § 7 und § 6a", url: "https://www.gesetze-im-internet.de/heizkostenv/__7.html", text: "mindestens 50 und höchstens 70 Prozent der Kosten einer zentralen Heizung nach Verbrauch, der Rest nach Fläche, mit fernablesbaren Zählern seit 2022 jeden Monat eine Verbrauchsinformation" },
+      { name: "mein-nebenkostenrechner.de: § 7 Heizkostenverordnung (September 2026)", text: "der Vermieter wählt zwischen 50 und 70 Prozent nach Verbrauch, zum Beispiel 50/50 oder 30/70, in manchen älteren Häusern mit Öl oder Gas sind 70 Prozent Pflicht" },
+      { name: "mietrecht.org: Aufteilung von Grund- und Verbrauchskosten", text: "50 bis 70 Prozent nach Verbrauch, die Grundkosten nach Wohnfläche oder umbautem Raum" },
+      { name: "Arbeiterkammer Wien: Heizkostenabrechnung nach dem HeizKG", url: "https://wien.arbeiterkammer.at/beratung/Wohnen/Heizkostenabrechnung/Heizkostenabrechnung_nach_dem_HeizKG.html", text: "gilt für Häuser ab vier Wohnungen mit gemeinsamer Heizung, nicht für Gasetagenheizungen, 55 bis 85 Prozent der Energiekosten nach Verbrauch, die übrigen Kosten nach Fläche" },
+      { name: "Heizkostenabrechnungsgesetz, § 10 (jusline.at)", text: "mindestens 55 und höchstens 85 Prozent der Energiekosten nach Verbrauch, der Rest nach Nutzfläche" },
+      { name: "ista Österreich und Techem Österreich zum Heizkostenabrechnungsgesetz", text: "mindestens 55 Prozent der Energiekosten nach Verbrauch, die Grundkosten also höchstens 45 Prozent, gilt nicht für Etagenheizungen" },
+      { name: "WEKA Schweiz: Verteilschlüssel für Nebenkosten (Juni 2025)", text: "Grundkosten meist 30 bis 50 Prozent der Heizkosten, nach Verbrauch abrechnen müssen vor allem Neubauten und gesamtsanierte Häuser, sonst meist nach Fläche verteilt" },
+      { name: "ista Schweiz: Broschüre zur Heizkostenabrechnung", text: "Grundkosten 30 bis 50 Prozent nach Wohnfläche, der Rest nach Verbrauch" },
+      { name: "Bundesamt für Energie: Abrechnungsmodell für die verbrauchsabhängige Heizkostenabrechnung (2004)", text: "Grundkosten 30 bis 50 Prozent, verbrauchsabhängige Kosten 50 bis 70 Prozent" },
+      { name: "Konferenz Kantonaler Energiedirektoren: Vollzugshilfe EN-113 (Dezember 2018)", text: "Abrechnung nach Verbrauch Pflicht bei Neubauten und Gesamterneuerungen ab fünf Wohnungen, einige Kantone haben die Nachrüstpflicht für bestehende Häuser aufgehoben" },
+      { name: "Blick: Heizkostenabrechnung in alten Liegenschaften (Oktober 2022) und Kostenabrechnung sorgt für Ärger (Dezember 2022)", text: "in älteren Häusern ohne Wärmezähler oft nach Quadratmetern oder Kubikmetern verteilt, egal wie viel jemand heizt" },
+      { name: "Berliner Mieterverein: Gasversorgung (BGH, Juni 2018) und Erfassungsgeräte für die Heizkostenabrechnung (September 2025)", text: "bei eigenem Gasanschluss kommt der Liefervertrag zwischen Versorger und Mieter zustande, Heizkostenverteiler sitzen direkt am Heizkörper, die Anzeige hängt auch von den Thermostatventilen ab, Manipulation ist strafbar" },
+      { name: "Berliner MieterGemeinschaft: Heizkostenverteiler", text: "sitzt mittig auf dem Heizkörper, elektronische Geräte messen den Unterschied zwischen Heizkörper und Raumluft, Verkleidungen und Vorhänge verfälschen die Anzeige" },
+      { name: "Gewobag: Informationen zum Heizkostenverteiler (August 2025)", text: "misst direkt am Heizkörper Raum- und Heizkörpertemperatur, ist verplombt" },
+      { name: "ista: Monatliche Verbrauchsinformation (Oktober 2026), Haufe und Haus & Grund Chemnitz", text: "nicht fernablesbare Zähler bis 31.12.2026 nachrüsten oder tauschen, ab dem Einbau fernablesbarer Zähler jeden Monat eine Verbrauchsinformation" },
+      { name: "Stiftung Warentest: Smarte Heizkörperthermostate im Test (Heft 9/2023)", text: "die Anschaffung rechnet sich erst langfristig, Modelle mit Zentrale vorn, das FRITZ!-Modell fast so gut wie der Testsieger" },
+      { name: "smarthomeassistent.de: Bestenliste Heizkörperthermostate (Oktober 2026)", text: "Platz 1 und 2 mit Zentrale, kein Modell, das direkt ins WLAN geht, unter den ersten zehn" },
+      { name: "homeandsmart: Thermostat tauschen", text: "die meisten Ventile mit Gewinde M30 x 1,5, Adapter für andere, kein Wasser ablassen, kein Handwerker, in wenigen Minuten erledigt, Fußbodenheizung braucht ein Raumthermostat" },
+      { name: "Herstellerangaben", text: "Gewinde M30 x 1,5 und beiliegende Adapter, zum Beispiel für Danfoss-Ventile, laut eQ-3 (Homematic IP), AVM (FRITZ!) und Bosch, Montage ohne Wasser ablassen und ohne Spezialwerkzeug laut eQ-3" }
     ]
   }
 ];

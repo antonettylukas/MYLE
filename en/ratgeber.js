@@ -222,8 +222,7 @@ const RATGEBER = [
         titel: "My experience with my cat",
         art: "erfahrung",
         absaetze: [
-          "I bought my first robot vacuum partly because of the tomcat I had at the time. He was constantly scattering cat litter around the flat, and it drove me mad. Back then, in my first and second flat, the robot helped me a lot with the cat litter.",
-          "I've been using robot vacuums for 14 years and since then I've hardly ever had to vacuum or mop myself. The most important trick: set a schedule. Then it cleans while I'm at work, and I come home to a clean flat every evening."
+          "I bought my first robot vacuum partly because of the tomcat I had at the time. He was constantly scattering cat litter around the flat, and it drove me mad. Back then, in my first and second flat, the robot helped me a lot with the cat litter."
         ]
       },
       {
@@ -396,6 +395,103 @@ const RATGEBER = [
       { name: "Utopia: washer dryers, the pros and cons (March 2023)", text: "usually only dries 4 to 6 kg, more electricity and water, rather for small households" },
       { name: "Waschmaschinen-Kompass: putting a dryer on a washing machine (October 2026)", text: "stacking frame needed, dryer always on top, without a frame it can slip" },
       { name: "Manufacturer information and energy labels", text: "stacking according to Siemens and Samsung (dryer on top, suitable kit, same brand), capacity, programme time and electricity for washing and drying according to the energy labels of Haier, Hisense, Bosch and AEG" }
+    ]
+  },
+  {
+    id: "smarte-thermostate-mietwohnung",
+    produkt: "thermostate",
+    geprueft: "2026-11-04",
+    titel: "Are smart thermostats worth it in a rented flat?",
+    frage: "Are smart thermostats worth it in a rented flat?",
+    seitenTitel: "Are smart thermostats worth it in a rented flat?",
+    beschreibung: "What you save as a tenant with smart thermostats, how much of it shows up on your heating bill, whether you're allowed to fit them and when they bring less.",
+    kurzantwort: "Mostly yes: you screw them on without a tradesperson and off again when you move out, and you come home to a warm flat every day. With a heating schedule you also save around 10 percent of heating energy. With central heating, usually half to just over two thirds of that shows up on your bill, because only part of the costs is split by consumption.",
+    abschnitte: [
+      {
+        titel: "What you save with a heating schedule",
+        absaetze: [
+          "Smart thermostats heat according to your schedule: warm when you're there, turned down when you're asleep or at work. According to the German Environment Agency and co2online, this saves around 10 percent of heating energy. In practice, the ADAC expects 5 to 8 percent.",
+          "How much it is for you depends on how often you're out and how you heat now. As a rule of thumb, every degree lower saves around 6 percent of heating energy. If your heating mostly runs non-stop at the moment, you save more. If you already reliably turn every radiator down yourself, you save less."
+        ]
+      },
+      {
+        titel: "How much of it shows up on your bill",
+        absaetze: [
+          "If you have your own gas boiler in the flat, you usually pay for your gas directly to the supplier. Then the whole saving reaches you.",
+          "With central heating, on the other hand, only part of the costs is split by your consumption, the rest by floor area. In Germany it's 50 to 70 percent, in Austria at least 55 percent of the energy costs. In Switzerland it's usually 50 to 70 percent if your building bills by consumption. You can see how it's split for you on your heating bill, under basic costs and consumption costs.",
+          "An example: if you pay €1,000 a year for heating, 10 percent of that is €100. If 50 to 70 percent is split by consumption in your building, about €50 to €70 of that reaches you.",
+          "In some buildings costs aren't split by consumption at all, only by floor area, in Switzerland for example often in older buildings. Then it's mainly the whole building that saves, and only a little reaches you."
+        ]
+      },
+      {
+        titel: "How to see whether it's working",
+        absaetze: [
+          "In Germany, heating cost meters must be readable remotely from 2027. As soon as yours are, you get a consumption report every month. That way you can see month by month whether your heating schedule is working."
+        ]
+      },
+      {
+        titel: "Are you allowed to fit them as a tenant?",
+        absaetze: [
+          "In Germany, as a rule yes, even without your landlord's consent. You only swap the dial on the valve for the smart thermostat. You don't need to drain any water, and you don't need a tradesperson.",
+          "Keep the old dials safe and screw them back on when you move out. You then take your smart thermostats with you to your next flat. In Austria and Switzerland it's best to ask your landlord briefly."
+        ]
+      },
+      {
+        titel: "Will they fit your radiators?",
+        absaetze: [
+          "On almost all normal radiators. Most valves have a thread to the M30 x 1.5 standard. For others, for example from Danfoss, adapters are often included. For underfloor heating, on the other hand, you need a room thermostat on the wall."
+        ]
+      },
+      {
+        titel: "More convenient than by hand",
+        absaetze: [
+          "On top of that there's the convenience: shortly before you get home, the flat is already warm. While you're at work, the thermostats turn down on their own, and you can't forget it any more either.",
+          "If you currently turn every radiator down in the morning and back up in the evening, my calculator says you save around a quarter of an hour a week with four radiators.",
+          "To start with, one schedule for weekdays and one for the weekend is enough. For example, set 21 degrees in the morning and evening, 16 to 17 degrees when you're out, and 16 to 18 degrees in the bedroom at night. It shouldn't get colder than 16 degrees, otherwise the risk of mould increases."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Which thermostats I recommend, with and without a hub, and what they save you with your own numbers is on my smart radiator thermostats page.",
+      knopf: "To the thermostats with calculator"
+    },
+    wannNicht: [
+      "You have underfloor heating: for that you need a room thermostat on the wall.",
+      "In your building, heating costs are split only by floor area: then only a little of the saving reaches you.",
+      "You already reliably turn every radiator down when you leave: then you mainly save effort and less money.",
+      "You're at home almost all day: then the heating schedule mainly turns down at night, and you save less."
+    ],
+    fragen: [
+      { f: "What do I do when I move out?", a: "You unscrew the smart thermostats and put the old dials back on. That takes a few minutes per radiator. You take the smart thermostats with you; they'll also fit most radiators in your new flat." },
+      { f: "Do they interfere with the heat cost allocator?", a: "No. The heat cost allocator sits on the radiator and measures how much heat it gives off. The thermostat, on the other hand, goes on the valve. If you heat less, the allocator simply shows less. You shouldn't remove or cover it." },
+      { f: "Do I need a hub?", a: "Not necessarily. Some thermostats connect straight to Wi-Fi, and with a FRITZ!Box your router is already the hub. But in tests, models with a hub come out best. The hub is a one-off extra cost, and when you move you simply take it with you." },
+      { f: "When will I have earned back the purchase price?", a: "That depends on how many radiators you equip and how much reaches you. According to Stiftung Warentest the purchase only pays off in the long run; in its example with five thermostats, the ADAC arrives at just under four years. With central heating it takes longer, because only part of the saving reaches you. The convenience, on the other hand, you have from day one." }
+    ],
+    quellen: [
+      { name: "German Environment Agency (Umweltbundesamt): heating, room temperature (October 2023)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "programmable thermostats save about 10 % energy, turn down during several hours of absence and at night, 17 °C in the bedroom" },
+      { name: "Verbraucherzentrale Hamburg: well heated through the winter (December 2025)", url: "https://www.vzhh.de/themen/bauen-wohnen-energie/heizung/gut-geheizt-durch-den-winter", text: "every degree lower saves about 6 percent heating energy, it shouldn't be colder than 16 °C or mould can form, smart thermostats can also be retrofitted in rented flats" },
+      { name: "co2online: press release on programmable thermostats (October 2023)", text: "around ten percent lower heating costs, tenants don't need the landlord's permission, put the old thermostats back before moving out" },
+      { name: "ADAC: smart radiator thermostats (October 2026)", text: "in practice 5 to 8 percent lower heating costs, tenants can usually fit them themselves, keep the old thermostats and put them back when moving out, underfloor heating needs a room thermostat, in the example with five thermostats paid off after just under four years" },
+      { name: "ista: smart thermostats between energy efficiency and data protection (October 2026)", text: "swapping only the thermostat head usually needs no landlord consent, restore the original state when moving out" },
+      { name: "German Heating Costs Ordinance (Heizkostenverordnung), § 7 and § 6a", url: "https://www.gesetze-im-internet.de/heizkostenv/__7.html", text: "at least 50 and at most 70 percent of central heating costs by consumption, the rest by floor area, with remotely readable meters a monthly consumption report since 2022" },
+      { name: "mein-nebenkostenrechner.de: § 7 Heating Costs Ordinance (September 2026)", text: "the landlord chooses between 50 and 70 percent by consumption, for example 50/50 or 30/70, in some older buildings with oil or gas 70 percent is mandatory" },
+      { name: "mietrecht.org: splitting basic and consumption costs", text: "50 to 70 percent by consumption, basic costs by living area or enclosed space" },
+      { name: "Arbeiterkammer Wien: heating bills under the HeizKG", url: "https://wien.arbeiterkammer.at/beratung/Wohnen/Heizkostenabrechnung/Heizkostenabrechnung_nach_dem_HeizKG.html", text: "applies to buildings with four or more flats and shared heating, not to individual gas boilers, 55 to 85 percent of energy costs by consumption, the remaining costs by floor area" },
+      { name: "Austrian Heating Costs Billing Act (Heizkostenabrechnungsgesetz), § 10 (jusline.at)", text: "at least 55 and at most 85 percent of energy costs by consumption, the rest by usable floor area" },
+      { name: "ista Austria and Techem Austria on the Heating Costs Billing Act", text: "at least 55 percent of energy costs by consumption, so basic costs at most 45 percent, doesn't apply to individual flat heating" },
+      { name: "WEKA Switzerland: allocation keys for service charges (June 2025)", text: "basic costs usually 30 to 50 percent of heating costs, billing by consumption is mainly mandatory for new and fully renovated buildings, otherwise usually split by floor area" },
+      { name: "ista Switzerland: brochure on heating bills", text: "basic costs 30 to 50 percent by living area, the rest by consumption" },
+      { name: "Swiss Federal Office of Energy: billing model for consumption-based heating bills (2004)", text: "basic costs 30 to 50 percent, consumption-based costs 50 to 70 percent" },
+      { name: "Conference of Cantonal Energy Directors: implementation aid EN-113 (December 2018)", text: "billing by consumption mandatory for new buildings and full renovations with five or more flats, some cantons have lifted the retrofit obligation for existing buildings" },
+      { name: "Blick: heating bills in old properties (October 2022) and billing causes trouble (December 2022)", text: "in older buildings without heat meters often split by square or cubic metres, regardless of how much someone heats" },
+      { name: "Berliner Mieterverein: gas supply (Federal Court of Justice, June 2018) and metering devices for heating bills (September 2025)", text: "with your own gas connection the supply contract is between supplier and tenant, heat cost allocators sit directly on the radiator, the reading also depends on the thermostatic valves, tampering is a criminal offence" },
+      { name: "Berliner MieterGemeinschaft: heat cost allocators", text: "sits in the middle of the radiator, electronic devices measure the difference between radiator and room air, covers and curtains distort the reading" },
+      { name: "Gewobag: information on heat cost allocators (August 2025)", text: "measures room and radiator temperature directly on the radiator, is sealed" },
+      { name: "ista: monthly consumption report (October 2026), Haufe and Haus & Grund Chemnitz", text: "retrofit or replace meters that can't be read remotely by 31.12.2026, from the installation of remotely readable meters a monthly consumption report" },
+      { name: "Stiftung Warentest: smart radiator thermostats test (issue 9/2023)", text: "the purchase only pays off in the long run, models with a hub ahead, the FRITZ! model almost as good as the test winner" },
+      { name: "smarthomeassistent.de: best radiator thermostats (October 2026)", text: "places 1 and 2 with a hub, no model that connects straight to Wi-Fi in the top ten" },
+      { name: "homeandsmart: replacing a thermostat", text: "most valves with an M30 x 1.5 thread, adapters for others, no draining water, no tradesperson, done in a few minutes, underfloor heating needs a room thermostat" },
+      { name: "Manufacturer information", text: "M30 x 1.5 thread and included adapters, for example for Danfoss valves, according to eQ-3 (Homematic IP), AVM (FRITZ!) and Bosch, fitting without draining water and without special tools according to eQ-3" }
     ]
   }
 ];

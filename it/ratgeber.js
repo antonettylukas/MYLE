@@ -222,8 +222,7 @@ const RATGEBER = [
         titel: "La mia esperienza con il mio gatto",
         art: "erfahrung",
         absaetze: [
-          "Il mio primo robot aspirapolvere l’ho comprato anche per il gatto che avevo allora. Spargeva di continuo la lettiera per casa, e questo mi faceva impazzire. All’epoca, nella mia prima e seconda casa, il robot mi ha aiutato tantissimo con la lettiera.",
-          "Uso robot aspirapolvere da 14 anni e da allora non ho quasi più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
+          "Il mio primo robot aspirapolvere l’ho comprato anche per il gatto che avevo allora. Spargeva di continuo la lettiera per casa, e questo mi faceva impazzire. All’epoca, nella mia prima e seconda casa, il robot mi ha aiutato tantissimo con la lettiera."
         ]
       },
       {
@@ -396,6 +395,103 @@ const RATGEBER = [
       { name: "Utopia: lavasciuga, vantaggi e svantaggi (marzo 2023)", text: "di solito asciuga solo 4–6 kg, più corrente e acqua, piuttosto per famiglie piccole" },
       { name: "Waschmaschinen-Kompass: mettere l’asciugatrice sopra la lavatrice (ottobre 2026)", text: "serve un telaio di collegamento, asciugatrice sempre sopra, senza telaio può spostarsi" },
       { name: "Dati dei produttori ed etichette energetiche", text: "sovrapposizione secondo Siemens e Samsung (asciugatrice sopra, kit adatto, stessa marca), capacità, durata dei programmi e corrente per lavare e asciugare secondo le etichette energetiche di Haier, Hisense, Bosch e AEG" }
+    ]
+  },
+  {
+    id: "smarte-thermostate-mietwohnung",
+    produkt: "thermostate",
+    geprueft: "2026-11-04",
+    titel: "Le valvole termostatiche smart convengono in una casa in affitto?",
+    frage: "Le valvole termostatiche smart convengono in una casa in affitto?",
+    seitenTitel: "Le valvole termostatiche smart convengono in una casa in affitto?",
+    beschreibung: "Quanto risparmi da inquilino con le valvole termostatiche smart, quanto arriva sul conteggio del riscaldamento, se puoi montarle e quando rendono meno.",
+    kurzantwort: "Di solito sì: le avviti senza artigiano e le smonti quando traslochi, e ogni giorno torni in una casa calda. Con un programma di riscaldamento risparmi anche circa il 10 per cento di energia per il riscaldamento. Con un riscaldamento centralizzato, sul tuo conteggio ne arriva di solito da metà a poco più di due terzi, perché solo una parte dei costi viene ripartita in base al consumo.",
+    abschnitte: [
+      {
+        titel: "Quanto risparmi con un programma di riscaldamento",
+        absaetze: [
+          "Le valvole termostatiche smart riscaldano secondo il tuo programma: caldo quando ci sei, abbassato quando dormi o lavori. Secondo l’Agenzia federale tedesca per l’ambiente e co2online risparmi così circa il 10 per cento di energia per il riscaldamento. L’ADAC nella pratica calcola dal 5 all’8 per cento.",
+          "Quanto sia nel tuo caso dipende da quanto spesso sei fuori e da come riscaldi finora. Come regola pratica, ogni grado in meno fa risparmiare circa il 6 per cento di energia. Se finora il riscaldamento va quasi sempre senza sosta, risparmi di più. Se abbassi già tu ogni termosifone in modo affidabile, risparmi meno."
+        ]
+      },
+      {
+        titel: "Quanto arriva sul tuo conteggio",
+        absaetze: [
+          "Se hai una caldaia a gas tua nell’appartamento, di solito paghi il gas direttamente al fornitore. Allora il risparmio arriva tutto a te.",
+          "Con un riscaldamento centralizzato, invece, solo una parte dei costi viene ripartita in base al tuo consumo, il resto in base alla superficie. In Germania è dal 50 al 70 per cento, in Austria almeno il 55 per cento dei costi dell’energia. In Svizzera è di solito dal 50 al 70 per cento, se il tuo stabile conteggia in base al consumo. Come è ripartito da te lo vedi sul conteggio del riscaldamento, alle spese di base e alle spese di consumo.",
+          "Un esempio: se paghi 1.000 € all’anno per il riscaldamento, il 10 per cento sono 100 €. Se da te dal 50 al 70 per cento viene ripartito in base al consumo, te ne arrivano circa 50–70 €.",
+          "In alcuni stabili non si ripartisce affatto in base al consumo, ma solo in base alla superficie, in Svizzera per esempio spesso negli stabili più vecchi. Allora risparmia soprattutto l’intero stabile, e a te arriva poco."
+        ]
+      },
+      {
+        titel: "Come vedi se funziona",
+        absaetze: [
+          "In Germania i contatori del riscaldamento devono essere leggibili a distanza dal 2027. Appena lo sono, ricevi ogni mese un’informazione sui consumi. Così vedi mese per mese se il tuo programma funziona."
+        ]
+      },
+      {
+        titel: "Da inquilino puoi montarle?",
+        absaetze: [
+          "In Germania di regola sì, anche senza il consenso del locatore. Sostituisci solo la manopola sulla valvola con la valvola termostatica smart. Non devi svuotare l’acqua e non ti serve un artigiano.",
+          "Conserva bene le vecchie manopole e riavvitale quando traslochi. Le valvole smart le porti poi nella casa successiva. In Austria e in Svizzera è meglio chiedere brevemente al locatore."
+        ]
+      },
+      {
+        titel: "Vanno bene sui tuoi termosifoni?",
+        absaetze: [
+          "Su quasi tutti i termosifoni normali. La maggior parte delle valvole ha una filettatura secondo lo standard M30 x 1,5. Per le altre, per esempio Danfoss, spesso ci sono adattatori inclusi. Per il riscaldamento a pavimento ti serve invece un termostato ambiente a parete."
+        ]
+      },
+      {
+        titel: "Più comodo che a mano",
+        absaetze: [
+          "In più c’è la comodità: poco prima che torni a casa, l’appartamento è già caldo. Mentre lavori, le valvole abbassano in autonomia, e non puoi più nemmeno dimenticartene.",
+          "Se finora abbassi ogni termosifone la mattina e lo rialzi la sera, con quattro termosifoni secondo il mio calcolatore risparmi circa un quarto d’ora a settimana.",
+          "Per iniziare bastano un programma per i giorni feriali e uno per il fine settimana. Imposta per esempio 21 gradi la mattina e la sera, 16–17 gradi quando sei fuori, e di notte 16–18 gradi in camera da letto. Non dovrebbe scendere sotto i 16 gradi, altrimenti aumenta il rischio di muffa."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quali valvole termostatiche consiglio, con e senza centralina, e quanto ti fanno risparmiare con i tuoi numeri lo trovi nella mia pagina sulle valvole termostatiche smart.",
+      knopf: "Alle valvole termostatiche con calcolatore"
+    },
+    wannNicht: [
+      "Hai il riscaldamento a pavimento: ti serve un termostato ambiente a parete.",
+      "Nel tuo stabile i costi del riscaldamento vengono ripartiti solo in base alla superficie: allora del risparmio ti arriva poco.",
+      "Abbassi già ogni termosifone in modo affidabile quando esci: allora risparmi soprattutto fatica e meno soldi.",
+      "Di giorno sei quasi sempre a casa: allora il programma abbassa soprattutto di notte, e risparmi meno."
+    ],
+    fragen: [
+      { f: "Cosa faccio quando trasloco?", a: "Sviti le valvole smart e rimonti le vecchie manopole. Ci vogliono pochi minuti per termosifone. Le valvole smart le porti con te, vanno bene anche sulla maggior parte dei termosifoni della nuova casa." },
+      { f: "Disturbano il ripartitore dei costi di riscaldamento?", a: "No. Il ripartitore è sul termosifone e misura quanto calore emette. La valvola termostatica invece va sulla valvola. Se riscaldi meno, il ripartitore segna semplicemente meno. Non dovresti toglierlo né coprirlo." },
+      { f: "Mi serve una centralina?", a: "Non per forza. Alcune valvole si collegano direttamente al Wi-Fi, e con una FRITZ!Box il tuo router fa già da centralina. Nei test però vanno meglio i modelli con centralina. La centralina costa una volta in più, e quando traslochi la porti semplicemente con te." },
+      { f: "Quando recupero il prezzo d’acquisto?", a: "Dipende da quanti termosifoni equipaggi e da quanto ti arriva. Secondo Stiftung Warentest l’acquisto conviene solo a lungo termine; nel suo esempio con cinque valvole l’ADAC arriva a poco meno di quattro anni. Con un riscaldamento centralizzato ci vuole di più, perché ti arriva solo una parte del risparmio. La comodità invece ce l’hai dal primo giorno." }
+    ],
+    quellen: [
+      { name: "Agenzia federale tedesca per l’ambiente (Umweltbundesamt): riscaldamento, temperatura ambiente (ottobre 2023)", url: "https://www.umweltbundesamt.de/umwelttipps-fuer-den-alltag/heizen-bauen/heizen-raumtemperatur", text: "i termostati programmabili fanno risparmiare circa il 10 % di energia, abbassare durante alcune ore di assenza e di notte, 17 °C in camera da letto" },
+      { name: "Verbraucherzentrale Hamburg: ben riscaldati per tutto l’inverno (dicembre 2025)", url: "https://www.vzhh.de/themen/bauen-wohnen-energie/heizung/gut-geheizt-durch-den-winter", text: "ogni grado in meno fa risparmiare circa il 6 per cento di energia, non sotto i 16 °C altrimenti si può formare muffa, le valvole smart si possono montare anche in affitto" },
+      { name: "co2online: comunicato sui termostati programmabili (ottobre 2023)", text: "circa il dieci per cento di costi di riscaldamento in meno, gli inquilini non hanno bisogno del permesso del locatore, rimontare le vecchie valvole prima del trasloco" },
+      { name: "ADAC: valvole termostatiche smart (ottobre 2026)", text: "nella pratica dal 5 all’8 per cento di costi di riscaldamento in meno, gli inquilini di regola possono montarle da soli, conservare le vecchie valvole e rimontarle al trasloco, il riscaldamento a pavimento richiede un termostato ambiente, nell’esempio con cinque valvole ripagate dopo poco meno di quattro anni" },
+      { name: "ista: valvole smart tra efficienza energetica e protezione dei dati (ottobre 2026)", text: "sostituire solo la testa termostatica di regola non richiede il consenso del locatore, al trasloco ripristinare lo stato originale" },
+      { name: "Ordinanza tedesca sui costi di riscaldamento (Heizkostenverordnung), § 7 e § 6a", url: "https://www.gesetze-im-internet.de/heizkostenv/__7.html", text: "almeno il 50 e al massimo il 70 per cento dei costi di un riscaldamento centralizzato in base al consumo, il resto in base alla superficie, con contatori leggibili a distanza dal 2022 un’informazione mensile sui consumi" },
+      { name: "mein-nebenkostenrechner.de: § 7 dell’ordinanza sui costi di riscaldamento (settembre 2026)", text: "il locatore sceglie tra il 50 e il 70 per cento in base al consumo, per esempio 50/50 o 30/70, in alcuni stabili vecchi a gasolio o gas il 70 per cento è obbligatorio" },
+      { name: "mietrecht.org: ripartizione tra spese di base e di consumo", text: "dal 50 al 70 per cento in base al consumo, le spese di base in base alla superficie abitabile o al volume" },
+      { name: "Arbeiterkammer Wien: conteggio del riscaldamento secondo la HeizKG", url: "https://wien.arbeiterkammer.at/beratung/Wohnen/Heizkostenabrechnung/Heizkostenabrechnung_nach_dem_HeizKG.html", text: "vale per stabili con almeno quattro appartamenti e riscaldamento comune, non per le caldaie a gas autonome, dal 55 all’85 per cento dei costi dell’energia in base al consumo, le altre spese in base alla superficie" },
+      { name: "Legge austriaca sul conteggio dei costi di riscaldamento (Heizkostenabrechnungsgesetz), § 10 (jusline.at)", text: "almeno il 55 e al massimo l’85 per cento dei costi dell’energia in base al consumo, il resto in base alla superficie utile" },
+      { name: "ista Austria e Techem Austria sulla legge sul conteggio dei costi di riscaldamento", text: "almeno il 55 per cento dei costi dell’energia in base al consumo, quindi spese di base al massimo il 45 per cento, non vale per il riscaldamento autonomo" },
+      { name: "WEKA Svizzera: chiavi di ripartizione delle spese accessorie (giugno 2025)", text: "spese di base di solito dal 30 al 50 per cento dei costi di riscaldamento, il conteggio in base al consumo è obbligatorio soprattutto per edifici nuovi e risanati completamente, altrimenti di solito ripartito in base alla superficie" },
+      { name: "ista Svizzera: opuscolo sul conteggio del riscaldamento", text: "spese di base dal 30 al 50 per cento in base alla superficie abitabile, il resto in base al consumo" },
+      { name: "Ufficio federale dell’energia: modello di conteggio individuale delle spese di riscaldamento (2004)", text: "spese di base dal 30 al 50 per cento, spese in base al consumo dal 50 al 70 per cento" },
+      { name: "Conferenza dei direttori cantonali dell’energia: aiuto all’esecuzione EN-113 (dicembre 2018)", text: "conteggio in base al consumo obbligatorio per edifici nuovi e rinnovi completi da cinque appartamenti, alcuni cantoni hanno abolito l’obbligo di adeguamento per gli edifici esistenti" },
+      { name: "Blick: conteggio del riscaldamento negli stabili vecchi (ottobre 2022) e un conteggio che fa arrabbiare (dicembre 2022)", text: "negli stabili vecchi senza contatori di calore spesso ripartito per metri quadrati o cubi, indipendentemente da quanto si riscalda" },
+      { name: "Berliner Mieterverein: fornitura di gas (Corte federale di giustizia, giugno 2018) e apparecchi di misura per il conteggio del riscaldamento (settembre 2025)", text: "con un allacciamento al gas proprio il contratto di fornitura è tra fornitore e inquilino, i ripartitori sono direttamente sul termosifone, la lettura dipende anche dalle valvole termostatiche, la manomissione è un reato" },
+      { name: "Berliner MieterGemeinschaft: ripartitori dei costi di riscaldamento", text: "è al centro del termosifone, gli apparecchi elettronici misurano la differenza tra termosifone e aria ambiente, rivestimenti e tende falsano la lettura" },
+      { name: "Gewobag: informazioni sui ripartitori dei costi di riscaldamento (agosto 2025)", text: "misura direttamente sul termosifone la temperatura ambiente e quella del termosifone, è piombato" },
+      { name: "ista: informazione mensile sui consumi (ottobre 2026), Haufe e Haus & Grund Chemnitz", text: "adeguare o sostituire entro il 31.12.2026 i contatori non leggibili a distanza, dall’installazione di contatori leggibili a distanza un’informazione mensile sui consumi" },
+      { name: "Stiftung Warentest: test delle valvole termostatiche smart (numero 9/2023)", text: "l’acquisto conviene solo a lungo termine, i modelli con centralina in testa, il modello FRITZ! quasi buono quanto il migliore del test" },
+      { name: "smarthomeassistent.de: classifica delle valvole termostatiche (ottobre 2026)", text: "posti 1 e 2 con centralina, nessun modello Wi-Fi diretto tra i primi dieci" },
+      { name: "homeandsmart: sostituire una valvola termostatica", text: "la maggior parte delle valvole con filettatura M30 x 1,5, adattatori per le altre, niente acqua da svuotare, niente artigiano, fatto in pochi minuti, il riscaldamento a pavimento richiede un termostato ambiente" },
+      { name: "Dati dei produttori", text: "filettatura M30 x 1,5 e adattatori inclusi, per esempio per valvole Danfoss, secondo eQ-3 (Homematic IP), AVM (FRITZ!) e Bosch, montaggio senza svuotare l’acqua e senza attrezzi speciali secondo eQ-3" }
     ]
   }
 ];
