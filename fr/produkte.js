@@ -1144,9 +1144,18 @@ const PRODUKTE = [
       { f: "Combien d’eau faut-il ajouter\u202f?", a: "Des repères à l’intérieur de la cuve vous l’indiquent. Vous mesurez le riz avec le gobelet fourni et versez l’eau jusqu’au repère correspondant. Tenez-vous-en à cela, et c’est juste presque à chaque fois." },
       { f: "Dois-je laver le riz avant\u202f?", a: "Oui, un rapide rinçage vaut le coup : il colle moins, et cela déborde moins facilement. Versez-le dans une passoire et rincez-le à l’eau froide jusqu’à ce que l’eau soit presque claire." },
       { f: "Puis-je aussi y cuire des légumes ou du poisson\u202f?", a: "Oui, si votre appareil a un panier vapeur. Presque tous en ont un. Il se pose sur la cuve, et sur beaucoup d’appareils, des légumes ou du poisson y cuisent à la vapeur pendant que le riz cuit en dessous. Que les légumes restent croquants dépend de l’appareil : chez Stiftung Warentest, seuls six appareils ont réussi un brocoli vert et croquant (numéro 5/2026)." },
-      { f: "Combien de temps le riz peut-il rester au chaud\u202f?", a: "Pas trop longtemps. L’Institut fédéral allemand d’évaluation des risques conseille de manger un plat maintenu au chaud au plus tard trois heures après la cuisson, et il doit rester à plus de 65 degrés. Mettez vite les restes au réfrigérateur et mangez-les dans un délai d’un jour. Le riz cuit ne doit pas rester tiède à l’air libre, sinon des germes peuvent se développer." },
+      { f: "Combien de temps le riz peut-il rester au chaud\u202f?", a: "Tout dépend de la température. L’Institut fédéral allemand d’évaluation des risques conseille de garder les plats au chaud à 60 degrés minimum en tout point. Le riz cuit ne doit pas rester tiède à l’air libre, sinon des germes peuvent se développer. Mettez vite les restes au réfrigérateur et mangez-les dans un délai d’un jour." },
       { f: "Le revêtement est-il sans danger\u202f?", a: "Sur la plupart des appareils, oui. Mais Stiftung Warentest a constaté que nettement plus d’aluminium se libère du revêtement de deux cuiseurs à riz de Reishunger que sur les autres appareils, même si la valeur limite est respectée (numéro 5/2026). C’est pourquoi je ne recommande pas ces appareils. Quel que soit l’appareil : pas de cuillère en métal ni d’éponge à récurer, pour que le revêtement dure longtemps." },
       { f: "Le riz du cuiseur est-il meilleur\u202f?", a: "Cela dépend de l’appareil. Un cuiseur à riz règle lui-même la chaleur et passe en maintien au chaud dès que l’eau est absorbée. Mais tous ne le font pas bien : chez Stiftung Warentest, seuls 6 cuiseurs à riz sur 13 ont bien cuit le riz, dont les deux vainqueurs du test (numéro 5/2026). Dans aucun, le riz n’a attaché." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des cuiseurs à riz (numéro 5/2026)", text: "vainqueurs Panasonic SR-DA152 et Rommelsbacher MRK 650 (note 2,2 chacun), Cosori «\u202fbien\u202f», seuls 6 appareils sur 13 ont bien cuit le riz, rien n’a attaché dans aucun, brocoli croquant dans six seulement, plus d’aluminium issu du revêtement chez Reishunger" },
+      { name: "Stiftung Warentest\u202f: temps de cuisson et consommation d’électricité dans le même test", text: "de 13 minutes à une bonne heure, cuiseurs à riz en moyenne 121 wattheures, casserole avec couvercle 91, casserole d’eau bouillante environ 270, pour le calculateur" },
+      { name: "Institut fédéral allemand d’évaluation des risques (BfR)\u202f: questions et réponses sur les infections alimentaires à la maison (août 2024)", url: "https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/foodborne-infections-in-private-households-identifying-sources-and-avoiding-risks/", text: "garder les plats chauds à 60\u00a0°C minimum en tout point, sinon les refroidir sous 7\u00a0°C en quelques heures (en anglais)" },
+      { name: "Centrales de consommateurs allemandes (Verbraucherzentrale) et ÖKO-TEST", text: "ne pas laisser le riz cuit tiédir à l’air libre, le refroidir vite au réfrigérateur et le manger dans un délai d’un jour" },
+      { name: "ALDI SÜD, discounter allemand (communiqué de janvier 2026), et supermarktcheck.de", text: "le riz en sachets cuisson des marques de distributeur ne coûte guère plus que le riz en vrac, pour le calculateur" },
+      { name: "Fédération allemande de l’énergie et de l’eau (BDEW)\u202f: analyse des prix de l’électricité (août 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 centimes le kWh, pour les quelque 5 centimes d’électricité en plus avec les sachets cuisson dans le calculateur (en allemand)" },
+      { name: "Données des fabricants et modes d’emploi", text: "programmes, minuterie, panier vapeur, taille et entretien des appareils, cuve céramique sans PFAS du Panasonic" }
     ],
     rechner: "reiskocher",
     video: "reiskocher"
@@ -1236,6 +1245,19 @@ const PRODUKTE = [
       { f: "Quels grains conviennent ?", a: "Des grains pour espresso ou crema, selon vos goûts. N’utilisez pas de grains caramélisés ou aromatisés : selon De'Longhi, ils peuvent encrasser le moulin. Les grains très huileux ne conviennent pas non plus : selon Siemens, ils ne glissent pas correctement dans le moulin." },
       { f: "Pourquoi tous les appareils avec carafe sont-ils des De'Longhi ?", a: "Parce que ce sont eux qui ont obtenu les meilleurs résultats chez Stiftung Warentest dans leur gamme de prix : la Magnifica Start est l’un des bons appareils les moins chers, la Magnifica Evo Next a terminé juste derrière les gagnants en 2025, et l’Eletta Explore est l’actuelle gagnante du test. Philips propose aussi une carafe, LatteGo, que vous enclenchez et rincez vite, sans aucun tube. Mais sur la Philips 5500 testée, l’espresso et le cappuccino n’avaient qu’un goût moyen au test de 2024." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des machines à café automatiques (juillet 2026)", text: "vainqueurs De'Longhi Eletta Explore et Eletta Ultra («\u202fbien\u202f»), ainsi que circuit de lait, dimensions et groupe d’infusion amovible des appareils" },
+      { name: "Stiftung Warentest\u202f: test des machines à café automatiques (juin 2025)", text: "Nivona NICR 790 l’un des deux vainqueurs (note 2,0), juste derrière la Magnifica Evo Next (note 2,1) avec une mousse de lait très fine, Siemens EQ500 TP516DX3 «\u202fbien\u202f» (note 2,3)" },
+      { name: "Stiftung Warentest\u202f: test des machines à café automatiques (automne 2024)", text: "vainqueur De'Longhi Rivelia (note 2,1), Magnifica Start «\u202fbien\u202f» (note 2,3) avec quatre boissons d’une simple pression, sur la Philips 5500 espresso et cappuccino seulement moyens" },
+      { name: "Konsument, magazine autrichien des consommateurs (VKI), numéro 1/2025", text: "test des machines à café automatiques\u202f: De'Longhi Rivelia en tête, sur la Philips 5500 espresso et cappuccino seulement dans la moyenne" },
+      { name: "Stiftung Warentest\u202f: détartrer une machine à café automatique de façon écologique (juin 2025)", text: "l’acide sulfamique est considéré comme nocif pour les organismes aquatiques, les détartrants à l’acide lactique ou citrique ne posent pas de problème" },
+      { name: "Verbraucherzentrale NRW, centrale de consommateurs allemande\u202f: détartrer de façon écologique (juillet 2026)", url: "https://www.verbraucherzentrale.nrw/wissen/umwelt-haushalt/nachhaltigkeit/umweltbewusst-entkalken-105079", text: "l’acide sulfamique nuit aux organismes aquatiques, pour les machines à café automatiques il existe des détartrants à base d’acide lactique (en allemand)" },
+      { name: "Stiftung Warentest\u202f: test des capsules de café (numéro 9/2025)", text: "vainqueur Edeka Gut & Günstig à 19 centimes la capsule, Lidl à 17 centimes, pour le calculateur" },
+      { name: "Stiftung Warentest\u202f: communiqué du 23 novembre 2023 (numéro 12/2023)", text: "le café filtre est rentable ne serait-ce que grâce à la machine bon marché, une machine automatique seulement si l’on boit beaucoup de café\u202f: avec le prix de l’appareil, en moyenne 39 centimes la tasse pour les petits buveurs et 19 centimes pour les gros buveurs" },
+      { name: "Coffee Friend, revendeur de café\u202f: prix du cappuccino dans dix grandes villes allemandes (juin 2026)", text: "en moyenne 3,80 euros, pour le calculateur" },
+      { name: "kaffeebewertung.de, vollebohne.de, reparaturoderneu.de et kostenlupe.de (2026)", text: "prix des capsules, des grains, du détartrant, du nettoyant et des filtres à eau, pour le calculateur" },
+      { name: "Données des fabricants et modes d’emploi", text: "boissons, circuit de lait, nettoyage, détartrage et grains adaptés selon De'Longhi et Siemens" }
+    ],
     profitipp: {
       titel: "Réglez la mouture",
       text: "La finesse de la mouture change beaucoup le goût. Essayez simplement, cela ne vous coûte rien :",
@@ -1309,6 +1331,12 @@ const PRODUKTE = [
       { f: "Faut-il un abonnement pour les recettes ?", a: "Pas pour le Companion XL : les recettes sont dans l’application Moulinex gratuite. Pour le ClickChef, elles sont dans le livre de recettes. Avec le Thermomix, il vous faut l’abonnement Cookidoo pour la plupart des recettes ; sans abonnement, vous avez environ 200 recettes sur l’appareil selon Vorwerk." },
       { f: "Combien de temps fait-il vraiment gagner ?", a: "Honnêtement, aucun test ne l’a mesuré. Le robot ne cuit pas forcément plus vite. Mais il vous évite de rester à côté et de remuer, et vous n’avez pas à couper oignons et légumes à la main. Pendant ce temps, vous mettez la table, rangez ou vous asseyez simplement. Le calculateur vous montre ce que cela représente pour vous." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des robots cuiseurs (numéro 1/2024)", text: "vainqueur Bosch Cookit (note 2,0), Monsieur Cuisine Smart «\u202fsatisfaisant\u202f» (note 2,8), Moulinex ClickChef meilleur rapport qualité-prix («\u202fsatisfaisant\u202f», note 2,9), presque tous ont raté le hachage des oignons, arômes grillés seulement à partir de 140 degrés" },
+      { name: "Stiftung Warentest\u202f: test des robots cuiseurs, complété dans le numéro 2/2026", text: "Thermomix TM7 «\u202fbon\u202f»" },
+      { name: "Test-Achats (Belgique)\u202f: Moulinex Companion XL contre Thermomix TM7 (juillet 2026)", text: "globalement à peu près aussi bons, le Companion XL seulement moyennement facile à nettoyer, recettes sans abonnement, plus le Monsieur Cuisine Smart comme bon rapport qualité-prix" },
+      { name: "Données des fabricants", text: "programmes, balance, température, taille du bol et recettes des appareils, vente et abonnement Cookidoo selon Vorwerk" }
+    ],
     rechner: "kochfunktion",
     video: "kuechenmaschine-kochfunktion"
   },
@@ -1363,6 +1391,12 @@ const PRODUKTE = [
       { f: "Peut-il aussi couper des légumes ?", a: "Oui, avec un coupe-légumes. Il râpe les légumes ou les coupe en rondelles, par exemple carottes, concombres ou pommes de terre. La Serie 4 présentée ici n’en est pas équipée. Pour les noix ou les herbes, il vous faut un accessoire hachoir séparé." },
       { f: "Que fait de plus un robot cuiseur ?", a: "Il chauffe en mélangeant, vous y cuisinez des soupes, des sauces ou un risotto. Pour la pâtisserie, la machine présentée ici suffit, et son bol est plus grand : 3,9 litres au lieu d’environ 2 à 3 litres utiles. Si vous voulez aussi cuisiner, regardez la page « Robot cuiseur »." },
       { f: "Combien de temps fait-il vraiment gagner ?", a: "Honnêtement, aucun test ne l’a mesuré. Avec la machine, la pâte n’est prête qu’un peu plus vite : à la main, vous la pétrissez au moins 8 minutes, avec la machine au moins 5. La grande différence, c’est que vous n’avez pas besoin d’être là. Le calculateur vous montre ce que cela représente pour vous." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des robots pâtissiers (numéro 12/2025)", text: "vainqueur Bosch Serie 6 MUMS6ZS13D (note 2,4), Serie 4 MUM58W20 «\u202fbon\u202f» et meilleur rapport qualité-prix (note 2,5), KitchenAid Artisan «\u202fsatisfaisant\u202f» (note 2,7) mais très résistant, accessoires achetés en plus pour mixer et hacher pour presque toutes les machines à bras pivotant, certaines pénibles à nettoyer, risque de se pincer les doigts dans la charnière" },
+      { name: "REWE, chaîne de supermarchés allemande\u202f: 7 erreurs avec la pâte levée", text: "pétrir à la main au moins 8 minutes, au robot au moins 5, pour la question sur le batteur électrique et pour le calculateur" },
+      { name: "Administration du district de Göppingen, service de l’agriculture\u202f: fiche sur la pâte levée salée", url: "https://www.landkreis-goeppingen.de/site/LRA-GP-Internet-2024/get/params_E602328038/22300062/Sa_Merkblatt%20salziger%20Hefeteig.pdf", text: "les mêmes temps de pétrissage, au moins 8 minutes à la main, au moins 5 au robot (en allemand)" },
+      { name: "Données des fabricants", text: "taille du bol, quantités de pâte, poids, accessoires et pièces lavables au lave-vaisselle des modèles Bosch" }
     ],
     rechner: "kneten",
     video: "kuechenmaschine"
@@ -1844,6 +1878,15 @@ const PRODUKTE = [
       { f: "Tous les combien change-t-on la tête de brosse ?", a: "Environ tous les trois mois, ou plus tôt si les poils s’écartent. Certains modèles vous le rappellent." },
       { f: "Comment bien se brosser les dents ?", a: "Deux fois par jour pendant deux minutes. Vous tenez la tête légèrement contre les dents et la guidez lentement de dent en dent. Inutile de frotter, la brosse s’en charge." },
       { f: "Ai-je besoin de l’appli ?", a: "Non. Sur la Laifen Wave Pro, l’appli vous permet de régler le brossage et affiche un bilan de vos temps de brossage. Vous pouvez vous brosser les dents sans téléphone." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest\u202f: test des brosses à dents électriques (numéro 12/2025)", text: "vainqueur Philips Sonicare 5500 (note 1,7), Sonicare 7100 (note 1,8), ni les brosses soniques ni les têtes rotatives n’ont d’avantage net pour le brossage" },
+      { name: "Stiftung Warentest\u202f: test des brosses à dents électriques (numéro 12/2024)", text: "vainqueur Oral-B iO Series 3N (note 1,9), Laifen Wave et version précédente de la Philips Sonicare 3100 «\u202fbien\u202f» (note 2,2 chacune), Silk'n SonicSmile Plus meilleur rapport qualité-prix (note 2,3)" },
+      { name: "Stiftung Warentest\u202f: test des brosses à dents électriques (numéro 12/2021)", text: "vainqueur Philips Sonicare Prestige 9900 (note 1,8)" },
+      { name: "Cochrane\u202f: comparaison des brosses à dents électriques et manuelles pour l’entretien de la santé bucco-dentaire (juin 2014)", url: "https://www.cochrane.org/fr/evidence/CD002281_poweredelectric-toothbrushes-compared-manual-toothbrushes-maintaining-oral-health", text: "56 essais, dont 51 dans la méta-analyse, après plus de trois mois en moyenne 21\u00a0% de plaque en moins et 11\u00a0% d’inflammation des gencives en moins" },
+      { name: "Autres synthèses (2020 et 2022) et l’étude SHIP de Greifswald (2019)", text: "la brosse électrique enlève un peu plus de plaque qu’à la main, la différence par brossage est faible mais avérée, et sur onze ans moins de dents ont été perdues" },
+      { name: "Autres tests de la Laifen Wave Pro (2026)", text: "notamment Live Science, digitalreviews.net, smartworld.it, smartzone.de et Expert Reviews, sur le capteur de pression, les modes de brossage et l’autonomie" },
+      { name: "Données des fabricants et modes d’emploi", text: "modes de brossage, minuterie, capteur de pression et autonomie des modèles, bon brossage et changement de tête selon Philips et Oral-B" }
     ],
     video: "zahnbuerste",
     preisstand: "Oktober 2026"

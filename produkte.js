@@ -1316,9 +1316,19 @@ const PRODUKTE = [
       { f: "Wie viel Wasser kommt dazu?", a: "Das zeigen dir Striche innen im Topf. Du füllst den Reis mit dem beiliegenden Messbecher ein und gießt Wasser bis zum passenden Strich. Halte dich daran, dann passt es fast immer." },
       { f: "Muss ich den Reis vorher waschen?", a: "Ja, kurz abspülen lohnt sich: Dann klebt er weniger, und es kocht nicht so leicht etwas über. Schütte ihn in ein Sieb und spül ihn mit kaltem Wasser, bis das Wasser fast klar ist." },
       { f: "Kann ich auch Gemüse oder Fisch darin garen?", a: "Ja, wenn dein Gerät einen Dämpfeinsatz hat. Fast alle haben einen, der Tsuki Mini nicht. Er kommt oben in den Topf, und bei vielen Geräten gart darin Gemüse oder Fisch im Dampf, während unten der Reis kocht. Ob das Gemüse knackig bleibt, hängt vom Gerät ab: Bei Stiftung Warentest gelang knackig grüner Brokkoli nur in sechs Geräten (Heft 5/2026)." },
-      { f: "Wie lange darf der Reis warm bleiben?", a: "Nicht zu lange. Das Bundesinstitut für Risikobewertung rät, warm gehaltenes Essen spätestens drei Stunden nach dem Kochen zu essen, und es sollte dabei über 65 Grad heiß bleiben. Reste stellst du schnell in den Kühlschrank und isst sie innerhalb eines Tages. Lauwarm herumstehen sollte gekochter Reis nicht, sonst können sich Keime bilden." },
+      { f: "Wie lange darf der Reis warm bleiben?", a: "Das kommt auf die Temperatur an. Das Bundesinstitut für Risikobewertung rät, Essen beim Warmhalten an allen Stellen auf mindestens 60 Grad zu halten. Lauwarm herumstehen sollte gekochter Reis nicht, sonst können sich Keime bilden. Reste stellst du schnell in den Kühlschrank und isst sie innerhalb eines Tages." },
       { f: "Ist die Beschichtung unbedenklich?", a: "Bei den meisten Geräten ja. Stiftung Warentest hat aber bei zwei Reiskochern von Reishunger festgestellt, dass sich aus der Beschichtung deutlich mehr Aluminium löst als bei den anderen Geräten, auch wenn der Grenzwert eingehalten wird (Heft 5/2026). Diese Geräte empfehle ich deshalb nicht. Egal bei welchem Gerät: Nimm keinen Metalllöffel und keinen Scheuerschwamm, damit die Beschichtung lange hält." },
       { f: "Schmeckt Reis aus dem Reiskocher besser?", a: "Das hängt vom Gerät ab. Ein Reiskocher regelt die Hitze selbst und schaltet aufs Warmhalten, sobald das Wasser aufgesogen ist. Gut kann das aber nicht jeder: Bei Stiftung Warentest garten nur 6 von 13 Reiskochern den Reis gut, darunter die beiden Testsieger (Heft 5/2026). Angebrannt ist bei keinem etwas." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Reiskocher im Test (Heft 5/2026)", text: "Testsieger Panasonic SR-DA152 und Rommelsbacher MRK 650 (je Note 2,2), Gastroback 42507 der günstigste gute Reiskocher, Cosori gut, nur 6 von 13 Geräten garten den Reis gut, in keinem brannte etwas an, knackigen Brokkoli schafften nur sechs, mehr Aluminium aus der Beschichtung bei Reishunger" },
+      { name: "Stiftung Warentest: Garzeiten und Stromverbrauch im selben Test", text: "13 Minuten bis gut eine Stunde, Reiskocher im Schnitt 121 Wattstunden, Topf mit Deckel 91, Topf mit sprudelndem Wasser rund 270, für den Rechner" },
+      { name: "ETM Testmagazin (Heft 1/2024)", text: "Yum Asia Bamboo Testsieger, sehr gut, beim Warmhalten mit Luft nach oben" },
+      { name: "Bundesinstitut für Risikobewertung: Fragen und Antworten zu Lebensmittelinfektionen im Privathaushalt (August 2024)", url: "https://www.bfr.bund.de/fragen-und-antworten/thema/lebensmittelinfektionen-im-privathaushalt-quellen-erkennen-risiken-vermeiden/", text: "warme Speisen an allen Stellen auf mindestens 60 °C halten, sonst innerhalb weniger Stunden auf unter 7 °C abkühlen" },
+      { name: "Verbraucherzentrale und ÖKO-TEST", text: "gekochten Reis nicht lauwarm stehen lassen, rasch im Kühlschrank abkühlen und innerhalb eines Tages essen" },
+      { name: "ALDI SÜD (Pressemitteilung Januar 2026) und supermarktcheck.de", text: "Reis im Kochbeutel kostet bei Eigenmarken kaum mehr als loser Reis, für den Rechner" },
+      { name: "BDEW (Bundesverband der Energie- und Wasserwirtschaft): Strompreisanalyse August 2026", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 Cent pro kWh, für die rund 5 Cent mehr Strom beim Kochbeutel im Rechner" },
+      { name: "Herstellerangaben und Anleitungen", text: "Programme, Timer, Dämpfeinsatz, Größe und Pflege der Geräte, Garzeit des Yum Asia Tsuki Mini" }
     ],
     rechner: "reiskocher",
     video: "reiskocher"
@@ -1447,6 +1457,19 @@ const PRODUKTE = [
       { f: "Welche Bohnen passen?", a: "Espresso- oder Crema-Bohnen, je nachdem, was dir schmeckt. Nimm keine karamellisierten oder aromatisierten Bohnen: Laut De'Longhi können sie das Mahlwerk verkleben. Auch sehr ölige Bohnen sind nichts: Laut Siemens rutschen sie nicht richtig ins Mahlwerk." },
       { f: "Warum sind alle Geräte mit Karaffe von De'Longhi?", a: "Weil sie bei Stiftung Warentest in ihrer Preisklasse am besten abschnitten: Die Magnifica Start ist eines der günstigsten guten Geräte, die Magnifica Evo Next landete 2025 knapp hinter den Testsiegern, und die Eletta Explore ist aktueller Testsieger. Auch Philips baut mit LatteGo eine Karaffe, die du ansteckst und ganz ohne Schlauch schnell abspülst. Beim getesteten Philips 5500 schmeckten Espresso und Cappuccino im Test 2024 aber nur mittelmäßig." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: Kaffeevollautomaten im Test (Juli 2026)", text: "Testsieger De'Longhi Eletta Explore und Eletta Ultra (gut), dazu Milchsystem, Maße und herausnehmbare Brühgruppe der Geräte" },
+      { name: "Stiftung Warentest: Kaffeevollautomaten im Test (Juni 2025)", text: "Nivona NICR 790 einer der beiden Testsieger (Note 2,0), knapp dahinter die Magnifica Evo Next (Note 2,1) mit sehr feinem Milchschaum, Melitta Latticia OT und Siemens EQ500 TP516DX3 je Note 2,3" },
+      { name: "Stiftung Warentest: Kaffeevollautomaten im Test (Herbst 2024)", text: "Testsieger De'Longhi Rivelia (Note 2,1), Magnifica Start gut (Note 2,3) mit vier Getränken auf Knopfdruck, beim Philips 5500 Espresso und Cappuccino nur mittelmäßig" },
+      { name: "Konsument (Verein für Konsumenteninformation, Österreich), Heft 1/2025", text: "Kaffeevollautomaten im Test: De'Longhi Rivelia auf Platz 1, beim Philips 5500 Espresso und Cappuccino nur durchschnittlich" },
+      { name: "Stiftung Warentest: „Kaffeevollautomaten: So entkalken Sie umweltfreundlich“ (Juni 2025)", text: "Sulfamidsäure gilt als schädlich für Wasserorganismen, Entkalker mit Milch- oder Zitronensäure sind unkritisch" },
+      { name: "Verbraucherzentrale NRW: „Umweltbewusst entkalken“ (Juli 2026)", url: "https://www.verbraucherzentrale.nrw/wissen/umwelt-haushalt/nachhaltigkeit/umweltbewusst-entkalken-105079", text: "Sulfamidsäure schädigt Wasserorganismen, für Kaffeevollautomaten gibt es Entkalker auf Basis von Milchsäure" },
+      { name: "Stiftung Warentest: Kaffeekapseln im Test (Heft 9/2025)", text: "Testsieger Edeka Gut & Günstig für 19 Cent pro Kapsel, Lidl für 17 Cent, für den Rechner" },
+      { name: "Stiftung Warentest: Pressemitteilung vom 23. November 2023 (Heft 12/2023)", text: "Filterkaffee lohnt sich schon wegen der günstigen Maschine, ein Vollautomat erst bei viel Kaffee: mit Gerätepreis im Schnitt 39 Cent pro Tasse für Wenigtrinker und 19 Cent für Vieltrinker" },
+      { name: "Coffee Friend (Kaffeehändler): Cappuccino-Preise in zehn deutschen Großstädten (Juni 2026)", text: "im Schnitt 3,80 Euro, für den Rechner" },
+      { name: "kaffeebewertung.de, vollebohne.de, reparaturoderneu.de und kostenlupe.de (2026)", text: "Preise für Kapseln, Bohnen, Entkalker, Reiniger und Wasserfilter, für den Rechner" },
+      { name: "Herstellerangaben und Anleitungen", text: "Getränke, Milchsystem, Reinigung, Entkalken und geeignete Bohnen laut De'Longhi, Melitta, Siemens und Nivona" }
+    ],
     profitipp: {
       titel: "Stell den Mahlgrad ein",
       text: "Wie fein die Bohnen gemahlen werden, ändert den Geschmack deutlich. Probier es einfach aus, es kostet dich nichts:",
@@ -1494,7 +1517,7 @@ const PRODUKTE = [
           "5 Automatikprogramme, dazu stellst du Zeit, Tempo und Hitze selbst ein"
         ],
         fuer: "Zum Einstieg, wenn du vor allem Suppen, Soßen und Teig machst.",
-        hinweis: "Sie wird nur 120 Grad heiß, scharf anbraten geht damit nicht. Schritt-für-Schritt-Rezepte am Gerät hat sie nicht, nur ein Kochbuch. Das lag bei diesem Angebot laut mehreren Käuferbewertungen nur auf Italienisch oder Französisch bei. Der Topf fasst 3,6 Liter, zum Kochen nutzt du laut Hersteller 2 Liter.",
+        hinweis: "Sie wird nur 120 Grad heiß, scharf anbraten geht damit nicht. Schritt-für-Schritt-Rezepte am Gerät hat sie nicht, nur ein Kochbuch. Das lag bei diesem Angebot laut t-online (2021) nur auf Italienisch bei. Der Topf fasst 3,6 Liter, zum Kochen nutzt du laut Hersteller 2 Liter.",
         link: amazon("moulinex clickchef hf4568")
       },
       {
@@ -1532,6 +1555,14 @@ const PRODUKTE = [
       { f: "Werden Zwiebeln zu Brei?", a: "Leicht, ja. Beim Zwiebelhacken patzten bei Stiftung Warentest fast alle Geräte (Heft 1/2024). Am besten zerkleinerst du Zwiebeln mit wenigen kurzen Stößen der Impuls- oder Turbotaste und schaust zwischendurch nach." },
       { f: "Brauche ich ein Abo für Rezepte?", a: "Für den Companion XL nicht: Die Rezepte stehen in der kostenlosen Moulinex-App. Beim ClickChef sind sie im Kochbuch, und die WMF bringt laut Hersteller gut 300 Rezepte auf dem Gerät mit. Beim Thermomix brauchst du für die meisten Rezepte das Cookidoo-Abo, ohne Abo hast du laut Vorwerk rund 200 Rezepte auf dem Gerät." },
       { f: "Wie viel Zeit spart sie wirklich?", a: "Ehrlich gesagt hat das kein Test gemessen. Schneller kocht die Maschine nicht unbedingt. Sie spart dir aber das Danebenstehen und Rühren, und Zwiebeln und Gemüse musst du nicht von Hand schneiden. In der Zeit deckst du den Tisch, räumst auf oder setzt dich einfach hin. Wie viel das bei dir ausmacht, zeigt dir der Rechner." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Küchenmaschinen mit Kochfunktion im Test (Heft 1/2024)", text: "Testsieger Bosch Cookit (Note 2,0), Monsieur Cuisine Smart befriedigend (Note 2,8), Moulinex ClickChef Preis-Leistungs-Tipp (befriedigend, Note 2,9), beim Zwiebelhacken patzten fast alle, Röstaromen erst ab 140 Grad" },
+      { name: "Stiftung Warentest: Küchenmaschinen mit Kochfunktion im Test, ergänzt in Heft 2/2026", text: "Thermomix TM7 und WMF Avantgarde gut" },
+      { name: "Test-Achats (Belgien): Moulinex Companion XL gegen Thermomix TM7 (Juli 2026)", text: "insgesamt etwa gleich gut, der Companion XL nur mittelmäßig leicht zu reinigen, Rezepte ohne Abo, dazu der Monsieur Cuisine Smart als Preis-Leistungs-Tipp" },
+      { name: "CHIP: Test WMF Avantgarde (Mai 2025)", text: "gut (Note 1,9), beim Kochen Luft nach oben, kleine Rezeptauswahl" },
+      { name: "t-online (Dezember 2021)", text: "beim ClickChef-Angebot lag ein Kochbuch auf Italienisch bei" },
+      { name: "Herstellerangaben", text: "Programme, Waage, Temperatur, Topfgröße und Rezepte der Geräte, Vertrieb und Cookidoo-Abo laut Vorwerk" }
     ],
     rechner: "kochfunktion",
     video: "kuechenmaschine-kochfunktion"
@@ -1607,6 +1638,12 @@ const PRODUKTE = [
       { f: "Kann sie auch Gemüse schneiden?", a: "Ja, mit einem Durchlaufschnitzler. Er raspelt Gemüse oder schneidet es in Scheiben, zum Beispiel Karotten, Gurken oder Kartoffeln. Bei der Serie 4 und der Serie 6 ist er dabei, bei der Serie 2 nicht. Für Nüsse oder Kräuter brauchst du bei allen einen eigenen Zerkleinerer-Aufsatz." },
       { f: "Was kann eine Küchenmaschine mit Kochfunktion mehr?", a: "Sie heizt beim Rühren, darin kochst du Suppen, Soßen oder Risotto. Zum Backen reicht die Maschine hier, und ihre Schüssel ist größer: 3,8 bis 5,5 Liter statt etwa 2 bis 3 Liter nutzbar. Wenn du auch kochen willst, schau dir die Seite „Küchenmaschine mit Kochfunktion“ an." },
       { f: "Wie viel Zeit spart sie wirklich?", a: "Ehrlich gesagt hat das kein Test gemessen. Der Teig ist mit der Maschine nur wenig schneller fertig: Von Hand knetest du ihn mindestens 8 Minuten, mit der Maschine mindestens 5. Der große Unterschied ist, dass du nicht dabei sein musst. Wie viel das bei dir ausmacht, zeigt dir der Rechner." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Küchenmaschinen im Test (Heft 12/2025)", text: "Testsiegerin Bosch Serie 6 MUMS6ZS13D (Note 2,4), Serie 4 MUM58W20 gut und Preis-Leistungs-Sieger (Note 2,5), KitchenAid Artisan befriedigend (Note 2,7), aber sehr haltbar, für fast alle Schwenkarm-Maschinen Aufsätze zum Pürieren und Zerkleinern dazugekauft, manche mühsam zu reinigen, Quetschgefahr am Scharnier" },
+      { name: "REWE: „7 Fehler beim Hefeteig“", text: "von Hand mindestens 8 Minuten kneten, mit der Küchenmaschine mindestens 5, für die Frage zum Handmixer und den Rechner" },
+      { name: "Landratsamt Göppingen, Landwirtschaftsamt: Merkblatt „Salziger Hefeteig“", url: "https://www.landkreis-goeppingen.de/site/LRA-GP-Internet-2024/get/params_E602328038/22300062/Sa_Merkblatt%20salziger%20Hefeteig.pdf", text: "dieselben Knetzeiten, von Hand mindestens 8 Minuten, mit der Küchenmaschine mindestens 5" },
+      { name: "Herstellerangaben", text: "Schüsselgröße, Teigmengen, Gewicht, Zubehör und spülmaschinenfeste Teile der Bosch-Modelle" }
     ],
     rechner: "kneten",
     video: "kuechenmaschine"
@@ -2098,6 +2135,15 @@ const PRODUKTE = [
       { f: "Wie oft wechsle ich den Bürstenkopf?", a: "Etwa alle drei Monate, oder früher, wenn die Borsten auseinanderstehen. Manche Modelle erinnern dich daran." },
       { f: "Wie putze ich richtig?", a: "Zweimal am Tag zwei Minuten. Du hältst den Kopf leicht an die Zähne und führst ihn langsam von Zahn zu Zahn. Schrubben musst du nicht, das macht die Bürste." },
       { f: "Brauche ich die App?", a: "Nein. Bei der Laifen Wave Pro stellst du in der App ein, wie sie putzt, und siehst eine Auswertung deiner Putzzeiten. Putzen kannst du auch ganz ohne Handy." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: Elektrische Zahnbürsten im Test (Heft 12/2025)", text: "Testsieger Philips Sonicare 5500 (Note 1,7), Sonicare 7100 (Note 1,8), weder Schall noch rotierender Kopf mit klaren Vorteilen beim Putzen" },
+      { name: "Stiftung Warentest: Elektrische Zahnbürsten im Test (Heft 12/2024)", text: "Testsieger Oral-B iO Series 3N (Note 1,9), Laifen Wave und die Vorgängerversion der Philips Sonicare 3100 je gut (Note 2,2)" },
+      { name: "Stiftung Warentest: Elektrische Zahnbürsten im Test (Heft 12/2021)", text: "Testsieger Philips Sonicare Prestige 9900 (Note 1,8)" },
+      { name: "Cochrane: Elektrische Zahnbürsten im Vergleich mit Handzahnbürsten zur Erhaltung der Mundgesundheit (Juni 2014)", url: "https://www.cochrane.org/de/evidence/CD002281_poweredelectric-toothbrushes-compared-manual-toothbrushes-maintaining-oral-health", text: "56 Studien, davon 51 in der gemeinsamen Auswertung, nach über drei Monaten im Schnitt 21 % weniger Zahnbelag und 11 % weniger Zahnfleischentzündung" },
+      { name: "Weitere Übersichtsarbeiten (2020 und 2022) und die SHIP-Studie aus Greifswald (2019)", text: "elektrisch entfernt etwas mehr Belag als von Hand, pro Putzen ist der Unterschied klein, aber gesichert, und über elf Jahre gingen weniger Zähne verloren" },
+      { name: "Weitere Tests der Laifen Wave Pro (2026)", text: "unter anderem von Live Science, digitalreviews.net, smartworld.it, smartzone.de und Expert Reviews, zu Drucksensor, Putzmodi und Akkulaufzeit" },
+      { name: "Herstellerangaben und Anleitungen", text: "Putzmodi, Timer, Drucksensor und Akkulaufzeit der Modelle, richtiges Putzen und Bürstenkopfwechsel laut Philips und Oral-B" }
     ],
     video: "zahnbuerste",
     preisstand: "Oktober 2026"

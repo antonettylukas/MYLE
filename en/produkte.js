@@ -1083,9 +1083,19 @@ const PRODUKTE = [
       { f: "How much water do I add?", a: "Lines inside the pot show you. You measure the rice with the cup that comes with it and pour in water up to the matching line. Stick to that and it's right almost every time." },
       { f: "Do I have to wash the rice first?", a: "Yes, a quick rinse is worth it: then it sticks less and is less likely to boil over. Tip it into a sieve and rinse it with cold water until the water is almost clear." },
       { f: "Can I cook vegetables or fish in it too?", a: "Yes, if your appliance has a steamer basket. Almost all do, the Tsuki Mini doesn't. It goes on top of the pot, and on many cookers vegetables or fish steam in it while the rice cooks below. Whether the vegetables stay crisp depends on the cooker: at Stiftung Warentest, only six cookers managed crisp green broccoli (issue 5/2026)." },
-      { f: "How long can the rice stay warm?", a: "Not too long. Germany's Federal Institute for Risk Assessment advises eating food that is kept warm no later than three hours after cooking, and it should stay above 65 degrees. Put leftovers in the fridge quickly and eat them within a day. Cooked rice shouldn't sit around lukewarm, or germs can grow." },
+      { f: "How long can the rice stay warm?", a: "It depends on the temperature. Germany's Federal Institute for Risk Assessment advises keeping warm food at 60 degrees or more all the way through. Cooked rice shouldn't sit around lukewarm, or germs can grow. Put leftovers in the fridge quickly and eat them within a day." },
       { f: "Is the coating safe?", a: "On most cookers, yes. But Stiftung Warentest found that much more aluminium leaches out of the coating on two rice cookers from Reishunger than on the other cookers, even though the limit is met (issue 5/2026). So I don't recommend those. Whatever the cooker: no metal spoons and no scouring pads, so that the coating lasts a long time." },
       { f: "Does rice from a rice cooker taste better?", a: "It depends on the cooker. A rice cooker controls the heat itself and switches to keep-warm as soon as the water has been absorbed. But not every cooker does this well: at Stiftung Warentest only 6 of 13 rice cookers cooked rice well, including the two test winners (issue 5/2026). Nothing burned on in any of them." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: rice cookers test (issue 5/2026)", text: "test winners Panasonic SR-DA152 and Rommelsbacher MRK 650 (grade 2.2 each), Cosori good, only 6 of 13 cookers cooked the rice well, nothing burned on in any of them, only six managed crisp broccoli, more aluminium from the coating with Reishunger" },
+      { name: "Stiftung Warentest: cooking times and electricity use in the same test", text: "13 minutes to a good hour, rice cookers on average 121 watt-hours, pot with a lid 91, pot of bubbling water around 270, for the calculator" },
+      { name: "ETM Testmagazin (German test magazine), issue 1/2024", text: "Yum Asia Bamboo test winner, very good, room for improvement in keeping warm" },
+      { name: "German Federal Institute for Risk Assessment (BfR): questions and answers on foodborne infections in private households (August 2024)", url: "https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/foodborne-infections-in-private-households-identifying-sources-and-avoiding-risks/", text: "keep hot food at 60 °C or more all the way through, otherwise cool it to below 7 °C within a few hours" },
+      { name: "German consumer advice centres (Verbraucherzentrale) and ÖKO-TEST", text: "do not leave cooked rice standing lukewarm, cool it quickly in the fridge and eat it within a day" },
+      { name: "ALDI SÜD (German discount supermarket, press release January 2026) and supermarktcheck.de", text: "rice in boil-in bags from own brands costs hardly more than loose rice, for the calculator" },
+      { name: "German Association of Energy and Water Industries (BDEW): electricity price analysis (August 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 cents per kWh, for the around 5 cents of extra electricity for boil-in bags in the calculator (in German)" },
+      { name: "Manufacturer information and manuals", text: "programmes, timer, steamer basket, size and care of the cookers, cooking time of the Yum Asia Tsuki Mini" }
     ],
     rechner: "reiskocher",
     video: "reiskocher"
@@ -1187,6 +1197,19 @@ const PRODUKTE = [
       { f: "Which beans work?", a: "Espresso or crema beans, whichever you like. Don't use caramelised or flavoured beans: according to De'Longhi, they can clog the grinder. Very oily beans are no good either: according to Siemens, they don't slide into the grinder properly." },
       { f: "Why are all the machines with a carafe from De'Longhi?", a: "Because they did best in their price range at Stiftung Warentest: the Magnifica Start is one of the cheapest good machines, the Magnifica Evo Next came in just behind the test winners in 2025, and the Eletta Explore is the current test winner. Philips also makes a carafe, LatteGo, which you clip on and rinse quickly without any tube. But on the Philips 5500 that was tested, espresso and cappuccino only tasted average in the 2024 test." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: bean-to-cup machines test (July 2026)", text: "test winners De'Longhi Eletta Explore and Eletta Ultra (good), plus milk system, dimensions and removable brewing unit of the machines" },
+      { name: "Stiftung Warentest: bean-to-cup machines test (June 2025)", text: "Nivona NICR 790 one of the two test winners (grade 2.0), just behind them the Magnifica Evo Next (grade 2.1) with very fine milk foam, Melitta Latticia OT at grade 2.3" },
+      { name: "Stiftung Warentest: bean-to-cup machines test (autumn 2024)", text: "test winner De'Longhi Rivelia (grade 2.1), Magnifica Start good (grade 2.3) with four drinks at the push of a button, espresso and cappuccino from the Philips 5500 only mediocre" },
+      { name: "Konsument (Austrian consumer magazine, VKI), issue 1/2025", text: "bean-to-cup machines test: De'Longhi Rivelia in first place, espresso and cappuccino from the Philips 5500 only average" },
+      { name: "Stiftung Warentest: how to descale bean-to-cup machines in an environmentally friendly way (June 2025)", text: "sulfamic acid is considered harmful to aquatic life, descalers with lactic or citric acid are unproblematic" },
+      { name: "Verbraucherzentrale NRW (consumer advice centre): environmentally friendly descaling (July 2026)", url: "https://www.verbraucherzentrale.nrw/wissen/umwelt-haushalt/nachhaltigkeit/umweltbewusst-entkalken-105079", text: "sulfamic acid harms aquatic life, for bean-to-cup machines there are descalers based on lactic acid (in German)" },
+      { name: "Stiftung Warentest: coffee capsules test (issue 9/2025)", text: "test winner Edeka Gut & Günstig at 19 cents per capsule, Lidl at 17 cents, for the calculator" },
+      { name: "Stiftung Warentest: press release of 23 November 2023 (issue 12/2023)", text: "filter coffee pays off partly because the machine is cheap, a bean-to-cup machine only if a lot of coffee is drunk: including the machine price, on average 39 cents per cup for light drinkers and 19 cents for heavy drinkers" },
+      { name: "Coffee Friend (coffee retailer): cappuccino prices in ten large German cities (June 2026)", text: "an average of 3.80 euros, for the calculator" },
+      { name: "kaffeebewertung.de, vollebohne.de, reparaturoderneu.de and kostenlupe.de (2026)", text: "prices for capsules, beans, descaler, cleaner and water filters, for the calculator" },
+      { name: "Manufacturer information and manuals", text: "drinks, milk system, cleaning, descaling and suitable beans according to De'Longhi, Melitta and Siemens" }
+    ],
     profitipp: {
       titel: "Set the grind",
       text: "How finely the beans are ground changes the taste a lot. Just try it out, it costs you nothing:",
@@ -1276,6 +1299,13 @@ const PRODUKTE = [
       { f: "Do I need a subscription for recipes?", a: "Not for the Companion XL: the recipes are in the free Moulinex app. For the ClickChef they are in the cookbook, and according to the manufacturer the WMF comes with just over 300 recipes on the machine. With the Thermomix you need the Cookidoo subscription for most recipes; without it, according to Vorwerk, you have around 200 recipes on the machine." },
       { f: "How much time does it really save?", a: "Honestly, no test has measured that. The machine doesn't necessarily cook faster. But it saves you standing next to the pan and stirring, and you don't have to chop onions and vegetables by hand. In that time you can set the table, tidy up or simply sit down. The calculator shows how much that adds up to for you." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: food processors with cooking function test (issue 1/2024)", text: "test winner Bosch Cookit (grade 2.0), Monsieur Cuisine Smart satisfactory (grade 2.8), Moulinex ClickChef best value tip (satisfactory, grade 2.9), almost all slipped up when chopping onions, roasted flavours only from 140 degrees" },
+      { name: "Stiftung Warentest: food processors with cooking function test, updated in issue 2/2026", text: "Thermomix TM7 and WMF Avantgarde good" },
+      { name: "Test-Achats (Belgium): Moulinex Companion XL against Thermomix TM7 (July 2026)", text: "about as good overall, the Companion XL only moderately easy to clean, recipes without a subscription, plus the Monsieur Cuisine Smart as a best value tip" },
+      { name: "CHIP (German tech magazine): WMF Avantgarde review (May 2025)", text: "good (grade 1.9), room for improvement in cooking, small choice of recipes" },
+      { name: "Manufacturer information", text: "programmes, scales, temperature, bowl size and recipes of the machines, sales and Cookidoo subscription according to Vorwerk" }
+    ],
     rechner: "kochfunktion",
     video: "kuechenmaschine-kochfunktion"
   },
@@ -1329,6 +1359,12 @@ const PRODUKTE = [
       { f: "Can it slice vegetables too?", a: "Yes, with a continuous slicer. It grates vegetables or cuts them into slices, for example carrots, cucumbers or potatoes. The Serie 6 here doesn't come with one. For nuts or herbs you need a separate chopper attachment." },
       { f: "What more can a food processor with cooking function do?", a: "It heats while it stirs, so you can cook soups, sauces or risotto in it. For baking the machine here is enough, and its bowl is bigger: 5.5 litres instead of about 2 to 3 litres usable. If you want to cook as well, take a look at the page “Food processor with cooking function”." },
       { f: "How much time does it really save?", a: "Honestly, no test has measured that. The dough is only a little quicker with the machine: by hand you knead it for at least 8 minutes, with the machine for at least 5. The big difference is that you don't have to be there. The calculator shows how much that adds up to for you." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: stand mixers test (issue 12/2025)", text: "test winner Bosch Serie 6 MUMS6ZS13D (grade 2.4), Serie 4 MUM58W20 good and best value (grade 2.5), KitchenAid Artisan satisfactory (grade 2.7) but very durable, extra attachments bought for blending and chopping for almost all tilt-head machines, some tedious to clean, fingers can get trapped in the hinge" },
+      { name: "REWE (German supermarket chain): 7 mistakes with yeast dough", text: "knead by hand for at least 8 minutes, with a stand mixer for at least 5, for the question about the hand mixer and the calculator" },
+      { name: "District Office of Göppingen, Agriculture Office: leaflet on savoury yeast dough", url: "https://www.landkreis-goeppingen.de/site/LRA-GP-Internet-2024/get/params_E602328038/22300062/Sa_Merkblatt%20salziger%20Hefeteig.pdf", text: "the same kneading times, at least 8 minutes by hand, at least 5 with a stand mixer (in German)" },
+      { name: "Manufacturer information", text: "bowl size, dough quantities, weight, accessories and dishwasher-safe parts of the Bosch models" }
     ],
     rechner: "kneten",
     video: "kuechenmaschine"
@@ -1819,6 +1855,15 @@ const PRODUKTE = [
       { f: "How often do I change the brush head?", a: "About every three months, or sooner if the bristles splay. Some models remind you." },
       { f: "How do I brush properly?", a: "Twice a day for two minutes. You hold the head lightly against your teeth and move it slowly from tooth to tooth. You don't need to scrub, the brush does that." },
       { f: "Do I need the app?", a: "No. On the Laifen Wave Pro the app lets you set how it brushes and shows you a report of your brushing times. You can brush without a phone at all." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: electric toothbrushes test (issue 12/2025)", text: "test winner Philips Sonicare 5500 (grade 1.7), Sonicare 7100 (grade 1.8), neither sonic nor rotating heads with a clear advantage when brushing" },
+      { name: "Stiftung Warentest: electric toothbrushes test (issue 12/2024)", text: "test winner Oral-B iO Series 3N (grade 1.9), Laifen Wave and the previous version of the Philips Sonicare 3100 both good (grade 2.2), Silk'n SonicSmile Plus best buy (grade 2.3)" },
+      { name: "Stiftung Warentest: electric toothbrushes test (issue 12/2021)", text: "test winner Philips Sonicare Prestige 9900 (grade 1.8)" },
+      { name: "Cochrane: powered/electric toothbrushes compared to manual toothbrushes for maintaining oral health (June 2014)", url: "https://www.cochrane.org/evidence/CD002281_poweredelectric-toothbrushes-compared-manual-toothbrushes-maintaining-oral-health", text: "56 trials, 51 of them in the meta-analysis, after more than three months on average 21% less plaque and 11% less gum inflammation" },
+      { name: "Further reviews (2020 and 2022) and the SHIP study from Greifswald (2019)", text: "electric brushing removes a little more plaque than manual brushing, the difference per brushing is small but well established, and over eleven years fewer teeth were lost" },
+      { name: "Other reviews of the Laifen Wave Pro (2026)", text: "including Live Science, digitalreviews.net, smartworld.it, smartzone.de and Expert Reviews, on pressure sensor, brushing modes and battery life" },
+      { name: "Manufacturer information and manuals", text: "brushing modes, timer, pressure sensor and battery life of the models, correct brushing and changing the brush head according to Philips and Oral-B" }
     ],
     video: "zahnbuerste",
     preisstand: "Oktober 2026"

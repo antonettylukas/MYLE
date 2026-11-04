@@ -1163,9 +1163,18 @@ const PRODUKTE = [
       { f: "Quanta acqua ci va?", a: "Te lo indicano le tacche dentro la pentola. Metti il riso con il misurino in dotazione e versi l’acqua fino alla tacca giusta. Se ti attieni a questo, viene giusto quasi sempre." },
       { f: "Devo lavare il riso prima?", a: "Sì, sciacquarlo un attimo conviene: così si attacca meno e trabocca meno facilmente. Versalo in un colino e sciacqualo con acqua fredda finché l’acqua è quasi limpida." },
       { f: "Posso cuocerci anche verdure o pesce?", a: "Sì, se il tuo apparecchio ha un cestello per il vapore. Quasi tutti ce l’hanno. Va sopra la pentola, e in molti apparecchi ci cuociono al vapore verdure o pesce mentre sotto cuoce il riso. Se le verdure restano croccanti dipende dall’apparecchio: nel test di Stiftung Warentest solo sei apparecchi hanno dato broccoli verdi e croccanti (numero 5/2026)." },
-      { f: "Per quanto tempo il riso può restare in caldo?", a: "Non troppo. L’Istituto federale tedesco per la valutazione dei rischi consiglia di mangiare il cibo tenuto in caldo al massimo tre ore dopo la cottura, e nel frattempo deve restare sopra i 65 gradi. Metti subito gli avanzi in frigo e mangiali entro un giorno. Il riso cotto non dovrebbe restare tiepido in giro, altrimenti possono formarsi germi." },
+      { f: "Per quanto tempo il riso può restare in caldo?", a: "Dipende dalla temperatura. L’Istituto federale tedesco per la valutazione dei rischi consiglia di tenere il cibo in caldo ad almeno 60 gradi in ogni punto. Il riso cotto non dovrebbe restare tiepido in giro, altrimenti possono formarsi germi. Metti subito gli avanzi in frigo e mangiali entro un giorno." },
       { f: "Il rivestimento è sicuro?", a: "Nella maggior parte degli apparecchi sì. Però Stiftung Warentest ha rilevato che in due cuociriso di Reishunger dal rivestimento si stacca molto più alluminio che negli altri apparecchi, anche se il limite viene rispettato (numero 5/2026). Per questo non consiglio questi apparecchi. Con qualsiasi apparecchio: niente cucchiai di metallo e niente spugne abrasive, perché il rivestimento duri a lungo." },
       { f: "Il riso del cuociriso è più buono?", a: "Dipende dall’apparecchio. Un cuociriso regola da solo il calore e passa al mantenimento in caldo appena l’acqua è assorbita. Ma non tutti lo fanno bene: nel test di Stiftung Warentest solo 6 cuociriso su 13 hanno cotto bene il riso, tra cui i due vincitori del test (numero 5/2026). In nessuno il riso si è attaccato." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test dei cuociriso (numero 5/2026)", text: "Panasonic SR-DA152 e Rommelsbacher MRK 650 vincitori (voto 2,2 ciascuno), Cosori buono, solo 6 apparecchi su 13 hanno cotto bene il riso, in nessuno si è attaccato, broccoli croccanti solo in sei, più alluminio dal rivestimento con Reishunger" },
+      { name: "Stiftung Warentest: tempi di cottura e consumo di corrente nello stesso test", text: "da 13 minuti a più di un’ora, cuociriso in media 121 wattora, pentola con coperchio 91, pentola d’acqua che bolle circa 270, per il calcolatore" },
+      { name: "Istituto federale tedesco per la valutazione dei rischi (BfR): domande e risposte sulle infezioni alimentari in casa (agosto 2024)", url: "https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/foodborne-infections-in-private-households-identifying-sources-and-avoiding-risks/", text: "tenere i cibi caldi ad almeno 60 °C in ogni punto, altrimenti raffreddarli sotto i 7 °C entro poche ore (in inglese)" },
+      { name: "Centrali dei consumatori tedesche (Verbraucherzentrale) e ÖKO-TEST", text: "non lasciare il riso cotto tiepido, raffreddarlo presto in frigo e mangiarlo entro un giorno" },
+      { name: "ALDI SÜD, discount tedesco (comunicato di gennaio 2026), e supermarktcheck.de", text: "il riso in sacchetti delle marche del supermercato costa poco più del riso sfuso, per il calcolatore" },
+      { name: "Associazione tedesca dell’energia e dell’acqua (BDEW): analisi dei prezzi della corrente (agosto 2026)", url: "https://www.bdew.de/media/documents/BDEW_Strompreisanalyse_082026.pdf", text: "37 centesimi al kWh, per i circa 5 centesimi di corrente in più con i sacchetti nel calcolatore (in tedesco)" },
+      { name: "Dati dei produttori e istruzioni", text: "programmi, timer, cestello per il vapore, dimensioni e cura degli apparecchi, pentola in ceramica senza PFAS del Panasonic" }
     ],
     rechner: "reiskocher",
     video: "reiskocher"
@@ -1269,6 +1278,19 @@ const PRODUKTE = [
       { f: "Quali chicchi vanno bene?", a: "Chicchi per espresso o crema, come preferisci. Non usare chicchi caramellati o aromatizzati: secondo De'Longhi possono incollare il macinino. Anche i chicchi molto oleosi non vanno bene: secondo Siemens non scendono bene nel macinino." },
       { f: "Perché tutti gli apparecchi con caraffa sono De'Longhi?", a: "Perché da Stiftung Warentest sono andati meglio nella loro fascia di prezzo: la Magnifica Start è uno degli apparecchi buoni più economici, la Magnifica Evo Next nel 2025 è arrivata subito dietro i vincitori e la Eletta Explore è l’attuale vincitrice del test. Anche Philips fa una caraffa, LatteGo, che agganci e sciacqui in fretta, senza nessun tubo. Ma con la Philips 5500 testata, nel test del 2024 espresso e cappuccino avevano un sapore solo nella media." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: test delle macchine da caffè automatiche (luglio 2026)", text: "De'Longhi Eletta Explore ed Eletta Ultra vincitrici (buono), inoltre sistema del latte, dimensioni e gruppo infusore estraibile degli apparecchi" },
+      { name: "Stiftung Warentest: test delle macchine da caffè automatiche (giugno 2025)", text: "Nivona NICR 790 una delle due vincitrici (voto 2,0), subito dietro la Magnifica Evo Next (voto 2,1) con schiuma di latte molto fine, Siemens EQ500 TP516DX3 buona (voto 2,3)" },
+      { name: "Stiftung Warentest: test delle macchine da caffè automatiche (autunno 2024)", text: "De'Longhi Rivelia vincitrice (voto 2,1), Magnifica Start buona (voto 2,3) con quattro bevande premendo un tasto, con la Philips 5500 espresso e cappuccino solo mediocri" },
+      { name: "Konsument, rivista austriaca dei consumatori (VKI), numero 1/2025", text: "test delle macchine da caffè automatiche: De'Longhi Rivelia al primo posto, con la Philips 5500 espresso e cappuccino solo nella media" },
+      { name: "Stiftung Warentest: decalcificare la macchina automatica in modo ecologico (giugno 2025)", text: "l’acido solfammico è considerato dannoso per gli organismi acquatici, i decalcificanti con acido lattico o citrico non creano problemi" },
+      { name: "Verbraucherzentrale NRW, centrale dei consumatori tedesca: decalcificare in modo ecologico (luglio 2026)", url: "https://www.verbraucherzentrale.nrw/wissen/umwelt-haushalt/nachhaltigkeit/umweltbewusst-entkalken-105079", text: "l’acido solfammico danneggia gli organismi acquatici, per le macchine automatiche ci sono decalcificanti a base di acido lattico (in tedesco)" },
+      { name: "Stiftung Warentest: test delle capsule di caffè (numero 9/2025)", text: "Edeka Gut & Günstig vincitrice a 19 centesimi a capsula, Lidl a 17 centesimi, per il calcolatore" },
+      { name: "Stiftung Warentest: comunicato del 23 novembre 2023 (numero 12/2023)", text: "il caffè filtro conviene già per la macchina economica, una macchina automatica solo se si beve molto caffè: con il prezzo dell’apparecchio in media 39 centesimi a tazza per chi ne beve poco e 19 centesimi per chi ne beve molto" },
+      { name: "Coffee Friend (rivenditore di caffè): prezzi del cappuccino in dieci grandi città tedesche (giugno 2026)", text: "in media 3,80 euro, per il calcolatore" },
+      { name: "kaffeebewertung.de, vollebohne.de, reparaturoderneu.de e kostenlupe.de (2026)", text: "prezzi di capsule, chicchi, decalcificante, detergente e filtri dell’acqua, per il calcolatore" },
+      { name: "Dati dei produttori e istruzioni", text: "bevande, sistema del latte, pulizia, decalcificazione e chicchi adatti secondo De'Longhi, Siemens e Nivona" }
+    ],
     profitipp: {
       titel: "Regola la macinatura",
       text: "Quanto sono macinati fini i chicchi cambia molto il gusto. Prova e basta, non ti costa nulla:",
@@ -1342,6 +1364,12 @@ const PRODUKTE = [
       { f: "Mi serve un abbonamento per le ricette?", a: "Per il Companion XL no: le ricette sono nell’app Moulinex gratuita. Per il ClickChef sono nel ricettario. Con il Bimby per la maggior parte delle ricette ti serve l’abbonamento Cookidoo, senza abbonamento secondo Vorwerk hai circa 200 ricette sull’apparecchio." },
       { f: "Quanto tempo fa risparmiare davvero?", a: "Onestamente, nessun test l’ha misurato. Il robot non cucina per forza più in fretta. Però ti risparmia di stare accanto a mescolare, e cipolle e verdure non le devi tagliare a mano. In quel tempo apparecchi la tavola, metti in ordine o semplicemente ti siedi. Quanto conta per te lo mostra il calcolatore." }
     ],
+    quellen: [
+      { name: "Stiftung Warentest: test dei robot da cucina con cottura (numero 1/2024)", text: "Bosch Cookit vincitore (voto 2,0), Monsieur Cuisine Smart sufficiente (voto 2,8), Moulinex ClickChef consiglio qualità-prezzo (sufficiente, voto 2,9), quasi tutti hanno sbagliato a tritare le cipolle, aromi di tostatura solo da 140 gradi" },
+      { name: "Stiftung Warentest: test dei robot da cucina con cottura, integrato nel numero 2/2026", text: "Bimby TM7 buono" },
+      { name: "Test-Achats (Belgio): Moulinex Companion XL contro Bimby TM7 (luglio 2026)", text: "nel complesso più o meno ugualmente buoni, il Companion XL solo mediamente facile da pulire, ricette senza abbonamento, in più il Monsieur Cuisine Smart come consiglio qualità-prezzo" },
+      { name: "Dati dei produttori", text: "programmi, bilancia, temperatura, capacità del boccale e ricette degli apparecchi, vendita e abbonamento Cookidoo secondo Vorwerk" }
+    ],
     rechner: "kochfunktion",
     video: "kuechenmaschine-kochfunktion"
   },
@@ -1406,6 +1434,12 @@ const PRODUKTE = [
       { f: "Può anche tagliare le verdure?", a: "Sì, con un affettaverdure. Grattugia le verdure o le taglia a fette, per esempio carote, cetrioli o patate. È incluso con la Serie 4 di questa pagina, non con la Serie 2. Per noci o erbe ti serve per entrambe un accessorio tritatutto a parte." },
       { f: "Cosa fa in più un robot da cucina con cottura?", a: "Scalda mentre mescola, così ci cucini zuppe, sughi o risotti. Per i dolci basta la macchina di questa pagina, e la sua ciotola è più grande: 3,8 o 3,9 litri invece di circa 2 o 3 litri utili. Se vuoi anche cucinare, guarda la pagina “Robot da cucina con cottura”." },
       { f: "Quanto tempo fa risparmiare davvero?", a: "Onestamente, nessun test l’ha misurato. Con la macchina l’impasto è pronto solo un po’ prima: a mano lo lavori almeno 8 minuti, con la macchina almeno 5. La grande differenza è che non devi starci tu. Quanto conta per te lo mostra il calcolatore." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test delle impastatrici planetarie (numero 12/2025)", text: "Bosch Serie 6 MUMS6ZS13D vincitrice (voto 2,4), Serie 4 MUM58W20 buona e miglior rapporto qualità-prezzo (voto 2,5), KitchenAid Artisan sufficiente (voto 2,7) ma molto resistente, accessori comprati in più per frullare e tritare per quasi tutte le macchine a braccio ribaltabile, alcune faticose da pulire, rischio di schiacciarsi le dita nella cerniera" },
+      { name: "REWE, catena di supermercati tedesca: 7 errori con l’impasto lievitato", text: "impastare a mano almeno 8 minuti, con l’impastatrice almeno 5, per la domanda sullo sbattitore e per il calcolatore" },
+      { name: "Ufficio distrettuale di Göppingen, ufficio agricoltura: scheda sull’impasto lievitato salato", url: "https://www.landkreis-goeppingen.de/site/LRA-GP-Internet-2024/get/params_E602328038/22300062/Sa_Merkblatt%20salziger%20Hefeteig.pdf", text: "gli stessi tempi di impasto, almeno 8 minuti a mano, almeno 5 con l’impastatrice (in tedesco)" },
+      { name: "Dati dei produttori", text: "capacità della ciotola, quantità di impasto, peso, accessori e parti lavabili in lavastoviglie dei modelli Bosch" }
     ],
     rechner: "kneten",
     video: "kuechenmaschine"
@@ -1880,6 +1914,15 @@ const PRODUKTE = [
       { f: "Ogni quanto cambio la testina?", a: "Circa ogni tre mesi, o prima se le setole si aprono. Alcuni modelli te lo ricordano." },
       { f: "Come mi lavo i denti nel modo giusto?", a: "Due volte al giorno per due minuti. Tieni la testina leggermente contro i denti e la guidi piano da un dente all’altro. Non devi strofinare, lo fa lo spazzolino." },
       { f: "Mi serve l’app?", a: "No. Sul Laifen Wave Pro con l’app regoli come pulisce e vedi un resoconto dei tuoi tempi di pulizia. Puoi lavarti i denti anche senza telefono." }
+    ],
+    quellen: [
+      { name: "Stiftung Warentest: test degli spazzolini elettrici (numero 12/2025)", text: "Philips Sonicare 5500 vincitore (voto 1,7), Sonicare 7100 (voto 1,8), né il sonico né la testina rotante con vantaggi chiari nella pulizia" },
+      { name: "Stiftung Warentest: test degli spazzolini elettrici (numero 12/2024)", text: "Oral-B iO Series 3N vincitore (voto 1,9), Laifen Wave e la versione precedente del Philips Sonicare 3100 buoni (voto 2,2 ciascuno)" },
+      { name: "Stiftung Warentest: test degli spazzolini elettrici (numero 12/2021)", text: "Philips Sonicare Prestige 9900 vincitore (voto 1,8)" },
+      { name: "Cochrane: spazzolini elettrici a confronto con quelli manuali per la salute della bocca (giugno 2014)", url: "https://www.cochrane.org/evidence/CD002281_poweredelectric-toothbrushes-compared-manual-toothbrushes-maintaining-oral-health", text: "56 studi, di cui 51 nella meta-analisi, dopo più di tre mesi in media il 21 % di placca in meno e l’11 % di infiammazione gengivale in meno (in inglese)" },
+      { name: "Altre revisioni (2020 e 2022) e lo studio SHIP di Greifswald (2019)", text: "lo spazzolino elettrico rimuove un po’ più placca di quello manuale, per ogni lavaggio la differenza è piccola ma accertata, e in undici anni si sono persi meno denti" },
+      { name: "Altri test del Laifen Wave Pro (2026)", text: "tra cui Live Science, digitalreviews.net, smartworld.it, smartzone.de ed Expert Reviews, su sensore di pressione, modalità e autonomia della batteria" },
+      { name: "Dati dei produttori e istruzioni", text: "modalità, timer, sensore di pressione e autonomia dei modelli, come lavarsi i denti e cambio della testina secondo Philips e Oral-B" }
     ],
     video: "zahnbuerste",
     preisstand: "Oktober 2026"
