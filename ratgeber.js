@@ -306,7 +306,9 @@ const RATGEBER = [
       {
         titel: "Eine Bürste, um die sich Haare kaum wickeln",
         absaetze: [
-          "Um Bürsten mit Borsten wickeln sich Tierhaare schnell. Besser sind Hauptbürsten aus Gummi oder mit einem System gegen Verheddern. Lange Haare bleiben aber auch daran manchmal hängen.",
+          "Gummi statt Borsten hilft schon etwas. Entscheidend ist aber, wie die Hauptbürste gebaut und gelagert ist.",
+          "Dreame zum Beispiel setzt bei einigen Robotern zwei Walzen ein, die nur auf einer Seite befestigt sind, die andere Seite ist offen. Drehung und Luftstrom schieben die Haare zu diesem offenen Ende, und dort werden sie abgesaugt. In Tests verfing sich so selbst langes Haar kaum.",
+          "Ähnlich arbeiten andere Hersteller: Narwal hängt eine kegelförmige Bürste nur an einer Seite auf. Roborock teilt die Bürste in der Mitte, dort werden die Haare abgesaugt.",
           "Auf Hartboden putzen viele Roboter gut, auf Teppich zeigt sich der Unterschied. Wichtig für Tierhalter ist laut Stiftung Warentest das Urteil „Aufnehmen von Fasern“ auf Teppich. Dort reichen die Noten von gut bis mangelhaft."
         ]
       },
@@ -327,8 +329,7 @@ const RATGEBER = [
       {
         titel: "Napf, Katzenklo und Schlafplatz sperren",
         absaetze: [
-          "Leg in der App Sperrzonen um Futter- und Wassernapf, Katzenklo und Schlafplatz an. So lässt der Roboter die Näpfe stehen, und dein Tier hat Plätze, an denen es ungestört bleibt.",
-          "Am Katzenklo ist die Sperrzone doppelt sinnvoll: Klumpen und feuchte Streu gehören nicht in den Roboter."
+          "Leg in der App Sperrzonen um Futter- und Wassernapf, Katzenklo und Schlafplatz an. So lässt der Roboter die Näpfe stehen, und dein Tier hat Plätze, an denen es ungestört bleibt."
         ]
       },
       {
@@ -340,9 +341,9 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "Mit Tier öfter dran: die Bürste",
+        titel: "Ab und zu nachsehen: Bürste und Räder",
         absaetze: [
-          "Schau dir die Hauptbürste mit Tier etwa einmal pro Woche an und zieh aufgewickelte Haare ab. Manche Hersteller nennen alle zwei Wochen, mit haarendem Tier kann das zu selten sein. Auch an Seitenbürste und Rädern sammeln sich Haare."
+          "Bei einfachen Bürsten ziehst du mit Tier etwa einmal pro Woche aufgewickelte Haare ab, manche Hersteller nennen alle zwei Wochen. Bürsten gegen Verheddern brauchen das deutlich seltener. Haare sammeln sich außerdem an Seitenbürste und Rädern."
         ]
       }
     ],
@@ -358,11 +359,11 @@ const RATGEBER = [
       "Näpfe, Körbchen und Spielzeug liegen jeden Tag woanders, und du willst sie weder wegräumen noch in der App sperren."
     ],
     fragen: [
-      { f: "Erkennt der Roboter Hundekot?", a: "Mit Kamera und KI meist ja, eine Garantie gibt es aber nicht. In Tests mit nachgebauten Haufen fuhren gute Modelle fast immer drumherum. Flüssiges wie Erbrochenes übersehen auch sie eher, und ohne Kamera erkennt ein Roboter so etwas in der Regel nicht." },
-      { f: "Hat mein Hund oder meine Katze Angst vor dem Roboter?", a: "Manche Tiere anfangs schon, auch wenn er leiser ist als ein normaler Staubsauger. Mit Geduld gewöhnen sich viele daran: erst ausgeschaltet kennenlernen, dann im Nebenraum laufen lassen, während du da bist." },
+      { f: "Erkennt der Roboter Hundekot?", a: "Mit Kamera und KI meist ja, ohne Kamera in der Regel nicht. Eine Garantie gibt es aber nicht, vor allem bei Flüssigem wie Erbrochenem." },
+      { f: "Hat mein Hund oder meine Katze Angst vor dem Roboter?", a: "Manche Tiere anfangs schon, auch wenn er leiser ist als ein normaler Staubsauger. Mit Geduld und in kleinen Schritten gewöhnen sich viele daran." },
       { f: "Kann er Katzenstreu aufsaugen?", a: "Lose, trockene Streu kann er aufsaugen. Klumpen und feuchte Streu gehören aber nicht in den Roboter. Sperr darum eine kleine Zone ums Katzenklo, dann fährt er dort gar nicht erst hin." },
       { f: "Hilft der Roboter bei einer Tierhaarallergie?", a: "Er kann die Belastung senken, weil er regelmäßig saugt. Achte auf einen echten HEPA-Filter und eine Station mit Beutel: Dann bleibt der feine Staub im Gerät, und beim Wechseln kommst du mit ihm kaum in Berührung. Behandeln kann er eine Allergie aber nicht." },
-      { f: "Wie viel Saugkraft brauche ich für Tierhaare?", a: "Die Empfehlungen gehen weit auseinander: In Ratgebern liest du alles von ein paar tausend bis über 20.000 Pascal. Verlässlicher ist das Testergebnis auf Teppich, denn dort zeigen sich die Unterschiede. Die Bürste ist mindestens genauso wichtig." }
+      { f: "Wie viel Saugkraft brauche ich für Tierhaare?", a: "Die Empfehlungen gehen weit auseinander, von ein paar tausend bis über 20.000 Pascal. Verlässlicher ist das Testergebnis auf Teppich, denn dort zeigen sich die Unterschiede. Mindestens genauso wichtig ist eine Bürste, um die sich Haare gar nicht erst wickeln." }
     ],
     quellen: [
       { name: "Mein Rechner auf der Seite zum Saug- und Wischroboter", text: "die Zeiten für 60 m² bei täglichem Saugen mit und ohne Wischen und bei zweimal Saugen und einmal Wischen, die Annahmen stehen dort unter „So rechne ich“" },
@@ -382,7 +383,13 @@ const RATGEBER = [
       { name: "Mähroboter Guru: Katze an Saugroboter gewöhnen (Juli 2024)", text: "ausgeschaltet beschnuppern lassen, im Nebenraum auf leiser Stufe starten, Leckerli, nie zwingen, erst unter Aufsicht, dann nach Zeitplan" },
       { name: "netzwelt.de: Saugroboter-Lautstärke (Februar 2026) und Absaugstationen (März 2026)", text: "meist 60 bis 70 dB, die Station einige Sekunden 80 bis 90 dB, Beutel schließen sich bei der Entnahme selbst und halten zwei bis drei Monate, mit Tierhaaren fällt besonders viel Schmutz an" },
       { name: "smarthomeassistent.de: Leiser Saugroboter (August 2026) und testsiegertv.com: Absaugstationen (Juli 2021)", text: "meist 55 bis 65 dB, Absaugen in der Station ein paar Sekunden lang bis 90 dB" },
-      { name: "Herstellerangaben und Ratgeber der Hersteller", text: "Ecovacs (keine Garantie bei Tierkot, Sperrzonen um Körbchen und Katzenklo, nasse oder verklumpte Streu nie aufsaugen, trockene Streu schon), Dreame (flache, feuchte Malheurs schwer zu erkennen, Sperrzonen um Katzenklo, Körbchen und Näpfe, Boden kurz prüfen), MOVA (Beutel mit Haustieren schneller voll, Haare an Bürsten und Rädern eventuell jede Woche entfernen), Roborock (Haare um die Radachsen und an der Seitenbürste regelmäßig entfernen), Ecovacs (Tierhaare wickeln sich um die Radachse)" }
+      { name: "Vacuum Wars: Dreame X50 Ultra Review (März 2025, aktualisiert September 2026)", text: "Doppelwalze an einem Ende verjüngt, die Haare wandern zu dieser Seite, im Test mit 18 cm langen Haaren verhedderte sich nichts" },
+      { name: "home&smart: Dreame X50 Ultra Complete im Test (April 2026) und Dreame X60 Pro Ultra (September 2026)", text: "kein einziges langes Haar in den Walzen, deutlich weniger Wartung, beim X60 setzten sich selbst 1 m lange Haare nicht fest" },
+      { name: "smarthomeassistent.de: Dreame X50 Ultra Complete (Juli 2026)", text: "im Haartest alle Haare aufgenommen, ohne Aufwicklung an Haupt- und Seitenbürste" },
+      { name: "winfuture: Narwal Freo Z10 im Test (Juli 2025) und china-gadgets: Narwal Freo Z10 Ultra (Mai 2025)", text: "kegelförmige Hauptbürste, nur auf einer Seite aufgehängt, nach mehreren Läufen mit langen Haaren und Tierhaaren nahezu frei, die offene Walze verhindert Haarverwicklungen" },
+      { name: "netzwelt.de: Roborock Qrevo Curv im Test (September 2024)", text: "zweigeteilte Hauptbürste, die Haare landen über die Lücke in der Mitte im Saugschacht" },
+      { name: "testsiegertv.com: Roborock Qrevo Curv im Test (Februar 2025)", text: "zwei kleinere Bürsten bringen die Haare zur Mitte, dort werden sie abgesaugt, mit 5, 10 und 20 cm langen Haaren keine Einwicklungen, 38 cm lange wickelten sich erst auf und wurden dann abgesaugt" },
+      { name: "Herstellerangaben und Ratgeber der Hersteller", text: "Ecovacs (keine Garantie bei Tierkot, Sperrzonen um Körbchen und Katzenklo, nasse oder verklumpte Streu nie aufsaugen, trockene Streu schon), Dreame (flache, feuchte Malheurs schwer zu erkennen, Sperrzonen um Katzenklo, Körbchen und Näpfe, Boden kurz prüfen), MOVA (Beutel mit Haustieren schneller voll, Haare an Bürsten und Rädern eventuell jede Woche entfernen), Roborock (Haare um die Radachsen und an der Seitenbürste regelmäßig entfernen), Ecovacs (Tierhaare wickeln sich um die Radachse), Dreame (HyperStream Detangling DuoBrush: zwei Walzen an einem Arm, nur auf einer Seite befestigt, Haare wandern zum freien Ende und werden dort abgesaugt, bis 30 cm ohne Verheddern, bei sehr vielen Haaren trotzdem säubern), Narwal (kegelförmige Walze an einem einzigen Arm), Roborock (DuoDivide: geteilte Bürste, Haare werden in der Mitte abgesaugt)" }
     ]
   },
   {
@@ -497,7 +504,7 @@ const RATGEBER = [
         absaetze: [
           "Hast du eine eigene Gastherme in der Wohnung, zahlst du dein Gas meist direkt beim Versorger. Dann kommt die ganze Ersparnis bei dir an.",
           "Bei einer Zentralheizung wird dagegen nur ein Teil der Kosten nach deinem Verbrauch verteilt, der Rest nach der Fläche. In Deutschland sind es 50 bis 70 Prozent, in Österreich mindestens 55 Prozent der Energiekosten. In der Schweiz sind es meist 50 bis 70 Prozent, wenn dein Haus nach Verbrauch abrechnet. Wie es bei dir aufgeteilt ist, siehst du auf deiner Heizkostenabrechnung an den Grund- und Verbrauchskosten.",
-          "Ein Beispiel: Zahlst du 1.000 € im Jahr fürs Heizen, sind 10 Prozent davon 100 €. Werden bei dir 50 bis 70 Prozent nach Verbrauch verteilt, kommen davon etwa 50 bis 70 € bei dir an.",
+          "Ein Beispiel: Zahlst du 1.000 € im Jahr fürs Heizen, sind 10 Prozent davon 100 €. Werden bei dir 50 bis 70 Prozent nach Verbrauch verteilt, kommen davon etwa 50 bis 70 € bei dir an. In meinem Rechner wählst du dafür „Zentralheizung mit Abrechnung“, dann rechne ich mit 60 Prozent.",
           "In manchen Häusern wird gar nicht nach Verbrauch abgerechnet, sondern nur nach Fläche, in der Schweiz zum Beispiel oft in älteren Häusern. Dann spart vor allem das ganze Haus, und bei dir kommt nur wenig an."
         ]
       },

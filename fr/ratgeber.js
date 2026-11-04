@@ -228,7 +228,9 @@ const RATGEBER = [
       {
         titel: "Une brosse autour de laquelle les poils s’enroulent à peine",
         absaetze: [
-          "Les poils d’animaux s’enroulent vite autour des brosses à poils. Les brosses principales en caoutchouc ou avec un système anti-emmêlement sont meilleures. Les poils longs peuvent quand même parfois s’y accrocher.",
+          "Le caoutchouc plutôt que les poils aide déjà un peu. Ce qui compte vraiment, c’est la façon dont la brosse principale est construite et fixée.",
+          "Dreame, par exemple, utilise sur certains robots deux rouleaux fixés d’un seul côté, l’autre côté restant ouvert. La rotation et le flux d’air poussent les poils vers cette extrémité ouverte, où ils sont aspirés. Dans les tests, même les poils longs ne s’y sont presque pas accrochés.",
+          "D’autres fabricants procèdent de façon similaire : Narwal suspend une brosse conique d’un seul côté. Roborock divise la brosse au milieu, où les poils sont aspirés.",
           "Sur sol dur, beaucoup de robots nettoient bien ; sur tapis, la différence se voit. Selon Stiftung Warentest, ce qui compte pour les propriétaires d’animaux, c’est la note pour le ramassage des fibres sur tapis. Les notes y vont de bon à insuffisant."
         ]
       },
@@ -249,8 +251,7 @@ const RATGEBER = [
       {
         titel: "Bloquer la gamelle, la litière et le coin couchage",
         absaetze: [
-          "Dans l’appli, créez des zones interdites autour des gamelles d’eau et de nourriture, de la litière et du coin couchage. Le robot laisse ainsi les gamelles tranquilles, et votre animal a des endroits où il n’est pas dérangé.",
-          "À la litière, la zone interdite est doublement utile : les grumeaux et la litière humide n’ont rien à faire dans le robot."
+          "Dans l’appli, créez des zones interdites autour des gamelles d’eau et de nourriture, de la litière et du coin couchage. Le robot laisse ainsi les gamelles tranquilles, et votre animal a des endroits où il n’est pas dérangé."
         ]
       },
       {
@@ -262,9 +263,9 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "Plus souvent avec un animal : la brosse",
+        titel: "Vérifier de temps en temps : brosse et roues",
         absaetze: [
-          "Avec un animal, regardez la brosse principale environ une fois par semaine et retirez les poils enroulés. Certains fabricants indiquent toutes les deux semaines, ce qui peut être trop rare avec un animal qui perd ses poils. Des poils s’accumulent aussi sur la brosse latérale et les roues."
+          "Avec une brosse simple et un animal, retirez les poils enroulés environ une fois par semaine ; certains fabricants indiquent toutes les deux semaines. Les brosses anti-emmêlement en ont besoin bien moins souvent. Des poils s’accumulent aussi sur la brosse latérale et les roues."
         ]
       }
     ],
@@ -280,11 +281,11 @@ const RATGEBER = [
       "Gamelles, paniers et jouets sont chaque jour ailleurs, et vous ne voulez ni les ranger ni les bloquer dans l’appli."
     ],
     fragen: [
-      { f: "Le robot reconnaît-il les crottes de chien ?", a: "Avec une caméra et l’IA, le plus souvent oui, mais il n’y a aucune garantie. Dans des tests avec de fausses crottes, les bons modèles les ont presque toujours contournées. Même eux manquent plus facilement ce qui est liquide comme un vomi, et sans caméra un robot ne reconnaît en général pas ce genre de chose." },
-      { f: "Mon chien ou mon chat aura-t-il peur du robot ?", a: "Certains animaux au début, oui, même s’il est plus silencieux qu’un aspirateur normal. Avec de la patience, beaucoup s’y habituent : d’abord le découvrir éteint, puis le laisser rouler dans la pièce d’à côté pendant que vous êtes là." },
+      { f: "Le robot reconnaît-il les crottes de chien ?", a: "Avec une caméra et l’IA, le plus souvent oui, sans caméra en général non. Il n’y a cependant aucune garantie, surtout avec ce qui est liquide comme un vomi." },
+      { f: "Mon chien ou mon chat aura-t-il peur du robot ?", a: "Certains animaux au début, oui, même s’il est plus silencieux qu’un aspirateur normal. Avec de la patience et par petites étapes, beaucoup s’y habituent." },
       { f: "Peut-il aspirer la litière pour chat ?", a: "Il peut aspirer la litière sèche et éparpillée. Les grumeaux et la litière humide n’ont cependant rien à faire dans le robot. Bloquez donc une petite zone autour de la litière, il n’y ira alors pas du tout." },
       { f: "Le robot aide-t-il en cas d’allergie aux poils d’animaux ?", a: "Il peut réduire l’exposition, car il aspire régulièrement. Choisissez un vrai filtre HEPA et une station avec sac : la poussière fine reste alors dans l’appareil, et vous n’y touchez presque pas en changeant le sac. Il ne peut cependant pas traiter une allergie." },
-      { f: "Quelle puissance d’aspiration faut-il pour les poils d’animaux ?", a: "Les recommandations varient énormément : dans les guides, on lit de quelques milliers à plus de 20 000 pascals. Le résultat des tests sur tapis est plus fiable, car c’est là que se voient les différences. La brosse compte au moins autant." }
+      { f: "Quelle puissance d’aspiration faut-il pour les poils d’animaux ?", a: "Les recommandations varient énormément, de quelques milliers à plus de 20 000 pascals. Le résultat des tests sur tapis est plus fiable, car c’est là que se voient les différences. Une brosse autour de laquelle les poils ne s’enroulent pas du tout compte au moins autant." }
     ],
     quellen: [
       { name: "Mon calculateur sur la page du robot aspirateur laveur", text: "les temps pour 60 m² avec aspirateur tous les jours avec et sans serpillière et avec deux passages d’aspirateur et un de serpillière, les hypothèses y figurent sous « Comment je calcule »" },
@@ -304,7 +305,13 @@ const RATGEBER = [
       { name: "Mähroboter Guru : habituer un chat à un robot aspirateur (juillet 2024)", text: "le laisser renifler éteint, démarrer dans la pièce d’à côté en mode silencieux, friandises, ne jamais forcer, d’abord sous surveillance, puis selon le programme" },
       { name: "netzwelt.de : bruit des robots aspirateurs (février 2026) et stations de vidage (mars 2026)", text: "le plus souvent 60 à 70 dB, la station 80 à 90 dB pendant quelques secondes, les sacs se ferment seuls quand on les retire et tiennent deux à trois mois, les poils d’animaux font beaucoup de saleté" },
       { name: "smarthomeassistent.de : robots aspirateurs silencieux (août 2026) et testsiegertv.com : stations de vidage (juillet 2021)", text: "le plus souvent 55 à 65 dB, vidage dans la station jusqu’à 90 dB pendant quelques secondes" },
-      { name: "Indications et guides des fabricants", text: "Ecovacs (aucune garantie avec les crottes, zones interdites autour des paniers et de la litière, ne jamais aspirer de litière mouillée ou agglomérée, la litière sèche oui), Dreame (accidents plats et humides difficiles à reconnaître, zones interdites autour de la litière, des paniers et des gamelles, vérifier rapidement le sol), MOVA (sacs plus vite pleins avec des animaux, retirer les poils des brosses et des roues éventuellement chaque semaine), Roborock (retirer régulièrement les poils autour des axes de roues et de la brosse latérale), Ecovacs (les poils s’enroulent autour de l’axe de roue)" }
+      { name: "Vacuum Wars : test du Dreame X50 Ultra (mars 2025, mis à jour en septembre 2026)", text: "double rouleau affiné à une extrémité, les poils migrent de ce côté, rien ne s’est emmêlé dans le test avec des poils de 18 cm" },
+      { name: "home&smart : test du Dreame X50 Ultra Complete (avril 2026) et Dreame X60 Pro Ultra (septembre 2026)", text: "pas un seul poil long dans les rouleaux, bien moins d’entretien, sur le X60 même des poils de 1 m ne se sont pas accrochés" },
+      { name: "smarthomeassistent.de : Dreame X50 Ultra Complete (juillet 2026)", text: "tous les poils ramassés au test des poils, sans enroulement sur la brosse principale et la brosse latérale" },
+      { name: "winfuture : test du Narwal Freo Z10 (juillet 2025) et china-gadgets : Narwal Freo Z10 Ultra (mai 2025)", text: "brosse principale conique, suspendue d’un seul côté, presque propre après plusieurs passages avec des cheveux longs et des poils d’animaux, le rouleau ouvert empêche l’emmêlement" },
+      { name: "netzwelt.de : test du Roborock Qrevo Curv (septembre 2024)", text: "brosse principale en deux parties, les poils passent par l’espace au milieu dans le conduit d’aspiration" },
+      { name: "testsiegertv.com : test du Roborock Qrevo Curv (février 2025)", text: "deux petites brosses amènent les poils au milieu, où ils sont aspirés, aucun enroulement avec des poils de 5, 10 et 20 cm, ceux de 38 cm se sont d’abord enroulés puis ont été aspirés" },
+      { name: "Indications et guides des fabricants", text: "Ecovacs (aucune garantie avec les crottes, zones interdites autour des paniers et de la litière, ne jamais aspirer de litière mouillée ou agglomérée, la litière sèche oui), Dreame (accidents plats et humides difficiles à reconnaître, zones interdites autour de la litière, des paniers et des gamelles, vérifier rapidement le sol), MOVA (sacs plus vite pleins avec des animaux, retirer les poils des brosses et des roues éventuellement chaque semaine), Roborock (retirer régulièrement les poils autour des axes de roues et de la brosse latérale), Ecovacs (les poils s’enroulent autour de l’axe de roue), Dreame (HyperStream Detangling DuoBrush : deux rouleaux sur un bras, fixés d’un seul côté, les poils migrent vers l’extrémité libre et y sont aspirés, jusqu’à 30 cm sans emmêlement, à nettoyer quand même s’il y a beaucoup de poils), Narwal (rouleau conique sur un seul bras), Roborock (DuoDivide : brosse divisée, les poils sont aspirés au milieu)" }
     ]
   },
   {
@@ -419,7 +426,7 @@ const RATGEBER = [
         absaetze: [
           "Si vous avez votre propre chaudière à gaz dans le logement, vous payez le plus souvent votre gaz directement au fournisseur. Toute l’économie vous revient alors.",
           "Avec un chauffage central, en revanche, seule une partie des coûts est répartie selon votre consommation, le reste selon la surface. En Allemagne, c’est 50 à 70 pour cent, en Autriche au moins 55 pour cent des coûts d’énergie. En Suisse, c’est le plus souvent 50 à 70 pour cent si votre immeuble facture selon la consommation. Vous voyez la répartition chez vous sur votre décompte de chauffage, aux frais de base et aux frais de consommation.",
-          "Un exemple : si vous payez 1 000 € par an pour le chauffage, 10 pour cent font 100 €. Si 50 à 70 pour cent sont répartis selon la consommation chez vous, il vous en revient environ 50 à 70 €.",
+          "Un exemple : si vous payez 1 000 € par an pour le chauffage, 10 pour cent font 100 €. Si 50 à 70 pour cent sont répartis selon la consommation chez vous, il vous en revient environ 50 à 70 €. Dans mon calculateur, choisissez pour cela « Chauffage central avec décompte », je compte alors avec 60 pour cent.",
           "Dans certains immeubles, rien n’est réparti selon la consommation, seulement selon la surface, en Suisse par exemple souvent dans les immeubles anciens. C’est alors surtout l’immeuble entier qui économise, et il ne vous en revient que peu."
         ]
       },

@@ -228,7 +228,9 @@ const RATGEBER = [
       {
         titel: "A brush that hair hardly wraps around",
         absaetze: [
-          "Pet hair quickly wraps around bristle brushes. Main brushes made of rubber or with an anti-tangle system are better. Long hair can still get caught on them sometimes, though.",
+          "Rubber instead of bristles does help a little. What really matters, though, is how the main brush is built and mounted.",
+          "Dreame, for example, uses two rollers in some robots that are only attached on one side, with the other side open. Rotation and airflow push the hair to this open end, where it gets sucked away. In tests, even long hair hardly got caught this way.",
+          "Other manufacturers work in a similar way: Narwal hangs a cone-shaped brush on one side only. Roborock splits the brush in the middle, where the hair gets sucked away.",
           "On hard floors many robots clean well; on carpet the difference shows. According to Stiftung Warentest, the rating for picking up fibres on carpet is what matters for pet owners. The grades there range from good to poor."
         ]
       },
@@ -249,8 +251,7 @@ const RATGEBER = [
       {
         titel: "Block off the bowl, litter tray and sleeping spot",
         absaetze: [
-          "In the app, set up no-go zones around the food and water bowls, the litter tray and the sleeping spot. That way the robot leaves the bowls alone, and your pet has places where it isn't disturbed.",
-          "A no-go zone at the litter tray makes double sense: clumps and damp litter don't belong in the robot."
+          "In the app, set up no-go zones around the food and water bowls, the litter tray and the sleeping spot. That way the robot leaves the bowls alone, and your pet has places where it isn't disturbed."
         ]
       },
       {
@@ -262,9 +263,9 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "More often with a pet: the brush",
+        titel: "Check now and then: brush and wheels",
         absaetze: [
-          "With a pet, check the main brush about once a week and pull off any hair that has wrapped around it. Some manufacturers say every two weeks, which can be too rarely with a pet that sheds. Hair also collects on the side brush and wheels."
+          "With a simple brush and a pet, pull off wrapped hair about once a week; some manufacturers say every two weeks. Anti-tangle brushes need this much less often. Hair also collects on the side brush and wheels."
         ]
       }
     ],
@@ -280,11 +281,11 @@ const RATGEBER = [
       "Bowls, beds and toys are somewhere different every day, and you don't want to tidy them away or block them off in the app."
     ],
     fragen: [
-      { f: "Does the robot recognise dog poo?", a: "With a camera and AI usually yes, but there's no guarantee. In tests with fake poo, good models almost always drove around it. Even they are more likely to miss runny things like vomit, and without a camera a robot usually can't recognise anything like that." },
-      { f: "Will my dog or cat be afraid of the robot?", a: "Some pets are at first, even though it's quieter than a normal vacuum cleaner. With patience many get used to it: first get to know it switched off, then let it run in the next room while you're there." },
+      { f: "Does the robot recognise dog poo?", a: "With a camera and AI usually yes, without a camera usually not. There's no guarantee, though, especially with runny things like vomit." },
+      { f: "Will my dog or cat be afraid of the robot?", a: "Some pets are at first, even though it's quieter than a normal vacuum cleaner. With patience and in small steps, many get used to it." },
       { f: "Can it vacuum up cat litter?", a: "It can vacuum up loose, dry litter. Clumps and damp litter don't belong in the robot, though. So block off a small zone around the litter tray, and it won't go there at all." },
       { f: "Does the robot help with a pet hair allergy?", a: "It can reduce the exposure because it vacuums regularly. Look for a genuine HEPA filter and a base station with a bag: then the fine dust stays in the device, and you hardly come into contact with it when changing the bag. It can't treat an allergy, though." },
-      { f: "How much suction power do I need for pet hair?", a: "The recommendations vary widely: in guides you'll read anything from a few thousand to over 20,000 pascals. The test result on carpet is more reliable, because that's where the differences show. The brush matters at least as much." }
+      { f: "How much suction power do I need for pet hair?", a: "The recommendations vary widely, from a few thousand to over 20,000 pascals. The test result on carpet is more reliable, because that's where the differences show. At least as important is a brush that hair doesn't wrap around in the first place." }
     ],
     quellen: [
       { name: "My calculator on the robot vacuum and mop page", text: "the times for 60 m² with daily vacuuming with and without mopping and with vacuuming twice and mopping once, the assumptions are listed there under “How I calculate”" },
@@ -304,7 +305,13 @@ const RATGEBER = [
       { name: "Mähroboter Guru: getting a cat used to a robot vacuum (July 2024)", text: "let it sniff while switched off, start in the next room on a quiet setting, treats, never force, supervised at first, then on a schedule" },
       { name: "netzwelt.de: robot vacuum noise (February 2026) and self-emptying stations (March 2026)", text: "usually 60 to 70 dB, the station 80 to 90 dB for a few seconds, bags close themselves when taken out and last two to three months, pet hair creates a particularly large amount of dirt" },
       { name: "smarthomeassistent.de: quiet robot vacuums (August 2026) and testsiegertv.com: self-emptying stations (July 2021)", text: "usually 55 to 65 dB, emptying in the station up to 90 dB for a few seconds" },
-      { name: "Manufacturer information and manufacturer guides", text: "Ecovacs (no guarantee with pet poo, no-go zones around beds and litter trays, never vacuum up wet or clumped litter, dry litter is fine), Dreame (flat, wet accidents hard to recognise, no-go zones around litter tray, beds and bowls, check the floor briefly), MOVA (bags fill faster with pets, remove hair from brushes and wheels possibly every week), Roborock (regularly remove hair from the wheel axles and the side brush), Ecovacs (pet hair wraps around the wheel axle)" }
+      { name: "Vacuum Wars: Dreame X50 Ultra review (March 2025, updated September 2026)", text: "double roller tapered at one end, the hair moves to that side, nothing tangled in the test with 18 cm long hair" },
+      { name: "home&smart: Dreame X50 Ultra Complete review (April 2026) and Dreame X60 Pro Ultra (September 2026)", text: "not a single long hair in the rollers, much less maintenance, on the X60 even 1 m long hair didn't get stuck" },
+      { name: "smarthomeassistent.de: Dreame X50 Ultra Complete (July 2026)", text: "picked up all hair in the hair test, without wrapping on the main and side brush" },
+      { name: "winfuture: Narwal Freo Z10 review (July 2025) and china-gadgets: Narwal Freo Z10 Ultra (May 2025)", text: "cone-shaped main brush, hung on one side only, almost free after several runs with long hair and pet hair, the open roller prevents tangling" },
+      { name: "netzwelt.de: Roborock Qrevo Curv review (September 2024)", text: "split main brush, the hair goes through the gap in the middle into the suction channel" },
+      { name: "testsiegertv.com: Roborock Qrevo Curv review (February 2025)", text: "two smaller brushes bring the hair to the middle, where it's sucked away, no wrapping with 5, 10 and 20 cm long hair, 38 cm long hair wrapped at first and was then sucked away" },
+      { name: "Manufacturer information and manufacturer guides", text: "Ecovacs (no guarantee with pet poo, no-go zones around beds and litter trays, never vacuum up wet or clumped litter, dry litter is fine), Dreame (flat, wet accidents hard to recognise, no-go zones around litter tray, beds and bowls, check the floor briefly), MOVA (bags fill faster with pets, remove hair from brushes and wheels possibly every week), Roborock (regularly remove hair from the wheel axles and the side brush), Ecovacs (pet hair wraps around the wheel axle), Dreame (HyperStream Detangling DuoBrush: two rollers on one arm, attached on one side only, hair moves to the free end and is sucked away there, up to 30 cm without tangling, still clean it if there's a lot of hair), Narwal (cone-shaped roller on a single arm), Roborock (DuoDivide: split brush, hair is sucked away in the middle)" }
     ]
   },
   {
@@ -419,7 +426,7 @@ const RATGEBER = [
         absaetze: [
           "If you have your own gas boiler in the flat, you usually pay for your gas directly to the supplier. Then the whole saving reaches you.",
           "With central heating, on the other hand, only part of the costs is split by your consumption, the rest by floor area. In Germany it's 50 to 70 percent, in Austria at least 55 percent of the energy costs. In Switzerland it's usually 50 to 70 percent if your building bills by consumption. You can see how it's split for you on your heating bill, under basic costs and consumption costs.",
-          "An example: if you pay €1,000 a year for heating, 10 percent of that is €100. If 50 to 70 percent is split by consumption in your building, about €50 to €70 of that reaches you.",
+          "An example: if you pay €1,000 a year for heating, 10 percent of that is €100. If 50 to 70 percent is split by consumption in your building, about €50 to €70 of that reaches you. In my calculator, choose “Central heating with a heating bill” for this, and I'll calculate with 60 percent.",
           "In some buildings costs aren't split by consumption at all, only by floor area, in Switzerland for example often in older buildings. Then it's mainly the whole building that saves, and only a little reaches you."
         ]
       },

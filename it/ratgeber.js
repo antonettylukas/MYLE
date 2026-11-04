@@ -228,7 +228,9 @@ const RATGEBER = [
       {
         titel: "Una spazzola intorno a cui i peli si avvolgono poco",
         absaetze: [
-          "I peli degli animali si avvolgono in fretta intorno alle spazzole con setole. Meglio le spazzole principali in gomma o con un sistema anti-groviglio. Anche lì, però, i peli lunghi a volte restano impigliati.",
+          "La gomma al posto delle setole aiuta già un po’. Ma ciò che conta davvero è come è costruita e fissata la spazzola principale.",
+          "Dreame, per esempio, su alcuni robot usa due rulli fissati da un solo lato, mentre l’altro lato è aperto. Rotazione e flusso d’aria spingono i peli verso questa estremità aperta, dove vengono aspirati. Nei test così si sono impigliati a malapena anche i peli lunghi.",
+          "Altri produttori fanno in modo simile: Narwal fissa una spazzola conica da un solo lato. Roborock divide la spazzola a metà, dove i peli vengono aspirati.",
           "Sui pavimenti duri molti robot puliscono bene, sui tappeti si vede la differenza. Secondo Stiftung Warentest, per chi ha animali conta il voto per la raccolta delle fibre sui tappeti. Lì i voti vanno da buono a insufficiente."
         ]
       },
@@ -249,8 +251,7 @@ const RATGEBER = [
       {
         titel: "Bloccare ciotola, lettiera e cuccia",
         absaetze: [
-          "Nell’app crea delle zone vietate intorno alle ciotole di cibo e acqua, alla lettiera e alla cuccia. Così il robot lascia stare le ciotole, e il tuo animale ha dei posti dove nessuno lo disturba.",
-          "Alla lettiera la zona vietata serve due volte: grumi e lettiera umida non devono finire nel robot."
+          "Nell’app crea delle zone vietate intorno alle ciotole di cibo e acqua, alla lettiera e alla cuccia. Così il robot lascia stare le ciotole, e il tuo animale ha dei posti dove nessuno lo disturba."
         ]
       },
       {
@@ -262,9 +263,9 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "Con un animale più spesso: la spazzola",
+        titel: "Ogni tanto controllare: spazzola e ruote",
         absaetze: [
-          "Con un animale controlla la spazzola principale circa una volta a settimana e togli i peli avvolti. Alcuni produttori indicano ogni due settimane, che con un animale che perde molto pelo può essere troppo poco. I peli si accumulano anche sulla spazzola laterale e sulle ruote."
+          "Con una spazzola semplice e un animale, togli i peli avvolti circa una volta a settimana; alcuni produttori indicano ogni due settimane. Le spazzole anti-groviglio ne hanno bisogno molto più di rado. I peli si accumulano anche sulla spazzola laterale e sulle ruote."
         ]
       }
     ],
@@ -280,11 +281,11 @@ const RATGEBER = [
       "Ciotole, cucce e giochi sono ogni giorno in un posto diverso, e non vuoi né metterli via né bloccarli nell’app."
     ],
     fragen: [
-      { f: "Il robot riconosce la cacca del cane?", a: "Con telecamera e IA di solito sì, ma una garanzia non c’è. Nei test con cacche finte i modelli buoni ci sono quasi sempre girati intorno. Anche a loro sfugge più facilmente qualcosa di liquido come il vomito, e senza telecamera un robot di norma non riconosce cose del genere." },
-      { f: "Il mio cane o il mio gatto avrà paura del robot?", a: "Alcuni animali all’inizio sì, anche se è più silenzioso di un normale aspirapolvere. Con pazienza molti si abituano: prima conoscerlo spento, poi farlo girare nella stanza accanto mentre ci sei." },
+      { f: "Il robot riconosce la cacca del cane?", a: "Con telecamera e IA di solito sì, senza telecamera di norma no. Una garanzia però non c’è, soprattutto con cose liquide come il vomito." },
+      { f: "Il mio cane o il mio gatto avrà paura del robot?", a: "Alcuni animali all’inizio sì, anche se è più silenzioso di un normale aspirapolvere. Con pazienza e a piccoli passi molti si abituano." },
       { f: "Può aspirare la lettiera del gatto?", a: "La lettiera asciutta e sparsa la può aspirare. Grumi e lettiera umida però non devono finire nel robot. Blocca quindi una piccola zona intorno alla lettiera, così non ci va proprio." },
       { f: "Il robot aiuta con l’allergia al pelo degli animali?", a: "Può ridurre l’esposizione, perché aspira regolarmente. Scegli un vero filtro HEPA e una base con sacchetto: così la polvere fine resta nell’apparecchio, e quando cambi il sacchetto non la tocchi quasi. Curare un’allergia, però, non può." },
-      { f: "Quanta potenza di aspirazione serve per i peli degli animali?", a: "I consigli sono molto diversi: nelle guide si legge di tutto, da qualche migliaio a oltre 20.000 pascal. Più affidabile è il risultato dei test sui tappeti, perché lì si vedono le differenze. La spazzola conta almeno altrettanto." }
+      { f: "Quanta potenza di aspirazione serve per i peli degli animali?", a: "I consigli sono molto diversi, da qualche migliaio a oltre 20.000 pascal. Più affidabile è il risultato dei test sui tappeti, perché lì si vedono le differenze. Almeno altrettanto importante è una spazzola intorno a cui i peli non si avvolgono proprio." }
     ],
     quellen: [
       { name: "Il mio calcolatore nella pagina del robot aspirapolvere lavapavimenti", text: "i tempi per 60 m² con aspirapolvere ogni giorno con e senza lavaggio e con due passate e un lavaggio, le ipotesi sono lì sotto „Come calcolo“" },
@@ -304,7 +305,13 @@ const RATGEBER = [
       { name: "Mähroboter Guru: abituare un gatto al robot aspirapolvere (luglio 2024)", text: "farlo annusare spento, partire nella stanza accanto a potenza bassa, premi, mai costringere, prima sotto controllo, poi con la programmazione" },
       { name: "netzwelt.de: rumorosità dei robot aspirapolvere (febbraio 2026) e basi di svuotamento (marzo 2026)", text: "di solito 60–70 dB, la base 80–90 dB per qualche secondo, i sacchetti si chiudono da soli quando li estrai e durano due o tre mesi, con i peli degli animali si accumula molto sporco" },
       { name: "smarthomeassistent.de: robot aspirapolvere silenziosi (agosto 2026) e testsiegertv.com: basi di svuotamento (luglio 2021)", text: "di solito 55–65 dB, svuotamento nella base fino a 90 dB per qualche secondo" },
-      { name: "Dati e guide dei produttori", text: "Ecovacs (nessuna garanzia con gli escrementi, zone vietate intorno a cucce e lettiera, mai aspirare lettiera bagnata o agglomerata, quella asciutta sì), Dreame (incidenti piatti e umidi difficili da riconoscere, zone vietate intorno a lettiera, cucce e ciotole, controllare rapidamente il pavimento), MOVA (sacchetti pieni prima con animali, togliere i peli da spazzole e ruote anche ogni settimana), Roborock (togliere regolarmente i peli dagli assi delle ruote e dalla spazzola laterale), Ecovacs (i peli si avvolgono intorno all’asse della ruota)" }
+      { name: "Vacuum Wars: recensione del Dreame X50 Ultra (marzo 2025, aggiornata a settembre 2026)", text: "doppio rullo assottigliato a un’estremità, i peli migrano da quel lato, nel test con peli lunghi 18 cm non si è aggrovigliato niente" },
+      { name: "home&smart: test del Dreame X50 Ultra Complete (aprile 2026) e Dreame X60 Pro Ultra (settembre 2026)", text: "nemmeno un pelo lungo nei rulli, molta meno manutenzione, sull’X60 non si sono impigliati nemmeno peli lunghi 1 m" },
+      { name: "smarthomeassistent.de: Dreame X50 Ultra Complete (luglio 2026)", text: "nel test dei peli raccolti tutti, senza avvolgimenti sulla spazzola principale e laterale" },
+      { name: "winfuture: test del Narwal Freo Z10 (luglio 2025) e china-gadgets: Narwal Freo Z10 Ultra (maggio 2025)", text: "spazzola principale conica, fissata da un solo lato, quasi pulita dopo diversi giri con capelli lunghi e peli di animali, il rullo aperto evita i grovigli" },
+      { name: "netzwelt.de: test del Roborock Qrevo Curv (settembre 2024)", text: "spazzola principale divisa in due, i peli finiscono nel condotto di aspirazione attraverso lo spazio al centro" },
+      { name: "testsiegertv.com: test del Roborock Qrevo Curv (febbraio 2025)", text: "due spazzole più piccole portano i peli al centro, dove vengono aspirati, nessun avvolgimento con peli di 5, 10 e 20 cm, quelli di 38 cm prima si sono avvolti e poi sono stati aspirati" },
+      { name: "Dati e guide dei produttori", text: "Ecovacs (nessuna garanzia con gli escrementi, zone vietate intorno a cucce e lettiera, mai aspirare lettiera bagnata o agglomerata, quella asciutta sì), Dreame (incidenti piatti e umidi difficili da riconoscere, zone vietate intorno a lettiera, cucce e ciotole, controllare rapidamente il pavimento), MOVA (sacchetti pieni prima con animali, togliere i peli da spazzole e ruote anche ogni settimana), Roborock (togliere regolarmente i peli dagli assi delle ruote e dalla spazzola laterale), Ecovacs (i peli si avvolgono intorno all’asse della ruota), Dreame (HyperStream Detangling DuoBrush: due rulli su un braccio, fissati da un solo lato, i peli migrano verso l’estremità libera e lì vengono aspirati, fino a 30 cm senza grovigli, con moltissimi peli comunque da pulire), Narwal (rullo conico su un solo braccio), Roborock (DuoDivide: spazzola divisa, i peli vengono aspirati al centro)" }
     ]
   },
   {
@@ -419,7 +426,7 @@ const RATGEBER = [
         absaetze: [
           "Se hai una caldaia a gas tua nell’appartamento, di solito paghi il gas direttamente al fornitore. Allora il risparmio arriva tutto a te.",
           "Con un riscaldamento centralizzato, invece, solo una parte dei costi viene ripartita in base al tuo consumo, il resto in base alla superficie. In Germania è dal 50 al 70 per cento, in Austria almeno il 55 per cento dei costi dell’energia. In Svizzera è di solito dal 50 al 70 per cento, se il tuo stabile conteggia in base al consumo. Come è ripartito da te lo vedi sul conteggio del riscaldamento, alle spese di base e alle spese di consumo.",
-          "Un esempio: se paghi 1.000 € all’anno per il riscaldamento, il 10 per cento sono 100 €. Se da te dal 50 al 70 per cento viene ripartito in base al consumo, te ne arrivano circa 50–70 €.",
+          "Un esempio: se paghi 1.000 € all’anno per il riscaldamento, il 10 per cento sono 100 €. Se da te dal 50 al 70 per cento viene ripartito in base al consumo, te ne arrivano circa 50–70 €. Nel mio calcolatore scegli per questo „Centralizzato con conteggio“, e conto con il 60 per cento.",
           "In alcuni stabili non si ripartisce affatto in base al consumo, ma solo in base alla superficie, in Svizzera per esempio spesso negli stabili più vecchi. Allora risparmia soprattutto l’intero stabile, e a te arriva poco."
         ]
       },
