@@ -67,7 +67,8 @@ const ASIN = {
   "kindle colorsoft 2026": "B0GV642G9D",
   "gastroback 42507 reiskocher": "B0009KA4CA",
   "bosch serie 6 wng25401gb waschtrockner": "B0CZS32HVH",
-  "bosch serie 6 mums6zm00g": "B0DBJ8YJ4N"
+  "bosch serie 6 mums6zm00g": "B0DBJ8YJ4N",
+  "beta noble ölsprüher": "B0G1TKXGBV"
 };
 const amazon = (suche, landSuche) => AMAZON_LAND
   ? (ASIN[suche]
@@ -372,6 +373,9 @@ const PRODUKTE = [
       { name: "Ofgem: energy price cap from 1 October to 31 December 2026", url: "https://www.ofgem.gov.uk/publications/changes-energy-price-cap-between-1-october-and-31-december-2026", text: "26.32p per kWh by direct debit, average for England, Scotland and Wales, for the electricity price slider" },
       { name: "Selectra: Irish electricity price index (October 2026)", text: "about 41 cents per kWh in Ireland, for the electricity price slider" },
       { name: "Manufacturer information", text: "baskets, capacities and features of the models, “PFAS-free” according to Cosori" }
+    ],
+    zubehoer: [
+      { name: "BETA NOBLE oil sprayer, 100 ml", text: "It lets you spray just a little oil evenly onto vegetables, potatoes or chicken instead of pouring it from the bottle. Refillable glass bottle, no propellant. Works with olive oil, sunflower oil and in the frying pan too.", link: amazon("beta noble ölsprüher", "beta noble oil sprayer") }
     ],
     rechner: "airfryer",
     video: "airfryer"
