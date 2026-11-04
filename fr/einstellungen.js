@@ -42,7 +42,7 @@ const UEBER_MICH = {
 const NEWSLETTER = {
   titel: "Les nouveaux appareils par e-mail",
   text: "Chaque fois que je découvre un nouvel appareil qui me convainc, je vous envoie un court e-mail. Deux fois par mois au maximum, et vous pouvez vous désinscrire à tout moment.",
-  formularAdresse: "",
+  formularAdresse: "https://ef46dae9.sibforms.com/serve/MUIFACl4WHn3uImtAg42RONCA1JVeOC4mKA6W5u0Vh_UDMxnrrBsxt6rg5gVxCTFSWUe5RYjn556LCLs8aitZFzz9ftiocWdsnnA3KgJUncN5_QTISYnMs1ZCA3l6xUfSv7gwWqRu3syAtiP5sUppONraOt5vRKFyYBElV3VXie9pFnYN9Xi4hWflSmmVxbURD4vUPxvi_4FDH4DZA==?isAjax=1",
   feldName: "EMAIL",
-  zusatzFelder: { email_address_check: "", locale: "fr" }
+  zusatzFelder: { email_address_check: "", locale: "fr", html_type: "simple" }
 };
