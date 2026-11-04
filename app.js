@@ -556,12 +556,13 @@
       </section>` : "";
 
     // Quellen (Feld quellen in produkte.js): die Tests und Seiten, auf die sich die Seite beruft, zum Anklicken
-    const qs = (p.quellen || []).filter(q => q && q.name && /^https:\/\//.test(q.url || ""));
+    // Lukas 04.11.2026: Testseiten mit eigenen Affiliate-Links nur als Text nennen (ohne url), Links nur zu neutralen Seiten
+    const qs = (p.quellen || []).filter(q => q && q.name && (!q.url || /^https:\/\//.test(q.url)));
     const quellenBlock = qs.length ? `
       <section class="wrap p-block" id="quellen" aria-labelledby="quellen-titel">
         <h2 class="p-titel" id="quellen-titel">${t("Meine Quellen", "My sources")}</h2>
         <p class="p-intro">${t("Auf diese Tests und Seiten stützen sich meine Empfehlungen.", "My recommendations are based on these tests and pages.")}</p>
-        <ul class="quellen">${qs.map(q => `<li><a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>${q.text ? ` <span class="quelle-text">${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>
+        <ul class="quellen">${qs.map(q => `<li>${q.url ? `<a href="${esc(q.url)}" target="_blank" rel="nofollow noopener">${esc(q.name)}</a>` : esc(q.name)}${q.text ? ` <span class="quelle-text">${esc(q.text)}</span>` : ""}</li>`).join("")}</ul>
       </section>` : "";
 
     // Unten höchstens vier andere Helfer: erst die aus derselben Kategorie, dann die übrigen

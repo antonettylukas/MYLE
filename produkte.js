@@ -57,7 +57,8 @@
   video       Welches Erklärvideo gezeigt wird (steht in videos.js)
   profitipp   Optional: ein hervorgehobener Tipp mit titel, text und liste
   zubehoer    Optional: Zubehör, das du dazu empfiehlst, unter den Modellen: [{ name, text, link }]
-  quellen     Optional: Tests und Seiten, auf die sich die Seite beruft, als Liste zum Anklicken: [{ name, url, text }]
+  quellen     Optional: Tests und Seiten, auf die sich die Seite beruft: [{ name, url, text }]. url nur bei neutralen Seiten
+              ohne Kaufknöpfe (z. B. Destatis). Testseiten mit eigenen Affiliate-Links nur als Text, ohne url (Lukas 04.11.2026)
   geprueft    Optional: wann dieses Produkt zuletzt geprüft wurde ("2026-11-04"), sonst gilt geprueft aus einstellungen.js
   erfahrung   Optional: deine eigene Erfahrung mit titel, text und bild
   preisstand  Optional: wann du die Preise dieses Produkts zuletzt geprüft hast (nur für dich)
