@@ -16,9 +16,9 @@ const GESCHENKE = {
   hinweis: "Le ore e gli euro sono stime con i valori iniziali dei calcolatori. In ogni pagina prodotto puoi calcolarli con più precisione per la casa di chi riceve il regalo.",
   gruppen: [
     { titel: "Per la prima casa", text: "Poco spazio, poco tempo e ancora nessuna routine domestica: questi aiutanti rendono l’inizio più facile.",
-      produkte: ["airfryer", "reiskocher", "smarte-lampen", "wassersprudler"] },
+      produkte: ["airfryer", "reiskocher", "mini-geschirrspueler", "smarte-lampen", "wassersprudler"] },
     { titel: "Per genitori con poco tempo", text: "Quando la giornata con i bambini è già piena, aiuta tutto ciò che funziona da solo nel frattempo.",
-      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion", "mini-geschirrspueler"] },
+      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Per gli amanti del caffè e delle cose buone", text: "Per chi ama concedersi qualcosa: un buon caffè, pane appena sfornato e un libro la sera.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
     { titel: "Per chi non ama pulire", text: "Il mio consiglio più importante è qui in cima. Dopo, passare l’aspirapolvere non è più un pensiero per la maggior parte delle persone.",

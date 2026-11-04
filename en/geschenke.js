@@ -16,9 +16,9 @@ const GESCHENKE = {
   hinweis: "The hours and euros are estimates using the calculators' starting values. On each product page you can work them out more precisely for the household of the person you're giving it to.",
   gruppen: [
     { titel: "For a first flat of their own", text: "Little space, little time and no household routine yet: these helpers make the start easier.",
-      produkte: ["airfryer", "reiskocher", "smarte-lampen", "wassersprudler"] },
+      produkte: ["airfryer", "reiskocher", "mini-geschirrspueler", "smarte-lampen", "wassersprudler"] },
     { titel: "For parents with little time", text: "When the day with children is already full, anything that runs by itself on the side helps.",
-      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion", "mini-geschirrspueler"] },
+      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "For coffee lovers and people who enjoy the good things", text: "For everyone who likes to treat themselves: good coffee, freshly baked bread and a book in the evening.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
     { titel: "For everyone who doesn't like cleaning", text: "My top tip is right at the top here. After that, vacuuming is no longer an issue for most people.",

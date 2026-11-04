@@ -16,9 +16,9 @@ const GESCHENKE = {
   hinweis: "Les heures et les euros sont des estimations avec les valeurs de départ des calculateurs. Sur chaque page produit, vous pouvez les calculer plus précisément pour le foyer de la personne à qui vous l’offrez.",
   gruppen: [
     { titel: "Pour un premier logement", text: "Peu de place, peu de temps et pas encore de routine pour le ménage : ces appareils facilitent le départ.",
-      produkte: ["airfryer", "reiskocher", "smarte-lampen", "wassersprudler"] },
+      produkte: ["airfryer", "reiskocher", "mini-geschirrspueler", "smarte-lampen", "wassersprudler"] },
     { titel: "Pour les parents qui manquent de temps", text: "Quand la journée avec les enfants est déjà bien remplie, tout ce qui fonctionne tout seul à côté aide.",
-      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion", "mini-geschirrspueler"] },
+      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Pour les amateurs de café et les épicuriens", text: "Pour tous ceux qui aiment se faire plaisir : un bon café, du pain tout juste cuit et un livre le soir.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
     { titel: "Pour tous ceux qui n’aiment pas faire le ménage", text: "Mon conseil le plus important est tout en haut. Ensuite, passer l’aspirateur n’est plus un sujet pour la plupart des gens.",

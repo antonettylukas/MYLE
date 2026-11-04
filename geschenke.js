@@ -20,9 +20,9 @@ const GESCHENKE = {
   hinweis: "Die Stunden und Euro sind Schätzungen mit den Startwerten der Rechner. Auf jeder Produktseite kannst du sie für den Haushalt des Beschenkten genauer ausrechnen.",
   gruppen: [
     { titel: "Für die erste eigene Wohnung", text: "Wenig Platz, wenig Zeit und noch keine Routine im Haushalt: Diese Helfer machen den Start leichter.",
-      produkte: ["airfryer", "reiskocher", "smarte-lampen", "wassersprudler"] },
+      produkte: ["airfryer", "reiskocher", "mini-geschirrspueler", "smarte-lampen", "wassersprudler"] },
     { titel: "Für Eltern mit wenig Zeit", text: "Wenn der Tag mit Kindern schon voll ist, hilft alles, was selbstständig nebenbei läuft.",
-      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion", "mini-geschirrspueler"] },
+      produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Für Kaffeeliebhaber und Genießer", text: "Für alle, die sich gern etwas gönnen: guter Kaffee, frisch gebackenes Brot und ein Buch am Abend.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
     { titel: "Für alle, die nicht gern putzen", text: "Mein wichtigster Tipp steht hier ganz oben. Danach ist Staubsaugen für die meisten kein Thema mehr.",
