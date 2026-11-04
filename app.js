@@ -348,7 +348,7 @@
         </div>`;
   const kopf = document.getElementById("kopf");
   if (kopf) {
-    const nlLink = typ === "start" || typ === "produkt" ? "#newsletter" : "./#newsletter";
+    const nlLink = typ === "start" || typ === "produkt" || typ === "geschenke" ? "#newsletter" : "./#newsletter";
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
         <a class="logo" href="./">${logo()}</a>
@@ -364,19 +364,25 @@
           "* Advertising link: if you buy through it, I get a small commission. The price stays the same for you. As an Amazon Associate I earn from qualifying purchases. All savings are estimates.")}</p></div>
         <div class="wrap fuss-zeile">
           <span>© ${new Date().getFullYear()} ${seitenName}</span>
-          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="./">${t("Startseite", "Home")}</a><a href="impressum">${t("Impressum", "Legal notice")}</a><a href="datenschutz">${t("Datenschutz", "Privacy policy")}</a></nav>
+          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="./">${t("Startseite", "Home")}</a><a href="geschenke">${t("Geschenkideen", "Gift ideas")}</a><a href="impressum">${t("Impressum", "Legal notice")}</a><a href="datenschutz">${t("Datenschutz", "Privacy policy")}</a></nav>
         </div>
       </footer>`;
   }
 
   if (typ === "start") baueStart();
   if (typ === "produkt") baueProduktseite();
+  if (typ === "geschenke") baueGeschenke();
   document.querySelectorAll("[data-newsletter]").forEach(baueNewsletter);
   springeZumAnker();
   seitenwechsel();
 
   // ---------- Startseite ----------
   function baueStart() {
+    // Vom 1. November bis Heiligabend: Hinweis auf die Geschenke-Seite unter dem Einstieg
+    const heute = new Date(), intro = document.querySelector("main .intro");
+    if (intro && (heute.getMonth() === 10 || (heute.getMonth() === 11 && heute.getDate() <= 24))) {
+      intro.insertAdjacentHTML("beforeend", `<a class="saison-hinweis" href="geschenke"><span class="saison-symbol" aria-hidden="true">🎁</span><span><strong>${t("Geschenke, die Zeit schenken", "Gifts that give time")}</strong><span>${t("Meine Ideen für Weihnachten", "My ideas for Christmas")}</span></span></a>`);
+    }
     const liste = document.getElementById("uebersicht");
     if (liste) {
       liste.innerHTML = PRODUKTE.map(karte).join("");
@@ -414,6 +420,66 @@
         </div>
         ${weitere.length ? `<div class="um-reihe">${weitere.map(f => foto(f.datei, f.text || "")).join("")}</div>` : ""}`;
     }
+  }
+
+  // ---------- Geschenke-Seite (myle.life/geschenke, Texte in geschenke.js) ----------
+  // Pro Gerät: wie viel Zeit (oder Geld) es im Jahr spart, gerechnet mit den Startwerten seines Rechners
+  function jahresErsparnis(p) {
+    const r = HAT_RECHNER && p.rechner && RECHNER[p.rechner];
+    if (!r) return null;
+    try {
+      const w = Object.fromEntries(felderFuer(p, r).map(f => [f.id, f.wert]));
+      const e = r.berechne(w);
+      return { std: (e.minutenProWoche * 52) / 60, geld: e.euroProMonat * 12 };
+    } catch (e) { return null; }
+  }
+  function baueGeschenke() {
+    const ziel = document.getElementById("geschenkseite");
+    const G = typeof GESCHENKE !== "undefined" ? GESCHENKE : null;
+    if (!ziel || !G) return;
+    const spart = p => {
+      const e = jahresErsparnis(p);
+      if (e && e.std >= 5) return G.spartStd.replace("{n}", nf(e.std >= 20 ? Math.round(e.std / 5) * 5 : Math.round(e.std)));
+      if (e && e.geld >= 20) return G.spartGeld.replace("{geld}", euro(Math.round(e.geld / 5) * 5));
+      return LABELS[(p.spart || [])[0]] || "";
+    };
+    const karteFuer = id => {
+      const p = PRODUKTE.find(x => x.id === id);
+      if (!p || p.keinModell) return "";
+      return `
+        <a class="karte geschenk" href="${esc(p.id)}">
+          <div class="karte-bild">${p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">` : standbild(p)}</div>
+          <div class="karte-text">
+            <span class="geschenk-spart">${esc(spart(p))}</span>
+            <span class="karte-name">${esc(p.name)}</span>
+            <span class="karte-zeile">${esc((G.warum || {})[id] || p.nutzen || p.kurz)}</span>
+            <span class="karte-fuss"><span class="mehr">${esc(G.knopf)}</span></span>
+          </div>
+        </a>`;
+    };
+    const gruppen = (G.gruppen || []).map((g, i) => ({ ...g, karten: (g.produkte || []).map(karteFuer).filter(Boolean) })).filter(g => g.karten.length);
+    ziel.innerHTML = `
+      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(G.eyebrow)}</span></nav>
+      <section class="wrap intro geschenk-intro">
+        <span class="eyebrow">${esc(G.eyebrow)}</span>
+        <h1>${esc(G.titel)}</h1>
+        ${(G.einstieg || []).map(x => `<p>${esc(x)}</p>`).join("")}
+        <ul class="geschenk-sprung">${gruppen.map((g, i) => `<li><a class="chip" href="#gruppe-${i + 1}">${esc(g.titel)}</a></li>`).join("")}</ul>
+      </section>
+      ${gruppen.map((g, i) => `
+      <section class="wrap p-block geschenk-gruppe" id="gruppe-${i + 1}" aria-labelledby="gruppe-${i + 1}-titel">
+        <h2 class="p-titel" id="gruppe-${i + 1}-titel">${esc(g.titel)}</h2>
+        ${g.text ? `<p class="p-intro">${esc(g.text)}</p>` : ""}
+        <div class="karten">${g.karten.join("")}</div>
+      </section>`).join("")}
+      ${G.hinweis ? `<p class="wrap geschenk-hinweis">${esc(G.hinweis)}</p>` : ""}
+      ${(G.fragen || []).length ? `
+      <section class="wrap p-block" id="fragen" aria-labelledby="fragen-titel">
+        <h2 class="p-titel" id="fragen-titel">${esc(G.fragenTitel)}</h2>
+        <div class="faq">${G.fragen.map(q => `<details class="frage"><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
+      </section>` : ""}
+      <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
+    einfrieren(ziel);
   }
 
   // ---------- Produktseite ----------

@@ -97,7 +97,7 @@ for zeile in lies("_redirects").splitlines():
     teile = zeile.split()
     if len(teile) >= 2 and not zeile.startswith("#"):
         ziel = teile[1].lstrip("/")
-        if not (ziel == "" or os.path.exists(ziel) or os.path.exists(ziel + "index.html")):
+        if not (ziel == "" or os.path.exists(ziel) or os.path.exists(ziel + ".html") or os.path.exists(ziel + "index.html")):
             fehler.append(f"_redirects: Ziel {teile[1]} gibt es nicht")
 
 # 7. Für Suchmaschinen: jede Seite mit hreflang hat canonical und og:url auf ihre eigene Adresse,

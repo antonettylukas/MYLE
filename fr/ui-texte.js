@@ -142,5 +142,9 @@ const UI_TEXTE = {
   "unterm Strich": "net",
   "rechnet sich nicht": "pas rentable",
   "Kaufpreis wieder drin": "Rentabilisé",
-  "Mit deinen Angaben spart dir das Gerät kein Geld.": "Avec vos réglages, l’appareil ne vous fait pas économiser d’argent."
+  "Mit deinen Angaben spart dir das Gerät kein Geld.": "Avec vos réglages, l’appareil ne vous fait pas économiser d’argent.",
+  // Geschenke-Seite (04.11.2026)
+  "Geschenkideen": "Idées cadeaux",
+  "Geschenke, die Zeit schenken": "Des cadeaux qui font gagner du temps",
+  "Meine Ideen für Weihnachten": "Mes idées pour Noël"
 };

@@ -142,5 +142,9 @@ const UI_TEXTE = {
   "unterm Strich": "netti",
   "rechnet sich nicht": "non conviene",
   "Kaufpreis wieder drin": "Si ripaga",
-  "Mit deinen Angaben spart dir das Gerät kein Geld.": "Con i tuoi valori l’apparecchio non ti fa risparmiare soldi."
+  "Mit deinen Angaben spart dir das Gerät kein Geld.": "Con i tuoi valori l’apparecchio non ti fa risparmiare soldi.",
+  // Geschenke-Seite (04.11.2026)
+  "Geschenkideen": "Idee regalo",
+  "Geschenke, die Zeit schenken": "Regali che regalano tempo",
+  "Meine Ideen für Weihnachten": "Le mie idee per Natale"
 };

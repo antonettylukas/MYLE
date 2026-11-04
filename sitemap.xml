@@ -25,6 +25,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/balkonkraftwerk"/>
   </url>
   <url>
+    <loc>https://myle.life/geschenke</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/geschenke"/>
+  </url>
+  <url>
     <loc>https://myle.life/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/"/>
@@ -183,6 +191,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/balkonkraftwerk"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/balkonkraftwerk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/balkonkraftwerk"/>
+  </url>
+  <url>
+    <loc>https://myle.life/en/geschenke</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/geschenke"/>
   </url>
   <url>
     <loc>https://myle.life/en/</loc>
@@ -345,6 +361,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/balkonkraftwerk"/>
   </url>
   <url>
+    <loc>https://myle.life/fr/geschenke</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/geschenke"/>
+  </url>
+  <url>
     <loc>https://myle.life/fr/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/"/>
@@ -503,6 +527,14 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/balkonkraftwerk"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/balkonkraftwerk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/balkonkraftwerk"/>
+  </url>
+  <url>
+    <loc>https://myle.life/it/geschenke</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myle.life/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myle.life/en/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://myle.life/fr/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://myle.life/it/geschenke"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myle.life/geschenke"/>
   </url>
   <url>
     <loc>https://myle.life/it/</loc>

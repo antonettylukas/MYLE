@@ -9,3 +9,7 @@
 /it/fenstersauger /it/ 301
 # Die Prüf-Dateien für GitHub gehören nicht zur Website
 /.github/* / 301
+# Geschenke-Seite: kurze Adressen in der jeweiligen Sprache (zum Teilen), die Seite selbst heißt überall geschenke
+/en/gifts /en/geschenke 301
+/fr/cadeaux /fr/geschenke 301
+/it/regali /it/geschenke 301

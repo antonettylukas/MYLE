@@ -695,3 +695,17 @@ footer a { color: var(--muted); }
 .quellen a { font-weight: 600; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .quelle-text { color: var(--muted); }
 .quellen-details summary { cursor: pointer; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+
+/* Geschenke-Seite (myle.life/geschenke) und saisonaler Hinweis auf der Startseite */
+.geschenk-intro { padding-bottom: 8px; }
+.geschenk-intro p + p { margin-top: 12px; }
+.geschenk-sprung { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 22px 0 0; padding: 0; }
+.geschenk-sprung .chip { display: inline-block; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.geschenk-gruppe { scroll-margin-top: 20px; }
+.geschenk-spart { align-self: flex-start; margin-bottom: 8px; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--marker); color: var(--marker-ink); }
+.geschenk-hinweis { margin-top: 8px; font-size: 0.88rem; color: var(--muted); }
+.saison-hinweis { display: flex; align-items: center; gap: 14px; width: fit-content; max-width: 100%; margin-top: var(--intro-luft); padding: 12px 18px 12px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: border-color .15s; }
+.saison-hinweis:hover { border-color: var(--accent); }
+.saison-symbol { font-size: 1.6rem; line-height: 1; }
+.saison-hinweis strong { display: block; font-family: var(--font-display); font-size: 1.02rem; }
+.saison-hinweis strong + span { display: block; font-size: 0.88rem; color: var(--accent); font-weight: 700; }

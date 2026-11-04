@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Rendert die 80 Seiten mit hreflang (Startseiten und Produktseiten in 4 Sprachen) einmal im Browser vor und
+// Rendert alle Seiten mit hreflang (Startseiten, Produktseiten und Geschenke-Seite in 4 Sprachen) einmal im Browser vor und
 // schreibt Kopf, Fuß, Seiteninhalt und JSON-LD fertig in die HTML-Dateien. So sehen Suchmaschinen und KI-Suchen,
 // die kein JavaScript ausführen, den ganzen Text. Für Besucher ändert sich nichts: app.js ersetzt die Blöcke beim Laden.
 // Die Blöcke stehen zwischen <!--vr--> und <!--/vr-->; im <head> trägt der Block die Prüfsumme der Eingaben,
@@ -60,6 +60,7 @@ function holeTeile(SITE) {
   const typ = document.body.dataset.seite;
   const teile = { kopf: aussen("body > header.top"), fuss: aussen("body > footer") };
   if (typ === "produkt") teile.produktseite = innen("main#produktseite");
+  if (typ === "geschenke") teile.geschenkseite = innen("main#geschenkseite");
   if (typ === "start") { teile.uebersicht = innen("#uebersicht"); teile["ueber-mich"] = innen("#ueber-mich"); }
 
   const lang = document.documentElement.lang;
@@ -110,7 +111,7 @@ function einsetzen(quelle, { teile, ld }, summe, datei) {
   rein(/<\/head>/, () => `<!--vr:${summe}--><script type="application/ld+json">${json}</script><!--/vr-->\n</head>`);
   for (const [id, html] of Object.entries(teile)) {
     if (html == null) throw new Error(`${datei}: Teil ${id} fehlt nach dem Rendern`);
-    if (id === "produktseite") rein(/(<main id="produktseite">[\s\S]*?)(<\/main>)/, (m, a, b) => `${a}${block(html)}\n${b}`);
+    if (id === "produktseite" || id === "geschenkseite") rein(new RegExp(`(<main id="${id}">[\\s\\S]*?)(<\\/main>)`), (m, a, b) => `${a}${block(html)}\n${b}`);
     else if (id === "kopf" || id === "fuss") rein(new RegExp(`<div id="${id}"></div>`), () => `<div id="${id}">${block(html)}</div>`);
     else rein(new RegExp(`(<div[^>]*\\bid="${id}"[^>]*>)(</div>)`), (m, a, b) => `${a}${block(html)}${b}`);
   }
