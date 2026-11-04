@@ -455,6 +455,7 @@
         <div class="p-hero-text">
           <span class="eyebrow">${esc(p.kategorie)}</span>
           <h1>${esc(p.name)}</h1>
+          ${geprueftZeile(p, true)}
           <p class="lead">${esc(p.kurz)}</p>
           <p class="leise">${esc(p.warum)}</p>
           ${badges(p)}${danach}
@@ -619,10 +620,12 @@
   }
 
   // „Zuletzt geprüft: November 2026“ unter der Einleitung der Modelle. Datum aus produkte.js (Feld geprueft) oder einstellungen.js.
-  function geprueftZeile(p) {
+  // Mit oben = true als kleines Abzeichen direkt unter dem Seitentitel (Lukas 04.11.: unten allein war zu versteckt).
+  function geprueftZeile(p, oben) {
     const d = String(p.geprueft || S.geprueft || "");
     if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) return "";
     const monat = new Date(d + "T12:00:00Z").toLocaleDateString(ZAHLEN, { month: "long", year: "numeric", timeZone: "UTC" });
+    if (oben) return `<p class="geprueft-oben"><span aria-hidden="true">✓</span> ${t("Zuletzt geprüft", "Last checked")}${DOPPELPUNKT} <time datetime="${d}">${monat}</time></p>`;
     return `<p class="geprueft">${t("Zuletzt geprüft", "Last checked")}${DOPPELPUNKT} <time datetime="${d}">${monat}</time></p>`;
   }
 
