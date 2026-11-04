@@ -1670,6 +1670,19 @@ const PRODUKTE = [
       { f: "Do I still need cleaning products?", a: "Yes. The brush does the scrubbing for you, but not the cleaning product. Let it work for a few minutes, then brush. For dirty grout you need a strong cleaner." },
       { f: "Can it scratch surfaces?", a: "Yes, that can happen. Hard bristles and scouring pads can scratch acrylic, glass-ceramic, stainless steel or paintwork. Use a soft sponge or a microfibre pad there and test it on a hidden spot first." }
     ],
+    quellen: [
+      { name: "Good Housekeeping Institute (USA): eight electric scrubbers tested in the lab (February 2026)", text: "the HOTO Electric Spin Scrubber was the best, its battery lasted almost 2 hours 20 minutes, some brushes needed only a little pressure" },
+      { name: "Consumer Reports (USA): eight cordless power scrubbers tested (March 2026)", text: "most clean about equally well, the biggest difference is the battery, with the pole you reach corners without stretching, kneeling or bending, grout needs a strong cleaner" },
+      { name: "Bob Vila (USA): nine scrubbers tested over four weeks (November 2025)", text: "with a Dremel brush, cleaning took a fraction of the time, when pressed firmly it sometimes stopped" },
+      { name: "The Gadgeteer: HOTO Electric Spin Scrubber review (November 2024)", text: "thanks to the pole, the shower floor was easy to clean, it comes with six brushes and pads and a hook-and-loop holder" },
+      { name: "Don't Waste Your Money: review of a Leebein scrubber (April 2024)", text: "almost an hour of cleaning in one go, charging takes about three hours, too much pressure slows it down, dirty grout did not get properly clean" },
+      { name: "China-Gadgets: review of a Tilswall scrubber (January 2022)", text: "really easier and faster, spray first and let it work, then brush, the oven too with the small flat brush, two thirds of the battery left after 30 minutes, charging 3 to 4 hours" },
+      { name: "Yahoo Shopping: eight scrubbers tested at home (June 2026)", text: "shower walls and floor without a step stool and without kneeling, the bathroom in under 30 minutes, charging 3 to 4 hours" },
+      { name: "Instruction manuals of the Tchibo and SEECODE scrubbers", text: "round brush for tub and tiles, corner brush for grout, flat brush for floor and windows, splashes yes, submerging no, take off the heads and rinse them, too much pressure slows it down, bristles and scouring pads can scratch glass, paint and stainless steel, test on a hidden spot first" },
+      { name: "Bosch (press release on the UniversalBrush, March 2021), Galaxus (review, July 2021) and GIGA (Aldi scrubber)", text: "pads for burnt-on dirt in the oven and for the oven glass, microfibre pad for glass ceramic and stainless steel, heads for the sink and window frames, the oven door came clean without scratches, replacement brushes and pads cost extra" },
+      { name: "Duravit (care instructions for acrylic) and hausjournal.net (October 2024)", text: "scouring agents and abrasive sponges scratch acrylic, microfibre or cotton cloths are better" },
+      { name: "Manufacturer information", text: "pole, heads, battery and charging according to Vicmayun, Kedoyoy and HOTO, battery times of 60 to 90 minutes also according to Tchibo, Silvercrest, Koohoro, Vikeri and YKYI" }
+    ],
     rechner: "buerste",
     video: "buerste"
   },
@@ -1737,6 +1750,19 @@ const PRODUKTE = [
       { f: "Which size do I take?", a: "The lid should be a little smaller than the rim, then it stretches over it. A set with six sizes covers everything from half a lemon to a bowl just over 20 cm across. For bigger bowls you need a set with an extra-large lid." },
       { f: "How long do they last?", a: "That depends on the quality. At America's Test Kitchen all the lids survived ten dishwasher cycles without damage; for other testers, some tore while being put on. Don't stretch them more than necessary and keep them away from knives and sharp edges." },
       { f: "Do they take on smells?", a: "Yes, after onion, garlic or mustard they often smell for a while. It fades with every wash. If the smell lingers, rub them with a little baking soda and a damp sponge." }
+    ],
+    quellen: [
+      { name: "America's Test Kitchen (USA): silicone lids test (November 2020)", text: "only tight when fully stretched over the rim, then even a tilted bowl did not leak, all survived ten dishwasher cycles, not every set fitted a large mixing bowl, in the microwave steam pushed the lids off, smells like mustard only faded after several washes" },
+      { name: "Hip2Save (USA): hands-on test (November 2019) with reader comments up to 2024", text: "nothing dripped from the upside-down jar, the square container fitted perfectly, for readers they popped off cold or damp containers, two lids tore when overstretched" },
+      { name: "ABC15 (US TV station): stretch lids test (February 2016)", text: "two lids tore while being put on, the water did not spill, best use the lid that is slightly smaller than the rim" },
+      { name: "BestReviews (USA): silicone stretch lids guide (January 2023)", text: "stretching them over large openings takes some effort, in the fridge they sometimes slip off, the rim must be dry, some tear easily, most are microwave-safe, XL lids stretch to 30 cm" },
+      { name: "Food Huggers (maker of silicone covers) and Hunker", text: "onion and garlic leave a smell that fades again, rubbing with baking soda and a damp sponge helps" },
+      { name: "Verbraucherzentrale (German consumer advice centre): aluminium foil and trays guide (as of August 2024)", url: "https://www.verbraucherzentrale.de/wissen/lebensmittel/auswaehlen-zubereiten-aufbewahren/alufolie-gefahr-fuer-die-gesundheit-17347", text: "when salt or acid meets aluminium foil, aluminium dissolves from the foil (in German)" },
+      { name: "German Federal Institute for Risk Assessment (BfR): press release (March 2018)", url: "https://www.bfr.bund.de/en/press-release/aluminium-and-food-almost-half-the-population-tries-to-avoid-aluminium-in-everyday-life/", text: "do not wrap acidic or salty foods in aluminium foil" },
+      { name: "Utopia (July 2026)", text: "acidic and salty foods dissolve aluminium from the foil" },
+      { name: "Öko-Test (issue 4/2012), Cook's Illustrated (June 2018), PureWow (April 2016) and heidelberg24 (July 2023)", text: "cling film likes to stick to itself and does not cling to every bowl, for example some plastic containers" },
+      { name: "Prices at Rossmann and Knuspr (German shops, October 2026) and Öko-Test", text: "a piece of cling film costs 0.4 to 2.5 cents, a piece of aluminium foil 2 to 8 cents and a freezer bag 2.5 to 5 cents, for the calculator" },
+      { name: "Manufacturer information", text: "sizes and dishwasher use according to yeestone, BEAUTLOHAS and Lékué, sizes, microwave, dry rim and care according to DI ORO, onegol, GIR and Pampered Chef" }
     ],
     rechner: "deckel",
     video: "deckel"
@@ -1821,6 +1847,24 @@ const PRODUKTE = [
       { f: "Do I need Kindle Unlimited?", a: "No. It's an optional subscription with a large selection of books. It's only worth it if you read a lot and like the selection. Best try it first, there's often a free trial month." },
       { f: "Are there ads on the device?", a: "On the Kindle there can be. When buying, check whether it says “with ads”. That version shows offers on the lock screen and on the home screen and is a little cheaper." },
       { f: "How long does the battery last?", a: "According to Amazon, a Kindle lasts 6 to 12 weeks depending on the model, if you read for about half an hour a day with Wi-Fi off. With a lot of light and Wi-Fi on, the battery runs out sooner." }
+    ],
+    quellen: [
+      { name: "ZDFheute (German public broadcaster): e-book reader test and buying guide (August 2025)", url: "https://www.zdfheute.de/ratgeber/buch-ebook-reader-test-kaufberatung-100.html", text: "e-books are on average 20 percent cheaper than printed editions, the Onleihe only works with Tolino and PocketBook, e-paper is easy on the eyes (in German)" },
+      { name: "Perlentaucher and Statista (2016)", text: "rule of thumb among publishers: the e-book about 20 percent below the printed book, bestseller e-books in 2016 on average 19 percent below the hardcover" },
+      { name: "Onleihe: compatibility list for e-book readers (as of August 2017)", url: "https://cms.onleihe.de/opencms/sites/default/divibib-customer/common/de/eBookReaderKompatibilitaetsliste_Onleihe.pdf", text: "Kindle readers are a closed system and not compatible, on the Tolino you borrow directly, with Kobo the books go from the computer to the device by cable (in German)" },
+      { name: "Quick guide “Onleihe 3 on the PocketBook” (ekz)", url: "https://medienwelten.ekz.de/_files_media/downloads/kurzleitung_-_onleihe_3_auf_dem_pocketbook_2319.pdf", text: "PocketBook e-readers have direct access to the Onleihe (in German)" },
+      { name: "GIGA (October 2025), bluepick and testberichte.de", text: "the Onleihe does not work on any Kindle because Kindles do not support its copy protection, with PocketBook you borrow without going via the computer" },
+      { name: "Court of Justice of the European Union: press release 159/19 on the Tom Kabinet judgment (December 2019)", url: "https://curia.europa.eu/site/upload/docs/application/pdf/2019-12/cp190159en.pdf", text: "selling used e-books requires the consent of the authors" },
+      { name: "GIGA and Macwelt", text: "you cannot simply pass Kindle books on to friends, sharing only works via the Family Library within your own household" },
+      { name: "PLOS ONE: Benedetto et al., E-Readers and Visual Fatigue (December 2013)", url: "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0083676", text: "E-Ink reads much like paper, an LCD screen tired the eyes more" },
+      { name: "Project Gutenberg: help on tablets, phones and e-readers", url: "https://www.gutenberg.org/help/mobile.html", text: "free e-books without login and without copy protection, also for the Kindle" },
+      { name: "Publisher details at Thalia (German bookshop, October 2026)", text: "paperbacks with 384 to 400 pages weigh 301 to 318 g and are 2.5 cm thick, thicker ones up to 481 g, for the calculator and the video" },
+      { name: "GameStar (August 2024) and SlashGear (October 2025)", text: "an e-book is usually 1 to 5 MB, so a few thousand books fit on 16 GB" },
+      { name: "Tests and reports on the Kindle models: Notebookcheck, WinFuture, t-online, t3n, TechRadar, Gizmodo, Tom's Guide, allesebook and ComputerBase", text: "size and weight, warm light only from the Paperwhite up, the basic Kindle is not waterproof, Paperwhite and Colorsoft are protected against fresh water to IPX8" },
+      { name: "Tests of colour e-readers: Der Standard, Galaxus, netzwelt, PC Games Hardware, TechRadar, Expert Reviews, homeandsmart, bluepick, ifun.de, GamePro and mobiflip", text: "they cost more, their colours are paler than on a tablet, good for comics, books for children and pictures, for plain novels a device without colour is enough" },
+      { name: "Tests of the other devices: bluepick, testberichte.de, MyEreader and testsieger.de", text: "PocketBook Verse Pro with warm light, waterproof and with the Onleihe app, Kobo Clara BW with warm light and waterproof, PocketBook Era Color with the Onleihe right on the device" },
+      { name: "GIGA (August 2025), GSMArena, Liliputing, The eBook Reader, netzwelt and mobiflip", text: "with Send to Kindle, e-books without copy protection go to the device via the app or email, the version with ads shows offers on the lock screen and home screen, Kindle Unlimited often comes with free months to try it" },
+      { name: "Manufacturer information", text: "screen, weight, battery, light, water protection, ads and Family Library according to Amazon, Kobo devices and borrowing via the computer according to Kobo, PocketBook devices according to PocketBook, Onleihe on the Tolino according to a Tolino press release (April 2026)" }
     ],
     rechner: "kindle",
     video: "kindle"

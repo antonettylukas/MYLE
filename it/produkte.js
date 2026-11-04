@@ -1735,6 +1735,19 @@ const PRODUKTE = [
       { f: "Mi serve comunque un detergente?", a: "Sì. La spazzola ti risparmia lo strofinare, ma non il detergente. Lascialo agire qualche minuto e poi spazzola. Per le fughe sporche ti serve un detergente forte." },
       { f: "Può graffiare le superfici?", a: "Sì, può succedere. Setole dure e pad abrasivi possono graffiare acrilico, vetroceramica, acciaio inox o vernice. Lì usa una spugna morbida o un pad in microfibra e prova prima in un punto nascosto." }
     ],
+    quellen: [
+      { name: "Good Housekeeping Institute (USA): otto spazzole testate in laboratorio (febbraio 2026)", text: "la HOTO Electric Spin Scrubber è stata la migliore, la batteria è durata quasi 2 ore e 20 minuti, alcune spazzole richiedevano solo una leggera pressione" },
+      { name: "Consumer Reports (USA): otto spazzole a batteria testate (marzo 2026)", text: "la maggior parte pulisce più o meno allo stesso modo, la differenza più grande è la batteria, con il manico arrivi negli angoli senza allungarti, inginocchiarti o piegarti, per le fughe serve un detergente forte" },
+      { name: "Bob Vila (USA): nove spazzole testate per quattro settimane (novembre 2025)", text: "con una spazzola Dremel la pulizia ha richiesto una frazione del tempo, premuta forte a volte si fermava" },
+      { name: "The Gadgeteer: test della HOTO Electric Spin Scrubber (novembre 2024)", text: "grazie all’asta il piatto doccia era facile da pulire, nella confezione ci sono sei spazzole e tamponi e un supporto a strappo" },
+      { name: "Don't Waste Your Money: test di una spazzola Leebein (aprile 2024)", text: "quasi un’ora di pulizia di fila, ricarica di circa tre ore, troppa pressione la rallenta, le fughe sporche non sono diventate davvero pulite" },
+      { name: "China-Gadgets: test di una spazzola Tilswall (gennaio 2022)", text: "davvero più facile e più veloce, prima spruzzare e lasciare agire, poi spazzolare, anche il forno con la piccola spazzola piatta, dopo 30 minuti ancora due terzi di batteria, ricarica da 3 a 4 ore" },
+      { name: "Yahoo Shopping: otto spazzole provate a casa (giugno 2026)", text: "pareti e piatto doccia senza sgabello e senza inginocchiarsi, il bagno in meno di 30 minuti, ricarica da 3 a 4 ore" },
+      { name: "Istruzioni per l’uso delle spazzole di Tchibo e SEECODE", text: "spazzola rotonda per vasca e piastrelle, spazzola angolare per le fughe, spazzola piatta per pavimento e finestre, spruzzi sì, immersione no, togliere le testine e sciacquarle, troppa pressione la rallenta, setole e tamponi abrasivi possono graffiare vetro, vernice e acciaio inox, provare prima in un punto poco visibile" },
+      { name: "Bosch (comunicato sulla UniversalBrush, marzo 2021), Galaxus (test, luglio 2021) e GIGA (spazzola di Aldi)", text: "tamponi per lo sporco incrostato nel forno e per il vetro del forno, tampone in microfibra per vetroceramica e acciaio inox, testine per lavello e telai delle finestre, lo sportello del forno è tornato pulito senza graffi, spazzole e tamponi di ricambio costano a parte" },
+      { name: "Duravit (consigli di pulizia per l’acrilico) e hausjournal.net (ottobre 2024)", text: "i prodotti abrasivi e le spugne abrasive graffiano l’acrilico, meglio panni in microfibra o cotone" },
+      { name: "Dati dei produttori", text: "manico, testine, batteria e ricarica secondo Vicmayun, Kedoyoy e HOTO, autonomie da 60 a 90 minuti anche secondo Tchibo, Silvercrest, Koohoro, Vikeri e YKYI" }
+    ],
     rechner: "buerste",
     video: "buerste"
   },
@@ -1802,6 +1815,19 @@ const PRODUKTE = [
       { f: "Che misura scelgo?", a: "Il coperchio deve essere un po’ più piccolo del bordo, così si tende sopra. Un set con sei misure va dal mezzo limone alla ciotola di poco più di 20 cm di diametro. Per ciotole più grandi ti serve un set con un coperchio extra large." },
       { f: "Quanto durano?", a: "Dipende dalla qualità. Da America's Test Kitchen tutti i coperchi hanno superato dieci lavaggi senza danni, con altri tester alcuni si sono strappati già mentre li mettevano. Non tenderli più del necessario e tienili lontani da coltelli e spigoli taglienti." },
       { f: "Prendono gli odori?", a: "Sì, dopo cipolla, aglio o senape spesso hanno odore per un po’. Con ogni lavaggio diminuisce. Se l’odore resta, strofinali con un po’ di bicarbonato e una spugna umida." }
+    ],
+    quellen: [
+      { name: "America's Test Kitchen (USA): test di coperchi in silicone (novembre 2020)", text: "chiudono bene solo se tirati del tutto sopra il bordo, allora nemmeno una ciotola inclinata perdeva, tutti hanno superato dieci lavaggi in lavastoviglie, non tutti i set andavano su una ciotola grande, nel microonde il vapore sollevava i coperchi, odori come la senape sparivano solo dopo diversi lavaggi" },
+      { name: "Hip2Save (USA): prova pratica (novembre 2019) con commenti dei lettori fino al 2024", text: "dal barattolo capovolto non è uscito nulla, il contenitore quadrato era coperto alla perfezione, ad alcuni lettori saltavano via da contenitori freddi o umidi, due coperchi si sono strappati perché troppo tesi" },
+      { name: "ABC15 (emittente televisiva americana): test di coperchi elastici (febbraio 2016)", text: "due coperchi si sono strappati mentre li mettevano, l’acqua non è uscita, conviene prendere il coperchio un po’ più piccolo del bordo" },
+      { name: "BestReviews (USA): guida ai coperchi elastici in silicone (gennaio 2023)", text: "sulle aperture grandi ci vuole un po’ di forza per metterli, in frigorifero a volte scivolano via, il bordo deve essere asciutto, alcuni si strappano facilmente, la maggior parte va nel microonde, i coperchi XL si allargano fino a 30 cm" },
+      { name: "Food Huggers (produttore di coperchi in silicone) e Hunker", text: "cipolla e aglio lasciano un odore che poi svanisce, aiuta strofinarli con bicarbonato e una spugna umida" },
+      { name: "Verbraucherzentrale (centro tedesco per i consumatori): guida su fogli e vaschette di alluminio (aggiornata ad agosto 2024)", url: "https://www.verbraucherzentrale.de/wissen/lebensmittel/auswaehlen-zubereiten-aufbewahren/alufolie-gefahr-fuer-die-gesundheit-17347", text: "quando sale o acidi toccano il foglio di alluminio, l’alluminio si scioglie dal foglio (in tedesco)" },
+      { name: "Istituto federale tedesco per la valutazione del rischio (BfR): comunicato stampa (marzo 2018)", url: "https://www.bfr.bund.de/en/press-release/aluminium-and-food-almost-half-the-population-tries-to-avoid-aluminium-in-everyday-life/", text: "non avvolgere cibi acidi o salati nel foglio di alluminio (in inglese)" },
+      { name: "Utopia (luglio 2026)", text: "cibi acidi e salati sciolgono l’alluminio dal foglio" },
+      { name: "Öko-Test (numero 4/2012), Cook's Illustrated (giugno 2018), PureWow (aprile 2016) e heidelberg24 (luglio 2023)", text: "la pellicola trasparente si attacca volentieri a se stessa e non aderisce a ogni ciotola, per esempio ad alcuni contenitori di plastica" },
+      { name: "Prezzi da Rossmann e Knuspr (negozi tedeschi, ottobre 2026) e Öko-Test", text: "un pezzo di pellicola costa da 0,4 a 2,5 centesimi, un pezzo di alluminio da 2 a 8 centesimi e un sacchetto per congelatore da 2,5 a 5 centesimi, per il calcolatore" },
+      { name: "Dati dei produttori", text: "misure e lavastoviglie secondo yeestone, BEAUTLOHAS e Lékué, misure, microonde, bordo asciutto e cura secondo DI ORO, onegol, GIR e Pampered Chef" }
     ],
     rechner: "deckel",
     video: "deckel"
@@ -1883,6 +1909,24 @@ const PRODUKTE = [
       { f: "Mi serve Kindle Unlimited?", a: "No. È un abbonamento facoltativo con una grande scelta di libri. Conviene solo se leggi molto e la scelta ti piace. Meglio provarlo prima, spesso c’è un mese di prova gratuito." },
       { f: "Sull’apparecchio c’è pubblicità?", a: "Sul Kindle può esserci. Quando compri, controlla se c’è scritto “con pubblicità”. Questa versione mostra offerte sulla schermata di blocco e sulla schermata iniziale, e costa un po’ meno." },
       { f: "Quanto dura la batteria?", a: "Secondo Amazon un Kindle dura da 6 a 12 settimane a seconda del modello, se leggi circa mezz’ora al giorno con il Wi-Fi spento. Con molta luce e il Wi-Fi acceso la batteria si scarica prima." }
+    ],
+    quellen: [
+      { name: "ZDFheute (televisione pubblica tedesca): test e guida all’acquisto degli e-reader (agosto 2025)", url: "https://www.zdfheute.de/ratgeber/buch-ebook-reader-test-kaufberatung-100.html", text: "gli e-book costano in media il 20 % in meno delle edizioni stampate, l’Onleihe funziona solo con Tolino e PocketBook, l’inchiostro elettronico è riposante per gli occhi (in tedesco)" },
+      { name: "Perlentaucher e Statista (2016)", text: "regola pratica degli editori: l’e-book circa il 20 % sotto il libro stampato, gli e-book bestseller nel 2016 in media il 19 % sotto l’edizione rilegata" },
+      { name: "Onleihe: elenco di compatibilità degli e-reader (aggiornato ad agosto 2017)", url: "https://cms.onleihe.de/opencms/sites/default/divibib-customer/common/de/eBookReaderKompatibilitaetsliste_Onleihe.pdf", text: "i lettori Kindle sono un sistema chiuso e non sono compatibili, con il Tolino prendi in prestito direttamente, con Kobo i libri passano dal computer all’apparecchio via cavo (in tedesco)" },
+      { name: "Guida rapida all’Onleihe sul PocketBook (ekz)", url: "https://medienwelten.ekz.de/_files_media/downloads/kurzleitung_-_onleihe_3_auf_dem_pocketbook_2319.pdf", text: "gli e-reader PocketBook hanno accesso diretto all’Onleihe (in tedesco)" },
+      { name: "GIGA (ottobre 2025), bluepick e testberichte.de", text: "l’Onleihe non funziona su nessun Kindle, perché i Kindle non supportano la sua protezione dalla copia, con PocketBook prendi in prestito senza passare dal computer" },
+      { name: "Corte di giustizia dell’Unione europea: comunicato stampa 159/19 sulla sentenza Tom Kabinet (dicembre 2019)", url: "https://curia.europa.eu/site/upload/docs/application/pdf/2019-12/cp190159en.pdf", text: "chi rivende e-book usati ha bisogno del consenso degli autori (in inglese)" },
+      { name: "GIGA e Macwelt", text: "non puoi semplicemente passare i libri Kindle agli amici, la condivisione funziona solo con la biblioteca familiare della tua casa" },
+      { name: "PLOS ONE: Benedetto e altri, E-Readers and Visual Fatigue (dicembre 2013)", url: "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0083676", text: "l’inchiostro elettronico si legge quasi come la carta, uno schermo LCD ha affaticato di più gli occhi (in inglese)" },
+      { name: "Project Gutenberg: guida per tablet, telefoni ed e-reader", url: "https://www.gutenberg.org/help/mobile.html", text: "e-book gratuiti senza registrazione e senza protezione dalla copia, anche per il Kindle (in inglese)" },
+      { name: "Dati degli editori su Thalia (libreria tedesca, ottobre 2026)", text: "i tascabili da 384 a 400 pagine pesano da 301 a 318 g e sono spessi 2,5 cm, quelli più spessi fino a 481 g, per il calcolatore e il video" },
+      { name: "GameStar (agosto 2024) e SlashGear (ottobre 2025)", text: "un e-book occupa di solito da 1 a 5 MB, quindi su 16 GB stanno alcune migliaia di libri" },
+      { name: "Test e articoli sui modelli Kindle: Notebookcheck, WinFuture, t-online, t3n, TechRadar, Gizmodo, Tom's Guide, allesebook e ComputerBase", text: "dimensioni e peso, luce calda solo dal Paperwhite in su, il Kindle base non è impermeabile, Paperwhite e Colorsoft sono protetti dall’acqua dolce secondo IPX8" },
+      { name: "Test degli e-reader a colori: Der Standard, Galaxus, netzwelt, PC Games Hardware, TechRadar, Expert Reviews, homeandsmart, bluepick, ifun.de, GamePro e mobiflip", text: "costano di più, i colori sono più pallidi che su un tablet, vanno bene per fumetti, libri per bambini e immagini, per i romanzi basta un apparecchio senza colori" },
+      { name: "Test degli altri apparecchi: bluepick, testberichte.de, MyEreader e testsieger.de", text: "Kobo Clara BW con luce calda e impermeabile, PocketBook Era Color con l’Onleihe direttamente sull’apparecchio" },
+      { name: "GIGA (agosto 2025), GSMArena, Liliputing, The eBook Reader, netzwelt e mobiflip", text: "con Send to Kindle gli e-book senza protezione dalla copia arrivano sull’apparecchio tramite app o e-mail, la versione con pubblicità mostra offerte sulla schermata di blocco e sulla schermata iniziale, Kindle Unlimited si trova spesso con mesi gratuiti per provarlo" },
+      { name: "Dati dei produttori", text: "schermo, peso, batteria, luce, protezione dall’acqua, pubblicità e biblioteca familiare secondo Amazon, apparecchi Kobo e prestito tramite computer secondo Kobo, apparecchi PocketBook secondo PocketBook, Onleihe sul Tolino secondo un comunicato di Tolino (aprile 2026)" }
     ],
     rechner: "kindle",
     video: "kindle"

@@ -1957,6 +1957,19 @@ const PRODUKTE = [
       { f: "Brauche ich trotzdem Putzmittel?", a: "Ja. Die Bürste nimmt dir das Schrubben ab, den Reiniger aber nicht. Lass ihn ein paar Minuten einwirken und bürste dann. Für verschmutzte Fugen brauchst du einen kräftigen Reiniger." },
       { f: "Kann sie Oberflächen zerkratzen?", a: "Ja, das kann passieren. Harte Borsten und Scheuerpads können Acryl, Glaskeramik, Edelstahl oder Lack zerkratzen. Nimm dort einen weichen Schwamm oder ein Mikrofaserpad und probier es erst an einer unauffälligen Stelle." }
     ],
+    quellen: [
+      { name: "Good Housekeeping Institute (USA): acht Putzbürsten im Labortest (Februar 2026)", text: "die HOTO Electric Spin Scrubber war die beste, ihr Akku lief fast 2 Stunden 20 Minuten, manche Bürsten brauchten nur wenig Druck" },
+      { name: "Consumer Reports (USA): acht Akku-Putzbürsten im Test (März 2026)", text: "die meisten putzen etwa gleich gut, der größte Unterschied ist der Akku, mit dem Stiel kommst du ohne Strecken, Knien oder Bücken in die Ecken, für Fugen brauchst du einen kräftigen Reiniger" },
+      { name: "Bob Vila (USA): neun Putzbürsten vier Wochen lang im Test (November 2025)", text: "mit einer Bürste von Dremel ging das Putzen in einem Bruchteil der Zeit, fest angedrückt blieb sie manchmal stehen" },
+      { name: "The Gadgeteer: Test der HOTO Electric Spin Scrubber (November 2024)", text: "mit der Stange war der Duschboden leicht zu putzen, dabei sind sechs Bürsten und Pads und ein Klett-Halter" },
+      { name: "Don't Waste Your Money: Test einer Putzbürste von Leebein (April 2024)", text: "fast eine Stunde am Stück geputzt, Laden rund drei Stunden, bei zu viel Druck wird sie langsamer, verschmutzte Fugen wurden nicht richtig sauber" },
+      { name: "China-Gadgets: Test einer Putzbürste von Tilswall (Januar 2022)", text: "wirklich einfacher und schneller, erst einsprühen und einwirken lassen, dann bürsten, auch den Backofen mit der kleinen Flachbürste, nach 30 Minuten noch zwei Drittel Akku, Laden 3 bis 4 Stunden" },
+      { name: "Yahoo Shopping: acht Putzbürsten im Praxistest (Juni 2026)", text: "Duschwände und Boden ohne Tritthocker und ohne Knien, das Bad in unter 30 Minuten, Laden 3 bis 4 Stunden" },
+      { name: "Bedienungsanleitungen der Putzbürsten von Tchibo und SEECODE", text: "Rundbürste für Wanne und Fliesen, Eckbürste für Fugen, Flachbürste für Boden und Fenster, Spritzwasser ja, untertauchen nein, Aufsätze abnehmen und abspülen, bei zu viel Druck wird sie langsamer, Borsten und Scheuerpads können Glas, Lack und Edelstahl zerkratzen, erst an einer unauffälligen Stelle testen" },
+      { name: "Bosch (Pressemitteilung zur UniversalBrush, März 2021), Galaxus (Test, Juli 2021) und GIGA (Putzbürste von Aldi)", text: "Pads für Eingebranntes im Backofen und fürs Ofenglas, Mikrofaserpad für Glaskeramik und Edelstahl, Aufsätze für Spüle und Fensterrahmen, die Ofentür wurde ohne Kratzer sauber, Ersatzbürsten und Pads kosten extra" },
+      { name: "Duravit (Pflegehinweise für Acryl) und hausjournal.net (Oktober 2024)", text: "Scheuermittel und scheuernde Schwämme verkratzen Acryl, besser Mikrofaser- oder Baumwolltücher" },
+      { name: "Herstellerangaben", text: "Stiel, Aufsätze, Akku und Laden laut Kedoyoy und HOTO, Akkulaufzeiten von 60 bis 90 Minuten auch laut Tchibo, Silvercrest, Koohoro, Vikeri und YKYI" }
+    ],
     rechner: "buerste",
     video: "buerste"
   },
@@ -2023,6 +2036,19 @@ const PRODUKTE = [
       { f: "Welche Größe nehme ich?", a: "Der Deckel sollte etwas kleiner sein als der Rand, er dehnt sich dann darüber. Ein Set mit sechs Größen reicht von der halben Zitrone bis zur Schüssel mit gut 20 cm Durchmesser. Für größere Schüsseln brauchst du ein Set mit extra großem Deckel." },
       { f: "Wie lange halten sie?", a: "Das hängt von der Qualität ab. Bei America's Test Kitchen überstanden alle Deckel zehn Spülgänge ohne Schaden, bei anderen Testern rissen manche schon beim Aufziehen. Dehn sie nicht stärker als nötig und halte sie von Messern und scharfen Kanten fern." },
       { f: "Nehmen sie Gerüche an?", a: "Ja, nach Zwiebel, Knoblauch oder Senf riechen sie oft eine Weile. Mit jedem Spülgang wird es weniger. Hält sich der Geruch, reib sie mit etwas Natron und einem feuchten Schwamm ab." }
+    ],
+    quellen: [
+      { name: "America's Test Kitchen (USA): Test von Silikon-Deckeln (November 2020)", text: "dicht nur ganz übergezogen, dann lief selbst aus einer gekippten Schüssel nichts aus, alle überstanden zehn Spülgänge, nicht jedes Set passte auf eine große Rührschüssel, in der Mikrowelle drückte Dampf die Deckel ab, Gerüche wie Senf ließen erst nach mehreren Spülgängen nach" },
+      { name: "Hip2Save (USA): Praxistest (November 2019) mit Leserkommentaren bis 2024", text: "aus dem umgedrehten Glas tropfte nichts, die eckige Dose passte genau, bei Lesern sprangen sie von kalten oder feuchten Gefäßen ab, zwei Deckel rissen beim Überdehnen" },
+      { name: "ABC15 (US-Fernsehsender): Test von Stretch-Deckeln (Februar 2016)", text: "zwei Deckel rissen beim Aufziehen, Wasser lief nicht aus, am besten nimmst du den Deckel, der etwas kleiner ist als der Rand" },
+      { name: "BestReviews (USA): Ratgeber Silikon-Stretchdeckel (Januar 2023)", text: "über große Öffnungen braucht das Aufziehen etwas Kraft, im Kühlschrank rutschen sie manchmal ab, der Rand muss trocken sein, manche reißen leicht, die meisten dürfen in die Mikrowelle, XL-Deckel dehnen sich bis 30 cm" },
+      { name: "Food Huggers (Hersteller von Silikon-Deckeln) und Hunker", text: "Zwiebel und Knoblauch hinterlassen einen Geruch, der wieder verfliegt, dagegen hilft Natron mit einem feuchten Schwamm" },
+      { name: "Verbraucherzentrale: Ratgeber Alufolie und Aluschalen (Stand August 2024)", url: "https://www.verbraucherzentrale.de/wissen/lebensmittel/auswaehlen-zubereiten-aufbewahren/alufolie-gefahr-fuer-die-gesundheit-17347", text: "wenn Salz oder Säure auf Alufolie trifft, löst sich Aluminium aus der Folie" },
+      { name: "Bundesinstitut für Risikobewertung (BfR): Presseinformation 10/2018 (März 2018)", url: "https://www.bfr.bund.de/presseinformation/aluminium-und-lebensmittel-knapp-die-haelfte-der-bevoelkerung-versucht-aluminium-im-alltag-zu-vermeiden/", text: "saure oder salzhaltige Lebensmittel nicht in Alufolie einwickeln" },
+      { name: "Utopia (Juli 2026)", text: "Saures und Salziges löst Aluminium aus der Alufolie" },
+      { name: "Öko-Test (Heft 4/2012), Cook's Illustrated (Juni 2018), PureWow (April 2016) und heidelberg24 (Juli 2023)", text: "Frischhaltefolie klebt gern an sich selbst und haftet nicht an jeder Schüssel, etwa an manchen Plastikdosen" },
+      { name: "Preise bei Rossmann und Knuspr (Oktober 2026) und Öko-Test", text: "ein Stück Frischhaltefolie kostet 0,4 bis 2,5 Cent, ein Stück Alufolie 2 bis 8 Cent und ein Gefrierbeutel 2,5 bis 5 Cent, für den Rechner" },
+      { name: "Herstellerangaben", text: "Größen und Spülmaschine laut yeestone, BEAUTLOHAS und Lékué, Größen, Mikrowelle, trockener Rand und Pflege laut DI ORO, onegol, GIR und Pampered Chef" }
     ],
     rechner: "deckel",
     video: "deckel"
@@ -2106,6 +2132,24 @@ const PRODUKTE = [
       { f: "Brauche ich Kindle Unlimited?", a: "Nein. Das ist ein freiwilliges Abo mit einer großen Auswahl an Büchern. Es lohnt sich nur, wenn du viel liest und dir die Auswahl gefällt. Teste es am besten vorher, oft gibt es einen kostenlosen Probemonat." },
       { f: "Ist auf dem Gerät Werbung?", a: "Beim Kindle kann das sein. Achte beim Kauf darauf, ob „mit Werbung“ dabeisteht. Diese Version zeigt Angebote auf dem Sperrbildschirm und auf der Startseite und ist etwas günstiger." },
       { f: "Wie lange hält der Akku?", a: "Laut Amazon hält ein Kindle je nach Modell 6 bis 12 Wochen, wenn du etwa eine halbe Stunde am Tag liest und das WLAN aus ist. Mit viel Licht und WLAN ist der Akku früher leer." }
+    ],
+    quellen: [
+      { name: "ZDFheute: E-Book-Reader im Test, mit Kaufberatung (August 2025)", url: "https://www.zdfheute.de/ratgeber/buch-ebook-reader-test-kaufberatung-100.html", text: "E-Books sind im Schnitt 20 Prozent günstiger als gedruckte Ausgaben, die Onleihe funktioniert nur mit Tolino und PocketBook, das E-Paper ist augenfreundlich" },
+      { name: "Perlentaucher und Statista (2016)", text: "Faustregel der Verlage: das E-Book etwa 20 Prozent unter dem gedruckten Buch, Bestseller-E-Books 2016 im Schnitt 19 Prozent unter dem Hardcover" },
+      { name: "Onleihe: Kompatibilitätsliste für E-Book-Reader (Stand August 2017)", url: "https://cms.onleihe.de/opencms/sites/default/divibib-customer/common/de/eBookReaderKompatibilitaetsliste_Onleihe.pdf", text: "Kindle-Reader sind ein geschlossenes System und nicht kompatibel, am Tolino leihst du direkt, beim Kobo kommen die Bücher per Kabel vom Computer aufs Gerät" },
+      { name: "Kurzanleitung „Onleihe 3 auf dem PocketBook“ (ekz)", url: "https://medienwelten.ekz.de/_files_media/downloads/kurzleitung_-_onleihe_3_auf_dem_pocketbook_2319.pdf", text: "die PocketBook-E-Reader haben direkten Zugriff auf die Onleihe" },
+      { name: "GIGA (Oktober 2025), bluepick und testberichte.de", text: "die Onleihe läuft auf keinem Kindle, weil die Kindle-Reader ihren Kopierschutz nicht unterstützen, mit PocketBook leihst du ohne Umweg über den Computer" },
+      { name: "Gerichtshof der Europäischen Union: Pressemitteilung 159/19 zum Urteil Tom Kabinet (Dezember 2019)", url: "https://curia.europa.eu/site/upload/docs/application/pdf/2019-12/cp190159de.pdf", text: "wer gebrauchte E-Books weiterverkauft, braucht die Zustimmung der Urheber" },
+      { name: "GIGA und Macwelt", text: "Kindle-Bücher kannst du nicht einfach an Freunde weitergeben, teilen geht nur über die Familienbibliothek im eigenen Haushalt" },
+      { name: "PLOS ONE: Benedetto u. a., E-Readers and Visual Fatigue (Dezember 2013)", url: "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0083676", text: "E-Ink liest sich ähnlich wie Papier, ein LCD-Bildschirm ermüdete die Augen stärker (auf Englisch)" },
+      { name: "Project Gutenberg: Hilfe zu Tablets, Handys und E-Readern", url: "https://www.gutenberg.org/help/mobile.html", text: "kostenlose E-Books ohne Anmeldung und ohne Kopierschutz, auch für den Kindle (auf Englisch)" },
+      { name: "Verlagsangaben bei Thalia (Oktober 2026)", text: "Taschenbücher mit 384 bis 400 Seiten wiegen 301 bis 318 g und sind 2,5 cm dick, dickere bis 481 g, für den Rechner und das Video" },
+      { name: "GameStar (August 2024) und SlashGear (Oktober 2025)", text: "ein E-Book hat meist 1 bis 5 MB, auf 16 GB passen also einige tausend Bücher" },
+      { name: "Tests und Berichte zu den Kindle-Modellen: Notebookcheck, WinFuture, t-online, t3n, TechRadar, Gizmodo, Tom's Guide, allesebook und ComputerBase", text: "Größe und Gewicht, warmes Licht erst ab dem Paperwhite, der einfache Kindle ist nicht wasserdicht, Paperwhite und Colorsoft sind nach IPX8 gegen Süßwasser geschützt" },
+      { name: "Tests der Farb-E-Reader: Der Standard, Galaxus, netzwelt, PC Games Hardware, TechRadar, Expert Reviews, homeandsmart, bluepick, ifun.de, GamePro und mobiflip", text: "sie kosten mehr, ihre Farben sind blasser als auf einem Tablet, gut für Comics, Kinderbücher und Bilder, für reine Romane reicht ein Gerät ohne Farbe" },
+      { name: "Tests der anderen Geräte: bluepick, testberichte.de, MyEreader und testsieger.de", text: "PocketBook Verse Pro mit warmem Licht, wasserdicht und mit Onleihe-App, Kobo Clara BW mit warmem Licht und wasserdicht, PocketBook Era Color mit Onleihe direkt am Gerät" },
+      { name: "GIGA (August 2025), GSMArena, Liliputing, The eBook Reader, netzwelt und mobiflip", text: "mit Send to Kindle kommen E-Books ohne Kopierschutz per App oder E-Mail aufs Gerät, die Version mit Werbung zeigt Angebote auf Sperrbildschirm und Startseite, Kindle Unlimited gibt es immer wieder mit Gratis-Monaten zum Testen" },
+      { name: "Herstellerangaben", text: "Bildschirm, Gewicht, Akku, Licht, Wasserschutz, Werbung und Familienbibliothek laut Amazon, Kobo-Geräte und Ausleihe über den Computer laut Kobo, PocketBook-Geräte laut PocketBook, Onleihe am Tolino laut einer Pressemitteilung von Tolino (April 2026)" }
     ],
     rechner: "kindle",
     video: "kindle"
