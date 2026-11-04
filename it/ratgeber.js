@@ -219,9 +219,10 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "La mia esperienza dopo 14 anni",
+        titel: "La mia esperienza con il mio gatto",
         art: "erfahrung",
         absaetze: [
+          "Il mio primo robot aspirapolvere l’ho comprato anche per il gatto che avevo allora. Spargeva di continuo la lettiera per casa, e questo mi faceva impazzire. All’epoca, nella mia prima e seconda casa, il robot mi ha aiutato tantissimo con la lettiera.",
           "Uso robot aspirapolvere da 14 anni e da allora non ho quasi più dovuto passare l’aspirapolvere o lavare i pavimenti da solo. Il trucco più importante: impostare una programmazione. Così pulisce mentre lavoro, e ogni sera torno in una casa pulita."
         ]
       },

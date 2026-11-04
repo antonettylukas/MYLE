@@ -219,9 +219,10 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "My experience after 14 years",
+        titel: "My experience with my cat",
         art: "erfahrung",
         absaetze: [
+          "I bought my first robot vacuum partly because of the tomcat I had at the time. He was constantly scattering cat litter around the flat, and it drove me mad. Back then, in my first and second flat, the robot helped me a lot with the cat litter.",
           "I've been using robot vacuums for 14 years and since then I've hardly ever had to vacuum or mop myself. The most important trick: set a schedule. Then it cleans while I'm at work, and I come home to a clean flat every evening."
         ]
       },

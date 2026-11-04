@@ -219,9 +219,10 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "Mon expérience après 14 ans",
+        titel: "Mon expérience avec mon chat",
         art: "erfahrung",
         absaetze: [
+          "J’ai acheté mon premier robot aspirateur entre autres à cause du chat que j’avais à l’époque. Il éparpillait sans arrêt de la litière dans l’appartement, et ça me rendait fou. À l’époque, dans mon premier et mon deuxième logement, le robot m’a beaucoup aidé avec la litière.",
           "J’utilise des robots aspirateurs depuis 14 ans et depuis, je n’ai presque plus jamais eu à passer l’aspirateur ou la serpillière moi-même. L’astuce la plus importante : régler un programme. Il nettoie alors pendant que je travaille, et chaque soir je rentre dans un logement propre."
         ]
       },

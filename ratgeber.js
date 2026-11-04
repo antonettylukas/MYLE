@@ -297,9 +297,10 @@ const RATGEBER = [
         ]
       },
       {
-        titel: "Meine Erfahrung nach 14 Jahren",
+        titel: "Meine Erfahrung mit Kater",
         art: "erfahrung",
         absaetze: [
+          "Meinen ersten Saugroboter habe ich mir unter anderem wegen meines Katers gekauft, den ich zu der Zeit hatte. Der hat ständig Katzenstreu in der Wohnung verteilt, und das hat mich wahnsinnig gemacht. In meiner ersten und zweiten Wohnung damals hat mir der Roboter mit dem Katzenstreu sehr geholfen.",
           "Ich nutze seit 14 Jahren Saugroboter und musste seitdem so gut wie nie mehr selbst saugen oder wischen. Der wichtigste Kniff: Zeitplan einstellen. Dann putzt er, während ich arbeite, und ich komme jeden Abend in eine saubere Wohnung."
         ]
       },
