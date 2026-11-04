@@ -515,10 +515,10 @@
         <div>
           <span class="eyebrow">${t("Meine Empfehlung dazu", "My recommendation")}</span>
           <strong>${esc(p.name)}</strong>
-          <p>${esc(r.produktText || p.nutzen || p.kurz)}</p>
+          <p>${esc((r.verweis && r.verweis.text) || p.nutzen || p.kurz)}</p>
         </div>
         <div class="ratgeber-knoepfe">
-          <a class="buy" href="${esc(p.id)}">${t("Zur Empfehlung", "See my recommendation")}</a>
+          <a class="buy" href="${esc(p.id)}">${esc((r.verweis && r.verweis.knopf) || t("Zur Empfehlung", "See my recommendation"))}</a>
           ${p.rechner ? `<a class="text-link" href="${esc(p.id)}#rechner">${t("Für deinen Haushalt ausrechnen", "Work it out for your household")}</a>` : ""}
         </div>
       </aside>` : "";
@@ -528,7 +528,14 @@
         <h1>${esc(r.frage)}</h1>
         <p class="ratgeber-von">${t("Von {name}", "By {name}", { name: esc((UM && UM.name) || "Lukas") })}${monat ? ` · ${t("Zuletzt geprüft", "Last checked")}${DOPPELPUNKT} <time class="geprueft-datum" datetime="${esc(r.geprueft)}">${monat}</time>` : ""}</p>
         <div class="ratgeber-antwort"><span class="block-titel">${t("Kurz gesagt", "In short")}</span>${(Array.isArray(r.kurzantwort) ? r.kurzantwort : [r.kurzantwort]).map(x => `<p>${esc(x)}</p>`).join("")}</div>
-        ${(r.abschnitte || []).map(a => `
+        ${(r.abschnitte || []).map(a => a.art === "erfahrung" ? `
+        <section class="ratgeber-erfahrung">
+          <div class="erfahrung ohne-foto"><div class="erf-text">
+            <span class="block-titel">${esc(a.titel)}</span>
+            ${(a.absaetze || []).map(x => `<blockquote>${t("„", "“")}${esc(x)}${t("“", "”")}</blockquote>`).join("")}
+            ${UM ? `<div class="erf-wer">${UM.avatar || UM.foto ? `<img class="avatar" src="${esc(UM.avatar || UM.foto)}" alt="">` : ""}<span>${esc(UM.name)}, ${t("Autor dieser Seite", "author of this site")}</span></div>` : ""}
+          </div></div>
+        </section>` : `
         <section>
           <h2>${esc(a.titel)}</h2>
           ${(a.absaetze || []).map(x => `<p>${esc(x)}</p>`).join("")}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<!-- „Mich nicht zählen“: myle.life/?nicht-zaehlen merkt sich in diesem Browser, dass er nicht in die Besucherstatistik soll
+     (für Lukas' eigene Geräte, klappt auch mit VPN). Dann blockt eine Sicherheitsregel das Statistik-Skript von Cloudflare.
+     myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
+     ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
+<script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ratgeber: Lohnt sich das? Ehrliche Antworten · MYLE</title>
+<!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
+     (zum Beispiel Dark Reader oder dem Nachtmodus von Brave), dass sie die Farben nicht selbst umrechnen sollen. -->
+<meta name="color-scheme" content="light dark">
+<meta name="darkreader-lock">
+<meta name="description" content="Ehrliche Antworten auf Fragen wie „Lohnt sich ein Saugroboter für eine kleine Wohnung?“: kurz beantwortet, mit Zahlen, Quellen und einem Rechner für deinen Haushalt.">
+<meta property="og:title" content="Ratgeber: Lohnt sich das?">
+<meta property="og:description" content="Ehrliche Antworten auf Fragen wie „Lohnt sich ein Saugroboter für eine kleine Wohnung?“: kurz beantwortet, mit Zahlen, Quellen und einem Rechner für deinen Haushalt.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://myle.life/ratgeber">
+<meta property="og:site_name" content="MYLE">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://myle.life/bilder/vorschau/index.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="canonical" href="https://myle.life/ratgeber">
+<link rel="alternate" hreflang="de" href="https://myle.life/ratgeber">
+<link rel="alternate" hreflang="en" href="https://myle.life/en/ratgeber">
+<link rel="alternate" hreflang="fr" href="https://myle.life/fr/ratgeber">
+<link rel="alternate" hreflang="it" href="https://myle.life/it/ratgeber">
+<link rel="alternate" hreflang="x-default" href="https://myle.life/ratgeber">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css?v=20261104n">
+<link rel="stylesheet" href="videos.css?v=20261104n">
+<!--vr:dae761a81da1791e--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/ratgeber#seite","url":"https://myle.life/ratgeber","name":"Ratgeber: Lohnt sich das?","description":"Ehrliche Antworten auf Fragen wie „Lohnt sich ein Saugroboter für eine kleine Wohnung?“: kurz beantwortet, mit Zahlen, Quellen und einem Rechner für deinen Haushalt.","inLanguage":"de","isPartOf":{"@type":"WebSite","@id":"https://myle.life/#website","url":"https://myle.life/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/ratgeber#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/#ueber-mich"}},{"@type":"BreadcrumbList","@id":"https://myle.life/ratgeber#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"Alle Helfer","item":"https://myle.life/"},{"@type":"ListItem","position":2,"name":"Ehrliche Antworten auf die Frage: Lohnt sich das?","item":"https://myle.life/ratgeber"}]}]}</script><!--/vr-->
+</head>
+<!-- Diese Seite füllt sich aus ratgeber.js. -->
+<body data-seite="ratgeber-liste">
+<div id="kopf"><!--vr--><header class="top"><div class="wrap">
+<a class="logo" href="./"><span class="logo-name">MYLE</span><span class="logo-spruch"><b>m</b>ake <b>y</b>our <b>l</b>ife <b>e</b>asier</span></a>
+<nav aria-label="Hauptmenü"><a href="./#helfer">Alle Helfer</a><a href="./#ueber-mich">Über mich</a><a href="#newsletter">Newsletter</a><div class="sprache">
+<button type="button" class="sprache-knopf" aria-expanded="false" aria-controls="sprache-liste" aria-label="Sprache: Deutsch"><span class="flagge flagge-de" aria-hidden="true"></span><span class="sprache-code">DE</span><svg class="sprache-pfeil" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"></path></svg></button>
+<ul class="sprache-liste" id="sprache-liste" hidden="">
+<li><a href="/ratgeber" lang="de" hreflang="de" aria-current="true"><span class="flagge flagge-de" aria-hidden="true"></span><span>Deutsch</span></a></li>
+<li><a href="/en/ratgeber" lang="en" hreflang="en"><span class="flagge flagge-en" aria-hidden="true"></span><span>English</span></a></li>
+<li><a href="/fr/ratgeber" lang="fr" hreflang="fr"><span class="flagge flagge-fr" aria-hidden="true"></span><span>Français</span></a></li>
+<li><a href="/it/ratgeber" lang="it" hreflang="it"><span class="flagge flagge-it" aria-hidden="true"></span><span>Italiano</span></a></li>
+</ul>
+</div></nav>
+</div></header><!--/vr--></div>
+
+<main id="ratgeberseite">
+  <noscript><section class="wrap leer"><h1>Ratgeber: Lohnt sich das?</h1><p>Diese Seite braucht JavaScript. Bitte schalte es in deinem Browser ein.</p></section></noscript>
+<!--vr--><nav class="wrap brotkrumen" aria-label="Brotkrumen"><a href="./#helfer">Alle Helfer</a><span aria-hidden="true">/</span><span>Ratgeber</span></nav>
+<section class="wrap p-block ratgeber-liste intro">
+<span class="eyebrow">Ratgeber</span><h1>Ehrliche Antworten auf die Frage: Lohnt sich das?</h1>
+<div class="karten">
+<a class="karte ratgeber-karte" href="ratgeber-saugroboter-kleine-wohnung">
+<div class="karte-text">
+<span class="cat">Ratgeber</span>
+<span class="karte-name">Lohnt sich ein Saugroboter für eine kleine Wohnung?</span>
+<span class="karte-zeile">Ja, auch auf 30 bis 60 m² lohnt er sich für die meisten, und oft reicht schon ein Modell aus der Einstiegs- oder Mittelklasse. Saugst du sonst zweimal pro Woche und wischst einmal, sparst du laut meinem Rechner eine halbe bis knapp eine ganze Stunde pro Woche. Nichts für dich ist er, wenn die Station keinen Platz hat oder du vor dem Start nicht kurz aufräumen willst.</span>
+<span class="karte-fuss"><span class="mehr">Lesen</span></span>
+</div>
+</a>
+</div>
+</section>
+<section class="wrap p-block" id="newsletter"><div data-newsletter=""></div></section><!--/vr-->
+</main>
+
+<div id="fuss"><!--vr--><footer>
+<div class="wrap"><p class="notice">* Werbelink: Kaufst du darüber, bekomme ich eine kleine Provision. Der Preis bleibt für dich gleich. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Alle Ersparnisse sind Schätzungen.</p></div>
+<div class="wrap fuss-zeile">
+<span>© 2026 MYLE</span>
+<nav aria-label="Rechtliches"><a href="./">Startseite</a><a href="geschenke">Geschenkideen</a><a href="impressum">Impressum</a><a href="datenschutz">Datenschutz</a></nav>
+</div>
+</footer><!--/vr--></div>
+
+<script src="einstellungen.js?v=20261104n"></script>
+<script src="produkte.js?v=20261104n"></script>
+<script src="rechner.js?v=20261104n"></script>
+<script src="videos.js?v=20261104n"></script>
+<script src="ratgeber.js?v=20261104n"></script>
+<script src="app.js?v=20261104n"></script>
+</body>
+</html>

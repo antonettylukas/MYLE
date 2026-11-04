@@ -52,7 +52,7 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
     bild = f"bilder/vorschau/{slug}.jpg"
     kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild if os.path.exists(os.path.join(WURZEL, bild)) else "bilder/vorschau/index.jpg")
     kopf = kopf.replace("/saugroboter\"", f"/{slug}\"")
-    assert "saugroboter" not in kopf, f"{pre}{slug}: saugroboter steht noch im Kopf"
+    assert "saugroboter" not in kopf.replace(slug, ""), f"{pre}{slug}: saugroboter steht noch im Kopf"
     skripte = re.findall(r'<script src="[^"]+"></script>', rumpf)
     v = re.search(r"\?v=(\w+)", skripte[0]).group(1)
     i = next(k for k, s in enumerate(skripte) if "app.js" in s)
