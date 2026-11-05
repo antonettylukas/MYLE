@@ -396,7 +396,11 @@ window.baueVideo = baueVideo;
   };
 
   // Die Fahrten: erst die Küche, dann über die Schwelle ins Wohnzimmer (Szene 2), dann Wohn- und Schlafzimmer (Szene 3)
-  const KUECHE = fahrt([STATION, [64, 29], [64, 44], [28, 44], [28, 58], [64, 58], [100, 58]], 60, 1.4);
+  // Küche in zwei Teilen: A ab der Station, sobald die Tür zu ist (Szene 0), B nahtlos weiter bis zur Schwelle (Szene 1).
+  // ERLEDIGT_A zeichnet in Szene 1 die schon gefahrene Spur von A ohne Animation (Start weit in der Vergangenheit).
+  const KUECHE_A = fahrt([STATION, [64, 29], [64, 44], [28, 44]], 60, 1.25);
+  const ERLEDIGT_A = fahrt(KUECHE_A.punkte, 60, -20);
+  const KUECHE = fahrt([[28, 44], [28, 58], [64, 58], [100, 58]], 60, 0);
   const REST = fahrt([[100, 58], [100, 32], [206, 32], [206, 54], [100, 54], [100, 76], [206, 76], [206, 98], [100, 98], [100, 120], [206, 120], [206, 140], [100, 140], [100, 116], [62, 116], [62, 92], [70, 92], [70, 142], [20, 142], [20, 128], [50, 128]], 115, 0.4);
   const tSchwelle = schwellen(KUECHE)[0], tTeppich = teppichZeiten(REST)[0][0];
 
@@ -439,30 +443,30 @@ window.baueVideo = baueVideo;
 
   VIDEOS.saugroboter = { szenen: [
     {
-      dauer: 7, titel: "8:30 Uhr: Du gehst zur Arbeit",
-      text: "Die Wohnung bleibt so zurück, wie sie ist. Staub inklusive.",
-      svg: wohnung(staub(KUECHE) + staub(REST) + amPlatz(...STATION),
-        `<g class="schrift-dunkel v-ein" style="--d:.4s">${raumname(46, 50, "Küche")}${raumname(50, 128, "Schlafen")}${raumname(160, 146, "Wohnen")}</g>`) +
-        `<g class="v-geh" style="--dx:21px;--dy:-12px;--d:.6s;--len:2.2s"><g class="v-weg" style="--d:2.2s">${figur(tuer[0], tuer[1] - 8)}</g></g>
-         ${blase(tuer[0], tuer[1] - 58, "Bis später!", 0.2, 1.8)}
+      dauer: 4.5, titel: "8:30 Uhr: Du gehst zur Arbeit",
+      text: "Kaum ist die Tür zu, legt er los.",
+      svg: wohnung(spuren(KUECHE_A) + staub(KUECHE_A, true) + staub(KUECHE) + staub(REST) + fahrender(KUECHE_A),
+        `<g class="schrift-dunkel v-ein" style="--d:.15s">${raumname(70, 66, "Küche")}${raumname(50, 128, "Schlafen")}${raumname(160, 146, "Wohnen")}</g>`) +
+        `<g class="v-geh" style="--dx:21px;--dy:-12px;--d:.1s;--len:1.2s"><g class="v-weg" style="--d:1.05s">${figur(tuer[0], tuer[1] - 8)}</g></g>
+         ${blase(tuer[0], tuer[1] - 58, "Bis später!", 0.1, 1.3)}
          ${uhr(272, 40, "8:30", 255, 180)}
-         <text x="272" y="110" text-anchor="middle" class="t-mittel fett v-hoch" style="--d:3.2s">Tür zu.</text>
-         <text x="272" y="126" text-anchor="middle" class="t-klein leise v-hoch" style="--d:3.4s">Ab ins Büro.</text>`
+         <text x="272" y="110" text-anchor="middle" class="t-mittel fett v-hoch" style="--d:1.1s">Tür zu.</text>
+         <text x="272" y="126" text-anchor="middle" class="t-klein leise v-hoch" style="--d:1.2s">Ab ins Büro.</text>`
     },
     {
-      dauer: 7, titel: "9:00 Uhr: Er startet selbstständig",
+      dauer: 5, titel: "8:30 Uhr: Er startet selbstständig",
       text: "Dein Zeitplan in der App sagt: jetzt. Er saugt und wischt Raum für Raum und fährt einfach über leichte Türschwellen.",
-      svg: wohnung(spuren(KUECHE) + staub(KUECHE, true) + staub(REST) + fahrender(KUECHE)) +
-        `${uhr(272, 30, "9:00", 270, 0)}
+      svg: wohnung(spuren(ERLEDIGT_A) + spuren(KUECHE) + staub(KUECHE, true) + staub(REST) + fahrender(KUECHE)) +
+        `${uhr(272, 30, "8:30", 255, 180)}
          <g transform="translate(226 70)">
            <rect width="88" height="104" rx="10" fill="url(#v-dunkel)" filter="url(#v-sch)"/><rect x="5" y="8" width="78" height="88" rx="6" class="screen"/>
            <rect x="5" y="8" width="78" height="32" rx="6" fill="url(#v-glanz)" opacity=".5"/>
            <text x="44" y="25" text-anchor="middle" class="t-klein fett">Zeitplan</text>
-           <text x="44" y="38.5" text-anchor="middle" class="t-mini leise" style="font-size:8.6px">Mo–Fr, 9:00 Uhr</text>
+           <text x="44" y="38.5" text-anchor="middle" class="t-mini leise" style="font-size:8.6px">Mo–Fr, 8:30 Uhr</text>
            <text x="44" y="50" text-anchor="middle" class="t-mini leise" style="font-size:8.6px">Saugen + Wischen</text>
-           <rect x="31" y="59" width="26" height="14" rx="7" class="schalter v-faerb" style="--d:.3s"/>
-           <circle cx="50" cy="66" r="5" class="knopf v-knopf" style="--d:.3s"/>
-           <g transform="translate(44 86)"><g class="v-pop" style="--d:1s"><rect x="-38" y="-8" width="76" height="16" rx="8" class="blase-akzent"/><text y="3" text-anchor="middle" class="t-mini hell">Startet jetzt</text></g></g>
+           <rect x="31" y="59" width="26" height="14" rx="7" class="schalter v-faerb" style="--d:.1s"/>
+           <circle cx="50" cy="66" r="5" class="knopf v-knopf" style="--d:.1s"/>
+           <g transform="translate(44 86)"><g class="v-pop" style="--d:.3s"><rect x="-38" y="-8" width="76" height="16" rx="8" class="blase-akzent"/><text y="3" text-anchor="middle" class="t-mini hell">Startet jetzt</text></g></g>
          </g>
          ${hinweis(schwelle[0], schwelle[1] - 27, "Schwelle? Kein Problem", tSchwelle - 0.3, 2.6)}`
     },
