@@ -7,12 +7,13 @@
 @font-face { font-family: 'Figtree'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(schriften/figtree-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
-  --bg: #f4f7f5;
-  --surface: #ffffff;
-  --ink: #15211d;
-  --muted: #46544e;
-  --line: #dbe3df;
-  --strich: #b3c3bc;
+  /* Helle Version „Salbei“ (Lukas 05.11.2026): grünliche Flächen und Schrift im Logo-Grün wie die dunkle Version, nur hell */
+  --bg: #e6f0eb;
+  --surface: #f5faf7;
+  --ink: #12312a;
+  --muted: #3b5a50;
+  --line: #c6dbd1;
+  --strich: #9fbdb1;
   --accent: #0d6e5b;
   --accent-ink: #ffffff;
   --accent-soft: rgba(13, 110, 91, 0.14);
@@ -21,20 +22,20 @@
   --marker-ink: var(--logo-ink); /* Schrift auf gelben Feldern: gleiches dunkles Grün wie im Logo */
   --logo-ink: #12312a; /* MYLE-Schrift im Logo und Schrift auf gelben Feldern: dunkles Grün (Lukas, Abstufung 3), hell und dunkel gleich */
   --statt-hg: #12312a; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
-  --tile: #e3eee9;
-  --punkt-hg: rgba(255, 255, 255, 0.75); --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
-  --glas: rgba(236, 243, 240, 0.55); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(250, 252, 251, 0.62); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
-  --band: #0f3a31;
+  --tile: #d3e7dd;
+  --punkt-hg: rgba(255, 255, 255, 0.6); --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
+  --glas: rgba(214, 233, 224, 0.6); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(240, 248, 244, 0.7); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
+  --band: #12312a;
   --band-ink: #eaf4f0;
   --band-muted: #b5cdc4;
   --band-line: rgba(255, 255, 255, 0.28);
   --band-fehler: #ffb4a8;
-  --shadow: 0 1px 2px rgba(21, 33, 29, 0.05), 0 12px 28px -14px rgba(21, 33, 29, 0.22);
+  --shadow: 0 1px 2px rgba(18, 49, 42, 0.06), 0 12px 28px -14px rgba(18, 49, 42, 0.25);
   --shadow-pop: 0 2px 6px rgba(21, 33, 29, 0.08), 0 30px 64px -20px rgba(21, 33, 29, 0.45);
-  --karte-hg: var(--surface);
+  --karte-hg: #f7fbf9;
   --stufe-1: rgba(45, 142, 199, 0.14); --stufe-2: rgba(13, 110, 91, 0.13); --stufe-3: rgba(214, 160, 30, 0.2); /* Preisklassen-Schilder: dezent blau, grün, gold */
-  --karte-rand: #c4d1cb; /* Produktkarten: etwas kräftigerer Rand und ein sanfter Schatten, damit sie sich vom Hintergrund abheben */
-  --karte-schatten: 0 1px 3px rgba(21, 33, 29, 0.08), 0 10px 26px -8px rgba(21, 33, 29, 0.28);
+  --karte-rand: #b5cfc3; /* Produktkarten: etwas kräftigerer Rand und ein sanfter Schatten, damit sie sich vom Hintergrund abheben */
+  --karte-schatten: 0 1px 3px rgba(18, 49, 42, 0.08), 0 10px 26px -8px rgba(18, 49, 42, 0.26);
   --karte-schatten-hover: 0 2px 4px rgba(21, 33, 29, 0.09), 0 20px 40px -12px rgba(21, 33, 29, 0.38);
   /* Farben für die Erklärvideos */
   --v-himmel: #eef3f0; --v-boden: #ebe5d8; --v-staub: #9aa5a0; --v-wasser: #4f9fd8; --v-warm: #e2742e;

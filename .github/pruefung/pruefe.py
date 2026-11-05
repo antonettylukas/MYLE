@@ -133,10 +133,10 @@ if '<meta name="p:domain_verify" content="8ed2aeb5e21a67cf3b7b351a370d2077"/>' n
 # Bewertungsangaben (sonst: node .github/pruefung/vorrendern.js, Einzelheiten in vorgerendert.py)
 import vorgerendert
 fehler += vorgerendert.fehler()
-# Lukas 05.11.2026: MYLE ist immer dunkel, auch wenn der Browser hell eingestellt ist
+# Lukas 05.11.2026: heller Browser = helle Version „Salbei“, dunkler Browser = dunkle Version. Keine Seite erzwingt eine davon.
 for p in dateien(".html"):
-    if 'data-theme="dark">' not in lies(p).split("<head>", 1)[0]:
-        fehler.append(f'{p}: <html ... data-theme="dark"> fehlt (die Seite ist immer dunkel)')
+    if "data-theme=" in lies(p).split("<head>", 1)[0]:
+        fehler.append(f'{p}: <html> hat data-theme, die Seite soll dem Browser folgen (hell = Salbei, dunkel = dunkel)')
 # Kurzliste der Ratgeber für „Passende Ratgeber“ auf den Produktseiten (sonst: python3 .github/pruefung/ratgeber_seiten.py)
 import ratgeber_seiten
 for pre in ratgeber_seiten.SPRACHEN:
