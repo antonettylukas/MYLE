@@ -352,7 +352,7 @@
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
         <a class="logo" href="./">${logo()}</a>
-        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}</nav>
+        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="ratgeber"${["ratgeber", "ratgeber-liste"].includes(typ) ? ' aria-current="page"' : ""}>${t("Ratgeber", "Guides")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}</nav>
       </div></header>`;
     spracheSchalter();
   }
@@ -364,7 +364,7 @@
           "* Advertising link: if you buy through it, I get a small commission. The price stays the same for you. As an Amazon Associate I earn from qualifying purchases. All savings are estimates.")}</p></div>
         <div class="wrap fuss-zeile">
           <span>© ${new Date().getFullYear()} ${seitenName}</span>
-          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="./">${t("Startseite", "Home")}</a><a href="geschenke">${t("Geschenkideen", "Gift ideas")}</a><a href="impressum">${t("Impressum", "Legal notice")}</a><a href="datenschutz">${t("Datenschutz", "Privacy policy")}</a></nav>
+          <nav aria-label="${t("Rechtliches", "Legal")}"><a href="./">${t("Startseite", "Home")}</a><a href="geschenke">${t("Geschenkideen", "Gift ideas")}</a><a href="ratgeber">${t("Ratgeber", "Guides")}</a><a href="impressum">${t("Impressum", "Legal notice")}</a><a href="datenschutz">${t("Datenschutz", "Privacy policy")}</a></nav>
         </div>
       </footer>`;
   }
