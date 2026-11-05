@@ -110,6 +110,9 @@ for datei, adresse, alle in sitemap.seiten():
         fehler.append(f"{datei}: canonical fehlt oder zeigt nicht auf {adresse}")
     if f'<meta property="og:url" content="{adresse}">' not in t:
         fehler.append(f"{datei}: og:url fehlt oder zeigt nicht auf {adresse}")
+    # Große Vorschaubilder in Google (Discover, Bildersuche) erlauben
+    if '<meta name="robots" content="max-image-preview:large">' not in t:
+        fehler.append(f'{datei}: <meta name="robots" content="max-image-preview:large"> fehlt')
     # Vorschaubild für geteilte Links (WhatsApp, Facebook usw.): muss es im Ordner bilder/ geben
     bild = re.search(r'<meta property="og:image" content="https://myle\.life/([^"?]+)', t)
     if not bild:
