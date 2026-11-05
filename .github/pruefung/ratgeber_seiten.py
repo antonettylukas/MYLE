@@ -51,8 +51,11 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
     kopf = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{e(og)}">', kopf)
     kopf = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{e(beschreibung)}">', kopf)
     # Vorschaubild: eigenes, wenn es eins gibt, sonst das der Startseite
-    bild = f"bilder/vorschau/{slug}.jpg"
-    kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild if os.path.exists(os.path.join(WURZEL, bild)) else "bilder/vorschau/index.jpg")
+    # (Grafik-Thread liefert je Sprache ein eigenes Bild: ratgeber-<id>.jpg für de, ratgeber-<id>-en.jpg usw.)
+    lang = SPRACHEN[pre]
+    kandidaten = ([f"bilder/vorschau/{slug}-{lang}.jpg"] if lang != "de" else []) + [f"bilder/vorschau/{slug}.jpg", "bilder/vorschau/index.jpg"]
+    bild = next(b for b in kandidaten if os.path.exists(os.path.join(WURZEL, b)))
+    kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild)
     kopf = kopf.replace("/saugroboter\"", f"/{slug}\"")
     assert "saugroboter" not in kopf.replace(slug, ""), f"{pre}{slug}: saugroboter steht noch im Kopf"
     skripte = re.findall(r'<script src="[^"]+"></script>', rumpf)
