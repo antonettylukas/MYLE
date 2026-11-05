@@ -38,7 +38,8 @@
   --karte-schatten: 0 1px 3px rgba(18, 49, 42, 0.08), 0 10px 26px -8px rgba(18, 49, 42, 0.26);
   --karte-schatten-hover: 0 2px 4px rgba(21, 33, 29, 0.09), 0 20px 40px -12px rgba(21, 33, 29, 0.38);
   /* Farben für die Erklärvideos */
-  --v-himmel: #eef3f0; --v-boden: #ebe5d8; --v-staub: #9aa5a0; --v-wasser: #4f9fd8; --v-warm: #e2742e;
+  --v-figur: #2d6fa3; /* Menschen in den Erklärvideos und Ratgeber-Szenen: Blau, weil Weiß auf Salbei zu wenig Kontrast hat (Lukas 05.11.: kein schwarzes Männchen) */
+  --v-himmel: #e3efe9; --v-boden: #e6e0d1; --v-staub: #9aa5a0; --v-wasser: #4f9fd8; --v-warm: #e2742e;
   --v-gold: #e4b23a; --v-blass: #f1e3b8; --v-folie: rgba(120, 150, 170, 0.45); --v-deckel: #2d8ec7; --v-gruen: #4c9a5a;
   --v-fliese: #f8f9f9; --v-fuge: #d6dedb; --v-dreck: #a58a62; --v-dampf: #94a6a0;
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -61,6 +62,7 @@
     --karte-rand: #3a4e47;
     --karte-schatten: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.5), 0 12px 28px -8px rgba(0, 0, 0, 0.85);
     --karte-schatten-hover: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 4px rgba(0, 0, 0, 0.45), 0 20px 40px -14px rgba(0, 0, 0, 0.9);
+    --v-figur: #e8efec; /* im Dunkeln weiß */
     --v-himmel: #141f1b; --v-boden: #2b2a24; --v-staub: #6f7f78; --v-wasser: #5fb0ea; --v-warm: #f08c4a;
     --v-gold: #e8bd4f; --v-blass: #5b533a; --v-folie: rgba(150, 180, 200, 0.35); --v-deckel: #4aa6dc; --v-gruen: #5cab6a;
     --v-fliese: #222c29; --v-fuge: #34423d; --v-dreck: #8c7555; --v-dampf: #ffffff;
@@ -80,6 +82,7 @@
   --karte-rand: #3a4e47;
   --karte-schatten: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.5), 0 12px 28px -8px rgba(0, 0, 0, 0.85);
   --karte-schatten-hover: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 4px rgba(0, 0, 0, 0.45), 0 20px 40px -14px rgba(0, 0, 0, 0.9);
+  --v-figur: #e8efec;
   --v-himmel: #141f1b; --v-boden: #2b2a24; --v-staub: #6f7f78; --v-wasser: #5fb0ea; --v-warm: #f08c4a;
   --v-gold: #e8bd4f; --v-blass: #5b533a; --v-folie: rgba(150, 180, 200, 0.35); --v-deckel: #4aa6dc; --v-gruen: #5cab6a;
   --v-fliese: #222c29; --v-fuge: #34423d; --v-dreck: #8c7555; --v-dampf: #ffffff;

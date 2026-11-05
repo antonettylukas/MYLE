@@ -57,8 +57,8 @@
 .buehne .raum { font-size: 8px; fill: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
 .buehne .text-hg { fill: var(--surface); fill-opacity: .9; } /* Feld hinter Schrift über einer Zeichnung (videos.js hinterlegeSchrift) */
 .buehne .schrift-dunkel .text-hg { fill: #ffffff; }
-.figur { fill: var(--ink); }
-.figur-strich { stroke: var(--ink); stroke-width: 6; stroke-linecap: round; }
+.figur { fill: var(--v-figur, var(--ink)); }
+.figur-strich { stroke: var(--v-figur, var(--ink)); stroke-width: 6; stroke-linecap: round; }
 .figur-strich.dick { stroke-width: 12; }
 .boden { fill: var(--v-boden); }
 .wand { fill: none; stroke: var(--muted); stroke-width: 3; }
