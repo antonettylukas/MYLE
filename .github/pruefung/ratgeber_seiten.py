@@ -2,6 +2,8 @@
 # Baut die HTML-Seiten der Ratgeber aus ratgeber.js (je Sprache): ratgeber.html (Übersicht) und
 # ratgeber-<id>.html für jeden Eintrag. Titel und Beschreibung für Suchmaschinen kommen aus den Feldern
 # seitenTitel und beschreibung. Der Kopf (Statistik-Schalter, Farben, Symbole) kommt von saugroboter.html.
+# Ausserdem ratgeber-kurz.js (je Sprache): nur id, produkt, frage und erster Satz der Kurzantwort, damit die
+# Produktseiten ihre passenden Ratgeber verlinken können, ohne die ganze ratgeber.js zu laden.
 # Aufruf nach jedem neuen Ratgeber:  python3 .github/pruefung/ratgeber_seiten.py
 # danach wie immer: sitemap.py, vorrendern.js, pruefe.py.
 import html, json, os, re, subprocess
@@ -35,7 +37,7 @@ def eintraege(pre):
     if not os.path.exists(js):
         return []
     out = subprocess.run(["node", "-e", "const fs=require('fs');eval(fs.readFileSync(process.argv[1],'utf8')+';globalThis.R=RATGEBER');"
-                          "console.log(JSON.stringify(R.map(r=>({id:r.id,seitenTitel:r.seitenTitel||r.frage,beschreibung:r.beschreibung||'',frage:r.frage}))))", js],
+                          "console.log(JSON.stringify(R.map(r=>({id:r.id,produkt:r.produkt||'',seitenTitel:r.seitenTitel||r.frage,beschreibung:r.beschreibung||'',frage:r.frage,kurz:[].concat(r.kurzantwort||'')[0]}))))", js],
                          capture_output=True, text=True, check=True)
     return json.loads(out.stdout)
 
@@ -62,6 +64,13 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
             + "\n".join(skripte) + "\n</body>\n</html>\n")
 
 
+def kurz_text(rs):
+    kurz = [{"id": r["id"], "produkt": r["produkt"], "frage": r["frage"], "kurzantwort": r["kurz"]} for r in rs]
+    return ("// Automatisch gebaut von .github/pruefung/ratgeber_seiten.py aus ratgeber.js. Nicht von Hand ändern.\n"
+            "// Die Produktseiten zeigen damit „Passende Ratgeber“ (Feld produkt).\n"
+            "const RATGEBER_KURZ = [\n" + ",\n".join("  " + json.dumps(k, ensure_ascii=False) for k in kurz) + "\n];\n")
+
+
 def main():
     for pre, lang in SPRACHEN.items():
         rs = eintraege(pre)
@@ -73,6 +82,7 @@ def main():
             st = r["seitenTitel"]
             neu[f"ratgeber-{r['id']}.html"] = seite(pre, f"ratgeber-{r['id']}", f"{st} · MYLE", st, r["beschreibung"], r["frage"], nojs,
                                                     f'data-seite="ratgeber" data-ratgeber="{r["id"]}"')
+        neu["ratgeber-kurz.js"] = kurz_text(rs)
         for datei, text in neu.items():
             p = os.path.join(WURZEL, pre, datei)
             alt = BLOCK.sub("", open(p, encoding="utf-8").read()) if os.path.exists(p) else None

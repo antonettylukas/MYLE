@@ -158,5 +158,6 @@ const UI_TEXTE = {
   "Auf diese Tests und Seiten stütze ich mich in diesem Ratgeber.": "Ce guide s’appuie sur ces tests et ces pages.",
   "Weitere Ratgeber": "Autres conseils",
   "Lesen": "Lire",
+  "Passende Ratgeber": "Conseils sur ce sujet",
   "Ehrliche Antworten auf die Frage: Lohnt sich das?": "Des réponses honnêtes à la question : est-ce que ça vaut le coup ?"
 };

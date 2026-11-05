@@ -726,6 +726,7 @@ footer a { color: var(--muted); }
 .ratgeber-produkt p { margin: 0; color: var(--muted); }
 .ratgeber-knoepfe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
 .ratgeber-karte .karte-name { font-size: 1.2rem; font-size: clamp(1.05rem, 5.5cqi, 1.3rem); }
+.ratgeber-karte .karte-zeile { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .ratgeber-liste.intro h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4.2vw, 2.7rem); line-height: 1.1; margin: 8px 0 22px; }
 .ratgeber-tabelle { margin: 4px 0 12px; overflow-x: auto; }
 .ratgeber-tabelle table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }

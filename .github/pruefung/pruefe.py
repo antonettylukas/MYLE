@@ -130,6 +130,12 @@ if '<meta name="p:domain_verify" content="8ed2aeb5e21a67cf3b7b351a370d2077"/>' n
 # Bewertungsangaben (sonst: node .github/pruefung/vorrendern.js, Einzelheiten in vorgerendert.py)
 import vorgerendert
 fehler += vorgerendert.fehler()
+# Kurzliste der Ratgeber für „Passende Ratgeber“ auf den Produktseiten (sonst: python3 .github/pruefung/ratgeber_seiten.py)
+import ratgeber_seiten
+for pre in ratgeber_seiten.SPRACHEN:
+    rs = ratgeber_seiten.eintraege(pre)
+    if rs and (not os.path.exists(pre + "ratgeber-kurz.js") or lies(pre + "ratgeber-kurz.js") != ratgeber_seiten.kurz_text(rs)):
+        fehler.append(f"{pre}ratgeber-kurz.js ist nicht auf dem Stand: python3 .github/pruefung/ratgeber_seiten.py ausführen")
 
 # 8. JavaScript ohne Syntaxfehler
 for p in dateien(".js"):

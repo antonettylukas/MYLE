@@ -558,11 +558,11 @@
       ${ratgeberListe(R.filter(x => x.id !== r.id), t("Weitere Ratgeber", "More guides"))}
       <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
   }
-  function ratgeberListe(R, titel, mitH1) {
+  function ratgeberListe(R, titel, mitH1, id) {
     if (!R.length) return "";
     const kopf = mitH1 ? `<span class="eyebrow">${t("Ratgeber", "Guides")}</span><h1>${titel}</h1>` : `<h2 class="p-titel">${titel}</h2>`;
     return `
-      <section class="wrap p-block ratgeber-liste${mitH1 ? " intro" : ""}">
+      <section class="wrap p-block ratgeber-liste${mitH1 ? " intro" : ""}"${id ? ` id="${id}"` : ""}>
         ${kopf}
         <div class="karten">${R.map(r => `
           <a class="karte ratgeber-karte" href="ratgeber-${esc(r.id)}">
@@ -646,10 +646,13 @@
         </div>
       </section>`;
 
+    // Passende Ratgeber (Feld produkt in ratgeber.js, kurz in ratgeber-kurz.js), unter Fragen und Antworten
+    const passendeRatgeber = (typeof RATGEBER_KURZ !== "undefined" ? RATGEBER_KURZ : []).filter(x => x.produkt === p.id);
     const spruenge = [
       ms.length && ["#modelle", t("Preisklassen", "Price ranges")],
       r && ["#rechner", t("Rechner", "Calculator")],
-      p.fragen && p.fragen.length && ["#fragen", t("Fragen und Antworten", "Questions and answers")]
+      p.fragen && p.fragen.length && ["#fragen", t("Fragen und Antworten", "Questions and answers")],
+      passendeRatgeber.length && ["#ratgeber", t("Ratgeber", "Guides")]
     ].filter(Boolean);
     const sprung = spruenge.length ? `<nav class="wrap sprung" aria-label="${t("Auf dieser Seite", "On this page")}">${spruenge.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</nav>` : "";
 
@@ -739,7 +742,9 @@
         ${andere.length > auswahl.length ? `<p class="alle-helfer"><a href="./#helfer">${t("Alle {n} Helfer ansehen", "See all {n} helpers", { n: PRODUKTE.length })}</a></p>` : ""}
       </section>` : "";
 
-    ziel.innerHTML = hero + sprung + erfBlock + muehBlock + modellBlock + rechnerBlock + fragenBlock + quellenBlock + weitere +
+    const ratgeberBlock = ratgeberListe(passendeRatgeber, t("Passende Ratgeber", "Related guides"), false, "ratgeber");
+
+    ziel.innerHTML = hero + sprung + erfBlock + muehBlock + modellBlock + rechnerBlock + fragenBlock + ratgeberBlock + quellenBlock + weitere +
       `<section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
 
     if (video) baueVideo(p, video, ziel.querySelector("[data-video]"));
