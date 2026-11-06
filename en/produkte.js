@@ -30,7 +30,7 @@ const ASIN = {
   "mova z60 ultra roller complete": "B0G8172MJD",
   "mova v50 ultra complete": "B0DZ2YC2VG",
   "dreame l40s pro ultra": "B0F59Z75R7",
-  "roborock q10 s5+": "B0DWMTWY3B",
+  "roborock q10 s5+": "B0DWXBCQVP",
   "roborock q7 l5+": "B0DWMVY8CZ",
   "hisense wd5s1045bw waschtrockner": "B0BXFPSKNF",
   "philips dual basket na352": "B0D4Q8QFTH",
@@ -140,24 +140,12 @@ const PRODUKTE = [
         alternativen: [
           { name: "Roborock Saros 20", preis: 949, text: "Grade 1.8 at smarthomeassistent.de, with the top grade for navigation (1.0). Only just under 8 cm tall, so it fits under low furniture. But it mops poorly there (grade 5.1).", link: amazon("roborock saros 20") }
         ]
-      },
-      {
-        gruppe: "Vacuum only",
-        stufe: "Budget", spanne: "up to €250",
-        name: "Roborock Q10 S5+", preis: 210, empfohlen: true,
-        punkte: [
-          "The base station empties it into a 2.7-litre bag",
-          "Finds its way around well by laser, with a map and schedule in the app",
-          "Very good value for money in the test (grade 1.0 at smarthomeassistent.de)"
-        ],
-        fuer: "For you if you do the mopping yourself or mostly have low-pile carpet.",
-        hinweis: "Overall it only scores satisfactory at smarthomeassistent.de (grade 3.1). On high-pile carpet it got stuck there several times, and it cleaned corners poorly. The base station doesn't wash its mop pad, you rinse it by hand.",
-        link: amazon("roborock q10 s5+"),
-        alternativen: [
-          { name: "Roborock Q7 L5+", preis: 180, text: "A little cheaper and at smarthomeassistent.de it even vacuums slightly better (grade 2.6 instead of 3.0). But it doesn't detect obstacles there at all, and overall it only manages grade 3.8.", link: amazon("roborock q7 l5+") }
-        ]
       }
     ],
+    // amazon.co.uk (Stand 06.11.2026): Den Roborock Q10 S5+ gibt es dort gerade nicht. B0DWXBCQVP und B0DWMVG3HV sind
+    // „Currently unavailable“, unter B0DWMTWY3B steht jetzt der Q10 S5 ohne Absaugstation. Darum fehlt die Gruppe „Vacuum only“,
+    // und ohneTeuer nennt den S5+. Ist er wieder lieferbar, kommt seine Karte mit dem Q7 L5+ als „Auch gut“ zurück (verfuegbarkeit-12).
+    ohneTeuer: { stufe: "Vacuum only", titel: "Not available right now", text: "My pick for vacuuming only, the Roborock Q10 S5+ with a base station that empties it, is not available on amazon.co.uk at the moment. As soon as it is, you'll find it here again." },
     fragen: [
       { f: "Which tests do you base your robot picks on?", a: "For robot vacuums and mops I rely on the detailed tests at smarthomeassistent.de. There every robot goes through the same trials, from carpet and hair to obstacles and door thresholds. Their grades work like German school grades: 1.0 is the best. I recommend the models that do best in their price range there, plus my own experience from 14 years. If a robot is tested again after an update, for example because its navigation has improved, the newer test is the one that counts for me." },
       { f: "Do I need the mopping function?", a: "With lots of hard floors like tiles, laminate or parquet, definitely: the floor stays clean and you never fill a bucket again. If you mostly have carpet, or you like mopping yourself anyway, a robot that only vacuums is enough. That one often costs only half as much." },
@@ -176,7 +164,6 @@ const PRODUKTE = [
       { name: "smarthomeassistent.de: Dreame X60 Pro Ultra Complete re-test (November 2026)", text: "grade 1.6 after a firmware update" },
       { name: "smarthomeassistent.de: Roborock Saros 20 review (August 2026)", text: "grade 1.8" },
       { name: "smarthomeassistent.de: Roborock Q10 S5+ review (July 2026)", text: "grade 3.1" },
-      { name: "smarthomeassistent.de: Roborock Q7 L5+ review (May 2026)", text: "grade 3.8" },
       { name: "smarthomeassistent.de: MOVA Z60 Ultra Roller Complete review (October 2026)", text: "grade 1.4" },
       { name: "Other hands-on tests", text: "including homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com and cybershack.com.au" },
       { name: "netzwelt.de: robot vacuum cost check (February 2026)", text: "running costs per year" },
@@ -236,34 +223,23 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Budget", spanne: "up to €550",
-        name: "Hisense WD5S1045BW", preis: 490, preisText: "approx. €470 to €530",
+        name: "Hisense WD5S1045BW", preis: 490, preisText: "approx. €470 to €530", empfohlen: true,
         punkte: [
           "Washes 10.5 kg and dries 6 kg in one go",
           "Doses the detergent by itself, you only top it up now and then",
           "With a steam programme and app",
           "Very good in the test (93 out of 100 points at ETM Testmagazin, issue 10/2024)"
         ],
-        fuer: "For you if you want washing and drying in one and watch the price.",
+        fuer: "For you if you want washing and drying in one and watch the price. My tip as long as the Bosch Serie 6 isn't available on amazon.co.uk.",
         hinweis: "For washing and drying it uses more electricity and water than the AEG with its heat pump.",
         link: amazon("hisense wd5s1045bw waschtrockner", "hisense wd5s1045bw washer dryer")
-      },
-      // amazon.co.uk (Stand 01.11.2026): Haier HWD100-BD14979U1, Bosch WNG24442 und AEG L9WEF80690 gibt es dort nicht.
-      // Darum steht hier der Bosch WNG25401GB aus derselben Serie 6 wie der getestete WNG24440. Die AEG nennt ohneTeuer unten.
-      {
-        stufe: "Mid-range", spanne: "€550 to €900",
-        name: "Bosch Serie 6 (WNG25401GB)", preis: 850, empfohlen: true,
-        punkte: [
-          "Washes 10.5 kg and dries 6 kg in one go",
-          "Spins at up to 1,400 rpm, with a delay timer",
-          "According to Bosch, it washes and dries small loads in 60 minutes",
-          "Its German sister model WNG24440 from the same series was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023)"
-        ],
-        fuer: "For most households. My tip, because its sister model was the best-value tip in the test.",
-        hinweis: "Stiftung Warentest tested the WNG24440, which washes 9 kg, not this model. According to Bosch, it has no automatic detergent dosing and no app.",
-        link: amazon("bosch serie 6 wng25401gb waschtrockner", "bosch series 6 wng25401gb washer dryer")
       }
     ],
-    ohneTeuer: { stufe: "Premium", titel: "Not available right now", text: "The test winner at Stiftung Warentest, the AEG L9WEF80690 with a heat pump, is not available on amazon.co.uk at the moment. As soon as it is, you'll find it here." },
+    // amazon.co.uk (Stand 06.11.2026): Den Bosch WNG25401GB (Serie 6, Schwestermodell des getesteten WNG24440) gibt es dort gerade nicht
+    // („Currently unavailable“), den baugleichen grauen WNG254R1GB auch nicht. Haier HWD100-BD14979U1, Bosch WNG24442 und AEG L9WEF80690
+    // gibt es dort gar nicht. Darum ist der Hisense die Empfehlung, und ohneTeuer nennt hier ausnahmsweise beide teureren Preisklassen.
+    // Ist der WNG25401GB wieder lieferbar, kommt seine Karte zurück (verfuegbarkeit-12).
+    ohneTeuer: { stufe: "Pricier models", titel: "Not available right now", text: "Two pricier machines are not available on amazon.co.uk at the moment: the Bosch Serie 6 (WNG25401GB), whose German sister model WNG24440 was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023), and the test winner there, the AEG L9WEF80690 with a heat pump. As soon as one of them is, you'll find it here." },
     fragen: [
       { f: "A washer dryer, or a separate washing machine and dryer?", a: "Two machines get more done at once: while the dryer is running, the washing machine is already washing the next load. But you need twice the space. A washer dryer fits where your washing machine is now, and you never have to move the wet laundry. That's exactly what makes it so convenient. If you wash several loads a day for a big family, two machines are the better choice." },
       { f: "How much laundry can it dry?", a: "Usually about 6 kg, even if it can wash 9 or 10 kg. 6 kg is, for example, around 40 T-shirts. If you want to wash and dry in one go, only put in as much as it can dry." },

@@ -25,6 +25,7 @@ const ASIN = {
   "ariston mobis plus 10": "B094KYVY41",
   "black decker bxac9000e": "B07PQ8X5MS",
   "moulinex clickchef hf4568": "B082Q2VXRZ",
+  "moulinex companion xl hf8408f1 kit": "B0FCYTBJ7Z",
   "sodastream crystal 3.0": "B0BLSCTLBB",
   "bosch serie 2 mums2ew00": "B08DHZL8R2",
   "bosch serie 6 mums6zs13d": "B0CP26TQZF",
@@ -388,14 +389,14 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Petit budget", spanne: "jusqu’à 130\u00a0€",
-        name: "Cosori Dual Basket 8,5 L", preis: 117, preisText: "env. 110 à 130\u00a0€",
+        name: "Cosori Dual Basket 8,5 L", preis: 117, preisText: "env. 110 à 130\u00a0€", empfohlen: true,
         punkte: [
           "Deux paniers de 4,25 litres, chacun avec sa propre température et sa propre durée",
           "Bouton « Sync Finish » : les deux paniers sont prêts en même temps",
           "Vous rappelle par un bip qu’il faut secouer",
           "« Bon » chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (note 2,3, numéro 1/2025), vainqueur du test parmi les appareils à deux paniers à l’époque"
         ],
-        fuer: "Pour tous ceux qui veulent deux paniers et font attention au prix.",
+        fuer: "Pour tous ceux qui veulent deux paniers et font attention au prix. Mon conseil tant que la Turbo Tower Pro Smart est en rupture de stock sur amazon.fr.",
         link: amazon("cosori dual basket 8,5 l", "cosori dual basket 8,5 l")
       },
       {
@@ -410,21 +411,12 @@ const PRODUKTE = [
         fuer: "Pour vous si vous voulez deux paniers côte à côte ou avez parfois besoin d’un grand panier de 10 litres.",
         hinweis: "Pour des raisons de sécurité, vous ne pouvez la lancer que sur l’appareil lui-même, pas via l’appli.",
         link: amazon("cosori twinfry 10 l")
-      },
-      {
-        stufe: "Haut de gamme", spanne: "à partir de 200\u00a0€",
-        name: "Cosori Turbo Tower Pro Smart", preis: 279, preisText: "env. 250 à 280\u00a0€", empfohlen: true,
-        punkte: [
-          "Vainqueur du test parmi les appareils à deux paniers chez Stiftung Warentest (note 2,2, numéro 9/2026)",
-          "Deux paniers superposés, 10,8 litres au total. Prend moins de place que deux paniers côte à côte",
-          "Bouton Sync : les deux paniers sont prêts en même temps, avec appli (VeSync)",
-          "Paniers avec revêtement céramique"
-        ],
-        fuer: "Pour la plupart des foyers, surtout si le plan de travail est petit. Mon conseil : c’est le vainqueur du test parmi les appareils à deux paniers, et je l’utilise moi-même.",
-        hinweis: "Pour des raisons de sécurité, vous ne pouvez le démarrer que sur l’appareil, pas depuis l’appli.",
-        link: amazon("cosori turbo tower pro smart")
       }
     ],
+    // amazon.fr (Stand 06.11.2026): Der Cosori Turbo Tower Pro Smart (B0DPPT99LJ) ist dort „Temporairement en rupture de stock“,
+    // eine andere lieferbare Nummer gibt es nicht. Darum ist der Dual Basket die Empfehlung, und ohneTeuer nennt den Turbo Tower.
+    // Ist er wieder lieferbar, kommt seine Karte zurück (verfuegbarkeit-12).
+    ohneTeuer: { stufe: "Haut de gamme", titel: "Pas disponible pour le moment", text: "La Cosori Turbo Tower Pro Smart, vainqueur du test parmi les appareils à deux paniers chez Stiftung Warentest (note 2,2, numéro 9/2026) et celle que j’utilise moi-même, est en rupture de stock sur amazon.fr. Dès qu’elle sera de nouveau disponible, vous la retrouverez ici." },
     fragen: [
       { f: "Remplace-t-elle vraiment la poêle\u202f?", a: "Chez moi, oui\u202f: depuis que j’ai ma friteuse sans huile, je ne me suis plus servi de mes poêles. Poulet, légumes, pommes de terre, poisson ou saucisses y réussissent sans que vous restiez aux fourneaux, et sans projections de graisse. Pour les sauces, les œufs brouillés ou les crêpes, il vous faut toujours la plaque et une poêle." },
       { f: "Combien de vaisselle ai-je après\u202f?", a: "Quasiment pas. Dans une friteuse sans huile, rien n’attache. Vous mettez simplement les paniers au lave-vaisselle ou vous les essuyez rapidement à la fin avec un chiffon humide. Toute la vaisselle des poêles et casseroles, vous vous l’épargnez." },
@@ -608,6 +600,9 @@ const PRODUKTE = [
       { name: "Split", text: "Deux parties reliées par une liaison plate : l’unité intérieure est dans la pièce, l’unité extérieure est accrochée dehors à la fenêtre ou posée sur le balcon. C’est là qu’elle rejette la chaleur. C’est pourquoi un split est plus silencieux et plus économe qu’un monobloc." },
       { name: "Monobloc", text: "Tout est dans un seul appareil (climatiseur mobile monobloc), l’air chaud sort par la fenêtre à travers un tuyau. Les monoblocs sont moins chers et vite installés. Honnêtement, ils sont toutefois plus bruyants qu’un split, même les meilleurs du test. Ils sont surtout intéressants si vous ne rafraîchissez que quelques jours de forte chaleur par an." }
     ],
+    // Stand 06.11.2026: Die Midea PortaSplit gibt es bei amazon.fr nur bei einem Drittanbieter zu einem auffällig hohen Preis, darum zeigt die Seite diese Hinweiskarte statt des Modells.
+    // Gibt es sie wieder zu einem normalen Preis: keinModell löschen und ihren Link prüfen.
+    keinModell: { stufe: "amazon.fr", titel: "Pas disponible pour le moment", text: "L’appareil que je vous conseillerais, le Midea PortaSplit que j’ai moi-même, n’est proposé en ce moment sur amazon.fr que par un autre vendeur, à un prix bien plus élevé. Dès que je pourrai vous le conseiller à un prix normal, vous le trouverez ici. D’ici là, les questions ci-dessous vous aident à choisir." },
     modelle: [
       {
         gruppe: "Split",
@@ -1381,18 +1376,22 @@ const PRODUKTE = [
         hinweis: "Il ne chauffe qu’à 120 degrés, impossible donc de saisir. Il n’a pas de recettes guidées pas à pas sur l’appareil, seulement un livre de recettes. Le bol contient 3,6 litres ; pour la cuisson, vous en utilisez 2 selon le fabricant.",
         link: amazon("moulinex clickchef hf4568", "moulinex clickchef hf4568")
       },
+      // amazon.fr (Stand 06.11.2026): Das getestete HF840110 (B0DZN8MRXY) ist dort „Actuellement indisponible“, ohne Angebote. Darum steht hier
+      // das HF8408F1 aus derselben Companion-XL-Reihe, das Amazon nur mit einem Kit Pâtisserie verkauft (B0FCYTBJ7Z, mit Hinweis). Laut Que Choisir
+      // gleicher Topf und gleiche Programme, aber Dampfkorb aus Kunststoff. Ist das HF840110 wieder lieferbar: alte Karte zurück (verfuegbarkeit-12).
       {
         stufe: "Milieu de gamme", spanne: "de 450 à 800 €",
-        name: "Moulinex Companion XL (HF8401)", preis: 590, empfohlen: true,
+        name: "Moulinex Companion XL (HF8408F1)", preis: 650, empfohlen: true,
         punkte: [
-          "Chez Test-Achats (Belgique), globalement à peu près aussi bon que le Thermomix TM7 (juillet 2026)",
+          "Chez Test-Achats (Belgique), la version HF840110 est globalement à peu près aussi bonne que le Thermomix TM7 (juillet 2026)",
           "Grand bol : 3 litres utiles, jusqu’à 10 personnes selon le fabricant",
           "12 programmes automatiques et un mode manuel, Moulinex parle de 14 fonctions",
-          "Recettes dans l’application Moulinex gratuite, sans abonnement"
+          "Recettes dans l’application Moulinex gratuite, sans abonnement",
+          "Sur amazon.fr, vendu avec un kit pâtisserie Moulinex en plus"
         ],
         fuer: "Pour la plupart des gens. Mon conseil, parce qu’il s’approche presque du Thermomix dans le test et que vous n’avez pas besoin d’abonnement pour les recettes.",
-        hinweis: "Il n’a pas de balance, il vous faut donc une balance de cuisine en plus. Selon Test-Achats, il n’est que moyennement facile à nettoyer.",
-        link: amazon("moulinex companion xl hf8401", "moulinex companion xl hf8401")
+        hinweis: "Sur amazon.fr, il n’existe en ce moment que dans la version HF8408F1. Test-Achats a testé le HF840110 de la même gamme : même bol et mêmes programmes, mais selon Que Choisir, le panier vapeur du HF8408F1 est en plastique et non en inox. Il n’a pas de balance, il vous faut donc une balance de cuisine en plus. Selon Test-Achats, il n’est que moyennement facile à nettoyer.",
+        link: amazon("moulinex companion xl hf8408f1 kit", "moulinex companion hf8408f1")
       }
     ],
     fragen: [
@@ -1408,6 +1407,7 @@ const PRODUKTE = [
       { name: "Stiftung Warentest\u202f: test des robots cuiseurs (numéro 1/2024)", text: "vainqueur Bosch Cookit (note 2,0), Monsieur Cuisine Smart «\u202fsatisfaisant\u202f» (note 2,8), Moulinex ClickChef meilleur rapport qualité-prix («\u202fsatisfaisant\u202f», note 2,9), presque tous ont raté le hachage des oignons, arômes grillés seulement à partir de 140 degrés" },
       { name: "Stiftung Warentest\u202f: test des robots cuiseurs, complété dans le numéro 2/2026", text: "Thermomix TM7 «\u202fbon\u202f»" },
       { name: "Test-Achats (Belgique)\u202f: Moulinex Companion XL contre Thermomix TM7 (juillet 2026)", text: "globalement à peu près aussi bons, le Companion XL seulement moyennement facile à nettoyer, recettes sans abonnement, plus le Monsieur Cuisine Smart comme bon rapport qualité-prix" },
+      { name: "Que Choisir\u202f: fiches de test Moulinex Companion XL HF840110 et HF8408F1 (janvier 2026)", text: "même bol de 3 litres utiles et une douzaine de programmes automatiques, le HF8408F1 avec un panier vapeur en plastique" },
       { name: "Données des fabricants", text: "programmes, balance, température, taille du bol et recettes des appareils, vente et abonnement Cookidoo selon Vorwerk" }
     ],
     rechner: "kochfunktion",
