@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+# Kurze Messadressen für Instagram, TikTok, YouTube, Pinterest, Facebook und Newsletter (siehe _redirects)
+Disallow: /ig
+Disallow: /tt
+Disallow: /yt
+Disallow: /pin
+Disallow: /fb
+Disallow: /nl
 
 Sitemap: https://myle.life/sitemap.xml

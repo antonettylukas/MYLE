@@ -13,3 +13,11 @@
 /en/gifts /en/geschenke 301
 /fr/cadeaux /fr/geschenke 301
 /it/regali /it/geschenke 301
+# Kurze Messadressen (Marketing 06.11.): zeigen, über welchen Kanal Besucher kommen. Cloudflare zählt die Aufrufe je Adresse.
+# 302 (vorübergehend), damit Suchmaschinen sie nicht als neue Adresse der Startseite merken. In robots.txt gesperrt.
+/ig / 302
+/tt / 302
+/yt / 302
+/pin / 302
+/fb / 302
+/nl / 302
