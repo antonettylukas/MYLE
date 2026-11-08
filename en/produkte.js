@@ -26,6 +26,7 @@ const ASIN = {
   "sodastream crystal 3.0": "B0C2JKG2YH",
   "grohe blue fizz starter set": "B0CLM4JG9V",
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
+  "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0G8172MJD",
   "mova v50 ultra complete": "B0DZ2YC2VG",
@@ -769,8 +770,8 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Budget", spanne: "up to €30",
-        name: "Duravit 3jet 110 MinusFlow", preis: 25, empfohlen: true,
+        stufe: "Budget", spanne: "up to €35",
+        name: "Duravit 3jet 110 MinusFlow", preis: 30, empfohlen: true,
         punkte: [
           "Good at German consumer magazine Stiftung Warentest (grade 1.9, issue 4/2023), level with the best in the test",
           "Lets through 8.8 litres per minute in the test, a flow limiter is built in",
@@ -782,7 +783,7 @@ const PRODUKTE = [
         link: amazon("duravit 3jet 110 minusflow", "duravit 3jet 110 minusflow")
       },
       {
-        stufe: "Mid-range", spanne: "€30 to €50",
+        stufe: "Mid-range", spanne: "€35 to €50",
         name: "Hansgrohe Pulsify Select S EcoSmart", preis: 38,
         punkte: [
           "Good at Stiftung Warentest (grade 1.9, issue 4/2023)",

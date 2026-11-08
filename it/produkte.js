@@ -32,6 +32,7 @@ const ASIN = {
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
   "kedoyoy reinigungsbürste": "B0D3STRLBD",
   "bomann tsg 7405": "B0DPX186Z2",
+  "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0GTVD5WGW",
@@ -888,8 +889,8 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Economico", spanne: "fino a 30 €",
-        name: "Duravit 3jet 110 MinusFlow", preis: 25, empfohlen: true,
+        stufe: "Economico", spanne: "fino a 35 €",
+        name: "Duravit 3jet 110 MinusFlow", preis: 30, empfohlen: true,
         punkte: [
           "Buono per Stiftung Warentest, il più noto istituto di test per consumatori in Germania (voto 1,9, numero 4/2023), alla pari con i migliori del test",
           "Nel test fa passare 8,8 litri al minuto, ha un limitatore di portata integrato",
@@ -901,7 +902,7 @@ const PRODUKTE = [
         link: amazon("duravit 3jet 110 minusflow", "duravit 3jet 110 minusflow")
       },
       {
-        stufe: "Fascia media", spanne: "da 30 a 50 €",
+        stufe: "Fascia media", spanne: "da 35 a 50 €",
         name: "Hansgrohe Pulsify Select S EcoSmart", preis: 38,
         punkte: [
           "Buono per Stiftung Warentest (voto 1,9, numero 4/2023)",
@@ -1695,16 +1696,9 @@ const PRODUKTE = [
       "Se premi troppo forte, rallenta o si spegne"
     ],
     modelle: [
-      {
-        stufe: "Economico", spanne: "meno di 25\u00a0€",
-        name: "Spazzola elettrica a batteria Vicmayun", preis: 19,
-        punkte: [
-          "Manico telescopico da 30 a 120 cm per doccia e vasca",
-          "7 testine per piastrelle, angoli e lavandino"
-        ],
-        fuer: "Se vuoi spendere poco. Il manico però è più corto di quello della fascia media.",
-        link: amazon("vicmayun reinigungsbürste", "vicmayun spazzola elettrica")
-      },
+      // amazon.it (Stand 08.11.2026): Die Vicmayun der Günstig-Karte (B0FF8YX9KY wie auf amazon.de) ist „Non disponibile“. Die Suche zeigt
+      // keine Vicmayun mit 7 Aufsätzen um 20 €, nur B0FF9HZS8P (weiß, 35,44 €) und B0HGY3CMQM (31,89 €), Verkäufer offen, beide ohne Test.
+      // Darum fällt die Karte weg wie auf de (Teil 2) und fr (Teil 3). Der alte Text steht in der Git-Historie (verfuegbarkeit-14).
       // amazon.it (Stand 08.11.2026): B0D3STRLBD ist die Kedoyoy ZY-CB02 dieser Karte, dieselbe ASIN wie auf amazon.de und amazon.fr.
       // Der Titel nennt Kedoyoy nicht, die Marke steht in den Details. Buy Box bei Soul Ish mit Versand durch Amazon, 52,59 €, darum preis 53.
       // B0HBQG1JQF („2026 Upgrade“, Modell CB-02) ist ein anderes Modell, für das die Punkte dieser Karte nicht belegt sind (verfuegbarkeit-13).
@@ -1716,7 +1710,7 @@ const PRODUKTE = [
           "Secondo il produttore la batteria dura fino a 90 minuti e si ricarica via USB-C",
           "8 testine, anche per fughe e angoli"
         ],
-        fuer: "Per la maggior parte dei bagni. Il mio consiglio, perché con il manico più lungo fai anche vasca e piatto doccia stando in piedi.",
+        fuer: "Per la maggior parte dei bagni. Il mio consiglio, perché con il manico lungo fai anche vasca e piatto doccia stando in piedi.",
         link: amazon("kedoyoy reinigungsbürste", "kedoyoy spazzola elettrica")
       },
       {
@@ -1751,7 +1745,7 @@ const PRODUKTE = [
       { name: "Istruzioni per l’uso delle spazzole di Tchibo e SEECODE", text: "spazzola rotonda per vasca e piastrelle, spazzola angolare per le fughe, spazzola piatta per pavimento e finestre, spruzzi sì, immersione no, togliere le testine e sciacquarle, troppa pressione la rallenta, setole e tamponi abrasivi possono graffiare vetro, vernice e acciaio inox, provare prima in un punto poco visibile" },
       { name: "Bosch (comunicato sulla UniversalBrush, marzo 2021), Galaxus (test, luglio 2021) e GIGA (spazzola di Aldi)", text: "tamponi per lo sporco incrostato nel forno e per il vetro del forno, tampone in microfibra per vetroceramica e acciaio inox, testine per lavello e telai delle finestre, lo sportello del forno è tornato pulito senza graffi, spazzole e tamponi di ricambio costano a parte" },
       { name: "Duravit (consigli di pulizia per l’acrilico) e hausjournal.net (ottobre 2024)", text: "i prodotti abrasivi e le spugne abrasive graffiano l’acrilico, meglio panni in microfibra o cotone" },
-      { name: "Dati dei produttori", text: "manico, testine, batteria e ricarica secondo Vicmayun, Kedoyoy e HOTO, autonomie da 60 a 90 minuti anche secondo Tchibo, Silvercrest, Koohoro, Vikeri e YKYI" }
+      { name: "Dati dei produttori", text: "manico, testine, batteria e ricarica secondo Kedoyoy e HOTO, autonomie da 60 a 90 minuti anche secondo Tchibo, Silvercrest, Koohoro, Vikeri e YKYI" }
     ],
     rechner: "buerste",
     video: "buerste"
