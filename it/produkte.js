@@ -30,6 +30,8 @@ const ASIN = {
   "sodastream crystal 3.0": "B0BLSCTLBB",
   "bosch serie 2 mums2ew00": "B08DHZL8R2",
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
+  "kedoyoy reinigungsbürste": "B0D3STRLBD",
+  "bomann tsg 7405": "B0DPX186Z2",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0GTVD5WGW",
@@ -1625,7 +1627,7 @@ const PRODUKTE = [
       {
         gruppe: "Con allacciamento all’acqua",
         stufe: "Economico", spanne: "fino a 300 €",
-        name: "Bomann TSG 7405", preis: 255, preisText: "ca. 250 bis 260 €", empfohlen: true,
+        name: "Bomann TSG 7405", preis: 290, preisText: "ca. 250 bis 300 €", empfohlen: true,
         punkte: [
           "Sei coperti e cinque programmi, tra cui un programma rapido",
           "Secondo il produttore classe energetica D, 6,5 litri d’acqua per lavaggio e 47 decibel. Per piatto è quindi più parsimoniosa e molto più silenziosa degli apparecchi con serbatoio",
@@ -1703,9 +1705,12 @@ const PRODUKTE = [
         fuer: "Se vuoi spendere poco. Il manico però è più corto di quello della fascia media.",
         link: amazon("vicmayun reinigungsbürste", "vicmayun spazzola elettrica")
       },
+      // amazon.it (Stand 08.11.2026): B0D3STRLBD ist die Kedoyoy ZY-CB02 dieser Karte, dieselbe ASIN wie auf amazon.de und amazon.fr.
+      // Der Titel nennt Kedoyoy nicht, die Marke steht in den Details. Buy Box bei Soul Ish mit Versand durch Amazon, 52,59 €, darum preis 53.
+      // B0HBQG1JQF („2026 Upgrade“, Modell CB-02) ist ein anderes Modell, für das die Punkte dieser Karte nicht belegt sind (verfuegbarkeit-13).
       {
-        stufe: "Fascia media", spanne: "da 25 a 40\u00a0€",
-        name: "Spazzola elettrica a batteria Kedoyoy 8 in 1", preis: 34, empfohlen: true,
+        stufe: "Fascia media", spanne: "da 25 a 55\u00a0€",
+        name: "Spazzola elettrica a batteria Kedoyoy 8 in 1", preis: 53, empfohlen: true,
         punkte: [
           "Manico telescopico regolabile da 30 a 137 cm: pulisci doccia e vasca stando in piedi",
           "Secondo il produttore la batteria dura fino a 90 minuti e si ricarica via USB-C",
@@ -1715,7 +1720,7 @@ const PRODUKTE = [
         link: amazon("kedoyoy reinigungsbürste", "kedoyoy spazzola elettrica")
       },
       {
-        stufe: "Fascia alta", spanne: "da 40 €",
+        stufe: "Fascia alta", spanne: "da 55 €",
         name: "HOTO Electric Spin Scrubber", preis: 80,
         punkte: [
           "La migliore di otto spazzole nel test di Good Housekeeping (USA, febbraio 2026)",

@@ -32,6 +32,8 @@ const ASIN = {
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
   "vicmayun reinigungsbürste": "B0FF9HZS8P",
   "kedoyoy reinigungsbürste": "B0D3STRLBD",
+  "bomann tsg 5702": "B0GVDKY4BX",
+  "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0GTVD5WGW",
@@ -862,8 +864,8 @@ const PRODUKTE = [
     ],
     modelle: [
       {
-        stufe: "Petit budget", spanne: "jusqu’à 30 €",
-        name: "Duravit 3jet 110 MinusFlow", preis: 25, empfohlen: true,
+        stufe: "Petit budget", spanne: "jusqu’à 35 €",
+        name: "Duravit 3jet 110 MinusFlow", preis: 32, empfohlen: true,
         punkte: [
           "Bien chez Stiftung Warentest, l’organisme de tests consommateurs le plus connu d’Allemagne (note 1,9, numéro 4/2023), à égalité avec les meilleurs du test",
           "Laisse passer 8,8 litres par minute lors du test, un limiteur de débit est intégré",
@@ -875,7 +877,7 @@ const PRODUKTE = [
         link: amazon("duravit 3jet 110 minusflow", "duravit 3jet 110 minusflow")
       },
       {
-        stufe: "Milieu de gamme", spanne: "de 30 à 50 €",
+        stufe: "Milieu de gamme", spanne: "de 35 à 50 €",
         name: "Hansgrohe Pulsify Select S EcoSmart", preis: 38,
         punkte: [
           "Bien chez Stiftung Warentest (note 1,9, numéro 4/2023)",
@@ -1596,7 +1598,7 @@ const PRODUKTE = [
       {
         gruppe: "Avec réservoir d’eau",
         stufe: "Petit budget", spanne: "jusqu’à 300 €",
-        name: "Bomann TSG 5702", preis: 239, preisText: "ca. 200 bis 300 €", empfohlen: true,
+        name: "Bomann TSG 5702", preis: 270, preisText: "ca. 200 bis 300 €", empfohlen: true,
         punkte: [
           "Réservoir de cinq litres : pas besoin de raccordement à l’eau, mais vous pouvez le raccorder plus tard, les tuyaux sont fournis",
           "Selon le fabricant, l’appareil à réservoir le plus économe que j’ai trouvé : classe énergétique C et 4,2 litres d’eau par lavage",
