@@ -137,26 +137,27 @@ const PRODUKTE = [
           { name: "ECOVACS DEEBOT T90 PRO OMNI", preis: 477, text: "Un po’ più caro e nel complesso migliore su smarthomeassistent.de (voto 2,3).", link: amazon("ecovacs deebot t90 pro omni") }
         ]
       },
+      // amazon.it (Stand 09.11.2026): Den MOVA Z60 Ultra Roller Complete (B0GTVD5WGW) gibt es nicht mehr neu zum normalen Preis. Die Buy Box ist
+      // gebraucht (Amazon Seconda mano, 548,64 €), neu gibt es nur ein Angebot für 1.004,95 € (am 01.11. neu bei Amazon 575,06 €). Darum übernimmt
+      // der T90S PRO OMNI, bisher „Auch gut“ auf dieser Karte, wie in Teil 11 für de geplant. Der Z60 kommt zurück, sobald er neu zum normalen Preis
+      // lieferbar ist (verfuegbarkeit-15). T90S B0H94KQLMJ (Bianco): Buy Box, Verkauf und Versand Amazon, 707,97 €, nach Zürich lieferbar, darum preis 708.
       {
         gruppe: "Con rullo lavante",
-        stufe: "Fascia media", spanne: "da 400 a 700 €",
-        name: "MOVA Z60 Ultra Roller Complete", preis: 649, empfohlen: true,
+        stufe: "Fascia media", spanne: "da 400 a 750 €",
+        name: "ECOVACS DEEBOT T90S PRO OMNI", preis: 708, empfohlen: true,
         punkte: [
-          "Molto buono nel test sia ad aspirare sia a lavare (voto 1,4, n. 2 su smarthomeassistent.de)",
-          "Lava con un rullo che viene risciacquato di continuo con acqua pulita mentre si muove. La base lo lava con acqua fino a 80 °C",
-          "Supera soglie fino a 5 cm",
-          "Solleva il rullo sui tappeti e lo chiude, così non si bagna niente"
+          "Voto 1,8 su smarthomeassistent.de, con un rapporto qualità-prezzo molto buono (voto 1,0)",
+          "Nel test lava molto bene (voto 1,0), con un rullo che viene risciacquato di continuo con acqua pulita mentre si muove",
+          "La base lo svuota, lava il rullo con acqua calda e lo asciuga",
+          "Sui tappeti solleva il rullo di 15 mm e lo copre"
         ],
-        fuer: "Per la maggior parte delle case, anche con animali. Secondo me è qui che hai di più per i tuoi soldi.",
-        hinweis: "Il rullo non arriva fino al battiscopa: nei test, lavando, restava una striscia sottile lungo il muro.",
-        link: amazon("mova z60 ultra roller complete"),
-        alternativen: [
-          { name: "ECOVACS DEEBOT T90S PRO OMNI", preis: 599, text: "Su smarthomeassistent.de lava altrettanto bene (voto 1,0).", link: amazon("ecovacs deebot t90s pro omni") }
-        ]
+        fuer: "Per la maggior parte delle case con pavimenti duri e tappeti bassi, anche con animali. Secondo me è qui che hai di più per i tuoi soldi.",
+        hinweis: "Negli angoli pulisce male, perché la spazzola laterale non esce. Nei test evitava i passaggi stretti, e su smarthomeassistent.de si è bloccato sui tappeti a pelo alto e ha evitato i tappeti neri.",
+        link: amazon("ecovacs deebot t90s pro omni")
       },
       {
         gruppe: "Con rullo lavante",
-        stufe: "Fascia alta", spanne: "da 700 €",
+        stufe: "Fascia alta", spanne: "da 750 €",
         name: "ECOVACS DEEBOT X12S OmniCyclone", preis: 999,
         punkte: [
           "Voto 1,7 su smarthomeassistent.de, dove lava molto bene (voto 1,0)",
@@ -165,7 +166,7 @@ const PRODUKTE = [
           "Nel test i capelli non si sono aggrovigliati né nella spazzola principale né in quella laterale"
         ],
         fuer: "Per te se hai soprattutto pavimenti duri o tappeti a pelo corto e non vuoi più comprare sacchetti.",
-        hinweis: "Su smarthomeassistent.de si è bloccato più volte sui tappeti a pelo lungo, e negli angoli e nelle fughe puliva solo in modo discreto. Nel complesso lì il MOVA Z60, più economico, ottiene un risultato migliore (voto 1,4).",
+        hinweis: "Su smarthomeassistent.de si è bloccato più volte sui tappeti a pelo lungo, e negli angoli e nelle fughe puliva solo in modo discreto. Lì il T90S PRO OMNI, più economico, ottiene quasi lo stesso voto complessivo (1,8).",
         link: amazon("ecovacs deebot x12s omnicyclone")
       },
       {
@@ -200,13 +201,12 @@ const PRODUKTE = [
     fragen: [
       { f: "In base a quali test scegli i robot?", a: "Per i robot aspirapolvere lavapavimenti mi baso sui test approfonditi di smarthomeassistent.de. Lì ogni robot affronta le stesse prove, da tappeti e capelli fino a ostacoli e soglie delle porte. I loro voti funzionano come i voti scolastici tedeschi: 1,0 è il migliore. Consiglio i modelli che lì ottengono i risultati migliori nella loro fascia di prezzo, e ci aggiungo la mia esperienza di 14 anni. Se un robot viene testato di nuovo dopo un aggiornamento, per esempio perché la navigazione è migliorata, per me conta il test più recente." },
       { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e non riempi mai più un secchio. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basterebbe un robot che aspira e basta. Al momento però su amazon.it non ne trovo nessuno che convinca nei test. I robot lavapavimenti di questa pagina possono anche solo aspirare: basta impostarlo nell’app." },
-      { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test il MOVA Z60 con rullo e il Dreame L40s Pro Ultra con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
+      { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test l’ECOVACS DEEBOT T90S PRO OMNI con rullo e il Dreame L40s Pro Ultra con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
       { f: "Si blocca su cavi o calzini?", a: "I modelli con telecamera di solito riconoscono cavi, calzini e scarpe e li aggirano, molti anche gli animali. I modelli economici senza telecamera passano più facilmente sopra un cavo o restano bloccati: in quel caso metti un attimo in ordine prima. Un groviglio di cavi sotto la scrivania conviene comunque sistemarlo una volta per tutte, con qualsiasi modello." },
       { f: "Posso avviarlo quando non sono a casa?", a: "Sì, ed è proprio questo il trucco. Nell’app crei una programmazione, per esempio dal lunedì al venerdì alle 9. Io faccio così da anni. Puoi anche avviarlo dal telefono quando sei fuori." },
-      { f: "Supera le soglie delle porte e i bordi dei tappeti?", a: "La maggior parte dei modelli supera soglie fino a circa 2 cm, i modelli buoni come il MOVA Z60 fino a circa 5 cm. Sui tappeti un robot lavapavimenti solleva i panni o il rullo, così non si bagna niente." },
+      { f: "Supera le soglie delle porte e i bordi dei tappeti?", a: "La maggior parte dei modelli supera soglie fino a circa 2 cm, i modelli di punta come il Dreame X60 Pro Ultra Complete, nei test, anche circa 4-5 cm. Sui tappeti un robot lavapavimenti solleva i panni o il rullo, così non si bagna niente." },
       { f: "Cosa devo fare ancora io?", a: "Cambiare il sacchetto ogni qualche settimana e pulire ogni tanto la spazzola. Con un robot lavapavimenti in più: rabboccare l’acqua pulita e svuotare quella sporca appena te lo segnala. Però non lasciare l’acqua sporca ferma per giorni, altrimenti comincia a puzzare." },
       { f: "Quanto costa mantenerlo?", a: "Sacchetti, filtri, spazzole e mop o rullo si consumano. Secondo un calcolo dei costi di netzwelt.de, un robot aspirapolvere e lavapavimenti con base costa circa da 45 a 185 € all’anno, senza lavaggio circa da 25 a 120 €. La corrente aggiunge circa da 15 a 25 € all’anno, un po’ di più per le basi con acqua calda e asciugatura." },
-      { f: "Non conosco MOVA. È una buona marca?", a: "MOVA è un marchio gemello di Dreame, entrambi fanno parte del gruppo Dreame. Tecnologia e app si somigliano molto. Il MOVA Z60 di questa pagina nei test ottiene risultati molto buoni." },
       { f: "Funziona su più piani?", a: "Memorizza più mappe. La base però resta in un posto. Sull’altro piano lo porti tu, e svuotarsi può farlo solo quando torna alla base." },
       { f: "Quanto è rumoroso?", a: "Di solito più o meno come una conversazione, quindi meno di un aspirapolvere normale. E visto che lavora quando non ci sei, comunque non te ne accorgi. Solo la base è davvero rumorosa per qualche secondo mentre lo svuota." }
     ],
@@ -214,12 +214,11 @@ const PRODUKTE = [
       { name: "smarthomeassistent.de: classifica dei robot aspirapolvere (ottobre 2026)", text: "tutti i modelli testati, per voto complessivo" },
       { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T80 OMNI (luglio 2026)", text: "voto 2,6" },
       { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90 PRO OMNI (agosto 2026)", text: "voto 2,3" },
-      { name: "smarthomeassistent.de: test del MOVA Z60 Ultra Roller Complete (ottobre 2026)", text: "voto 1,4" },
       { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT T90S PRO OMNI (ottobre 2026)", text: "voto 1,8" },
       { name: "smarthomeassistent.de: test dell’ECOVACS DEEBOT X12S OmniCyclone (ottobre 2026)", text: "voto 1,7" },
       { name: "smarthomeassistent.de: test del Dreame L40s Pro Ultra (luglio 2026)", text: "voto 2,2" },
       { name: "smarthomeassistent.de: nuovo test del Dreame X60 Pro Ultra Complete (novembre 2026)", text: "voto 1,6 dopo un aggiornamento del firmware" },
-      { name: "Altri test pratici", text: "tra cui homeandsmart.de, nextpit.de, testsiegertv.com, vacuumwars.com, journaldugeek.com e cybershack.com.au" },
+      { name: "Altri test pratici", text: "tra cui homeandsmart.de, nextpit.de, notebookcheck.com, inside-digital.de, testsiegertv.com, vacuumwars.com, journaldugeek.com e cybershack.com.au" },
       { name: "netzwelt.de: calcolo dei costi dei robot aspirapolvere (febbraio 2026)", text: "costi di mantenimento all’anno" },
       { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
       { name: "Dati dei produttori", text: "indicati in questa pagina con “secondo il produttore”" }
