@@ -137,6 +137,13 @@ fehler += vorgerendert.fehler()
 for p in dateien(".html"):
     if "data-theme=" in lies(p).split("<head>", 1)[0]:
         fehler.append(f'{p}: <html> hat data-theme, die Seite soll dem Browser folgen (hell = Salbei, dunkel = dunkel)')
+# Besucherstatistik: app.js lädt das Cloudflare-Zählskript nach, wenn Cloudflare es nicht selbst eingefügt hat (seit 09.11.2026).
+# Jede Seite muss deshalb app.js laden, und app.js muss das Zählskript mit dem Token enthalten.
+if "fc57503e21174189a7c2b18e0d23d3cd" not in lies("app.js") or "cloudflareinsights.com/beacon.min.js" not in lies("app.js"):
+    fehler.append("app.js: Das Nachladen des Cloudflare-Zählskripts (Token fc57503e…) fehlt, die Besucherstatistik wäre blind")
+for p in dateien(".html"):
+    if not re.search(r'<script src="(\.\./)?app\.js\?v=', lies(p)):
+        fehler.append(f"{p}: lädt app.js nicht, also auch nicht das Zählskript der Besucherstatistik")
 # Kurzliste der Ratgeber für „Passende Ratgeber“ auf den Produktseiten (sonst: python3 .github/pruefung/ratgeber_seiten.py)
 import ratgeber_seiten
 for pre in ratgeber_seiten.SPRACHEN:

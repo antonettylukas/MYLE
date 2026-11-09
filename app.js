@@ -1414,3 +1414,21 @@
     });
   }
 })();
+
+// Besucherstatistik (Cloudflare Web Analytics, siehe Datenschutz): Cloudflare fügt das Zählskript selbst ein, seit dem 05.11.2026
+// aber nicht mehr bei allen Besuchern. Darum lädt die Seite es hier selbst, wenn Cloudflare es nicht schon eingefügt hat
+// (so wird niemand doppelt gezählt). Nur auf myle.life, nicht in der Vorschau oder im Texte-Editor.
+// „Mich nicht zählen“ und die Prüf-Browser der Agenten blockt weiterhin die Sicherheitsregel oben im <head>.
+(function () {
+  if (!/(^|\.)myle\.life$/.test(location.hostname)) return;
+  function laden() {
+    if (document.querySelector('script[src*="cloudflareinsights.com/beacon"]')) return;
+    var s = document.createElement("script");
+    s.defer = true;
+    s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    s.setAttribute("data-cf-beacon", '{"token": "fc57503e21174189a7c2b18e0d23d3cd"}');
+    document.body.appendChild(s);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", laden);
+  else laden();
+})();
