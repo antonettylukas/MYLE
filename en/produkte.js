@@ -1173,7 +1173,7 @@ const PRODUKTE = [
     nachteile: [
       "You need a few quick steps every day: empty the coffee grounds and the drip tray, and rinse the milk system after milk drinks",
       "If you like filter coffee or cheap capsules from a discount supermarket, it won't save you any money",
-      "It costs much more to buy than a capsule machine and takes up space: the machines here are 20 to 26 centimetres wide and 44 to 47 centimetres deep"
+      "It costs much more to buy than a capsule machine and takes up space: the machines here are 20 to 24 centimetres wide and 44 to 47 centimetres deep"
     ],
     gruppen: [
       { name: "With milk carafe", text: "You pour milk into a carafe and clip it onto the front of the machine. Afterwards you put the carafe with the leftover milk in the fridge and rinse it regularly. Pouring and rinsing are mainly worth it if you drink a lot of milk coffee. Good machines with a carafe start at around 400 euros." },
@@ -1210,20 +1210,10 @@ const PRODUKTE = [
           { name: "De'Longhi Rivelia", preis: 600, text: "Test winner in autumn 2024 with the same grade 2.1. It has two bean containers, so you can switch quickly between two kinds, and a larger touch display. It usually costs a little more. The black EXAM440.55.B was tested. The link goes to the white EXAM440.55.W, which according to De'Longhi also has 16 drinks and two bean containers.", link: amazon("de'longhi rivelia exam440.55.w", "de'longhi rivelia") }
         ]
       },
-      {
-        gruppe: "With milk carafe",
-        stufe: "Premium", spanne: "from €650",
-        name: "De'Longhi Eletta Explore Cold Brew", preis: 800, preisText: "ca. 800 bis 900 €",
-        punkte: [
-          "Test winner at Stiftung Warentest (good, July 2026), together with the more expensive Eletta Ultra",
-          "Also makes cold drinks: cold milk foam and cold brew",
-          "According to the manufacturer, over 50 drinks, operated by touch display or app",
-          "You can take out the brewing unit to rinse it"
-        ],
-        fuer: "If you want lots of different drinks, cold ones in summer too.",
-        hinweis: "Look for “Cold Brew” in the name. According to De'Longhi, this version got the top grade. The link goes to the ECAM450.65.G in dark grey.",
-        link: amazon("de'longhi eletta explore cold brew ecam450.65.g", "de'longhi eletta explore cold brew")
-      },
+      // amazon.co.uk (Stand 10.11.2026): Die Eletta Explore Cold Brew gibt es dort nur als ECAM450.86.T (B0C7WJR4X2, Titanium). Die Buy Box
+      // (Neriah, £749) ist vorübergehend nicht auf Lager, ohne Datum; sonst nur andere Händler ab £949 (01.11.: £799.32 bis £905). Darum fällt die
+      // Karte „Premium“ weg, und ohneTeuer unten nennt die Eletta, wie in fr und it (verfuegbarkeit-16). Kommt sie zurück, muss ihr Hinweis die
+      // ECAM450.86.T nennen statt der ECAM450.65.G.
       {
         gruppe: "With milk tube",
         stufe: "Budget", spanne: "up to €550",
@@ -1241,8 +1231,9 @@ const PRODUKTE = [
       // amazon.co.uk (Stand 01.11.2026): Siemens EQ500 TP516DX3 und Nivona NICR 790 gibt es dort nicht
       // (vom EQ500 nur andere, nicht getestete Modelle zu auffälligen Preisen). Darum hat die Schlauch-Gruppe nur die Latticia.
     ],
+    ohneTeuer: { stufe: "Premium", titel: "Not available right now", text: "The De'Longhi Eletta Explore Cold Brew, test winner at Stiftung Warentest (July 2026), is not available on amazon.co.uk at the moment, or only at a much higher price. As soon as that changes, you'll find it here." },
     fragen: [
-      { f: "Tube or carafe: which suits me?", a: "Both can be good: Stiftung Warentest had test winners with both systems, the Nivona with a tube in 2025, which is not available on amazon.co.uk at the moment, and the Eletta Explore with a carafe in 2026. The difference is in everyday use. You fill the carafe, put it in the fridge with the leftover milk afterwards and rinse it regularly. That's mainly worth it if you drink a lot of milk coffee. I've had good experiences with the De'Longhi Dynamica Plus, for example, which has a carafe. If you only have a milk coffee now and then, the tube is better: you put it into the milk carton and don't pour anything. In return, it has to be flushed after milk drinks and cleaned thoroughly on a regular basis. And with a carafe you get a good machine for a lot less." },
+      { f: "Tube or carafe: which suits me?", a: "Both can be good: Stiftung Warentest had test winners with both systems, the Nivona with a tube in 2025 and the Eletta Explore with a carafe in 2026, but neither is available on amazon.co.uk at the moment. The difference is in everyday use. You fill the carafe, put it in the fridge with the leftover milk afterwards and rinse it regularly. That's mainly worth it if you drink a lot of milk coffee. I've had good experiences with the De'Longhi Dynamica Plus, for example, which has a carafe. If you only have a milk coffee now and then, the tube is better: you put it into the milk carton and don't pour anything. In return, it has to be flushed after milk drinks and cleaned thoroughly on a regular basis. And with a carafe you get a good machine for a lot less." },
       { f: "How much do I save compared with capsules?", a: "A branded capsule costs around 40 cents, a cup from the bean-to-cup machine with beans, water and electricity about 15 cents. If you drink two cups a day, that's around 15 euros a month less, around 10 euros after descaler and cleaner. With cheap capsules from a discount supermarket, hardly anything is left. You save the most by replacing coffee on the go: a cappuccino in a café costs almost 4 euros on average. The calculator shows what it means for you. These are German prices." },
       { f: "Is it worth it compared with filter coffee too?", a: "Honestly, not in terms of money. According to Stiftung Warentest, filter coffee is the cheapest way to make coffee, partly because the machine costs little. According to Warentest, a bean-to-cup machine only pays off if a lot of coffee is drunk. In return, it grinds every cup fresh and makes you espresso and cappuccino at the push of a button." },
       { f: "How much work is the cleaning?", a: "Every day you empty the coffee grounds and the drip tray; many machines tell you when it's time. After milk drinks you rinse the milk system, on many machines at the push of a button. You take the carafe apart regularly and rinse it; for the tube there is a cleaning programme. Once a week you take out the brewing unit and rinse it under running water, without washing-up liquid. That works on all the machines here. You have to descale when the machine tells you to. For descaler, cleaner and water filters, reckon with roughly 30 to 120 euros a year." },

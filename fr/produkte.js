@@ -32,6 +32,7 @@ const ASIN = {
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
   "vicmayun reinigungsbürste": "B0FF9HZS8P",
   "kedoyoy reinigungsbürste": "B0D3STRLBD",
+  "hoto electric spin scrubber": "B0CPXQ4XQK",
   "bomann tsg 5702": "B0GVDKY4BX",
   "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
