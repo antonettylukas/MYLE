@@ -31,6 +31,7 @@ const ASIN = {
   "bosch serie 2 mums2ew00": "B08DHZL8R2",
   "silikon stretchdeckel 12 stück rund eckig": "B0875R9NYP",
   "kedoyoy reinigungsbürste": "B0D3STRLBD",
+  "hoto electric spin scrubber": "B0CPXQ4XQK",
   "bomann tsg 7405": "B0DPX186Z2",
   "duravit 3jet 110 minusflow": "B0BBHST8BZ",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
@@ -1156,21 +1157,13 @@ const PRODUKTE = [
         fuer: "Il mio consiglio se hai già un robot aspirapolvere lavapavimenti. Lo uso io stesso, ne parlo in “La mia esperienza”.",
         hinweis: "Su testit.de i capelli si sono avvolti attorno alla spazzola e lungo i bordi è rimasto dello sporco.",
         link: amazon("bulelink zenith g10")
-      },
-      {
-        stufe: "Fascia alta", spanne: "da 400\u00a0€",
-        name: "Bosch Unlimited 10 (BKS1041RHF)", preis: 570, preisText: "circa da 550 a 600\u00a0€",
-        punkte: [
-          "La versione con seconda batteria e caricatore rapido (BTS1042WAC) ha vinto il test di Stiftung Warentest, il più noto istituto di test per consumatori in Germania (voto 2,2, numero 2/2026)",
-          "Una batteria estraibile, secondo il produttore fino a 80 minuti alla potenza minima",
-          "Con spazzola morbida motorizzata con LED per pavimenti duri, mini spazzola motorizzata e bocchetta XXL per il divano",
-          "Compatta la polvere nel contenitore, così lo svuoti meno spesso"
-        ],
-        fuer: "Per case su più piani, soprattutto con tanti pavimenti duri.",
-        hinweis: "Stiftung Warentest ha testato la versione BTS1042WAC, con una seconda batteria e il caricatore rapido. Su amazon.it Amazon vende al momento questa versione rosa cipria con una batteria. Secondo il produttore si ricarica in circa 4 ore.",
-        link: amazon("bosch unlimited 10 bks1041rhf")
       }
+      // amazon.it (Stand 11.11.2026): Den Bosch Unlimited 10 BKS1041RHF (B0DB8QB2GW) verkauft Amazon am 10. und 11.11. nur für 1.554,40 €, ohne andere
+      // Angebote (01.11.: 569,99 €; amazon.fr am 10.11.: 572,09 €). Die Varianten BCS1041WAC (B0DS9NL3N4) und BCS1041PET (B0FLYKGD1F) sind dort nicht
+      // lieferbar. Darum fällt die Karte „Fascia alta“ weg, und ohneTeuer unten nennt den Bosch (verfuegbarkeit-17). Kostet er wieder etwa 550 bis 600 €,
+      // kommt die alte Karte zurück (Text in verfuegbarkeit-17.md). Die Varianten haben anderes Zubehör, für sie bräuchte die Karte einen anderen Text.
     ],
+    ohneTeuer: { stufe: "Fascia alta", titel: "Al momento non disponibile", text: "Il vincitore del test di Stiftung Warentest, il Bosch Unlimited 10 (voto 2,2, numero 2/2026), al momento su amazon.it si trova solo a un prezzo molto più alto del solito. Appena torna a un prezzo normale, lo trovi qui." },
     fragen: [
       { f: "Sostituisce il mio aspirapolvere normale?", a: "Uno buono sì, soprattutto su pavimenti duri e tappeti non troppo alti. Secondo Stiftung Warentest, i migliori aspirapolvere senza filo tengono il passo con quelli classici. Ma non tutti sono buoni: nel test del numero 2/2026 alcuni apparecchi erano solo “sufficiente” o “insufficiente”." },
       { f: "Quanto dura la batteria?", a: "Quello che indicano i produttori di solito vale per la potenza più bassa. Alla massima spesso sono solo 10-15 minuti. La batteria del Bosch Unlimited 10 si può cambiare: con una seconda aspiri il doppio del tempo." },

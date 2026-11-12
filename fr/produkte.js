@@ -35,6 +35,7 @@ const ASIN = {
   "hoto electric spin scrubber": "B0CPXQ4XQK",
   "bomann tsg 5702": "B0GVDKY4BX",
   "duravit 3jet 110 minusflow": "B0BBHST8BZ",
+  "grohe vitalio smartactive 130 cube": "B084728GQY",
   "ecovacs deebot t80 omni": "B0DZ661PGD",
   "ecovacs deebot t90 pro omni": "B0GK1RD2T7",
   "mova z60 ultra roller complete": "B0GTVD5WGW",
