@@ -1846,7 +1846,6 @@ const PRODUKTE = [
           "Batterie jusqu’à 12 semaines selon Amazon"
         ],
         fuer: "Pour tous ceux qui lisent beaucoup. Mon conseil, car elle a une lumière chaude et elle est étanche.",
-        hinweis: "Toute nouvelle\u202f: Amazon la livre à partir du 11 novembre 2026.",
         link: amazon("kindle paperwhite 2026"),
         alternativen: [
           { name: "Kobo Clara BW", preis: 170, text: "Un peu plus petite (6 pouces), avec lumière chaude et étanche. Les livres, vous les achetez chez Kobo au lieu d’Amazon.", link: amazon("kobo clara bw") }
@@ -1861,7 +1860,7 @@ const PRODUKTE = [
           "Étanche, comme le Paperwhite"
         ],
         fuer: "Pour les BD, les livres pour enfants et tout ce qui contient des images.",
-        hinweis: "Pour les romans seuls, vous n’avez pas besoin de la couleur. Amazon la livre à partir du 11 novembre 2026.",
+        hinweis: "Pour les romans seuls, vous n’avez pas besoin de la couleur.",
         link: amazon("kindle colorsoft 2026"),
         alternativen: [
           { name: "Kobo Libra Colour", preis: 245, text: "Aussi en couleur, avec des touches pour tourner les pages. Les notes se prennent avec un stylet vendu séparément.", link: amazon("kobo libra colour") },

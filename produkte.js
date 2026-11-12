@@ -2102,7 +2102,6 @@ const PRODUKTE = [
           "Akku hält laut Amazon bis zu 12 Wochen"
         ],
         fuer: "Für alle, die viel lesen. Mein Tipp, denn er hat warmes Licht und ist wasserdicht.",
-        hinweis: "Ganz neu: Amazon liefert ihn ab 11. November 2026 aus.",
         link: amazon("kindle paperwhite 2026"),
         alternativen: [
           { name: "Kobo Clara BW", preis: 170, text: "Etwas kleiner (6 Zoll), mit warmem Licht und wasserdicht. Die Bücher kaufst du bei Kobo statt bei Amazon.", link: amazon("kobo clara bw") }
@@ -2117,7 +2116,7 @@ const PRODUKTE = [
           "Wasserdicht, wie der Paperwhite"
         ],
         fuer: "Für Comics, Kinderbücher und alles mit Bildern.",
-        hinweis: "Für reine Romane brauchst du die Farbe nicht. Amazon liefert ihn ab 11. November 2026 aus.",
+        hinweis: "Für reine Romane brauchst du die Farbe nicht.",
         link: amazon("kindle colorsoft 2026"),
         alternativen: [
           { name: "Kobo Libra Colour", preis: 245, text: "Auch mit Farbe, dazu Tasten zum Umblättern. Notizen gehen mit einem Stift, den es extra gibt.", link: amazon("kobo libra colour") },

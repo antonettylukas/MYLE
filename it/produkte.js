@@ -1870,7 +1870,6 @@ const PRODUKTE = [
           "Batteria fino a 12 settimane secondo Amazon"
         ],
         fuer: "Per chi legge molto. Il mio consiglio, perché ha la luce calda ed è impermeabile.",
-        hinweis: "Nuovissimo: Amazon lo consegna dall’11 novembre 2026.",
         link: amazon("kindle paperwhite 2026"),
         alternativen: [
           { name: "Kobo Clara BW", preis: 170, text: "Un po’ più piccolo (6 pollici), con luce calda e impermeabile. I libri li compri da Kobo invece che da Amazon.", link: amazon("kobo clara bw") }
@@ -1885,7 +1884,7 @@ const PRODUKTE = [
           "Impermeabile, come il Paperwhite"
         ],
         fuer: "Per fumetti, libri per bambini e tutto ciò che ha immagini.",
-        hinweis: "Per i soli romanzi il colore non ti serve. Amazon lo consegna dall’11 novembre 2026.",
+        hinweis: "Per i soli romanzi il colore non ti serve.",
         link: amazon("kindle colorsoft 2026"),
         alternativen: [
           { name: "Kobo Libra Colour", preis: 245, text: "Anche a colori, in più con tasti per girare pagina. Gli appunti si prendono con una penna venduta a parte.", link: amazon("kobo libra colour") },

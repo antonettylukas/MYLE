@@ -1789,7 +1789,6 @@ const PRODUKTE = [
           "Battery lasts up to 12 weeks, according to Amazon"
         ],
         fuer: "For anyone who reads a lot. My tip, because it has warm light and is waterproof.",
-        hinweis: "Brand new: Amazon ships it from 11 November 2026.",
         link: amazon("kindle paperwhite 2026"),
         alternativen: [
           { name: "Kobo Clara BW", preis: 170, text: "A little smaller (6 inches), with warm light and waterproof. You buy the books from Kobo instead of Amazon.", link: amazon("kobo clara bw") }
@@ -1804,7 +1803,7 @@ const PRODUKTE = [
           "Waterproof, like the Paperwhite"
         ],
         fuer: "For comics, children's books and anything with pictures.",
-        hinweis: "For novels alone you don't need colour. Amazon ships it from 11 November 2026.",
+        hinweis: "For novels alone you don't need colour.",
         link: amazon("kindle colorsoft 2026"),
         alternativen: [
           { name: "Kobo Libra Colour", preis: 245, text: "Also in colour, plus buttons for turning pages. You can take notes with a stylus, sold separately.", link: amazon("kobo libra colour") },
