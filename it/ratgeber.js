@@ -500,5 +500,104 @@ const RATGEBER = [
       { name: "homeandsmart: sostituire una valvola termostatica", text: "la maggior parte delle valvole con filettatura M30 x 1,5, adattatori per le altre, niente acqua da svuotare, niente artigiano, fatto in pochi minuti, il riscaldamento a pavimento richiede un termostato ambiente" },
       { name: "Dati dei produttori", text: "filettatura M30 x 1,5 e adattatori inclusi, per esempio per valvole Danfoss, secondo eQ-3 (Homematic IP), AVM (FRITZ!) e Bosch, montaggio senza svuotare l’acqua e senza attrezzi speciali secondo eQ-3" }
     ]
+  },
+  {
+    id: "saugroboter-oder-akkusauger",
+    produkt: "saugroboter",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["akkusauger"],
+    titel: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
+    frage: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
+    seitenTitel: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
+    beschreibung: "Cosa sanno fare meglio un robot aspirapolvere lavapavimenti e un aspirapolvere senza fili, quanto tempo ti fanno risparmiare e perché per molte case la cosa migliore è averli entrambi.",
+    kurzantwort: "Un robot aspirapolvere lavapavimenti fa per te se vuoi pavimenti puliti senza muovere un dito, un aspirapolvere senza fili se vuoi aspirare in fretta da solo, anche scale, divano e auto. Secondo il mio calcolatore, su 70 m² il robot ti fa risparmiare circa un’ora a settimana se di solito passi l’aspirapolvere due volte e lavi i pavimenti una volta. Con l’aspirapolvere senza fili continui ad aspirare da solo, solo più in fretta. Per molte case la soluzione più comoda è averli entrambi: il robot per i pavimenti e un aspirapolvere senza fili economico per i punti dove lui non arriva.",
+    abschnitte: [
+      {
+        titel: "Cosa sa fare meglio ciascuno",
+        absaetze: [
+          "Il robot aspirapolvere lavapavimenti ti toglie il lavoro di aspirare e lavare i pavimenti. Nell’app imposti una programmazione, e lui pulisce mentre sei al lavoro. Poi torna alla sua base. In molti modelli la base lo svuota e lava anche il rullo o i panni lavapavimenti.",
+          "L’aspirapolvere senza fili lo guidi tu, ma senza cavo e senza cambiare presa. Lo stacchi dal muro, aspiri le briciole sotto il tavolo e lo riappendi. Con un gesto diventa un aspirapolvere portatile per divano, scale e auto."
+        ]
+      },
+      {
+        titel: "Quanto tempo risparmi",
+        absaetze: [
+          "Il mio calcolatore conta circa 19 minuti per aspirare 70 m², preparazione compresa, e circa 26 minuti per lavare i pavimenti. Per la manutenzione del robot toglie 5 minuti a settimana. Se passi l’aspirapolvere due volte a settimana e lavi una volta, il robot ti fa risparmiare circa un’ora a settimana, più di 50 ore all’anno.",
+          "Con l’aspirapolvere senza fili continui ad aspirare da solo. Ti risparmia di tirarlo fuori, attaccarlo alla presa e cambiare presa: secondo il mio calcolatore, su 70 m² più di 5 minuti ogni volta, e 2 minuti quando aspiri al volo qualche briciola. Se aspiri due volte a settimana e tre volte al volo nel mezzo, fa più di un quarto d’ora."
+        ]
+      },
+      {
+        titel: "Dove il robot arriva ai suoi limiti",
+        absaetze: [
+          "I robot comuni non fanno le scale, e la base resta in un posto. Se abiti su due piani, lo porti di sopra, oppure aspiri le scale e il piano di sopra con l’aspirapolvere senza fili.",
+          "Angoli, bordi e la striscia proprio lungo il battiscopa di solito li pulisce meno a fondo. Sui tappeti a pelo lungo un aspirapolvere che guidi tu aspira più a fondo. Secondo Stiftung Warentest, anche i robot migliori non arrivano alla potenza e alla filtrazione di un buon aspirapolvere.",
+          "Gli serve anche un pavimento libero: prima che parta metti via in fretta cavi, calzini e giocattoli. In cambio passa sotto letto e divano, se c’è abbastanza spazio.",
+          "Le case grandi le gestisce comunque: nel test di Stiftung Warentest i robot migliori hanno coperto fino a 193 m² con una carica. Se la batteria non basta, molti tornano alla base a ricaricarsi e poi continuano a pulire."
+        ]
+      },
+      {
+        titel: "A cosa fare attenzione con l’aspirapolvere senza fili",
+        absaetze: [
+          "Nel test comune di Stiftung Warentest e Konsument, i migliori aspirapolvere senza fili aspiravano bene quanto gli aspirapolvere a traino con cavo. Guarda soprattutto la batteria: l’autonomia indicata dai produttori di solito vale per il livello più basso. Al livello massimo molti durano solo 10–15 minuti.",
+          "Per una casa grande conviene quindi un modello con batteria estraibile. Secondo Konsument, però, la seconda batteria di solito va comprata a parte. Il contenitore della polvere è piccolo, e svuotarlo solleva un po’ di polvere. Dopo qualche anno la batteria cala, quindi controlla che esistano batterie di ricambio."
+        ]
+      },
+      {
+        titel: "Entrambi insieme: come si dividono il lavoro",
+        absaetze: [
+          "Per molte case è la soluzione più comoda. Il robot parte secondo la programmazione e tiene puliti i pavimenti, anche ogni giorno se vuoi. L’aspirapolvere senza fili lo prendi solo per le briciole dopo mangiato, per scale, divano e auto e ogni tanto per angoli e battiscopa."
+        ]
+      },
+      {
+        titel: "La mia esperienza",
+        absaetze: [
+          "Se hai un robot aspirapolvere, l’aspirapolvere senza fili ti serve comunque solo molto di rado. Per questo basta un modello economico. Io ad esempio ho il Bulelink Zenith G10 e ne sono molto soddisfatto."
+        ],
+        art: "erfahrung"
+      },
+      {
+        titel: "Quanto costa",
+        absaetze: [
+          "All’acquisto un robot aspirapolvere lavapavimenti con base costa di solito molto più di un buon aspirapolvere senza fili. Un robot che aspira soltanto costa meno, ma poi i pavimenti li devi ancora lavare tu.",
+          "Nei costi di gestione, secondo il mio calcolatore spazzole, filtri, sacchetti e panni del robot costano circa 3,50 € al mese in più rispetto a un normale aspirapolvere. Con l’aspirapolvere senza fili non compri sacchetti, ma dopo qualche anno ti servirà forse una batteria nuova."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quali robot aspirapolvere lavapavimenti consiglio e quanto tempo risparmi con i tuoi numeri lo vedi nella mia pagina sul robot aspirapolvere lavapavimenti. I miei consigli per l’aspirapolvere senza fili giusto sono nella mia pagina sull’aspirapolvere senza fili.",
+      knopf: "Al robot aspirapolvere lavapavimenti con calcolatore",
+      weitere: [{ knopf: "All’aspirapolvere senza fili", link: "akkusauger" }]
+    },
+    wannNichtTitel: "Quando un robot aspirapolvere lavapavimenti non fa per te",
+    wannNicht: [
+      "Abiti su più piani e non vuoi portare il robot su e giù: i robot comuni non fanno le scale.",
+      "Sul pavimento c’è spesso tanta roba in giro, e non vuoi mettere in ordine in fretta prima che parta.",
+      "Hai soprattutto tappeti a pelo lungo: lì un aspirapolvere che guidi tu aspira più a fondo.",
+      "Aspiri soprattutto divano, scale o auto: per questo ti serve un aspirapolvere senza fili.",
+      "Non hai spazio per la base: le servono circa 40 cm contro il muro e da 0,8 a 1,5 m liberi davanti."
+    ],
+    fragen: [
+      { f: "Un robot aspirapolvere lavapavimenti sostituisce del tutto l’aspirapolvere?", a: "Per i pavimenti di tutti i giorni spesso sì, del tutto raramente. Scale, divano e auto non li fa, e negli angoli e sui tappeti a pelo lungo pulisce meno a fondo. Per questo basta un aspirapolvere senza fili che usi solo ogni tanto." },
+      { f: "La batteria di un aspirapolvere senza fili basta per una casa grande?", a: "Al livello massimo spesso no: allora molti durano solo 10–15 minuti. Per una casa grande scegli un modello con batteria estraibile. Oppure lasci aspirare i pavimenti al robot e usi l’aspirapolvere senza fili solo per brevi passate." },
+      { f: "Esistono set con robot e aspirapolvere senza fili?", a: "Sì, alcuni produttori offrono set in cui un robot e un aspirapolvere senza fili condividono la stessa base. La base svuota entrambi, anche il contenitore della polvere dell’aspirapolvere senza fili." },
+      { f: "Cosa è meglio se ho animali?", a: "La cosa più comoda è averli entrambi: il robot aspira i peli dal pavimento secondo la programmazione, anche ogni giorno se vuoi, e per il divano prendi l’aspirapolvere senza fili. Cosa conta in un robot con animali lo trovi nella mia guida sul robot aspirapolvere con animali." }
+    ],
+    quellen: [
+      { name: "Il mio calcolatore nella pagina sul robot aspirapolvere lavapavimenti", text: "il tempo per 70 m² con due passate di aspirapolvere e un lavaggio a settimana e il costo dei ricambi, le ipotesi sono lì sotto „Come calcolo“" },
+      { name: "Il mio calcolatore nella pagina sull’aspirapolvere senza fili", text: "il tempo rispetto a un aspirapolvere con cavo su 70 m², due passate e tre volte briciole a settimana, le ipotesi sono lì sotto „Come calcolo“" },
+      { name: "Stiftung Warentest: test dei robot aspirapolvere (giugno 2026)", text: "anche i robot migliori non tengono il passo di un buon aspirapolvere in potenza e filtrazione, punti forti sui pavimenti duri, circa 33–193 m² con una carica, dimensioni delle basi" },
+      { name: "Stiftung Warentest: test dei robot aspirapolvere lavapavimenti (dicembre 2025)", text: "sui tappeti la maggior parte non convince" },
+      { name: "Stiftung Warentest: test degli aspirapolvere senza fili (numero 2/2026)", text: "i migliori aspirapolvere senza fili tengono il passo dei classici aspirapolvere a traino, 10–17 minuti di autonomia al livello massimo" },
+      { name: "Konsument (VKI): test degli aspirapolvere senza fili, comunicato stampa (febbraio 2026)", url: "https://vki.at/system/files/2026-02/2026-02-18_PA_Akkusauger_0.pdf", text: "14 apparecchi testati insieme a Stiftung Warentest, i buoni aspirapolvere senza fili tengono il passo di quelli con cavo nell’aspirazione, al livello massimo sul tappeto due apparecchi si sono fermati dopo 6 e 9 minuti, batteria estraibile di solito non inclusa" },
+      { name: "Consumer NZ: Which type of vacuum is best for cleaning your home? (marzo 2024)", text: "robot buoni sui pavimenti duri, deboli sui tappeti, niente scale, aspirano anche sotto i mobili, aspirapolvere senza fili con autonomia limitata" },
+      { name: "TechRadar: Robot vacuum vs cordless vacuum (novembre 2023)", text: "robot più comodo, aspirapolvere senza fili più accurato e versatile su bordi, scale, imbottiti e in auto, mettere in ordine prima del robot, averli entrambi è l’ideale" },
+      { name: "T3: Cordless or robot, which is the best vacuum cleaner for you? (agosto 2023)", text: "aspirapolvere senza fili per passate veloci, scale e auto, anche come portatile, supporto a muro, il robot fa risparmiare tempo ma a volte si blocca" },
+      { name: "testundtipps.de: robot aspirapolvere o aspirapolvere senza fili (luglio 2026)", text: "scale solo con un apparecchio guidato, il robot aspira peggio bordi, angoli e battiscopa, meno a fondo sul pelo lungo, liberare prima il pavimento, i due si dividono il lavoro" },
+      { name: "home&smart: pro e contro dei robot aspirapolvere lavapavimenti (novembre 2026) e robot che salgono le scale (febbraio 2026)", text: "non per imbottiti e scale, angoli stretti e mobili bassi, mettere via prima gli oggetti, per aspirare a fondo serve ancora un aspirapolvere classico, robot per le scale finora prototipi" },
+      { name: "Altri test sugli aspirapolvere senza fili", text: "home&smart, ETM Testmagazin, t-online e produkte-im-test.de sull’autonomia al livello più basso e più alto, SRF Kassensturz e Apotheken Umschau sulla polvere quando si svuota" },
+      { name: "Ricaricare e continuare", text: "i robot tornano alla base a ricaricarsi e poi continuano a pulire, secondo Anker (luglio 2026), la guida di Ecovacs („riprendi la pulizia“) e smarthomeassistent.de su Neato (giugno 2022)" },
+      { name: "Set con base in comune", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, dicembre 2025), Yeedi C12 Combo (notebookcheck.com, ottobre 2024) ed Ecovacs Deebot X2 Combo (netzwelt.de, aprile 2024)" },
+      { name: "Indicazioni dei produttori e manuali", text: "spazio davanti e accanto alla base secondo Roborock, Kärcher ed Ecovacs, dimensioni delle basi secondo Kärcher e Anker" }
+    ]
   }
 ];

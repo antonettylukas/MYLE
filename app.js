@@ -519,6 +519,7 @@
         </div>
         <div class="ratgeber-knoepfe">
           <a class="buy" href="${esc(p.id)}">${esc((r.verweis && r.verweis.knopf) || t("Zur Empfehlung", "See my recommendation"))}</a>
+          ${((r.verweis && r.verweis.weitere) || []).map(w => `<a class="text-link" href="${esc(String(w.link || "").replace(/^\//, ""))}">${esc(w.knopf)}</a>`).join("")}
           ${p.rechner ? `<a class="text-link" href="${esc(p.id)}#rechner">${t("Für deinen Haushalt ausrechnen", "Work it out for your household")}</a>` : ""}
         </div>
       </aside>` : "";
@@ -647,7 +648,7 @@
       </section>`;
 
     // Passende Ratgeber (Feld produkt in ratgeber.js, kurz in ratgeber-kurz.js), unter Fragen und Antworten
-    const passendeRatgeber = (typeof RATGEBER_KURZ !== "undefined" ? RATGEBER_KURZ : []).filter(x => x.produkt === p.id);
+    const passendeRatgeber = (typeof RATGEBER_KURZ !== "undefined" ? RATGEBER_KURZ : []).filter(x => x.produkt === p.id || (x.weitereProdukte || []).includes(p.id));
     const spruenge = [
       ms.length && ["#modelle", t("Preisklassen", "Price ranges")],
       r && ["#rechner", t("Rechner", "Calculator")],

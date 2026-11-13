@@ -37,7 +37,7 @@ def eintraege(pre):
     if not os.path.exists(js):
         return []
     out = subprocess.run(["node", "-e", "const fs=require('fs');eval(fs.readFileSync(process.argv[1],'utf8')+';globalThis.R=RATGEBER');"
-                          "console.log(JSON.stringify(R.map(r=>({id:r.id,produkt:r.produkt||'',seitenTitel:r.seitenTitel||r.frage,beschreibung:r.beschreibung||'',frage:r.frage,kurz:[].concat(r.kurzantwort||'')[0]}))))", js],
+                          "console.log(JSON.stringify(R.map(r=>({id:r.id,produkt:r.produkt||'',weitereProdukte:r.weitereProdukte||[],seitenTitel:r.seitenTitel||r.frage,beschreibung:r.beschreibung||'',frage:r.frage,kurz:[].concat(r.kurzantwort||'')[0]}))))", js],
                          capture_output=True, text=True, check=True)
     return json.loads(out.stdout)
 
@@ -65,9 +65,9 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
 
 
 def kurz_text(rs):
-    kurz = [{"id": r["id"], "produkt": r["produkt"], "frage": r["frage"], "kurzantwort": r["kurz"]} for r in rs]
+    kurz = [dict({"id": r["id"], "produkt": r["produkt"]}, **({"weitereProdukte": r["weitereProdukte"]} if r.get("weitereProdukte") else {}), frage=r["frage"], kurzantwort=r["kurz"]) for r in rs]
     return ("// Automatisch gebaut von .github/pruefung/ratgeber_seiten.py aus ratgeber.js. Nicht von Hand ändern.\n"
-            "// Die Produktseiten zeigen damit „Passende Ratgeber“ (Feld produkt).\n"
+            "// Die Produktseiten zeigen damit „Passende Ratgeber“ (Felder produkt und weitereProdukte).\n"
             "const RATGEBER_KURZ = [\n" + ",\n".join("  " + json.dumps(k, ensure_ascii=False) for k in kurz) + "\n];\n")
 
 

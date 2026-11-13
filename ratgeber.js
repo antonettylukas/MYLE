@@ -5,6 +5,8 @@
   abschnitte    [{ titel, absaetze, punkte? }]; art: "erfahrung" zeigt den Abschnitt als Zitat-Kasten von Lukas
   wannNicht, fragen, quellen   wie auf den Produktseiten; Quellen ohne url stehen nur als Text da
   produkt, verweis   Kasten mit Link auf die passende Produktseite und ihren Rechner
+  verweis.weitere   optional: weitere Knöpfe [{ knopf, link }] zu anderen Produktseiten (link ohne Sprachordner, z. B. "akkusauger")
+  weitereProdukte   optional: weitere Produktseiten, die den Ratgeber unter „Passende Ratgeber“ zeigen
   geprueft      Datum der letzten Prüfung (JJJJ-MM-TT)
   Neue Seite: Eintrag hier (und in en/fr/it) anlegen, dann python3 .github/pruefung/ratgeber_seiten.py,
   python3 .github/pruefung/sitemap.py und node .github/pruefung/vorrendern.js.
@@ -577,6 +579,105 @@ const RATGEBER = [
       { name: "smarthomeassistent.de: Bestenliste Heizkörperthermostate (Oktober 2026)", text: "Platz 1 und 2 mit Zentrale, kein Modell, das direkt ins WLAN geht, unter den ersten zehn" },
       { name: "homeandsmart: Thermostat tauschen", text: "die meisten Ventile mit Gewinde M30 x 1,5, Adapter für andere, kein Wasser ablassen, kein Handwerker, in wenigen Minuten erledigt, Fußbodenheizung braucht ein Raumthermostat" },
       { name: "Herstellerangaben", text: "Gewinde M30 x 1,5 und beiliegende Adapter, zum Beispiel für Danfoss-Ventile, laut eQ-3 (Homematic IP), AVM (FRITZ!) und Bosch, Montage ohne Wasser ablassen und ohne Spezialwerkzeug laut eQ-3" }
+    ]
+  },
+  {
+    id: "saugroboter-oder-akkusauger",
+    produkt: "saugroboter",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["akkusauger"],
+    titel: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
+    frage: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
+    seitenTitel: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
+    beschreibung: "Was ein Saug- und Wischroboter und ein Akku-Staubsauger jeweils besser können, wie viel Zeit sie dir sparen und warum für viele Wohnungen beides zusammen am besten passt.",
+    kurzantwort: "Ein Saug- und Wischroboter passt, wenn deine Böden ohne dich sauber werden sollen, ein Akku-Staubsauger, wenn du schnell selbst saugen willst, auch auf Treppe, Sofa und im Auto. Laut meinem Rechner spart dir der Roboter bei 70 m² rund eine Stunde pro Woche, wenn du sonst zweimal saugst und einmal wischst. Mit dem Akku-Staubsauger saugst du weiter selbst, nur schneller. Für viele Wohnungen ist beides zusammen am bequemsten: der Roboter für die Böden und ein günstiger Akku-Staubsauger für die Stellen, an die er nicht kommt.",
+    abschnitte: [
+      {
+        titel: "Was jeder am besten kann",
+        absaetze: [
+          "Der Saug- und Wischroboter nimmt dir das Saugen und Wischen ab. In der App stellst du einen Zeitplan ein, und er putzt, während du bei der Arbeit bist. Danach fährt er in seine Station. Bei vielen Modellen saugt sie ihn leer und wäscht auch die Wischwalze oder die Mopps.",
+          "Den Akku-Staubsauger führst du selbst, aber ohne Kabel und Umstecken. Du nimmst ihn von der Wand, saugst die Krümel unterm Esstisch weg und hängst ihn zurück. Mit einem Handgriff wird er zum Handsauger für Sofa, Treppe und Auto."
+        ]
+      },
+      {
+        titel: "So viel Zeit sparst du",
+        absaetze: [
+          "Mein Rechner setzt fürs Saugen auf 70 m² samt Vorbereitung rund 19 Minuten an, fürs Wischen rund 26 Minuten. Für die Pflege des Roboters zieht er 5 Minuten pro Woche ab. Saugst du zweimal pro Woche und wischst einmal, spart dir der Roboter so rund eine Stunde pro Woche, gut 50 Stunden im Jahr.",
+          "Mit dem Akku-Staubsauger saugst du weiter selbst. Er spart dir das Herausholen, Einstecken und Umstecken: laut meinem Rechner auf 70 m² gut 5 Minuten pro Mal und 2 Minuten, wenn du schnell Krümel wegsaugst. Saugst du zweimal pro Woche und dreimal schnell zwischendurch, ist das gut eine Viertelstunde."
+        ]
+      },
+      {
+        titel: "Wo der Roboter an Grenzen kommt",
+        absaetze: [
+          "Treppen schaffen gängige Roboter nicht, und die Station bleibt an einem Ort. Wohnst du auf zwei Etagen, trägst du ihn hoch, oder du saugst die Treppe und das obere Stockwerk mit dem Akku-Staubsauger.",
+          "Ecken, Kanten und den Streifen direkt an der Fußleiste putzt er meist weniger gründlich. Auf hohem Teppich saugt ein Sauger, den du führst, gründlicher. Laut Stiftung Warentest kommen selbst die besten Roboter an Leistung und Filterwirkung eines guten Staubsaugers nicht heran.",
+          "Außerdem braucht er einen freien Boden: Kabel, Socken und Spielzeug räumst du vor dem Start kurz weg. Dafür kommt er unter Bett und Sofa, wenn dort genug Platz ist.",
+          "Große Wohnungen schafft er trotzdem: Im Test von Stiftung Warentest kamen die besten Roboter mit einer Akkuladung auf bis zu 193 m². Reicht der Akku nicht, fahren viele zum Laden in die Station und putzen danach weiter."
+        ]
+      },
+      {
+        titel: "Worauf du beim Akku-Staubsauger achten solltest",
+        absaetze: [
+          "Im gemeinsamen Test von Stiftung Warentest und Konsument saugten die besten Akku-Staubsauger so gut wie Bodenstaubsauger mit Kabel. Achten solltest du vor allem auf den Akku: Was Hersteller als Laufzeit angeben, gilt meist für die schwächste Stufe. Auf höchster Stufe halten viele nur 10 bis 15 Minuten durch.",
+          "Für eine große Wohnung lohnt sich darum ein Modell mit Wechselakku. Einen zweiten Akku musst du laut Konsument aber meist extra kaufen. Der Staubbehälter ist klein, und beim Leeren staubt es etwas. Nach einigen Jahren lässt der Akku nach, achte deshalb darauf, dass es Ersatz-Akkus gibt."
+        ]
+      },
+      {
+        titel: "Beides zusammen: So teilen sie sich die Arbeit",
+        absaetze: [
+          "Für viele Wohnungen ist das die bequemste Lösung. Der Roboter fährt nach Zeitplan und hält die Böden sauber, auf Wunsch jeden Tag. Den Akku-Staubsauger nimmst du nur noch für Krümel nach dem Essen, für Treppe, Sofa und Auto und ab und zu für Ecken und Fußleisten."
+        ]
+      },
+      {
+        titel: "Meine Erfahrung",
+        absaetze: [
+          "Hast du einen Saugroboter, brauchst du den Akkusauger sowieso nur sehr selten. Dafür reicht ein günstiges Modell. Ich habe zum Beispiel den Bulelink Zenith G10 und bin damit sehr zufrieden."
+        ],
+        art: "erfahrung"
+      },
+      {
+        titel: "Was es kostet",
+        absaetze: [
+          "In der Anschaffung kostet ein Saug- und Wischroboter mit Station meist deutlich mehr als ein guter Akku-Staubsauger. Ein Roboter, der nur saugt, ist günstiger, wischen musst du dann aber weiter selbst.",
+          "Im Unterhalt kosten Bürsten, Filter, Beutel und Mopps beim Roboter laut meinem Rechner etwa 3,50 € im Monat mehr als bei einem normalen Staubsauger. Beim Akku-Staubsauger kaufst du keine Beutel, dafür brauchst du nach einigen Jahren vielleicht einen neuen Akku."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Welche Saug- und Wischroboter ich empfehle und wie viel Zeit du mit deinen eigenen Zahlen sparst, siehst du auf meiner Seite zum Saug- und Wischroboter. Meine Tipps für den passenden Akku-Staubsauger stehen auf meiner Seite zum Akku-Staubsauger.",
+      knopf: "Zum Saug- und Wischroboter mit Rechner",
+      weitere: [{ knopf: "Zum Akku-Staubsauger", link: "akkusauger" }]
+    },
+    wannNichtTitel: "Wann eher kein Saug- und Wischroboter",
+    wannNicht: [
+      "Du wohnst auf mehreren Etagen und willst den Roboter nicht hin und her tragen: Treppen schaffen gängige Roboter nicht.",
+      "Auf deinem Boden liegt oft viel herum, und du willst vor dem Start nicht kurz aufräumen.",
+      "Du hast vor allem hohe Teppiche: Dort saugt ein Sauger, den du führst, gründlicher.",
+      "Du saugst vor allem Sofa, Treppe oder Auto: Dafür brauchst du einen Akku-Staubsauger.",
+      "Für die Station fehlt dir der Platz: Sie braucht rund 40 cm an der Wand und davor 0,8 bis 1,5 m frei."
+    ],
+    fragen: [
+      { f: "Ersetzt ein Saug- und Wischroboter den Staubsauger ganz?", a: "Für die Böden im Alltag oft ja, ganz aber selten. Treppe, Sofa und Auto schafft er nicht, und in Ecken und auf hohem Teppich putzt er weniger gründlich. Dafür reicht ein Akku-Staubsauger, den du nur ab und zu brauchst." },
+      { f: "Reicht der Akku eines Akku-Staubsaugers für eine große Wohnung?", a: "Auf höchster Stufe oft nicht: Dann halten viele nur 10 bis 15 Minuten durch. Nimm für eine große Wohnung ein Modell mit Wechselakku. Oder du lässt die Böden vom Roboter saugen und nimmst den Akku-Staubsauger nur für kurze Einsätze." },
+      { f: "Gibt es Roboter und Akku-Staubsauger im Set?", a: "Ja, einige Hersteller bieten Sets an, bei denen sich ein Roboter und ein Akku-Staubsauger eine Station teilen. Die saugt dann beide leer, auch den Staubbehälter des Akku-Staubsaugers." },
+      { f: "Was passt besser, wenn ich Haustiere habe?", a: "Am bequemsten ist beides: Der Roboter saugt die Haare nach Zeitplan vom Boden, auf Wunsch jeden Tag, und fürs Sofa nimmst du den Akku-Staubsauger. Worauf es beim Roboter mit Tier ankommt, steht in meinem Ratgeber zum Saugroboter mit Haustieren." }
+    ],
+    quellen: [
+      { name: "Mein Rechner auf der Seite zum Saug- und Wischroboter", text: "die Zeit für 70 m² bei zweimal Saugen und einmal Wischen pro Woche und die Kosten für Ersatzteile, die Annahmen stehen dort unter „So rechne ich“" },
+      { name: "Mein Rechner auf der Seite zum Akku-Staubsauger", text: "die Zeit gegenüber einem Sauger mit Kabel bei 70 m², zweimal Saugen und dreimal Krümeln pro Woche, die Annahmen stehen dort unter „So rechne ich“" },
+      { name: "Stiftung Warentest: Saugroboter im Test (Juni 2026)", text: "selbst die besten Roboter halten bei Leistung und Filterwirkung nicht mit einem guten Staubsauger mit, Stärken auf Hartboden, mit einer Akkuladung etwa 33 bis 193 m², Größe der Stationen" },
+      { name: "Stiftung Warentest: Saug-Wisch-Roboter im Test (Dezember 2025)", text: "auf Teppich überzeugen die meisten nicht" },
+      { name: "Stiftung Warentest: Akku-Staubsauger im Test (Heft 2/2026)", text: "die besten Akkusauger halten mit klassischen Bodenstaubsaugern mit, auf höchster Stufe 10 bis 17 Minuten Laufzeit" },
+      { name: "Konsument (VKI): Akku-Staubsauger im Test, Pressemitteilung (Februar 2026)", url: "https://vki.at/system/files/2026-02/2026-02-18_PA_Akkusauger_0.pdf", text: "14 Geräte gemeinsam mit Stiftung Warentest getestet, gute Akkusauger halten bei der Saugleistung mit Geräten mit Kabel mit, auf höchster Stufe auf Teppich bei zwei Geräten nach 6 und 9 Minuten Schluss, Wechselakku meist nicht im Lieferumfang" },
+      { name: "Consumer NZ: Which type of vacuum is best for cleaning your home? (März 2024)", text: "Roboter auf Hartboden gut, auf Teppich schwach, keine Treppen, saugen auch unter Möbeln, Akkusauger mit begrenzter Laufzeit" },
+      { name: "TechRadar: Robot vacuum vs cordless vacuum (November 2023)", text: "Roboter bequemer, Akkusauger gründlicher und vielseitiger an Kanten, auf Treppen, Polstern und im Auto, vor dem Roboter aufräumen, beides zu haben ist ideal" },
+      { name: "T3: Cordless or robot, which is the best vacuum cleaner for you? (August 2023)", text: "Akkusauger für schnelle Einsätze, Treppe und Auto, auch als Handsauger, Wandhalterung, Roboter spart Zeit, bleibt aber mal hängen" },
+      { name: "testundtipps.de: Saugroboter oder Akkustaubsauger (Juli 2026)", text: "Treppen nur mit geführtem Gerät, Kanten, Ecken und Fußleisten saugt der Roboter schwächer, auf Hochflor weniger gründlich, Boden vorher frei räumen, beide teilen sich die Arbeit" },
+      { name: "home&smart: Vor- und Nachteile von Saug- und Wischrobotern (November 2026) und Saugroboter, die Treppen steigen (Februar 2026)", text: "nicht für Polster und Treppen, enge Ecken und niedrige Möbel, lose Gegenstände vorher wegräumen, für gründliches Saugen weiter ein klassischer Staubsauger, Roboter für Treppen bisher Prototypen" },
+      { name: "Weitere Tests zu Akku-Staubsaugern", text: "home&smart, ETM Testmagazin, t-online und produkte-im-test.de zur Laufzeit auf schwächster und höchster Stufe, SRF Kassensturz und Apotheken Umschau zum Staub beim Leeren" },
+      { name: "Nachladen und Weiterputzen", text: "Roboter fahren zum Laden in die Station und putzen danach weiter, laut Anker (Juli 2026), der Hilfe von Ecovacs („Reinigung fortsetzen“) und smarthomeassistent.de zu Neato (Juni 2022)" },
+      { name: "Sets mit gemeinsamer Station", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, Dezember 2025), Yeedi C12 Combo (notebookcheck.com, Oktober 2024) und Ecovacs Deebot X2 Combo (netzwelt.de, April 2024)" },
+      { name: "Herstellerangaben und Anleitungen", text: "Platz vor und neben der Station laut Roborock, Kärcher und Ecovacs, Maße der Stationen laut Kärcher und Anker" }
     ]
   }
 ];

@@ -500,5 +500,104 @@ const RATGEBER = [
       { name: "homeandsmart: replacing a thermostat", text: "most valves with an M30 x 1.5 thread, adapters for others, no draining water, no tradesperson, done in a few minutes, underfloor heating needs a room thermostat" },
       { name: "Manufacturer information", text: "M30 x 1.5 thread and included adapters, for example for Danfoss valves, according to eQ-3 (Homematic IP), AVM (FRITZ!) and Bosch, fitting without draining water and without special tools according to eQ-3" }
     ]
+  },
+  {
+    id: "saugroboter-oder-akkusauger",
+    produkt: "saugroboter",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["akkusauger"],
+    titel: "Robot vacuum or cordless vacuum: which suits me?",
+    frage: "Robot vacuum or cordless vacuum: which suits me?",
+    seitenTitel: "Robot vacuum or cordless vacuum: which suits me?",
+    beschreibung: "What a robot vacuum and mop and a cordless vacuum each do better, how much time they save you and why for many homes both together suit best.",
+    kurzantwort: "A robot vacuum and mop suits you if your floors should get clean without you, a cordless vacuum if you want to vacuum quickly yourself, including stairs, sofa and car. My calculator says the robot saves you around an hour a week on 70 m² if you otherwise vacuum twice and mop once. With the cordless vacuum you keep vacuuming yourself, just faster. For many homes both together are the most convenient: the robot for the floors and a cheap cordless vacuum for the spots it can't reach.",
+    abschnitte: [
+      {
+        titel: "What each does best",
+        absaetze: [
+          "The robot vacuum and mop takes vacuuming and mopping off your hands. You set a schedule in the app, and it cleans while you're at work. Then it drives back to its base station. On many models the station empties it and also washes the mopping roller or the mop pads.",
+          "You guide the cordless vacuum yourself, but without a cable and without changing sockets. You take it off the wall, vacuum up the crumbs under the dining table and hang it back up. With one move it becomes a handheld vacuum for sofa, stairs and car."
+        ]
+      },
+      {
+        titel: "How much time you save",
+        absaetze: [
+          "My calculator allows around 19 minutes for vacuuming 70 m² including getting ready, and around 26 minutes for mopping. It deducts 5 minutes a week for looking after the robot. If you vacuum twice a week and mop once, the robot saves you around an hour a week, a good 50 hours a year.",
+          "With the cordless vacuum you keep vacuuming yourself. It saves you getting it out, plugging it in and changing sockets: my calculator says a good 5 minutes each time on 70 m², and 2 minutes when you quickly vacuum up crumbs. If you vacuum twice a week and quickly in between three times, that's a good quarter of an hour."
+        ]
+      },
+      {
+        titel: "Where the robot reaches its limits",
+        absaetze: [
+          "Common robots can't manage stairs, and the base station stays in one place. If you live on two floors, you carry it upstairs, or you vacuum the stairs and the upper floor with the cordless vacuum.",
+          "Corners, edges and the strip right along the skirting board usually get less thorough cleaning. On deep-pile carpet a vacuum you guide yourself cleans more thoroughly. According to Stiftung Warentest, even the best robots can't match the suction power and filtering of a good vacuum cleaner.",
+          "It also needs a clear floor: you quickly tidy away cables, socks and toys before it starts. In return it gets under the bed and sofa if there's enough room.",
+          "It still manages large homes: in the Stiftung Warentest test the best robots covered up to 193 m² on one battery charge. If the battery isn't enough, many drive to the base station to recharge and then carry on cleaning."
+        ]
+      },
+      {
+        titel: "What to look out for with a cordless vacuum",
+        absaetze: [
+          "In the joint test by Stiftung Warentest and Konsument, the best cordless vacuums cleaned as well as corded cylinder vacuums. Above all, look at the battery: the run time manufacturers state usually applies to the lowest setting. On the highest setting many only last 10 to 15 minutes.",
+          "For a large home a model with a swappable battery is therefore worth it. According to Konsument, though, you usually have to buy a second battery separately. The dust container is small, and emptying it is a bit dusty. After a few years the battery weakens, so make sure replacement batteries are available."
+        ]
+      },
+      {
+        titel: "Both together: how they share the work",
+        absaetze: [
+          "For many homes this is the most convenient solution. The robot runs on a schedule and keeps the floors clean, every day if you like. You only use the cordless vacuum for crumbs after meals, for stairs, sofa and car, and now and then for corners and skirting boards."
+        ]
+      },
+      {
+        titel: "My experience",
+        absaetze: [
+          "If you have a robot vacuum, you only need a cordless vacuum very rarely anyway. A cheap model is enough for that. I have the Bulelink Zenith G10, for example, and I'm very happy with it."
+        ],
+        art: "erfahrung"
+      },
+      {
+        titel: "What it costs",
+        absaetze: [
+          "To buy, a robot vacuum and mop with base station usually costs considerably more than a good cordless vacuum. A robot that only vacuums is cheaper, but then you still have to mop yourself.",
+          "In running costs, my calculator says brushes, filters, bags and mop pads for the robot cost about €3.50 a month more than for a normal vacuum cleaner. With the cordless vacuum you don't buy bags, but after a few years you may need a new battery."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Which robot vacuums and mops I recommend and how much time you save with your own numbers, you'll see on my robot vacuum and mop page. My tips for the right cordless vacuum are on my cordless vacuum page.",
+      knopf: "To the robot vacuum and mop with calculator",
+      weitere: [{ knopf: "To the cordless vacuum", link: "akkusauger" }]
+    },
+    wannNichtTitel: "When a robot vacuum and mop is not the right choice",
+    wannNicht: [
+      "You live on several floors and don't want to carry the robot back and forth: common robots can't manage stairs.",
+      "There's often a lot lying around on your floor, and you don't want to tidy up quickly before it starts.",
+      "You mainly have deep-pile carpets: there a vacuum you guide yourself cleans more thoroughly.",
+      "You mainly vacuum the sofa, stairs or car: for that you need a cordless vacuum.",
+      "You don't have room for the base station: it needs around 40 cm against the wall and 0.8 to 1.5 m clear in front of it."
+    ],
+    fragen: [
+      { f: "Does a robot vacuum and mop replace the vacuum cleaner completely?", a: "For everyday floors often yes, but rarely completely. It can't do stairs, sofa or car, and it cleans less thoroughly in corners and on deep-pile carpet. For that a cordless vacuum you only need now and then is enough." },
+      { f: "Is a cordless vacuum's battery enough for a large home?", a: "On the highest setting often not: then many only last 10 to 15 minutes. For a large home, choose a model with a swappable battery. Or let the robot vacuum the floors and use the cordless vacuum only for short jobs." },
+      { f: "Are there robot and cordless vacuum sets?", a: "Yes, some manufacturers offer sets where a robot and a cordless vacuum share one station. It then empties both, including the cordless vacuum's dust container." },
+      { f: "Which suits better if I have pets?", a: "Most convenient is both: the robot vacuums the hair off the floor on a schedule, every day if you like, and for the sofa you take the cordless vacuum. What matters for a robot with pets is in my guide to robot vacuums with pets." }
+    ],
+    quellen: [
+      { name: "My calculator on the robot vacuum and mop page", text: "the time for 70 m² with vacuuming twice and mopping once a week and the cost of spare parts, the assumptions are there under “How I calculate”" },
+      { name: "My calculator on the cordless vacuum page", text: "the time compared with a corded vacuum on 70 m², vacuuming twice and crumbs three times a week, the assumptions are there under “How I calculate”" },
+      { name: "Stiftung Warentest: robot vacuums test (June 2026)", text: "even the best robots can't keep up with a good vacuum cleaner in suction power and filtering, strengths on hard floors, about 33 to 193 m² on one battery charge, size of the base stations" },
+      { name: "Stiftung Warentest: robot vacuum and mop test (December 2025)", text: "most don't convince on carpet" },
+      { name: "Stiftung Warentest: cordless vacuums test (issue 2/2026)", text: "the best cordless vacuums keep up with classic cylinder vacuums, 10 to 17 minutes run time on the highest setting" },
+      { name: "Konsument (VKI): cordless vacuums test, press release (February 2026)", url: "https://vki.at/system/files/2026-02/2026-02-18_PA_Akkusauger_0.pdf", text: "14 devices tested together with Stiftung Warentest, good cordless vacuums keep up with corded ones in suction, on the highest setting on carpet two devices stopped after 6 and 9 minutes, swappable battery usually not included" },
+      { name: "Consumer NZ: Which type of vacuum is best for cleaning your home? (March 2024)", text: "robots good on hard floors, weak on carpet, no stairs, also vacuum under furniture, cordless vacuums with limited run time" },
+      { name: "TechRadar: Robot vacuum vs cordless vacuum (November 2023)", text: "robot more convenient, cordless vacuum more thorough and versatile on edges, stairs, upholstery and in the car, tidy up before the robot, having both is ideal" },
+      { name: "T3: Cordless or robot, which is the best vacuum cleaner for you? (August 2023)", text: "cordless vacuum for quick jobs, stairs and car, also as a handheld, wall mount, robot saves time but sometimes gets stuck" },
+      { name: "testundtipps.de: robot vacuum or cordless vacuum (July 2026)", text: "stairs only with a guided device, the robot vacuums edges, corners and skirting boards less well, less thorough on deep pile, clear the floor first, both share the work" },
+      { name: "home&smart: pros and cons of robot vacuums and mops (November 2026) and robot vacuums that climb stairs (February 2026)", text: "not for upholstery and stairs, tight corners and low furniture, tidy away loose items first, for thorough vacuuming still a classic vacuum cleaner, stair-climbing robots so far prototypes" },
+      { name: "Further tests of cordless vacuums", text: "home&smart, ETM Testmagazin, t-online and produkte-im-test.de on run time on the lowest and highest setting, SRF Kassensturz and Apotheken Umschau on dust when emptying" },
+      { name: "Recharging and carrying on", text: "robots drive to the station to recharge and then carry on cleaning, according to Anker (July 2026), Ecovacs help (“resume cleaning”) and smarthomeassistent.de on Neato (June 2022)" },
+      { name: "Sets with a shared station", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, December 2025), Yeedi C12 Combo (notebookcheck.com, October 2024) and Ecovacs Deebot X2 Combo (netzwelt.de, April 2024)" },
+      { name: "Manufacturer information and manuals", text: "space in front of and beside the station according to Roborock, Kärcher and Ecovacs, station dimensions according to Kärcher and Anker" }
+    ]
   }
 ];

@@ -500,5 +500,104 @@ const RATGEBER = [
       { name: "homeandsmart : changer une tête thermostatique", text: "la plupart des vannes avec filetage M30 x 1,5, adaptateurs pour les autres, pas de vidange, pas d’artisan, fait en quelques minutes, le chauffage au sol demande un thermostat d’ambiance" },
       { name: "Indications des fabricants", text: "filetage M30 x 1,5 et adaptateurs fournis, par exemple pour les vannes Danfoss, selon eQ-3 (Homematic IP), AVM (FRITZ!) et Bosch, montage sans vidange et sans outil spécial selon eQ-3" }
     ]
+  },
+  {
+    id: "saugroboter-oder-akkusauger",
+    produkt: "saugroboter",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["akkusauger"],
+    titel: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
+    frage: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
+    seitenTitel: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
+    beschreibung: "Ce qu’un robot aspirateur laveur et un aspirateur balai sans fil font chacun le mieux, combien de temps ils vous font gagner et pourquoi, dans beaucoup de logements, les deux ensemble conviennent le mieux.",
+    kurzantwort: "Un robot aspirateur laveur vous convient si vos sols doivent devenir propres sans vous, un aspirateur balai sans fil si vous voulez aspirer vite vous-même, y compris l’escalier, le canapé et la voiture. Selon mon calculateur, le robot vous fait gagner environ une heure par semaine sur 70 m² si vous passez sinon l’aspirateur deux fois et la serpillière une fois. Avec l’aspirateur balai, vous continuez à aspirer vous-même, simplement plus vite. Pour beaucoup de logements, les deux ensemble sont le plus pratique : le robot pour les sols et un aspirateur balai bon marché pour les endroits qu’il n’atteint pas.",
+    abschnitte: [
+      {
+        titel: "Ce que chacun fait le mieux",
+        absaetze: [
+          "Le robot aspirateur laveur vous décharge de l’aspirateur et de la serpillière. Dans l’appli, vous réglez un programme, et il nettoie pendant que vous êtes au travail. Ensuite, il retourne à sa station. Sur beaucoup de modèles, elle le vide et lave aussi le rouleau ou les patins de lavage.",
+          "L’aspirateur balai, vous le guidez vous-même, mais sans câble et sans changer de prise. Vous le décrochez du mur, aspirez les miettes sous la table et le raccrochez. D’un geste, il devient un aspirateur à main pour le canapé, l’escalier et la voiture."
+        ]
+      },
+      {
+        titel: "Le temps que vous gagnez",
+        absaetze: [
+          "Mon calculateur compte environ 19 minutes pour aspirer 70 m², préparation comprise, et environ 26 minutes pour passer la serpillière. Il retire 5 minutes par semaine pour l’entretien du robot. Si vous passez l’aspirateur deux fois par semaine et la serpillière une fois, le robot vous fait gagner environ une heure par semaine, soit une bonne cinquantaine d’heures par an.",
+          "Avec l’aspirateur balai, vous continuez à aspirer vous-même. Il vous évite de le sortir, de le brancher et de changer de prise : selon mon calculateur, un bon 5 minutes à chaque fois sur 70 m², et 2 minutes quand vous aspirez vite des miettes. Si vous aspirez deux fois par semaine et trois fois vite entre-temps, cela fait un bon quart d’heure."
+        ]
+      },
+      {
+        titel: "Là où le robot atteint ses limites",
+        absaetze: [
+          "Les robots courants ne montent pas les escaliers, et la station reste au même endroit. Si vous habitez sur deux étages, vous le montez à la main, ou vous aspirez l’escalier et l’étage avec l’aspirateur balai.",
+          "Les coins, les bords et la bande juste le long des plinthes, il les nettoie le plus souvent moins à fond. Sur un tapis à poils longs, un aspirateur que vous guidez aspire plus à fond. Selon Stiftung Warentest, même les meilleurs robots n’égalent pas la puissance et la filtration d’un bon aspirateur.",
+          "Il lui faut aussi un sol dégagé : vous rangez vite les câbles, les chaussettes et les jouets avant le départ. En échange, il passe sous le lit et le canapé s’il y a assez de place.",
+          "Il s’en sort quand même dans les grands logements : dans le test de Stiftung Warentest, les meilleurs robots ont couvert jusqu’à 193 m² avec une charge. Si la batterie ne suffit pas, beaucoup retournent se recharger à la station puis reprennent le nettoyage."
+        ]
+      },
+      {
+        titel: "À quoi faire attention pour un aspirateur balai sans fil",
+        absaetze: [
+          "Dans le test commun de Stiftung Warentest et Konsument, les meilleurs aspirateurs balais aspiraient aussi bien que des aspirateurs traîneaux avec fil. Regardez surtout la batterie : l’autonomie indiquée par les fabricants vaut le plus souvent pour le niveau le plus faible. Au niveau le plus fort, beaucoup ne tiennent que 10 à 15 minutes.",
+          "Pour un grand logement, un modèle à batterie amovible vaut donc le coup. Selon Konsument, il faut cependant le plus souvent acheter la deuxième batterie à part. Le bac à poussière est petit, et le vider fait un peu de poussière. Après quelques années, la batterie faiblit, vérifiez donc qu’il existe des batteries de rechange."
+        ]
+      },
+      {
+        titel: "Les deux ensemble : comment ils se partagent le travail",
+        absaetze: [
+          "Pour beaucoup de logements, c’est la solution la plus pratique. Le robot passe selon le programme et garde les sols propres, tous les jours si vous voulez. L’aspirateur balai, vous ne le prenez plus que pour les miettes après le repas, pour l’escalier, le canapé et la voiture, et de temps en temps pour les coins et les plinthes."
+        ]
+      },
+      {
+        titel: "Mon expérience",
+        absaetze: [
+          "Si vous avez un aspirateur robot, vous n’aurez de toute façon que très rarement besoin d’un aspirateur balai. Un modèle bon marché suffit donc. J’ai par exemple le Bulelink Zenith G10 et j’en suis très satisfait."
+        ],
+        art: "erfahrung"
+      },
+      {
+        titel: "Ce que cela coûte",
+        absaetze: [
+          "À l’achat, un robot aspirateur laveur avec station coûte le plus souvent nettement plus qu’un bon aspirateur balai. Un robot qui aspire seulement est moins cher, mais vous devez alors continuer à passer la serpillière vous-même.",
+          "À l’usage, selon mon calculateur, brosses, filtres, sacs et patins coûtent pour le robot environ 3,50 € par mois de plus que pour un aspirateur normal. Avec l’aspirateur balai, vous n’achetez pas de sacs, mais après quelques années il vous faudra peut-être une nouvelle batterie."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quels robots aspirateurs laveurs je recommande et combien de temps vous gagnez avec vos propres chiffres, vous le voyez sur ma page sur le robot aspirateur laveur. Mes conseils pour le bon aspirateur balai sont sur ma page sur l’aspirateur balai sans fil.",
+      knopf: "Vers le robot aspirateur laveur avec calculateur",
+      weitere: [{ knopf: "Vers l’aspirateur balai sans fil", link: "akkusauger" }]
+    },
+    wannNichtTitel: "Quand un robot aspirateur laveur ne vous convient pas",
+    wannNicht: [
+      "Vous habitez sur plusieurs étages et ne voulez pas porter le robot d’un étage à l’autre : les robots courants ne montent pas les escaliers.",
+      "Il traîne souvent beaucoup de choses sur votre sol, et vous ne voulez pas ranger vite avant le départ.",
+      "Vous avez surtout des tapis à poils longs : un aspirateur que vous guidez y aspire plus à fond.",
+      "Vous aspirez surtout le canapé, l’escalier ou la voiture : pour cela, il vous faut un aspirateur balai.",
+      "Vous manquez de place pour la station : elle a besoin d’environ 40 cm contre le mur et de 0,8 à 1,5 m de libre devant."
+    ],
+    fragen: [
+      { f: "Un robot aspirateur laveur remplace-t-il complètement l’aspirateur ?", a: "Pour les sols au quotidien, souvent oui, complètement, rarement. Il ne fait ni l’escalier, ni le canapé, ni la voiture, et il nettoie moins à fond dans les coins et sur les tapis à poils longs. Pour cela, un aspirateur balai dont vous n’avez besoin que de temps en temps suffit." },
+      { f: "La batterie d’un aspirateur balai suffit-elle pour un grand logement ?", a: "Au niveau le plus fort, souvent pas : beaucoup ne tiennent alors que 10 à 15 minutes. Pour un grand logement, prenez un modèle à batterie amovible. Ou laissez le robot aspirer les sols et prenez l’aspirateur balai seulement pour de courtes utilisations." },
+      { f: "Existe-t-il des ensembles robot et aspirateur balai ?", a: "Oui, certains fabricants proposent des ensembles où un robot et un aspirateur balai partagent une même station. Elle vide alors les deux, y compris le bac à poussière de l’aspirateur balai." },
+      { f: "Qu’est-ce qui convient le mieux si j’ai des animaux ?", a: "Le plus pratique, c’est les deux : le robot aspire les poils au sol selon le programme, tous les jours si vous voulez, et pour le canapé vous prenez l’aspirateur balai. Ce qui compte pour un robot avec des animaux est dans mes conseils sur le robot aspirateur et les animaux." }
+    ],
+    quellen: [
+      { name: "Mon calculateur sur la page du robot aspirateur laveur", text: "le temps pour 70 m² avec deux passages d’aspirateur et un de serpillière par semaine et le coût des pièces de rechange, les hypothèses sont sous « Comment je calcule »" },
+      { name: "Mon calculateur sur la page de l’aspirateur balai sans fil", text: "le temps par rapport à un aspirateur avec fil sur 70 m², deux passages et trois fois des miettes par semaine, les hypothèses sont sous « Comment je calcule »" },
+      { name: "Stiftung Warentest : test des robots aspirateurs (juin 2026)", text: "même les meilleurs robots ne suivent pas un bon aspirateur en puissance et en filtration, points forts sur sol dur, environ 33 à 193 m² avec une charge, taille des stations" },
+      { name: "Stiftung Warentest : test des robots aspirateurs laveurs (décembre 2025)", text: "la plupart ne convainquent pas sur tapis" },
+      { name: "Stiftung Warentest : test des aspirateurs balais sans fil (numéro 2/2026)", text: "les meilleurs aspirateurs balais suivent les aspirateurs traîneaux classiques, 10 à 17 minutes d’autonomie au niveau le plus fort" },
+      { name: "Konsument (VKI) : test des aspirateurs balais sans fil, communiqué de presse (février 2026)", url: "https://vki.at/system/files/2026-02/2026-02-18_PA_Akkusauger_0.pdf", text: "14 appareils testés avec Stiftung Warentest, les bons aspirateurs balais suivent les appareils avec fil en aspiration, au niveau le plus fort sur tapis deux appareils se sont arrêtés après 6 et 9 minutes, batterie amovible le plus souvent non fournie" },
+      { name: "Consumer NZ : Which type of vacuum is best for cleaning your home? (mars 2024)", text: "robots bons sur sol dur, faibles sur tapis, pas d’escaliers, aspirent aussi sous les meubles, aspirateurs balais à autonomie limitée" },
+      { name: "TechRadar : Robot vacuum vs cordless vacuum (novembre 2023)", text: "robot plus pratique, aspirateur balai plus minutieux et polyvalent sur les bords, l’escalier, les tissus et dans la voiture, ranger avant le robot, avoir les deux est idéal" },
+      { name: "T3 : Cordless or robot, which is the best vacuum cleaner for you? (août 2023)", text: "aspirateur balai pour les petites utilisations, l’escalier et la voiture, aussi en aspirateur à main, support mural, le robot fait gagner du temps mais se coince parfois" },
+      { name: "testundtipps.de : robot aspirateur ou aspirateur balai (juillet 2026)", text: "escaliers seulement avec un appareil guidé, le robot aspire moins bien les bords, les coins et les plinthes, moins à fond sur poils longs, dégager le sol avant, les deux se partagent le travail" },
+      { name: "home&smart : avantages et inconvénients des robots aspirateurs laveurs (novembre 2026) et robots qui montent les escaliers (février 2026)", text: "pas pour les tissus et les escaliers, coins étroits et meubles bas, ranger d’abord les objets, pour aspirer à fond toujours un aspirateur classique, robots pour escaliers encore au stade de prototypes" },
+      { name: "Autres tests d’aspirateurs balais", text: "home&smart, ETM Testmagazin, t-online et produkte-im-test.de sur l’autonomie au niveau le plus faible et le plus fort, SRF Kassensturz et Apotheken Umschau sur la poussière en vidant le bac" },
+      { name: "Recharger et reprendre", text: "les robots retournent se recharger à la station puis reprennent le nettoyage, selon Anker (juillet 2026), l’aide d’Ecovacs (« reprendre le nettoyage ») et smarthomeassistent.de sur Neato (juin 2022)" },
+      { name: "Ensembles avec station commune", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, décembre 2025), Yeedi C12 Combo (notebookcheck.com, octobre 2024) et Ecovacs Deebot X2 Combo (netzwelt.de, avril 2024)" },
+      { name: "Indications des fabricants et modes d’emploi", text: "place devant et à côté de la station selon Roborock, Kärcher et Ecovacs, dimensions des stations selon Kärcher et Anker" }
+    ]
   }
 ];
