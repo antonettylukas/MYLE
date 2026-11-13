@@ -50,9 +50,11 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
     kopf = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{e(beschreibung)}">', kopf)
     kopf = re.sub(r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{e(og)}">', kopf)
     kopf = re.sub(r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{e(beschreibung)}">', kopf)
-    # Vorschaubild: eigenes, wenn es eins gibt, sonst das der Startseite
-    bild = f"bilder/vorschau/{slug}.jpg"
-    kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild if os.path.exists(os.path.join(WURZEL, bild)) else "bilder/vorschau/index.jpg")
+    # Vorschaubild: eigenes in der Sprache (ratgeber-<id>-en.jpg usw.), sonst das deutsche, sonst das der Startseite
+    sprache = pre.strip("/")
+    kandidaten = ([f"bilder/vorschau/{slug}-{sprache}.jpg"] if sprache else []) + [f"bilder/vorschau/{slug}.jpg", "bilder/vorschau/index.jpg"]
+    bild = next(b for b in kandidaten if os.path.exists(os.path.join(WURZEL, b)))
+    kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild)
     kopf = kopf.replace("/saugroboter\"", f"/{slug}\"")
     assert "saugroboter" not in kopf.replace(slug, ""), f"{pre}{slug}: saugroboter steht noch im Kopf"
     skripte = re.findall(r'<script src="[^"]+"></script>', rumpf)
