@@ -679,5 +679,120 @@ const RATGEBER = [
       { name: "Sets mit gemeinsamer Station", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, Dezember 2025), Yeedi C12 Combo (notebookcheck.com, Oktober 2024) und Ecovacs Deebot X2 Combo (netzwelt.de, April 2024)" },
       { name: "Herstellerangaben und Anleitungen", text: "Platz vor und neben der Station laut Roborock, Kärcher und Ecovacs, Maße der Stationen laut Kärcher und Anker" }
     ]
+  },
+  {
+    id: "black-friday-echte-angebote",
+    produkt: "kaffeevollautomat",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["saugroboter", "airfryer"],
+    titel: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
+    frage: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
+    seitenTitel: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
+    beschreibung: "Wie du am Black Friday echte Angebote erkennst: Preisverlauf statt UVP, Vorjahresmodelle, Sets, Lieferzeit und die Rückgabe in Deutschland, Österreich und der Schweiz.",
+    kurzantwort: "Ein echtes Angebot erkennst du am Preisverlauf: Liegt der Preis klar unter dem, was das Gerät in den letzten Monaten gekostet hat, ist es eins. Der durchgestrichene Preis allein sagt wenig, vor allem wenn es die UVP des Herstellers ist, die kaum ein Shop verlangt. Prüf außerdem die genaue Modellbezeichnung, die Lieferzeit und die Rückgabe. Viele Geräte gibt es vor und nach dem Black Friday genauso günstig, du kannst also in Ruhe vergleichen.",
+    abschnitte: [
+      {
+        titel: "Der Preisverlauf zeigt, ob es ein Angebot ist",
+        absaetze: [
+          "Black Friday ist 2026 am 27. November, viele Aktionen beginnen aber schon Tage oder Wochen vorher. Ob ein Preis wirklich gut ist, siehst du am Preisverlauf der letzten Monate. Den zeigen viele Preisvergleichsseiten, oft mit Preisalarm für deinen Wunschpreis.",
+          "Die britische Verbraucherorganisation Which? hat 175 Geräte aus Haushalt, Technik und Gesundheit ein Jahr lang verfolgt. 83 Prozent davon gab es außerhalb der Black-Friday-Wochen mindestens einmal gleich günstig oder günstiger. Am Black Friday selbst war keines am günstigsten."
+        ]
+      },
+      {
+        titel: "Was der durchgestrichene Preis bedeutet",
+        absaetze: [
+          "In Deutschland, Österreich und der übrigen EU muss ein Shop bei einer Preissenkung den niedrigsten Preis der letzten 30 Tage nennen. Ein Rabatt in Prozent muss sich laut Europäischem Gerichtshof auf genau diesen Preis beziehen.",
+          "Das hilft, ersetzt aber nicht den Blick auf den Preisverlauf. War das Gerät vor diesen 30 Tagen günstiger, sparst du weniger, als der Rabatt verspricht. Und nicht jeder hält sich an die Regel: Bei einer Prüfung der EU-Verbraucherschutzbehörden gaben 30 Prozent von 314 Online-Shops ihre Rabatte falsch an."
+        ]
+      },
+      {
+        titel: "Die UVP sagt wenig",
+        absaetze: [
+          "Oft vergleicht ein Shop mit der UVP, der unverbindlichen Preisempfehlung des Herstellers. Die verlangt kaum ein Händler, darum ist ein Rabatt darauf meist kleiner, als er aussieht. Ob die 30-Tage-Regel auch für die UVP gilt, ist in Deutschland noch nicht entschieden, die Gerichte urteilen bisher unterschiedlich.",
+          "Vergleiche deshalb mit dem Preis, den das Gerät gerade in mehreren Shops kostet."
+        ]
+      },
+      {
+        titel: "In der Schweiz gelten eigene Regeln",
+        absaetze: [
+          "In der Schweiz darf ein Shop einen früheren Preis nur nennen, wenn er das Gerät vorher wirklich zu diesem Preis angeboten hat. Einen Preis des Herstellers darf er nur als Vergleich zeigen, wenn die meisten anderen Shops das Gerät tatsächlich zu diesem Preis anbieten."
+        ]
+      },
+      {
+        titel: "Vorjahresmodell oder neues Modell",
+        absaetze: [
+          "Ältere Modelle werden günstiger, sobald Nachfolger kommen, nicht nur am Black Friday. Ein Vorjahresmodell ist oft das bessere Angebot, wenn es kann, was du brauchst.",
+          "Vergleiche dafür die genaue Modellbezeichnung. Ähnliche Namen stehen manchmal für ein anderes Gerät, etwa mit einer Station, die weniger kann, oder mit schwächeren Werten im Test. Steht „Testsieger“ dabei, prüf, ob genau dieses Modell getestet wurde."
+        ]
+      },
+      {
+        titel: "Sets und Zubehör",
+        absaetze: [
+          "Rechne bei Sets nach: Brauchst du das Zubehör wirklich, und was kostet das Gerät allein? Ein Set ist nur dann ein Angebot, wenn du die Teile sonst auch gekauft hättest.",
+          "Schau auch in den Warenkorb, bevor du bestellst. Bei der EU-Prüfung versuchte gut jeder dritte Shop, zusätzliche Artikel in den Warenkorb zu legen."
+        ]
+      },
+      {
+        titel: "Lieferzeit, Händler und Zeitdruck",
+        absaetze: [
+          "Prüf vor dem Kauf, wer verkauft und wann das Gerät ankommt. Kommt die Ware von einem Händler aus Fernost, etwa über den Marktplatz eines Shops, ist sie oft länger unterwegs, und die Rücksendung wird teuer oder schwierig. Brauchst du das Gerät zu Weihnachten, plane die Lieferzeit mit ein. Bei unbekannten Shops prüf Impressum und Bewertungen, und sei bei reiner Vorkasse vorsichtig.",
+          "Countdowns und Hinweise wie „fast ausverkauft“ sollen dich unter Zeitdruck setzen. Bei der EU-Prüfung nutzte fast jeder fünfte Shop solche Mittel. Lass dir Zeit: Viele Geräte sind auch in den Adventswochen genauso günstig."
+        ]
+      },
+      {
+        titel: "Rückgabe in Deutschland, Österreich und der Schweiz",
+        absaetze: [
+          "In Deutschland, Österreich und der übrigen EU kannst du online gekaufte Geräte innerhalb von 14 Tagen nach Erhalt ohne Grund zurückgeben, auch reduzierte Ware am Black Friday. Die Rücksendung kann dich etwas kosten, wenn der Shop vorher darauf hinweist. Im Laden gekaufte Ware ohne Mangel tauscht ein Shop dagegen nur freiwillig um.",
+          "Viele große Shops in Deutschland verlängern die Rückgabe über die Feiertage freiwillig, praktisch für Geschenke. Prüf, ob das auch für Marktplatz-Händler gilt.",
+          "In der Schweiz gibt es kein gesetzliches Rückgaberecht, auch nicht online. Viele Shops gewähren freiwillig eines, lies darum vor dem Kauf die Bedingungen."
+        ]
+      },
+      {
+        titel: "Vorher entscheiden, dann vergleichen",
+        absaetze: [
+          "Am entspanntesten ist der Black Friday, wenn du vorher weißt, welches Gerät zu dir passt. Dann prüfst du am Tag selbst nur noch den Preis. Auf meinen Seiten zum Kaffeevollautomaten, zum Saug- und Wischroboter und zum Airfryer findest du meine Empfehlungen nach Preisklassen und einen Rechner für deinen Haushalt."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Welche Kaffeevollautomaten ich empfehle und was du gegenüber Kapseln sparst, siehst du auf meiner Seite zum Kaffeevollautomaten. Meine Tipps für Saug- und Wischroboter und Airfryer findest du auf den Seiten dazu.",
+      knopf: "Zum Kaffeevollautomaten mit Rechner",
+      weitere: [
+        { knopf: "Zum Saug- und Wischroboter", link: "saugroboter" },
+        { knopf: "Zum Airfryer", link: "airfryer" }
+      ]
+    },
+    wannNichtTitel: "Wann du lieber wartest",
+    wannNicht: [
+      "Der Preis liegt nicht unter dem, was das Gerät in den letzten Monaten gekostet hat.",
+      "Der Rabatt bezieht sich nur auf die UVP.",
+      "Die Modellbezeichnung weicht vom Gerät ab, das du dir angesehen hast.",
+      "Die Lieferzeit ist lang, und du brauchst das Gerät bald.",
+      "Der Shop nennt keine klaren Bedingungen für die Rückgabe.",
+      "Ohne Rabatt hättest du das Gerät gar nicht gekauft."
+    ],
+    fragen: [
+      { f: "Ist der Black Friday der günstigste Tag im Jahr?", a: "Meist nicht. In der Auswertung von Which? war kein Gerät am Black Friday selbst am günstigsten. Ein Angebot ist es, wenn der Preis klar unter dem der letzten Monate liegt." },
+      { f: "Darf ein Shop mit der UVP werben?", a: "In Deutschland ja, wenn klar dabeisteht, dass es die UVP ist. Ob dann auch die 30-Tage-Regel gilt, sehen die Gerichte bisher unterschiedlich. In der Schweiz darf ein Shop die UVP nur als Vergleich zeigen, wenn die meisten anderen Shops das Gerät wirklich zu diesem Preis anbieten." },
+      { f: "Kann ich ein Black-Friday-Schnäppchen zurückgeben?", a: "In der EU ja, online innerhalb von 14 Tagen nach Erhalt, auch bei reduzierter Ware. In der Schweiz nur, wenn der Shop es freiwillig anbietet. Lies dort vor dem Kauf die Bedingungen." },
+      { f: "Was bringt ein Preisalarm?", a: "Du gibst auf einer Preisvergleichsseite deinen Wunschpreis ein und bekommst eine Nachricht, sobald das Gerät so günstig ist. So kaufst du, wenn der Preis passt, egal an welchem Tag." }
+    ],
+    quellen: [
+      { name: "Preisangabenverordnung (Deutschland), § 11", url: "https://www.gesetze-im-internet.de/pangv_2022/__11.html", text: "bei einer Preisermäßigung den niedrigsten Gesamtpreis der letzten 30 Tage angeben" },
+      { name: "Bundesministerium für Wirtschaft, Energie und Tourismus (Österreich): Preisauszeichnung", url: "https://www.bmwet.gv.at/Themen/Europa/Wettbewerbspolitik/Preisauszeichnung.html", text: "§ 9a Preisauszeichnungsgesetz nach Artikel 6a der EU-Preisangabenrichtlinie, niedrigster Preis der letzten 30 Tage, Urteil des Europäischen Gerichtshofs C-330/23" },
+      { name: "Europäischer Gerichtshof, Urteil C-330/23 (26.09.2024), laut beck-aktuell und dem österreichischen Wirtschaftsministerium", text: "ein Rabatt in Prozent muss vom niedrigsten Preis der letzten 30 Tage ausgehen, so auch WKO (September 2023) und Arbeiterkammer Wien" },
+      { name: "SECO: Fragen und Antworten zur Preisbekanntgabe (Schweiz)", url: "https://www.seco.admin.ch/de/faq-pbv", text: "Selbstvergleich nur mit tatsächlich verlangtem Preis, Herstellerpreis nur als Konkurrenzvergleich, dazu das Merkblatt zum Selbstvergleich (zeitliche Grenzen, 30-Tage-Regel seit 2025), die FAQ zum Konkurrenzvergleich, die Wegleitung des Kantons Aargau (2025) und Handelsverband.swiss (November 2024)" },
+      { name: "Europäische Kommission: EU-Prüfung zu Rabatten am Black Friday und Cyber Monday (26.03.2026)", url: "https://commission.europa.eu/news-and-media/news/eu-check-reveals-misleading-sales-practices-online-2026-03-26_de", text: "314 Online-Shops aus 25 Ländern geprüft, 30 Prozent mit falschen Rabatten, 36 Prozent mit zusätzlichen Artikeln im Warenkorb, 18 Prozent mit Countdowns oder Knappheit" },
+      { name: "Which?: Black-Friday-Auswertung (November 2025)", text: "175 Geräte aus Haushalt, Technik und Gesundheit von Mai 2024 bis Mai 2025 verfolgt, 83 Prozent außerhalb der Aktionswochen mindestens einmal gleich günstig oder günstiger, keines am Black Friday am günstigsten" },
+      { name: "Verbraucherzentralen: verbraucherzentrale.de (Oktober 2026), Niedersachsen (Mai 2026) und Hamburg (November 2025)", text: "UVP kaum verlangt, 30-Tage-Regel seit Mai 2022, Gerichte uneinig bei der UVP, Preisverlauf eines ganzen Jahres, Impressum und Vorkasse, 14 Tage Widerrufsrecht, Rücksendekosten" },
+      { name: "Arbeiterkammer Wien: Black Friday (2026)", text: "Black Friday am 27. November 2026, niedrigster Preis der letzten 30 Tage, Preisalarm, 14 Tage Rücktrittsrecht, im Laden nur freiwillig, teure Rücksendungen nach Asien" },
+      { name: "Europäisches Verbraucherzentrum Deutschland: Black Friday (2026)", text: "Termine, Preisentwicklung prüfen, UVP, Lieferzeiten, Vorkasse, Dark Patterns wie „fast ausverkauft“, 14 Tage Widerrufsrecht in ganz Europa, Rücksendekosten" },
+      { name: "Stiftung Warentest: Tipps zur Rabattschlacht Black Friday (November 2025)", text: "UVP, der kaum ein Händler folgt, Preisalarm, ähnlich aussehende Geräte mit schlechteren Werten, lange Lieferfristen bei unbekannten Shops, Adventswochen oft genauso günstig" },
+      { name: "Urteile zur durchgestrichenen UVP", text: "Händlerbund (August 2026), beck-aktuell zum Urteil des Oberlandesgerichts Köln (Mai 2026, Revision zum Bundesgerichtshof zugelassen) und IT-Recht Kanzlei zu Urteilen der Landgerichte Düsseldorf und München I (August 2025): Vergleich mit der UVP erlaubt, wenn klar gekennzeichnet, Gerichte uneinig bei der 30-Tage-Regel" },
+      { name: "Rückgabe in der Schweiz", url: "https://www.ch.ch/de/sicherheit-und-recht/waren-zuruckgeben-oder-umtauschen/", text: "kein gesetzliches Rückgabe- oder Umtauschrecht, Shops regeln das selbst, dazu moneyland.ch (November 2026) und SRF (November 2020)" },
+      { name: "Verlängerte Rückgabe zu Weihnachten", text: "t3n (Dezember 2025), e-recht24 (Dezember 2025) und GIGA (November 2025, auch zum Umtausch im Laden)" },
+      { name: "Vorjahresmodelle, Modellnamen und Sets", text: "Anker (November 2025) und Stiftung Warentest zu Smartphone-Preisen (Juli 2026) zu sinkenden Preisen nach dem Marktstart, TechRadar (November 2024), netzwelt.de (März 2023) zu ähnlichen Namen mit anderer Station, Which? (November 2023) und CHOICE (November 2026) zu Sets" },
+      { name: "Weitere Ratgeber zum Black Friday", text: "Utopia (November 2025) mit der WISO-Auswertung, Verbraucherzentrale Südtirol (November 2023) zu Ware aus Fernost, ZDFheute (November 2025) zum Preisalarm, heise online zur EU-Prüfung und GIGA (November 2026) zu den Terminen und früheren Aktionen" }
+    ]
   }
 ];

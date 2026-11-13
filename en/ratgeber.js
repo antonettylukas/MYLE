@@ -599,5 +599,120 @@ const RATGEBER = [
       { name: "Sets with a shared station", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, December 2025), Yeedi C12 Combo (notebookcheck.com, October 2024) and Ecovacs Deebot X2 Combo (netzwelt.de, April 2024)" },
       { name: "Manufacturer information and manuals", text: "space in front of and beside the station according to Roborock, Kärcher and Ecovacs, station dimensions according to Kärcher and Anker" }
     ]
+  },
+  {
+    id: "black-friday-echte-angebote",
+    produkt: "kaffeevollautomat",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["saugroboter", "airfryer"],
+    titel: "Black Friday on household appliances: how do I spot a real deal?",
+    frage: "Black Friday on household appliances: how do I spot a real deal?",
+    seitenTitel: "Black Friday on household appliances: how do I spot a real deal?",
+    beschreibung: "How to spot real deals on Black Friday: price history instead of RRP, last year's models, bundles, delivery time and returns in Germany, Austria, the rest of the EU and Switzerland.",
+    kurzantwort: "You spot a real deal by the price history: if the price is clearly below what the appliance has cost over the last few months, it's one. The crossed-out price alone says little, especially if it's the manufacturer's RRP, which hardly any shop charges. Also check the exact model name, the delivery time and the returns policy. Many appliances are just as cheap before and after Black Friday, so you can compare at your leisure.",
+    abschnitte: [
+      {
+        titel: "The price history shows whether it's a deal",
+        absaetze: [
+          "In 2026 Black Friday is on 27 November, but many promotions start days or weeks earlier. Whether a price is really good, you can see from the price history of the last few months. Many price comparison sites show it, often with a price alert for the price you want.",
+          "The British consumer organisation Which? tracked 175 household, tech and health products for a year. 83 per cent of them were the same price or cheaper at least once outside the Black Friday weeks. None was cheapest on Black Friday itself."
+        ]
+      },
+      {
+        titel: "What the crossed-out price means",
+        absaetze: [
+          "In Germany, Austria and the rest of the EU, a shop that lowers a price has to state the lowest price of the last 30 days. According to the European Court of Justice, a percentage discount has to refer to exactly this price.",
+          "That helps, but it doesn't replace a look at the price history. If the appliance was cheaper before those 30 days, you save less than the discount promises. And not everyone sticks to the rule: in a check by the EU consumer protection authorities, 30 per cent of 314 online shops stated their discounts incorrectly."
+        ]
+      },
+      {
+        titel: "The RRP says little",
+        absaetze: [
+          "Shops often compare with the RRP, the manufacturer's recommended retail price. Hardly any retailer charges it, so a discount on it is usually smaller than it looks. Whether the 30-day rule also applies to the RRP has not yet been settled in Germany; so far the courts have ruled differently.",
+          "So compare with the price the appliance currently costs in several shops."
+        ]
+      },
+      {
+        titel: "Switzerland has its own rules",
+        absaetze: [
+          "In Switzerland a shop may only state an earlier price if it really offered the appliance at that price before. It may only show a manufacturer's price as a comparison if most other shops actually offer the appliance at that price."
+        ]
+      },
+      {
+        titel: "Last year's model or the new one",
+        absaetze: [
+          "Older models get cheaper as soon as successors arrive, not just on Black Friday. Last year's model is often the better deal if it can do what you need.",
+          "To check, compare the exact model name. Similar names sometimes stand for a different appliance, for example with a base station that does less or with weaker results in tests. If it says “test winner”, check whether exactly this model was tested."
+        ]
+      },
+      {
+        titel: "Bundles and accessories",
+        absaetze: [
+          "With bundles, do the maths: do you really need the accessories, and what does the appliance cost on its own? A bundle is only a deal if you'd have bought the parts anyway.",
+          "Look in your basket before you order, too. In the EU check, a good one in three shops tried to add extra items to the basket."
+        ]
+      },
+      {
+        titel: "Delivery time, seller and time pressure",
+        absaetze: [
+          "Before buying, check who's selling and when the appliance will arrive. If the goods come from a seller in the Far East, for example via a shop's marketplace, they often take longer, and returning them becomes expensive or difficult. If you need the appliance for Christmas, allow for the delivery time. With unknown shops, check the legal notice and reviews, and be careful with payment in advance only.",
+          "Countdowns and notes like “almost sold out” are meant to put you under time pressure. In the EU check, almost one in five shops used such tactics. Take your time: many appliances are just as cheap in the weeks of Advent."
+        ]
+      },
+      {
+        titel: "Returns in Germany, Austria and Switzerland",
+        absaetze: [
+          "In Germany, Austria and the rest of the EU, you can return appliances bought online within 14 days of receipt without giving a reason, including goods reduced on Black Friday. Returning them can cost you something if the shop has told you so beforehand. Goods bought in a store without a defect, on the other hand, a shop only exchanges voluntarily.",
+          "Many large shops in Germany voluntarily extend returns over the holidays, which is handy for presents. Check whether this also applies to marketplace sellers.",
+          "In Switzerland there is no statutory right of return, not even online. Many shops grant one voluntarily, so read the terms before you buy."
+        ]
+      },
+      {
+        titel: "Decide first, then compare",
+        absaetze: [
+          "Black Friday is most relaxed if you already know which appliance suits you. Then on the day itself you only check the price. On my pages about the bean-to-cup coffee machine, the robot vacuum and mop and the air fryer you'll find my recommendations by price class and a calculator for your household."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Which bean-to-cup coffee machines I recommend and what you save compared with capsules, you'll see on my bean-to-cup coffee machine page. My tips for robot vacuums and mops and air fryers are on the pages about them.",
+      knopf: "To the coffee machine with calculator",
+      weitere: [
+        { knopf: "To the robot vacuum and mop", link: "saugroboter" },
+        { knopf: "To the air fryer", link: "airfryer" }
+      ]
+    },
+    wannNichtTitel: "When you're better off waiting",
+    wannNicht: [
+      "The price isn't below what the appliance has cost over the last few months.",
+      "The discount only refers to the RRP.",
+      "The model name differs from the appliance you looked at.",
+      "The delivery time is long, and you need the appliance soon.",
+      "The shop doesn't state clear terms for returns.",
+      "Without the discount you wouldn't have bought the appliance at all."
+    ],
+    fragen: [
+      { f: "Is Black Friday the cheapest day of the year?", a: "Usually not. In the Which? analysis, no product was cheapest on Black Friday itself. It's a deal if the price is clearly below that of the last few months." },
+      { f: "May a shop advertise with the RRP?", a: "In Germany yes, as long as it's clearly stated that it's the RRP. Whether the 30-day rule then also applies, the courts have so far seen differently. In Switzerland a shop may only show the RRP as a comparison if most other shops really offer the appliance at that price." },
+      { f: "Can I return a Black Friday bargain?", a: "In the EU yes, online within 14 days of receipt, including reduced goods. In Switzerland only if the shop offers it voluntarily. Read the terms there before you buy." },
+      { f: "What does a price alert do?", a: "You enter the price you want on a price comparison site and get a message as soon as the appliance is that cheap. That way you buy when the price is right, whatever the day." }
+    ],
+    quellen: [
+      { name: "Price Indication Ordinance (Germany), § 11", url: "https://www.gesetze-im-internet.de/pangv_2022/__11.html", text: "state the lowest total price of the last 30 days when reducing a price" },
+      { name: "Federal Ministry of Economy, Energy and Tourism (Austria): price marking", url: "https://www.bmwet.gv.at/Themen/Europa/Wettbewerbspolitik/Preisauszeichnung.html", text: "§ 9a Price Marking Act following Article 6a of the EU Price Indication Directive, lowest price of the last 30 days, judgment of the European Court of Justice C-330/23" },
+      { name: "European Court of Justice, judgment C-330/23 (26.09.2024), according to beck-aktuell and the Austrian Ministry of Economy", text: "a percentage discount must be based on the lowest price of the last 30 days, likewise WKO (September 2023) and Arbeiterkammer Wien" },
+      { name: "SECO: questions and answers on price indication (Switzerland, in German)", url: "https://www.seco.admin.ch/de/faq-pbv", text: "comparison with the shop's own earlier price only if actually charged, manufacturer's price only as a comparison with competitors, plus the leaflet on self-comparison (time limits, 30-day rule since 2025), the FAQ on comparison with competitors, the guidance of the canton of Aargau (2025) and Handelsverband.swiss (November 2024)" },
+      { name: "European Commission: EU check of discounts on Black Friday and Cyber Monday (26.03.2026)", url: "https://commission.europa.eu/news-and-media/news/eu-check-reveals-misleading-sales-practices-online-2026-03-26_en", text: "314 online shops from 25 countries checked, 30 per cent with incorrect discounts, 36 per cent with extra items in the basket, 18 per cent with countdowns or scarcity" },
+      { name: "Which?: Black Friday analysis (November 2025)", text: "175 household, tech and health products tracked from May 2024 to May 2025, 83 per cent the same price or cheaper at least once outside the promotion weeks, none cheapest on Black Friday" },
+      { name: "German consumer advice centres: verbraucherzentrale.de (October 2026), Lower Saxony (May 2026) and Hamburg (November 2025)", text: "RRP hardly charged, 30-day rule since May 2022, courts divided on the RRP, price history over a whole year, legal notice and payment in advance, 14-day right of withdrawal, return costs" },
+      { name: "Arbeiterkammer Wien: Black Friday (2026)", text: "Black Friday on 27 November 2026, lowest price of the last 30 days, price alert, 14-day right of withdrawal, in store only voluntary, expensive returns to Asia" },
+      { name: "European Consumer Centre Germany: Black Friday (2026)", text: "dates, check the price trend, RRP, delivery times, payment in advance, dark patterns like “almost sold out”, 14-day right of withdrawal across Europe, return costs" },
+      { name: "Stiftung Warentest: tips for the Black Friday discount battle (November 2025)", text: "RRP that hardly any retailer follows, price alert, similar-looking appliances with worse results, long delivery times at unknown shops, Advent weeks often just as cheap" },
+      { name: "Rulings on the crossed-out RRP", text: "Händlerbund (August 2026), beck-aktuell on the ruling of the Higher Regional Court of Cologne (May 2026, appeal to the Federal Court of Justice allowed) and IT-Recht Kanzlei on rulings of the regional courts of Düsseldorf and Munich I (August 2025): comparison with the RRP allowed if clearly marked, courts divided on the 30-day rule" },
+      { name: "Returns in Switzerland", url: "https://www.ch.ch/en/safety-and-justice/returning-or-exchanging-goods/", text: "no statutory right of return or exchange, shops set their own rules, plus moneyland.ch (November 2026) and SRF (November 2020)" },
+      { name: "Extended returns at Christmas", text: "t3n (December 2025), e-recht24 (December 2025) and GIGA (November 2025, also on exchanges in store)" },
+      { name: "Last year's models, model names and bundles", text: "Anker (November 2025) and Stiftung Warentest on smartphone prices (July 2026) on falling prices after launch, TechRadar (November 2024), netzwelt.de (March 2023) on similar names with a different base station, Which? (November 2023) and CHOICE (November 2026) on bundles" },
+      { name: "Further Black Friday guides", text: "Utopia (November 2025) with the WISO analysis, Verbraucherzentrale Südtirol (November 2023) on goods from the Far East, ZDFheute (November 2025) on price alerts, heise online on the EU check and GIGA (November 2026) on the dates and earlier promotions" }
+    ]
   }
 ];

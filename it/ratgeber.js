@@ -599,5 +599,120 @@ const RATGEBER = [
       { name: "Set con base in comune", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, dicembre 2025), Yeedi C12 Combo (notebookcheck.com, ottobre 2024) ed Ecovacs Deebot X2 Combo (netzwelt.de, aprile 2024)" },
       { name: "Indicazioni dei produttori e manuali", text: "spazio davanti e accanto alla base secondo Roborock, Kärcher ed Ecovacs, dimensioni delle basi secondo Kärcher e Anker" }
     ]
+  },
+  {
+    id: "black-friday-echte-angebote",
+    produkt: "kaffeevollautomat",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["saugroboter", "airfryer"],
+    titel: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
+    frage: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
+    seitenTitel: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
+    beschreibung: "Come riconoscere le vere offerte del Black Friday: storico dei prezzi invece del prezzo consigliato, modelli dell’anno prima, set, tempi di consegna e resi in Germania, Austria, resto dell’UE e Svizzera.",
+    kurzantwort: "Una vera offerta la riconosci dallo storico dei prezzi: se il prezzo è chiaramente sotto quello che l’apparecchio è costato negli ultimi mesi, lo è. Il prezzo barrato da solo dice poco, soprattutto se è il prezzo consigliato dal produttore, che quasi nessun negozio applica. Controlla anche il nome esatto del modello, i tempi di consegna e il reso. Molti apparecchi costano altrettanto poco prima e dopo il Black Friday, quindi puoi confrontare con calma.",
+    abschnitte: [
+      {
+        titel: "Lo storico dei prezzi mostra se è un’offerta",
+        absaetze: [
+          "Nel 2026 il Black Friday cade il 27 novembre, ma molte promozioni iniziano giorni o settimane prima. Se un prezzo è davvero buono lo vedi dallo storico dei prezzi degli ultimi mesi. Molti siti di confronto prezzi lo mostrano, spesso con un avviso di prezzo per il prezzo che vuoi.",
+          "L’organizzazione britannica dei consumatori Which? ha seguito per un anno 175 prodotti per la casa, la tecnologia e la salute. L’83% di questi, fuori dalle settimane del Black Friday, è stato almeno una volta allo stesso prezzo o meno caro. Nessuno è stato al prezzo più basso proprio il giorno del Black Friday."
+        ]
+      },
+      {
+        titel: "Cosa significa il prezzo barrato",
+        absaetze: [
+          "In Germania, in Austria e nel resto dell’UE un negozio che abbassa un prezzo deve indicare il prezzo più basso degli ultimi 30 giorni. Secondo la Corte di giustizia dell’Unione europea, uno sconto in percentuale deve riferirsi proprio a questo prezzo.",
+          "Questo aiuta, ma non sostituisce uno sguardo allo storico dei prezzi. Se l’apparecchio costava meno prima di quei 30 giorni, risparmi meno di quanto promette lo sconto. E non tutti rispettano la regola: in un controllo delle autorità europee per la tutela dei consumatori, il 30% di 314 negozi online indicava gli sconti in modo sbagliato."
+        ]
+      },
+      {
+        titel: "Il prezzo consigliato dice poco",
+        absaetze: [
+          "Spesso un negozio confronta con il prezzo consigliato dal produttore. Quasi nessun rivenditore lo applica, per questo uno sconto calcolato su di esso di solito è più piccolo di quanto sembri. In Germania non è ancora deciso se la regola dei 30 giorni valga anche per il prezzo consigliato, finora i tribunali hanno deciso in modo diverso.",
+          "Confronta quindi con il prezzo a cui l’apparecchio è venduto in questo momento in più negozi."
+        ]
+      },
+      {
+        titel: "In Svizzera valgono regole proprie",
+        absaetze: [
+          "In Svizzera un negozio può indicare un prezzo precedente solo se ha davvero offerto l’apparecchio a quel prezzo prima. Un prezzo del produttore può mostrarlo come confronto solo se la maggior parte degli altri negozi offre davvero l’apparecchio a quel prezzo."
+        ]
+      },
+      {
+        titel: "Modello dell’anno prima o modello nuovo",
+        absaetze: [
+          "I modelli più vecchi calano di prezzo appena arrivano i successori, non solo al Black Friday. Il modello dell’anno prima è spesso l’offerta migliore, se fa quello che ti serve.",
+          "Per questo confronta il nome esatto del modello. Nomi simili a volte indicano un altro apparecchio, per esempio con una base che fa meno o con risultati peggiori nei test. Se c’è scritto „vincitore del test“, controlla che sia stato testato proprio questo modello."
+        ]
+      },
+      {
+        titel: "Set e accessori",
+        absaetze: [
+          "Con i set fai i conti: ti servono davvero gli accessori, e quanto costa l’apparecchio da solo? Un set è un’offerta solo se quei pezzi li avresti comprati comunque.",
+          "Guarda anche nel carrello prima di ordinare. Nel controllo dell’UE, più di un negozio su tre cercava di aggiungere articoli in più al carrello."
+        ]
+      },
+      {
+        titel: "Tempi di consegna, venditore e fretta",
+        absaetze: [
+          "Prima di comprare controlla chi vende e quando arriva l’apparecchio. Se la merce arriva da un venditore dell’Estremo Oriente, per esempio tramite il marketplace di un negozio, spesso ci mette di più, e il reso diventa caro o complicato. Se ti serve l’apparecchio per Natale, tieni conto dei tempi di consegna. Con i negozi sconosciuti controlla le note legali e le recensioni, e fai attenzione al solo pagamento anticipato.",
+          "Conti alla rovescia e scritte come „quasi esaurito“ servono a metterti fretta. Nel controllo dell’UE quasi un negozio su cinque usava questi mezzi. Prenditi il tuo tempo: molti apparecchi costano altrettanto poco anche nelle settimane di Avvento."
+        ]
+      },
+      {
+        titel: "Resi in Germania, Austria e Svizzera",
+        absaetze: [
+          "In Germania, in Austria e nel resto dell’UE puoi restituire senza motivo gli apparecchi comprati online entro 14 giorni dal ricevimento, anche la merce scontata al Black Friday. La spedizione di reso può costarti qualcosa, se il negozio te l’ha detto prima. La merce senza difetti comprata in negozio, invece, un negozio la cambia solo se vuole.",
+          "Molti grandi negozi in Germania allungano volontariamente il reso durante le feste, comodo per i regali. Controlla se vale anche per i venditori del marketplace.",
+          "In Svizzera non esiste un diritto di reso per legge, nemmeno online. Molti negozi lo concedono volontariamente, quindi leggi le condizioni prima di comprare."
+        ]
+      },
+      {
+        titel: "Prima decidi, poi confronta",
+        absaetze: [
+          "Il Black Friday è più rilassato se sai già quale apparecchio fa per te. Il giorno stesso controlli solo il prezzo. Nelle mie pagine sulla macchina da caffè automatica, sul robot aspirapolvere lavapavimenti e sulla friggitrice ad aria trovi i miei consigli per fascia di prezzo e un calcolatore per la tua casa."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quali macchine da caffè automatiche consiglio e quanto risparmi rispetto alle capsule lo vedi nella mia pagina sulla macchina da caffè automatica. I miei consigli per robot aspirapolvere lavapavimenti e friggitrici ad aria sono nelle pagine dedicate.",
+      knopf: "Alla macchina da caffè con calcolatore",
+      weitere: [
+        { knopf: "Al robot aspirapolvere lavapavimenti", link: "saugroboter" },
+        { knopf: "Alla friggitrice ad aria", link: "airfryer" }
+      ]
+    },
+    wannNichtTitel: "Quando conviene aspettare",
+    wannNicht: [
+      "Il prezzo non è sotto quello che l’apparecchio è costato negli ultimi mesi.",
+      "Lo sconto si riferisce solo al prezzo consigliato.",
+      "Il nome del modello è diverso dall’apparecchio che hai guardato.",
+      "I tempi di consegna sono lunghi, e l’apparecchio ti serve presto.",
+      "Il negozio non indica condizioni di reso chiare.",
+      "Senza lo sconto l’apparecchio non l’avresti proprio comprato."
+    ],
+    fragen: [
+      { f: "Il Black Friday è il giorno più conveniente dell’anno?", a: "Di solito no. Nell’analisi di Which? nessun prodotto era al prezzo più basso proprio il giorno del Black Friday. È un’offerta se il prezzo è chiaramente sotto quello degli ultimi mesi." },
+      { f: "Un negozio può fare pubblicità con il prezzo consigliato?", a: "In Germania sì, se è indicato chiaramente che si tratta del prezzo consigliato. Se in quel caso valga anche la regola dei 30 giorni, finora i tribunali lo vedono in modo diverso. In Svizzera un negozio può mostrare il prezzo consigliato come confronto solo se la maggior parte degli altri negozi offre davvero l’apparecchio a quel prezzo." },
+      { f: "Posso restituire un affare del Black Friday?", a: "Nell’UE sì, online entro 14 giorni dal ricevimento, anche per la merce scontata. In Svizzera solo se il negozio lo offre volontariamente. Lì leggi le condizioni prima di comprare." },
+      { f: "A cosa serve un avviso di prezzo?", a: "Su un sito di confronto prezzi inserisci il prezzo che vuoi e ricevi un messaggio appena l’apparecchio costa così poco. Così compri quando il prezzo è giusto, qualunque sia il giorno." }
+    ],
+    quellen: [
+      { name: "Regolamento tedesco sull’indicazione dei prezzi (PAngV), § 11", url: "https://www.gesetze-im-internet.de/pangv_2022/__11.html", text: "in caso di riduzione di prezzo indicare il prezzo complessivo più basso degli ultimi 30 giorni" },
+      { name: "Ministero federale austriaco dell’Economia, dell’Energia e del Turismo: indicazione dei prezzi", url: "https://www.bmwet.gv.at/Themen/Europa/Wettbewerbspolitik/Preisauszeichnung.html", text: "§ 9a della legge austriaca sull’indicazione dei prezzi secondo l’articolo 6 bis della direttiva UE sull’indicazione dei prezzi, prezzo più basso degli ultimi 30 giorni, sentenza della Corte di giustizia dell’Unione europea C-330/23" },
+      { name: "Corte di giustizia dell’Unione europea, sentenza C-330/23 (26.09.2024), secondo beck-aktuell e il ministero austriaco dell’Economia", text: "uno sconto in percentuale deve partire dal prezzo più basso degli ultimi 30 giorni, così anche WKO (settembre 2023) e Arbeiterkammer Wien" },
+      { name: "SECO: domande e risposte sull’indicazione dei prezzi (Svizzera, in tedesco)", url: "https://www.seco.admin.ch/de/faq-pbv", text: "confronto con il proprio prezzo precedente solo se davvero applicato, prezzo del produttore solo come confronto con la concorrenza, oltre al promemoria sull’autoconfronto (limiti di tempo, regola dei 30 giorni dal 2025), alle FAQ sul confronto con la concorrenza, alla guida del Cantone Argovia (2025) e a Handelsverband.swiss (novembre 2024)" },
+      { name: "Commissione europea: controllo dell’UE sugli sconti del Black Friday e del Cyber Monday (26.03.2026)", url: "https://commission.europa.eu/news-and-media/news/eu-check-reveals-misleading-sales-practices-online-2026-03-26_it", text: "314 negozi online di 25 paesi controllati, il 30% con sconti sbagliati, il 36% con articoli in più nel carrello, il 18% con conti alla rovescia o finta scarsità" },
+      { name: "Which?: analisi del Black Friday (novembre 2025)", text: "175 prodotti per la casa, la tecnologia e la salute seguiti da maggio 2024 a maggio 2025, l’83% almeno una volta allo stesso prezzo o meno caro fuori dalle settimane di promozione, nessuno al prezzo più basso il giorno del Black Friday" },
+      { name: "Centri tedeschi per i consumatori: verbraucherzentrale.de (ottobre 2026), Bassa Sassonia (maggio 2026) e Amburgo (novembre 2025)", text: "prezzo consigliato quasi mai applicato, regola dei 30 giorni da maggio 2022, tribunali divisi sul prezzo consigliato, storico dei prezzi di un anno intero, note legali e pagamento anticipato, diritto di recesso di 14 giorni, costi di reso" },
+      { name: "Arbeiterkammer Wien: Black Friday (2026)", text: "Black Friday il 27 novembre 2026, prezzo più basso degli ultimi 30 giorni, avviso di prezzo, 14 giorni di recesso, in negozio solo su base volontaria, resi costosi verso l’Asia" },
+      { name: "Centro europeo dei consumatori Germania: Black Friday (2026)", text: "date, controllare l’andamento dei prezzi, prezzo consigliato, tempi di consegna, pagamento anticipato, dark pattern come „quasi esaurito“, 14 giorni di recesso in tutta Europa, costi di reso" },
+      { name: "Stiftung Warentest: consigli per la battaglia degli sconti del Black Friday (novembre 2025)", text: "prezzo consigliato che quasi nessun rivenditore segue, avviso di prezzo, apparecchi dall’aspetto simile con risultati peggiori, lunghi tempi di consegna nei negozi sconosciuti, settimane di Avvento spesso altrettanto convenienti" },
+      { name: "Sentenze sul prezzo consigliato barrato", text: "Händlerbund (agosto 2026), beck-aktuell sulla sentenza della Corte d’appello di Colonia (maggio 2026, ricorso alla Corte federale di giustizia ammesso) e IT-Recht Kanzlei su sentenze dei tribunali regionali di Düsseldorf e Monaco I (agosto 2025): confronto con il prezzo consigliato ammesso se indicato chiaramente, tribunali divisi sulla regola dei 30 giorni" },
+      { name: "Resi in Svizzera", url: "https://www.ch.ch/it/sicurezza-e-diritto/restituire-o-sostituire-merci-acquistate/", text: "nessun diritto di reso o di cambio per legge, i negozi decidono le proprie regole, oltre a moneyland.ch (novembre 2026) e SRF (novembre 2020)" },
+      { name: "Reso prolungato a Natale", text: "t3n (dicembre 2025), e-recht24 (dicembre 2025) e GIGA (novembre 2025, anche sul cambio in negozio)" },
+      { name: "Modelli dell’anno prima, nomi dei modelli e set", text: "Anker (novembre 2025) e Stiftung Warentest sui prezzi degli smartphone (luglio 2026) sul calo dei prezzi dopo il lancio, TechRadar (novembre 2024), netzwelt.de (marzo 2023) su nomi simili con un’altra base, Which? (novembre 2023) e CHOICE (novembre 2026) sui set" },
+      { name: "Altre guide sul Black Friday", text: "Utopia (novembre 2025) con l’analisi di WISO, Verbraucherzentrale Südtirol (novembre 2023) sulla merce dall’Estremo Oriente, ZDFheute (novembre 2025) sull’avviso di prezzo, heise online sul controllo dell’UE e GIGA (novembre 2026) sulle date e le promozioni precedenti" }
+    ]
   }
 ];

@@ -599,5 +599,120 @@ const RATGEBER = [
       { name: "Ensembles avec station commune", text: "SwitchBot K10+ Pro Combo (testsiegertv.com, décembre 2025), Yeedi C12 Combo (notebookcheck.com, octobre 2024) et Ecovacs Deebot X2 Combo (netzwelt.de, avril 2024)" },
       { name: "Indications des fabricants et modes d’emploi", text: "place devant et à côté de la station selon Roborock, Kärcher et Ecovacs, dimensions des stations selon Kärcher et Anker" }
     ]
+  },
+  {
+    id: "black-friday-echte-angebote",
+    produkt: "kaffeevollautomat",
+    geprueft: "2026-11-13",
+    weitereProdukte: ["saugroboter", "airfryer"],
+    titel: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
+    frage: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
+    seitenTitel: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
+    beschreibung: "Comment reconnaître les vraies bonnes affaires du Black Friday : historique des prix plutôt que prix conseillé, modèles de l’année précédente, lots, délai de livraison et retours en Allemagne, en Autriche, dans le reste de l’UE et en Suisse.",
+    kurzantwort: "Une vraie bonne affaire se reconnaît à l’historique des prix : si le prix est nettement inférieur à ce que l’appareil a coûté ces derniers mois, c’en est une. Le prix barré seul en dit peu, surtout s’il s’agit du prix conseillé par le fabricant, que presque aucune boutique ne pratique. Vérifiez aussi la référence exacte du modèle, le délai de livraison et les conditions de retour. Beaucoup d’appareils sont tout aussi bon marché avant et après le Black Friday, vous pouvez donc comparer tranquillement.",
+    abschnitte: [
+      {
+        titel: "L’historique des prix montre si c’est une bonne affaire",
+        absaetze: [
+          "En 2026, le Black Friday tombe le 27 novembre, mais beaucoup de promotions commencent des jours ou des semaines avant. Pour savoir si un prix est vraiment bon, regardez l’historique des prix des derniers mois. Beaucoup de comparateurs de prix l’affichent, souvent avec une alerte pour le prix que vous visez.",
+          "L’organisation britannique de consommateurs Which? a suivi pendant un an 175 produits de maison, de technologie et de santé. 83 % d’entre eux étaient au moins une fois aussi bon marché ou moins chers en dehors des semaines du Black Friday. Aucun n’était au plus bas le jour même du Black Friday."
+        ]
+      },
+      {
+        titel: "Ce que signifie le prix barré",
+        absaetze: [
+          "En Allemagne, en Autriche et dans le reste de l’UE, une boutique qui baisse un prix doit indiquer le prix le plus bas des 30 derniers jours. Selon la Cour de justice de l’Union européenne, une réduction en pourcentage doit se rapporter exactement à ce prix.",
+          "Cela aide, mais ne remplace pas un coup d’œil à l’historique des prix. Si l’appareil était moins cher avant ces 30 jours, vous économisez moins que ce que promet la réduction. Et tout le monde ne respecte pas la règle : lors d’un contrôle des autorités européennes de protection des consommateurs, 30 % de 314 boutiques en ligne indiquaient mal leurs réductions."
+        ]
+      },
+      {
+        titel: "Le prix conseillé en dit peu",
+        absaetze: [
+          "Souvent, une boutique compare avec le prix de vente conseillé par le fabricant. Presque aucun commerçant ne le pratique, une réduction calculée dessus est donc le plus souvent plus petite qu’elle n’en a l’air. En Allemagne, il n’est pas encore tranché si la règle des 30 jours vaut aussi pour le prix conseillé, les tribunaux ont jusqu’ici jugé différemment.",
+          "Comparez donc avec le prix auquel l’appareil est vendu en ce moment dans plusieurs boutiques."
+        ]
+      },
+      {
+        titel: "En Suisse, des règles propres s’appliquent",
+        absaetze: [
+          "En Suisse, une boutique ne peut indiquer un prix antérieur que si elle a vraiment proposé l’appareil à ce prix auparavant. Elle ne peut afficher un prix du fabricant comme comparaison que si la plupart des autres boutiques proposent réellement l’appareil à ce prix."
+        ]
+      },
+      {
+        titel: "Modèle de l’année précédente ou nouveau modèle",
+        absaetze: [
+          "Les anciens modèles baissent dès que leurs successeurs arrivent, pas seulement au Black Friday. Le modèle de l’année précédente est souvent la meilleure affaire, s’il fait ce dont vous avez besoin.",
+          "Comparez pour cela la référence exacte du modèle. Des noms similaires désignent parfois un autre appareil, par exemple avec une station qui en fait moins ou avec de moins bons résultats aux tests. S’il est écrit « vainqueur du test », vérifiez que c’est bien ce modèle précis qui a été testé."
+        ]
+      },
+      {
+        titel: "Lots et accessoires",
+        absaetze: [
+          "Pour les lots, faites le calcul : avez-vous vraiment besoin des accessoires, et combien coûte l’appareil seul ? Un lot n’est une bonne affaire que si vous auriez de toute façon acheté les pièces.",
+          "Regardez aussi votre panier avant de commander. Lors du contrôle européen, une boutique sur trois environ essayait d’ajouter des articles en plus au panier."
+        ]
+      },
+      {
+        titel: "Délai de livraison, vendeur et pression du temps",
+        absaetze: [
+          "Avant l’achat, vérifiez qui vend et quand l’appareil arrive. Si la marchandise vient d’un vendeur d’Extrême-Orient, par exemple via la place de marché d’une boutique, elle met souvent plus longtemps, et le retour devient cher ou compliqué. Si vous avez besoin de l’appareil pour Noël, tenez compte du délai de livraison. Pour les boutiques inconnues, vérifiez les mentions légales et les avis, et méfiez-vous du paiement uniquement à l’avance.",
+          "Les comptes à rebours et les mentions comme « presque épuisé » doivent vous mettre sous pression. Lors du contrôle européen, presque une boutique sur cinq utilisait ces moyens. Prenez votre temps : beaucoup d’appareils sont tout aussi bon marché pendant les semaines de l’Avent."
+        ]
+      },
+      {
+        titel: "Retours en Allemagne, en Autriche et en Suisse",
+        absaetze: [
+          "En Allemagne, en Autriche et dans le reste de l’UE, vous pouvez retourner sans motif les appareils achetés en ligne dans les 14 jours suivant la réception, y compris les articles soldés au Black Friday. Le renvoi peut vous coûter quelque chose si la boutique vous en a informé avant. En revanche, une marchandise sans défaut achetée en magasin n’est échangée que si la boutique le veut bien.",
+          "Beaucoup de grandes boutiques en Allemagne prolongent volontairement le délai de retour pendant les fêtes, pratique pour les cadeaux. Vérifiez si cela vaut aussi pour les vendeurs de la place de marché.",
+          "En Suisse, il n’existe pas de droit de retour légal, pas même en ligne. Beaucoup de boutiques en accordent un volontairement, lisez donc les conditions avant l’achat."
+        ]
+      },
+      {
+        titel: "D’abord décider, ensuite comparer",
+        absaetze: [
+          "Le Black Friday est le plus détendu si vous savez déjà quel appareil vous convient. Le jour même, vous ne vérifiez alors plus que le prix. Sur mes pages sur la machine à café automatique, le robot aspirateur laveur et la friteuse sans huile, vous trouvez mes recommandations par gamme de prix et un calculateur pour votre foyer."
+        ]
+      }
+    ],
+    verweis: {
+      text: "Quelles machines à café automatiques je recommande et ce que vous économisez par rapport aux capsules, vous le voyez sur ma page sur la machine à café automatique. Mes conseils pour les robots aspirateurs laveurs et les friteuses sans huile sont sur les pages dédiées.",
+      knopf: "Vers la machine à café avec calculateur",
+      weitere: [
+        { knopf: "Vers le robot aspirateur laveur", link: "saugroboter" },
+        { knopf: "Vers la friteuse sans huile", link: "airfryer" }
+      ]
+    },
+    wannNichtTitel: "Quand il vaut mieux attendre",
+    wannNicht: [
+      "Le prix n’est pas inférieur à ce que l’appareil a coûté ces derniers mois.",
+      "La réduction se rapporte seulement au prix conseillé.",
+      "La référence du modèle diffère de l’appareil que vous avez regardé.",
+      "Le délai de livraison est long, et vous avez bientôt besoin de l’appareil.",
+      "La boutique n’indique pas de conditions de retour claires.",
+      "Sans la réduction, vous n’auriez pas du tout acheté l’appareil."
+    ],
+    fragen: [
+      { f: "Le Black Friday est-il le jour le moins cher de l’année ?", a: "Le plus souvent, non. Dans l’analyse de Which?, aucun produit n’était au plus bas le jour même du Black Friday. C’est une bonne affaire si le prix est nettement inférieur à celui des derniers mois." },
+      { f: "Une boutique peut-elle faire de la publicité avec le prix conseillé ?", a: "En Allemagne oui, s’il est clairement indiqué qu’il s’agit du prix conseillé. Si la règle des 30 jours s’applique alors aussi, les tribunaux en jugent jusqu’ici différemment. En Suisse, une boutique ne peut afficher le prix conseillé comme comparaison que si la plupart des autres boutiques proposent vraiment l’appareil à ce prix." },
+      { f: "Puis-je retourner une bonne affaire du Black Friday ?", a: "Dans l’UE oui, en ligne dans les 14 jours suivant la réception, y compris pour les articles soldés. En Suisse, seulement si la boutique le propose volontairement. Lisez-y les conditions avant l’achat." },
+      { f: "À quoi sert une alerte de prix ?", a: "Vous indiquez le prix que vous visez sur un comparateur de prix et recevez un message dès que l’appareil est à ce prix. Ainsi, vous achetez quand le prix vous convient, quel que soit le jour." }
+    ],
+    quellen: [
+      { name: "Ordonnance allemande sur l’indication des prix (PAngV), § 11", url: "https://www.gesetze-im-internet.de/pangv_2022/__11.html", text: "indiquer le prix total le plus bas des 30 derniers jours en cas de réduction de prix" },
+      { name: "Ministère fédéral autrichien de l’Économie, de l’Énergie et du Tourisme : affichage des prix", url: "https://www.bmwet.gv.at/Themen/Europa/Wettbewerbspolitik/Preisauszeichnung.html", text: "§ 9a de la loi autrichienne sur l’affichage des prix selon l’article 6 bis de la directive européenne sur l’indication des prix, prix le plus bas des 30 derniers jours, arrêt de la Cour de justice de l’Union européenne C-330/23" },
+      { name: "Cour de justice de l’Union européenne, arrêt C-330/23 (26.09.2024), selon beck-aktuell et le ministère autrichien de l’Économie", text: "une réduction en pourcentage doit partir du prix le plus bas des 30 derniers jours, de même WKO (septembre 2023) et Arbeiterkammer Wien" },
+      { name: "SECO : questions et réponses sur l’indication des prix (Suisse, en allemand)", url: "https://www.seco.admin.ch/de/faq-pbv", text: "comparaison avec son propre prix antérieur seulement s’il a vraiment été pratiqué, prix du fabricant seulement comme comparaison avec la concurrence, ainsi que la fiche sur l’autocomparaison (limites dans le temps, règle des 30 jours depuis 2025), la FAQ sur la comparaison avec la concurrence, le guide du canton d’Argovie (2025) et Handelsverband.swiss (novembre 2024)" },
+      { name: "Commission européenne : contrôle de l’UE des réductions du Black Friday et du Cyber Monday (26.03.2026)", url: "https://commission.europa.eu/news-and-media/news/eu-check-reveals-misleading-sales-practices-online-2026-03-26_fr", text: "314 boutiques en ligne de 25 pays contrôlées, 30 % avec des réductions erronées, 36 % avec des articles en plus dans le panier, 18 % avec des comptes à rebours ou une fausse rareté" },
+      { name: "Which? : analyse du Black Friday (novembre 2025)", text: "175 produits de maison, de technologie et de santé suivis de mai 2024 à mai 2025, 83 % au moins une fois aussi bon marché ou moins chers en dehors des semaines de promotion, aucun au plus bas le jour du Black Friday" },
+      { name: "Centres allemands de consommateurs : verbraucherzentrale.de (octobre 2026), Basse-Saxe (mai 2026) et Hambourg (novembre 2025)", text: "prix conseillé rarement pratiqué, règle des 30 jours depuis mai 2022, tribunaux divisés sur le prix conseillé, historique des prix sur toute une année, mentions légales et paiement à l’avance, droit de rétractation de 14 jours, frais de retour" },
+      { name: "Arbeiterkammer Wien : Black Friday (2026)", text: "Black Friday le 27 novembre 2026, prix le plus bas des 30 derniers jours, alerte de prix, 14 jours de rétractation, en magasin seulement à titre volontaire, retours coûteux vers l’Asie" },
+      { name: "Centre européen des consommateurs Allemagne : Black Friday (2026)", text: "dates, vérifier l’évolution des prix, prix conseillé, délais de livraison, paiement à l’avance, dark patterns comme « presque épuisé », 14 jours de rétractation dans toute l’Europe, frais de retour" },
+      { name: "Stiftung Warentest : conseils pour la bataille des rabais du Black Friday (novembre 2025)", text: "prix conseillé que presque aucun commerçant ne suit, alerte de prix, appareils d’apparence similaire aux résultats moins bons, longs délais de livraison chez des boutiques inconnues, semaines de l’Avent souvent tout aussi avantageuses" },
+      { name: "Décisions sur le prix conseillé barré", text: "Händlerbund (août 2026), beck-aktuell sur l’arrêt de la cour d’appel de Cologne (mai 2026, pourvoi devant la Cour fédérale de justice admis) et IT-Recht Kanzlei sur des jugements des tribunaux régionaux de Düsseldorf et de Munich I (août 2025) : comparaison avec le prix conseillé autorisée si clairement indiquée, tribunaux divisés sur la règle des 30 jours" },
+      { name: "Retours en Suisse", url: "https://www.ch.ch/fr/securite-et-droit/retourner-ou-echanger-des-produits/", text: "pas de droit légal de retour ou d’échange, les boutiques fixent leurs propres règles, ainsi que moneyland.ch (novembre 2026) et SRF (novembre 2020)" },
+      { name: "Retours prolongés à Noël", text: "t3n (décembre 2025), e-recht24 (décembre 2025) et GIGA (novembre 2025, aussi sur l’échange en magasin)" },
+      { name: "Modèles de l’année précédente, noms de modèles et lots", text: "Anker (novembre 2025) et Stiftung Warentest sur les prix des smartphones (juillet 2026) sur la baisse des prix après le lancement, TechRadar (novembre 2024), netzwelt.de (mars 2023) sur des noms similaires avec une autre station, Which? (novembre 2023) et CHOICE (novembre 2026) sur les lots" },
+      { name: "Autres guides sur le Black Friday", text: "Utopia (novembre 2025) avec l’analyse de WISO, Verbraucherzentrale Südtirol (novembre 2023) sur les marchandises d’Extrême-Orient, ZDFheute (novembre 2025) sur l’alerte de prix, heise online sur le contrôle européen et GIGA (novembre 2026) sur les dates et les promotions précédentes" }
+    ]
   }
 ];
