@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261114a">
+<link rel="stylesheet" href="style.css?v=20261114b">
 </head>
 <body>
 <div id="kopf"></div>
@@ -32,7 +32,7 @@
   <p>Lukas Antonetty, Buhnrain 4, 8052 Zürich, Schweiz, E-Mail: <a href="mailto:kontakt@myle.life">kontakt@myle.life</a></p>
 
   <h2>2. Allgemeines</h2>
-  <p>Ich nehme den Schutz deiner Daten ernst. Diese Website kommt ohne Kontaktformular und ohne Benutzerkonto aus. Es werden keine Cookies zu Werbe- oder Analysezwecken gesetzt. Für eine einfache Besucherstatistik ohne Cookies nutze ich Cloudflare Web Analytics (siehe Abschnitt 3). Den Newsletter kannst du freiwillig bestellen (siehe Abschnitt 7).</p>
+  <p>Ich nehme den Schutz deiner Daten ernst. Diese Website kommt ohne Kontaktformular und ohne Benutzerkonto aus. Es werden keine Cookies zu Werbe- oder Analysezwecken gesetzt. Für eine einfache Besucherstatistik ohne Cookies nutze ich Cloudflare Web Analytics und einen eigenen Zähler (siehe Abschnitt 3). Den Newsletter kannst du freiwillig bestellen (siehe Abschnitt 7).</p>
   <p>Auf der Website sind keine Inhalte von anderen Anbietern eingebettet, also keine Videos von YouTube, keine Karten, keine Social-Media-Knöpfe und keine Werbebanner. Die Erklärvideos und Bilder liegen alle auf diesem Server. Im Quelltext der Startseite stehen außerdem Bestätigungscodes für die Google Search Console und Pinterest. Damit zeige ich nur, dass mir die Website gehört. Dabei werden keine Daten von dir an Google oder Pinterest übertragen.</p>
   <p>Ich betreibe diese Website von der Schweiz aus. Deshalb gilt das Schweizer Datenschutzgesetz (DSG). Weil sich die Seite auch an Leserinnen und Leser in der EU richtet, halte ich mich außerdem an die Datenschutz-Grundverordnung (DSGVO).</p>
 
@@ -40,10 +40,11 @@
   <p>Diese Website wird bei Cloudflare gehostet (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet Cloudflare automatisch technische Daten, die dein Browser übermittelt (zum Beispiel IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browsertyp). Das ist nötig, um die Website sicher und stabil auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem funktionierenden Angebot). Ich selbst habe keinen Zugriff auf einzelne Logfiles und kann daraus keine Besucher erkennen.</p>
   <p>Mit Cloudflare besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO. Dabei können Daten in die USA übermittelt werden. Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert. Für dieses Abkommen hat die EU-Kommission ein angemessenes Datenschutzniveau festgestellt (Art. 45 DSGVO). Für die Schweiz gilt das Swiss-U.S. Data Privacy Framework, für das der Bundesrat ebenfalls ein angemessenes Schutzniveau festgestellt hat. Mehr dazu in der <a href="https://www.cloudflare.com/privacypolicy/">Datenschutzerklärung von Cloudflare</a>.</p>
   <p>Für eine einfache Besucherstatistik nutze ich Cloudflare Web Analytics. Dafür lädt dein Browser beim Aufruf ein kleines Skript von Cloudflare (static.cloudflareinsights.com). Es setzt keine Cookies, speichert nichts auf deinem Gerät und erstellt kein Profil über dich. Ich sehe nur zusammengefasste Zahlen, zum Beispiel wie oft eine Seite aufgerufen wurde, über welche Seite Besucher kamen, aus welchem Land und mit welchem Browser. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse daran, das Angebot zu verbessern).</p>
+  <p id="zaehler">Zusätzlich zähle ich selbst, wie die Seiten genutzt werden, damit ich sie verbessern kann. Dafür schickt die Seite bei einigen Aktionen eine kurze Meldung an meinen eigenen Zähler, der ebenfalls bei Cloudflare läuft (myle.life/api/ereignis): wenn du eine Seite öffnest, wenn eine Kaufempfehlung auf dem Bildschirm erscheint, wenn du auf einen Link zu einem Shop klickst, wenn du den Rechner benutzt und wie weit du eine Seite herunterscrollst (25, 50, 75 oder 100 Prozent). Die Meldung enthält nur die Seite, die Sprache, die Art der Aktion und, falls passend, welche Empfehlung oder Preisklasse betroffen ist. Gespeichert wird davon nur ein Zähler pro Tag, zum Beispiel „am 20. November 12 Klicks auf die günstige Preisklasse der Saugroboter-Seite“. IP-Adresse, Uhrzeit, Browserangaben oder eine Kennung speichere ich nicht. Dein Browser speichert dafür nichts, es gibt keine Cookies, und einzelne Besuche kann ich weder erkennen noch nachverfolgen. Die Zähler liegen in einer Datenbank von Cloudflare (Cloudflare D1), für die derselbe Vertrag zur Auftragsverarbeitung gilt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse daran, das Angebot zu verbessern). Mit dem Link in Abschnitt 4 schaltest du auch diesen Zähler für deinen Browser ab.</p>
 
   <h2>4. Speicher im Browser</h2>
   <p>Wenn du auf einen Link zu einer anderen Seite von MYLE klickst, legt die Website im Sitzungsspeicher deines Browsers (sessionStorage) kurz einen Merker ab: welche Seite du öffnest und wann. So startet die neue Seite oben und nicht mitten im Text. Der Merker wird beim Öffnen der neuen Seite sofort wieder gelöscht, spätestens wenn du den Tab schließt. Er wird nicht an mich oder andere übertragen. Dieser Speicher ist für die gewünschte Funktion technisch nötig und braucht deshalb keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie).</p>
-  <p>Für meine eigenen Geräte schalte ich die Besucherstatistik ab, damit meine Besuche die Zahlen nicht verfälschen. Das kannst du auch: Öffnest du einmal den Link <a href="/?nicht-zaehlen">myle.life/?nicht-zaehlen</a>, legt die Website im Speicher deines Browsers (localStorage) den Eintrag „myle-nicht-zaehlen“ ab. Solange er da ist, lädt dein Browser das Statistik-Skript von Cloudflare nicht mehr. Der Eintrag enthält nur diesen einen Wert und wird nicht an mich oder andere übertragen. Mit <a href="/?wieder-zaehlen">myle.life/?wieder-zaehlen</a> oder durch Löschen der Website-Daten in deinem Browser entfernst du ihn wieder. Auch dieser Speicher ist für die von dir gewünschte Funktion nötig und braucht keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie). Ohne diesen Link legt die Website keinen dauerhaften Speicher an, andere Cookies oder Speicher nutzt sie nicht.</p>
+  <p>Für meine eigenen Geräte schalte ich die Besucherstatistik ab, damit meine Besuche die Zahlen nicht verfälschen. Das kannst du auch: Öffnest du einmal den Link <a href="/?nicht-zaehlen">myle.life/?nicht-zaehlen</a>, legt die Website im Speicher deines Browsers (localStorage) den Eintrag „myle-nicht-zaehlen“ ab. Solange er da ist, lädt dein Browser das Statistik-Skript von Cloudflare nicht mehr und meldet auch meinem eigenen Zähler nichts. Der Eintrag enthält nur diesen einen Wert und wird nicht an mich oder andere übertragen. Mit <a href="/?wieder-zaehlen">myle.life/?wieder-zaehlen</a> oder durch Löschen der Website-Daten in deinem Browser entfernst du ihn wieder. Auch dieser Speicher ist für die von dir gewünschte Funktion nötig und braucht keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie). Ohne diesen Link legt die Website keinen dauerhaften Speicher an, andere Cookies oder Speicher nutzt sie nicht.</p>
 
   <h2>5. Schriftarten</h2>
   <p>Die Schriftarten dieser Website (Bricolage Grotesque und Figtree) liegen direkt auf diesem Server. Beim Aufruf der Seite wird keine Verbindung zu Google oder einem anderen Schriftanbieter aufgebaut.</p>
@@ -63,12 +64,12 @@
   <h2>9. Deine Rechte</h2>
   <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten, auf Datenübertragbarkeit sowie auf Widerspruch (Art. 15 bis 21 DSGVO, in der Schweiz Art. 25 ff. DSG). Eine Einwilligung kannst du jederzeit für die Zukunft widerrufen. Verarbeite ich Daten auf Grund eines berechtigten Interesses, kannst du aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit widersprechen (Art. 21 DSGVO). Eine Mail an kontakt@myle.life genügt. Ich treffe keine automatisierten Entscheidungen über dich und erstelle keine Profile. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren. In der Schweiz ist das der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB), in der EU die Aufsichtsbehörde in deinem Land.</p>
 
-  <p><em>Stand: 4. November 2026</em></p>
+  <p><em>Stand: 14. November 2026</em></p>
 </main>
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261114a"></script>
-<script src="app.js?v=20261114a"></script>
+<script src="einstellungen.js?v=20261114b"></script>
+<script src="app.js?v=20261114b"></script>
 </body>
 </html>

@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../style.css?v=20261114a">
+<link rel="stylesheet" href="../style.css?v=20261114b">
 </head>
 <body>
 <div id="kopf"></div>
@@ -33,7 +33,7 @@
   <p>Lukas Antonetty, Buhnrain 4, 8052 Zürich, Switzerland, email: <a href="mailto:kontakt@myle.life">kontakt@myle.life</a></p>
 
   <h2>2. General</h2>
-  <p>I take the protection of your data seriously. This website has no contact form and no user accounts. No cookies are set for advertising or analytics. For simple visitor statistics without cookies I use Cloudflare Web Analytics (see section 3). You can sign up for the newsletter voluntarily (see section 7).</p>
+  <p>I take the protection of your data seriously. This website has no contact form and no user accounts. No cookies are set for advertising or analytics. For simple visitor statistics without cookies I use Cloudflare Web Analytics and a counter of my own (see section 3). You can sign up for the newsletter voluntarily (see section 7).</p>
   <p>No content from other providers is embedded on the website: no YouTube videos, no maps, no social media buttons and no ad banners. The explainer videos and pictures are all stored on this server. The source code of the home page also contains verification codes for Google Search Console and Pinterest. They only show that the website belongs to me. No data about you is sent to Google or Pinterest because of them.</p>
   <p>I run this website from Switzerland. That's why the Swiss Federal Act on Data Protection (FADP) applies. Because the site is also aimed at readers in the EU, I also comply with the General Data Protection Regulation (GDPR).</p>
 
@@ -41,10 +41,11 @@
   <p>This website is hosted by Cloudflare (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA). When you open the site, Cloudflare automatically processes technical data that your browser sends (for example IP address, date and time, the page requested, browser type). This is necessary to deliver the website securely and reliably. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in a working service). I myself have no access to individual log files and cannot identify visitors from them.</p>
   <p>There is a data processing agreement with Cloudflare under Art. 28 GDPR. Data may be transferred to the USA. Cloudflare is certified under the EU-US Data Privacy Framework. For this framework the European Commission has found an adequate level of data protection (Art. 45 GDPR). For Switzerland the Swiss-U.S. Data Privacy Framework applies, for which the Swiss Federal Council has also found an adequate level of protection. More about this in <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
   <p>For simple visitor statistics I use Cloudflare Web Analytics. For this, your browser loads a small script from Cloudflare (static.cloudflareinsights.com) when you open the site. It sets no cookies, stores nothing on your device and creates no profile of you. I only see aggregated numbers, for example how often a page was viewed, which page visitors came from, from which country and with which browser. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in improving the service).</p>
+  <p id="zaehler">I also count for myself how the pages are used, so that I can improve them. For this, the page sends a short message to my own counter, which also runs at Cloudflare (myle.life/api/ereignis), for a few actions: when you open a page, when a buying recommendation appears on screen, when you click a link to a shop, when you use the calculator and how far you scroll down a page (25, 50, 75 or 100 per cent). The message contains only the page, the language, the type of action and, where relevant, which recommendation or price range it concerns. Of this, only one counter per day is stored, for example “on 20 November 12 clicks on the budget price range of the robot vacuum page”. I do not store the IP address, the time, browser details or any identifier. Your browser stores nothing for this, there are no cookies, and I can neither recognise nor trace individual visits. The counters are kept in a Cloudflare database (Cloudflare D1), covered by the same data processing agreement. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in improving the service). The link in section 4 also switches off this counter for your browser.</p>
 
   <h2>4. Browser storage</h2>
   <p>When you click a link to another MYLE page, the website briefly stores a marker in your browser's session storage (sessionStorage): which page you are opening and when. This makes the new page start at the top instead of in the middle of the text. The marker is deleted as soon as the new page opens, at the latest when you close the tab. It is not sent to me or anyone else. This storage is technically necessary for the function you asked for and therefore needs no consent (Art. 5(3) ePrivacy Directive).</p>
-  <p>I switch off the visitor statistics for my own devices so that my visits do not distort the numbers. You can do this too: if you open the link <a href="/en/?nicht-zaehlen">myle.life/en/?nicht-zaehlen</a> once, the website stores the entry “myle-nicht-zaehlen” in your browser’s storage (localStorage). As long as it is there, your browser no longer loads the Cloudflare statistics script. The entry contains only this one value and is not sent to me or anyone else. You remove it again with <a href="/en/?wieder-zaehlen">myle.life/en/?wieder-zaehlen</a> or by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive). Without this link the website creates no lasting storage, and it uses no other cookies or storage.</p>
+  <p>I switch off the visitor statistics for my own devices so that my visits do not distort the numbers. You can do this too: if you open the link <a href="/en/?nicht-zaehlen">myle.life/en/?nicht-zaehlen</a> once, the website stores the entry “myle-nicht-zaehlen” in your browser’s storage (localStorage). As long as it is there, your browser no longer loads the Cloudflare statistics script and sends nothing to my own counter either. The entry contains only this one value and is not sent to me or anyone else. You remove it again with <a href="/en/?wieder-zaehlen">myle.life/en/?wieder-zaehlen</a> or by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive). Without this link the website creates no lasting storage, and it uses no other cookies or storage.</p>
 
   <h2>5. Fonts</h2>
   <p>The fonts on this website (Bricolage Grotesque and Figtree) are stored directly on this server. When you open the site, no connection is made to Google or any other font provider.</p>
@@ -64,12 +65,12 @@
   <h2>9. Your rights</h2>
   <p>You have the right to access, rectification, erasure and restriction of processing of your data, to data portability and to object (Art. 15 to 21 GDPR, in Switzerland Art. 25 ff. FADP). You can withdraw consent at any time with effect for the future. Where I process data on the basis of a legitimate interest, you can object at any time on grounds relating to your particular situation (Art. 21 GDPR). An email to kontakt@myle.life is enough. I make no automated decisions about you and create no profiles. You can also lodge a complaint with a data protection supervisory authority. In Switzerland this is the Federal Data Protection and Information Commissioner (FDPIC), in the EU the supervisory authority in your country.</p>
 
-  <p><em>Last updated: 4 November 2026</em></p>
+  <p><em>Last updated: 14 November 2026</em></p>
 </main>
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261114a"></script>
-<script src="../app.js?v=20261114a"></script>
+<script src="einstellungen.js?v=20261114b"></script>
+<script src="../app.js?v=20261114b"></script>
 </body>
 </html>

@@ -21,3 +21,5 @@
 /pin / 302
 /fb / 302
 /nl / 302
+# Quelltext der Cloudflare-Funktionen (Klickzähler) ist keine Seite
+/functions/* / 301

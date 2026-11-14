@@ -1434,3 +1434,78 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", laden);
   else laden();
 })();
+
+// Eigener Klickzähler ohne Cookies (siehe Datenschutz, Abschnitt 3 „#zaehler“; Server: functions/api/ereignis.js).
+// Sammelt pro Seitenaufruf ein paar Ereignisse und schickt sie gebündelt, wenn die Seite verlassen oder verborgen wird:
+//   aufruf                      einmal pro Aufruf
+//   box-gesehen / box-klick     Kaufempfehlung zur Hälfte sichtbar / Klick auf einen Shop-Link; Detail sagt, welche:
+//                               oben (Kasten „Meine Empfehlung“), modell-<Stufe 1–3>-<Abschnitt>, alternative-…, zubehoer, sonst andere
+//   rechner                     erste Eingabe im Rechner
+//   scroll                      25, 50, 75, 100 (Prozent der Seite)
+// Kein Cookie, kein Speicher, keine Kennung. Nur auf myle.life. „Mich nicht zählen“ und die Prüf-Browser der Agenten
+// erkennt er an der Sicherheitsregel, die das Skript oben im <head> dann einfügt.
+(function () {
+  if (location.hostname !== "myle.life" || !navigator.sendBeacon) return;
+  if (document.querySelector('meta[http-equiv="Content-Security-Policy"]')) return;
+  var pfad = location.pathname.replace(/^\/(en|fr|it)\//, "/").replace(/\.html$/, "").replace(/^\/|\/$/g, "");
+  var seite = (pfad || "start").toLowerCase();
+  var sprache = (document.documentElement.lang || "de").slice(0, 2);
+  if (!/^[a-z0-9-]{1,80}$/.test(seite)) return;
+  var warte = [["aufruf", ""]], schon = {};
+  function merke(e, d) {
+    var k = e + "|" + (d || "");
+    if (schon[k] && e !== "box-klick") return;
+    schon[k] = 1;
+    warte.push([e, d || ""]);
+  }
+  function senden() {
+    if (!warte.length) return;
+    var teil = warte.splice(0, 40);
+    try { navigator.sendBeacon("/api/ereignis", JSON.stringify({ s: seite, l: sprache, e: teil })); } catch (e) { /* egal */ }
+  }
+  function kurz(x) { return String(x || "").toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 50); }
+  function box(el) {
+    if (el.closest(".empf-box")) return "oben";
+    if (el.closest(".zubehoer")) return "zubehoer";
+    var m = el.closest("article.modell");
+    if (m) {
+      var st = m.querySelector(".stufe"), nr = st && (st.className.match(/stufe-(\d)/) || [])[1];
+      return (el.closest(".alternativen") ? "alternative-" : "modell-") + (nr || "0") + (m.id ? "-" + kurz(m.id) : "");
+    }
+    return "andere";
+  }
+  document.addEventListener("click", function (ev) {
+    var a = ev.target && ev.target.closest && ev.target.closest('a[rel~="sponsored"]');
+    if (!a) return;
+    merke("box-klick", box(a));
+    senden();
+  }, true);
+  document.addEventListener("input", function (ev) {
+    if (ev.target && ev.target.closest && ev.target.closest(".rechner, #rechner")) merke("rechner", "");
+  }, true);
+  document.addEventListener("change", function (ev) {
+    if (ev.target && ev.target.closest && ev.target.closest(".rechner, #rechner")) merke("rechner", "");
+  }, true);
+  var marken = [25, 50, 75, 100], laeuft = false;
+  function tiefe() {
+    laeuft = false;
+    var h = document.documentElement.scrollHeight, p = h > 0 ? (window.scrollY + window.innerHeight) / h * 100 : 0;
+    while (marken.length && p >= (marken[0] === 100 ? 98 : marken[0])) merke("scroll", String(marken.shift()));
+  }
+  window.addEventListener("scroll", function () { if (!laeuft) { laeuft = true; requestAnimationFrame(tiefe); } }, { passive: true });
+  function beobachten() {
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        merke("box-gesehen", box(e.target));
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll(".empf-box, article.modell:not(.modell-leer), .zubehoer-karte").forEach(function (el) { io.observe(el); });
+  }
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") senden(); });
+  window.addEventListener("pagehide", senden);
+  if (document.readyState === "complete") { beobachten(); tiefe(); }
+  else window.addEventListener("load", function () { beobachten(); tiefe(); });
+})();

@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../style.css?v=20261114a">
+<link rel="stylesheet" href="../style.css?v=20261114b">
 </head>
 <body>
 <div id="kopf"></div>
@@ -33,7 +33,7 @@
   <p>Lukas Antonetty, Buhnrain 4, 8052 Zürich, Suisse, e-mail&#8239;: <a href="mailto:kontakt@myle.life">kontakt@myle.life</a></p>
 
   <h2>2. Généralités</h2>
-  <p>Je prends la protection de vos données au sérieux. Ce site n’a ni formulaire de contact ni comptes d’utilisateur. Aucun cookie n’est déposé à des fins publicitaires ou d’analyse. Pour de simples statistiques de visite sans cookies, j’utilise Cloudflare Web Analytics (voir point 3). Vous pouvez vous inscrire volontairement à la newsletter (voir point 7).</p>
+  <p>Je prends la protection de vos données au sérieux. Ce site n’a ni formulaire de contact ni comptes d’utilisateur. Aucun cookie n’est déposé à des fins publicitaires ou d’analyse. Pour de simples statistiques de visite sans cookies, j’utilise Cloudflare Web Analytics et un compteur à moi (voir point 3). Vous pouvez vous inscrire volontairement à la newsletter (voir point 7).</p>
   <p>Aucun contenu d’autres fournisseurs n’est intégré au site&#8239;: pas de vidéos YouTube, pas de cartes, pas de boutons de réseaux sociaux ni de bannières publicitaires. Les vidéos explicatives et les images sont toutes stockées sur ce serveur. Le code source de la page d’accueil contient aussi des codes de vérification pour Google Search Console et Pinterest. Ils montrent seulement que le site m’appartient. Aucune donnée vous concernant n’est transmise à Google ou à Pinterest de ce fait.</p>
   <p>J’exploite ce site depuis la Suisse. C’est pourquoi la loi fédérale suisse sur la protection des données (LPD) s’applique. Comme le site s’adresse aussi à des lecteurs dans l’UE, je respecte également le règlement général sur la protection des données (RGPD).</p>
 
@@ -41,10 +41,11 @@
   <p>Ce site est hébergé par Cloudflare (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, États-Unis). Lorsque vous ouvrez le site, Cloudflare traite automatiquement les données techniques envoyées par votre navigateur (par exemple adresse IP, date et heure, page demandée, type de navigateur). C’est nécessaire pour fournir le site de manière sûre et fiable. La base juridique est l’art. 6, par. 1, let. f RGPD (intérêt légitime à un service qui fonctionne). Je n’ai moi-même aucun accès aux fichiers journaux individuels et ne peux pas en identifier les visiteurs.</p>
   <p>Un contrat de sous-traitance au sens de l’art. 28 RGPD a été conclu avec Cloudflare. Des données peuvent être transférées aux États-Unis. Cloudflare est certifié selon le cadre de protection des données UE–États-Unis (EU-US Data Privacy Framework). Pour ce cadre, la Commission européenne a constaté un niveau de protection adéquat (art. 45 RGPD). Pour la Suisse s’applique le Swiss-U.S. Data Privacy Framework, pour lequel le Conseil fédéral a lui aussi constaté un niveau de protection adéquat. Plus d’informations dans la <a href="https://www.cloudflare.com/privacypolicy/">politique de confidentialité de Cloudflare</a>.</p>
   <p>Pour de simples statistiques de visite, j’utilise Cloudflare Web Analytics. Pour cela, votre navigateur charge un petit script de Cloudflare (static.cloudflareinsights.com) lorsque vous ouvrez le site. Il ne dépose aucun cookie, n’enregistre rien sur votre appareil et ne crée aucun profil de vous. Je ne vois que des chiffres agrégés, par exemple combien de fois une page a été consultée, de quelle page venaient les visiteurs, depuis quel pays et avec quel navigateur. La base juridique est l’art. 6, par. 1, let. f RGPD (intérêt légitime à améliorer le service).</p>
+  <p id="zaehler">En plus, je compte moi-même comment les pages sont utilisées, afin de pouvoir les améliorer. Pour cela, lors de certaines actions, la page envoie un court message à mon propre compteur, qui fonctionne lui aussi chez Cloudflare (myle.life/api/ereignis)&#8239;: quand vous ouvrez une page, quand une recommandation d’achat apparaît à l’écran, quand vous cliquez sur un lien vers une boutique, quand vous utilisez le calculateur et jusqu’où vous faites défiler une page (25, 50, 75 ou 100&#8239;%). Le message ne contient que la page, la langue, le type d’action et, le cas échéant, la recommandation ou la gamme de prix concernée. Seul un compteur par jour en est enregistré, par exemple «&#8239;le 20 novembre, 12 clics sur la gamme de prix économique de la page des robots aspirateurs&#8239;». Je n’enregistre ni l’adresse IP, ni l’heure, ni les informations du navigateur, ni aucun identifiant. Votre navigateur n’enregistre rien pour cela, il n’y a pas de cookies, et je ne peux ni reconnaître ni suivre des visites individuelles. Les compteurs se trouvent dans une base de données de Cloudflare (Cloudflare D1), couverte par le même contrat de sous-traitance. La base juridique est l’art. 6, par. 1, let. f RGPD (intérêt légitime à améliorer le service). Le lien du point 4 désactive aussi ce compteur pour votre navigateur.</p>
 
   <h2>4. Stockage dans le navigateur</h2>
   <p>Lorsque vous cliquez sur un lien vers une autre page de MYLE, le site dépose brièvement un repère dans le stockage de session de votre navigateur (sessionStorage)&#8239;: quelle page vous ouvrez et quand. Ainsi, la nouvelle page commence en haut et non au milieu du texte. Le repère est supprimé dès l’ouverture de la nouvelle page, au plus tard à la fermeture de l’onglet. Il n’est transmis ni à moi ni à personne d’autre. Ce stockage est techniquement nécessaire à la fonction demandée et ne requiert donc pas de consentement (art. 5, par. 3 de la directive ePrivacy).</p>
-  <p>Pour mes propres appareils, je désactive les statistiques de visites afin que mes visites ne faussent pas les chiffres. Vous pouvez le faire aussi&#8239;: si vous ouvrez une fois le lien <a href="/fr/?nicht-zaehlen">myle.life/fr/?nicht-zaehlen</a>, le site enregistre l’entrée «&#8239;myle-nicht-zaehlen&#8239;» dans le stockage de votre navigateur (localStorage). Tant qu’elle existe, votre navigateur ne charge plus le script de statistiques de Cloudflare. L’entrée ne contient que cette seule valeur et n’est transmise ni à moi ni à d’autres. Vous la supprimez avec <a href="/fr/?wieder-zaehlen">myle.life/fr/?wieder-zaehlen</a> ou en effaçant les données du site dans votre navigateur. Ce stockage est lui aussi nécessaire à la fonction que vous avez demandée et ne requiert pas de consentement (§ 25, al. 2, n° 2 TDDDG, art. 5, par. 3 de la directive ePrivacy). Sans ce lien, le site ne crée aucun stockage durable et n’utilise aucun autre cookie ni stockage.</p>
+  <p>Pour mes propres appareils, je désactive les statistiques de visites afin que mes visites ne faussent pas les chiffres. Vous pouvez le faire aussi&#8239;: si vous ouvrez une fois le lien <a href="/fr/?nicht-zaehlen">myle.life/fr/?nicht-zaehlen</a>, le site enregistre l’entrée «&#8239;myle-nicht-zaehlen&#8239;» dans le stockage de votre navigateur (localStorage). Tant qu’elle existe, votre navigateur ne charge plus le script de statistiques de Cloudflare et n’envoie rien non plus à mon propre compteur. L’entrée ne contient que cette seule valeur et n’est transmise ni à moi ni à d’autres. Vous la supprimez avec <a href="/fr/?wieder-zaehlen">myle.life/fr/?wieder-zaehlen</a> ou en effaçant les données du site dans votre navigateur. Ce stockage est lui aussi nécessaire à la fonction que vous avez demandée et ne requiert pas de consentement (§ 25, al. 2, n° 2 TDDDG, art. 5, par. 3 de la directive ePrivacy). Sans ce lien, le site ne crée aucun stockage durable et n’utilise aucun autre cookie ni stockage.</p>
 
   <h2>5. Polices de caractères</h2>
   <p>Les polices de ce site (Bricolage Grotesque et Figtree) sont stockées directement sur ce serveur. Lorsque vous ouvrez le site, aucune connexion n’est établie avec Google ni avec un autre fournisseur de polices.</p>
@@ -64,13 +65,13 @@
   <h2>9. Vos droits</h2>
   <p>Vous avez le droit d’accéder à vos données, de les faire rectifier, effacer ou d’en limiter le traitement, le droit à la portabilité des données et le droit d’opposition (art. 15 à 21 RGPD, en Suisse art. 25 ss LPD). Vous pouvez retirer un consentement à tout moment pour l’avenir. Lorsque je traite des données sur la base d’un intérêt légitime, vous pouvez vous y opposer à tout moment pour des raisons tenant à votre situation particulière (art. 21 RGPD). Un e-mail à kontakt@myle.life suffit. Je ne prends aucune décision automatisée à votre sujet et ne crée aucun profil. Vous pouvez aussi déposer une plainte auprès d’une autorité de contrôle de la protection des données. En Suisse, il s’agit du Préposé fédéral à la protection des données et à la transparence (PFPDT), dans l’UE de l’autorité de contrôle de votre pays.</p>
 
-  <p><em>Dernière mise à jour&#8239;: 4 novembre 2026</em></p>
+  <p><em>Dernière mise à jour&#8239;: 14 novembre 2026</em></p>
 </main>
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261114a"></script>
-<script src="ui-texte.js?v=20261114a"></script>
-<script src="../app.js?v=20261114a"></script>
+<script src="einstellungen.js?v=20261114b"></script>
+<script src="ui-texte.js?v=20261114b"></script>
+<script src="../app.js?v=20261114b"></script>
 </body>
 </html>
