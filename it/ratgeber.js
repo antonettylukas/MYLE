@@ -410,7 +410,7 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Le valvole termostatiche smart convengono in una casa in affitto?",
     frage: "Le valvole termostatiche smart convengono in una casa in affitto?",
-    seitenTitel: "Le valvole termostatiche smart convengono in una casa in affitto?",
+    seitenTitel: "Valvole termostatiche smart in affitto: convengono?",
     beschreibung: "Quanto risparmi da inquilino con le valvole termostatiche smart, quanto arriva sul conteggio del riscaldamento, se puoi montarle e quando rendono meno.",
     kurzantwort: "Di solito sì: le avviti senza artigiano e le smonti quando traslochi, e ogni giorno torni in una casa calda. Con un programma di riscaldamento risparmi anche circa il 10 per cento di energia per il riscaldamento. Con un riscaldamento centralizzato, sul tuo conteggio ne arriva di solito da metà a poco più di due terzi, perché solo una parte dei costi viene ripartita in base al consumo.",
     abschnitte: [
@@ -508,8 +508,8 @@ const RATGEBER = [
     weitereProdukte: ["akkusauger"],
     titel: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
     frage: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
-    seitenTitel: "Robot aspirapolvere o aspirapolvere senza fili: cosa fa per me?",
-    beschreibung: "Cosa sanno fare meglio un robot aspirapolvere lavapavimenti e un aspirapolvere senza fili, quanto tempo ti fanno risparmiare e perché per molte case la cosa migliore è averli entrambi.",
+    seitenTitel: "Robot o aspirapolvere senza fili: cosa fa per me?",
+    beschreibung: "Cosa sanno fare meglio un robot aspirapolvere e un aspirapolvere senza fili, quanto tempo risparmi e perché spesso conviene averli entrambi.",
     kurzantwort: "Un robot aspirapolvere lavapavimenti fa per te se vuoi pavimenti puliti senza muovere un dito, un aspirapolvere senza fili se vuoi aspirare in fretta da solo, anche scale, divano e auto. Secondo il mio calcolatore, su 70 m² il robot ti fa risparmiare circa un’ora a settimana se di solito passi l’aspirapolvere due volte e lavi i pavimenti una volta. Con l’aspirapolvere senza fili continui ad aspirare da solo, solo più in fretta. Per molte case la soluzione più comoda è averli entrambi: il robot per i pavimenti e un aspirapolvere senza fili economico per i punti dove lui non arriva.",
     abschnitte: [
       {
@@ -607,8 +607,8 @@ const RATGEBER = [
     weitereProdukte: ["saugroboter", "airfryer"],
     titel: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
     frage: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
-    seitenTitel: "Black Friday sugli elettrodomestici: come riconosco una vera offerta?",
-    beschreibung: "Come riconoscere le vere offerte del Black Friday: storico dei prezzi invece del prezzo consigliato, modelli dell’anno prima, set, tempi di consegna e resi in Germania, Austria, resto dell’UE e Svizzera.",
+    seitenTitel: "Black Friday: come riconosco una vera offerta?",
+    beschreibung: "Come riconoscere le vere offerte del Black Friday: storico dei prezzi invece del prezzo consigliato, modelli vecchi, set, consegna e resi.",
     kurzantwort: "Una vera offerta la riconosci dallo storico dei prezzi: se il prezzo è chiaramente sotto quello che l’apparecchio è costato negli ultimi mesi, lo è. Il prezzo barrato da solo dice poco, soprattutto se è il prezzo consigliato dal produttore, che quasi nessun negozio applica. Controlla anche il nome esatto del modello, i tempi di consegna e il reso. Molti apparecchi costano altrettanto poco prima e dopo il Black Friday, quindi puoi confrontare con calma.",
     abschnitte: [
       {

@@ -288,7 +288,7 @@ const RATGEBER = [
     titel: "Saugroboter mit Haustieren: Worauf kommt es an?",
     frage: "Saugroboter mit Haustieren: Worauf kommt es an?",
     seitenTitel: "Saugroboter mit Haustieren: Worauf kommt es an?",
-    beschreibung: "Welche Bürste, Station und Kamera ein Saug- und Wischroboter mit Hund oder Katze braucht, wie sich dein Tier an ihn gewöhnt und wann er nichts für dich ist.",
+    beschreibung: "Welche Bürste, Station und Kamera ein Saug- und Wischroboter mit Hund oder Katze braucht, wie sich dein Tier gewöhnt und wann er nichts für dich ist.",
     kurzantwort: "Auf drei Dinge: eine Bürste, um die sich Tierhaare kaum wickeln, eine Station, die ihn leer saugt, und eine Kamera, die Hundehaufen meist erkennt und umfährt. In der App sperrst du dazu Napf, Katzenklo und Schlafplatz. Gerade mit Tier lohnt er sich: Saugst du wegen der Haare täglich, spart er dir bei 60 m² laut meinem Rechner rund zwei Stunden pro Woche.",
     abschnitte: [
       {
@@ -400,7 +400,7 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
     frage: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
-    seitenTitel: "Waschtrockner oder Waschmaschine und Trockner: Was ist besser?",
+    seitenTitel: "Waschtrockner oder Waschmaschine und Trockner?",
     beschreibung: "Platz, Strom, Wasser und Zeit im Vergleich: wann ein Waschtrockner besser passt, wann Waschmaschine und Wärmepumpentrockner, und was das im Monat ausmacht.",
     kurzantwort: "Hast du wenig Platz, ist der Waschtrockner die bequemere Wahl: ein Gerät, kein Umräumen, morgens rein und abends trocken. Hast du Platz für zwei Geräte und wäschst viel, sind Waschmaschine und Wärmepumpentrockner besser. Sie trocknen mehr auf einmal und brauchen fürs Trocknen oft nur die Hälfte des Stroms oder weniger.",
     abschnitte: [
@@ -589,7 +589,7 @@ const RATGEBER = [
     titel: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
     frage: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
     seitenTitel: "Saugroboter oder Akku-Staubsauger: Was passt zu mir?",
-    beschreibung: "Was ein Saug- und Wischroboter und ein Akku-Staubsauger jeweils besser können, wie viel Zeit sie dir sparen und warum für viele Wohnungen beides zusammen am besten passt.",
+    beschreibung: "Was ein Saug- und Wischroboter und ein Akku-Staubsauger besser können, wie viel Zeit sie sparen und warum oft beides zusammen am besten passt.",
     kurzantwort: "Ein Saug- und Wischroboter passt, wenn deine Böden ohne dich sauber werden sollen, ein Akku-Staubsauger, wenn du schnell selbst saugen willst, auch auf Treppe, Sofa und im Auto. Laut meinem Rechner spart dir der Roboter bei 70 m² rund eine Stunde pro Woche, wenn du sonst zweimal saugst und einmal wischst. Mit dem Akku-Staubsauger saugst du weiter selbst, nur schneller. Für viele Wohnungen ist beides zusammen am bequemsten: der Roboter für die Böden und ein günstiger Akku-Staubsauger für die Stellen, an die er nicht kommt.",
     abschnitte: [
       {
@@ -687,8 +687,8 @@ const RATGEBER = [
     weitereProdukte: ["saugroboter", "airfryer"],
     titel: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
     frage: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
-    seitenTitel: "Black Friday bei Haushaltsgeräten: Woran erkenne ich ein echtes Angebot?",
-    beschreibung: "Wie du am Black Friday echte Angebote erkennst: Preisverlauf statt UVP, Vorjahresmodelle, Sets, Lieferzeit und die Rückgabe in Deutschland, Österreich und der Schweiz.",
+    seitenTitel: "Black Friday: Woran erkenne ich ein echtes Angebot?",
+    beschreibung: "Wie du am Black Friday echte Angebote erkennst: Preisverlauf statt UVP, Vorjahresmodelle, Sets, Lieferzeit und Rückgabe in DE, AT und CH.",
     kurzantwort: "Ein echtes Angebot erkennst du am Preisverlauf: Liegt der Preis klar unter dem, was das Gerät in den letzten Monaten gekostet hat, ist es eins. Der durchgestrichene Preis allein sagt wenig, vor allem wenn es die UVP des Herstellers ist, die kaum ein Shop verlangt. Prüf außerdem die genaue Modellbezeichnung, die Lieferzeit und die Rückgabe. Viele Geräte gibt es vor und nach dem Black Friday genauso günstig, du kannst also in Ruhe vergleichen.",
     abschnitte: [
       {

@@ -217,6 +217,7 @@ async function main() {
       await page.close();
       laengen.push([datei, z.text, z.fragen]);
       if (!z.h1.length) probleme.push(`${datei}: ohne JavaScript keine Überschrift`);
+      if (z.h1.length > 1) probleme.push(`${datei}: ohne JavaScript ${z.h1.length} Hauptüberschriften (H1), nur eine erlaubt`);
       if (z.links < 5) probleme.push(`${datei}: ohne JavaScript fehlen Menü oder Fuß`);
       const typen = JSON.stringify(z.ld).match(/"@type":"[A-Za-z]+"/g).join(" ");
       if (/"(Product|Review|AggregateRating|Rating|Offer|AggregateOffer)"/.test(typen)) probleme.push(`${datei}: verbotener Typ im JSON-LD`);

@@ -320,8 +320,8 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Washer dryer or washing machine and tumble dryer: which is better?",
     frage: "Washer dryer or washing machine and tumble dryer: which is better?",
-    seitenTitel: "Washer dryer or washing machine and tumble dryer: which is better?",
-    beschreibung: "Space, electricity, water and time compared: when a washer dryer suits you better, when a washing machine and heat pump dryer do, and what it means per month.",
+    seitenTitel: "Washer dryer or washing machine and dryer?",
+    beschreibung: "Space, electricity, water and time compared: when a washer dryer suits you, when a washing machine and heat pump dryer do, and the cost per month.",
     kurzantwort: "If you're short of space, the washer dryer is the more convenient choice: one machine, no moving laundry across, in in the morning and dry in the evening. If you have room for two machines and do a lot of washing, a washing machine and heat pump dryer are better. They dry more at once and often use only half the electricity for drying, or less.",
     abschnitte: [
       {
@@ -411,7 +411,7 @@ const RATGEBER = [
     titel: "Are smart thermostats worth it in a rented flat?",
     frage: "Are smart thermostats worth it in a rented flat?",
     seitenTitel: "Are smart thermostats worth it in a rented flat?",
-    beschreibung: "What you save as a tenant with smart thermostats, how much of it shows up on your heating bill, whether you're allowed to fit them and when they bring less.",
+    beschreibung: "What you save as a tenant with smart thermostats, how much shows up on your heating bill, whether you may fit them and when they bring less.",
     kurzantwort: "Mostly yes: you screw them on without a tradesperson and off again when you move out, and you come home to a warm flat every day. With a heating schedule you also save around 10 percent of heating energy. With central heating, usually half to just over two thirds of that shows up on your bill, because only part of the costs is split by consumption.",
     abschnitte: [
       {
@@ -607,8 +607,8 @@ const RATGEBER = [
     weitereProdukte: ["saugroboter", "airfryer"],
     titel: "Black Friday on household appliances: how do I spot a real deal?",
     frage: "Black Friday on household appliances: how do I spot a real deal?",
-    seitenTitel: "Black Friday on household appliances: how do I spot a real deal?",
-    beschreibung: "How to spot real deals on Black Friday: price history instead of RRP, last year's models, bundles, delivery time and returns in Germany, Austria, the rest of the EU and Switzerland.",
+    seitenTitel: "Black Friday: how do I spot a real deal?",
+    beschreibung: "How to spot real Black Friday deals: price history instead of RRP, last year's models, bundles, delivery time and returns in the EU and Switzerland.",
     kurzantwort: "You spot a real deal by the price history: if the price is clearly below what the appliance has cost over the last few months, it's one. The crossed-out price alone says little, especially if it's the manufacturer's RRP, which hardly any shop charges. Also check the exact model name, the delivery time and the returns policy. Many appliances are just as cheap before and after Black Friday, so you can compare at your leisure.",
     abschnitte: [
       {

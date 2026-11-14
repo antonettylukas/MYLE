@@ -8,8 +8,8 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Un robot aspirateur vaut-il le coup dans un petit logement ?",
     frage: "Un robot aspirateur vaut-il le coup dans un petit logement ?",
-    seitenTitel: "Un robot aspirateur vaut-il le coup dans un petit logement ?",
-    beschreibung: "Ce qu’un robot aspirateur laveur fait vraiment gagner sur 30 à 60 m², à quel point il est bruyant, la place que prend la station et quand il ne vous convient pas.",
+    seitenTitel: "Robot aspirateur : rentable dans un petit logement ?",
+    beschreibung: "Ce qu’un robot aspirateur laveur fait gagner sur 30 à 60 m², son bruit, la place de la station et quand il ne vous convient pas.",
     kurzantwort: "Oui, même sur 30 à 60 m², il vaut le coup pour la plupart des gens, et un modèle d’entrée ou de milieu de gamme suffit souvent. Si vous passez sinon l’aspirateur deux fois par semaine et la serpillière une fois, mon calculateur indique que vous gagnez entre une demi-heure et presque une heure par semaine. Il ne vous convient pas si la station n’a pas de place ou si vous ne voulez pas ranger rapidement avant qu’il démarre.",
     abschnitte: [
       {
@@ -112,7 +112,7 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Friteuse sans huile ou four : lequel est le moins cher ?",
     frage: "Friteuse sans huile ou four : lequel est le moins cher ?",
-    seitenTitel: "Friteuse sans huile ou four : lequel est le moins cher ?",
+    seitenTitel: "Friteuse sans huile ou four : lequel est moins cher ?",
     beschreibung: "Combien d’électricité une friteuse sans huile et un four consomment par plat, ce que cela représente en centimes et quand le four fait jeu égal.",
     kurzantwort: "Pour de petites quantités, la friteuse sans huile est moins chère : dans les tests, elle consomme souvent seulement la moitié de l’électricité par plat, voire moins. À 37 centimes le kWh, vous économisez ainsi environ 13 à 33 centimes par plat. Si une grande quantité demande plusieurs fournées, le four fait aussi bien, voire coûte moins cher.",
     abschnitte: [
@@ -208,7 +208,7 @@ const RATGEBER = [
     titel: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
     frage: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
     seitenTitel: "Robot aspirateur et animaux : qu’est-ce qui compte ?",
-    beschreibung: "La brosse, la station et la caméra dont un robot aspirateur laveur a besoin avec un chien ou un chat, comment votre animal s’y habitue et quand il ne vous convient pas.",
+    beschreibung: "La brosse, la station et la caméra dont un robot aspirateur laveur a besoin avec un chien ou un chat, et quand il ne vous convient pas.",
     kurzantwort: "Trois choses : une brosse autour de laquelle les poils s’enroulent à peine, une station qui le vide, et une caméra qui reconnaît le plus souvent les crottes de chien et les contourne. Dans l’appli, vous bloquez en plus la gamelle, la litière et le coin couchage. Avec un animal, il vaut particulièrement le coup : si vous passez l’aspirateur tous les jours à cause des poils, mon calculateur indique qu’il vous fait gagner environ deux heures par semaine sur 60 m².",
     abschnitte: [
       {
@@ -320,8 +320,8 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
     frage: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
-    seitenTitel: "Lavante-séchante ou lave-linge et sèche-linge : que choisir ?",
-    beschreibung: "Place, électricité, eau et temps comparés : quand une lavante-séchante convient mieux, quand un lave-linge et un sèche-linge à pompe à chaleur, et ce que cela représente par mois.",
+    seitenTitel: "Lavante-séchante ou lave-linge et sèche-linge ?",
+    beschreibung: "Place, électricité, eau et temps comparés : quand une lavante-séchante convient mieux, quand un lave-linge et un sèche-linge, et le coût par mois.",
     kurzantwort: "Si vous manquez de place, la lavante-séchante est le choix le plus pratique : un seul appareil, pas de linge à transvaser, dedans le matin et sec le soir. Si vous avez la place pour deux appareils et lavez beaucoup, un lave-linge et un sèche-linge à pompe à chaleur sont meilleurs. Ils sèchent plus de linge à la fois et consomment souvent moitié moins d’électricité pour le séchage, voire moins.",
     abschnitte: [
       {
@@ -410,8 +410,8 @@ const RATGEBER = [
     geprueft: "2026-11-04",
     titel: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
     frage: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
-    seitenTitel: "Les têtes thermostatiques connectées valent-elles le coup en location ?",
-    beschreibung: "Ce que vous économisez en tant que locataire avec des têtes thermostatiques connectées, ce qui en arrive sur votre décompte de chauffage, si vous avez le droit de les installer et quand elles rapportent moins.",
+    seitenTitel: "Têtes thermostatiques en location : ça vaut le coup ?",
+    beschreibung: "Ce que vous économisez en location avec des têtes thermostatiques connectées, ce qui arrive sur votre décompte et si vous pouvez les installer.",
     kurzantwort: "Le plus souvent oui : vous les vissez sans artisan et les démontez en partant, et vous rentrez chaque jour dans un logement chaud. Avec un programme de chauffage, vous économisez en plus environ 10 pour cent d’énergie de chauffage. Avec un chauffage central, il en arrive le plus souvent la moitié à un peu plus des deux tiers sur votre décompte, car seule une partie des coûts est répartie selon la consommation.",
     abschnitte: [
       {
@@ -508,8 +508,8 @@ const RATGEBER = [
     weitereProdukte: ["akkusauger"],
     titel: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
     frage: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
-    seitenTitel: "Robot aspirateur ou aspirateur balai sans fil : lequel me convient ?",
-    beschreibung: "Ce qu’un robot aspirateur laveur et un aspirateur balai sans fil font chacun le mieux, combien de temps ils vous font gagner et pourquoi, dans beaucoup de logements, les deux ensemble conviennent le mieux.",
+    seitenTitel: "Robot aspirateur ou balai sans fil : lequel choisir ?",
+    beschreibung: "Ce que font le mieux un robot aspirateur laveur et un aspirateur balai, le temps gagné et pourquoi les deux ensemble conviennent souvent le mieux.",
     kurzantwort: "Un robot aspirateur laveur vous convient si vos sols doivent devenir propres sans vous, un aspirateur balai sans fil si vous voulez aspirer vite vous-même, y compris l’escalier, le canapé et la voiture. Selon mon calculateur, le robot vous fait gagner environ une heure par semaine sur 70 m² si vous passez sinon l’aspirateur deux fois et la serpillière une fois. Avec l’aspirateur balai, vous continuez à aspirer vous-même, simplement plus vite. Pour beaucoup de logements, les deux ensemble sont le plus pratique : le robot pour les sols et un aspirateur balai bon marché pour les endroits qu’il n’atteint pas.",
     abschnitte: [
       {
@@ -607,8 +607,8 @@ const RATGEBER = [
     weitereProdukte: ["saugroboter", "airfryer"],
     titel: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
     frage: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
-    seitenTitel: "Black Friday sur l’électroménager : comment reconnaître une vraie bonne affaire ?",
-    beschreibung: "Comment reconnaître les vraies bonnes affaires du Black Friday : historique des prix plutôt que prix conseillé, modèles de l’année précédente, lots, délai de livraison et retours en Allemagne, en Autriche, dans le reste de l’UE et en Suisse.",
+    seitenTitel: "Black Friday : comment repérer les vraies promos ?",
+    beschreibung: "Repérer les vraies promos du Black Friday : historique des prix plutôt que prix conseillé, anciens modèles, lots, livraison et retours en UE et en Suisse.",
     kurzantwort: "Une vraie bonne affaire se reconnaît à l’historique des prix : si le prix est nettement inférieur à ce que l’appareil a coûté ces derniers mois, c’en est une. Le prix barré seul en dit peu, surtout s’il s’agit du prix conseillé par le fabricant, que presque aucune boutique ne pratique. Vérifiez aussi la référence exacte du modèle, le délai de livraison et les conditions de retour. Beaucoup d’appareils sont tout aussi bon marché avant et après le Black Friday, vous pouvez donc comparer tranquillement.",
     abschnitte: [
       {
