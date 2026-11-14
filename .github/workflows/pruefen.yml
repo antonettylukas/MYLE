@@ -33,7 +33,7 @@ jobs:
       - name: Werkzeuge für die Qualitätsprüfung
         run: npm ci --no-audit --no-fund --prefix .github/pruefung
       - name: Qualität prüfen (Lighthouse und Barrierefreiheit)
-        run: node .github/pruefung/qualitaet.js --messen
+        run: node .github/pruefung/qualitaet.js
       - name: Online stellen (vorschau nach main)
         if: github.ref == 'refs/heads/vorschau'
         run: git push origin HEAD:main
