@@ -284,7 +284,7 @@ const RATGEBER = [
       { f: "Does the robot recognise dog poo?", a: "With a camera and AI usually yes, without a camera usually not. There's no guarantee, though, especially with runny things like vomit." },
       { f: "Will my dog or cat be afraid of the robot?", a: "Some pets are at first, even though it's quieter than a normal vacuum cleaner. With patience and in small steps, many get used to it." },
       { f: "Can it vacuum up cat litter?", a: "It can vacuum up loose, dry litter. Clumps and damp litter don't belong in the robot, though. So block off a small zone around the litter tray, and it won't go there at all." },
-      { f: "Does the robot help with a pet hair allergy?", a: "It can reduce the exposure because it vacuums regularly. Look for a genuine HEPA filter and a base station with a bag: then the fine dust stays in the device, and you hardly come into contact with it when changing the bag. It can't treat an allergy, though." },
+      { f: "What should I look for if I'm allergic to pet hair?", a: "A genuine HEPA filter and a base station with a bag: then the fine dust stays in the device, and you hardly come into contact with it when changing the bag. A robot vacuum can't treat an allergy, though. It's best to ask a doctor what helps." },
       { f: "How much suction power do I need for pet hair?", a: "The recommendations vary widely, from a few thousand to over 20,000 pascals. The test result on carpet is more reliable, because that's where the differences show. At least as important is a brush that hair doesn't wrap around in the first place." }
     ],
     quellen: [
@@ -294,7 +294,7 @@ const RATGEBER = [
       { name: "c't (heise): robot vacuums with obstacle detection test (December 2021)", text: "three robots with an AI camera always reliably avoided fake dog and cat poo" },
       { name: "Reviewed: iRobot Roomba j7+ versus Samsung Jetbot AI+ (June 2023)", text: "test with fake dog poo, the Roomba without a single mishap, the Jetbot briefly bumped one and then avoided it" },
       { name: "smarthomeassistent.de: does a robot vacuum recognise cat vomit? (May 2023)", text: "avoids fake poo, no guarantee with vomit, no known robot recognises flat, runny accidents, otherwise it spreads the mess around the home" },
-      { name: "smarthomeassistent.de: robot vacuums for pet hair (August 2026) and self-emptying station with or without dust bag (June 2023)", text: "you remove tangled hair by hand, a bag lasts one to several months, closes when taken out and helps allergy sufferers" },
+      { name: "smarthomeassistent.de: robot vacuums for pet hair (August 2026) and self-emptying station with or without dust bag (June 2023)", text: "you remove tangled hair by hand, a bag lasts one to several months and closes when taken out, so the dust stays inside" },
       { name: "netzwelt.de: robot vacuums for pet hair (February 2026)", text: "hair gets caught in bristles, rubber and anti-tangle brushes are better, without a station empty several times a day, bag after about two months, AI detection for pets that aren't house-trained, HEPA filter, run during walk time, no-go zones at the sleeping spot" },
       { name: "netzwelt.de: robot vacuums for carpets (February 2026)", text: "deep pile pushes even top models to their limits" },
       { name: "saugroboter-portal.de: which main brushes do robot vacuums have? (September 2026)", text: "long hair wraps around bristles faster, it gets caught much less on rubber brushes, the better choice with pets" },
@@ -343,7 +343,7 @@ const RATGEBER = [
         absaetze: [
           "Drying makes the biggest difference. A heat pump dryer usually uses about 1 to 2 kWh for a full load. A washer dryer without a heat pump uses just over 2 kWh, and that for only 6 kg. So for the same laundry the heat pump dryer often uses only half the electricity, or less.",
           "Many washer dryers also cool with tap water while drying. That's why they use more water than a washing machine and dryer together.",
-          "There are also washer dryers with a heat pump. They use less electricity and water, and at Stiftung Warentest one such model was the test winner in 2023."
+          "There are also washer dryers with a heat pump. They use less electricity and water, and in a Stiftung Warentest test of four machines, one such model was the test winner in 2023."
         ]
       },
       {
@@ -393,7 +393,7 @@ const RATGEBER = [
       { name: "co2online: electricity use of tumble dryers and washing machines (April 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "most economical heat pump dryers around 156 kWh a year at 7 kg, up to 80 % less electricity than a condenser dryer" },
       { name: "HEA (German association for efficient energy use): washer dryers", text: "cooling water 9 to 35 litres per drying cycle depending on the machine, only half to two thirds of the wash load can be dried, a full wash load needs up to two drying cycles, a heat pump saves electricity and cooling water" },
       { name: "Stiftung Warentest: washer dryers test (October 2023, updated August 2026)", text: "one programme took over nine hours, often cheaper to buy than two machines, running costs can eat that up over time" },
-      { name: "t-online (October 2023) and desired.de (February 2025) on the Stiftung Warentest washer dryer test (issue 11/2023)", text: "test winner AEG with heat pump, lowest electricity and water use, around €760 lower running costs over ten years than the Bosch and Siemens machines" },
+      { name: "t-online (October 2023) and desired.de (February 2025) on the Stiftung Warentest washer dryer test (issue 11/2023)", text: "four machines tested, test winner AEG with heat pump, lowest electricity and water use, around €760 lower running costs over ten years than the Bosch and Siemens machines" },
       { name: "Stiftung Warentest: tumble dryers test (September 2026)", text: "the heat pump cuts electricity use considerably, condenser and vented dryers are outdated power guzzlers" },
       { name: "Konsument (VKI): tumble dryer test (September 2026)", text: "heat pump dryers for 8 kg cotton cupboard-dry 0.90 to 1.82 kWh, programme time 136 to 192 minutes" },
       { name: "Which?: washer-dryer or washing machine and tumble dryer (October 2026)", text: "£216 a year in electricity for a washer dryer against £118 for a washing machine and heat pump dryer, 7.5 litres of water per kg when drying, most washer dryers dry worse than a tumble dryer" },

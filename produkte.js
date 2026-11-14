@@ -244,7 +244,7 @@ const PRODUKTE = [
           "Wischt mit einer Walze und löst angetrocknete Flecken mit Dampf, den er laut Hersteller auf 180 °C erhitzt",
           "Station wäscht die Walze mit 100 °C heißem Wasser. Laut Hersteller klettert er über Schwellen bis 5 cm, über zweistufige bis 10 cm"
         ],
-        fuer: "Für alle, die das Beste wollen, vor allem beim Saugen und bei der Navigation.",
+        fuer: "Für alle, denen starkes Saugen und eine sehr gute Navigation am wichtigsten sind.",
         hinweis: "Beim Wischen schneidet er im Test schwächer ab als der MOVA Z60 (Note 2,5 statt 1,0). Wenn dir vor allem das Wischen wichtig ist, lohnt sich der Aufpreis darum kaum.",
         link: amazon("dreame aqua20 pro ultra roller x complete"),
         alternativen: [
@@ -279,7 +279,7 @@ const PRODUKTE = [
           "Laut Hersteller fährt er einen Mopp bis zu 18 cm weit aus und schafft Doppelschwellen bis 10 cm. In Tests kletterte er über etwa 4 bis 5 cm hohe Schwellen",
           "Station wäscht die Mopps mit 100 °C heißem Wasser"
         ],
-        fuer: "Für alle, die bei Saugen und Wischen das Beste wollen und viele Ecken und Kanten haben.",
+        fuer: "Für alle, denen Saugen und Wischen gleich wichtig sind und die viele Ecken und Kanten haben.",
         hinweis: "Ab und zu leistet er sich kleinere Navigationspatzer.",
         link: amazon("dreame x60 pro ultra complete"),
         alternativen: [
@@ -305,7 +305,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Nach welchen Tests wählst du die Roboter aus?", a: "Bei Saug- und Wischrobotern verlasse ich mich auf die ausführlichen Tests von smarthomeassistent.de. Dort durchläuft jeder Roboter dieselben Prüfungen, von Teppich und Haaren bis zu Hindernissen und Türschwellen. Ich empfehle dir die Modelle, die dort in ihrer Preisklasse am besten abschneiden, und dazu kommt meine eigene Erfahrung aus 14 Jahren. Wird ein Roboter nach einem Update nochmal getestet, zum Beispiel weil die Navigation besser geworden ist, zählt für mich der neuere Test." },
-      { f: "Brauche ich die Wischfunktion?", a: "Bei viel Hartboden wie Fliesen, Laminat oder Parkett auf jeden Fall: Der Boden bleibt sauber, und du füllst nie wieder einen Eimer. Hast du vor allem Teppich, oder wischt du ohnehin gern selbst, reicht ein Roboter, der nur saugt. Der kostet oft nur die Hälfte." },
+      { f: "Brauche ich die Wischfunktion?", a: "Bei viel Hartboden wie Fliesen, Laminat oder Parkett auf jeden Fall: Der Boden bleibt sauber, und den Wischeimer brauchst du kaum noch. Hast du vor allem Teppich, oder wischt du ohnehin gern selbst, reicht ein Roboter, der nur saugt. Der kostet oft nur die Hälfte." },
       { f: "Wischwalze oder rotierende Mopps: Was ist besser?", a: "Beide können sehr gut wischen: Im Test bekommen der MOVA Z60 mit Walze und der MOVA V50 mit Mopps beim Wischen jeweils die Bestnote 1,0. Die Walze nimmt das Schmutzwasser sofort wieder auf und muss deshalb seltener zum Auswaschen zur Station. Die Mopps kommen besser an Kanten und in Ecken, verteilen Schmutzwasser aber eher. Hast du viele Ecken, Nischen und Möbelkanten, nimm Mopps. Hast du vor allem offene Flächen, passt eine Walze gut." },
       { f: "Bleibt er an Kabeln oder Socken hängen?", a: "Modelle mit Kamera erkennen Kabel, Socken und Schuhe meist und fahren drumherum, viele auch Haustiere. Günstige Modelle ohne Kamera fahren eher mal über ein Kabel oder bleiben hängen, dann räumst du vorher kurz auf. Einen Kabelsalat unterm Schreibtisch räumst du bei jedem Modell besser einmal auf." },
       { f: "Kann ich ihn starten, wenn ich nicht zu Hause bin?", a: "Ja, und genau das ist der Trick. In der App legst du einen Zeitplan an, zum Beispiel montags bis freitags um 9 Uhr. So mache ich es seit Jahren. Du kannst ihn aber auch unterwegs per Handy starten." },
@@ -424,7 +424,7 @@ const PRODUKTE = [
           "Trocknet mit Wärmepumpe und braucht so weniger Strom und Wasser",
           "Wäscht 9 kg und trocknet 6 kg am Stück",
           "Mit Dampfprogramm zum Auffrischen",
-          "Testsieger bei Stiftung Warentest (Note 2,0, Heft 11/2023)"
+          "Testsieger bei Stiftung Warentest unter vier Waschtrocknern (Note 2,0, Heft 11/2023)"
         ],
         fuer: "Für dich, wenn du viel wäschst und auf lange Sicht Strom sparen willst. Dafür zahlst du am Anfang deutlich mehr.",
         hinweis: "Waschen und Trocknen mit voller Ladung dauert fast 10 Stunden. Der Test ist schon von 2023.",
@@ -441,7 +441,7 @@ const PRODUKTE = [
       { f: "Braucht er einen besonderen Anschluss?", a: "Nein. Er braucht denselben Wasseranschluss, denselben Abfluss und dieselbe Steckdose wie eine Waschmaschine. Du stellst ihn also einfach an ihren Platz." }
     ],
     quellen: [
-      { name: "Stiftung Warentest: Waschtrockner im Test (Heft 11/2023)", text: "Testsieger AEG L9WEF80690 (Note 2,0), Preistipp Bosch WNG24440 (Note 2,1)" },
+      { name: "Stiftung Warentest: Waschtrockner im Test (Heft 11/2023)", text: "vier Waschtrockner, Testsieger AEG L9WEF80690 (Note 2,0), Preistipp Bosch WNG24440 (Note 2,1)" },
       { name: "ETM Testmagazin (Heft 10/2024)", text: "Hisense WD5S1045BW sehr gut, 93 von 100 Punkten" },
       { name: "Stiftung Warentest: Trockner mit Bügelhilfe (Juni 2007)", text: "Dampf spart rund die Hälfte der Bügelzeit" },
       { name: "Industrieverband Körperpflege- und Waschmittel (IKW): Zahlen zum Waschen in Deutschland", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "im Schnitt 90 Wäschen pro Person und Jahr, für den Rechner" },
@@ -462,7 +462,7 @@ const PRODUKTE = [
     symbol: "🍟",
     bild: "",
     kurz: "Eine Heißluftfritteuse mit zwei Körben. Bei mir hat sie vor allem die Pfanne ersetzt, oft auch den Backofen. In jedem Korb gart etwas anderes, mit eigener Temperatur und Zeit und fast ohne Öl. Und danach hast du quasi keinen Abwasch.",
-    warum: "Alles rein, Sync drücken, ab auf die Couch. Du stehst nicht mehr neben der Pfanne, denn das Gerät startet jeden Korb so, dass Hähnchen und Gemüse gleichzeitig fertig sind. Wenn es piept, ist das Essen fertig. Und es schmeckt sogar besser: Gemüse wird knackiger und kräftiger, Hähnchen jedes Mal zart. Hinterher sparst du dir den ganzen Abwasch von Pfannen und Töpfen, denn es brennt nichts an, und die Körbe kommen einfach in die Spülmaschine.",
+    warum: "Alles rein, Sync drücken, ab auf die Couch. Du stehst nicht mehr neben der Pfanne, denn das Gerät startet jeden Korb so, dass Hähnchen und Gemüse gleichzeitig fertig sind. Wenn es piept, ist das Essen fertig. Und mir schmeckt es sogar besser: Gemüse wird knackiger und kräftiger, Hähnchen schön zart. Hinterher sparst du dir den ganzen Abwasch von Pfannen und Töpfen, denn kaum etwas brennt an, und die Körbe kommen einfach in die Spülmaschine.",
     statt: "Statt Pfanne und Backofen",
     nutzen: "Ab auf die Couch, und danach fast kein Abwasch.",
     spart: ["muehe", "zeit", "geld"],
@@ -546,7 +546,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Ersetzt er wirklich die Pfanne?", a: "Bei mir ja: Seit ich meinen Airfryer habe, habe ich meine Pfannen nicht mehr benutzt. Hähnchen, Gemüse, Kartoffeln, Fisch oder Würstchen gelingen darin, ohne dass du am Herd stehst, und ohne Fettspritzer. Für Soßen, Rührei oder Pfannkuchen brauchst du weiter Herd und Pfanne." },
-      { f: "Wie viel Abwasch habe ich danach?", a: "Quasi keinen. Im Airfryer brennt nichts an. Die Körbe packst du einfach in die Spülmaschine oder wischst sie am Ende kurz mit einem feuchten Lappen aus. Den kompletten Abwasch von Pfannen und Töpfen sparst du dir." },
+      { f: "Wie viel Abwasch habe ich danach?", a: "Quasi keinen. Im Airfryer brennt kaum etwas an. Die Körbe packst du einfach in die Spülmaschine oder wischst sie am Ende kurz mit einem feuchten Lappen aus. Den kompletten Abwasch von Pfannen und Töpfen sparst du dir." },
       { f: "Schmeckt das wirklich besser als aus der Pfanne?", a: "Für mich ja: Gemüse wird knackiger und schmeckt intensiver, Hähnchen wird jedes Mal zart. Die heiße Luft strömt rund um das Essen. So bräunt es außen schnell und bleibt innen saftig, ohne im Fett zu liegen." },
       { f: "Was macht der Sync-Knopf genau?", a: "Du stellst für jeden Korb Temperatur und Zeit ein, zum Beispiel Hähnchen bei 200 °C für 25 Minuten und Gemüse bei 190 °C für 12 Minuten. Mit Sync startet der Korb mit der kürzeren Zeit selbstständig später. So sind beide gleichzeitig fertig, und nichts muss warmgehalten werden." },
       { f: "Bekomme ich eine Nachricht aufs Handy oder auf die Uhr?", a: "Aufs Handy ja, wenn das Gerät WLAN hat: Der TwinFry meldet sich zum Beispiel über die kostenlose App VeSync, sobald das Essen fertig ist. Wenn deine Smartwatch die Mitteilungen vom Handy anzeigt, siehst du die Nachricht meist auch dort. Geräte ohne WLAN piepen nur." },
@@ -639,7 +639,7 @@ const PRODUKTE = [
           "Merkt, wenn ein Fenster offen ist, und dreht dann runter",
           "Display am Gerät, die Batterien sind schon dabei"
         ],
-        fuer: "Für dich, wenn dein Router eine FRITZ!Box ist. Dann ist es die beste Wahl ohne extra Zentrale.",
+        fuer: "Für dich, wenn dein Router eine FRITZ!Box ist. Dann ist es mein Tipp ohne extra Zentrale.",
         hinweis: "Es funkt nicht über WLAN, sondern über DECT, wie ein schnurloses Telefon. Deshalb klappt es nur mit einer FRITZ!Box mit DECT, das haben die meisten. Früher hieß es FRITZ!DECT 302.",
         link: amazon("fritz smart thermo 302")
       },
@@ -653,7 +653,7 @@ const PRODUKTE = [
           "Die Batterien halten laut Hersteller bis zu zwei Jahre",
           "Funktioniert mit Alexa, Google und Apple Home"
         ],
-        fuer: "Für die meisten: Im Test ist es das beste Thermostat, und trotzdem ist es günstig.",
+        fuer: "Für die meisten: Bei smarthomeassistent.de liegt es auf Platz 1, und trotzdem ist es günstig.",
         hinweis: "Es braucht eine Zentrale: einen Aqara-Hub oder ein Gerät für Matter mit Thread, zum Beispiel einen HomePod mini oder einen Google Nest Hub (2. Generation). Über Matter hat es etwas weniger Funktionen als mit dem Aqara-Hub.",
         link: amazon("aqara w600 heizkörperthermostat")
       },
@@ -686,7 +686,7 @@ const PRODUKTE = [
         link: amazon("homematic ip evo heizkörperthermostat")
       }
     ],
-    ohneTeuer: { stufe: "Oberklasse", titel: "Lieber mit Zentrale", text: "Ein teureres Thermostat ohne Zentrale, das in Tests überzeugt und bei Amazon zu haben ist, habe ich nicht gefunden. Mit FRITZ!Box ist das FRITZ!-Modell schon die beste Wahl. Die Thermostate, die in Tests am besten abschneiden, brauchen eine Zentrale, schau dafür in die Gruppe „Mit Zentrale“." },
+    ohneTeuer: { stufe: "Oberklasse", titel: "Lieber mit Zentrale", text: "Ein teureres Thermostat ohne Zentrale, das in Tests überzeugt und bei Amazon zu haben ist, habe ich nicht gefunden. Mit FRITZ!Box ist das FRITZ!-Modell schon eine sehr gute Wahl. Die Thermostate, die in Tests am besten abschneiden, brauchen eine Zentrale, schau dafür in die Gruppe „Mit Zentrale“." },
     fragen: [
       { f: "Wie viel spare ich wirklich?", a: "Mit einem Heizplan rund 10 Prozent der Heizkosten, sagt co2online. Als Faustregel spart jedes Grad weniger rund 6 Prozent Heizenergie. Wie viel es bei dir ist, hängt davon ab, wie oft du weg bist und wie du bisher heizt. Stiftung Warentest (Heft 9/2023) rechnet für eine eher schlecht gedämmte Wohnung mit 70 m² mit rund 100 € im Jahr. Rechne es unten im Rechner für dich aus." },
       { f: "Mit oder ohne Zentrale: Was passt zu mir?", a: "Ohne Zentrale ist der einfachste Einstieg: auspacken, mit dem WLAN verbinden, fertig. Das passt, wenn du nur wenige Heizkörper steuern willst und es günstig sein soll. Mit Zentrale zahlst du einmal etwas mehr, bekommst aber die Thermostate, die in Tests am besten abschneiden. Außerdem kannst du später Fensterkontakte oder ein Wandthermostat dazunehmen. Das lohnt sich vor allem, wenn du die ganze Wohnung ausstatten willst. Hast du eine FRITZ!Box, nimm das FRITZ!-Modell: Dann ist dein Router schon die Zentrale." },
@@ -1302,7 +1302,7 @@ const PRODUKTE = [
       { f: "Wie leere ich den Staubbehälter?", a: "Über dem Mülleimer öffnest du den Behälter, dann fällt der Staub heraus. Dabei staubt es etwas. Wenn du eine Hausstauballergie hast, leere ihn am besten draußen oder lass das jemand anderen machen." },
       { f: "Schafft er Tierhaare?", a: "Nicht jeder gleich gut. Bei Stiftung Warentest entfernten der Bosch Unlimited 10, die beiden Miele-Modelle und der Rowenta X-Force Flex 13.60 Tierhaare zuverlässig, andere schwächelten dabei. Wickeln sich lange Haare um die Bürste, schneidest du sie auf und ziehst sie ab." },
       { f: "Gibt es auch welche, die gleich mitwischen?", a: "Ja, sogenannte Nass-Trocken-Sauger, zum Beispiel von Tineco oder Dreame. Sie saugen und wischen gleichzeitig und lohnen sich bei viel Hartboden. Wenn du aber gar nichts mehr selbst machen willst, schau dir den Saug- und Wischroboter an. Seit ich einen habe, sauge ich so gut wie nie mehr selbst." },
-      { f: "Wie lange hält so ein Gerät?", a: "Meist lässt zuerst der Akku nach, oft nach einigen Jahren. Achte deshalb darauf, dass du ihn wechseln kannst und es Ersatz-Akkus gibt. Bosch gibt beim Unlimited 10 sogar zehn Jahre Garantie auf den Motor." }
+      { f: "Wie lange hält so ein Gerät?", a: "Meist lässt zuerst der Akku nach, oft nach einigen Jahren. Achte deshalb darauf, dass du ihn wechseln kannst und es Ersatz-Akkus gibt. Bosch gibt beim Unlimited 10 sogar zehn Jahre Garantie auf den Motor, wenn du ihn in den ersten sechs Monaten nach dem Kauf bei Bosch registrierst." }
     ],
     quellen: [
       { name: "Stiftung Warentest: Akku-Staubsauger im Test (Heft 2/2026)", text: "Testsieger Bosch Unlimited 10 BTS1042WAC (Note 2,2), Tierhaare und Akkulaufzeit auf höchster Stufe, manche Geräte nur ausreichend oder mangelhaft" },
@@ -1311,7 +1311,7 @@ const PRODUKTE = [
       { name: "Weitere Tests", text: "unter anderem homeandsmart.de, TechRadar und ETM Testmagazin, zu Akkulaufzeit, Ladezeit und Staubbehälter" },
       { name: "SRF Kassensturz und Apotheken Umschau", text: "Staub beim Leeren, Tipp für Allergiker" },
       { name: "Statistisches Bundesamt: Wohnfläche nach Haushaltsgröße", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "Mikrozensus 2022, für die Durchschnittswerte im Rechner" },
-      { name: "Herstellerangaben", text: "Akkulaufzeit, Ladezeit und Wechselakkus der Modelle, zehn Jahre Garantie auf den Motor beim Bosch Unlimited 10" }
+      { name: "Herstellerangaben", text: "Akkulaufzeit, Ladezeit und Wechselakkus der Modelle, zehn Jahre Garantie auf den Motor beim Bosch Unlimited 10 nach Registrierung in den ersten sechs Monaten" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1380,7 +1380,7 @@ const PRODUKTE = [
           "Viele Programme für Reissorten, dazu Dämpfen, Schongaren und Backen",
           "Testsieger bei ETM Testmagazin (sehr gut, Heft 1/2024)"
         ],
-        fuer: "Für dich, wenn du sehr oft Reis isst und das Beste willst.",
+        fuer: "Für dich, wenn du sehr oft Reis isst und viele Programme willst, etwa zum Dämpfen und Backen.",
         hinweis: "Bei Stiftung Warentest war er nicht im Test. Laut ETM Testmagazin könnte er den Reis besser warm halten. Ehrlich gesagt langt für die meisten die Mittelklasse völlig aus.",
         link: amazon("yum asia bamboo reiskocher induktion")
       }
@@ -1428,8 +1428,8 @@ const PRODUKTE = [
       "Er kostet in der Anschaffung deutlich mehr als eine Kapselmaschine und braucht Platz: Die Geräte hier sind 20 bis 26 Zentimeter breit und 44 bis 47 Zentimeter tief"
     ],
     gruppen: [
-      { name: "Mit Milchkaraffe", text: "Du füllst Milch in eine Karaffe und steckst sie vorn an das Gerät. Danach stellst du die Karaffe mit der Restmilch in den Kühlschrank und spülst sie regelmäßig. Das Umfüllen und Spülen lohnt sich vor allem, wenn ihr viel Milchkaffee trinkt. Gute Geräte mit Karaffe gibt es schon um 400 Euro." },
-      { name: "Mit Milchschlauch", text: "Ein dünner Schlauch zieht die Milch direkt aus der Milchpackung oder aus einem Behälter neben dem Gerät. Du füllst nichts um und spülst keine Karaffe. Darum ist der Schlauch besser, wenn du nur ab und zu Milchkaffee trinkst. Nach Milchgetränken muss er aber durchgespült und regelmäßig gründlich gereinigt werden, sonst bilden sich Keime. Gute Geräte mit Schlauch sind teurer: Das günstigste hier kostet gut 500 Euro." }
+      { name: "Mit Milchkaraffe", text: "Du füllst Milch in eine Karaffe und steckst sie vorn an das Gerät. Danach stellst du die Karaffe mit der Restmilch in den Kühlschrank und spülst sie regelmäßig. Das Umfüllen und Spülen lohnt sich vor allem, wenn ihr viel Milchkaffee trinkt. Gute Geräte mit Karaffe gibt es schon in der günstigen Preisklasse." },
+      { name: "Mit Milchschlauch", text: "Ein dünner Schlauch zieht die Milch direkt aus der Milchpackung oder aus einem Behälter neben dem Gerät. Du füllst nichts um und spülst keine Karaffe. Darum ist der Schlauch besser, wenn du nur ab und zu Milchkaffee trinkst. Nach Milchgetränken muss er aber durchgespült und regelmäßig gründlich gereinigt werden, sonst bilden sich Keime. Gute Geräte mit Schlauch fangen preislich höher an als die mit Karaffe." }
     ],
     modelle: [
       {
@@ -1622,7 +1622,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Warum ist der Thermomix nicht dabei?", a: "Vorwerk verkauft den Thermomix nur selbst, über Beraterinnen und Berater und im eigenen Onlineshop. Bei Amazon gibt es ihn darum nicht. Gut ist er trotzdem: Bei Stiftung Warentest war der Thermomix TM7 gut (Heft 2/2026). Der Moulinex Companion XL kam bei Test-Achats insgesamt auf ein ähnliches Ergebnis." },
-      { f: "Und der Bosch Cookit, der Testsieger?", a: "Der Bosch Cookit war bei Stiftung Warentest Testsieger (gut, Note 2,0, Heft 1/2024). Bei Amazon gibt es ihn aber nicht, darum fehlt er hier." },
+      { f: "Und der Bosch Cookit?", a: "Der Bosch Cookit war 2023 bei Stiftung Warentest Testsieger (gut, Note 2,0, Heft 1/2024). Bei Amazon gibt es ihn aber nicht, darum fehlt er hier." },
       { f: "Was ist mit dem Monsieur Cuisine von Lidl?", a: "Den Monsieur Cuisine Smart verkauft Lidl selbst. Bei Stiftung Warentest war er befriedigend (Note 2,8, Heft 1/2024), bei Test-Achats ist er ein Preis-Leistungs-Tipp. Wenn du ihn bei Lidl bekommst, ist er eine günstige Alternative mit eingebauter Waage." },
       { f: "Kann ich darin anbraten?", a: "Nur bedingt. Röstaromen entstehen laut Stiftung Warentest erst ab 140 Grad. Der ClickChef schafft nur 120 Grad, damit wird nichts richtig braun. Für Steak, Schnitzel oder knusprige Zwiebeln nimmst du besser weiter die Pfanne." },
       { f: "Werden Zwiebeln zu Brei?", a: "Leicht, ja. Beim Zwiebelhacken patzten bei Stiftung Warentest fast alle Geräte (Heft 1/2024). Am besten zerkleinerst du Zwiebeln mit wenigen kurzen Stößen der Impuls- oder Turbotaste und schaust zwischendurch nach." },
@@ -1859,7 +1859,7 @@ const PRODUKTE = [
         name: "Bomann TSG 5702", preis: 239, preisText: "ca. 200 bis 300 €", empfohlen: true,
         punkte: [
           "Fünf-Liter-Tank: Du brauchst keinen Wasseranschluss, kannst ihn später aber an einen anschließen, die Schläuche liegen bei",
-          "Laut Hersteller das sparsamste Tankgerät, das ich gefunden habe: Energieklasse C und 4,2 Liter Wasser pro Spülgang",
+          "Das sparsamste Tankgerät, das ich gefunden habe: laut Hersteller Energieklasse C und 4,2 Liter Wasser pro Spülgang",
           "Drei Gedecke, nur 43 Zentimeter breit und 44 tief"
         ],
         fuer: "Für dich, wenn du keinen Wasseranschluss frei hast oder nichts anschließen willst.",
@@ -2162,7 +2162,7 @@ const PRODUKTE = [
     kurz: "Eine Zahnbürste mit Akku, deren Kopf sich selbstständig bewegt. Du führst sie nur von Zahn zu Zahn, und bei vielen Modellen sagt dir ein Timer, wann zwei Minuten um sind.",
     warum: "Selbst schrubben musst du nicht mehr: Die Bürste macht die Bewegung, und du hältst sie nur an die Zähne. Gute Modelle merken sogar, wenn du zu fest drückst. Und laut einer großen Auswertung von 51 Studien hast du nach mehr als drei Monaten im Schnitt etwa ein Fünftel weniger Zahnbelag als mit einer Handzahnbürste.",
     statt: "Statt Handzahnbürste",
-    nutzen: "Putzt gründlicher, du führst sie nur.",
+    nutzen: "Putzt im Schnitt gründlicher, du führst sie nur.",
     spart: ["muehe"],
     fokus: "muehe",
     muehe: { vorher: 3, nachher: 1 },
@@ -2237,7 +2237,7 @@ const PRODUKTE = [
           "Passt die Stärke beim Putzen selbst an deinen Druck an (SenseIQ)",
           "Mit App"
         ],
-        fuer: "Für dich, wenn du das Beste willst.",
+        fuer: "Für dich, wenn du Extras willst: Sie passt ihre Stärke deinem Druck an und hat eine App.",
         hinweis: "Der Test ist schon von 2021. Für die meisten langt die Mittelklasse völlig aus.",
         alternativen: [
           { name: "Philips Sonicare 7100", preis: 140, text: "Bei Stiftung Warentest gut (Note 1,8, Heft 12/2025) und günstiger als die Prestige.", link: amazon("philips sonicare 7100") }

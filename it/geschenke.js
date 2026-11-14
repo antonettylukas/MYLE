@@ -21,14 +21,14 @@ const GESCHENKE = {
       produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Per gli amanti del caffè e delle cose buone", text: "Per chi ama concedersi qualcosa: un buon caffè, pane appena sfornato e un libro la sera.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
-    { titel: "Per chi non ama pulire", text: "Il mio consiglio più importante è qui in cima. Dopo, passare l’aspirapolvere non è più un pensiero per la maggior parte delle persone.",
+    { titel: "Per chi non ama pulire", text: "Il mio consiglio più importante è qui in cima. Dopo, passare l’aspirapolvere non è quasi più un pensiero per la maggior parte delle persone.",
       produkte: ["saugroboter", "akkusauger"] },
     { titel: "Piccoli regali", text: "Aiutanti economici che però servono ogni giorno. Perfetti per il Babbo Natale segreto o come pensierino.",
       produkte: ["stretchdeckel", "reinigungsbuerste", "sparduschkopf", "zahnbuerste"] }
   ],
   warum: {
     "airfryer": "Croccante senza lungo preriscaldamento e quasi niente piatti da lavare. Sta anche in una cucina piccola.",
-    "reiskocher": "Il riso riesce ogni volta, e nessuno deve restare accanto ai fornelli.",
+    "reiskocher": "Il riso riesce quasi sempre, e nessuno deve restare accanto ai fornelli.",
     "smarte-lampen": "Luce tramite app o programmazione, senza elettricista. Le lampadine si avvitano semplicemente nel portalampada esistente.",
     "wassersprudler": "Acqua frizzante direttamente dal rubinetto. Mai più casse d’acqua da portare.",
     "waschtrockner": "Bucato dentro la mattina, asciutto la sera. Niente più stendino in salotto.",
@@ -42,7 +42,7 @@ const GESCHENKE = {
     "stretchdeckel": "Si adatta a ciotole, barattoli, vasetti e perfino a mezza cipolla, e sostituisce la pellicola.",
     "reinigungsbuerste": "Strofina vasca, piastrelle e lavandino mentre stai in piedi dritto.",
     "sparduschkopf": "Fa risparmiare acqua calda a ogni doccia, e quindi soldi, senza fare la doccia più corta.",
-    "zahnbuerste": "Pulisce più a fondo di uno spazzolino manuale. Basta guidarlo."
+    "zahnbuerste": "In media pulisce più a fondo di uno spazzolino manuale. Basta guidarlo."
   },
   fragenTitel: "Domande e risposte",
   fragen: [

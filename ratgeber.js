@@ -364,7 +364,7 @@ const RATGEBER = [
       { f: "Erkennt der Roboter Hundekot?", a: "Mit Kamera und KI meist ja, ohne Kamera in der Regel nicht. Eine Garantie gibt es aber nicht, vor allem bei Flüssigem wie Erbrochenem." },
       { f: "Hat mein Hund oder meine Katze Angst vor dem Roboter?", a: "Manche Tiere anfangs schon, auch wenn er leiser ist als ein normaler Staubsauger. Mit Geduld und in kleinen Schritten gewöhnen sich viele daran." },
       { f: "Kann er Katzenstreu aufsaugen?", a: "Lose, trockene Streu kann er aufsaugen. Klumpen und feuchte Streu gehören aber nicht in den Roboter. Sperr darum eine kleine Zone ums Katzenklo, dann fährt er dort gar nicht erst hin." },
-      { f: "Hilft der Roboter bei einer Tierhaarallergie?", a: "Er kann die Belastung senken, weil er regelmäßig saugt. Achte auf einen echten HEPA-Filter und eine Station mit Beutel: Dann bleibt der feine Staub im Gerät, und beim Wechseln kommst du mit ihm kaum in Berührung. Behandeln kann er eine Allergie aber nicht." },
+      { f: "Worauf achte ich, wenn ich auf Tierhaare allergisch bin?", a: "Auf einen echten HEPA-Filter und eine Station mit Beutel: Dann bleibt der feine Staub im Gerät, und beim Wechseln kommst du mit ihm kaum in Berührung. Eine Allergie behandeln kann ein Saugroboter aber nicht. Was dagegen hilft, lässt du am besten ärztlich abklären." },
       { f: "Wie viel Saugkraft brauche ich für Tierhaare?", a: "Die Empfehlungen gehen weit auseinander, von ein paar tausend bis über 20.000 Pascal. Verlässlicher ist das Testergebnis auf Teppich, denn dort zeigen sich die Unterschiede. Mindestens genauso wichtig ist eine Bürste, um die sich Haare gar nicht erst wickeln." }
     ],
     quellen: [
@@ -374,7 +374,7 @@ const RATGEBER = [
       { name: "c't (heise): Saugroboter mit Hinderniserkennung im Test (Dezember 2021)", text: "drei Roboter mit KI-Kamera umfuhren Attrappen von Hunde- und Katzenkot stets sicher" },
       { name: "Reviewed: iRobot Roomba j7+ gegen Samsung Jetbot AI+ (Juni 2023)", text: "Test mit nachgebauten Hundehaufen, der Roomba ohne eine Panne, der Jetbot stieß einen Haufen kurz an und wich dann aus" },
       { name: "smarthomeassistent.de: Erkennt ein Saugroboter Katzenkotze? (Mai 2023)", text: "Kot-Attrappen umfahren, keine Garantie bei Erbrochenem, flaches, flüssiges erkennt kein bekannter Roboter, sonst verteilt er das Malheur in der Wohnung" },
-      { name: "smarthomeassistent.de: Saugroboter für Tierhaare (August 2026) und Absaugstation mit oder ohne Staubbeutel (Juni 2023)", text: "verhedderte Haare entfernst du von Hand, ein Beutel hält einen bis mehrere Monate, schließt sich beim Herausnehmen und hilft Allergikern" },
+      { name: "smarthomeassistent.de: Saugroboter für Tierhaare (August 2026) und Absaugstation mit oder ohne Staubbeutel (Juni 2023)", text: "verhedderte Haare entfernst du von Hand, ein Beutel hält einen bis mehrere Monate und schließt sich beim Herausnehmen, so bleibt der Staub drin" },
       { name: "netzwelt.de: Saugroboter für Tierhaare (Februar 2026)", text: "in Borsten verfangen sich Haare, Gummibürsten und Bürsten gegen Verheddern sind besser, ohne Station mehrfach täglich leeren, Beutel nach etwa zwei Monaten, KI-Erkennung für Tiere, die nicht stubenrein sind, HEPA-Filter, Lauf in der Gassizeit, Sperrzonen am Schlafplatz" },
       { name: "netzwelt.de: Saugroboter für Teppiche (Februar 2026)", text: "Hochflor bringt selbst Oberklasse-Modelle an ihre Grenzen" },
       { name: "saugroboter-portal.de: Welche Hauptbürsten gibt es bei Saugrobotern? (September 2026)", text: "um Borsten wickeln sich lange Haare schneller, an Gummibürsten verfangen sie sich deutlich weniger, mit Tieren die bessere Wahl" },
@@ -423,7 +423,7 @@ const RATGEBER = [
         absaetze: [
           "Den größten Unterschied macht das Trocknen. Ein Wärmepumpentrockner braucht für eine volle Ladung meist etwa 1 bis 2 kWh. Ein Waschtrockner ohne Wärmepumpe braucht gut 2 kWh, und das für nur 6 kg. Für dieselbe Wäsche braucht der Wärmepumpentrockner darum oft nur die Hälfte des Stroms oder weniger.",
           "Viele Waschtrockner kühlen beim Trocknen außerdem mit Leitungswasser. Deshalb brauchen sie mehr Wasser als Waschmaschine und Trockner zusammen.",
-          "Es gibt auch Waschtrockner mit Wärmepumpe. Sie brauchen weniger Strom und Wasser, und bei Stiftung Warentest war 2023 ein solches Modell Testsieger."
+          "Es gibt auch Waschtrockner mit Wärmepumpe. Sie brauchen weniger Strom und Wasser, und im Test von Stiftung Warentest mit vier Geräten war 2023 ein solches Modell Testsieger."
         ]
       },
       {
@@ -473,7 +473,7 @@ const RATGEBER = [
       { name: "co2online: Stromverbrauch von Trockner und Waschmaschine (April 2023)", url: "https://www.co2online.de/energie-sparen/strom-sparen/strom-sparen-stromspartipps/waschmaschine-trockner/", text: "sparsamste Wärmepumpentrockner um 156 kWh im Jahr bei 7 kg, bis zu 80 % weniger Strom als ein Kondenstrockner" },
       { name: "HEA (Fachgemeinschaft für effiziente Energieanwendung): Waschtrockner", text: "Kühlwasser je nach Gerät 9 bis 35 Liter pro Trockengang, zum Trocknen nur die Hälfte bis zwei Drittel der Waschladung, eine volle Waschladung braucht bis zu zwei Trockengänge, Wärmepumpe spart Strom und Kühlwasser" },
       { name: "Stiftung Warentest: Waschtrockner im Test (Oktober 2023, aktualisiert August 2026)", text: "ein Programm dauerte über neun Stunden, in der Anschaffung oft günstiger als zwei Geräte, die Betriebskosten können das mit der Zeit aufzehren" },
-      { name: "t-online (Oktober 2023) und desired.de (Februar 2025) zum Waschtrockner-Test von Stiftung Warentest (Heft 11/2023)", text: "Testsieger AEG mit Wärmepumpe, niedrigster Strom- und Wasserverbrauch, rund 760 € weniger Betriebskosten in zehn Jahren als die Geräte von Bosch und Siemens" },
+      { name: "t-online (Oktober 2023) und desired.de (Februar 2025) zum Waschtrockner-Test von Stiftung Warentest (Heft 11/2023)", text: "vier Geräte im Test, Testsieger AEG mit Wärmepumpe, niedrigster Strom- und Wasserverbrauch, rund 760 € weniger Betriebskosten in zehn Jahren als die Geräte von Bosch und Siemens" },
       { name: "Stiftung Warentest: Wäschetrockner im Test (September 2026)", text: "die Wärmepumpe senkt den Stromverbrauch erheblich, Kondens- und Ablufttrockner sind überholte Stromfresser" },
       { name: "Konsument (VKI): Wäschetrockner-Test (September 2026)", text: "Wärmepumpentrockner für 8 kg Baumwolle schranktrocken 0,90 bis 1,82 kWh, Programmdauer 136 bis 192 Minuten" },
       { name: "Which?: Washer-dryer or washing machine and tumble dryer (Oktober 2026)", text: "im Jahr 216 Pfund Strom für einen Waschtrockner gegen 118 Pfund für Waschmaschine und Wärmepumpentrockner, 7,5 Liter Wasser pro kg beim Trocknen, die meisten Waschtrockner trocknen schlechter als ein Trockner" },

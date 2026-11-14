@@ -25,14 +25,14 @@ const GESCHENKE = {
       produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Für Kaffeeliebhaber und Genießer", text: "Für alle, die sich gern etwas gönnen: guter Kaffee, frisch gebackenes Brot und ein Buch am Abend.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
-    { titel: "Für alle, die nicht gern putzen", text: "Mein wichtigster Tipp steht hier ganz oben. Danach ist Staubsaugen für die meisten kein Thema mehr.",
+    { titel: "Für alle, die nicht gern putzen", text: "Mein wichtigster Tipp steht hier ganz oben. Danach ist Staubsaugen für die meisten kaum noch ein Thema.",
       produkte: ["saugroboter", "akkusauger"] },
     { titel: "Kleine Geschenke", text: "Günstige Helfer, die trotzdem jeden Tag nützen. Gut zum Wichteln oder als Mitbringsel.",
       produkte: ["stretchdeckel", "reinigungsbuerste", "sparduschkopf", "zahnbuerste"] }
   ],
   warum: {
     "airfryer": "Knusprig ohne langes Vorheizen und quasi kein Abwasch. Passt auch in eine kleine Küche.",
-    "reiskocher": "Reis gelingt jedes Mal, und niemand muss am Herd danebenstehen.",
+    "reiskocher": "Reis gelingt fast immer, und niemand muss am Herd danebenstehen.",
     "smarte-lampen": "Licht per App oder Zeitplan, ganz ohne Elektriker. Die Lampen kommen einfach in die vorhandene Fassung.",
     "wassersprudler": "Sprudel direkt aus dem Wasserhahn. Nie mehr Wasserkästen schleppen.",
     "waschtrockner": "Morgens Wäsche rein, abends trocken raus. Kein Wäscheständer mehr im Wohnzimmer.",
@@ -46,7 +46,7 @@ const GESCHENKE = {
     "stretchdeckel": "Passt auf Schüsseln, Dosen, Gläser und sogar die halbe Zwiebel und ersetzt Frischhaltefolie.",
     "reinigungsbuerste": "Schrubbt Wanne, Fliesen und Waschbecken, und man steht dabei aufrecht.",
     "sparduschkopf": "Spart bei jeder Dusche warmes Wasser und damit Geld, ohne kürzer zu duschen.",
-    "zahnbuerste": "Putzt gründlicher als eine Handzahnbürste. Man führt sie nur."
+    "zahnbuerste": "Putzt im Schnitt gründlicher als eine Handzahnbürste. Man führt sie nur."
   },
   fragenTitel: "Fragen und Antworten",
   fragen: [

@@ -135,7 +135,7 @@ const PRODUKTE = [
           "According to the manufacturer it extends one mop pad up to 18 cm and handles double thresholds up to 10 cm. In tests it climbed thresholds about 4 to 5 cm high",
           "The base station washes the mop pads with 100 °C hot water"
         ],
-        fuer: "For anyone who wants the best at vacuuming and mopping and has lots of corners and edges.",
+        fuer: "For anyone who cares about vacuuming and mopping equally and has lots of corners and edges.",
         hinweis: "Now and then it makes small navigation slips.",
         link: amazon("dreame x60 pro ultra complete"),
         alternativen: [
@@ -149,7 +149,7 @@ const PRODUKTE = [
     ohneTeuer: { stufe: "Vacuum only", titel: "Not available right now", text: "My pick for vacuuming only, the Roborock Q10 S5+ with a base station that empties it, is not available on amazon.co.uk at the moment. As soon as it is, you'll find it here again." },
     fragen: [
       { f: "Which tests do you base your robot picks on?", a: "For robot vacuums and mops I rely on the detailed tests at smarthomeassistent.de. There every robot goes through the same trials, from carpet and hair to obstacles and door thresholds. Their grades work like German school grades: 1.0 is the best. I recommend the models that do best in their price range there, plus my own experience from 14 years. If a robot is tested again after an update, for example because its navigation has improved, the newer test is the one that counts for me." },
-      { f: "Do I need the mopping function?", a: "With lots of hard floors like tiles, laminate or parquet, definitely: the floor stays clean and you never fill a bucket again. If you mostly have carpet, or you like mopping yourself anyway, a robot that only vacuums is enough. That one often costs only half as much." },
+      { f: "Do I need the mopping function?", a: "With lots of hard floors like tiles, laminate or parquet, definitely: the floor stays clean and you'll hardly need the mop bucket. If you mostly have carpet, or you like mopping yourself anyway, a robot that only vacuums is enough. That one often costs only half as much." },
       { f: "Mop roller or rotating mops: which is better?", a: "Both can mop very well: at smarthomeassistent.de, for example, the MOVA Z60 with a roller and the Dreame L40s Pro Ultra with mop pads each get the top grade of 1.0 for mopping. The roller picks the dirty water straight back up, so it has to go back to the base station to be washed less often. The mop pads get into edges and corners better, but tend to spread dirty water around. If you have lots of corners, nooks and furniture edges, go for mop pads. If you mainly have open floor space, a roller is a good fit. Right now, though, I haven't found a roller model on amazon.co.uk that mops well in tests, so for now there isn't one on this page." },
       { f: "Does it get stuck on cables or socks?", a: "Models with a camera usually recognise cables, socks and shoes and drive around them, and many recognise pets too. Cheap models without a camera are more likely to run over a cable or get stuck, so you quickly tidy up first. A tangle of cables under the desk is best sorted out once, whatever the model." },
       { f: "Can I start it when I'm not at home?", a: "Yes, and that's exactly the trick. In the app you set up a schedule, for example Monday to Friday at 9 am. That's how I've been doing it for years. You can also start it from your phone when you're out." },
@@ -240,7 +240,7 @@ const PRODUKTE = [
     // („Currently unavailable“), den baugleichen grauen WNG254R1GB auch nicht. Haier HWD100-BD14979U1, Bosch WNG24442 und AEG L9WEF80690
     // gibt es dort gar nicht. Darum ist der Hisense die Empfehlung, und ohneTeuer nennt hier ausnahmsweise beide teureren Preisklassen.
     // Ist der WNG25401GB wieder lieferbar, kommt seine Karte zurück (verfuegbarkeit-12).
-    ohneTeuer: { stufe: "Pricier models", titel: "Not available right now", text: "Two pricier machines are not available on amazon.co.uk at the moment: the Bosch Serie 6 (WNG25401GB), whose German sister model WNG24440 was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023), and the test winner there, the AEG L9WEF80690 with a heat pump. As soon as one of them is, you'll find it here." },
+    ohneTeuer: { stufe: "Pricier models", titel: "Not available right now", text: "Two pricier machines are not available on amazon.co.uk at the moment: the Bosch Serie 6 (WNG25401GB), whose German sister model WNG24440 was the best-value tip at Stiftung Warentest, Germany's best-known consumer tester (grade 2.1, issue 11/2023), and the test winner among the four washer dryers tested there, the AEG L9WEF80690 with a heat pump. As soon as one of them is, you'll find it here." },
     fragen: [
       { f: "A washer dryer, or a separate washing machine and dryer?", a: "Two machines get more done at once: while the dryer is running, the washing machine is already washing the next load. But you need twice the space. A washer dryer fits where your washing machine is now, and you never have to move the wet laundry. That's exactly what makes it so convenient. If you wash several loads a day for a big family, two machines are the better choice." },
       { f: "How much laundry can it dry?", a: "Usually about 6 kg, even if it can wash 9 or 10 kg. 6 kg is, for example, around 40 T-shirts. If you want to wash and dry in one go, only put in as much as it can dry." },
@@ -251,7 +251,7 @@ const PRODUKTE = [
       { f: "Does it need a special connection?", a: "No. It needs the same water supply, the same drain and the same socket as a washing machine. So you simply put it in its place." }
     ],
     quellen: [
-      { name: "Stiftung Warentest: washer dryers test (issue 11/2023)", text: "test winner AEG L9WEF80690 (grade 2.0), best-value tip Bosch WNG24440 (grade 2.1), the German sister model of the WNG25401GB" },
+      { name: "Stiftung Warentest: washer dryers test (issue 11/2023)", text: "four washer dryers, test winner AEG L9WEF80690 (grade 2.0), best-value tip Bosch WNG24440 (grade 2.1), the German sister model of the WNG25401GB" },
       { name: "ETM Testmagazin (issue 10/2024)", text: "Hisense WD5S1045BW very good, 93 out of 100 points" },
       { name: "Stiftung Warentest: dryer with ironing aid (June 2007)", text: "steam saves around half of the ironing time" },
       { name: "German Cosmetic, Toiletry, Perfumery and Detergent Association (IKW): washing figures for Germany", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "about 90 washes per person a year, for the calculator (in German)" },
@@ -271,7 +271,7 @@ const PRODUKTE = [
     symbol: "🍟",
     bild: "",
     kurz: "A hot-air fryer with two baskets. For me it has mainly replaced the frying pan, and often the oven too. Each basket cooks something different, with its own temperature and time, almost without oil. And afterwards there's practically no washing-up.",
-    warum: "Everything in, press Sync, off to the sofa. You no longer stand next to the pan, because the machine starts each basket so that the chicken and the vegetables are ready at the same time. When it beeps, dinner is ready. And it even tastes better: vegetables come out crunchier and more flavourful, chicken tender every time. Afterwards you skip all the washing-up of pans and pots, because nothing burns on and the baskets simply go in the dishwasher.",
+    warum: "Everything in, press Sync, off to the sofa. You no longer stand next to the pan, because the machine starts each basket so that the chicken and the vegetables are ready at the same time. When it beeps, dinner is ready. And I think it even tastes better: vegetables come out crunchier and more flavourful, chicken nice and tender. Afterwards you skip all the washing-up of pans and pots, because hardly anything burns on and the baskets simply go in the dishwasher.",
     statt: "Instead of a frying pan and the oven",
     nutzen: "Off to the sofa, and almost no washing-up afterwards.",
     spart: ["muehe", "zeit", "geld"],
@@ -331,7 +331,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Does it really replace the frying pan?", a: "For me, yes: since I got my air fryer, I haven't used my frying pans. Chicken, vegetables, potatoes, fish or sausages turn out well in it without you standing at the hob, and without fat splatter. For sauces, scrambled eggs or pancakes you still need the hob and a pan." },
-      { f: "How much washing-up do I have afterwards?", a: "Practically none. Nothing burns on in an air fryer. You simply put the baskets in the dishwasher or give them a quick wipe with a damp cloth at the end. You skip all the washing-up of pans and pots." },
+      { f: "How much washing-up do I have afterwards?", a: "Practically none. Hardly anything burns on in an air fryer. You simply put the baskets in the dishwasher or give them a quick wipe with a damp cloth at the end. You skip all the washing-up of pans and pots." },
       { f: "Does it really taste better than from the pan?", a: "For me, yes: vegetables come out crunchier and taste more intense, chicken turns out tender every time. The hot air flows all around the food. So it browns quickly on the outside and stays juicy inside, without sitting in fat." },
       { f: "What exactly does the Sync button do?", a: "You set the temperature and time for each basket, for example chicken at 200 °C for 25 minutes and vegetables at 190 °C for 12 minutes. With Sync the basket with the shorter time starts later by itself. So both are ready at the same time, and nothing has to be kept warm." },
       { f: "Do I get a message on my phone or watch?", a: "On your phone, yes, if the device has Wi-Fi: then its app can send you a message, for example as soon as the food is ready. If your smartwatch shows your phone's notifications, you'll usually see the message there too. Devices without Wi-Fi just beep." },
@@ -423,7 +423,7 @@ const PRODUKTE = [
           "According to the manufacturer, the batteries last up to two years",
           "Works with Alexa, Google and Apple Home"
         ],
-        fuer: "For most people: it's the best thermostat in the test, and still cheap.",
+        fuer: "For most people: it's No. 1 at smarthomeassistent.de, and still cheap.",
         hinweis: "It needs a hub: an Aqara hub or a device for Matter over Thread, for example a HomePod mini or a Google Nest Hub (2nd gen). Via Matter it has slightly fewer features than with the Aqara hub.",
         link: amazon("aqara w600 heizkörperthermostat", "aqara w600 radiator thermostat")
       },
@@ -1127,7 +1127,7 @@ const PRODUKTE = [
           "Lots of programmes for types of rice, plus steaming, slow cooking and baking",
           "Test winner at ETM Testmagazin (very good, issue 1/2024)"
         ],
-        fuer: "For you if you eat rice very often and want the best.",
+        fuer: "For you if you eat rice very often and want lots of programmes, for example for steaming and baking.",
         hinweis: "Stiftung Warentest didn't test it. According to ETM Testmagazin, it could keep the rice warm better. Honestly, for most people the mid-range is more than enough.",
         link: amazon("yum asia bamboo reiskocher induktion", "yum asia bamboo induction rice cooker")
       }
@@ -1176,8 +1176,8 @@ const PRODUKTE = [
       "It costs much more to buy than a capsule machine and takes up space: the machines here are 20 to 24 centimetres wide and 44 to 47 centimetres deep"
     ],
     gruppen: [
-      { name: "With milk carafe", text: "You pour milk into a carafe and clip it onto the front of the machine. Afterwards you put the carafe with the leftover milk in the fridge and rinse it regularly. Pouring and rinsing are mainly worth it if you drink a lot of milk coffee. Good machines with a carafe start at around 400 euros." },
-      { name: "With milk tube", text: "A thin tube draws the milk straight from the milk carton or from a container next to the machine. You don't pour anything and don't rinse a carafe. That's why the tube is better if you only drink milk coffee now and then. But it has to be flushed after milk drinks and cleaned thoroughly on a regular basis, otherwise germs build up. Good machines with a tube cost more: the one here costs a little over 500 euros." }
+      { name: "With milk carafe", text: "You pour milk into a carafe and clip it onto the front of the machine. Afterwards you put the carafe with the leftover milk in the fridge and rinse it regularly. Pouring and rinsing are mainly worth it if you drink a lot of milk coffee. Good machines with a carafe are available even in the budget range." },
+      { name: "With milk tube", text: "A thin tube draws the milk straight from the milk carton or from a container next to the machine. You don't pour anything and don't rinse a carafe. That's why the tube is better if you only drink milk coffee now and then. But it has to be flushed after milk drinks and cleaned thoroughly on a regular basis, otherwise germs build up. Good machines with a tube start at a higher price than those with a carafe." }
     ],
     modelle: [
       {
@@ -1336,7 +1336,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Why isn't the Thermomix included?", a: "Vorwerk sells the Thermomix only itself, through its sales advisors and its own online shop. That's why it isn't on Amazon. It is good, though: at Stiftung Warentest the Thermomix TM7 was rated good (issue 2/2026). At Test-Achats the Moulinex Companion XL achieved a similar overall result." },
-      { f: "And the Bosch Cookit, the test winner?", a: "The Bosch Cookit was the test winner at Stiftung Warentest (good, grade 2.0, issue 1/2024). But it isn't available on Amazon, so it's missing here." },
+      { f: "And the Bosch Cookit?", a: "In 2023 the Bosch Cookit was the test winner at Stiftung Warentest (good, grade 2.0, issue 1/2024). But it isn't available on Amazon, so it's missing here." },
       { f: "What about Lidl's Monsieur Cuisine?", a: "Lidl sells the Monsieur Cuisine Smart itself. At Stiftung Warentest it was satisfactory (grade 2.8, issue 1/2024), and at Test-Achats it is a best value tip. If you can get it at Lidl, it's an affordable alternative with built-in scales." },
       { f: "Can I sear food in it?", a: "Only to a limited extent. According to Stiftung Warentest, roasted flavours only develop from 140 degrees. The ClickChef only reaches 120 degrees, so nothing really browns. For steak, schnitzel or crispy onions, you're better off sticking with the frying pan." },
       { f: "Do onions turn to mush?", a: "Easily, yes. At Stiftung Warentest almost all machines slipped up when chopping onions (issue 1/2024). It's best to chop onions with a few short presses of the pulse or turbo button and check in between." },
@@ -1530,7 +1530,7 @@ const PRODUKTE = [
         name: "Bomann TSG 5702", preis: 239, preisText: "ca. 200 bis 300 €", empfohlen: true,
         punkte: [
           "Five-litre tank: you don't need a water connection, but you can connect it to one later, the hoses are included",
-          "According to the manufacturer, the most economical tank machine I've found: energy class C and 4.2 litres of water per wash",
+          "The most economical tank machine I've found: according to the manufacturer, energy class C and 4.2 litres of water per wash",
           "Three place settings, only 43 centimetres wide and 44 deep"
         ],
         fuer: "If you have no free water connection or don't want to connect anything.",
@@ -1850,7 +1850,7 @@ const PRODUKTE = [
     kurz: "A rechargeable toothbrush whose head moves by itself. You just guide it from tooth to tooth, and on many models a timer tells you when two minutes are up.",
     warum: "You don't have to scrub yourself any more: the brush does the movement, and you just hold it against your teeth. Good models even notice when you press too hard. And according to a large review of 51 studies, after more than three months you have on average about a fifth less plaque than with a manual toothbrush.",
     statt: "Instead of a manual toothbrush",
-    nutzen: "Cleans more thoroughly, you just guide it.",
+    nutzen: "Cleans more thoroughly on average, you just guide it.",
     spart: ["muehe"],
     fokus: "muehe",
     muehe: { vorher: 3, nachher: 1 },
@@ -1928,7 +1928,7 @@ const PRODUKTE = [
           "Adjusts its strength to your pressure as you brush (SenseIQ)",
           "With an app"
         ],
-        fuer: "For you if you want the best.",
+        fuer: "For you if you want extras: it adapts its strength to your pressure and has an app.",
         hinweis: "The test dates from 2021. For most people the mid-range is more than enough.",
         alternativen: [
           { name: "Philips Sonicare 7100", preis: 140, text: "Rated good by Stiftung Warentest (grade 1.8, issue 12/2025) and cheaper than the Prestige.", link: amazon("philips sonicare 7100") }

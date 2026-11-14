@@ -21,14 +21,14 @@ const GESCHENKE = {
       produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "Pour les amateurs de café et les épicuriens", text: "Pour tous ceux qui aiment se faire plaisir : un bon café, du pain tout juste cuit et un livre le soir.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
-    { titel: "Pour tous ceux qui n’aiment pas faire le ménage", text: "Mon conseil le plus important est tout en haut. Ensuite, passer l’aspirateur n’est plus un sujet pour la plupart des gens.",
+    { titel: "Pour tous ceux qui n’aiment pas faire le ménage", text: "Mon conseil le plus important est tout en haut. Ensuite, passer l’aspirateur n’est presque plus un sujet pour la plupart des gens.",
       produkte: ["saugroboter", "akkusauger"] },
     { titel: "Petits cadeaux", text: "Des appareils bon marché qui servent pourtant tous les jours. Parfaits pour un échange de cadeaux ou comme petite attention.",
       produkte: ["stretchdeckel", "reinigungsbuerste", "sparduschkopf", "zahnbuerste"] }
   ],
   warum: {
     "airfryer": "Croustillant sans long préchauffage et quasiment pas de vaisselle. Il trouve aussi sa place dans une petite cuisine.",
-    "reiskocher": "Le riz est réussi à chaque fois, et personne n’a besoin de rester devant la plaque.",
+    "reiskocher": "Le riz est presque toujours réussi, et personne n’a besoin de rester devant la plaque.",
     "smarte-lampen": "La lumière par appli ou programme, sans électricien. Les ampoules se vissent simplement dans la douille existante.",
     "wassersprudler": "De l’eau pétillante directement du robinet. Fini les packs d’eau à porter.",
     "waschtrockner": "Le linge dedans le matin, sec le soir. Plus d’étendoir dans le salon.",
@@ -42,7 +42,7 @@ const GESCHENKE = {
     "stretchdeckel": "S’adapte aux saladiers, boîtes, bocaux et même à un demi-oignon, et remplace le film alimentaire.",
     "reinigungsbuerste": "Frotte la baignoire, le carrelage et le lavabo pendant que vous restez debout.",
     "sparduschkopf": "Économise de l’eau chaude à chaque douche, et donc de l’argent, sans se doucher moins longtemps.",
-    "zahnbuerste": "Nettoie plus en profondeur qu’une brosse à dents manuelle. Il suffit de la guider."
+    "zahnbuerste": "Nettoie en moyenne plus en profondeur qu’une brosse à dents manuelle. Il suffit de la guider."
   },
   fragenTitel: "Questions et réponses",
   fragen: [

@@ -112,7 +112,7 @@ const RECHNER = {
       return {
         minutenProWoche: w.putzen * w.dauer * 0.25,
         euroProMonat: 0,
-        extra: "And your back will thank you: with the long handle you clean standing up.",
+        extra: "And you don't have to bend down: with the long handle you clean standing up.",
         vorherTitel: "Sponge & cloth",
         vorher: [
           "Scrubbing the shower on your knees",

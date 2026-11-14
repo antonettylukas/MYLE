@@ -112,7 +112,7 @@ const RECHNER = {
       return {
         minutenProWoche: w.putzen * w.dauer * 0.25,
         euroProMonat: 0,
-        extra: "E la tua schiena ringrazia: con il manico lungo pulisci stando in piedi.",
+        extra: "E non devi piegarti: con il manico lungo pulisci stando in piedi.",
         vorherTitel: "Spugna e panno",
         vorher: [
           "Strofinare la doccia in ginocchio",

@@ -21,14 +21,14 @@ const GESCHENKE = {
       produkte: ["waschtrockner", "kuechenmaschine-kochfunktion"] },
     { titel: "For coffee lovers and people who enjoy the good things", text: "For everyone who likes to treat themselves: good coffee, freshly baked bread and a book in the evening.",
       produkte: ["kaffeevollautomat", "kuechenmaschine", "kindle"] },
-    { titel: "For everyone who doesn't like cleaning", text: "My top tip is right at the top here. After that, vacuuming is no longer an issue for most people.",
+    { titel: "For everyone who doesn't like cleaning", text: "My top tip is right at the top here. After that, vacuuming is hardly an issue any more for most people.",
       produkte: ["saugroboter", "akkusauger"] },
     { titel: "Small gifts", text: "Inexpensive helpers that are still useful every day. Good for Secret Santa or as a little present.",
       produkte: ["stretchdeckel", "reinigungsbuerste", "sparduschkopf", "zahnbuerste"] }
   ],
   warum: {
     "airfryer": "Crispy without long preheating and almost no washing-up. Fits in a small kitchen too.",
-    "reiskocher": "Rice turns out right every time, and nobody has to stand next to the hob.",
+    "reiskocher": "Rice almost always turns out right, and nobody has to stand next to the hob.",
     "smarte-lampen": "Light by app or schedule, without an electrician. The bulbs simply go into the existing fitting.",
     "wassersprudler": "Sparkling water straight from the tap. No more lugging bottles home.",
     "waschtrockner": "Laundry in in the morning, dry out in the evening. No more clothes horse in the living room.",
@@ -42,7 +42,7 @@ const GESCHENKE = {
     "stretchdeckel": "Fits over bowls, tins, jars and even half an onion, and replaces cling film.",
     "reinigungsbuerste": "Scrubs the bath, tiles and sink while you stand upright.",
     "sparduschkopf": "Saves hot water with every shower, and with it money, without showering for less time.",
-    "zahnbuerste": "Cleans more thoroughly than a manual toothbrush. You just guide it."
+    "zahnbuerste": "Cleans more thoroughly than a manual toothbrush on average. You just guide it."
   },
   fragenTitel: "Questions and answers",
   fragen: [

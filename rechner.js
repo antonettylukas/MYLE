@@ -126,7 +126,7 @@ const RECHNER = {
       return {
         minutenProWoche: w.putzen * w.dauer * 0.25,
         euroProMonat: 0,
-        extra: "Und dein Rücken freut sich: Mit dem langen Stiel putzt du im Stehen.",
+        extra: "Und du musst dich nicht bücken: Mit dem langen Stiel putzt du im Stehen.",
         vorherTitel: "Schwamm & Lappen",
         vorher: [
           "Auf Knien in der Dusche schrubben",

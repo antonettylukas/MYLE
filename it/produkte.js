@@ -194,14 +194,14 @@ const PRODUKTE = [
           "Secondo il produttore fa uscire un mop fino a 18 cm e supera soglie doppie fino a 10 cm. Nei test ha superato soglie alte circa 4-5 cm",
           "La base lava i mop con acqua a 100 °C"
         ],
-        fuer: "Per chi vuole il meglio nell’aspirazione e nel lavaggio e ha molti angoli e bordi.",
+        fuer: "Per chi tiene allo stesso modo all’aspirazione e al lavaggio e ha molti angoli e bordi.",
         hinweis: "Ogni tanto commette piccoli errori di navigazione.",
         link: amazon("dreame x60 pro ultra complete")
       }
     ],
     fragen: [
       { f: "In base a quali test scegli i robot?", a: "Per i robot aspirapolvere lavapavimenti mi baso sui test approfonditi di smarthomeassistent.de. Lì ogni robot affronta le stesse prove, da tappeti e capelli fino a ostacoli e soglie delle porte. I loro voti funzionano come i voti scolastici tedeschi: 1,0 è il migliore. Consiglio i modelli che lì ottengono i risultati migliori nella loro fascia di prezzo, e ci aggiungo la mia esperienza di 14 anni. Se un robot viene testato di nuovo dopo un aggiornamento, per esempio perché la navigazione è migliorata, per me conta il test più recente." },
-      { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e non riempi mai più un secchio. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basterebbe un robot che aspira e basta. Al momento però su amazon.it non ne trovo nessuno che convinca nei test. I robot lavapavimenti di questa pagina possono anche solo aspirare: basta impostarlo nell’app." },
+      { f: "Mi serve la funzione lavaggio?", a: "Con molti pavimenti duri come piastrelle, laminato o parquet, assolutamente sì: il pavimento resta pulito e il secchio non ti serve quasi più. Se hai soprattutto moquette, o ti piace comunque lavare da solo, basterebbe un robot che aspira e basta. Al momento però su amazon.it non ne trovo nessuno che convinca nei test. I robot lavapavimenti di questa pagina possono anche solo aspirare: basta impostarlo nell’app." },
       { f: "Rullo lavante o mop rotanti: cosa è meglio?", a: "Tutti e due possono lavare molto bene: nel test l’ECOVACS DEEBOT T90S PRO OMNI con rullo e il Dreame L40s Pro Ultra con mop prendono entrambi il voto migliore nel lavaggio, 1,0. Il rullo raccoglie subito l’acqua sporca e quindi deve tornare meno spesso alla base per essere lavato. I mop arrivano meglio lungo i bordi e negli angoli, ma tendono a spargere l’acqua sporca. Se hai molti angoli, nicchie e spigoli di mobili, prendi i mop. Se hai soprattutto superfici libere, un rullo va bene." },
       { f: "Si blocca su cavi o calzini?", a: "I modelli con telecamera di solito riconoscono cavi, calzini e scarpe e li aggirano, molti anche gli animali. I modelli economici senza telecamera passano più facilmente sopra un cavo o restano bloccati: in quel caso metti un attimo in ordine prima. Un groviglio di cavi sotto la scrivania conviene comunque sistemarlo una volta per tutte, con qualsiasi modello." },
       { f: "Posso avviarlo quando non sono a casa?", a: "Sì, ed è proprio questo il trucco. Nell’app crei una programmazione, per esempio dal lunedì al venerdì alle 9. Io faccio così da anni. Puoi anche avviarlo dal telefono quando sei fuori." },
@@ -314,7 +314,7 @@ const PRODUKTE = [
           "Asciuga con pompa di calore e così consuma meno corrente e acqua",
           "Lava 9 kg e asciuga 6 kg in un colpo solo",
           "Con programma a vapore per rinfrescare i capi",
-          "Vincitrice del test di Stiftung Warentest (voto 2,0, numero 11/2023)"
+          "Vincitrice del test di Stiftung Warentest su quattro lavasciuga (voto 2,0, numero 11/2023)"
         ],
         fuer: "Per te se fai molti bucati e vuoi risparmiare corrente nel lungo periodo. In cambio all’inizio paghi molto di più.",
         hinweis: "Lavare e asciugare un carico pieno richiede quasi 10 ore. Il test è già del 2023.",
@@ -331,7 +331,7 @@ const PRODUKTE = [
       { f: "Serve un allacciamento speciale?", a: "No. Le servono lo stesso attacco dell’acqua, lo stesso scarico e la stessa presa di una lavatrice. Quindi la metti semplicemente al suo posto." }
     ],
     quellen: [
-      { name: "Stiftung Warentest: test delle lavasciuga (numero 11/2023)", text: "vincitrice AEG L9WEF80690 (voto 2,0), consiglio qualità-prezzo Bosch WNG24440 (voto 2,1)" },
+      { name: "Stiftung Warentest: test delle lavasciuga (numero 11/2023)", text: "quattro lavasciuga, vincitrice AEG L9WEF80690 (voto 2,0), consiglio qualità-prezzo Bosch WNG24440 (voto 2,1)" },
       { name: "ETM Testmagazin (numero 10/2024)", text: "Hisense WD5S1045BW molto buona, 93 punti su 100" },
       { name: "Stiftung Warentest: asciugatrice con aiuto per lo stiro (giugno 2007)", text: "il vapore fa risparmiare circa metà del tempo di stiro" },
       { name: "Associazione tedesca dei produttori di cosmetici e detersivi (IKW): dati sul bucato in Germania", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "circa 90 lavaggi a persona all’anno, per il calcolatore (in tedesco)" },
@@ -351,7 +351,7 @@ const PRODUKTE = [
     symbol: "🍟",
     bild: "",
     kurz: "Una friggitrice ad aria con due cestelli. Da me ha sostituito soprattutto la padella e spesso anche il forno. In ogni cestello cuoce qualcosa di diverso, con temperatura e tempo propri, quasi senza olio. E dopo non hai praticamente niente da lavare.",
-    warum: "Tutto dentro, premi Sync, e via sul divano. Non stai più accanto alla padella, perché l’apparecchio avvia ogni cestello in modo che pollo e verdure siano pronti nello stesso momento. Quando suona, la cena è pronta. E viene persino più buono: le verdure restano più croccanti e saporite, il pollo è tenero ogni volta. Dopo ti risparmi tutte le padelle e le pentole da lavare, perché non si attacca niente e i cestelli vanno semplicemente in lavastoviglie.",
+    warum: "Tutto dentro, premi Sync, e via sul divano. Non stai più accanto alla padella, perché l’apparecchio avvia ogni cestello in modo che pollo e verdure siano pronti nello stesso momento. Quando suona, la cena è pronta. E secondo me viene persino più buono: le verdure restano più croccanti e saporite, il pollo viene bello tenero. Dopo ti risparmi tutte le padelle e le pentole da lavare, perché non si attacca quasi niente e i cestelli vanno semplicemente in lavastoviglie.",
     statt: "Invece di padella e forno",
     nutzen: "Via sul divano, e dopo quasi niente da lavare.",
     spart: ["muehe", "zeit", "geld"],
@@ -428,7 +428,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Sostituisce davvero la padella?", a: "Per me sì: da quando ho la mia friggitrice ad aria non ho più usato le padelle. Pollo, verdure, patate, pesce o salsicce vengono bene senza che tu stia ai fornelli, e senza schizzi di grasso. Per sughi, uova strapazzate o crêpe ti servono ancora fornello e padella." },
-      { f: "Quanti piatti devo lavare dopo?", a: "Praticamente nessuno. Nella friggitrice ad aria non si attacca niente. I cestelli li metti semplicemente in lavastoviglie o alla fine li passi velocemente con un panno umido. Tutte le padelle e le pentole da lavare te le risparmi." },
+      { f: "Quanti piatti devo lavare dopo?", a: "Praticamente nessuno. Nella friggitrice ad aria non si attacca quasi niente. I cestelli li metti semplicemente in lavastoviglie o alla fine li passi velocemente con un panno umido. Tutte le padelle e le pentole da lavare te le risparmi." },
       { f: "È davvero più buono che in padella?", a: "Per me sì: le verdure sono più croccanti e hanno più sapore, il pollo viene tenero ogni volta. L’aria calda circola tutto intorno al cibo. Così si dora in fretta fuori e resta succoso dentro, senza stare immerso nel grasso." },
       { f: "Cosa fa esattamente il tasto Sync?", a: "Imposti temperatura e tempo per ogni cestello, per esempio pollo a 200\u00a0°C per 25 minuti e verdure a 190\u00a0°C per 12 minuti. Con Sync il cestello con il tempo più breve parte da solo più tardi. Così sono pronti entrambi nello stesso momento, e non c’è niente da tenere in caldo." },
       { f: "Ricevo un messaggio sul telefono o sull’orologio?", a: "Sul telefono sì, se l’apparecchio ha il Wi-Fi: il TwinFry, per esempio, ti avvisa tramite l’app gratuita VeSync appena il cibo è pronto. Se il tuo smartwatch mostra le notifiche del telefono, di solito vedi il messaggio anche lì. Gli apparecchi senza Wi-Fi si limitano a suonare." },
@@ -520,7 +520,7 @@ const PRODUKTE = [
           "Secondo il produttore le batterie durano fino a due anni",
           "Funziona con Alexa, Google e Apple Home"
         ],
-        fuer: "Per la maggior parte delle persone: è la valvola migliore del test, e comunque economica.",
+        fuer: "Per la maggior parte delle persone: è la numero 1 su smarthomeassistent.de, e comunque economica.",
         hinweis: "Ha bisogno di una centralina: un hub Aqara o un apparecchio per Matter su Thread, per esempio un HomePod mini o un Google Nest Hub (2ª generazione). Con Matter ha un po’ meno funzioni che con l’hub Aqara.",
         link: amazon("aqara w600 heizkörperthermostat", "aqara w600 testa termostatica")
       },
@@ -1170,7 +1170,7 @@ const PRODUKTE = [
       { f: "Come svuoto il contenitore della polvere?", a: "Sopra il bidone apri il contenitore e la polvere cade fuori. Si alza un po’ di polvere. Se sei allergico alla polvere, svuotalo meglio all’aperto o lascia che lo faccia qualcun altro." },
       { f: "Se la cava con i peli di animali?", a: "Non tutti allo stesso modo. Per Stiftung Warentest il Bosch Unlimited 10, i due modelli Miele e il Rowenta X-Force Flex 13.60 hanno tolto i peli di animali in modo affidabile, altri hanno fatto più fatica. Se dei capelli lunghi si avvolgono intorno alla spazzola, li tagli e li togli." },
       { f: "Ce ne sono anche che lavano il pavimento?", a: "Sì, le cosiddette lavapavimenti senza fili, per esempio di Tineco o Dreame. Aspirano e lavano insieme e convengono con molti pavimenti duri. Ma se non vuoi più fare niente da solo, dai un’occhiata al robot aspirapolvere lavapavimenti. Da quando ne ho uno, non passo quasi mai l’aspirapolvere io." },
-      { f: "Quanto dura un apparecchio così?", a: "Di solito la prima a calare è la batteria, spesso dopo qualche anno. Controlla quindi che si possa cambiare e che esistano batterie di ricambio. Bosch dà addirittura dieci anni di garanzia sul motore dell’Unlimited 10." }
+      { f: "Quanto dura un apparecchio così?", a: "Di solito la prima a calare è la batteria, spesso dopo qualche anno. Controlla quindi che si possa cambiare e che esistano batterie di ricambio. Bosch dà addirittura dieci anni di garanzia sul motore dell’Unlimited 10, se lo registri su MyBosch entro sei mesi dall’acquisto." }
     ],
     quellen: [
       { name: "Stiftung Warentest: test degli aspirapolvere senza filo (numero 2/2026)", text: "Bosch Unlimited 10 BTS1042WAC vincitore (voto 2,2), peli di animali e autonomia alla potenza massima, alcuni apparecchi solo “sufficiente” o “insufficiente”" },
@@ -1179,7 +1179,7 @@ const PRODUKTE = [
       { name: "Altri test", text: "tra cui homeandsmart.de, TechRadar ed ETM Testmagazin, su autonomia, ricarica e contenitore della polvere" },
       { name: "SRF Kassensturz (televisione svizzera) e Apotheken Umschau (rivista tedesca di salute)", text: "polvere quando lo svuoti, consiglio per chi è allergico" },
       { name: "Ufficio federale di statistica tedesco (Destatis): superficie abitativa per numero di componenti della famiglia", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microcensimento 2022, per le medie del calcolatore (pagina in tedesco)" },
-      { name: "Dati dei produttori", text: "autonomia, tempi di ricarica e batteria estraibile, dieci anni di garanzia sul motore del Bosch Unlimited 10" }
+      { name: "Dati dei produttori", text: "autonomia, tempi di ricarica e batteria estraibile, dieci anni di garanzia sul motore del Bosch Unlimited 10 dopo la registrazione entro sei mesi" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1269,7 +1269,7 @@ const PRODUKTE = [
       "All’acquisto costa molto più di una macchina a capsule e occupa spazio: i modelli qui sono larghi da 24 a 26 centimetri e profondi da 44 a 47 centimetri"
     ],
     gruppen: [
-      { name: "Con caraffa per il latte", text: "Versi il latte in una caraffa e la agganci sul davanti della macchina. Dopo metti la caraffa con il latte rimasto in frigorifero e la sciacqui regolarmente. Travasare e sciacquare conviene soprattutto se bevete molto caffè con latte. Apparecchi buoni con caraffa si trovano già intorno ai 400 euro." },
+      { name: "Con caraffa per il latte", text: "Versi il latte in una caraffa e la agganci sul davanti della macchina. Dopo metti la caraffa con il latte rimasto in frigorifero e la sciacqui regolarmente. Travasare e sciacquare conviene soprattutto se bevete molto caffè con latte. Apparecchi buoni con caraffa si trovano già nella fascia economica." },
       { name: "Con tubo del latte", text: "Un tubo sottile aspira il latte direttamente dal cartone del latte o da un contenitore accanto alla macchina. Non travasi nulla e non sciacqui nessuna caraffa. Per questo il tubo è meglio se bevi caffè con latte solo ogni tanto. Però va risciacquato dopo le bevande con latte e pulito a fondo regolarmente, altrimenti si formano germi." }
     ],
     modelle: [
@@ -1424,7 +1424,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Perché il Bimby non c’è?", a: "Vorwerk vende il Bimby (in Germania si chiama Thermomix) solo direttamente, tramite i suoi incaricati e nel proprio negozio online. Per questo su Amazon non c’è. È comunque buono: per Stiftung Warentest il Bimby TM7 è stato “buono” (numero 2/2026). Il Moulinex Companion XL per Test-Achats ha ottenuto un risultato complessivo simile." },
-      { f: "E il Bosch Cookit, il vincitore del test?", a: "Il Bosch Cookit è stato il vincitore del test di Stiftung Warentest (buono, voto 2,0, numero 1/2024). Ma su Amazon non c’è, per questo qui manca." },
+      { f: "E il Bosch Cookit?", a: "Nel 2023 il Bosch Cookit è stato il vincitore del test di Stiftung Warentest (buono, voto 2,0, numero 1/2024). Ma su Amazon non c’è, per questo qui manca." },
       { f: "E il Monsieur Cuisine della Lidl?", a: "Il Monsieur Cuisine Smart lo vende la Lidl stessa. Per Stiftung Warentest è stato sufficiente (voto 2,8, numero 1/2024), e per Test-Achats è un consiglio qualità-prezzo. Se lo trovi alla Lidl, è un’alternativa economica con bilancia integrata." },
       { f: "Posso rosolare dentro?", a: "Solo in parte. Secondo Stiftung Warentest gli aromi di tostatura nascono solo da 140 gradi. Il ClickChef arriva solo a 120 gradi, e niente diventa davvero dorato. Per bistecca, cotoletta o cipolle croccanti è meglio continuare a usare la padella." },
       { f: "Le cipolle diventano una poltiglia?", a: "Facilmente, sì. Nel test di Stiftung Warentest quasi tutti gli apparecchi hanno sbagliato a tritare le cipolle (numero 1/2024). Il modo migliore è tritarle con pochi brevi colpi del tasto impulso o turbo e controllare ogni tanto." },
@@ -1931,7 +1931,7 @@ const PRODUKTE = [
     kurz: "Uno spazzolino a batteria la cui testina si muove da sola. Tu lo guidi solo da un dente all’altro, e in molti modelli un timer ti dice quando sono passati due minuti.",
     warum: "Non devi più strofinare tu: lo spazzolino fa il movimento, e tu lo tieni solo contro i denti. I modelli buoni si accorgono persino quando premi troppo. E secondo una grande analisi di 51 studi, dopo più di tre mesi hai in media circa un quinto di placca in meno che con uno spazzolino manuale.",
     statt: "Invece dello spazzolino manuale",
-    nutzen: "Pulisce più a fondo, tu lo guidi soltanto.",
+    nutzen: "In media pulisce più a fondo, tu lo guidi soltanto.",
     spart: ["muehe"],
     fokus: "muehe",
     muehe: { vorher: 3, nachher: 1 },
@@ -2006,7 +2006,7 @@ const PRODUKTE = [
           "Adatta da solo l’intensità alla tua pressione (SenseIQ)",
           "Con app"
         ],
-        fuer: "Per te se vuoi il meglio.",
+        fuer: "Per te se vuoi qualcosa in più: adatta l’intensità alla tua pressione e ha un’app.",
         hinweis: "Il test è già del 2021. Per la maggior parte delle persone la fascia media basta e avanza.",
         alternativen: [
           { name: "Philips Sonicare 7100", preis: 140, text: "“Buono” per Stiftung Warentest (voto 1,8, numero 12/2025) e più economico del Prestige.", link: amazon("philips sonicare 7100") }

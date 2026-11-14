@@ -113,7 +113,7 @@ const RECHNER = {
       return {
         minutenProWoche: w.putzen * w.dauer * 0.25,
         euroProMonat: 0,
-        extra: "Et votre dos vous dira merci\u202f: avec le long manche, vous nettoyez debout.",
+        extra: "Et vous n’avez pas besoin de vous pencher\u202f: avec le long manche, vous nettoyez debout.",
         vorherTitel: "Éponge et lavette",
         vorher: [
           "Frotter la douche à genoux",

@@ -197,14 +197,14 @@ const PRODUKTE = [
           "Selon le fabricant, il sort une lingette jusqu’à 18 cm et franchit des doubles seuils jusqu’à 10 cm. Dans les tests, il a franchi des seuils d’environ 4 à 5 cm",
           "La station lave les serpillières à l’eau à 100 °C"
         ],
-        fuer: "Pour tous ceux qui veulent le meilleur en aspiration et en lavage et ont beaucoup de coins et de bords.",
+        fuer: "Pour tous ceux pour qui l’aspiration et le lavage comptent autant et qui ont beaucoup de coins et de bords.",
         hinweis: "De temps en temps, il commet de petites erreurs de navigation.",
         link: amazon("dreame x60 pro ultra complete")
       }
     ],
     fragen: [
       { f: "Sur quels tests vous basez-vous pour choisir les robots\u202f?", a: "Pour les robots aspirateurs laveurs, je me fie aux tests détaillés de smarthomeassistent.de. Chaque robot y passe les mêmes épreuves, des tapis et cheveux jusqu’aux obstacles et seuils de porte. Leurs notes fonctionnent comme les notes scolaires allemandes : 1,0 est la meilleure. Je recommande les modèles qui s’en sortent le mieux dans leur gamme de prix, et j’y ajoute ma propre expérience de 14 ans. Si un robot est testé à nouveau après une mise à jour, par exemple parce que sa navigation s’est améliorée, c’est le test le plus récent qui compte pour moi." },
-      { f: "Ai-je besoin de la fonction lavage\u202f?", a: "Avec beaucoup de sols durs comme le carrelage, le stratifié ou le parquet, absolument\u202f: le sol reste propre et vous ne remplissez plus jamais de seau. Si vous avez surtout de la moquette, ou si vous aimez de toute façon laver le sol vous-même, un robot qui aspire seulement suffirait. Mais en ce moment, je n’en trouve aucun sur amazon.fr qui soit convaincant dans les tests. Les robots laveurs de cette page peuvent aussi seulement aspirer\u202f: il suffit de le régler dans l’appli." },
+      { f: "Ai-je besoin de la fonction lavage\u202f?", a: "Avec beaucoup de sols durs comme le carrelage, le stratifié ou le parquet, absolument\u202f: le sol reste propre et vous n’avez presque plus besoin du seau. Si vous avez surtout de la moquette, ou si vous aimez de toute façon laver le sol vous-même, un robot qui aspire seulement suffirait. Mais en ce moment, je n’en trouve aucun sur amazon.fr qui soit convaincant dans les tests. Les robots laveurs de cette page peuvent aussi seulement aspirer\u202f: il suffit de le régler dans l’appli." },
       { f: "Rouleau laveur ou serpillières rotatives\u202f: lequel est le meilleur\u202f?", a: "Les deux peuvent très bien laver : dans le test, le MOVA Z60 avec rouleau et le MOVA V50 avec serpillières obtiennent chacun la meilleure note pour le lavage, 1,0. Le rouleau récupère aussitôt l’eau sale et doit donc retourner moins souvent à la station pour être lavé. Les serpillières vont mieux le long des bords et dans les coins, mais ont tendance à étaler l’eau sale. Si vous avez beaucoup de coins, de recoins et de bords de meubles, prenez des serpillières. Si vous avez surtout des surfaces dégagées, un rouleau convient bien." },
       { f: "Se bloque-t-il sur les câbles ou les chaussettes\u202f?", a: "Les modèles avec caméra reconnaissent le plus souvent câbles, chaussettes et chaussures et les contournent, beaucoup aussi les animaux. Les modèles bon marché sans caméra roulent plus facilement sur un câble ou restent coincés : vous rangez alors rapidement avant. Un nœud de câbles sous le bureau, mieux vaut le ranger une fois pour toutes, quel que soit le modèle." },
       { f: "Puis-je le lancer quand je ne suis pas à la maison\u202f?", a: "Oui, et c’est justement l’astuce. Dans l’appli, vous créez un programme, par exemple du lundi au vendredi à 9 h. C’est comme ça que je fais depuis des années. Vous pouvez aussi le lancer à distance depuis votre téléphone." },
@@ -321,7 +321,7 @@ const PRODUKTE = [
           "Sèche avec une pompe à chaleur et consomme donc moins d’électricité et d’eau",
           "Lave 9 kg et sèche 6 kg d’une traite",
           "Avec programme vapeur pour rafraîchir le linge",
-          "Vainqueur du test chez Stiftung Warentest (note 2,0, numéro 11/2023)"
+          "Vainqueur du test chez Stiftung Warentest parmi quatre lavantes-séchantes (note 2,0, numéro 11/2023)"
         ],
         fuer: "Pour vous si vous lavez beaucoup et voulez économiser de l’électricité à long terme. En échange, vous payez nettement plus à l’achat.",
         hinweis: "Laver et sécher une pleine charge prend presque 10 heures. Le test date déjà de 2023.",
@@ -338,7 +338,7 @@ const PRODUKTE = [
       { f: "A-t-elle besoin d’un branchement spécial\u202f?", a: "Non. Elle a besoin de la même arrivée d’eau, de la même évacuation et de la même prise qu’un lave-linge. Vous la mettez donc simplement à sa place." }
     ],
     quellen: [
-      { name: "Stiftung Warentest\u202f: test des lavantes-séchantes (numéro 11/2023)", text: "vainqueur AEG L9WEF80690 (note 2,0), meilleur rapport qualité-prix Bosch WNG24440 (note 2,1)" },
+      { name: "Stiftung Warentest\u202f: test des lavantes-séchantes (numéro 11/2023)", text: "quatre lavantes-séchantes, vainqueur AEG L9WEF80690 (note 2,0), meilleur rapport qualité-prix Bosch WNG24440 (note 2,1)" },
       { name: "ETM Testmagazin (numéro 10/2024)", text: "Hisense WD5S1045BW très bon, 93 points sur 100" },
       { name: "Stiftung Warentest\u202f: sèche-linge avec aide au repassage (juin 2007)", text: "la vapeur fait gagner environ la moitié du temps de repassage" },
       { name: "Association allemande des fabricants de cosmétiques et de lessives (IKW)\u202f: chiffres de la lessive en Allemagne", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "environ 90 lessives par personne et par an, pour le calculateur (en allemand)" },
@@ -359,7 +359,7 @@ const PRODUKTE = [
     symbol: "🍟",
     bild: "",
     kurz: "Une friteuse à air chaud à deux paniers. Chez moi, elle a surtout remplacé la poêle, et souvent aussi le four. Dans chaque panier cuit autre chose, avec sa propre température et sa propre durée, presque sans huile. Et ensuite, vous n’avez quasiment pas de vaisselle.",
-    warum: "Tout dedans, appuyer sur Sync, direction le canapé. Vous ne restez plus à côté de la poêle, car l’appareil lance chaque panier de sorte que le poulet et les légumes soient prêts en même temps. Quand ça bipe, le repas est prêt. Et c’est même meilleur\u202f: les légumes sont plus croquants et plus savoureux, le poulet tendre à chaque fois. Ensuite, vous vous épargnez toute la vaisselle des poêles et casseroles, car rien n’attache et les paniers vont simplement au lave-vaisselle.",
+    warum: "Tout dedans, appuyer sur Sync, direction le canapé. Vous ne restez plus à côté de la poêle, car l’appareil lance chaque panier de sorte que le poulet et les légumes soient prêts en même temps. Quand ça bipe, le repas est prêt. Et je trouve même ça meilleur\u202f: les légumes sont plus croquants et plus savoureux, le poulet bien tendre. Ensuite, vous vous épargnez toute la vaisselle des poêles et casseroles, car presque rien n’attache et les paniers vont simplement au lave-vaisselle.",
     statt: "Au lieu de la poêle et du four",
     nutzen: "Direction le canapé, et presque pas de vaisselle après.",
     spart: ["muehe", "zeit", "geld"],
@@ -423,7 +423,7 @@ const PRODUKTE = [
     ohneTeuer: { stufe: "Haut de gamme", titel: "Pas disponible pour le moment", text: "La Cosori Turbo Tower Pro Smart, vainqueur du test parmi les appareils à deux paniers chez Stiftung Warentest (note 2,2, numéro 9/2026) et celle que j’utilise moi-même, est en rupture de stock sur amazon.fr. Dès qu’elle sera de nouveau disponible, vous la retrouverez ici." },
     fragen: [
       { f: "Remplace-t-elle vraiment la poêle\u202f?", a: "Chez moi, oui\u202f: depuis que j’ai ma friteuse sans huile, je ne me suis plus servi de mes poêles. Poulet, légumes, pommes de terre, poisson ou saucisses y réussissent sans que vous restiez aux fourneaux, et sans projections de graisse. Pour les sauces, les œufs brouillés ou les crêpes, il vous faut toujours la plaque et une poêle." },
-      { f: "Combien de vaisselle ai-je après\u202f?", a: "Quasiment pas. Dans une friteuse sans huile, rien n’attache. Vous mettez simplement les paniers au lave-vaisselle ou vous les essuyez rapidement à la fin avec un chiffon humide. Toute la vaisselle des poêles et casseroles, vous vous l’épargnez." },
+      { f: "Combien de vaisselle ai-je après\u202f?", a: "Quasiment pas. Dans une friteuse sans huile, presque rien n’attache. Vous mettez simplement les paniers au lave-vaisselle ou vous les essuyez rapidement à la fin avec un chiffon humide. Toute la vaisselle des poêles et casseroles, vous vous l’épargnez." },
       { f: "Est-ce vraiment meilleur qu’à la poêle\u202f?", a: "Pour moi, oui : les légumes sont plus croquants et plus savoureux, le poulet est tendre à chaque fois. L’air chaud circule tout autour des aliments. Ils dorent ainsi vite à l’extérieur et restent juteux à l’intérieur, sans baigner dans la graisse." },
       { f: "Que fait exactement le bouton Sync\u202f?", a: "Vous réglez la température et la durée de chaque panier, par exemple du poulet à 200\u00a0°C pendant 25 minutes et des légumes à 190\u00a0°C pendant 12 minutes. Avec Sync, le panier au temps le plus court démarre tout seul plus tard. Les deux sont ainsi prêts en même temps, et rien ne doit être gardé au chaud." },
       { f: "Est-ce que je reçois un message sur mon téléphone ou ma montre\u202f?", a: "Sur le téléphone oui, si l’appareil a le Wi-Fi : le TwinFry, par exemple, vous prévient via l’appli gratuite VeSync dès que le plat est prêt. Si votre montre connectée affiche les notifications du téléphone, vous voyez en général le message là aussi. Les appareils sans Wi-Fi se contentent de biper." },
@@ -516,7 +516,7 @@ const PRODUKTE = [
           "Selon le fabricant, les piles tiennent jusqu’à deux ans",
           "Fonctionne avec Alexa, Google et Apple Home"
         ],
-        fuer: "Pour la plupart des gens\u202f: c’est la meilleure tête du test, et pourtant elle n’est pas chère.",
+        fuer: "Pour la plupart des gens\u202f: elle est n°\u00a01 chez smarthomeassistent.de, et pourtant elle n’est pas chère.",
         hinweis: "Il a besoin d’une centrale\u202f: un hub Aqara ou un appareil compatible Matter via Thread, par exemple un HomePod mini ou un Google Nest Hub (2e génération). Via Matter, il offre un peu moins de fonctions qu’avec le hub Aqara.",
         link: amazon("aqara w600 heizkörperthermostat", "aqara w600 tête thermostatique")
       },
@@ -1156,7 +1156,7 @@ const PRODUKTE = [
       { f: "Comment vider le bac à poussière\u202f?", a: "Au-dessus de la poubelle, vous ouvrez le bac, et la poussière tombe. Cela fait un peu de poussière. Si vous êtes allergique à la poussière, videz-le de préférence dehors ou laissez quelqu’un d’autre le faire." },
       { f: "Vient-il à bout des poils d’animaux\u202f?", a: "Pas tous aussi bien. Chez Stiftung Warentest, le Bosch Unlimited 10, les deux modèles Miele et le Rowenta X-Force Flex 13.60 ont enlevé les poils d’animaux de façon fiable, d’autres avaient plus de mal. Si de longs cheveux s’enroulent autour de la brosse, vous les coupez et les retirez." },
       { f: "Y en a-t-il qui lavent le sol en même temps\u202f?", a: "Oui, les aspirateurs eau et poussière, par exemple de Tineco ou Dreame. Ils aspirent et lavent en même temps et valent le coup avec beaucoup de sols durs. Mais si vous ne voulez plus rien faire vous-même, regardez le robot aspirateur laveur. Depuis que j’en ai un, je n’aspire presque plus jamais moi-même." },
-      { f: "Combien de temps dure un tel appareil\u202f?", a: "En général, c’est la batterie qui faiblit en premier, souvent au bout de quelques années. Vérifiez donc que vous pouvez la changer et qu’il existe des batteries de rechange. Bosch donne même dix ans de garantie sur le moteur de l’Unlimited 10." }
+      { f: "Combien de temps dure un tel appareil\u202f?", a: "En général, c’est la batterie qui faiblit en premier, souvent au bout de quelques années. Vérifiez donc que vous pouvez la changer et qu’il existe des batteries de rechange. Bosch donne même dix ans de garantie sur le moteur de l’Unlimited 10, si vous l’enregistrez auprès de Bosch dans les six mois suivant l’achat." }
     ],
     quellen: [
       { name: "Stiftung Warentest\u202f: test des aspirateurs sans fil (numéro 2/2026)", text: "vainqueur Bosch Unlimited 10 BTS1042WAC (note 2,2), poils d’animaux et autonomie en puissance maximale, certains appareils seulement «\u202fpassable\u202f» ou «\u202finsuffisant\u202f»" },
@@ -1165,7 +1165,7 @@ const PRODUKTE = [
       { name: "Autres tests", text: "notamment homeandsmart.de, TechRadar et ETM Testmagazin, sur l’autonomie, la recharge et le bac à poussière" },
       { name: "SRF Kassensturz (télévision suisse) et Apotheken Umschau (magazine de santé allemand)", text: "poussière au vidage, conseil pour les personnes allergiques" },
       { name: "Office fédéral allemand de la statistique (Destatis)\u202f: surface habitable selon la taille du ménage", url: "https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/Tabellen/tabelle-wo4-wohnflaeche.html", text: "microrecensement 2022, pour les moyennes du calculateur (page en allemand)" },
-      { name: "Données des fabricants", text: "autonomie, temps de charge et batterie amovible, garantie de dix ans sur le moteur du Bosch Unlimited 10" }
+      { name: "Données des fabricants", text: "autonomie, temps de charge et batterie amovible, garantie de dix ans sur le moteur du Bosch Unlimited 10 après enregistrement dans les six mois" }
     ],
     rechner: "akkusauger",
     video: "akkusauger"
@@ -1255,7 +1255,7 @@ const PRODUKTE = [
       "Elle coûte nettement plus cher à l’achat qu’une machine à capsules et prend de la place : les modèles présentés font 24 à 26 centimètres de large et 44 à 45 centimètres de profondeur"
     ],
     gruppen: [
-      { name: "Avec carafe à lait", text: "Vous versez le lait dans une carafe et l’enclenchez à l’avant de la machine. Ensuite, vous mettez la carafe avec le reste de lait au réfrigérateur et la rincez régulièrement. Transvaser et rincer en vaut surtout la peine si vous buvez beaucoup de café au lait. On trouve de bons appareils avec carafe dès 400 euros environ." },
+      { name: "Avec carafe à lait", text: "Vous versez le lait dans une carafe et l’enclenchez à l’avant de la machine. Ensuite, vous mettez la carafe avec le reste de lait au réfrigérateur et la rincez régulièrement. Transvaser et rincer en vaut surtout la peine si vous buvez beaucoup de café au lait. On trouve de bons appareils avec carafe dès le petit budget." },
       { name: "Avec tube à lait", text: "Un tube fin aspire le lait directement dans la brique de lait ou dans un récipient posé à côté de la machine. Vous ne transvasez rien et n’avez pas de carafe à rincer. C’est pourquoi le tube est préférable si vous ne buvez du café au lait que de temps en temps. Il doit toutefois être rincé après les boissons lactées et nettoyé à fond régulièrement, sinon des germes se forment." }
     ],
     modelle: [
@@ -1400,7 +1400,7 @@ const PRODUKTE = [
     ],
     fragen: [
       { f: "Pourquoi le Thermomix n’est-il pas là ?", a: "Vorwerk vend le Thermomix uniquement lui-même, par ses conseillères et conseillers et dans sa propre boutique en ligne. C’est pourquoi il n’est pas sur Amazon. Il est pourtant bon : chez Stiftung Warentest, le Thermomix TM7 a obtenu « bon » (numéro 2/2026). Chez Test-Achats, le Moulinex Companion XL a obtenu un résultat global similaire." },
-      { f: "Et le Bosch Cookit, le vainqueur du test ?", a: "Le Bosch Cookit a été vainqueur du test chez Stiftung Warentest (bon, note 2,0, numéro 1/2024). Mais il n’est pas disponible sur Amazon, c’est pourquoi il manque ici." },
+      { f: "Et le Bosch Cookit ?", a: "En 2023, le Bosch Cookit a été vainqueur du test chez Stiftung Warentest (bon, note 2,0, numéro 1/2024). Mais il n’est pas disponible sur Amazon, c’est pourquoi il manque ici." },
       { f: "Et le Monsieur Cuisine de Lidl ?", a: "Lidl vend lui-même le Monsieur Cuisine Smart. Chez Stiftung Warentest, il a obtenu « satisfaisant » (note 2,8, numéro 1/2024), et chez Test-Achats c’est un bon rapport qualité-prix. Si vous le trouvez chez Lidl, c’est une alternative bon marché avec balance intégrée." },
       { f: "Peut-on y faire revenir des aliments ?", a: "Seulement en partie. Selon Stiftung Warentest, les arômes grillés n’apparaissent qu’à partir de 140 degrés. Le ClickChef n’atteint que 120 degrés, rien n’y dore vraiment. Pour un steak, une escalope ou des oignons croustillants, mieux vaut continuer à utiliser la poêle." },
       { f: "Les oignons tournent-ils en bouillie ?", a: "Facilement, oui. Chez Stiftung Warentest, presque tous les appareils ont raté le hachage des oignons (numéro 1/2024). Le mieux est de hacher les oignons en quelques brèves pressions sur la touche impulsion ou turbo et de vérifier entre-temps." },
@@ -1603,7 +1603,7 @@ const PRODUKTE = [
         name: "Bomann TSG 5702", preis: 270, preisText: "ca. 200 bis 300 €", empfohlen: true,
         punkte: [
           "Réservoir de cinq litres : pas besoin de raccordement à l’eau, mais vous pouvez le raccorder plus tard, les tuyaux sont fournis",
-          "Selon le fabricant, l’appareil à réservoir le plus économe que j’ai trouvé : classe énergétique C et 4,2 litres d’eau par lavage",
+          "L’appareil à réservoir le plus économe que j’ai trouvé : selon le fabricant, classe énergétique C et 4,2 litres d’eau par lavage",
           "Trois couverts, seulement 43 centimètres de large et 44 de profondeur"
         ],
         fuer: "Si vous n’avez pas d’arrivée d’eau libre ou ne voulez rien raccorder.",
@@ -1907,7 +1907,7 @@ const PRODUKTE = [
     kurz: "Une brosse à dents à batterie dont la tête bouge toute seule. Vous la guidez simplement de dent en dent, et sur beaucoup de modèles un minuteur vous indique quand les deux minutes sont écoulées.",
     warum: "Vous n’avez plus à frotter vous-même : la brosse fait le mouvement, et vous la tenez simplement contre les dents. Les bons modèles remarquent même quand vous appuyez trop fort. Et selon une grande synthèse de 51 études, après plus de trois mois vous avez en moyenne environ un cinquième de plaque dentaire en moins qu’avec une brosse manuelle.",
     statt: "Au lieu d’une brosse à dents manuelle",
-    nutzen: "Nettoie plus à fond, vous la guidez simplement.",
+    nutzen: "Nettoie en moyenne plus à fond, vous la guidez simplement.",
     spart: ["muehe"],
     fokus: "muehe",
     muehe: { vorher: 3, nachher: 1 },
@@ -1984,7 +1984,7 @@ const PRODUKTE = [
           "Adapte elle-même son intensité à votre pression (SenseIQ)",
           "Avec appli"
         ],
-        fuer: "Pour vous si vous voulez le meilleur.",
+        fuer: "Pour vous si vous voulez des extras : elle adapte son intensité à votre pression et a une appli.",
         hinweis: "Le test date déjà de 2021. Pour la plupart, le milieu de gamme suffit largement.",
         alternativen: [
           { name: "Philips Sonicare 7100", preis: 140, text: "« Bien » chez Stiftung Warentest (note 1,8, numéro 12/2025) et moins chère que la Prestige.", link: amazon("philips sonicare 7100") }
