@@ -1,0 +1,10 @@
+{
+  "name": "myle-pruefung",
+  "private": true,
+  "description": "Werkzeuge für die Qualitätsprüfung (qualitaet.js): Lighthouse und axe-core im Browser",
+  "dependencies": {
+    "axe-core": "4.14.0",
+    "lighthouse": "12.8.2",
+    "puppeteer-core": "24.43.1"
+  }
+}

@@ -16,13 +16,24 @@ concurrency:
 jobs:
   pruefen:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Website prüfen
         run: python3 .github/pruefung/pruefe.py
+      # Lighthouse (Handy) für eine Auswahl von Seiten und axe-core (Kontrast, Knopfgröße, Beschriftungen) für alle
+      # Seiten in hell und dunkel. Schwelle: jede Lighthouse-Wertung mindestens 90 und kein axe-Verstoß.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .github/pruefung/package-lock.json
+      - name: Werkzeuge für die Qualitätsprüfung
+        run: npm ci --no-audit --no-fund --prefix .github/pruefung
+      - name: Qualität prüfen (Lighthouse und Barrierefreiheit)
+        run: node .github/pruefung/qualitaet.js --messen
       - name: Online stellen (vorschau nach main)
         if: github.ref == 'refs/heads/vorschau'
         run: git push origin HEAD:main

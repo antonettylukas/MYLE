@@ -1,0 +1,3 @@
+# Werkzeuge der Qualitätsprüfung (npm ci in .github/pruefung)
+.github/pruefung/node_modules/
+__pycache__/

@@ -341,7 +341,7 @@
   const jetzt = SPRACHEN.find(s => s.code === SPRACHE);
   const flagge = code => `<span class="flagge flagge-${code}" aria-hidden="true"></span>`;
   const sprachen = `<div class="sprache">
-          <button type="button" class="sprache-knopf" aria-expanded="false" aria-controls="sprache-liste" aria-label="${t("Sprache", "Language")}${DOPPELPUNKT} ${jetzt.name}">${flagge(SPRACHE)}<span class="sprache-code">${SPRACHE.toUpperCase()}</span><svg class="sprache-pfeil" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+          <button type="button" class="sprache-knopf" aria-expanded="false" aria-controls="sprache-liste" aria-label="${SPRACHE.toUpperCase()}, ${t("Sprache", "Language")}${DOPPELPUNKT} ${jetzt.name}">${flagge(SPRACHE)}<span class="sprache-code">${SPRACHE.toUpperCase()}</span><svg class="sprache-pfeil" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
           <ul class="sprache-liste" id="sprache-liste" hidden>${SPRACHEN.map(s => `
             <li><a href="${pfadIn(s.code)}" lang="${s.code}" hreflang="${s.code}"${s.code === SPRACHE ? ' aria-current="true"' : ""}>${flagge(s.code)}<span>${s.name}</span></a></li>`).join("")}
           </ul>
@@ -1076,14 +1076,15 @@
     // Statt Zahlen gehen auch Einträge wie { wert: 0.37, kurz: "DE", name: "Deutschland", zusatz: "…" }, z. B. der Strompreis pro Land.
     // Fährt man mit der Maus darüber (oder tippt darauf), zeigt eine kleine Sprechblase über dem Regler die Haushaltsgröße oder das Land
     const personen = i => i === 0 ? t("1 Person", "1 person") : i < 3 ? t("{n} Personen", "{n} people", { n: i + 1 }) : t("4 oder mehr Personen", "4 or more people");
-    // Liegen zwei Werte fast gleich, teilen sie sich eine Marke (z. B. "AT · CH"), damit sich nichts überdeckt
+    // Liegen zwei Werte nah beieinander (unter 8 % der Skala), teilen sie sich eine Marke (z. B. "AT · CH"), damit sich nichts
+    // überdeckt und jede Marke auf dem Handy mindestens 24 px Platz zum Tippen hat
     const schnittMarken = f => {
       const marken = [];
       f.schnitt.forEach((v, i) => {
         const e = typeof v === "number"
           ? { wert: v, kurz: i < 3 ? String(i + 1) : "4+", name: personen(i), d: Number.isInteger(v) ? 0 : 1 }
           : { ...v, d: dezimalen(f.step) };
-        const m = marken.find(m => Math.abs(m[0].wert - e.wert) < (f.max - f.min) * 0.04);
+        const m = marken.find(m => Math.abs(m[0].wert - e.wert) < (f.max - f.min) * 0.08);
         if (m) m.push(e); else marken.push([e]);
       });
       return marken;
@@ -1091,7 +1092,7 @@
     const schnittHtml = (f, id) => !f.schnitt ? "" : `
           <div class="schnitt" id="${id}-schnitt">${schnittMarken(f).map(m => {
             const zeilen = m.map(e => [e.name, `${t("im Schnitt", "on average")} ${mitEinheit(e.wert, e.d, f.einheit)}${e.zusatz ? ` (${e.zusatz})` : ""}`]);
-            return `<button type="button" data-wert="${m[0].wert}" style="--p:${((m[0].wert - f.min) / (f.max - f.min)).toFixed(4)}" aria-label="${esc(zeilen.map(z => `${z[0]}: ${z[1]}`).join(", "))}">${esc(m.map(e => e.kurz).join(" · "))}<span class="blase" aria-hidden="true">${zeilen.map(z => `<b>${esc(z[0])}</b>${esc(z[1])}`).join("")}</span></button>`;
+            return `<button type="button" data-wert="${m[0].wert}" style="--p:${((m[0].wert - f.min) / (f.max - f.min)).toFixed(4)}" aria-label="${esc(m.map(e => e.kurz).join(" · ") + " – " + zeilen.map(z => `${z[0]}: ${z[1]}`).join(", "))}">${esc(m.map(e => e.kurz).join(" · "))}<span class="blase" aria-hidden="true">${zeilen.map(z => `<b>${esc(z[0])}</b>${esc(z[1])}`).join("")}</span></button>`;
           }).join("")}</div>`;
 
     const feldHtml = f => {
