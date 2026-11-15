@@ -783,21 +783,21 @@ footer a { color: var(--muted); }
    PC ab 1000 px Breite, darunter Handy und Tablet.
    ==================================================================== */
 .tag-und-konto, .kt-leiste {
-  --tz-1: #f8fcfa; --tz-2: #d8ede2; --tz-3: #addac4; --tz-4: #74b597; --tz-5: #2f6655; --tz-6: #0f2a23;
+  --tz-1: #cfecde; --tz-2: #b5d9c9; --tz-3: #99c6b2; --tz-4: #7bab96; --tz-5: #3f6454; --tz-6: #132a21;
   --tz: var(--bg); --tz-ink: var(--ink); --tz-muted: var(--muted);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tag-und-konto, :root:not([data-theme="light"]) .kt-leiste {
-    --tz-1: #3e7f4a; --tz-2: #276641; --tz-3: #195038; --tz-4: #113d2f; --tz-5: #0c2e25; --tz-6: #061c18;
+    --tz-1: #537265; --tz-2: #415c51; --tz-3: #32493f; --tz-4: #253a31; --tz-5: #1b2b24; --tz-6: #0f1b16;
   }
 }
 :root[data-theme="dark"] .tag-und-konto, :root[data-theme="dark"] .kt-leiste {
-  --tz-1: #3e7f4a; --tz-2: #276641; --tz-3: #195038; --tz-4: #113d2f; --tz-5: #0c2e25; --tz-6: #061c18;
+  --tz-1: #537265; --tz-2: #415c51; --tz-3: #32493f; --tz-4: #253a31; --tz-5: #1b2b24; --tz-6: #0f1b16;
 }
 .v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
 .karte-bild > .v-bild { height: 100%; }
 .tz-1 { --tz: var(--tz-1); } .tz-2 { --tz: var(--tz-2); } .tz-3 { --tz: var(--tz-3); }
-.tz-4 { --tz: var(--tz-4); --tz-muted: var(--ink); } .tz-5 { --tz: var(--tz-5); } .tz-6 { --tz: var(--tz-6); }
+.tz-4 { --tz: var(--tz-4); --tz-muted: var(--ink); } .tz-3 { --tz-muted: var(--ink); } .tz-5 { --tz: var(--tz-5); } .tz-6 { --tz: var(--tz-6); }
 .tz-5, .tz-6 { --tz-ink: #eaf4f0; --tz-muted: #d3e3dc; }
 /* Dunkel: Morgens ein helleres, frisches Grün, dann zur Nacht hin dunkler und leicht ins Blaugrüne, oben mit größeren Stufen,
    damit man die Tageszeiten auch im Dunkeln unterscheidet (Lukas 15.11.). Oben braucht die Schrift mehr Helligkeit für genug Kontrast. */
@@ -914,10 +914,16 @@ footer a { color: var(--muted); }
   .t1-zeit p { font-size: 0.95rem; line-height: 1.4; }
 }
 @media (max-width: 640px) {
-  .t1-karten { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 22px 16px 36px; scroll-padding-inline: 16px; }
-  /* Unten genug Platz, damit der Kartenschatten nicht abgeschnitten wird: sonst entsteht eine harte Kante (Lukas 15.11.) */
+  .t1-karten { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 22px 16px 14px; scroll-padding-inline: 16px;
+    --karte-schatten: 0 1px 3px rgba(18, 49, 42, 0.08), 0 4px 9px -4px rgba(18, 49, 42, 0.2); }
+  /* Am Handy ein kurzer Kartenschatten, der ganz in den Wischbereich passt: ein langer Schatten wurde unten abgeschnitten (harte Kante),
+     und mit Platz dafür entstand zwischen Schatten und Farbübergang ein heller Streifen (Lukas 15.11.) */
+  :root[data-theme="dark"] .t1-karten { --karte-schatten: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 9px -4px rgba(0, 0, 0, 0.6); }
   .t1-karten::-webkit-scrollbar { display: none; }
   .t1-karten > .kt-karte { flex: 0 0 84%; scroll-snap-align: start; }
+}
+@media (max-width: 640px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .t1-karten { --karte-schatten: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 1px 3px rgba(0, 0, 0, 0.5), 0 4px 9px -4px rgba(0, 0, 0, 0.6); }
 }
 
 /* Das Bild sitzt eingerückt unter dem Knopf auf dem Rand: So verdeckt der Knopf nichts vom Video, auch keine Einblendungen
