@@ -7,6 +7,9 @@
      myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
      ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
 <script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<!-- Hell oder dunkel: Hat man den Schalter oben rechts benutzt, gilt die gemerkte Wahl (localStorage „myle-design“),
+     sonst folgt die Seite dem Browser. Steht so weit oben, damit die Seite gleich in der richtigen Farbe erscheint. -->
+<script>try{var d=localStorage.getItem("myle-design");if(d==="hell"||d==="dunkel")document.documentElement.setAttribute("data-theme",d==="dunkel"?"dark":"light")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Elektrische Zahnbürste: Empfehlung für jedes Budget · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -38,9 +41,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261115d">
-<link rel="stylesheet" href="videos.css?v=20261115d">
-<!--vr:f8c8f64be8d02d77--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/zahnbuerste#seite","url":"https://myle.life/zahnbuerste","name":"Elektrische Zahnbürste: meine Empfehlung für jedes Budget","description":"Elektrische Zahnbürste: putzt gründlicher als von Hand, du führst sie nur. Empfehlungen nach Stiftung Warentest und eigener Erfahrung, ehrlich bewertet.","inLanguage":"de","isPartOf":{"@type":"WebSite","@id":"https://myle.life/#website","url":"https://myle.life/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/zahnbuerste#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/zahnbuerste#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"Alle Helfer","item":"https://myle.life/"},{"@type":"ListItem","position":2,"name":"Elektrische Zahnbürste","item":"https://myle.life/zahnbuerste"}]},{"@type":"FAQPage","@id":"https://myle.life/zahnbuerste#fragen","url":"https://myle.life/zahnbuerste","inLanguage":"de","mainEntity":[{"@type":"Question","name":"Putzt eine elektrische Zahnbürste wirklich besser?","acceptedAnswer":{"@type":"Answer","text":"Ja. Eine große Auswertung von 51 Studien (Cochrane, 2014) zeigt: Wer länger als drei Monate elektrisch putzt, hat im Schnitt 21 % weniger Zahnbelag und 11 % weniger Zahnfleischentzündung als mit einer Handzahnbürste."}},{"@type":"Question","name":"Schallzahnbürste oder rotierender Kopf: Was ist besser?","acceptedAnswer":{"@type":"Answer","text":"Beides putzt gut. Laut Stiftung Warentest hat keines der beiden Systeme beim Putzen klare Vorteile. Im neuesten Test (Heft 12/2025) liegt eine Schallzahnbürste vorn, die Philips Sonicare 5500 (Note 1,7). Im Test davor gewann eine Oral-B mit rundem Kopf (Note 1,9). Nimm die, die du gern benutzt."}},{"@type":"Question","name":"Wie oft wechsle ich den Bürstenkopf?","acceptedAnswer":{"@type":"Answer","text":"Etwa alle drei Monate, oder früher, wenn die Borsten auseinanderstehen. Manche Modelle erinnern dich daran."}},{"@type":"Question","name":"Wie putze ich richtig?","acceptedAnswer":{"@type":"Answer","text":"Zweimal am Tag zwei Minuten. Du hältst den Kopf leicht an die Zähne und führst ihn langsam von Zahn zu Zahn. Schrubben musst du nicht, das macht die Bürste."}},{"@type":"Question","name":"Brauche ich die App?","acceptedAnswer":{"@type":"Answer","text":"Nein. Bei der Laifen Wave Pro stellst du in der App ein, wie sie putzt, und siehst eine Auswertung deiner Putzzeiten. Putzen kannst du auch ganz ohne Handy."}}]}]}</script><!--/vr-->
+<link rel="stylesheet" href="style.css?v=20261115e">
+<link rel="stylesheet" href="videos.css?v=20261115e">
+<!--vr:57f95b181bd70644--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/zahnbuerste#seite","url":"https://myle.life/zahnbuerste","name":"Elektrische Zahnbürste: meine Empfehlung für jedes Budget","description":"Elektrische Zahnbürste: putzt gründlicher als von Hand, du führst sie nur. Empfehlungen nach Stiftung Warentest und eigener Erfahrung, ehrlich bewertet.","inLanguage":"de","isPartOf":{"@type":"WebSite","@id":"https://myle.life/#website","url":"https://myle.life/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/zahnbuerste#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/zahnbuerste#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"Alle Helfer","item":"https://myle.life/"},{"@type":"ListItem","position":2,"name":"Elektrische Zahnbürste","item":"https://myle.life/zahnbuerste"}]},{"@type":"FAQPage","@id":"https://myle.life/zahnbuerste#fragen","url":"https://myle.life/zahnbuerste","inLanguage":"de","mainEntity":[{"@type":"Question","name":"Putzt eine elektrische Zahnbürste wirklich besser?","acceptedAnswer":{"@type":"Answer","text":"Ja. Eine große Auswertung von 51 Studien (Cochrane, 2014) zeigt: Wer länger als drei Monate elektrisch putzt, hat im Schnitt 21 % weniger Zahnbelag und 11 % weniger Zahnfleischentzündung als mit einer Handzahnbürste."}},{"@type":"Question","name":"Schallzahnbürste oder rotierender Kopf: Was ist besser?","acceptedAnswer":{"@type":"Answer","text":"Beides putzt gut. Laut Stiftung Warentest hat keines der beiden Systeme beim Putzen klare Vorteile. Im neuesten Test (Heft 12/2025) liegt eine Schallzahnbürste vorn, die Philips Sonicare 5500 (Note 1,7). Im Test davor gewann eine Oral-B mit rundem Kopf (Note 1,9). Nimm die, die du gern benutzt."}},{"@type":"Question","name":"Wie oft wechsle ich den Bürstenkopf?","acceptedAnswer":{"@type":"Answer","text":"Etwa alle drei Monate, oder früher, wenn die Borsten auseinanderstehen. Manche Modelle erinnern dich daran."}},{"@type":"Question","name":"Wie putze ich richtig?","acceptedAnswer":{"@type":"Answer","text":"Zweimal am Tag zwei Minuten. Du hältst den Kopf leicht an die Zähne und führst ihn langsam von Zahn zu Zahn. Schrubben musst du nicht, das macht die Bürste."}},{"@type":"Question","name":"Brauche ich die App?","acceptedAnswer":{"@type":"Answer","text":"Nein. Bei der Laifen Wave Pro stellst du in der App ein, wie sie putzt, und siehst eine Auswertung deiner Putzzeiten. Putzen kannst du auch ganz ohne Handy."}}]}]}</script><!--/vr-->
 </head>
 <!-- Diese Seite füllt sich aus produkte.js. data-produkt muss genauso heißen wie die id dort. -->
 <body data-seite="produkt" data-produkt="zahnbuerste">
@@ -54,7 +57,9 @@
 <li><a href="/fr/zahnbuerste" lang="fr" hreflang="fr"><span class="flagge flagge-fr" aria-hidden="true"></span><span>Français</span></a></li>
 <li><a href="/it/zahnbuerste" lang="it" hreflang="it"><span class="flagge flagge-it" aria-hidden="true"></span><span>Italiano</span></a></li>
 </ul>
-</div></nav>
+</div><button type="button" class="design-schalter" role="switch" aria-checked="false" aria-label="Dunkles Design">
+<span class="ds-spur ds-hell"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-spur ds-dunkel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span>
+<span class="ds-knopf"><span class="ds-sonne"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-mond"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span></span></button></nav>
 </div></header><!--/vr--></div>
 
 <main id="produktseite">
@@ -224,11 +229,11 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261115d"></script>
-<script src="produkte.js?v=20261115d"></script>
-<script src="rechner.js?v=20261115d"></script>
-<script src="videos.js?v=20261115d"></script>
-<script src="ratgeber-kurz.js?v=20261115d"></script>
-<script src="app.js?v=20261115d"></script>
+<script src="einstellungen.js?v=20261115e"></script>
+<script src="produkte.js?v=20261115e"></script>
+<script src="rechner.js?v=20261115e"></script>
+<script src="videos.js?v=20261115e"></script>
+<script src="ratgeber-kurz.js?v=20261115e"></script>
+<script src="app.js?v=20261115e"></script>
 </body>
 </html>

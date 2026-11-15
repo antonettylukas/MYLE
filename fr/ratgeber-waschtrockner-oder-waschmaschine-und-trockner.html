@@ -7,6 +7,9 @@
      myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
      ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
 <script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<!-- Hell oder dunkel: Hat man den Schalter oben rechts benutzt, gilt die gemerkte Wahl (localStorage „myle-design“),
+     sonst folgt die Seite dem Browser. Steht so weit oben, damit die Seite gleich in der richtigen Farbe erscheint. -->
+<script>try{var d=localStorage.getItem("myle-design");if(d==="hell"||d==="dunkel")document.documentElement.setAttribute("data-theme",d==="dunkel"?"dark":"light")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lavante-séchante ou lave-linge et sèche-linge ? · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -38,9 +41,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../style.css?v=20261115d">
-<link rel="stylesheet" href="../videos.css?v=20261115d">
-<!--vr:ee336a63fd561676--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#seite","url":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner","name":"Lavante-séchante ou lave-linge et sèche-linge ?","description":"Place, électricité, eau et temps comparés : quand une lavante-séchante convient mieux, quand un lave-linge et un sèche-linge, et le coût par mois.","inLanguage":"fr","isPartOf":{"@type":"WebSite","@id":"https://myle.life/fr/#website","url":"https://myle.life/fr/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/fr/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"Tous les appareils","item":"https://myle.life/fr/"},{"@type":"ListItem","position":2,"name":"Lavante-séchante ou lave-linge et sèche-linge : que choisir ?","item":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner"}]},{"@type":"FAQPage","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#fragen","url":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Puis-je poser le sèche-linge sur le lave-linge ?","acceptedAnswer":{"@type":"Answer","text":"Oui, avec un kit de superposition adapté et toujours avec le sèche-linge en haut. Le cadre le maintient et absorbe les vibrations pendant l’essorage. Le plus simple, c’est avec deux appareils de la même marque et de la même taille."}},{"@type":"Question","name":"Une lavante-séchante sèche-t-elle aussi bien qu’un sèche-linge ?","acceptedAnswer":{"@type":"Answer","text":"Le plus souvent pas tout à fait : dans les tests, beaucoup de lavantes-séchantes sèchent de façon moins homogène, et parfois le linge reste un peu humide. Les meilleurs modèles s’en sortent cependant bien. L’important est de ne pas trop la remplir pour le séchage."}},{"@type":"Question","name":"Pourquoi une lavante-séchante a-t-elle besoin d’eau pour sécher ?","acceptedAnswer":{"@type":"Answer","text":"Beaucoup refroidissent la vapeur chaude et humide avec l’eau du robinet pour qu’elle se condense et s’écoule. Selon l’appareil, cela fait un bon nombre de litres par séchage. Il existe aussi des modèles qui n’ont pas besoin d’eau pour cela, par exemple avec pompe à chaleur."}},{"@type":"Question","name":"Une lavante-séchante avec pompe à chaleur vaut-elle le coup ?","acceptedAnswer":{"@type":"Answer","text":"Si vous séchez souvent, oui. Elle consomme moins d’électricité et d’eau : pour le vainqueur du test 2023, Stiftung Warentest a calculé environ 760 € de frais de fonctionnement en moins sur dix ans par rapport aux appareils de Bosch et Siemens testés. En contrepartie, elle coûte nettement plus cher à l’achat."}}]}]}</script><!--/vr-->
+<link rel="stylesheet" href="../style.css?v=20261115e">
+<link rel="stylesheet" href="../videos.css?v=20261115e">
+<!--vr:26ac390ad3262827--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#seite","url":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner","name":"Lavante-séchante ou lave-linge et sèche-linge ?","description":"Place, électricité, eau et temps comparés : quand une lavante-séchante convient mieux, quand un lave-linge et un sèche-linge, et le coût par mois.","inLanguage":"fr","isPartOf":{"@type":"WebSite","@id":"https://myle.life/fr/#website","url":"https://myle.life/fr/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/fr/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"Tous les appareils","item":"https://myle.life/fr/"},{"@type":"ListItem","position":2,"name":"Lavante-séchante ou lave-linge et sèche-linge : que choisir ?","item":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner"}]},{"@type":"FAQPage","@id":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner#fragen","url":"https://myle.life/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner","inLanguage":"fr","mainEntity":[{"@type":"Question","name":"Puis-je poser le sèche-linge sur le lave-linge ?","acceptedAnswer":{"@type":"Answer","text":"Oui, avec un kit de superposition adapté et toujours avec le sèche-linge en haut. Le cadre le maintient et absorbe les vibrations pendant l’essorage. Le plus simple, c’est avec deux appareils de la même marque et de la même taille."}},{"@type":"Question","name":"Une lavante-séchante sèche-t-elle aussi bien qu’un sèche-linge ?","acceptedAnswer":{"@type":"Answer","text":"Le plus souvent pas tout à fait : dans les tests, beaucoup de lavantes-séchantes sèchent de façon moins homogène, et parfois le linge reste un peu humide. Les meilleurs modèles s’en sortent cependant bien. L’important est de ne pas trop la remplir pour le séchage."}},{"@type":"Question","name":"Pourquoi une lavante-séchante a-t-elle besoin d’eau pour sécher ?","acceptedAnswer":{"@type":"Answer","text":"Beaucoup refroidissent la vapeur chaude et humide avec l’eau du robinet pour qu’elle se condense et s’écoule. Selon l’appareil, cela fait un bon nombre de litres par séchage. Il existe aussi des modèles qui n’ont pas besoin d’eau pour cela, par exemple avec pompe à chaleur."}},{"@type":"Question","name":"Une lavante-séchante avec pompe à chaleur vaut-elle le coup ?","acceptedAnswer":{"@type":"Answer","text":"Si vous séchez souvent, oui. Elle consomme moins d’électricité et d’eau : pour le vainqueur du test 2023, Stiftung Warentest a calculé environ 760 € de frais de fonctionnement en moins sur dix ans par rapport aux appareils de Bosch et Siemens testés. En contrepartie, elle coûte nettement plus cher à l’achat."}}]}]}</script><!--/vr-->
 </head>
 <!-- Diese Seite füllt sich aus ratgeber.js. -->
 <body data-seite="ratgeber" data-ratgeber="waschtrockner-oder-waschmaschine-und-trockner">
@@ -54,7 +57,9 @@
 <li><a href="/fr/ratgeber-waschtrockner-oder-waschmaschine-und-trockner" lang="fr" hreflang="fr" aria-current="true"><span class="flagge flagge-fr" aria-hidden="true"></span><span>Français</span></a></li>
 <li><a href="/it/ratgeber-waschtrockner-oder-waschmaschine-und-trockner" lang="it" hreflang="it"><span class="flagge flagge-it" aria-hidden="true"></span><span>Italiano</span></a></li>
 </ul>
-</div></nav>
+</div><button type="button" class="design-schalter" role="switch" aria-checked="false" aria-label="Mode sombre">
+<span class="ds-spur ds-hell"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-spur ds-dunkel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span>
+<span class="ds-knopf"><span class="ds-sonne"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-mond"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span></span></button></nav>
 </div></header><!--/vr--></div>
 
 <main id="ratgeberseite">
@@ -179,14 +184,14 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261115d"></script>
-<script src="produkte.js?v=20261115d"></script>
-<script src="rechner.js?v=20261115d"></script>
-<script src="videos-texte.js?v=20261115d"></script>
-<script src="../videos.js?v=20261115d"></script>
-<script src="ui-texte.js?v=20261115d"></script>
-<script src="ratgeber-kurz.js?v=20261115d"></script>
-<script src="ratgeber.js?v=20261115d"></script>
-<script src="../app.js?v=20261115d"></script>
+<script src="einstellungen.js?v=20261115e"></script>
+<script src="produkte.js?v=20261115e"></script>
+<script src="rechner.js?v=20261115e"></script>
+<script src="videos-texte.js?v=20261115e"></script>
+<script src="../videos.js?v=20261115e"></script>
+<script src="ui-texte.js?v=20261115e"></script>
+<script src="ratgeber-kurz.js?v=20261115e"></script>
+<script src="ratgeber.js?v=20261115e"></script>
+<script src="../app.js?v=20261115e"></script>
 </body>
 </html>

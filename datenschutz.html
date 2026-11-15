@@ -7,6 +7,9 @@
      myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
      ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
 <script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<!-- Hell oder dunkel: Hat man den Schalter oben rechts benutzt, gilt die gemerkte Wahl (localStorage „myle-design“),
+     sonst folgt die Seite dem Browser. Steht so weit oben, damit die Seite gleich in der richtigen Farbe erscheint. -->
+<script>try{var d=localStorage.getItem("myle-design");if(d==="hell"||d==="dunkel")document.documentElement.setAttribute("data-theme",d==="dunkel"?"dark":"light")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Datenschutz · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -21,7 +24,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261115d">
+<link rel="stylesheet" href="style.css?v=20261115e">
 </head>
 <body>
 <div id="kopf"></div>
@@ -46,6 +49,7 @@
   <p>Wenn du auf einen Link zu einer anderen Seite von MYLE klickst, legt die Website im Sitzungsspeicher deines Browsers (sessionStorage) kurz einen Merker ab: welche Seite du öffnest und wann. So startet die neue Seite oben und nicht mitten im Text. Der Merker wird beim Öffnen der neuen Seite sofort wieder gelöscht, spätestens wenn du den Tab schließt. Er wird nicht an mich oder andere übertragen. Dieser Speicher ist für die gewünschte Funktion technisch nötig und braucht deshalb keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie).</p>
   <p>Für meine eigenen Geräte schalte ich die Besucherstatistik ab, damit meine Besuche die Zahlen nicht verfälschen. Das kannst du auch: Öffnest du einmal den Link <a href="/?nicht-zaehlen">myle.life/?nicht-zaehlen</a>, legt die Website im Speicher deines Browsers (localStorage) den Eintrag „myle-nicht-zaehlen“ ab. Solange er da ist, lädt dein Browser das Statistik-Skript von Cloudflare nicht mehr und meldet auch meinem eigenen Zähler nichts. Der Eintrag enthält nur diesen einen Wert und wird nicht an mich oder andere übertragen. Mit <a href="/?wieder-zaehlen">myle.life/?wieder-zaehlen</a> oder durch Löschen der Website-Daten in deinem Browser entfernst du ihn wieder. Auch dieser Speicher ist für die von dir gewünschte Funktion nötig und braucht keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie).</p>
   <p id="zeitkonto">Auf der Startseite und auf den Seiten der Helfer gibt es ein Zeitkonto. Nimmst du dort einen Helfer ins Konto oder stellst bei einem Helfer im Konto den Rechner um, legt die Website im Speicher deines Browsers (localStorage) den Eintrag „myle-zeitkonto“ an. Er enthält, welche Helfer in deinem Konto sind, und bei Helfern, deren Rechner du umgestellt hast, deine Werte (Stunden und Geld im Jahr). So kommt dein Konto auf die anderen Seiten von MYLE mit. Solange du das Zeitkonto nicht benutzt, speichert die Website nichts. Der Eintrag bleibt in deinem Browser und wird nicht an mich oder andere übertragen. Mit „Konto leeren“ oder durch Löschen der Website-Daten in deinem Browser entfernst du ihn wieder. Auch dieser Speicher ist für die von dir gewünschte Funktion nötig und braucht keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie).</p>
+  <p id="design">Oben rechts kannst du zwischen hellem und dunklem Design wählen. Benutzt du diesen Schalter, merkt sich die Website deine Wahl im Speicher deines Browsers (localStorage, Eintrag „myle-design“), damit auch die anderen Seiten gleich so erscheinen. Ohne den Schalter speichert sie dafür nichts und folgt der Einstellung deines Browsers. Der Eintrag bleibt in deinem Browser und wird nicht an mich oder andere übertragen. Du entfernst ihn, indem du die Website-Daten in deinem Browser löschst. Auch dieser Speicher ist für die von dir gewünschte Funktion nötig und braucht keine Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 5 Abs. 3 ePrivacy-Richtlinie).</p>
   <p>Andere Cookies oder dauerhaften Speicher nutzt die Website nicht.</p>
 
   <h2>5. Schriftarten</h2>
@@ -71,7 +75,7 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261115d"></script>
-<script src="app.js?v=20261115d"></script>
+<script src="einstellungen.js?v=20261115e"></script>
+<script src="app.js?v=20261115e"></script>
 </body>
 </html>

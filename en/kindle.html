@@ -7,6 +7,9 @@
      myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
      ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
 <script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<!-- Hell oder dunkel: Hat man den Schalter oben rechts benutzt, gilt die gemerkte Wahl (localStorage „myle-design“),
+     sonst folgt die Seite dem Browser. Steht so weit oben, damit die Seite gleich in der richtigen Farbe erscheint. -->
+<script>try{var d=localStorage.getItem("myle-design");if(d==="hell"||d==="dunkel")document.documentElement.setAttribute("data-theme",d==="dunkel"?"dark":"light")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>E-reader: my pick for every budget · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -38,9 +41,9 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../style.css?v=20261115d">
-<link rel="stylesheet" href="../videos.css?v=20261115d">
-<!--vr:3eb3987b43c910d9--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/en/kindle#seite","url":"https://myle.life/en/kindle","name":"E-reader: my pick for every budget","description":"Kindle, Kobo or PocketBook: which e-reader is right for you? Picks for every budget, honest downsides and a calculator for what you spend on books.","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://myle.life/en/#website","url":"https://myle.life/en/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/en/kindle#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/en/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/en/kindle#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"All helpers","item":"https://myle.life/en/"},{"@type":"ListItem","position":2,"name":"E-reader","item":"https://myle.life/en/kindle"}]},{"@type":"FAQPage","@id":"https://myle.life/en/kindle#fragen","url":"https://myle.life/en/kindle","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Which e-reader is right for me?","acceptedAnswer":{"@type":"Answer","text":"For novels, the normal Kindle is all you need. If you read a lot, in bed in the evening or in the bath, take the Paperwhite: it has warm light and is waterproof. You only need colour for comics, children's books or pictures. And if you like borrowing from the library, a PocketBook is the better choice."}},{"@type":"Question","name":"Can I borrow books from the library?","acceptedAnswer":{"@type":"Answer","text":"Not with the Kindle, unfortunately: the Onleihe service of German public libraries doesn't work on it. With PocketBook and Tolino you borrow right on the device, with Kobo via the computer."}},{"@type":"Question","name":"Can I read my own files and PDFs?","acceptedAnswer":{"@type":"Answer","text":"Yes. With the Kindle you send files to the device with “Send to Kindle” via the app or email, including e-books without copy protection from other shops. With Kobo and PocketBook it works, for example, by cable from the computer."}},{"@type":"Question","name":"Do I need Kindle Unlimited?","acceptedAnswer":{"@type":"Answer","text":"No. It's an optional subscription with a large selection of books. It's only worth it if you read a lot and like the selection. Best try it first, there's often a free trial month."}},{"@type":"Question","name":"Are there ads on the device?","acceptedAnswer":{"@type":"Answer","text":"On the Kindle there can be. When buying, check whether it says “with ads”. That version shows offers on the lock screen and on the home screen and is a little cheaper."}},{"@type":"Question","name":"How long does the battery last?","acceptedAnswer":{"@type":"Answer","text":"According to Amazon, a Kindle lasts 6 to 12 weeks depending on the model, if you read for about half an hour a day with Wi-Fi off. With a lot of light and Wi-Fi on, the battery runs out sooner."}}]}]}</script><!--/vr-->
+<link rel="stylesheet" href="../style.css?v=20261115e">
+<link rel="stylesheet" href="../videos.css?v=20261115e">
+<!--vr:84c65f5d3064abf8--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://myle.life/en/kindle#seite","url":"https://myle.life/en/kindle","name":"E-reader: my pick for every budget","description":"Kindle, Kobo or PocketBook: which e-reader is right for you? Picks for every budget, honest downsides and a calculator for what you spend on books.","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://myle.life/en/#website","url":"https://myle.life/en/","name":"MYLE"},"breadcrumb":{"@id":"https://myle.life/en/kindle#brotkrumen"},"author":{"@type":"Person","@id":"https://myle.life/#lukas","name":"Lukas","url":"https://myle.life/en/#ueber-mich"},"dateModified":"2026-11-04"},{"@type":"BreadcrumbList","@id":"https://myle.life/en/kindle#brotkrumen","itemListElement":[{"@type":"ListItem","position":1,"name":"All helpers","item":"https://myle.life/en/"},{"@type":"ListItem","position":2,"name":"E-reader","item":"https://myle.life/en/kindle"}]},{"@type":"FAQPage","@id":"https://myle.life/en/kindle#fragen","url":"https://myle.life/en/kindle","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Which e-reader is right for me?","acceptedAnswer":{"@type":"Answer","text":"For novels, the normal Kindle is all you need. If you read a lot, in bed in the evening or in the bath, take the Paperwhite: it has warm light and is waterproof. You only need colour for comics, children's books or pictures. And if you like borrowing from the library, a PocketBook is the better choice."}},{"@type":"Question","name":"Can I borrow books from the library?","acceptedAnswer":{"@type":"Answer","text":"Not with the Kindle, unfortunately: the Onleihe service of German public libraries doesn't work on it. With PocketBook and Tolino you borrow right on the device, with Kobo via the computer."}},{"@type":"Question","name":"Can I read my own files and PDFs?","acceptedAnswer":{"@type":"Answer","text":"Yes. With the Kindle you send files to the device with “Send to Kindle” via the app or email, including e-books without copy protection from other shops. With Kobo and PocketBook it works, for example, by cable from the computer."}},{"@type":"Question","name":"Do I need Kindle Unlimited?","acceptedAnswer":{"@type":"Answer","text":"No. It's an optional subscription with a large selection of books. It's only worth it if you read a lot and like the selection. Best try it first, there's often a free trial month."}},{"@type":"Question","name":"Are there ads on the device?","acceptedAnswer":{"@type":"Answer","text":"On the Kindle there can be. When buying, check whether it says “with ads”. That version shows offers on the lock screen and on the home screen and is a little cheaper."}},{"@type":"Question","name":"How long does the battery last?","acceptedAnswer":{"@type":"Answer","text":"According to Amazon, a Kindle lasts 6 to 12 weeks depending on the model, if you read for about half an hour a day with Wi-Fi off. With a lot of light and Wi-Fi on, the battery runs out sooner."}}]}]}</script><!--/vr-->
 </head>
 <!-- Diese Seite füllt sich aus en/produkte.js. data-produkt muss genauso heißen wie die id dort. -->
 <body data-seite="produkt" data-produkt="kindle">
@@ -54,7 +57,9 @@
 <li><a href="/fr/kindle" lang="fr" hreflang="fr"><span class="flagge flagge-fr" aria-hidden="true"></span><span>Français</span></a></li>
 <li><a href="/it/kindle" lang="it" hreflang="it"><span class="flagge flagge-it" aria-hidden="true"></span><span>Italiano</span></a></li>
 </ul>
-</div></nav>
+</div><button type="button" class="design-schalter" role="switch" aria-checked="false" aria-label="Dark mode">
+<span class="ds-spur ds-hell"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-spur ds-dunkel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span>
+<span class="ds-knopf"><span class="ds-sonne"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"></path></svg></span><span class="ds-mond"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"></path></svg></span></span></button></nav>
 </div></header><!--/vr--></div>
 
 <main id="produktseite">
@@ -228,12 +233,12 @@
 </div>
 </footer><!--/vr--></div>
 
-<script src="einstellungen.js?v=20261115d"></script>
-<script src="produkte.js?v=20261115d"></script>
-<script src="rechner.js?v=20261115d"></script>
-<script src="videos-texte.js?v=20261115d"></script>
-<script src="../videos.js?v=20261115d"></script>
-<script src="ratgeber-kurz.js?v=20261115d"></script>
-<script src="../app.js?v=20261115d"></script>
+<script src="einstellungen.js?v=20261115e"></script>
+<script src="produkte.js?v=20261115e"></script>
+<script src="rechner.js?v=20261115e"></script>
+<script src="videos-texte.js?v=20261115e"></script>
+<script src="../videos.js?v=20261115e"></script>
+<script src="ratgeber-kurz.js?v=20261115e"></script>
+<script src="../app.js?v=20261115e"></script>
 </body>
 </html>

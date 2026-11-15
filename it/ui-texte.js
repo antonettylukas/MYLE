@@ -202,5 +202,7 @@ const UI_TEXTE = {
   "Durchschnitt nehmen": "Usa la media",
   "Im Zeitkonto mit dem Durchschnitt ({x}). Stellst du den Rechner um, zählen deine Zahlen.": "Nel conto del tempo con la media ({x}). Se cambi il calcolatore, contano i tuoi numeri.",
   "Im Zeitkonto sammelst du Helfer und siehst, wie viel Zeit und Geld im Jahr zusammenkommt.": "Nel conto del tempo raccogli apparecchi e vedi quanto tempo e denaro mettono insieme in un anno.",
-  "Nimmst du ihn ins Zeitkonto, zählen deine Zahlen von hier.": "Se lo aggiungi al conto del tempo, contano i tuoi numeri di qui."
+  "Nimmst du ihn ins Zeitkonto, zählen deine Zahlen von hier.": "Se lo aggiungi al conto del tempo, contano i tuoi numeri di qui.",
+  // Schalter Hell/Dunkel (15.11.2026)
+  "Dunkles Design": "Modalità scura"
 };

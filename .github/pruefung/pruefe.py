@@ -134,7 +134,10 @@ if '<meta name="p:domain_verify" content="8ed2aeb5e21a67cf3b7b351a370d2077"/>' n
 import vorgerendert
 fehler += vorgerendert.fehler()
 # Lukas 05.11.2026: heller Browser = helle Version „Salbei“, dunkler Browser = dunkle Version. Keine Seite erzwingt eine davon.
+# Seit 15.11.2026 gibt es den Schalter Hell/Dunkel: Das Skript im <head> setzt die gemerkte Wahl, darum muss es auf jeder Seite stehen.
 for p in dateien(".html"):
+    if 'localStorage.getItem("myle-design")' not in lies(p).split("</head>", 1)[0]:
+        fehler.append(f'{p}: Das Skript für den Schalter Hell/Dunkel fehlt im <head> (aus saugroboter.html übernehmen)')
     if "data-theme=" in lies(p).split("<head>", 1)[0]:
         fehler.append(f'{p}: <html> hat data-theme, die Seite soll dem Browser folgen (hell = Salbei, dunkel = dunkel)')
 # Besucherstatistik: app.js lädt das Cloudflare-Zählskript nach, wenn Cloudflare es nicht selbst eingefügt hat (seit 09.11.2026).

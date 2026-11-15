@@ -202,5 +202,7 @@ const UI_TEXTE = {
   "Durchschnitt nehmen": "Prendre la moyenne",
   "Im Zeitkonto mit dem Durchschnitt ({x}). Stellst du den Rechner um, zählen deine Zahlen.": "Dans votre compte-temps avec la moyenne ({x}). Si vous ajustez le calculateur, ce sont vos chiffres qui comptent.",
   "Im Zeitkonto sammelst du Helfer und siehst, wie viel Zeit und Geld im Jahr zusammenkommt.": "Dans le compte-temps, vous réunissez des appareils et voyez combien de temps et d’argent cela représente sur un an.",
-  "Nimmst du ihn ins Zeitkonto, zählen deine Zahlen von hier.": "Si vous l’ajoutez au compte-temps, ce sont vos chiffres d’ici qui comptent."
+  "Nimmst du ihn ins Zeitkonto, zählen deine Zahlen von hier.": "Si vous l’ajoutez au compte-temps, ce sont vos chiffres d’ici qui comptent.",
+  // Schalter Hell/Dunkel (15.11.2026)
+  "Dunkles Design": "Mode sombre"
 };

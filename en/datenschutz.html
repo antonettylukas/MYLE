@@ -7,6 +7,9 @@
      myle.life/?wieder-zaehlen nimmt das zurück. Browser, die von Programmen gesteuert werden (Prüf-Browser der Agenten), zählen nie,
      ebenso Linux-Computer mit Zeitzone ausserhalb Europas (so sehen die Cloud-Browser der Agenten aus). -->
 <script>(function(){var n=navigator,b=!!n.webdriver||/Headless/i.test(n.userAgent)||/Linux x86_64/.test(n.platform)&&!/Android/.test(n.userAgent)&&!/^Europe\//.test((Intl.DateTimeFormat().resolvedOptions().timeZone)||""),q=location.search,k="myle-nicht-zaehlen";try{if(/[?&]nicht-zaehlen(=|&|$)/.test(q))localStorage.setItem(k,"1");if(/[?&]wieder-zaehlen(=|&|$)/.test(q))localStorage.removeItem(k);b=b||!!localStorage.getItem(k)}catch(e){}if(b){var m=document.createElement("meta");m.httpEquiv="Content-Security-Policy";m.content="script-src 'self' 'unsafe-inline'";document.head.appendChild(m)}})();</script>
+<!-- Hell oder dunkel: Hat man den Schalter oben rechts benutzt, gilt die gemerkte Wahl (localStorage „myle-design“),
+     sonst folgt die Seite dem Browser. Steht so weit oben, damit die Seite gleich in der richtigen Farbe erscheint. -->
+<script>try{var d=localStorage.getItem("myle-design");if(d==="hell"||d==="dunkel")document.documentElement.setAttribute("data-theme",d==="dunkel"?"dark":"light")}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy policy · MYLE</title>
 <!-- Die Seite hat ein eigenes helles und dunkles Design. Die zwei Zeilen sagen Browsern und Dunkel-Erweiterungen
@@ -21,7 +24,7 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preload" href="../schriften/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../schriften/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../style.css?v=20261115d">
+<link rel="stylesheet" href="../style.css?v=20261115e">
 </head>
 <body>
 <div id="kopf"></div>
@@ -47,6 +50,7 @@
   <p>When you click a link to another MYLE page, the website briefly stores a marker in your browser's session storage (sessionStorage): which page you are opening and when. This makes the new page start at the top instead of in the middle of the text. The marker is deleted as soon as the new page opens, at the latest when you close the tab. It is not sent to me or anyone else. This storage is technically necessary for the function you asked for and therefore needs no consent (Art. 5(3) ePrivacy Directive).</p>
   <p>I switch off the visitor statistics for my own devices so that my visits do not distort the numbers. You can do this too: if you open the link <a href="/en/?nicht-zaehlen">myle.life/en/?nicht-zaehlen</a> once, the website stores the entry “myle-nicht-zaehlen” in your browser’s storage (localStorage). As long as it is there, your browser no longer loads the Cloudflare statistics script and sends nothing to my own counter either. The entry contains only this one value and is not sent to me or anyone else. You remove it again with <a href="/en/?wieder-zaehlen">myle.life/en/?wieder-zaehlen</a> or by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive).</p>
   <p id="zeitkonto">The home page and the helper pages have a time account. When you add a helper to your account, or change the calculator of a helper that is in your account, the website stores the entry “myle-zeitkonto” in your browser’s storage (localStorage). It contains which helpers are in your account and, for helpers whose calculator you changed, your own values (hours and money per year). This way your account comes along to the other MYLE pages. As long as you do not use the time account, the website stores nothing. The entry stays in your browser and is not sent to me or anyone else. You remove it with “Empty account” or by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive).</p>
+  <p id="design">At the top right you can choose between a light and a dark design. If you use this switch, the website remembers your choice in your browser’s storage (localStorage, entry “myle-design”) so that the other pages appear the same way right away. Without the switch it stores nothing for this and follows your browser’s setting. The entry stays in your browser and is not sent to me or anyone else. You remove it by deleting the website data in your browser. This storage is also necessary for the function you asked for and needs no consent (Section 25(2) No. 2 TDDDG, Art. 5(3) ePrivacy Directive).</p>
   <p>The website uses no other cookies or lasting storage.</p>
 
   <h2>5. Fonts</h2>
@@ -72,7 +76,7 @@
 
 <div id="fuss"></div>
 
-<script src="einstellungen.js?v=20261115d"></script>
-<script src="../app.js?v=20261115d"></script>
+<script src="einstellungen.js?v=20261115e"></script>
+<script src="../app.js?v=20261115e"></script>
 </body>
 </html>

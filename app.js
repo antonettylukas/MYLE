@@ -379,9 +379,10 @@
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
         <a class="logo" href="./">${logo()}</a>
-        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="ratgeber"${["ratgeber", "ratgeber-liste"].includes(typ) ? ' aria-current="page"' : ""}>${t("Ratgeber", "Guides")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}</nav>
+        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="ratgeber"${["ratgeber", "ratgeber-liste"].includes(typ) ? ' aria-current="page"' : ""}>${t("Ratgeber", "Guides")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}${designKnopf()}</nav>
       </div></header>`;
     spracheSchalter();
+    designSchalter();
   }
   const fuss = document.getElementById("fuss");
   if (fuss) {
@@ -431,6 +432,50 @@
         </div>
         ${weitere.length ? `<div class="um-reihe">${weitere.map(f => foto(f.datei, f.text || "")).join("")}</div>` : ""}`;
     }
+  }
+
+  // ---------- Schalter Hell/Dunkel (Lukas 15.11.2026) ----------
+  // Ohne Schalter folgt die Seite dem Browser. Mit dem Schalter gilt die eigene Wahl, gemerkt in localStorage „myle-design“
+  // (Datenschutzerklärung, Abschnitt 4); das kleine Skript im <head> setzt sie auf jeder Seite, bevor sie erscheint.
+  // Der Wechsel breitet sich als Kreis vom Schalter über die Seite aus (View Transitions), sonst blenden die Farben weich über.
+  function designKnopf() {
+    const sonne = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>`;
+    const mond = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z"/></svg>`;
+    return `<button type="button" class="design-schalter" role="switch" aria-checked="false" aria-label="${t("Dunkles Design", "Dark mode")}">
+      <span class="ds-spur ds-hell">${sonne}</span><span class="ds-spur ds-dunkel">${mond}</span>
+      <span class="ds-knopf"><span class="ds-sonne">${sonne}</span><span class="ds-mond">${mond}</span></span></button>`;
+  }
+  function designSchalter() {
+    const knopf = document.querySelector(".design-schalter");
+    if (!knopf) return;
+    const html = document.documentElement;
+    const browserDunkel = window.matchMedia ? matchMedia("(prefers-color-scheme: dark)") : { matches: false };
+    const istDunkel = () => (html.dataset.theme ? html.dataset.theme === "dark" : browserDunkel.matches);
+    const zeige = () => {
+      knopf.setAttribute("aria-checked", String(istDunkel()));
+      // Farbe der Browserleiste am Handy passend zur Wahl
+      if (html.dataset.theme) document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute("content", istDunkel() ? "#0f1614" : "#f5faf7"));
+    };
+    function setze(dunkel) {
+      const anwenden = () => { html.dataset.theme = dunkel ? "dark" : "light"; zeige(); };
+      try { localStorage.setItem("myle-design", dunkel ? "dunkel" : "hell"); } catch (e) { /* gesperrt: gilt nur auf dieser Seite */ }
+      if (WENIG_BEWEGUNG) return anwenden();
+      if (document.startViewTransition) {
+        const r = knopf.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+        const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        const vt = document.startViewTransition(anwenden);
+        vt.ready.then(() => html.animate({ clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+          { duration: 750, easing: "cubic-bezier(0.45, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
+        return;
+      }
+      html.classList.add("design-wechsel");
+      anwenden();
+      setTimeout(() => html.classList.remove("design-wechsel"), 700);
+    }
+    knopf.addEventListener("click", () => setze(!istDunkel()));
+    if (browserDunkel.addEventListener) browserDunkel.addEventListener("change", zeige);
+    addEventListener("pageshow", zeige);
+    zeige();
   }
 
   // ---------- Zeitkonto: Startseite „Ein Tag mit deinen Helfern“ und Produktseiten (Lukas 15.11.2026) ----------
