@@ -1436,7 +1436,9 @@
 })();
 
 // Eigener Klickzähler ohne Cookies (siehe Datenschutz, Abschnitt 3 „#zaehler“; Server: functions/api/ereignis.js).
-// Sammelt pro Seitenaufruf ein paar Ereignisse und schickt sie gebündelt, wenn die Seite verlassen oder verborgen wird:
+// Meldet den Aufruf gleich nach dem Laden, Klicks sofort und alles andere gebündelt etwa 2 Sekunden später (spätestens,
+// wenn die Seite verlassen oder verborgen wird). Grund: Die In-App-Browser von Instagram und TikTok schließen oft, ohne der
+// Seite vorher Bescheid zu geben; eine Meldung erst beim Verlassen käme dann nie an. Ereignisse:
 //   aufruf                      einmal pro Aufruf
 //   box-gesehen / box-klick     Kaufempfehlung zur Hälfte sichtbar / Klick auf einen Shop-Link; Detail sagt, welche:
 //                               oben (Kasten „Meine Empfehlung“), modell-<Stufe 1–3>-<Abschnitt>, alternative-…, zubehoer, sonst andere
@@ -1448,17 +1450,20 @@
   if (location.hostname !== "myle.life" || !navigator.sendBeacon) return;
   if (document.querySelector('meta[http-equiv="Content-Security-Policy"]')) return;
   var pfad = location.pathname.replace(/^\/(en|fr|it)\//, "/").replace(/\.html$/, "").replace(/^\/|\/$/g, "");
-  var seite = (pfad || "start").toLowerCase();
+  var seite = (document.body.getAttribute("data-zaehler-seite") || pfad || "start").toLowerCase(); // 404-Seiten heißen „404“
   var sprache = (document.documentElement.lang || "de").slice(0, 2);
   if (!/^[a-z0-9-]{1,80}$/.test(seite)) return;
-  var warte = [["aufruf", ""]], schon = {};
+  var warte = [["aufruf", ""]], schon = {}, bald = 0;
   function merke(e, d) {
     var k = e + "|" + (d || "");
     if (schon[k] && e !== "box-klick") return;
     schon[k] = 1;
     warte.push([e, d || ""]);
+    clearTimeout(bald);
+    bald = setTimeout(senden, 2000);
   }
   function senden() {
+    clearTimeout(bald);
     if (!warte.length) return;
     var teil = warte.splice(0, 40);
     try { navigator.sendBeacon("/api/ereignis", JSON.stringify({ s: seite, l: sprache, e: teil })); } catch (e) { /* egal */ }
@@ -1506,6 +1511,7 @@
   }
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") senden(); });
   window.addEventListener("pagehide", senden);
-  if (document.readyState === "complete") { beobachten(); tiefe(); }
-  else window.addEventListener("load", function () { beobachten(); tiefe(); });
+  function start() { beobachten(); tiefe(); senden(); }
+  if (document.readyState === "complete") start();
+  else window.addEventListener("load", start);
 })();
