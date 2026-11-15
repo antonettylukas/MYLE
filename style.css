@@ -754,8 +754,8 @@ footer a { color: var(--muted); }
 
 /* ====================================================================
    Startseite „Ein Tag mit deinen Helfern“ mit Zeitkonto (Lukas 15.11.2026), Zeitkonto auch auf den Produktseiten.
-   Sechs Tageszeiten mit eigener Farbe: Morgen gelb, Tag hellblau, Feierabend pfirsich, nach dem Essen flieder,
-   Abend nachtblau, Wochenende grün. Flächen sind mit dem Hintergrund gemischt (hell kräftiger, dunkel zarter).
+   Sechs Tageszeiten mit eigener Farbe, alle aus der Salbei-Familie (Lukas 15.11.: harmonisch, kein Braun, kein Flieder):
+   Morgen gelb, Tag hellblau, Feierabend mint, nach dem Essen hellgrün, Abend dunkelgrün wie das Logo, Wochenende türkis. Flächen sind mit dem Hintergrund gemischt (hell kräftiger, dunkel zarter).
    PC ab 1000 px Breite, darunter Handy und Tablet.
    ==================================================================== */
 :root { --tz-zart: 24%; }
@@ -764,22 +764,22 @@ footer a { color: var(--muted); }
 .tag-und-konto, .kt-leiste {
   --tz-1: color-mix(in srgb, #ffe066 var(--tz-zart), var(--bg));
   --tz-2: color-mix(in srgb, #8ccbf0 var(--tz-zart), var(--bg));
-  --tz-3: color-mix(in srgb, #ffa970 var(--tz-zart), var(--bg));
-  --tz-4: color-mix(in srgb, #b9a3e3 var(--tz-zart), var(--bg));
-  --tz-5: color-mix(in srgb, #1d3352 88%, var(--bg));
-  --tz-6: color-mix(in srgb, #8fd17a var(--tz-zart), var(--bg));
+  --tz-3: color-mix(in srgb, #74d1b4 var(--tz-zart), var(--bg));
+  --tz-4: color-mix(in srgb, #cde77f var(--tz-zart), var(--bg));
+  --tz-5: color-mix(in srgb, #12312a 92%, var(--bg));
+  --tz-6: color-mix(in srgb, #7fc8d8 var(--tz-zart), var(--bg));
   --tz: var(--bg); --tz-ink: var(--ink); --tz-muted: var(--muted);
 }
 .v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
 .karte-bild > .v-bild { height: 100%; }
 .tz-1 { --tz: var(--tz-1); --tz-punkt: #ffe066; }
 .tz-2 { --tz: var(--tz-2); --tz-punkt: #8ccbf0; }
-.tz-3 { --tz: var(--tz-3); --tz-punkt: #ffa970; }
-.tz-4 { --tz: var(--tz-4); --tz-punkt: #b9a3e3; }
-.tz-5 { --tz: var(--tz-5); --tz-punkt: #1d3352; }
-.tz-6 { --tz: var(--tz-6); --tz-punkt: #8fd17a; }
+.tz-3 { --tz: var(--tz-3); --tz-punkt: #74d1b4; }
+.tz-4 { --tz: var(--tz-4); --tz-punkt: #cde77f; }
+.tz-5 { --tz: var(--tz-5); --tz-punkt: #12312a; }
+.tz-6 { --tz: var(--tz-6); --tz-punkt: #7fc8d8; }
 .tz-1, .tz-2, .tz-3, .tz-4, .tz-6 { --tz-ink: var(--ink); --tz-muted: var(--muted); }
-.tz-5 { --tz-ink: #eaf4f0; --tz-muted: #b9c8d6; }
+.tz-5 { --tz-ink: #eaf4f0; --tz-muted: #b9cfc6; }
 .tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--tz-punkt, var(--marker)); color: #12312a; }
 .tz-icon svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .tz-5 .tz-icon { color: #ffe066; box-shadow: inset 0 0 0 1.5px rgba(255, 224, 102, 0.6); }
