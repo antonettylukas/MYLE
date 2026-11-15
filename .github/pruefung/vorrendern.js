@@ -181,7 +181,9 @@ async function main() {
     // 2. Mit JavaScript sieht jede Seite mit Vorrendern genau so aus wie ohne
     const zustand = async (basis, adresse) => {
       const { page, fehler } = await laden(kontext, basis + new URL(adresse).pathname);
-      const z = await page.evaluate(() => ({
+      // Standbilder und Videos baut die Seite nach und nach (Startseite: Reihe für Reihe, das Feld hinter der Schrift in
+      // Leerlaufzeiten). Vorgerendert werden sie nie, darum zählt ihr Inhalt hier nicht mit; sonst hinge der Vergleich vom Zeitpunkt ab.
+      const z = await page.evaluate(() => (document.querySelectorAll(".buehne").forEach(x => x.replaceChildren()), {
         text: document.body.innerText,
         html: document.body.innerHTML.replace(/\s+/g, " "),
         anzahl: document.querySelectorAll("*").length,

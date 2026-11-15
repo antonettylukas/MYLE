@@ -751,3 +751,231 @@ footer a { color: var(--muted); }
   .ratgeber-tabelle td::before { content: attr(data-titel); color: var(--muted); }
   .ratgeber-tabelle td:last-child { margin-top: 4px; font-size: 0.82rem; }
 }
+
+/* ====================================================================
+   Startseite „Ein Tag mit deinen Helfern“ mit Zeitkonto (Lukas 15.11.2026), Zeitkonto auch auf den Produktseiten.
+   Sechs Tageszeiten mit eigener Farbe: Morgen gelb, Tag hellblau, Feierabend pfirsich, nach dem Essen flieder,
+   Abend nachtblau, Wochenende grün. Flächen sind mit dem Hintergrund gemischt (hell kräftiger, dunkel zarter).
+   PC ab 1000 px Breite, darunter Handy und Tablet.
+   ==================================================================== */
+:root { --tz-zart: 24%; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --tz-zart: 13%; } }
+:root[data-theme="dark"] { --tz-zart: 13%; }
+.tag-und-konto, .kt-leiste {
+  --tz-1: color-mix(in srgb, #ffe066 var(--tz-zart), var(--bg));
+  --tz-2: color-mix(in srgb, #8ccbf0 var(--tz-zart), var(--bg));
+  --tz-3: color-mix(in srgb, #ffa970 var(--tz-zart), var(--bg));
+  --tz-4: color-mix(in srgb, #b9a3e3 var(--tz-zart), var(--bg));
+  --tz-5: color-mix(in srgb, #1d3352 88%, var(--bg));
+  --tz-6: color-mix(in srgb, #8fd17a var(--tz-zart), var(--bg));
+  --tz: var(--bg); --tz-ink: var(--ink); --tz-muted: var(--muted);
+}
+.v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
+.karte-bild > .v-bild { height: 100%; }
+.tz-1 { --tz: var(--tz-1); --tz-punkt: #ffe066; }
+.tz-2 { --tz: var(--tz-2); --tz-punkt: #8ccbf0; }
+.tz-3 { --tz: var(--tz-3); --tz-punkt: #ffa970; }
+.tz-4 { --tz: var(--tz-4); --tz-punkt: #b9a3e3; }
+.tz-5 { --tz: var(--tz-5); --tz-punkt: #1d3352; }
+.tz-6 { --tz: var(--tz-6); --tz-punkt: #8fd17a; }
+.tz-1, .tz-2, .tz-3, .tz-4, .tz-6 { --tz-ink: var(--ink); --tz-muted: var(--muted); }
+.tz-5 { --tz-ink: #eaf4f0; --tz-muted: #b9c8d6; }
+.tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--tz-punkt, var(--marker)); color: #12312a; }
+.tz-icon svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.tz-5 .tz-icon { color: #ffe066; box-shadow: inset 0 0 0 1.5px rgba(255, 224, 102, 0.6); }
+
+/* Kachel: Ein Klick irgendwo auf die Kachel nimmt den Helfer ins Konto. Der Knopf sitzt auf dem oberen Rand, wie ein Etikett. */
+.kt-karte { position: relative; display: flex; flex-direction: column; min-width: 0; container-type: inline-size; }
+.kt-karte > .karte { flex: 1; }
+.kt-karte:hover > .karte { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--karte-schatten-hover); }
+.kt-karte.kt-an > .karte { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent), var(--karte-schatten); }
+.kt-karte { scroll-margin: 40px 16px 24px; }
+.kt-karte > .karte { cursor: pointer; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+/* Der Ring in der Farbe des Hintergrunds unterbricht den Rand der Kachel, so sitzt der Knopf genau auf der Linie */
+.kt-am-rand { position: absolute; top: 0; left: 14px; z-index: 3; transform: translateY(-50%); box-shadow: 0 0 0 4px var(--tz, var(--bg)); }
+.kt-karte:hover > .kt-am-rand { transform: translateY(calc(-50% - 2px)); }
+.kt-karte .kt-wert { flex-wrap: wrap; }
+/* Zurück von einer Produktseite: die Kachel leuchtet kurz auf */
+.kt-karte.kt-zurueck > .karte { animation: kt-zurueck 1.8s ease; }
+@keyframes kt-zurueck { 0%, 55% { box-shadow: 0 0 0 4px var(--marker), var(--karte-schatten-hover); } 100% { box-shadow: var(--karte-schatten); } }
+@media (prefers-reduced-motion: reduce) { .kt-karte.kt-zurueck > .karte { animation: none; } }
+
+/* Video-Vorschau über dem Konto: zeigt den Helfer unter der Maus */
+.kt-schau { display: block; border-radius: 16px; overflow: hidden; border: 1px solid var(--karte-rand); background: var(--karte-hg); box-shadow: var(--karte-schatten); color: var(--ink); text-decoration: none; }
+.kt-schau .v-bild { border-bottom: 1px solid var(--line); }
+.kt-schau-text { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; padding: 10px 16px 12px; }
+.kt-schau-name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.2; }
+.kt-schau-wert { font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+
+@media (max-width: 640px) {
+  .kt-karte:hover > .karte { transform: none; }
+  .kt-karte:hover > .kt-am-rand { transform: translateY(-50%); }
+}
+
+/* ====================================================================
+   1 Tag und Konto: Bänder pro Tageszeit, rechts bleibt das Konto stehen
+   ==================================================================== */
+.tag-und-konto { overflow-x: clip; }
+.tag-und-konto .helfer-kopf p { max-width: 68ch; }
+.t1-raster { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 0 40px; }
+.t1-tag { min-width: 0; }
+.t1-band { position: relative; isolation: isolate; padding: 34px 0 40px 62px; color: var(--tz-ink); }
+.t1-band::before { content: ""; position: absolute; z-index: -1; inset: 0 -100vmax; background: var(--tz); }
+.t1-band::after { content: ""; position: absolute; z-index: -1; left: 19px; top: 0; bottom: 0; width: 2px; background: var(--strich); opacity: 0.8; }
+.t1-band:first-child::after { top: 54px; }
+.t1-band:last-child::after { bottom: auto; height: 54px; }
+.t1-zeit { display: flex; align-items: center; gap: 22px; margin: 0 0 32px -62px; }
+.t1-zeit .tz-icon { box-shadow: 0 0 0 6px var(--tz); }
+.tz-5 .t1-zeit .tz-icon { box-shadow: 0 0 0 6px var(--tz), inset 0 0 0 1.5px rgba(255, 224, 102, 0.6); }
+.t1-zeit h3 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; line-height: 1.05; letter-spacing: -0.02em; }
+.t1-zeit p { margin: 4px 0 0; color: var(--tz-muted); }
+.t1-karten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 18px; }
+.t1-seite { min-width: 0; }
+.t1-fest { position: sticky; top: 20px; display: flex; flex-direction: column; gap: 14px; padding-block: 34px 20px; }
+@media (max-height: 760px) { .t1-fest .kt-schau { display: none; } }
+/* Steht in der letzten Reihe nur ein Helfer, bekommt er die ganze Breite: Bild links, Text rechts */
+@media (min-width: 641px) {
+  .t1-karten > .kt-karte:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .t1-karten > .kt-karte:last-child:nth-child(odd) .karte { flex-direction: row; }
+  .t1-karten > .kt-karte:last-child:nth-child(odd) .karte-bild { align-self: flex-start; width: calc(50% - 10px); margin: 24px 0 12px 10px; }
+  .t1-karten > .kt-karte:last-child:nth-child(odd) .karte-text { justify-content: center; padding: 20px 24px; }
+  .t1-karten > .kt-karte:last-child:nth-child(odd) .karte-fuss { margin-top: 0; }
+}
+@media (max-width: 999px) {
+  .t1-raster { display: block; }
+  .t1-seite { padding-top: 28px; }
+  .t1-fest { position: static; padding: 0; max-width: 460px; }
+  .t1-fest .kt-schau { display: none; }
+}
+@media (max-width: 640px) {
+  .t1-band { padding: 26px 0 22px; }
+  .t1-band::after { display: none; }
+  .t1-zeit { gap: 14px; margin: 0; }
+  .t1-zeit h3 { font-size: 1.55rem; }
+  .t1-zeit p { font-size: 0.95rem; line-height: 1.4; }
+}
+@media (max-width: 640px) {
+  .t1-karten { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 22px 16px 12px; scroll-padding-inline: 16px; }
+  .t1-karten::-webkit-scrollbar { display: none; }
+  .t1-karten > .kt-karte { flex: 0 0 84%; scroll-snap-align: start; }
+}
+
+/* Das Bild sitzt eingerückt unter dem Knopf auf dem Rand: So verdeckt der Knopf nichts vom Video, auch keine Einblendungen
+   (Lukas 15.11.2026, z. B. beim Airfryer am Handy) */
+.kt-karte .karte-bild { margin: 24px 10px 0; border: 1px solid var(--line); border-radius: 12px; }
+/* „Ansehen“ als großer Knopf über die ganze Breite der Kachel (Lukas 15.11.2026: größer, der Platz daneben ist frei) */
+.kt-karte .karte-fuss { flex-direction: column; align-items: stretch; gap: 12px; }
+.kt-ansehen {
+  position: relative; z-index: 1; justify-content: center; gap: 10px; min-height: 46px; padding: 10px 16px; border-radius: 12px;
+  background: var(--accent-soft); color: var(--accent); font-size: 1rem; font-weight: 800; white-space: nowrap;
+  transition: background-color .15s, color .15s;
+}
+.kt-ansehen:hover { background: var(--accent); color: var(--accent-ink); }
+.kt-ansehen:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Zeitkonto: Kachel, Knopf, Ersparnis, Leiste */
+.kt-konto { padding: 22px 24px 20px; border-radius: 16px; background: var(--band); color: var(--band-ink); }
+.kt-konto p, .kt-konto h3 { margin: 0; }
+.kt-konto .kt-titel { margin-bottom: 12px; font-family: var(--font-body); font-size: 0.8rem; font-weight: 800; line-height: 1.3; text-transform: uppercase; letter-spacing: 0.09em; color: var(--marker); }
+.kt-summe { display: flex; flex-direction: column; margin: 0; }
+.kt-summe strong { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; line-height: 1.05; letter-spacing: -0.03em; color: var(--marker); font-variant-numeric: tabular-nums; }
+.kt-summe span { color: var(--band-muted); font-weight: 600; }
+.kt-konto .kt-tage { margin: 8px 0 16px; font-size: 0.95rem; line-height: 1.4; }
+.kt-konto .kt-tage:empty { margin: 0 0 16px; }
+.kt-konto .kt-anzahl { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--band-line); font-weight: 700; }
+.kt-klein { font-size: 0.8rem; line-height: 1.45; color: var(--muted); }
+.kt-konto .kt-klein { margin-top: 4px; color: var(--band-muted); }
+
+/* Knopf „Ins Konto“: mit Plus, gedrückt mit Haken und „Im Konto“ */
+.kt-wahl {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px 6px 9px;
+  border: 1.5px solid var(--accent); border-radius: 999px; background: var(--surface); color: var(--accent);
+  font: inherit; font-size: 0.85rem; font-weight: 700; line-height: 1.2; white-space: nowrap; cursor: pointer;
+  transition: background-color .15s, color .15s, transform .15s;
+}
+.kt-wahl:hover { background: var(--accent-soft); }
+.kt-wahl svg { flex: none; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.kt-wahl .kt-haken, .kt-wahl .kt-ein { display: none; }
+.kt-wer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kt-wahl[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.kt-wahl[aria-pressed="true"] .kt-haken, .kt-wahl[aria-pressed="true"] .kt-ein { display: inline; }
+.kt-wahl[aria-pressed="true"] .kt-plus, .kt-wahl[aria-pressed="true"] .kt-aus { display: none; }
+
+/* Ersparnis im Jahr: mit kleiner Uhr; Helfer ohne nennenswerte Zahl sparen Mühe */
+.kt-wert { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.9rem; line-height: 1.3; color: var(--ink); }
+.kt-wert::before { content: ""; flex: none; width: 15px; height: 15px; background: var(--accent); -webkit-mask: var(--kt-uhr) center / contain no-repeat; mask: var(--kt-uhr) center / contain no-repeat; }
+.kt-wert.kt-geld::before { -webkit-mask-image: var(--kt-muenze); mask-image: var(--kt-muenze); }
+.kt-wert.kt-muehe { color: var(--muted); font-weight: 600; }
+.kt-wert.kt-muehe::before { -webkit-mask-image: var(--kt-leicht); mask-image: var(--kt-leicht); background: var(--strich); }
+:root {
+  --kt-uhr: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.2" fill="none" stroke="black" stroke-width="1.8"/><path d="M8 4.6V8l2.4 1.6" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  --kt-muenze: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.2" fill="none" stroke="black" stroke-width="1.8"/><path d="M10.4 5.6a3 3 0 1 0 0 4.8M5 7.2h3.6M5 8.9h3.6" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg>');
+  --kt-leicht: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 1.5l1.6 4.9 4.9 1.6-4.9 1.6L8 14.5l-1.6-4.9L1.5 8l4.9-1.6z"/></svg>');
+}
+
+
+/* Am Handy: das Konto als Leiste am unteren Rand, Tippen klappt es auf */
+.kt-leiste { position: fixed; left: 0; right: 0; bottom: 0; z-index: 150; padding: 0 max(10px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 0px)); pointer-events: none; transform: translateY(130%); transition: transform .3s ease; }
+.kt-leiste.kt-da { transform: none; }
+.kt-leiste.kt-da.kt-weg { transform: translateY(130%); }
+/* Weggeschoben heißt auch für Tastatur und Vorleser weg: unsichtbar, sobald sie unten raus ist, beim Kommen sofort sichtbar */
+.kt-leiste { visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s; }
+.kt-leiste.kt-da:not(.kt-weg) { visibility: visible; transition: transform .3s ease, visibility 0s; }
+.kt-leiste > * { pointer-events: auto; }
+.kt-blatt { max-width: 560px; max-height: calc(100vh - 150px); margin: 0 auto 8px; overflow: auto; border-radius: 16px; box-shadow: var(--shadow-pop); }
+.kt-leiste-knopf {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 14px;
+  width: 100%; max-width: 560px; margin: 0 auto; padding: 10px 18px 11px; border: 0; border-radius: 16px;
+  background: var(--band); color: var(--band-ink); box-shadow: 0 0 0 1px var(--band-line), 0 12px 30px -8px rgba(0, 0, 0, 0.55);
+  font: inherit; text-align: left; cursor: pointer;
+}
+.kt-leiste-titel { grid-column: 1; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em; color: var(--marker); }
+.kt-leiste-werte { grid-column: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 7px; line-height: 1.25; }
+.kt-leiste-werte strong { font-family: var(--font-display); font-weight: 800; font-size: 1.12rem; color: var(--marker); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kt-leiste-werte > span { color: var(--band-muted); }
+.kt-leiste-jahr { font-size: 0.85rem; }
+.kt-leiste-pfeil { grid-column: 2; grid-row: 1 / span 2; width: 10px; height: 10px; border-left: 2px solid var(--marker); border-top: 2px solid var(--marker); transform: translateY(3px) rotate(45deg); transition: transform .2s; }
+.kt-offen .kt-leiste-pfeil, [aria-expanded="true"] > .kt-leiste-pfeil { transform: translateY(-3px) rotate(225deg); }
+.kt-leiste :focus-visible { outline: 2px solid var(--marker); outline-offset: 2px; }
+@media (min-width: 1000px) { .kt-leiste { display: none; } }
+@media (max-width: 999px) { .kt-mit-leiste { padding-bottom: 96px; } }
+@media (max-width: 640px) { .kt-summe strong { font-size: 2.1rem; } }
+
+/* „Konto leeren“ (auch in der Kachel der Startseite) */
+.kt-konto .kt-anzahl { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.kt-leeren { padding: 0; border: 0; background: none; color: var(--band-muted); font: inherit; font-size: 0.85rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kt-leeren:hover { color: var(--band-ink); }
+/* Ein Helfer rechnet mit den eigenen Zahlen aus seinem Rechner */
+.kt-eigen { display: inline-block; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 0.72rem; font-weight: 800; line-height: 1.5; letter-spacing: 0.02em; white-space: nowrap; vertical-align: 1px; }
+.kt-konto .kt-eigen { background: rgba(255, 224, 102, 0.16); color: var(--marker); }
+
+/* ====================================================================
+   Produktseite: Knopf unter dem Namen, Knopf im Rechner, Leiste unten (am PC eine Karte rechts unten)
+   ==================================================================== */
+.kt-p-kopf { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 12px 0 16px; }
+.kt-p-wert { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-weight: 700; font-size: 0.92rem; color: var(--muted); }
+.kt-r-knopf { padding: 8px 14px 8px 11px; font-size: 0.92rem; border-radius: 10px; }
+.kt-r-zeile { margin: 0; font-size: 0.88rem; line-height: 1.5; color: var(--muted); }
+.kt-r-zeile strong { color: var(--ink); }
+.kt-r-schnitt { padding: 0; border: 0; background: none; color: var(--accent); font: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kt-liste { list-style: none; margin: 16px 0 12px; padding: 12px 0 0; border-top: 1px solid var(--band-line); display: flex; flex-direction: column; gap: 7px; font-size: 0.9rem; line-height: 1.35; }
+.kt-liste li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; }
+.kt-l-name { color: var(--band-ink); font-weight: 600; }
+a.kt-l-name { text-decoration: underline; text-decoration-color: var(--band-line); text-underline-offset: 3px; }
+a.kt-l-name:hover { text-decoration-color: currentColor; }
+.kt-hier .kt-l-name { color: var(--marker); font-weight: 800; }
+.kt-l-wert { color: var(--band-muted); }
+.kt-blatt-fuss { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--band-line); }
+.kt-alle { color: var(--marker); font-weight: 700; text-decoration: none; }
+.kt-alle::before { content: "‹ "; }
+.kt-alle:hover { text-decoration: underline; text-underline-offset: 3px; }
+.kt-p-leiste { z-index: 160; }
+body.kt-mit-leiste { padding-bottom: 96px; }
+@media (min-width: 1000px) {
+  .kt-leiste.kt-p-leiste { display: block; left: auto; right: 24px; bottom: 24px; width: 380px; padding: 0; transform: translateY(calc(100% + 48px)); }
+  .kt-leiste.kt-p-leiste.kt-da { transform: none; }
+  .kt-leiste.kt-p-leiste.kt-da.kt-weg { transform: translateY(calc(100% + 48px)); }
+  .kt-p-leiste .kt-blatt { max-height: calc(100vh - 170px); }
+  body.kt-mit-leiste { padding-bottom: 120px; }
+}
+@media (prefers-reduced-motion: reduce) { .kt-leiste, .kt-leiste.kt-da:not(.kt-weg) { transition: none; } }

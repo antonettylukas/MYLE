@@ -150,6 +150,33 @@
     });
   }
 
+  // Wie einfrieren, nur kommt das Feld hinter der Schrift erst nach dem Laden dazu, eine Grafik pro Schritt und die
+  // sichtbaren zuerst. hinterlegeSchrift misst jede Grafik aus; für alle Standbilder der Startseite auf einmal hielt das
+  // ein Handy beim Laden spürbar fest (Lighthouse: Total Blocking Time).
+  function einfrierenSpaeter(root) {
+    const svgs = [...root.querySelectorAll(".standbild svg")];
+    svgs.forEach(svg => { try { svg.pauseAnimations(); svg.setCurrentTime(99); } catch (e) { /* alter Browser: egal */ } });
+    if (!window.hinterlegeSchrift || !svgs.length) return;
+    let q = einfrierenSpaeter.q; // eine Warteschlange für alle Aufrufe
+    if (!q) {
+      q = einfrierenSpaeter.q = { offen: new Set(), nah: new Set(), laeuft: false };
+      q.io = "IntersectionObserver" in window
+        ? new IntersectionObserver(es => es.forEach(e => (e.isIntersecting ? q.nah.add(e.target) : q.nah.delete(e.target))), { rootMargin: "300px 0px" })
+        : null;
+      q.spaeter = window.requestIdleCallback ? f => requestIdleCallback(f, { timeout: 400 }) : f => setTimeout(f, 20);
+      q.schritt = () => {
+        const svg = [...q.nah].find(x => q.offen.has(x)) || q.offen.values().next().value;
+        if (!svg) { q.laeuft = false; return; }
+        q.offen.delete(svg); q.nah.delete(svg);
+        if (q.io) q.io.unobserve(svg);
+        if (svg.isConnected) hinterlegeSchrift(svg);
+        q.spaeter(q.schritt);
+      };
+    }
+    svgs.forEach(svg => { q.offen.add(svg); if (q.io) q.io.observe(svg); });
+    if (!q.laeuft) { q.laeuft = true; q.spaeter(q.schritt); }
+  }
+
   // Unter dem Bild steht farbig hinterlegt, was das Produkt ersetzt ("Statt …"), damit man gleich
   // die Arbeit sieht, die nervt. Ohne "statt" in produkte.js steht dort klein der Bereich.
   function karte(p) {
@@ -385,27 +412,9 @@
     if (intro && (heute.getMonth() === 10 || (heute.getMonth() === 11 && heute.getDate() <= 24))) {
       intro.insertAdjacentHTML("beforeend", `<a class="saison-hinweis" href="geschenke"><span class="saison-symbol" aria-hidden="true">🎁</span><span><strong>${t("Geschenke, die Zeit schenken", "Gifts that give time")}</strong><span>${t("Meine Ideen für Weihnachten", "My ideas for Christmas")}</span></span></a>`);
     }
+    // Alle Helfer nach Tageszeit, daneben das Zeitkonto (Lukas 15.11.2026, Einzelheiten bei zeitkonto())
     const liste = document.getElementById("uebersicht");
-    if (liste) {
-      liste.innerHTML = PRODUKTE.map(karte).join("");
-      einfrieren(liste);
-      vorschauFuer(liste);
-      abspielenImBild(liste);
-      const filter = document.getElementById("filter");
-      const kategorien = [...new Set(PRODUKTE.map(p => p.kategorie))];
-      if (filter && kategorien.length > 1) {
-        filter.innerHTML = ["", ...kategorien].map(k =>
-          `<button type="button" class="chip" data-filter="${esc(k)}" aria-pressed="${k === ""}">${k ? esc(k) : t("Alle", "All")}</button>`).join("");
-        filter.addEventListener("click", ev => {
-          const b = ev.target.closest("[data-filter]");
-          if (!b) return;
-          const k = b.dataset.filter;
-          filter.querySelectorAll("[data-filter]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
-          vorschauZu();
-          liste.querySelectorAll(".karte").forEach(c => { c.hidden = !!k && c.dataset.kategorie !== k; });
-        });
-      }
-    }
+    if (liste) baueTagUndKonto(liste);
     const um = document.getElementById("ueber-mich");
     if (um && UM) {
       const roboter = PRODUKTE.find(p => p.id === "saugroboter");
@@ -422,6 +431,528 @@
         </div>
         ${weitere.length ? `<div class="um-reihe">${weitere.map(f => foto(f.datei, f.text || "")).join("")}</div>` : ""}`;
     }
+  }
+
+  // ---------- Zeitkonto: Startseite „Ein Tag mit deinen Helfern“ und Produktseiten (Lukas 15.11.2026) ----------
+  // Auf der Startseite stehen alle Helfer nach Tageszeit. Ein Klick irgendwo auf die Kachel nimmt einen Helfer ins Zeitkonto
+  // (oder wieder heraus), nur „Ansehen“ öffnet seine Seite. Das Konto zählt zusammen, wie viel Zeit und Geld die gewählten
+  // Helfer im Jahr sparen: mit Durchschnittswerten (Startwerte der Rechner, gerundet wie auf der Geschenke-Seite) oder, wenn
+  // man auf der Seite eines Helfers dessen Rechner umstellt, mit den eigenen Zahlen (Zeit und echtes Geld im Jahr, ohne den
+  // Wert einer Freizeitstunde, sonst zählte die Zeit doppelt).
+  // Gespeichert wird erst, wenn man das Konto selbst benutzt: localStorage „myle-zeitkonto“ (Datenschutzerklärung, Abschnitt 4).
+  // „Konto leeren“ löscht den Eintrag. Ohne Eintrag zeigt die Startseite drei Beispiel-Helfer und die Produktseiten kein Konto.
+  function zeitkonto() {
+    if (zeitkonto.k) return zeitkonto.k;
+    const SCHLUESSEL = "myle-zeitkonto";
+    const P = id => PRODUKTE.find(p => p.id === id);
+    const START = ["saugroboter", "airfryer", "kaffeevollautomat"].filter(P);
+    // Durchschnitt pro Helfer: Stunden ab 5 im Jahr, Euro ab 20 im Jahr (wie auf der Geschenke-Seite).
+    // Erst ausrechnen, wenn er gebraucht wird: Alle Rechner auf einmal durchzurechnen kostet am Handy spürbar Zeit.
+    const schnitte = {};
+    function SCHNITT(id) {
+      if (!schnitte[id]) {
+        const p = P(id);
+        if (!p) return null;
+        const e = jahresErsparnis(p);
+        const std = e && e.std >= 5 ? (e.std >= 20 ? Math.round(e.std / 5) * 5 : Math.round(e.std)) : 0;
+        const eur = e && e.geld >= 20 ? Math.round(e.geld / 5) * 5 : 0;
+        schnitte[id] = { std, eur, rechner: !!e };
+      }
+      return schnitte[id];
+    }
+    const runde = w => ({ std: Math.max(0, Math.round(Number(w.std) || 0)), eur: Math.max(0, Math.round(Number(w.eur) || 0)) });
+
+    // ---- Speicher ----
+    const BEISPIEL = typ === "start" ? START : [];
+    let wahl = new Set(BEISPIEL), eigene = {}, gespeichert = false;
+    function laden() {
+      let d;
+      try { d = JSON.parse(localStorage.getItem(SCHLUESSEL) || "null"); } catch (e) { return; } // gesperrt: Stand der Seite behalten
+      if (!d || d.v !== 1 || !Array.isArray(d.ids)) { wahl = new Set(BEISPIEL); eigene = {}; gespeichert = false; return; }
+      wahl = new Set(d.ids.filter(id => P(id)));
+      eigene = {};
+      Object.keys(d.eigene || {}).forEach(id => {
+        const x = d.eigene[id];
+        if (P(id) && x && Number.isFinite(x.std) && Number.isFinite(x.eur)) eigene[id] = runde(x);
+      });
+      gespeichert = true;
+    }
+    laden();
+    const hoerer = [];
+    const melden = () => hoerer.forEach(f => { try { f(); } catch (e) { console.error(e); } });
+    function speichern() {
+      gespeichert = true;
+      try { localStorage.setItem(SCHLUESSEL, JSON.stringify({ v: 1, ids: [...wahl], eigene })); } catch (e) { /* gesperrt: gilt nur auf dieser Seite */ }
+      melden();
+    }
+    // Konto in einem anderen Tab geändert, oder „Zurück“ holt die Seite aus dem Browser-Cache: neu lesen
+    addEventListener("storage", ev => { if (ev.key === SCHLUESSEL || ev.key === null) { laden(); melden(); } });
+    addEventListener("pageshow", ev => { if (ev.persisted) { laden(); melden(); } });
+
+    // ---- Rechnen und Texte ----
+    const STD = t("Std.", "h");
+    const ca = x => t("ca. {x}", "approx. {x}", { x });
+    const wert = id => eigene[id] || SCHNITT(id);
+    const teile = (w, mitCa) => {
+      const x = [w.std ? `${nf(w.std)} ${STD}` : "", w.eur ? euro(w.eur) : ""].filter(Boolean).join(" + ");
+      return x && mitCa ? ca(x) : x;
+    };
+    // Ersparnis eines Helfers, z. B. „ca. 50 Std. + 130 € im Jahr“; mit eigenen Zahlen ohne „ca.“
+    function wertText(id, mitJahr = true) {
+      const x = teile(wert(id), !eigene[id]);
+      if (!x) return LABELS[(P(id).spart || [])[0]] || "";
+      return mitJahr ? t("{x} im Jahr", "{x} a year", { x }) : x;
+    }
+    const art = id => { const w = wert(id); return w.std ? "zeit" : w.eur ? "geld" : "muehe"; };
+    function summe() {
+      let std = 0, eur = 0, n = 0, eigen = 0;
+      wahl.forEach(id => { const w = wert(id); std += w.std; eur += w.eur; n++; if (eigene[id]) eigen++; });
+      return { std, eur, n, eigen };
+    }
+    const stdText = n => (n ? ca(`${nf(n)} ${STD}`) : `0 ${STD}`);
+    const eurText = n => (n ? ca(euro(n)) : euro(0));
+    function tageText(std) {
+      const d = Math.round(std / 8);
+      if (d >= 2) return t("Das sind rund {n} volle Arbeitstage, die du für etwas anderes hast.", "That's about {n} full working days for other things.", { n: nf(d) });
+      return d === 1 ? t("Das ist rund ein voller Arbeitstag, den du für etwas anderes hast.", "That's about one full working day for other things.") : "";
+    }
+    const anzahlText = n => n === 0 ? t("Noch kein Helfer gewählt", "No helpers chosen yet")
+      : n === 1 ? t("1 Helfer gewählt", "1 helper chosen") : t("{n} Helfer gewählt", "{n} helpers chosen", { n });
+    const helferText = n => (n === 1 ? t("1 Helfer", "1 helper") : t("{n} Helfer", "{n} helpers", { n }));
+    // Wie das Konto rechnet (steht klein unter dem Konto); hier = id des Helfers auf seiner eigenen Seite
+    function hinweisText(s, hier) {
+      if (s.n && s.eigen === s.n) return t("Alles mit deinen eigenen Zahlen gerechnet.", "Everything calculated with your own numbers.");
+      if (s.eigen === 1) return t("Ein Helfer mit deinen eigenen Zahlen, die anderen mit Durchschnittswerten.", "One helper with your own numbers, the others with average values.");
+      if (s.eigen) return t("{n} Helfer mit deinen eigenen Zahlen, die anderen mit Durchschnittswerten.", "{n} helpers with your own numbers, the others with average values.", { n: s.eigen });
+      if (hier && P(hier) && SCHNITT(hier).rechner) return t("Geschätzt mit Durchschnittswerten. Stellst du hier den Rechner um, zählen deine eigenen Zahlen.", "Estimated with average values. If you adjust the calculator here, your own numbers count.");
+      // „kommt mit“ erst, wenn man das Konto benutzt hat: Die Beispiel-Helfer allein nimmt die Seite nicht mit
+      return gespeichert
+        ? t("Geschätzt mit Durchschnittswerten. Auf der Seite jedes Helfers rechnest du mit deinen eigenen Zahlen, und dein Konto kommt mit.", "Estimated with average values. On each helper's page you can use your own numbers, and your account comes along.")
+        : t("Geschätzt mit Durchschnittswerten. Auf der Seite jedes Helfers rechnest du mit deinen eigenen Zahlen.", "Estimated with average values. On each helper's page you can use your own numbers.");
+    }
+
+    // Zahlen zählen kurz hoch oder runter, wenn sich das Konto ändert
+    const zahlen = new WeakMap();
+    function zahl(el, n, text) {
+      const alt = zahlen.has(el) ? zahlen.get(el) : null;
+      zahlen.set(el, n);
+      if (WENIG_BEWEGUNG || alt === null || alt === n || !el.getClientRects().length) { el.textContent = text(n); return; }
+      const t0 = performance.now(), dauer = 450;
+      const schritt = jetzt => {
+        if (zahlen.get(el) !== n) return;
+        const f = Math.min(1, (jetzt - t0) / dauer), e = 1 - Math.pow(1 - f, 3);
+        el.textContent = text(Math.round(alt + (n - alt) * e));
+        if (f < 1) requestAnimationFrame(schritt);
+      };
+      requestAnimationFrame(schritt);
+    }
+    // Knopf „Ins Zeitkonto“ / „Im Zeitkonto“ (aria-pressed sagt, ob der Helfer drin ist). Für Vorleser steht der Name des
+    // Helfers versteckt dahinter; so enthält der Name des Knopfs genau den sichtbaren Text (WCAG 2.5.3).
+    const PLUS = `<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path class="kt-plus" d="M8 3v10M3 8h10"/><path class="kt-haken" d="M3 8.5l3 3 7-7"/></svg>`;
+    const knopf = (id, cls = "") => `<button type="button" class="kt-wahl${cls ? " " + cls : ""}" data-wahl="${esc(id)}" aria-pressed="${wahl.has(id)}">${PLUS}<span class="kt-aus">${t("Ins Zeitkonto", "Add to time account")}</span><span class="kt-ein">${t("Im Zeitkonto", "In time account")}</span><span class="kt-wer">, ${esc(P(id).name)}</span></button>`;
+    // Kurzer Hüpfer, wenn sich ein Knopf umschaltet
+    function hupf(el) {
+      if (WENIG_BEWEGUNG || !el || !el.animate) return;
+      el.animate([{ transform: "scale(1)" }, { transform: "scale(1.12)" }, { transform: "scale(1)" }], { duration: 260, easing: "ease-out", composite: "add" });
+    }
+
+    zeitkonto.k = {
+      P, SCHNITT, runde,
+      gespeichert: () => gespeichert,
+      hat: id => wahl.has(id),
+      eigen: id => eigene[id] || null,
+      ids: () => [...wahl],
+      wertText, art, summe, stdText, eurText, tageText, anzahlText, helferText, hinweisText, zahl, knopf, hupf,
+      // an: rein oder raus; w: eigene Zahlen (aus dem Rechner), die ab jetzt für diesen Helfer zählen
+      setze(id, an, w) {
+        if (!P(id)) return;
+        if (an) { wahl.add(id); if (w) eigene[id] = runde(w); } else wahl.delete(id);
+        speichern();
+      },
+      eigeneZahlen(id, w) { if (P(id)) { eigene[id] = runde(w); speichern(); } },
+      schnitt(id) { delete eigene[id]; speichern(); },
+      // „Konto leeren“ löscht auch den Eintrag im Browser: Bis zum Neuladen bleibt das Konto leer, danach ist alles wie beim ersten Besuch
+      leeren() { wahl.clear(); eigene = {}; gespeichert = false; try { localStorage.removeItem(SCHLUESSEL); } catch (e) { /* gesperrt */ } melden(); },
+      beiAenderung: f => hoerer.push(f)
+    };
+    return zeitkonto.k;
+  }
+
+  // Die Kachel mit dem Zeitkonto: dunkel, mit Summe, Tagen, Anzahl und „Konto leeren“
+  function kontoKarte(cls = "") {
+    return `
+      <div class="kt-konto${cls ? " " + cls : ""}">
+        <h3 class="kt-titel">${t("Dein Zeitkonto", "Your time account")}</h3>
+        <p class="kt-summe"><strong data-k="std"></strong><span>${t("mehr freie Zeit im Jahr", "more free time a year")}</span></p>
+        <p class="kt-tage" data-k="tage"></p>
+        <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
+        <p class="kt-anzahl"><span data-k="anzahl"></span><button type="button" class="kt-leeren" data-k-leeren>${t("Konto leeren", "Empty account")}</button></p>
+        <p class="kt-klein" data-k="hinweis"></p>
+      </div>`;
+  }
+
+  // Die Tageszeiten der Startseite mit ihren Helfern (ids aus produkte.js), vom Morgen bis zum Wochenende.
+  // Neuer Helfer: hier eintragen. Wer fehlt, steht am Ende beim Wochenende.
+  function tageszeiten() {
+    return [
+      { id: "morgen", name: t("Morgens", "Mornings"), text: t("Kaffee, Dusche, Zähne: Der Tag fängt entspannt an.", "Coffee, shower, teeth: the day starts relaxed."),
+        ids: ["kaffeevollautomat", "sparduschkopf", "zahnbuerste"] },
+      { id: "arbeit", name: t("Während du arbeitest", "While you work"), text: t("Zu Hause läuft die Arbeit weiter, nur ohne dich.", "At home the work carries on, just without you."),
+        ids: ["waschtrockner", "saugroboter", "balkonkraftwerk", "thermostate"] },
+      { id: "feierabend", name: t("Feierabend", "After work"), text: t("Du gibst die Zutaten hinein, den Rest erledigen die Helfer.", "You put the ingredients in, the helpers do the rest."),
+        ids: ["airfryer", "reiskocher", "kuechenmaschine-kochfunktion", "wassersprudler"] },
+      { id: "essen", name: t("Nach dem Essen", "After dinner"), text: t("Auch das Aufräumen gibst du ab.", "You hand off the tidying up too."),
+        ids: ["mini-geschirrspueler", "stretchdeckel"] },
+      { id: "abend", name: t("Abends", "Evenings"), text: t("Jetzt gehört die Zeit dir.", "Now the time is yours."),
+        ids: ["smarte-lampen", "kindle", "klimaanlage"] },
+      { id: "wochenende", name: t("Am Wochenende", "At the weekend"), text: t("Was übrig bleibt, geht leichter von der Hand.", "What's left is easier to get done."),
+        ids: ["akkusauger", "reinigungsbuerste", "kuechenmaschine"] }
+    ];
+  }
+  // Kleine Zeichen für die Tageszeiten (Strichzeichnungen, Farbe kommt aus dem Text)
+  function tzIcon(id) {
+    const d = {
+      morgen: "M3 18h18M7 18a5 5 0 0 1 10 0M12 7.5v3M5.4 11.2l2 1.4M18.6 11.2l-2 1.4M9 21.5h6",
+      arbeit: "M12 8.2a3.8 3.8 0 1 1 0 7.6a3.8 3.8 0 1 1 0-7.6zM12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8",
+      feierabend: "M4 11h16v4.5a4.5 4.5 0 0 1-4.5 4.5h-7A4.5 4.5 0 0 1 4 15.5zM2 11h2M20 11h2M9 7.5c0-1.2 1.2-1.6 1.2-2.8M14 7.5c0-1.2 1.2-1.6 1.2-2.8",
+      essen: "M12 5.5a6.5 6.5 0 1 1 0 13a6.5 6.5 0 1 1 0-13zM12 9a3 3 0 1 1 0 6a3 3 0 1 1 0-6zM2.8 4v4.5M2.8 8.5v11M21.2 4c-1.4 0-2 2-2 4.5s.7 3 2 3v8",
+      abend: "M19.5 14.6A7.8 7.8 0 1 1 9.4 4.5a6.2 6.2 0 0 0 10.1 10.1z",
+      wochenende: "M5 6h14a1.5 1.5 0 0 1 1.5 1.5v11A1.5 1.5 0 0 1 19 20H5a1.5 1.5 0 0 1-1.5-1.5v-11A1.5 1.5 0 0 1 5 6zM3.5 10.5h17M8 3.5v4M16 3.5v4M9 15l2 2 4-4"
+    }[id];
+    return `<span class="tz-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${d}"/></svg></span>`;
+  }
+
+  // Startseite: links die Tageszeiten mit ihren Helfern, rechts (am PC) bleibt das Zeitkonto stehen, darüber das Video des
+  // Helfers unter der Maus. Am Handy ist jede Tageszeit eine Reihe zum Wischen, das Konto steht als Leiste am unteren Rand.
+  function baueTagUndKonto(ziel) {
+    const K = zeitkonto(), P = K.P;
+    const TAG = tageszeiten();
+    const drin = new Set(TAG.flatMap(z => z.ids));
+    TAG[TAG.length - 1].ids.push(...PRODUKTE.map(p => p.id).filter(id => !drin.has(id)));
+    // Farbig hinterlegt, was der Helfer ersetzt („Statt …“), damit man gleich die Arbeit sieht, die nervt; ohne statt klein der Bereich
+    const statt = p => p.statt
+      ? `<span class="statt"><span>${esc(p.statt).replace(/^(statt|instead of)\s+/i, "<b>$1</b> ")}</span></span>`
+      : `<span class="cat">${esc(p.kategorie)}</span>`;
+    // Standbilder erst als leerer Rahmen; gebaut werden sie, wenn ihre Tageszeit in die Nähe des Bildschirms kommt (unten)
+    const bild = p => `<div class="v-bild">${p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">`
+      : HAT_VIDEOS && VIDEOS[p.video] ? `<div class="buehne standbild" aria-hidden="true"></div>` : standbild(p)}</div>`;
+    // Ein Klick irgendwo auf die Kachel nimmt den Helfer ins Konto. Der Knopf sitzt auf dem oberen Rand, „Ansehen“ öffnet die Seite.
+    const kachel = p => `
+      <div class="kt-karte" id="zu-${esc(p.id)}" data-kt="${esc(p.id)}" data-id="${esc(p.id)}">
+        ${K.knopf(p.id, "kt-am-rand")}
+        <div class="karte">
+          <div class="karte-bild">${bild(p)}</div>
+          <div class="karte-text">
+            ${statt(p)}
+            <span class="karte-name">${esc(p.name)}</span>
+            <span class="karte-zeile">${esc(p.nutzen || p.kurz)}</span>
+            <span class="karte-fuss"><span class="kt-wert" data-wert="${esc(p.id)}"></span><a class="mehr kt-ansehen" href="${esc(p.id)}" aria-label="${esc(t("{name} ansehen", "View {name}", { name: p.name }))}">${t("Ansehen", "View")}</a></span>
+          </div>
+        </div>
+      </div>`;
+    ziel.innerHTML = `
+      <div class="t1-tag">${TAG.map((z, i) => ({ z, i, ps: z.ids.map(P).filter(Boolean) })).filter(x => x.ps.length).map(({ z, i, ps }) => `
+        <section class="t1-band tz-${i + 1}" aria-labelledby="t1-${z.id}">
+          <div class="t1-zeit">${tzIcon(z.id)}<div><h3 id="t1-${z.id}">${esc(z.name)}</h3><p>${esc(z.text)}</p></div></div>
+          <div class="t1-karten">${ps.map(kachel).join("")}</div>
+        </section>`).join("")}
+      </div>
+      <aside class="t1-seite" aria-label="${t("Dein Zeitkonto", "Your time account")}"><div class="t1-fest">
+        <a class="kt-schau" href="saugroboter"><div class="v-bild"></div><span class="kt-schau-text"><span class="kt-schau-name"></span><span class="kt-schau-wert"></span></span></a>
+        ${kontoKarte()}
+      </div></aside>`;
+    // Standbilder einer Tageszeit bauen, sobald sie in die Nähe des Bildschirms kommt, die ganze Reihe auf einmal (so kommt
+    // beim Wischen am Handy nichts nach). Alle 19 gleich beim Laden zu bauen hielt das Handy spürbar auf.
+    const fuelle = band => {
+      band.querySelectorAll(".kt-karte").forEach(k => {
+        const leer = k.querySelector(".buehne.standbild:empty"), p = leer && P(k.dataset.id);
+        if (p) leer.outerHTML = standbild(p);
+      });
+      einfrierenSpaeter(band);
+    };
+    const baender = ziel.querySelectorAll(".t1-band");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); fuelle(e.target); } }), { rootMargin: "800px 0px" });
+      baender.forEach(b => io.observe(b));
+    } else baender.forEach(fuelle);
+
+    // Alles, was vom Konto abhängt, neu zeichnen (auch die Leiste am Handy)
+    const bereiche = () => [ziel, document.querySelector(".kt-leiste")].filter(Boolean);
+    function zeigen() {
+      const s = K.summe();
+      bereiche().forEach(b => {
+        b.querySelectorAll('[data-k="std"]').forEach(el => K.zahl(el, s.std, K.stdText));
+        b.querySelectorAll('[data-k="eur"]').forEach(el => K.zahl(el, s.eur, K.eurText));
+        b.querySelectorAll('[data-k="tage"]').forEach(el => { el.textContent = K.tageText(s.std); });
+        b.querySelectorAll('[data-k="anzahl"]').forEach(el => { el.textContent = K.anzahlText(s.n); });
+        b.querySelectorAll('[data-k="hinweis"]').forEach(el => { el.textContent = K.hinweisText(s); });
+        b.querySelectorAll("[data-k-leeren]").forEach(el => { el.hidden = s.n === 0; });
+      });
+      ziel.querySelectorAll("[data-wahl]").forEach(b => b.setAttribute("aria-pressed", String(K.hat(b.dataset.wahl))));
+      ziel.querySelectorAll("[data-kt]").forEach(el => el.classList.toggle("kt-an", K.hat(el.dataset.kt)));
+      ziel.querySelectorAll("[data-wert]").forEach(el => {
+        const id = el.dataset.wert, a = K.art(id);
+        el.className = "kt-wert" + (a === "geld" ? " kt-geld" : a === "muehe" ? " kt-muehe" : "");
+        el.innerHTML = `<span>${esc(K.wertText(id))}</span>${K.eigen(id) ? `<span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : ""}`;
+      });
+    }
+    K.beiAenderung(zeigen);
+    // Klick auf den Knopf oder irgendwo auf die Kachel: Helfer rein oder raus. Nur „Ansehen“ (ein Link) öffnet die Seite des Helfers.
+    const klick = ev => {
+      const el = ev.target;
+      if (!el.closest) return;
+      const b = el.closest("[data-wahl]");
+      if (b) { ev.preventDefault(); K.setze(b.dataset.wahl, !K.hat(b.dataset.wahl)); K.hupf(b); return; }
+      if (el.closest("[data-k-leeren]")) { K.leeren(); return; }
+      if (el.closest("a, button, input, label, summary, select, textarea")) return;
+      const k = el.closest(".kt-karte[data-kt]");
+      if (!k || ev.detail > 1) return; // Doppelklick zählt nur einmal
+      K.setze(k.dataset.kt, !K.hat(k.dataset.kt));
+      K.hupf(k.querySelector("[data-wahl]"));
+    };
+    ziel.addEventListener("click", klick);
+
+    // Videos: Mit Maus läuft das Video des Helfers unter der Maus über dem Konto. Ohne Maus (Handy) läuft das Video der
+    // Kachel, die ganz zu sehen ist und der Bildschirmmitte am nächsten steht, nach kurzer Pause in ihrem Bild.
+    let film = null;
+    function filmStart(bildEl, p) {
+      if (film && film.bildEl === bildEl) return;
+      filmStop();
+      if (!bildEl || !p || !HAT_VIDEOS || !VIDEOS[p.video] || typeof baueVideo !== "function") return;
+      const box = document.createElement("div");
+      box.className = "karte-video";
+      box.setAttribute("aria-hidden", "true");
+      bildEl.appendChild(box);
+      const player = baueVideo(p, VIDEOS[p.video], box, { vonSelbst: false, schleife: true, schlicht: true, start: 0 });
+      player.abspielen();
+      film = { bildEl, box, player };
+    }
+    function filmStop() {
+      if (!film) return;
+      film.player.anhalten(); film.box.remove(); film = null;
+    }
+    // Die Vorschau über dem Konto zeigt CSS nur am PC mit genug Höhe; erst dann baut sie ihr Standbild (spart am Handy Zeit)
+    const schau = ziel.querySelector(".kt-schau");
+    const schauBild = schau.querySelector(".v-bild"), schauName = schau.querySelector(".kt-schau-name"), schauWert = schau.querySelector(".kt-schau-wert");
+    const schmal = window.matchMedia && matchMedia("(max-width: 999px)"), flach = window.matchMedia && matchMedia("(max-height: 760px)");
+    const schauDa = () => !(schmal && schmal.matches) && !(flach && flach.matches);
+    let schauId = "", schauGebaut = "";
+    const zeigeSchau = id => {
+      if (!P(id)) return;
+      schauId = id;
+      if (id === schauGebaut || !schauDa()) return;
+      schauGebaut = id;
+      const p = P(id);
+      filmStop();
+      schau.setAttribute("href", p.id);
+      schauBild.innerHTML = standbild(p);
+      einfrieren(schau);
+      schauName.textContent = p.name;
+      schauWert.textContent = K.wertText(id);
+    };
+    [schmal, flach].forEach(mq => mq && mq.addEventListener && mq.addEventListener("change", () => zeigeSchau(schauId)));
+    K.beiAenderung(() => { if (schauGebaut) schauWert.textContent = K.wertText(schauGebaut); });
+    if (MIT_MAUS) {
+      let timer = 0, el = null;
+      ziel.addEventListener("pointerover", ev => {
+        if (ev.pointerType !== "mouse") return;
+        const k = ev.target.closest(".kt-karte");
+        if (!k || k === el) return;
+        el = k; clearTimeout(timer);
+        timer = setTimeout(() => { if (el === k) { zeigeSchau(k.dataset.id); if (schauDa()) filmStart(schauBild, P(k.dataset.id)); } }, 140);
+      });
+      ziel.addEventListener("pointerout", ev => {
+        const k = ev.target.closest(".kt-karte");
+        if (!k || (ev.relatedTarget && k.contains(ev.relatedTarget))) return;
+        if (el === k) { el = null; clearTimeout(timer); filmStop(); }
+      });
+    } else if (!WENIG_BEWEGUNG) {
+      let geplant = false, timer = 0, jetzt = null;
+      const bildVon = k => k.querySelector(".v-bild");
+      const waehle = () => {
+        geplant = false;
+        let best = null, bd = 1e9;
+        const mitte = innerHeight * 0.5;
+        ziel.querySelectorAll(".kt-karte").forEach(k => {
+          const r = bildVon(k).getBoundingClientRect();
+          if (!r.width || r.top < 70 || r.bottom > innerHeight - 8 || r.left < -4 || r.right > innerWidth + 4) return;
+          const d = Math.abs(r.top + r.height / 2 - mitte) - (k === jetzt ? 40 : 0);
+          if (d < bd) { bd = d; best = k; }
+        });
+        if (best === jetzt) return;
+        jetzt = best; clearTimeout(timer); filmStop();
+        if (best) timer = setTimeout(() => { if (jetzt === best && best.isConnected) filmStart(bildVon(best), P(best.dataset.id)); }, 1200);
+      };
+      const bald = () => { if (!geplant) { geplant = true; requestAnimationFrame(waehle); } };
+      addEventListener("scroll", bald, { passive: true });
+      addEventListener("resize", bald);
+      ziel.addEventListener("scroll", bald, { passive: true, capture: true }); // Reihen zum Wischen
+      bald();
+    }
+    ziel.addEventListener("focusin", ev => { const k = ev.target.closest(".kt-karte"); if (k) zeigeSchau(k.dataset.id); });
+    zeigeSchau(K.ids()[0] || "saugroboter");
+
+    // Am Handy: das Konto als schmale Leiste am unteren Rand, solange man bei den Tageszeiten ist. Tippen klappt es auf.
+    // Steht die ganze Konto-Kachel gerade sichtbar auf der Seite, macht die Leiste Platz (sonst stünde es doppelt da).
+    const l = document.createElement("div");
+    l.className = "kt-leiste";
+    l.innerHTML = `
+      <div class="kt-blatt" id="kt-blatt" hidden>${kontoKarte("kt-im-blatt")}</div>
+      <button type="button" class="kt-leiste-knopf" aria-expanded="false" aria-controls="kt-blatt">
+        <span class="kt-leiste-titel">${t("Dein Zeitkonto", "Your time account")}</span>
+        <span class="kt-leiste-werte"><strong data-k="std"></strong><span aria-hidden="true">·</span><strong data-k="eur"></strong><span class="kt-leiste-jahr">${t("im Jahr", "a year")}</span></span>
+        <span class="kt-leiste-pfeil" aria-hidden="true"></span>
+      </button>`;
+    document.body.appendChild(l);
+    l.addEventListener("click", klick);
+    const lKnopf = l.querySelector(".kt-leiste-knopf"), blatt = l.querySelector(".kt-blatt");
+    const auf = an => { lKnopf.setAttribute("aria-expanded", String(an)); blatt.hidden = !an; l.classList.toggle("kt-offen", an); };
+    lKnopf.addEventListener("click", () => auf(lKnopf.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("click", ev => { if (!blatt.hidden && !l.contains(ev.target)) auf(false); });
+    addEventListener("keydown", ev => { if (ev.key === "Escape" && !blatt.hidden) { auf(false); lKnopf.focus(); } });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(e => { l.classList.toggle("kt-da", e[0].isIntersecting); if (!e[0].isIntersecting) auf(false); }, { rootMargin: "-25% 0px -25% 0px" })
+        .observe(ziel.querySelector(".t1-tag"));
+      const sichtbar = new Set();
+      const io = new IntersectionObserver(e => {
+        e.forEach(x => (x.intersectionRatio >= 0.5 ? sichtbar.add(x.target) : sichtbar.delete(x.target)));
+        l.classList.toggle("kt-weg", sichtbar.size > 0);
+        if (sichtbar.size) auf(false);
+      }, { threshold: [0, 0.5, 1], rootMargin: "0px 0px -90px 0px" });
+      ziel.querySelectorAll(".kt-konto").forEach(k => io.observe(k));
+    }
+    (ziel.closest(".helfer") || ziel).classList.add("kt-mit-leiste"); // am Handy Platz unter der letzten Reihe für die Leiste
+    zeigen();
+
+    // Zurück von einer Produktseite (#zu-<helfer>): Zur Kachel springt der Browser bzw. springeZumAnker, hier leuchtet sie kurz auf
+    function zuKachel() {
+      const m = /^#(zu-[a-z0-9-]+)$/.exec(location.hash);
+      const k = m && document.getElementById(m[1]);
+      if (!k) return;
+      k.classList.add("kt-zurueck");
+      setTimeout(() => k.classList.remove("kt-zurueck"), 1800);
+    }
+    zuKachel();
+    addEventListener("hashchange", zuKachel);
+  }
+
+  // Produktseite: Knopf unter dem Namen und im Rechner, unten die Leiste mit dem Konto (am PC eine Karte rechts unten).
+  // Knopf unter dem Namen und Leiste gibt es nur, wenn man das Konto schon benutzt hat; den Knopf im Rechner immer.
+  function kontoProduktseite(p, ziel) {
+    const K = zeitkonto(), id = p.id;
+    if (!K.P(id)) return;
+    let rechner = null; // die eigenen Zahlen aus dem Rechner, sobald man ihn selbst umgestellt hat
+
+    // 1) Unter dem Namen (nach „Zuletzt geprüft“)
+    const kopf = document.createElement("div");
+    kopf.className = "kt-p-kopf";
+    kopf.innerHTML = `${K.knopf(id, "kt-p-knopf")}<span class="kt-p-wert"></span>`;
+    const heroText = ziel.querySelector(".p-hero-text");
+    const nach = heroText && (heroText.querySelector(".geprueft-oben") || heroText.querySelector("h1"));
+    if (nach) nach.after(kopf); else if (heroText) heroText.prepend(kopf);
+
+    // 2) Im Rechner: Knopf neben „Ergebnis teilen“ und darunter, womit das Konto für diesen Helfer rechnet
+    const teilen = ziel.querySelector(".rechner .teilen");
+    let rZeile = null;
+    if (teilen) {
+      const tk = teilen.querySelector(".teilen-knopf");
+      (tk || teilen.firstChild).insertAdjacentHTML(tk ? "afterend" : "beforebegin", K.knopf(id, "kt-r-knopf"));
+      teilen.insertAdjacentHTML("afterend", `<p class="kt-r-zeile" hidden></p>`);
+      rZeile = teilen.nextElementSibling;
+    }
+
+    // 3) Unten die Leiste (am PC eine kleine Karte rechts unten). Tippen klappt das ganze Konto auf.
+    const leiste = document.createElement("div");
+    leiste.className = "kt-leiste kt-p-leiste";
+    leiste.innerHTML = `
+      <div class="kt-blatt" id="kt-blatt" hidden>
+        <div class="kt-konto kt-im-blatt">
+          <h3 class="kt-titel">${t("Dein Zeitkonto", "Your time account")}</h3>
+          <p class="kt-summe"><strong data-k="std"></strong><span>${t("mehr freie Zeit im Jahr", "more free time a year")}</span></p>
+          <p class="kt-tage" data-k="tage"></p>
+          <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
+          <ul class="kt-liste" data-k="liste"></ul>
+          <p class="kt-klein" data-k="hinweis"></p>
+          <div class="kt-blatt-fuss"><a class="kt-alle" href="./#zu-${esc(id)}">${t("Alle Helfer ansehen", "See all helpers")}</a><button type="button" class="kt-leeren">${t("Konto leeren", "Empty account")}</button></div>
+        </div>
+      </div>
+      <button type="button" class="kt-leiste-knopf" aria-expanded="false" aria-controls="kt-blatt">
+        <span class="kt-leiste-titel">${t("Dein Zeitkonto", "Your time account")} · <span data-k="helfer"></span></span>
+        <span class="kt-leiste-werte"><strong data-k="std"></strong><span aria-hidden="true">·</span><strong data-k="eur"></strong><span class="kt-leiste-jahr">${t("im Jahr", "a year")}</span></span>
+        <span class="kt-leiste-pfeil" aria-hidden="true"></span>
+      </button>`;
+    document.body.appendChild(leiste);
+    const lKnopf = leiste.querySelector(".kt-leiste-knopf"), blatt = leiste.querySelector(".kt-blatt");
+    const auf = an => { lKnopf.setAttribute("aria-expanded", String(an)); blatt.hidden = !an; leiste.classList.toggle("kt-offen", an); };
+    lKnopf.addEventListener("click", () => auf(lKnopf.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("click", ev => { if (!blatt.hidden && !leiste.contains(ev.target)) auf(false); });
+    addEventListener("keydown", ev => { if (ev.key === "Escape" && !blatt.hidden) { auf(false); lKnopf.focus(); } });
+    leiste.querySelector(".kt-leeren").addEventListener("click", () => { auf(false); K.leeren(); });
+
+    // Die Leiste macht Platz, solange ein Kaufknopf (Amazon) ganz unten im Bild steht. Am Handy geht sie über die ganze Breite,
+    // am PC ist sie eine Karte rechts unten: Dort zählen nur Knöpfe, die wirklich unter der Karte liegen.
+    if ("IntersectionObserver" in window) {
+      const unten = new Set();
+      const darunter = r => { const b = leiste.getBoundingClientRect(); return r.right > b.left - 16 && r.left < b.right + 16; };
+      const io = new IntersectionObserver(e => {
+        e.forEach(x => (x.isIntersecting && darunter(x.boundingClientRect) ? unten.add(x.target) : unten.delete(x.target)));
+        leiste.classList.toggle("kt-weg", unten.size > 0);
+        if (unten.size) auf(false);
+      }, { rootMargin: "-86% 0px 0px 0px" });
+      const beobachten = () => { io.disconnect(); unten.clear(); ziel.querySelectorAll("a.buy").forEach(b => io.observe(b)); };
+      beobachten();
+      let breite = innerWidth;
+      addEventListener("resize", () => { if (innerWidth !== breite) { breite = innerWidth; beobachten(); } });
+    }
+
+    // Klick auf einen der Knöpfe: rein oder raus. Hat man den Rechner schon umgestellt, zählen gleich die eigenen Zahlen.
+    document.addEventListener("click", ev => {
+      const b = ev.target.closest && ev.target.closest("[data-wahl]");
+      if (!b) return;
+      ev.preventDefault();
+      const an = !K.hat(b.dataset.wahl);
+      K.setze(b.dataset.wahl, an, an && b.dataset.wahl === id ? rechner : null);
+      K.hupf(b);
+    });
+    if (rZeile) rZeile.addEventListener("click", ev => { if (ev.target.closest(".kt-r-schnitt")) K.schnitt(id); });
+    // Der Rechner meldet jedes neue Ergebnis (vonHand: Man hat selbst etwas umgestellt). Eigene Zahlen gibt es erst, wenn man
+    // selbst etwas umgestellt hat; danach rechnet das Konto jede Änderung mit, solange der Helfer im Konto ist.
+    zeitkonto.rechner = (pid, e, vonHand) => {
+      if (pid !== id || !e) return;
+      if (!vonHand && !rechner) return;
+      rechner = K.runde({ std: (e.minutenProWoche * 52) / 60, eur: e.euroProMonat * 12 });
+      if (K.hat(id)) K.eigeneZahlen(id, rechner); else zeigen();
+    };
+
+    let bereit = false; // die Leiste fährt erst nach dem ersten Bild herein
+    function zeigen() {
+      const s = K.summe(), an = K.hat(id), eig = K.eigen(id), da = K.gespeichert();
+      document.querySelectorAll(`[data-wahl="${id}"]`).forEach(b => b.setAttribute("aria-pressed", String(an)));
+      kopf.hidden = !da;
+      kopf.querySelector(".kt-p-wert").innerHTML = esc(K.wertText(id)) + (an && eig ? ` <span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : "");
+      if (rZeile) {
+        const z = an && eig ? `${t("Dein Zeitkonto rechnet hier mit deinen Zahlen: {x} im Jahr.", "Your time account uses your numbers here: {x} a year.", { x: `<strong>${esc(K.wertText(id, false))}</strong>` })} <button type="button" class="kt-r-schnitt">${t("Durchschnitt nehmen", "Use the average")}</button>`
+          : an ? esc(t("Im Zeitkonto mit dem Durchschnitt ({x}). Stellst du den Rechner um, zählen deine Zahlen.", "In your time account with the average ({x}). If you adjust the calculator, your numbers count.", { x: K.wertText(id) }))
+          : !da ? esc(t("Im Zeitkonto sammelst du Helfer und siehst, wie viel Zeit und Geld im Jahr zusammenkommt.", "In the time account you collect helpers and see how much time and money adds up in a year."))
+          : rechner ? esc(t("Nimmst du ihn ins Zeitkonto, zählen deine Zahlen von hier.", "If you add it to your time account, your numbers from here count.")) : "";
+        rZeile.innerHTML = z;
+        rZeile.hidden = !z;
+      }
+      const sichtbar = da && s.n > 0;
+      if (!sichtbar) auf(false);
+      if (bereit) leiste.classList.toggle("kt-da", sichtbar);
+      document.body.classList.toggle("kt-mit-leiste", sichtbar);
+      leiste.querySelectorAll('[data-k="std"]').forEach(el => K.zahl(el, s.std, K.stdText));
+      leiste.querySelectorAll('[data-k="eur"]').forEach(el => K.zahl(el, s.eur, K.eurText));
+      leiste.querySelector('[data-k="tage"]').textContent = K.tageText(s.std);
+      leiste.querySelector('[data-k="helfer"]').textContent = K.helferText(s.n);
+      leiste.querySelector('[data-k="hinweis"]').textContent = K.hinweisText(s, id);
+      leiste.querySelector('[data-k="liste"]').innerHTML = PRODUKTE.filter(x => K.hat(x.id)).map(x => `
+        <li${x.id === id ? ' class="kt-hier"' : ""}>${x.id === id ? `<span class="kt-l-name">${esc(x.name)}</span>` : `<a class="kt-l-name" href="${esc(x.id)}">${esc(x.name)}</a>`}<span class="kt-l-wert">${esc(K.wertText(x.id, false))}${K.eigen(x.id) ? ` <span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : ""}</span></li>`).join("");
+    }
+    K.beiAenderung(zeigen);
+    zeigen();
+    requestAnimationFrame(() => requestAnimationFrame(() => { bereit = true; zeigen(); }));
   }
 
   // ---------- Geschenke-Seite (myle.life/geschenke, Texte in geschenke.js) ----------
@@ -620,7 +1151,7 @@
             <ul>${danachTeile.map(([h, x]) => `<li><a href="${h}">${x}</a></li>`).join("")}</ul>
           </div>` : "";
     const hero = `
-      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
+      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#zu-${esc(p.id)}">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${esc(p.kategorie)}</span></nav>
       <section class="wrap p-hero">
         <div class="p-hero-text">
           <span class="eyebrow">${esc(p.kategorie)}</span>
@@ -785,6 +1316,8 @@
       if (gk) zeigeGruppe(Number(gk.dataset.gruppe));
       if (ev.target.closest('a[href="#rechner"]')) rechnerAuf();
     });
+    // Zeitkonto: Knopf unter dem Namen und im Rechner, unten die Leiste (nur wenn man das Konto schon benutzt hat)
+    kontoProduktseite(p, ziel);
   }
 
   // „Zuletzt geprüft: November 2026“ unter der Einleitung der Modelle. Datum aus produkte.js (Feld geprueft) oder einstellungen.js.
@@ -1160,7 +1693,7 @@
     felder.forEach(f => {
       const id = `${p.id}-${f.id}`;
       if (f.typ === "auswahl") {
-        box.querySelectorAll(`input[name="${id}"]`).forEach(i => i.addEventListener("change", () => { w[f.id] = i.value; neu(); }));
+        box.querySelectorAll(`input[name="${id}"]`).forEach(i => i.addEventListener("change", () => { w[f.id] = i.value; neu(true); }));
       } else {
         const el = box.querySelector(`#${id}`);
         // Sprechblase eines Durchschnitts kurz zeigen (nach dem Tippen, oder wenn der Regler auf dieser Zahl steht)
@@ -1174,14 +1707,14 @@
         };
         el.addEventListener("input", () => {
           w[f.id] = Number(el.value);
-          neu();
+          neu(true);
           if (leiste) blaseZeigen(leiste.querySelector("button.an"));
         });
         // Tipp auf einen Durchschnitt: Der Regler springt dorthin (auf seine Schrittweite gerundet)
         if (leiste) leiste.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
           el.value = b.dataset.wert;
           w[f.id] = Number(el.value);
-          neu();
+          neu(true);
           blaseZeigen(b);
         }));
       }
@@ -1191,7 +1724,7 @@
       if (!gs[g] || g === gruppe) return;
       gruppe = g;
       if (beiGruppe) beiGruppe(g);
-      neu();
+      neu(true);
     }));
 
     // Ergebnis teilen: am Handy über das Teilen-Menü, sonst in die Zwischenablage
@@ -1226,7 +1759,7 @@
       }
     });
 
-    function neu() {
+    function neu(vonHand) {
       felder.forEach(f => {
         if (f.typ === "auswahl") return;
         const out = box.querySelector(`#${p.id}-${f.id}-wert`);
@@ -1250,6 +1783,7 @@
 
       const e = auswerten(r, ohne ? { ...w, [ohne]: 0 } : w);
       letztes = e;
+      if (zeitkonto.rechner) zeitkonto.rechner(p.id, e, !!vonHand); // Zeitkonto: eigene Zahlen, sobald man selbst etwas umstellt
       const zeitJahr = e.zeit(12);
       const geldJahr = e.geldMonat * 12;
       const z = k => box.querySelector(`[data-z="${k}"]`);
