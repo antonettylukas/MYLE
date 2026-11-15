@@ -788,17 +788,25 @@ footer a { color: var(--muted); }
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tag-und-konto, :root:not([data-theme="light"]) .kt-leiste {
-    --tz-1: #35594b; --tz-2: #2c4c40; --tz-3: #244036; --tz-4: #1d352d; --tz-5: #162a23; --tz-6: #0f1f1a;
+    --tz-1: #3e7f4a; --tz-2: #276641; --tz-3: #195038; --tz-4: #113d2f; --tz-5: #0c2e25; --tz-6: #061c18;
   }
 }
 :root[data-theme="dark"] .tag-und-konto, :root[data-theme="dark"] .kt-leiste {
-  --tz-1: #35594b; --tz-2: #2c4c40; --tz-3: #244036; --tz-4: #1d352d; --tz-5: #162a23; --tz-6: #0f1f1a;
+  --tz-1: #3e7f4a; --tz-2: #276641; --tz-3: #195038; --tz-4: #113d2f; --tz-5: #0c2e25; --tz-6: #061c18;
 }
 .v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
 .karte-bild > .v-bild { height: 100%; }
 .tz-1 { --tz: var(--tz-1); } .tz-2 { --tz: var(--tz-2); } .tz-3 { --tz: var(--tz-3); }
 .tz-4 { --tz: var(--tz-4); --tz-muted: var(--ink); } .tz-5 { --tz: var(--tz-5); } .tz-6 { --tz: var(--tz-6); }
-.tz-5, .tz-6 { --tz-ink: #eaf4f0; --tz-muted: #c3d6ce; }
+.tz-5, .tz-6 { --tz-ink: #eaf4f0; --tz-muted: #d3e3dc; }
+/* Dunkel: Morgens ein helleres, frisches Grün, dann zur Nacht hin dunkler und leicht ins Blaugrüne, oben mit größeren Stufen,
+   damit man die Tageszeiten auch im Dunkeln unterscheidet (Lukas 15.11.). Oben braucht die Schrift mehr Helligkeit für genug Kontrast. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tz-1 { --tz-ink: #f4f8f6; --tz-muted: #f4f8f6; }
+  :root:not([data-theme="light"]) .tz-2 { --tz-muted: #d6e2dc; }
+}
+:root[data-theme="dark"] .tz-1 { --tz-ink: #f4f8f6; --tz-muted: #f4f8f6; }
+:root[data-theme="dark"] .tz-2 { --tz-muted: #d6e2dc; }
 .tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #ffe066; color: #12312a; }
 .tz-icon svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -838,18 +846,36 @@ footer a { color: var(--muted); }
 .t1-raster { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 0 40px; }
 .t1-tag { min-width: 0; }
 .t1-band { position: relative; isolation: isolate; padding: 34px 0 40px 62px; color: var(--tz-ink); }
-.t1-band::before { content: ""; position: absolute; z-index: -1; inset: 0 -100vmax; background: linear-gradient(180deg, var(--tz-oben, var(--tz)) 0, var(--tz) var(--ue-oben, 16px), var(--tz) calc(100% - var(--ue-unten, 24px)), var(--tz-unten, var(--tz)) 100%); }
-/* Zwischen zwei Tageszeiten fließt die Farbe weich über (Lukas 15.11.): unten mischt jede Tageszeit zur Hälfte mit der nächsten,
-   die nächste beginnt mit genau dieser Mischung. Die Übergänge liegen im Rand unter den Kacheln und über der Überschrift. */
-.tz-1 { --tz-unten: color-mix(in srgb, var(--tz-1), var(--tz-2)); }
-.tz-2 { --tz-oben: color-mix(in srgb, var(--tz-1), var(--tz-2)); --tz-unten: color-mix(in srgb, var(--tz-2), var(--tz-3)); }
-.tz-3 { --tz-oben: color-mix(in srgb, var(--tz-2), var(--tz-3)); --tz-unten: color-mix(in srgb, var(--tz-3), var(--tz-4)); }
-.tz-4 { --tz-oben: color-mix(in srgb, var(--tz-3), var(--tz-4)); --tz-unten: color-mix(in srgb, var(--tz-4), var(--tz-5)); }
-.tz-5 { --tz-oben: color-mix(in srgb, var(--tz-4), var(--tz-5)); --tz-unten: color-mix(in srgb, var(--tz-5), var(--tz-6)); }
-.tz-6 { --tz-oben: color-mix(in srgb, var(--tz-5), var(--tz-6)); }
+.t1-band::before { content: ""; position: absolute; z-index: -1; inset: 0 -100vmax; background: linear-gradient(180deg,
+  color-mix(in oklab, var(--tz-v), var(--tz) var(--o0)) 0,
+  color-mix(in oklab, var(--tz-v), var(--tz) var(--o1)) calc(var(--ue-o) * .25),
+  color-mix(in oklab, var(--tz-v), var(--tz) var(--o2)) calc(var(--ue-o) * .5),
+  color-mix(in oklab, var(--tz-v), var(--tz) var(--o3)) calc(var(--ue-o) * .75),
+  var(--tz) var(--ue-o), var(--tz) calc(100% - var(--ue-u)),
+  color-mix(in oklab, var(--tz), var(--tz-n) var(--u0)) calc(100% - var(--ue-u) * .75),
+  color-mix(in oklab, var(--tz), var(--tz-n) var(--u1)) calc(100% - var(--ue-u) * .5),
+  color-mix(in oklab, var(--tz), var(--tz-n) var(--u2)) calc(100% - var(--ue-u) * .25),
+  color-mix(in oklab, var(--tz), var(--tz-n) var(--u3)) 100%); }
+/* Zwischen zwei Tageszeiten fließt die Farbe deutlich, aber ohne Kante über (Lukas 15.11.): eine S-Kurve über die Grenze,
+   unten bis zur Hälfte der nächsten Farbe, die nächste Tageszeit macht ab genau dort weiter. --tz-v = Farbe davor, --tz-n = danach. */
+.t1-band { --ue: 30px; --ue-o: var(--ue); --ue-u: var(--ue); --tz-v: var(--tz); --tz-n: var(--tz);
+  --o0: 50%; --o1: 68.4%; --o2: 84.4%; --o3: 95.7%; --u0: 4.3%; --u1: 15.6%; --u2: 31.6%; --u3: 50%; }
+.tz-1 { --tz-n: var(--tz-2); }
+.tz-2 { --tz-v: var(--tz-1); --tz-n: var(--tz-3); }
+.tz-3 { --tz-v: var(--tz-2); --tz-n: var(--tz-4); }
+.tz-4 { --tz-v: var(--tz-3); --tz-n: var(--tz-5); }
+.tz-5 { --tz-v: var(--tz-4); --tz-n: var(--tz-6); }
+.tz-6 { --tz-v: var(--tz-5); }
+/* Handy und Tablet: die Farbe geht über die ganze Breite, also auch oben aus der Seitenfarbe heraus und unten wieder hinein,
+   ganz weich statt mit Kante (Lukas 15.11.) */
+@media (max-width: 999px) {
+  .t1-band { --ue: 20px; }
+  .t1-band:first-child { --tz-v: var(--bg); --ue-o: 64px; --o0: 0%; --o1: 15.6%; --o2: 50%; --o3: 84.4%; }
+  .t1-band:last-child { --tz-n: var(--bg); --ue-u: 56px; --u0: 15.6%; --u1: 50%; --u2: 84.4%; --u3: 100%; }
+}
 /* Am PC bleibt die Farbe im Mittelbereich (Kacheln und Zeitkonto), links und rechts davon die normale Seitenfarbe (Lukas 15.11.) */
 @media (min-width: 1000px) {
-  .t1-band { padding-bottom: 64px; --ue-oben: 22px; --ue-unten: 34px; }
+  .t1-band { padding-bottom: 64px; --ue: 22px; }
   .t1-band::before { inset: 0 -404px 0 -24px; }
   .t1-band:first-child::before { border-radius: 28px 28px 0 0; }
   .t1-band:last-child::before { border-radius: 0 0 28px 28px; }
@@ -880,14 +906,16 @@ footer a { color: var(--muted); }
   .t1-fest .kt-schau { display: none; }
 }
 @media (max-width: 640px) {
-  .t1-band { padding: 26px 0 22px; }
+  .t1-band { padding: 26px 0 0; }
   .t1-band::after { display: none; }
+  .t1-zeit .tz-icon { box-shadow: none; }
   .t1-zeit { gap: 14px; margin: 0; }
   .t1-zeit h3 { font-size: 1.55rem; }
   .t1-zeit p { font-size: 0.95rem; line-height: 1.4; }
 }
 @media (max-width: 640px) {
-  .t1-karten { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 22px 16px 12px; scroll-padding-inline: 16px; }
+  .t1-karten { display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 22px 16px 36px; scroll-padding-inline: 16px; }
+  /* Unten genug Platz, damit der Kartenschatten nicht abgeschnitten wird: sonst entsteht eine harte Kante (Lukas 15.11.) */
   .t1-karten::-webkit-scrollbar { display: none; }
   .t1-karten > .kt-karte { flex: 0 0 84%; scroll-snap-align: start; }
 }
@@ -929,7 +957,9 @@ footer a { color: var(--muted); }
 .kt-wahl svg { flex: none; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .kt-wahl .kt-haken, .kt-wahl .kt-ein { display: none; }
 .kt-wer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.kt-wahl[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+/* Im Zeitkonto: gelb wie die Zeichen, damit man sofort sieht, was drin ist (Lukas 15.11.) */
+.kt-wahl[aria-pressed="true"] { background: #ffe066; color: #12312a; border-color: #e0b92e; }
+.kt-wahl[aria-pressed="true"]:hover { background: #ffd84a; }
 .kt-wahl[aria-pressed="true"] .kt-haken, .kt-wahl[aria-pressed="true"] .kt-ein { display: inline; }
 .kt-wahl[aria-pressed="true"] .kt-plus, .kt-wahl[aria-pressed="true"] .kt-aus { display: none; }
 
