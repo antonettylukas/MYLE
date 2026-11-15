@@ -754,35 +754,29 @@ footer a { color: var(--muted); }
 
 /* ====================================================================
    Startseite „Ein Tag mit deinen Helfern“ mit Zeitkonto (Lukas 15.11.2026), Zeitkonto auch auf den Produktseiten.
-   Sechs Tageszeiten mit eigener Farbe, alle aus der Salbei-Familie (Lukas 15.11.: harmonisch, kein Braun, kein Flieder):
-   Morgen gelb, Tag hellblau, Feierabend mint, nach dem Essen hellgrün, Abend dunkelgrün wie das Logo, Wochenende türkis. Flächen sind mit dem Hintergrund gemischt (hell kräftiger, dunkel zarter).
+   Sechs Tageszeiten als Grün-Verlauf (Lukas 15.11.): morgens ganz hell, mit jeder Tageszeit dunkler, am Ende das dunkle
+   MYLE-Grün #12312a. Die Zeichen stehen auf Gelb. Dunkel (Browser dunkel) derselbe Verlauf, nur zarter.
    PC ab 1000 px Breite, darunter Handy und Tablet.
    ==================================================================== */
-:root { --tz-zart: 24%; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --tz-zart: 13%; } }
-:root[data-theme="dark"] { --tz-zart: 13%; }
 .tag-und-konto, .kt-leiste {
-  --tz-1: color-mix(in srgb, #ffe066 var(--tz-zart), var(--bg));
-  --tz-2: color-mix(in srgb, #8ccbf0 var(--tz-zart), var(--bg));
-  --tz-3: color-mix(in srgb, #74d1b4 var(--tz-zart), var(--bg));
-  --tz-4: color-mix(in srgb, #cde77f var(--tz-zart), var(--bg));
-  --tz-5: color-mix(in srgb, #12312a 92%, var(--bg));
-  --tz-6: color-mix(in srgb, #7fc8d8 var(--tz-zart), var(--bg));
+  --tz-1: #eef6f1; --tz-2: #d5eadf; --tz-3: #b7dac9; --tz-4: #8fc4ab; --tz-5: #2c6152; --tz-6: #12312a;
   --tz: var(--bg); --tz-ink: var(--ink); --tz-muted: var(--muted);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-und-konto, :root:not([data-theme="light"]) .kt-leiste {
+    --tz-1: #2b463c; --tz-2: #253f36; --tz-3: #203930; --tz-4: #1b322b; --tz-5: #172c25; --tz-6: #12251f;
+  }
+}
+:root[data-theme="dark"] .tag-und-konto, :root[data-theme="dark"] .kt-leiste {
+  --tz-1: #2b463c; --tz-2: #253f36; --tz-3: #203930; --tz-4: #1b322b; --tz-5: #172c25; --tz-6: #12251f;
 }
 .v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
 .karte-bild > .v-bild { height: 100%; }
-.tz-1 { --tz: var(--tz-1); --tz-punkt: #ffe066; }
-.tz-2 { --tz: var(--tz-2); --tz-punkt: #8ccbf0; }
-.tz-3 { --tz: var(--tz-3); --tz-punkt: #74d1b4; }
-.tz-4 { --tz: var(--tz-4); --tz-punkt: #cde77f; }
-.tz-5 { --tz: var(--tz-5); --tz-punkt: #12312a; }
-.tz-6 { --tz: var(--tz-6); --tz-punkt: #7fc8d8; }
-.tz-1, .tz-2, .tz-3, .tz-4, .tz-6 { --tz-ink: var(--ink); --tz-muted: var(--muted); }
-.tz-5 { --tz-ink: #eaf4f0; --tz-muted: #b9cfc6; }
-.tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--tz-punkt, var(--marker)); color: #12312a; }
+.tz-1 { --tz: var(--tz-1); } .tz-2 { --tz: var(--tz-2); } .tz-3 { --tz: var(--tz-3); }
+.tz-4 { --tz: var(--tz-4); --tz-muted: var(--ink); } .tz-5 { --tz: var(--tz-5); } .tz-6 { --tz: var(--tz-6); }
+.tz-5, .tz-6 { --tz-ink: #eaf4f0; --tz-muted: #c3d6ce; }
+.tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #ffe066; color: #12312a; }
 .tz-icon svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.tz-5 .tz-icon { color: #ffe066; box-shadow: inset 0 0 0 1.5px rgba(255, 224, 102, 0.6); }
 
 /* Kachel: Ein Klick irgendwo auf die Kachel nimmt den Helfer ins Konto. Der Knopf sitzt auf dem oberen Rand, wie ein Etikett. */
 .kt-karte { position: relative; display: flex; flex-direction: column; min-width: 0; container-type: inline-size; }
@@ -826,7 +820,6 @@ footer a { color: var(--muted); }
 .t1-band:last-child::after { bottom: auto; height: 54px; }
 .t1-zeit { display: flex; align-items: center; gap: 22px; margin: 0 0 32px -62px; }
 .t1-zeit .tz-icon { box-shadow: 0 0 0 6px var(--tz); }
-.tz-5 .t1-zeit .tz-icon { box-shadow: 0 0 0 6px var(--tz), inset 0 0 0 1.5px rgba(255, 224, 102, 0.6); }
 .t1-zeit h3 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; line-height: 1.05; letter-spacing: -0.02em; }
 .t1-zeit p { margin: 4px 0 0; color: var(--tz-muted); }
 .t1-karten { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 18px; }
