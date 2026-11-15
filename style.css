@@ -783,16 +783,16 @@ footer a { color: var(--muted); }
    PC ab 1000 px Breite, darunter Handy und Tablet.
    ==================================================================== */
 .tag-und-konto, .kt-leiste {
-  --tz-1: #eef6f1; --tz-2: #d5eadf; --tz-3: #b7dac9; --tz-4: #8fc4ab; --tz-5: #2c6152; --tz-6: #12312a;
+  --tz-1: #f8fcfa; --tz-2: #d8ede2; --tz-3: #addac4; --tz-4: #74b597; --tz-5: #2f6655; --tz-6: #0f2a23;
   --tz: var(--bg); --tz-ink: var(--ink); --tz-muted: var(--muted);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tag-und-konto, :root:not([data-theme="light"]) .kt-leiste {
-    --tz-1: #2b463c; --tz-2: #253f36; --tz-3: #203930; --tz-4: #1b322b; --tz-5: #172c25; --tz-6: #12251f;
+    --tz-1: #35594b; --tz-2: #2c4c40; --tz-3: #244036; --tz-4: #1d352d; --tz-5: #162a23; --tz-6: #0f1f1a;
   }
 }
 :root[data-theme="dark"] .tag-und-konto, :root[data-theme="dark"] .kt-leiste {
-  --tz-1: #2b463c; --tz-2: #253f36; --tz-3: #203930; --tz-4: #1b322b; --tz-5: #172c25; --tz-6: #12251f;
+  --tz-1: #35594b; --tz-2: #2c4c40; --tz-3: #244036; --tz-4: #1d352d; --tz-5: #162a23; --tz-6: #0f1f1a;
 }
 .v-bild { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--v-himmel); overflow: hidden; }
 .karte-bild > .v-bild { height: 100%; }
@@ -838,7 +838,7 @@ footer a { color: var(--muted); }
 .t1-raster { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 0 40px; }
 .t1-tag { min-width: 0; }
 .t1-band { position: relative; isolation: isolate; padding: 34px 0 40px 62px; color: var(--tz-ink); }
-.t1-band::before { content: ""; position: absolute; z-index: -1; inset: 0 -100vmax; background: linear-gradient(180deg, var(--tz-oben, var(--tz)) 0, var(--tz) var(--ue-oben, 26px), var(--tz) calc(100% - var(--ue-unten, 40px)), var(--tz-unten, var(--tz)) 100%); }
+.t1-band::before { content: ""; position: absolute; z-index: -1; inset: 0 -100vmax; background: linear-gradient(180deg, var(--tz-oben, var(--tz)) 0, var(--tz) var(--ue-oben, 16px), var(--tz) calc(100% - var(--ue-unten, 24px)), var(--tz-unten, var(--tz)) 100%); }
 /* Zwischen zwei Tageszeiten fließt die Farbe weich über (Lukas 15.11.): unten mischt jede Tageszeit zur Hälfte mit der nächsten,
    die nächste beginnt mit genau dieser Mischung. Die Übergänge liegen im Rand unter den Kacheln und über der Überschrift. */
 .tz-1 { --tz-unten: color-mix(in srgb, var(--tz-1), var(--tz-2)); }
@@ -849,7 +849,7 @@ footer a { color: var(--muted); }
 .tz-6 { --tz-oben: color-mix(in srgb, var(--tz-5), var(--tz-6)); }
 /* Am PC bleibt die Farbe im Mittelbereich (Kacheln und Zeitkonto), links und rechts davon die normale Seitenfarbe (Lukas 15.11.) */
 @media (min-width: 1000px) {
-  .t1-band { padding-bottom: 64px; --ue-oben: 44px; --ue-unten: 64px; }
+  .t1-band { padding-bottom: 64px; --ue-oben: 22px; --ue-unten: 34px; }
   .t1-band::before { inset: 0 -404px 0 -24px; }
   .t1-band:first-child::before { border-radius: 28px 28px 0 0; }
   .t1-band:last-child::before { border-radius: 0 0 28px 28px; }
