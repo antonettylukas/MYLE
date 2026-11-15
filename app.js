@@ -454,7 +454,7 @@
     const zeige = () => {
       knopf.setAttribute("aria-checked", String(istDunkel()));
       // Farbe der Browserleiste am Handy passend zur Wahl
-      if (html.dataset.theme) document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute("content", istDunkel() ? "#0f1614" : "#f5faf7"));
+      if (html.dataset.theme) document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute("content", istDunkel() ? "#0f1614" : "#b5d9c9"));
     };
     function setze(dunkel) {
       const anwenden = () => { html.dataset.theme = dunkel ? "dark" : "light"; zeige(); };

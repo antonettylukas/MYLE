@@ -10,6 +10,8 @@
   /* Helle Version „Salbei“ (Lukas 05.11.2026): grünliche Flächen und Schrift im Logo-Grün wie die dunkle Version, nur hell */
   --bg: #e6f0eb;
   --surface: #f5faf7;
+  /* Kopfzeile in Hell grün (Lukas 15.11., Variante 3 „Mint mittel“), in Dunkel wie die Flächen */
+  --kopf-hg: #b5d9c9; --kopf-linie: #99c6b2; --kopf-text: #12312a;
   --ink: #12312a;
   --muted: #3b5a50;
   --line: #c6dbd1;
@@ -50,7 +52,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d;
+    --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd;
     --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
     --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
     --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
@@ -70,7 +72,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d;
+  --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd;
   --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
   --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
   --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
@@ -112,7 +114,7 @@ a { color: var(--accent); }
 }
 
 /* Kopfzeile */
-.top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.top { border-bottom: 1px solid var(--kopf-linie); background: var(--kopf-hg); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 6px 16px; padding-block: 14px; flex-wrap: wrap; }
 /* Name und Spruch wachsen mit der Bildschirmbreite und nutzen den Platz neben dem Menü */
 .logo { display: inline-flex; align-items: center; gap: clamp(10px, 1.2vw, 16px); color: var(--ink); text-decoration: none; }
@@ -120,10 +122,10 @@ a { color: var(--accent); }
   font-family: var(--font-display); font-weight: 800; font-size: clamp(1.55rem, 0.8rem + 2.2vw, 2.8rem); line-height: 1.15; letter-spacing: 0.03em;
   background: var(--marker); color: var(--logo-ink); padding: 0.06em 0.32em; border-radius: 0.24em;
 }
-.logo-spruch { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.2rem, 0.4rem + 3vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--muted); white-space: nowrap; }
+.logo-spruch { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.2rem, 0.4rem + 3vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--kopf-text); white-space: nowrap; }
 .logo-spruch b { color: var(--ink); font-weight: 800; }
 .top nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.95rem; }
-.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a { color: var(--kopf-text); text-decoration: none; }
 .top nav a:hover { color: var(--ink); }
 /* Sprachschalter am Ende des Menüs: Knopf mit der Flagge der Sprache, darunter eine Liste aus Milchglas (die Seite dahinter verschwimmt) */
 .sprache { position: relative; align-self: center; }
