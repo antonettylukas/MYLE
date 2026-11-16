@@ -21,12 +21,12 @@
   --accent-ink: #ffffff;
   --accent-soft: rgba(13, 110, 91, 0.14);
   --minus-soft: rgba(86, 101, 95, 0.12);
-  --marker: #ffe066;
+  --marker: #e8c94a; /* gleiches Gelb wie in der dunklen Version (Lukas 16.11.: „das soll das gleiche Gelb sein“) */
   --marker-ink: var(--logo-ink); /* Schrift auf gelben Feldern: gleiches dunkles Grün wie im Logo */
   --logo-ink: #12312a; /* MYLE-Schrift im Logo und Schrift auf gelben Feldern: dunkles Grün (Lukas, Abstufung 3), hell und dunkel gleich */
   --statt-hg: #12312a; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
   --tile: #d3e7dd;
-  --punkt-hg: #eef6e7; --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
+  --punkt-hg: #eef6e7; --punkt-rand: #b5cfc3; /* die drei Punkte auf der Startseite: helle Fläche mit sichtbarem Rand wie in der dunklen Version */
   --glas: rgba(214, 233, 224, 0.6); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(234, 243, 226, 0.9); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
   --band: #12312a;
   --band-ink: #eaf4f0;
@@ -158,10 +158,10 @@ a { color: var(--accent); }
 .design-schalter svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .ds-spur { position: absolute; top: 50%; width: 14px; height: 14px; margin-top: -7px; opacity: 0.55; }
 .ds-hell { left: 9px; } .ds-dunkel { right: 9px; }
-.ds-knopf { position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: #ffe066; color: #12312a; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); transition: transform 0.5s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.5s, color 0.5s; }
+.ds-knopf { position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: var(--marker); color: #12312a; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); transition: transform 0.5s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.5s, color 0.5s; }
 .ds-knopf > span { position: absolute; inset: 5px; transition: opacity 0.35s, transform 0.5s; }
 .ds-mond { opacity: 0; transform: rotate(-90deg) scale(0.6); }
-.design-schalter[aria-checked="true"] .ds-knopf { transform: translateX(30px); background: #12312a; color: #ffe066; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 224, 102, 0.35); }
+.design-schalter[aria-checked="true"] .ds-knopf { transform: translateX(30px); background: #12312a; color: var(--marker); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 224, 102, 0.35); }
 .design-schalter[aria-checked="true"] .ds-sonne { opacity: 0; transform: rotate(90deg) scale(0.6); }
 .design-schalter[aria-checked="true"] .ds-mond { opacity: 1; transform: none; }
 @media (min-width: 1000px) {
@@ -815,7 +815,7 @@ footer a { color: var(--muted); }
 }
 :root[data-theme="dark"] .tz-1 { --tz-ink: #f4f8f6; --tz-muted: #f4f8f6; }
 :root[data-theme="dark"] .tz-2 { --tz-muted: #d6e2dc; }
-.tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #ffe066; color: #12312a; }
+.tz-icon { flex: none; display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--marker); color: #12312a; }
 .tz-icon svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Kachel: Ein Klick irgendwo auf die Kachel nimmt den Helfer ins Konto. Der Knopf sitzt auf dem oberen Rand, wie ein Etikett. */
@@ -972,8 +972,8 @@ footer a { color: var(--muted); }
 .kt-wahl .kt-haken, .kt-wahl .kt-ein { display: none; }
 .kt-wer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 /* Im Zeitkonto: gelb wie die Zeichen, damit man sofort sieht, was drin ist (Lukas 15.11.) */
-.kt-wahl[aria-pressed="true"] { background: #ffe066; color: #12312a; border-color: #e0b92e; }
-.kt-wahl[aria-pressed="true"]:hover { background: #ffd84a; }
+.kt-wahl[aria-pressed="true"] { background: var(--marker); color: #12312a; border-color: #c9a92a; }
+.kt-wahl[aria-pressed="true"]:hover { background: #dcbc3c; }
 .kt-wahl[aria-pressed="true"] .kt-haken, .kt-wahl[aria-pressed="true"] .kt-ein { display: inline; }
 .kt-wahl[aria-pressed="true"] .kt-plus, .kt-wahl[aria-pressed="true"] .kt-aus { display: none; }
 
@@ -1023,7 +1023,7 @@ footer a { color: var(--muted); }
 .kt-leeren:hover { color: var(--band-ink); }
 /* Ein Helfer rechnet mit den eigenen Zahlen aus seinem Rechner */
 .kt-eigen { display: inline-block; padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 0.72rem; font-weight: 800; line-height: 1.5; letter-spacing: 0.02em; white-space: nowrap; vertical-align: 1px; }
-.kt-konto .kt-eigen { background: rgba(255, 224, 102, 0.16); color: var(--marker); }
+.kt-konto .kt-eigen { background: rgba(232, 201, 74, 0.16); color: var(--marker); }
 
 /* ====================================================================
    Produktseite: Knopf unter dem Namen, Knopf im Rechner, Leiste unten (am PC eine Karte rechts unten)
@@ -1059,7 +1059,7 @@ body.kt-mit-leiste { padding-bottom: 96px; }
 /* Rundgang durch die Rechner (Lukas 16.11.): Knopf im Konto, Leiste oben auf der Produktseite */
 .kt-rundgang { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 11px 16px; border-radius: 12px; background: var(--marker); color: #12312a; font-weight: 800; line-height: 1.25; text-align: center; text-decoration: none; transition: background-color .15s; }
 .kt-rundgang::after { content: "›"; font-size: 1.25em; line-height: 1; }
-.kt-rundgang:hover { background: #ffd84a; }
+.kt-rundgang:hover { background: #dcbc3c; }
 .kt-rundgang[hidden] { display: none; }
 .kt-rundgang:focus-visible { outline: 2px solid var(--marker); outline-offset: 3px; }
 .kt-rundgang-leiste { position: fixed; top: 0; left: 0; right: 0; z-index: 170; padding: 0 max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px)); background: var(--band); color: var(--band-ink); box-shadow: 0 0 0 1px var(--band-line), 0 8px 22px -10px rgba(0, 0, 0, 0.5); }
@@ -1135,7 +1135,7 @@ body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
 .ks-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
 .ks-modell { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 12px; background: var(--marker); color: #12312a; font-weight: 800; line-height: 1.2; text-decoration: none; }
 .ks-modell::after { content: "›"; font-size: 1.25em; line-height: 1; }
-.ks-modell:hover { background: #ffd84a; }
+.ks-modell:hover { background: #dcbc3c; }
 .ks-zahlen { color: var(--accent); font-weight: 700; font-size: 0.92rem; }
 .ks-mehr { margin: 22px 0 0; }
 .ks-mehr a { color: var(--accent); font-weight: 700; }
@@ -1146,7 +1146,7 @@ body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
 .kt-korb-kopf { flex: none; display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
 .kt-korb-kopf:focus { outline: none; }
 .kt-korb-kopf svg { flex: none; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.kt-korb-zahl { margin-left: auto; min-width: 26px; height: 26px; padding: 0 8px; border-radius: 999px; background: #ffe066; color: #12312a; font-family: var(--font-body); font-size: 0.85rem; font-weight: 800; display: grid; place-items: center; }
+.kt-korb-zahl { margin-left: auto; min-width: 26px; height: 26px; padding: 0 8px; border-radius: 999px; background: var(--marker); color: #12312a; font-family: var(--font-body); font-size: 0.85rem; font-weight: 800; display: grid; place-items: center; }
 .kt-korb-zahl[hidden] { display: none; }
 .kt-korb-liste { min-height: 0; overflow: auto; overscroll-behavior: contain; list-style: none; margin: 0; padding: 6px 8px; }
 .kt-korb-liste:empty { display: none; }
