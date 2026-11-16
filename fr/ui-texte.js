@@ -6,6 +6,18 @@
 */
 
 const UI_TEXTE = {
+  // Rundgang durch die Rechner (16.11.)
+  "Mit deinen Zahlen rechnen": "Calculer avec vos chiffres",
+  "Deine Zahlen: noch {n} offen": "Vos chiffres : encore {n}",
+  "Deine Zahlen, Schritt für Schritt": "Vos chiffres, étape par étape",
+  "Deine Zahlen": "Vos chiffres",
+  "{i} von {n}": "{i} sur {n}",
+  "erledigt": "fait",
+  "Deine Zahlen sind im Konto.": "Vos chiffres sont dans votre compte.",
+  "Stell den Rechner auf dich ein.": "Réglez le calculateur selon votre situation.",
+  "Weiter": "Suivant",
+  "Fertig": "Terminé",
+  "Rundgang beenden": "Arrêter le parcours",
   "spart Zeit": "gain de temps",
   "spart Geld": "économies",
   "spart Mühe": "moins d’efforts",

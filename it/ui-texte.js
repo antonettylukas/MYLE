@@ -6,6 +6,18 @@
 */
 
 const UI_TEXTE = {
+  // Rundgang durch die Rechner (16.11.)
+  "Mit deinen Zahlen rechnen": "Calcola con i tuoi numeri",
+  "Deine Zahlen: noch {n} offen": "I tuoi numeri: ne mancano {n}",
+  "Deine Zahlen, Schritt für Schritt": "I tuoi numeri, passo dopo passo",
+  "Deine Zahlen": "I tuoi numeri",
+  "{i} von {n}": "{i} di {n}",
+  "erledigt": "fatto",
+  "Deine Zahlen sind im Konto.": "I tuoi numeri sono nel conto.",
+  "Stell den Rechner auf dich ein.": "Imposta il calcolatore su di te.",
+  "Weiter": "Avanti",
+  "Fertig": "Fatto",
+  "Rundgang beenden": "Termina il percorso",
   "spart Zeit": "risparmia tempo",
   "spart Geld": "risparmia soldi",
   "spart Mühe": "risparmia fatica",

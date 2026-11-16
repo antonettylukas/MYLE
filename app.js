@@ -617,6 +617,8 @@
       },
       eigeneZahlen(id, w) { if (P(id)) { eigene[id] = runde(w); speichern(); } },
       schnitt(id) { delete eigene[id]; speichern(); },
+      // Rundgang durch die Rechner: alle Helfer im Konto mit Rechner, offen = noch ohne eigene Zahlen
+      rundgang() { const ids = [...wahl].filter(id => SCHNITT(id) && SCHNITT(id).rechner); return { ids, offen: ids.filter(id => !eigene[id]) }; },
       // „Konto leeren“ löscht auch den Eintrag im Browser: Bis zum Neuladen bleibt das Konto leer, danach ist alles wie beim ersten Besuch
       leeren() { wahl.clear(); eigene = {}; gespeichert = false; try { localStorage.removeItem(SCHLUESSEL); } catch (e) { /* gesperrt */ } melden(); },
       beiAenderung: f => hoerer.push(f)
@@ -632,9 +634,47 @@
         <p class="kt-summe"><strong data-k="std"></strong><span>${t("mehr freie Zeit im Jahr", "more free time a year")}</span></p>
         <p class="kt-tage" data-k="tage"></p>
         <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
+        <a class="kt-rundgang" data-k-rundgang hidden></a>
         <p class="kt-anzahl"><span data-k="anzahl"></span><button type="button" class="kt-leeren" data-k-leeren>${t("Konto leeren", "Empty account")}</button></p>
         <p class="kt-klein" data-k="hinweis"></p>
       </div>`;
+  }
+
+  // Rundgang durch die Rechner (Lukas 16.11.2026): Ein Knopf im Konto führt der Reihe nach zu den Rechnern aller Helfer im Konto.
+  // Die Liste reist in der Adresse mit (?rundgang=id1,id2#rechner), es wird nichts Neues gespeichert.
+  function rundgangHref(ids, id) { return `${esc(id)}?rundgang=${ids.map(esc).join(",")}#rechner`; }
+  function rundgangKnopf(el) {
+    const r = zeitkonto().rundgang();
+    el.hidden = !r.offen.length;
+    if (!r.offen.length) return;
+    el.href = rundgangHref(r.ids, r.offen[0]);
+    el.textContent = r.offen.length === r.ids.length ? t("Mit deinen Zahlen rechnen", "Use your own numbers")
+      : t("Deine Zahlen: noch {n} offen", "Your numbers: {n} left", { n: r.offen.length });
+  }
+  // Auf der Produktseite: Leiste oben mit Schritt, Punkten (Haken = eigene Zahlen) und „Weiter“
+  function rundgangLeiste(id) {
+    const K = zeitkonto();
+    const rg = [...new Set((new URLSearchParams(location.search).get("rundgang") || "").split(","))].filter(x => K.P(x) && K.SCHNITT(x) && K.SCHNITT(x).rechner);
+    const i = rg.indexOf(id);
+    if (i < 0) return;
+    const bar = document.createElement("nav");
+    bar.className = "kt-rundgang-leiste";
+    bar.setAttribute("aria-label", t("Deine Zahlen, Schritt für Schritt", "Your numbers, step by step"));
+    document.body.prepend(bar);
+    document.body.classList.add("kt-im-rundgang");
+    const naechst = rg[i + 1];
+    const malen = () => {
+      bar.innerHTML = `<div class="kt-rg-innen">
+        <span class="kt-rg-titel">${t("Deine Zahlen", "Your numbers")}<b>${t("{i} von {n}", "{i} of {n}", { i: i + 1, n: rg.length })}</b></span>
+        <ol class="kt-rg-punkte">${rg.map(x => `<li><a href="${rundgangHref(rg, x)}" class="${x === id ? "jetzt" : ""}${K.eigen(x) ? " fertig" : ""}"${x === id ? ' aria-current="step"' : ""} title="${esc(K.P(x).name)}"><span class="kt-wer">${esc(K.P(x).name)}${K.eigen(x) ? ", " + t("erledigt", "done") : ""}</span></a></li>`).join("")}</ol>
+        <span class="kt-rg-tipp">${K.eigen(id) ? t("Deine Zahlen sind im Konto.", "Your numbers are in your account.") : t("Stell den Rechner auf dich ein.", "Set the calculator to suit you.")}</span>
+        <a class="kt-rg-weiter${K.eigen(id) ? " bereit" : ""}" href="${naechst ? rundgangHref(rg, naechst) : "./#helfer"}">${naechst
+          ? `${t("Weiter", "Next")}<span class="kt-rg-name">: ${esc(K.P(naechst).name)}</span>` : t("Fertig", "Done")}</a>
+        <a class="kt-rg-zu" href="${esc(id)}" aria-label="${t("Rundgang beenden", "End the walkthrough")}">✕</a>
+      </div>`;
+    };
+    malen();
+    K.beiAenderung(malen);
   }
 
   // Die Tageszeiten der Startseite mit ihren Helfern (ids aus produkte.js), vom Morgen bis zum Wochenende.
@@ -733,6 +773,7 @@
         b.querySelectorAll('[data-k="anzahl"]').forEach(el => { el.textContent = K.anzahlText(s.n); });
         b.querySelectorAll('[data-k="hinweis"]').forEach(el => { el.textContent = K.hinweisText(s); });
         b.querySelectorAll("[data-k-leeren]").forEach(el => { el.hidden = s.n === 0; });
+        b.querySelectorAll("[data-k-rundgang]").forEach(rundgangKnopf);
       });
       ziel.querySelectorAll("[data-wahl]").forEach(b => b.setAttribute("aria-pressed", String(K.hat(b.dataset.wahl))));
       ziel.querySelectorAll("[data-kt]").forEach(el => el.classList.toggle("kt-an", K.hat(el.dataset.kt)));
@@ -918,6 +959,7 @@
           <p class="kt-tage" data-k="tage"></p>
           <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
           <ul class="kt-liste" data-k="liste"></ul>
+          <a class="kt-rundgang" data-k-rundgang hidden></a>
           <p class="kt-klein" data-k="hinweis"></p>
           <div class="kt-blatt-fuss"><a class="kt-alle" href="./#zu-${esc(id)}">${t("Alle Helfer ansehen", "See all helpers")}</a><button type="button" class="kt-leeren">${t("Konto leeren", "Empty account")}</button></div>
         </div>
@@ -993,11 +1035,13 @@
       leiste.querySelector('[data-k="tage"]').textContent = K.tageText(s.std);
       leiste.querySelector('[data-k="helfer"]').textContent = K.helferText(s.n);
       leiste.querySelector('[data-k="hinweis"]').textContent = K.hinweisText(s, id);
+      leiste.querySelectorAll("[data-k-rundgang]").forEach(rundgangKnopf);
       leiste.querySelector('[data-k="liste"]').innerHTML = PRODUKTE.filter(x => K.hat(x.id)).map(x => `
         <li${x.id === id ? ' class="kt-hier"' : ""}>${x.id === id ? `<span class="kt-l-name">${esc(x.name)}</span>` : `<a class="kt-l-name" href="${esc(x.id)}">${esc(x.name)}</a>`}<span class="kt-l-wert">${esc(K.wertText(x.id, false))}${K.eigen(x.id) ? ` <span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : ""}</span></li>`).join("");
     }
     K.beiAenderung(zeigen);
     zeigen();
+    rundgangLeiste(id);
     requestAnimationFrame(() => requestAnimationFrame(() => { bereit = true; zeigen(); }));
   }
 

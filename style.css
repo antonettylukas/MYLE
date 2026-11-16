@@ -1054,3 +1054,35 @@ body.kt-mit-leiste { padding-bottom: 96px; }
   body.kt-mit-leiste { padding-bottom: 120px; }
 }
 @media (prefers-reduced-motion: reduce) { .kt-leiste, .kt-leiste.kt-da:not(.kt-weg) { transition: none; } }
+
+/* Rundgang durch die Rechner (Lukas 16.11.): Knopf im Konto, Leiste oben auf der Produktseite */
+.kt-rundgang { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 11px 16px; border-radius: 12px; background: var(--marker); color: #12312a; font-weight: 800; line-height: 1.25; text-align: center; text-decoration: none; transition: background-color .15s; }
+.kt-rundgang::after { content: "›"; font-size: 1.25em; line-height: 1; }
+.kt-rundgang:hover { background: #ffd84a; }
+.kt-rundgang[hidden] { display: none; }
+.kt-rundgang:focus-visible { outline: 2px solid var(--marker); outline-offset: 3px; }
+.kt-rundgang-leiste { position: fixed; top: 0; left: 0; right: 0; z-index: 170; padding: 0 max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px)); background: var(--band); color: var(--band-ink); box-shadow: 0 0 0 1px var(--band-line), 0 8px 22px -10px rgba(0, 0, 0, 0.5); }
+.kt-rg-innen { display: flex; align-items: center; gap: 8px 14px; max-width: 1128px; min-height: 58px; margin: 0 auto; }
+.kt-rg-titel { display: flex; flex-direction: column; font-size: 0.72rem; font-weight: 800; line-height: 1.25; letter-spacing: 0.08em; text-transform: uppercase; color: var(--marker); white-space: nowrap; }
+.kt-rg-titel b { font-size: 0.95rem; letter-spacing: 0; text-transform: none; color: var(--band-ink); }
+.kt-rg-punkte { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.kt-rg-punkte a { position: relative; display: block; width: 24px; height: 24px; }
+.kt-rg-punkte a::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 2px solid var(--band-muted); }
+.kt-rg-punkte a.fertig::before { background: var(--marker); border-color: var(--marker); }
+.kt-rg-punkte a.fertig::after { content: ""; position: absolute; left: 9px; top: 8px; width: 4px; height: 7px; border: solid #12312a; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.kt-rg-punkte a.jetzt::before { inset: 3px; box-shadow: 0 0 0 2px var(--band), 0 0 0 4px var(--marker); }
+.kt-rg-punkte a:focus-visible { outline: 2px solid var(--marker); border-radius: 50%; }
+.kt-rg-tipp { flex: 1; min-width: 0; font-size: 0.88rem; color: var(--band-muted); }
+.kt-rg-weiter { flex: none; max-width: 42vw; overflow: hidden; padding: 9px 14px; border-radius: 10px; box-shadow: inset 0 0 0 1.5px var(--band-line); color: var(--band-ink); font-weight: 800; line-height: 1.2; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.kt-rg-weiter::after { content: " ›"; }
+.kt-rg-weiter.bereit { background: var(--marker); color: #12312a; box-shadow: none; }
+.kt-rg-weiter:hover { box-shadow: inset 0 0 0 1.5px var(--marker); }
+.kt-rg-zu { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; color: var(--band-muted); text-decoration: none; }
+.kt-rg-zu:hover { color: var(--band-ink); background: rgba(255, 255, 255, 0.08); }
+.kt-rundgang-leiste a:focus-visible { outline: 2px solid var(--marker); outline-offset: 2px; }
+body.kt-im-rundgang { padding-top: 58px; }
+body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
+@media (max-width: 640px) {
+  .kt-rg-tipp, .kt-rg-name { display: none; }
+  .kt-rg-punkte { flex: 1; }
+}
