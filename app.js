@@ -727,7 +727,7 @@
     // Gemalte Kachelbilder (Lukas hat sie am 16.11. pro Helfer ausgewählt). Neuer Helfer ohne Bild: Standbild aus dem Video.
     // Das Video läuft am Handy weiterhin im Bild (darüber), am PC über dem Konto.
     const kachelbild = p => KACHELBILDER.has(p.id)
-      ? `<img class="kachel-foto" src="/bilder/kacheln/${esc(p.id)}-400.webp" srcset="/bilder/kacheln/${esc(p.id)}-400.webp 400w, /bilder/kacheln/${esc(p.id)}-800.webp 800w" sizes="(max-width: 640px) 80vw, (max-width: 999px) 45vw, 340px" width="400" height="225" alt="" loading="lazy" decoding="async">`
+      ? `<img class="kachel-foto" data-srcset="/bilder/kacheln/${esc(p.id)}-400.webp 400w, /bilder/kacheln/${esc(p.id)}-600.webp 600w, /bilder/kacheln/${esc(p.id)}-800.webp 800w" sizes="(max-width: 640px) calc(84vw - 22px), (max-width: 999px) 45vw, 340px" width="400" height="225" alt="" loading="lazy" decoding="async">`
       : "";
     const bild = p => `<div class="v-bild">${kachelbild(p) || (p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">`
       : HAT_VIDEOS && VIDEOS[p.video] ? `<div class="buehne standbild" aria-hidden="true"></div>` : standbild(p))}</div>`;
@@ -758,7 +758,9 @@
       </div></aside>`;
     // Standbilder einer Tageszeit bauen, sobald sie in die Nähe des Bildschirms kommt, die ganze Reihe auf einmal (so kommt
     // beim Wischen am Handy nichts nach). Alle 19 gleich beim Laden zu bauen hielt das Handy spürbar auf.
+    // Die Kachelbilder bekommen ihre Quelle auch erst hier (sonst lädt der Browser am Handy fast alle 19 auf einmal)
     const fuelle = band => {
+      band.querySelectorAll("img.kachel-foto[data-srcset]").forEach(i => { i.srcset = i.dataset.srcset; i.removeAttribute("data-srcset"); });
       band.querySelectorAll(".kt-karte").forEach(k => {
         const leer = k.querySelector(".buehne.standbild:empty"), p = leer && P(k.dataset.id);
         if (p) leer.outerHTML = standbild(p);
