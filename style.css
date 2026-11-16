@@ -19,7 +19,7 @@
   --strich: #9fbdb1;
   --accent: #0d6e5b;
   --accent-ink: #ffffff;
-  --accent-soft: rgba(13, 110, 91, 0.14);
+  --accent-soft: rgba(13, 110, 91, 0.11);
   --minus-soft: rgba(86, 101, 95, 0.12);
   --marker: #e8c94a; /* gleiches Gelb wie in der dunklen Version (Lukas 16.11.: „das soll das gleiche Gelb sein“) */
   --marker-ink: var(--logo-ink); /* Schrift auf gelben Feldern: gleiches dunkles Grün wie im Logo */
