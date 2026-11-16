@@ -13,6 +13,7 @@
   --surface: #eaf3e2;
   /* Kopfzeile in Hell grün (Lukas 15.11., Variante 3 „Mint mittel“), in Dunkel wie die Flächen */
   --kopf-hg: #b5d9c9; --kopf-linie: #99c6b2; --kopf-text: #12312a;
+  --kopf-spruch: #3b5a50; /* Spruch im Logo etwas heller, damit die fetten Anfangsbuchstaben M-Y-L-E herausstechen wie in Dunkel (Lukas 16.11.) */
   --ink: #12312a;
   --muted: #3b5a50;
   --line: #c6dbd1;
@@ -53,7 +54,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd;
+    --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd; --kopf-spruch: #b3c4bd;
     --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
     --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
     --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
@@ -73,7 +74,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd;
+  --bg: #0f1614; --surface: #17211e; --ink: #e8efec; --muted: #b3c4bd; --line: #2a3833; --strich: #42554d; --kopf-hg: #17211e; --kopf-linie: #2a3833; --kopf-text: #b3c4bd; --kopf-spruch: #b3c4bd;
   --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
   --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
   --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
@@ -123,7 +124,7 @@ a { color: var(--accent); }
   font-family: var(--font-display); font-weight: 800; font-size: clamp(1.55rem, 0.8rem + 2.2vw, 2.8rem); line-height: 1.15; letter-spacing: 0.03em;
   background: var(--marker); color: var(--logo-ink); padding: 0.06em 0.32em; border-radius: 0.24em;
 }
-.logo-spruch { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.2rem, 0.4rem + 3vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--kopf-text); white-space: nowrap; }
+.logo-spruch { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.2rem, 0.4rem + 3vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--kopf-spruch); white-space: nowrap; }
 .logo-spruch b { color: var(--ink); font-weight: 800; }
 .top nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.95rem; }
 .top nav a { color: var(--kopf-text); text-decoration: none; }
@@ -967,7 +968,7 @@ footer a { color: var(--muted); }
   font: inherit; font-size: 0.85rem; font-weight: 700; line-height: 1.2; white-space: nowrap; cursor: pointer;
   transition: background-color .15s, color .15s, transform .15s;
 }
-.kt-wahl:hover { background: var(--accent-soft); }
+.kt-wahl:hover { background: linear-gradient(var(--accent-soft), var(--accent-soft)) var(--surface); } /* deckend, sonst scheint der Rand der Kachel durch (Lukas 16.11.) */
 .kt-wahl svg { flex: none; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .kt-wahl .kt-haken, .kt-wahl .kt-ein { display: none; }
 .kt-wer { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
