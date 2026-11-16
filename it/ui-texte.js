@@ -6,6 +6,22 @@
 */
 
 const UI_TEXTE = {
+  // Rundgang-Hinweis und Übersicht /konto (16.11. abends)
+  "Zur Übersicht deiner Helfer": "Alla sintesi dei tuoi apparecchi",
+  "zur Übersicht": "alla sintesi",
+  "Rechner {i} von {n}": "Calcolatore {i} di {n}",
+  "Alles zum Gerät, also was es kann, die ehrlichen Nachteile und die Modelle, steht weiter oben auf dieser Seite. Dein Modell suchst du am Ende in der Übersicht aus.": "Tutto sull’apparecchio, cosa sa fare, i difetti onesti e i modelli, lo trovi più in alto in questa pagina. Il tuo modello lo scegli alla fine, nella sintesi.",
+  "Nach oben zum Gerät": "Torna su all’apparecchio",
+  "Deine Helfer im Überblick": "I tuoi apparecchi in sintesi",
+  "Dein Zeitkonto ist noch leer. Auf der Startseite tippst du bei jedem Helfer auf „Ins Zeitkonto“, dann steht er hier.": "Il tuo conto del tempo è ancora vuoto. Nella pagina iniziale tocca «Aggiungi al conto del tempo» su un apparecchio e comparirà qui.",
+  "Zu den Helfern": "Vai agli apparecchi",
+  "Durchschnitt": "media",
+  "Modell aussuchen": "Scegli un modello",
+  "Zum Gerät": "Vai all’apparecchio",
+  "Zahlen ändern": "Cambia i numeri",
+  "So viel bringen dir deine Helfer zusammen im Jahr. Jetzt such dir bei jedem das passende Modell aus.": "Ecco quanto ti portano insieme i tuoi apparecchi ogni anno. Ora scegli il modello giusto per ciascuno.",
+  "Deine Helfer": "I tuoi apparecchi",
+  "Weitere Helfer ansehen": "Vedi altri apparecchi",
   // Rundgang durch die Rechner (16.11.)
   "Mit deinen Zahlen rechnen": "Calcola con i tuoi numeri",
   "Deine Zahlen: noch {n} offen": "I tuoi numeri: ne mancano {n}",

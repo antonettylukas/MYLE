@@ -6,6 +6,22 @@
 */
 
 const UI_TEXTE = {
+  // Rundgang-Hinweis und Übersicht /konto (16.11. abends)
+  "Zur Übersicht deiner Helfer": "Vers l’aperçu de vos appareils",
+  "zur Übersicht": "vers l’aperçu",
+  "Rechner {i} von {n}": "Calculateur {i} sur {n}",
+  "Alles zum Gerät, also was es kann, die ehrlichen Nachteile und die Modelle, steht weiter oben auf dieser Seite. Dein Modell suchst du am Ende in der Übersicht aus.": "Tout sur l’appareil, ce qu’il sait faire, ses vrais défauts et les modèles, se trouve plus haut sur cette page. Vous choisirez votre modèle à la fin, dans l’aperçu.",
+  "Nach oben zum Gerät": "Remonter à l’appareil",
+  "Deine Helfer im Überblick": "Vos appareils en un coup d’œil",
+  "Dein Zeitkonto ist noch leer. Auf der Startseite tippst du bei jedem Helfer auf „Ins Zeitkonto“, dann steht er hier.": "Votre compte-temps est encore vide. Sur la page d’accueil, touchez « Ajouter au compte-temps » sur un appareil et il apparaîtra ici.",
+  "Zu den Helfern": "Voir les appareils",
+  "Durchschnitt": "moyenne",
+  "Modell aussuchen": "Choisir un modèle",
+  "Zum Gerät": "Voir l’appareil",
+  "Zahlen ändern": "Modifier les chiffres",
+  "So viel bringen dir deine Helfer zusammen im Jahr. Jetzt such dir bei jedem das passende Modell aus.": "Voici ce que vos appareils vous apportent ensemble chaque année. Choisissez maintenant le bon modèle pour chacun.",
+  "Deine Helfer": "Vos appareils",
+  "Weitere Helfer ansehen": "Voir d’autres appareils",
   // Rundgang durch die Rechner (16.11.)
   "Mit deinen Zahlen rechnen": "Calculer avec vos chiffres",
   "Deine Zahlen: noch {n} offen": "Vos chiffres : encore {n}",

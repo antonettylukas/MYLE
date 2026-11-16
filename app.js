@@ -406,6 +406,7 @@
   if (typ === "geschenke") baueGeschenke();
   if (typ === "ratgeber") baueRatgeber();
   if (typ === "ratgeber-liste") baueRatgeberListe();
+  if (typ === "konto") baueKontoseite();
   document.querySelectorAll("[data-newsletter]").forEach(baueNewsletter);
   springeZumAnker();
   seitenwechsel();
@@ -660,8 +661,15 @@
   function rundgangHref(ids, id) { return `${esc(id)}?rundgang=${ids.map(esc).join(",")}#rechner`; }
   function rundgangKnopf(el) {
     const r = zeitkonto().rundgang();
-    el.hidden = !r.offen.length;
-    if (!r.offen.length) return;
+    // Alles schon mit eigenen Zahlen gerechnet: Der Knopf führt dann zur Übersicht mit den Links zur Modellauswahl
+    if (!r.offen.length) {
+      const n = zeitkonto().ids().length;
+      el.hidden = !n;
+      el.href = "konto";
+      el.textContent = t("Zur Übersicht deiner Helfer", "Overview of your helpers");
+      return;
+    }
+    el.hidden = false;
     el.href = rundgangHref(r.ids, r.offen[0]);
     el.textContent = r.offen.length === r.ids.length ? t("Mit deinen Zahlen rechnen", "Use your own numbers")
       : t("Deine Zahlen: noch {n} offen", "Your numbers: {n} left", { n: r.offen.length });
@@ -680,16 +688,27 @@
     const naechst = rg[i + 1];
     const malen = () => {
       bar.innerHTML = `<div class="kt-rg-innen">
-        <span class="kt-rg-titel">${t("Deine Zahlen", "Your numbers")}<b>${t("{i} von {n}", "{i} of {n}", { i: i + 1, n: rg.length })}</b></span>
+        <span class="kt-rg-titel"><span>${t("Deine Zahlen", "Your numbers")} · ${t("{i} von {n}", "{i} of {n}", { i: i + 1, n: rg.length })}</span><b>${esc(K.P(id).name)}</b></span>
         <ol class="kt-rg-punkte">${rg.map(x => `<li><a href="${rundgangHref(rg, x)}" class="${x === id ? "jetzt" : ""}${K.eigen(x) ? " fertig" : ""}"${x === id ? ' aria-current="step"' : ""} title="${esc(K.P(x).name)}"><span class="kt-wer">${esc(K.P(x).name)}${K.eigen(x) ? ", " + t("erledigt", "done") : ""}</span></a></li>`).join("")}</ol>
         <span class="kt-rg-tipp">${K.eigen(id) ? t("Deine Zahlen sind im Konto.", "Your numbers are in your account.") : t("Stell den Rechner auf dich ein.", "Set the calculator to suit you.")}</span>
-        <a class="kt-rg-weiter${K.eigen(id) ? " bereit" : ""}" href="${naechst ? rundgangHref(rg, naechst) : "./#helfer"}">${naechst
-          ? `${t("Weiter", "Next")}<span class="kt-rg-name">: ${esc(K.P(naechst).name)}</span>` : t("Fertig", "Done")}</a>
+        <a class="kt-rg-weiter${K.eigen(id) ? " bereit" : ""}" href="${naechst ? rundgangHref(rg, naechst) : "konto"}">${naechst
+          ? `${t("Weiter", "Next")}<span class="kt-rg-name">: ${esc(K.P(naechst).name)}</span>` : `${t("Fertig", "Done")}<span class="kt-rg-name">: ${t("zur Übersicht", "to the overview")}</span>`}</a>
         <a class="kt-rg-zu" href="${esc(id)}" aria-label="${t("Rundgang beenden", "End the walkthrough")}">✕</a>
       </div>`;
     };
     malen();
     K.beiAenderung(malen);
+    // Über dem Rechner: Um welches Gerät es geht, und dass alles andere zum Gerät weiter oben steht (Lukas 16.11.)
+    const sek = document.getElementById("rechner");
+    if (sek) sek.insertAdjacentHTML("afterbegin", `<div class="kt-rg-hier">
+        <img class="kt-rg-bild" src="/bilder/korb/${esc(id)}.webp" width="96" height="64" alt="">
+        <div class="kt-rg-hier-text">
+          <span class="kt-rg-schritt">${t("Rechner {i} von {n}", "Calculator {i} of {n}", { i: i + 1, n: rg.length })}</span>
+          <strong>${esc(K.P(id).name)}</strong>
+          <p>${t("Alles zum Gerät, also was es kann, die ehrlichen Nachteile und die Modelle, steht weiter oben auf dieser Seite. Dein Modell suchst du am Ende in der Übersicht aus.", "Everything about the device, what it does, the honest downsides and the models, is further up this page. You pick your model at the end in the overview.")}
+            <a href="#produktseite">${t("Nach oben zum Gerät", "Up to the device")}</a></p>
+        </div>
+      </div>`);
   }
 
   // Die Tageszeiten der Startseite mit ihren Helfern (ids aus produkte.js), vom Morgen bis zum Wochenende.
@@ -1080,6 +1099,58 @@
     zeigen();
     rundgangLeiste(id);
     requestAnimationFrame(() => requestAnimationFrame(() => { bereit = true; zeigen(); }));
+  }
+
+  // ---------- Übersicht des Zeitkontos (myle.life/konto, Lukas 16.11.2026) ----------
+  // Ziel am Ende des Rundgangs: alle gesammelten Helfer mit ihrer Ersparnis und je einem Link zur Modellauswahl.
+  // Liest nur das Konto im Browser (localStorage „myle-zeitkonto“), speichert nichts Neues. Nicht für Suchmaschinen (noindex).
+  function baueKontoseite() {
+    const ziel = document.getElementById("kontoseite");
+    if (!ziel) return;
+    const K = zeitkonto();
+    function zeigen() {
+      const ids = K.ids(), s = K.summe();
+      if (!ids.length) {
+        ziel.innerHTML = `<section class="wrap ks-kopf">
+          <p class="ks-marke">${t("Dein Zeitkonto", "Your time account")}</p>
+          <h1>${t("Deine Helfer im Überblick", "Your helpers at a glance")}</h1>
+          <p class="ks-intro">${t("Dein Zeitkonto ist noch leer. Auf der Startseite tippst du bei jedem Helfer auf „Ins Zeitkonto“, dann steht er hier.", "Your time account is still empty. On the home page, tap “Add to time account” on any helper and it will show up here.")}</p>
+          <p><a class="ks-modell" href="./#helfer">${t("Zu den Helfern", "See the helpers")}</a></p>
+        </section>`;
+        return;
+      }
+      const karte = id => {
+        const p = K.P(id), mitModellen = modelle(p).length > 0, rechner = K.SCHNITT(id) && K.SCHNITT(id).rechner;
+        return `<li class="ks-karte">
+          <img class="ks-bild" src="/bilder/korb/${esc(id)}.webp" width="144" height="96" alt="" loading="lazy" decoding="async">
+          <div class="ks-text">
+            <h2>${esc(p.name)}</h2>
+            <p class="ks-wert">${esc(K.wertText(id))}${K.eigen(id) ? ` <span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : rechner && K.art(id) !== "muehe" ? ` <span class="ks-schnitt">${t("Durchschnitt", "average")}</span>` : ""}</p>
+          </div>
+          <div class="ks-links">
+            <a class="ks-modell" href="${esc(id)}${mitModellen ? "#modelle" : ""}">${mitModellen ? t("Modell aussuchen", "Choose a model") : t("Zum Gerät", "To the device")}<span class="kt-wer">: ${esc(p.name)}</span></a>
+            ${rechner ? `<a class="ks-zahlen" href="${esc(id)}#rechner">${K.eigen(id) ? t("Zahlen ändern", "Change numbers") : t("Mit deinen Zahlen rechnen", "Use your own numbers")}<span class="kt-wer">: ${esc(p.name)}</span></a>` : ""}
+          </div>
+        </li>`;
+      };
+      ziel.innerHTML = `<section class="wrap ks-kopf">
+          <p class="ks-marke">${t("Dein Zeitkonto", "Your time account")}</p>
+          <h1>${t("Deine Helfer im Überblick", "Your helpers at a glance")}</h1>
+          <p class="ks-intro">${t("So viel bringen dir deine Helfer zusammen im Jahr. Jetzt such dir bei jedem das passende Modell aus.", "This is what your helpers give you together each year. Now pick the right model for each one.")}</p>
+          <div class="ks-summe">
+            <p><span>${t("Mehr Zeit im Jahr", "More time a year")}</span><strong>${esc(K.stdText(s.std))}</strong></p>
+            <p><span>${t("Gespart im Jahr", "Saved a year")}</span><strong>${esc(K.eurText(s.eur))}</strong></p>
+            ${K.tageText(s.std) ? `<p class="ks-tage">${esc(K.tageText(s.std))}</p>` : ""}
+          </div>
+          <p class="kt-klein">${esc(K.hinweisText(s))}</p>
+        </section>
+        <section class="wrap ks-block" aria-label="${t("Deine Helfer", "Your helpers")}">
+          <ul class="ks-karten">${ids.map(karte).join("")}</ul>
+          <p class="ks-mehr"><a href="./#helfer">${t("Weitere Helfer ansehen", "See more helpers")}</a></p>
+        </section>`;
+    }
+    zeigen();
+    K.beiAenderung(zeigen);
   }
 
   // ---------- Geschenke-Seite (myle.life/geschenke, Texte in geschenke.js) ----------

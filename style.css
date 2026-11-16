@@ -7,9 +7,10 @@
 @font-face { font-family: 'Figtree'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(schriften/figtree-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
-  /* Helle Version „Salbei“ (Lukas 05.11.2026): grünliche Flächen und Schrift im Logo-Grün wie die dunkle Version, nur hell */
-  --bg: #e6f0eb;
-  --surface: #f5faf7;
+  /* Helle Version: Grund und Karten in „Pistazie“ (Lukas 16.11.2026, Vorschlag 6 von 10). Nichts Helles mehr fast weiß:
+     neue Flächen nehmen diese Farben (--bg, --surface, --karte-hg), nie #fff. So beibehalten (Lukas: „diesmal bitte beibehalten“). */
+  --bg: #dae9cd;
+  --surface: #eaf3e2;
   /* Kopfzeile in Hell grün (Lukas 15.11., Variante 3 „Mint mittel“), in Dunkel wie die Flächen */
   --kopf-hg: #b5d9c9; --kopf-linie: #99c6b2; --kopf-text: #12312a;
   --ink: #12312a;
@@ -25,8 +26,8 @@
   --logo-ink: #12312a; /* MYLE-Schrift im Logo und Schrift auf gelben Feldern: dunkles Grün (Lukas, Abstufung 3), hell und dunkel gleich */
   --statt-hg: #12312a; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
   --tile: #d3e7dd;
-  --punkt-hg: rgba(255, 255, 255, 0.6); --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
-  --glas: rgba(214, 233, 224, 0.6); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(240, 248, 244, 0.7); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
+  --punkt-hg: #eef6e7; --punkt-rand: rgba(21, 33, 29, 0.07); /* sanftes Weiß hinter den drei Punkten auf der Startseite */
+  --glas: rgba(214, 233, 224, 0.6); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(234, 243, 226, 0.9); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
   --band: #12312a;
   --band-ink: #eaf4f0;
   --band-muted: #b5cdc4;
@@ -34,7 +35,7 @@
   --band-fehler: #ffb4a8;
   --shadow: 0 1px 2px rgba(18, 49, 42, 0.06), 0 12px 28px -14px rgba(18, 49, 42, 0.25);
   --shadow-pop: 0 2px 6px rgba(21, 33, 29, 0.08), 0 30px 64px -20px rgba(21, 33, 29, 0.45);
-  --karte-hg: #f7fbf9;
+  --karte-hg: #eef6e7;
   --stufe-1: rgba(45, 142, 199, 0.14); --stufe-2: rgba(13, 110, 91, 0.13); --stufe-3: rgba(214, 160, 30, 0.2); /* Preisklassen-Schilder: dezent blau, grün, gold */
   --karte-rand: #b5cfc3; /* Produktkarten: etwas kräftigerer Rand und ein sanfter Schatten, damit sie sich vom Hintergrund abheben */
   --karte-schatten: 0 1px 3px rgba(18, 49, 42, 0.08), 0 10px 26px -8px rgba(18, 49, 42, 0.26);
@@ -1086,6 +1087,59 @@ body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
   .kt-rg-tipp, .kt-rg-name { display: none; }
   .kt-rg-punkte { flex: 1; }
 }
+/* Rundgang: Gerätename in der Leiste und Karte über dem Rechner (Lukas 16.11.2026) */
+.kt-rg-titel { min-width: 0; max-width: 300px; }
+.kt-rg-titel > span { overflow: hidden; text-overflow: ellipsis; }
+.kt-rg-titel b { overflow: hidden; text-overflow: ellipsis; font-family: var(--font-display); font-size: 1.05rem; }
+@media (max-width: 640px) {
+  .kt-rg-innen { flex-wrap: wrap; padding: 6px 0 8px; gap: 4px 10px; }
+  .kt-rg-titel { order: 1; flex: 1 1 calc(100% - 50px); max-width: none; }
+  .kt-rg-zu { order: 2; }
+  .kt-rg-punkte { order: 3; }
+  .kt-rg-weiter { order: 4; }
+  body.kt-im-rundgang { padding-top: 100px; }
+  body.kt-im-rundgang #rechner { scroll-margin-top: 108px; }
+}
+.kt-rg-hier { display: flex; align-items: center; gap: 16px; margin: 0 0 22px; padding: 14px 16px; border-radius: 16px; background: var(--karte-hg); border: 2px solid var(--marker); box-shadow: var(--karte-schatten); }
+.kt-rg-bild { flex: none; width: 96px; height: 64px; border-radius: 10px; object-fit: cover; }
+.kt-rg-hier-text { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kt-rg-schritt { font-size: 0.74rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.kt-rg-hier strong { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.2; }
+.kt-rg-hier p { margin: 4px 0 0; font-size: 0.92rem; line-height: 1.45; color: var(--muted); }
+.kt-rg-hier a { color: var(--accent); font-weight: 700; white-space: nowrap; }
+.kt-rg-hier a::after { content: " ↑"; }
+@media (max-width: 640px) {
+  .kt-rg-hier { align-items: flex-start; gap: 12px; padding: 12px; }
+  .kt-rg-bild { width: 72px; height: 48px; }
+  .kt-rg-hier strong { font-size: 1.12rem; }
+}
+
+/* Übersicht des Zeitkontos (myle.life/konto, Lukas 16.11.2026) */
+.ks-kopf { display: flex; flex-direction: column; gap: 10px; padding-top: 34px; padding-bottom: 8px; }
+.ks-kopf h1 { margin: 0; font-family: var(--font-display); font-size: clamp(1.8rem, 4.5vw, 2.6rem); line-height: 1.1; }
+.ks-kopf p { margin: 0; max-width: 62ch; }
+.ks-marke { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.ks-intro { font-size: 1.05rem; color: var(--muted); }
+.ks-summe { display: flex; flex-wrap: wrap; gap: 6px 36px; margin: 10px 0 2px; padding: 18px 22px; border-radius: 16px; background: var(--band); color: var(--band-ink); max-width: 640px; }
+.ks-summe p { display: flex; flex-direction: column; }
+.ks-summe span { font-size: 0.85rem; color: var(--band-muted); }
+.ks-summe strong { font-family: var(--font-display); font-size: 1.7rem; line-height: 1.2; color: var(--marker); }
+.ks-summe .ks-tage { flex-basis: 100%; font-size: 0.92rem; color: var(--band-ink); }
+.ks-block { padding-top: 18px; padding-bottom: 48px; }
+.ks-karten { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 14px; }
+.ks-karte { display: grid; grid-template-columns: auto 1fr; gap: 12px 14px; align-items: center; padding: 14px; border-radius: 16px; background: var(--karte-hg); border: 1px solid var(--karte-rand); box-shadow: var(--karte-schatten); }
+.ks-bild { width: 120px; height: 80px; border-radius: 10px; object-fit: cover; }
+.ks-text h2 { margin: 0 0 4px; font-family: var(--font-display); font-size: 1.12rem; line-height: 1.25; }
+.ks-wert { margin: 0; font-size: 0.92rem; font-weight: 700; }
+.ks-schnitt { display: inline-block; padding: 1px 7px; border-radius: 999px; background: var(--minus-soft, rgba(0,0,0,.06)); color: var(--muted); font-size: 0.72rem; font-weight: 700; vertical-align: 1px; }
+.ks-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.ks-modell { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 12px; background: var(--marker); color: #12312a; font-weight: 800; line-height: 1.2; text-decoration: none; }
+.ks-modell::after { content: "›"; font-size: 1.25em; line-height: 1; }
+.ks-modell:hover { background: #ffd84a; }
+.ks-zahlen { color: var(--accent); font-weight: 700; font-size: 0.92rem; }
+.ks-mehr { margin: 22px 0 0; }
+.ks-mehr a { color: var(--accent); font-weight: 700; }
+.ks-modell:focus-visible, .ks-zahlen:focus-visible, .ks-mehr a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Zeitkonto als Warenkorb (Lukas 16.11.2026, Entwurf 2): hell mit Bildchen, Summe unten dunkel */
 .kt-konto.kt-korb { display: flex; flex-direction: column; min-height: 0; padding: 0; overflow: hidden; background: var(--karte-hg); color: var(--ink); border: 1px solid var(--karte-rand); box-shadow: var(--karte-schatten); }
