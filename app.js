@@ -411,7 +411,8 @@
     // Vom 1. November bis Heiligabend: Hinweis auf die Geschenke-Seite unter dem Einstieg
     const heute = new Date(), intro = document.querySelector("main .intro");
     if (intro && (heute.getMonth() === 10 || (heute.getMonth() === 11 && heute.getDate() <= 24))) {
-      intro.insertAdjacentHTML("beforeend", `<a class="saison-hinweis" href="geschenke"><span class="saison-symbol" aria-hidden="true">🎁</span><span><strong>${t("Geschenke, die Zeit schenken", "Gifts that give time")}</strong><span>${t("Meine Ideen für Weihnachten", "My ideas for Christmas")}</span></span></a>`);
+      const neu = intro.querySelector(".ratgeber-neu");
+      (neu || intro).insertAdjacentHTML(neu ? "beforebegin" : "beforeend", `<a class="saison-hinweis" href="geschenke"><span class="saison-symbol" aria-hidden="true">🎁</span><span><strong>${t("Geschenke, die Zeit schenken", "Gifts that give time")}</strong><span>${t("Meine Ideen für Weihnachten", "My ideas for Christmas")}</span></span></a>`);
     }
     // Alle Helfer nach Tageszeit, daneben das Zeitkonto (Lukas 15.11.2026, Einzelheiten bei zeitkonto())
     const liste = document.getElementById("uebersicht");
@@ -1224,7 +1225,12 @@
       </section>`;
 
     // Passende Ratgeber (Feld produkt in ratgeber.js, kurz in ratgeber-kurz.js), unter Fragen und Antworten
-    const passendeRatgeber = (typeof RATGEBER_KURZ !== "undefined" ? RATGEBER_KURZ : []).filter(x => x.produkt === p.id || (x.weitereProdukte || []).includes(p.id));
+    const alleRatgeber = typeof RATGEBER_KURZ !== "undefined" ? RATGEBER_KURZ : [];
+    const passendeRatgeber = alleRatgeber.filter(x => x.produkt === p.id || (x.weitereProdukte || []).includes(p.id));
+    // Bis einschließlich 30.11.2026 steht der Black-Friday-Ratgeber auf jeder Produktseite (Versuch V4, Marketing 16.11.).
+    // Am 1.12. diesen Block wieder löschen und vorrendern.js laufen lassen.
+    const bf = alleRatgeber.find(x => x.id === "black-friday-echte-angebote");
+    if (bf && !passendeRatgeber.includes(bf) && new Date() < new Date("2026-12-01T00:00:00+01:00")) passendeRatgeber.push(bf);
     const spruenge = [
       ms.length && ["#modelle", t("Preisklassen", "Price ranges")],
       r && ["#rechner", t("Rechner", "Calculator")],
