@@ -6,6 +6,15 @@
 */
 
 const UI_TEXTE = {
+  // Videoseite (16.11.)
+  "So funktioniert MYLE": "Come funziona MYLE",
+  "Alle Helfer auf einen Blick": "Tutti gli apparecchi a colpo d’occhio",
+  "Neu": "Nuovo",
+  "Zum Gerät": "Vedi l’apparecchio",
+  "Videos": "Video",
+  "Aus meinen Videos": "Dai miei video",
+  "Alle Helfer aus meinen Videos": "Tutti gli apparecchi dei miei video",
+  "Hier findest du jedes Gerät aus meinen Reels. Tipp darauf, dann siehst du meine Empfehlung für jedes Budget und rechnest nach, was es dir spart.": "Qui trovi ogni apparecchio dei miei reel. Toccane uno per vedere il mio consiglio per ogni budget e calcolare quanto ti fa risparmiare.",
   // Rundgang durch die Rechner (16.11.)
   "Mit deinen Zahlen rechnen": "Calcola con i tuoi numeri",
   "Deine Zahlen: noch {n} offen": "I tuoi numeri: ne mancano {n}",

@@ -400,6 +400,7 @@
   if (typ === "start") baueStart();
   if (typ === "produkt") baueProduktseite();
   if (typ === "geschenke") baueGeschenke();
+  if (typ === "videoseite") baueVideoseite();
   if (typ === "ratgeber") baueRatgeber();
   if (typ === "ratgeber-liste") baueRatgeberListe();
   document.querySelectorAll("[data-newsletter]").forEach(baueNewsletter);
@@ -1043,6 +1044,43 @@
     zeigen();
     rundgangLeiste(id);
     requestAnimationFrame(() => requestAnimationFrame(() => { bereit = true; zeigen(); }));
+  }
+
+  // ---------- Videoseite (myle.life/videos, Liste in videoseite.js) ----------
+  // Für die Links in den Profilen: jedes Gerät aus den Reels mit großem Knopf zur Produktseite, das neueste oben.
+  // Keine Shop-Links hier, der Weg geht über die Produktseite. Eine Karte erscheint ab ihrem Posting-Tag um 18:00 Uhr.
+  function baueVideoseite() {
+    const ziel = document.getElementById("videoseite");
+    if (!ziel) return;
+    const jetzt = Date.now(), WOCHE = 7 * 24 * 3600 * 1000;
+    const ab = v => Date.parse(`${v.datum}T18:00:00+01:00`);
+    const liste = (typeof VIDEOSEITE !== "undefined" ? VIDEOSEITE : [])
+      .filter(v => ab(v) <= jetzt && (!v.produkt || PRODUKTE.some(p => p.id === v.produkt)))
+      .sort((a, b) => ab(b) - ab(a));
+    const karte = (v, i) => {
+      const p = v.produkt && PRODUKTE.find(x => x.id === v.produkt);
+      const name = p ? p.name : t("So funktioniert MYLE", "How MYLE works");
+      const zeile = p ? (p.statt ? esc(p.statt).replace(/^(statt|instead of)\s+/i, "<b>$1</b> ") : esc(p.kategorie)) : esc(t("Alle Helfer auf einen Blick", "All helpers at a glance"));
+      const neu = i === 0 && jetzt - ab(v) < WOCHE;
+      return `
+        <a class="vs-karte" href="${p ? esc(p.id) : "./#helfer"}" data-zaehler="video-${esc(v.produkt || "intro")}">
+          <span class="vs-bild"><img src="/bilder/videos/${esc(v.nr)}-${esc(v.produkt || "intro")}.jpg" alt="" width="720" height="900" loading="${i < 4 ? "eager" : "lazy"}" decoding="async">${neu ? `<span class="vs-neu">${t("Neu", "New")}</span>` : ""}</span>
+          <span class="vs-text">
+            <span class="vs-name">${esc(name)}</span>
+            <span class="vs-zeile">${zeile}</span>
+            <span class="vs-knopf">${p ? t("Zum Gerät", "See the device") : t("Alle Helfer", "All helpers")}</span>
+          </span>
+        </a>`;
+    };
+    ziel.innerHTML = `
+      <nav class="wrap brotkrumen" aria-label="${t("Brotkrumen", "Breadcrumb")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><span aria-hidden="true">/</span><span>${t("Videos", "Videos")}</span></nav>
+      <section class="wrap intro vs-intro">
+        <span class="eyebrow">${t("Aus meinen Videos", "From my videos")}</span>
+        <h1>${t("Alle Helfer aus meinen Videos", "All the helpers from my videos")}</h1>
+        <p class="p-intro">${t("Hier findest du jedes Gerät aus meinen Reels. Tipp darauf, dann siehst du meine Empfehlung für jedes Budget und rechnest nach, was es dir spart.", "Here you'll find every device from my reels. Tap one to see my pick for every budget and work out what it saves you.")}</p>
+      </section>
+      <section class="wrap vs-raster" aria-label="${t("Videos", "Videos")}">${liste.map(karte).join("")}</section>
+      <section class="wrap p-block" id="newsletter"><div data-newsletter></div></section>`;
   }
 
   // ---------- Geschenke-Seite (myle.life/geschenke, Texte in geschenke.js) ----------
@@ -2069,7 +2107,7 @@
 // wenn die Seite verlassen oder verborgen wird). Grund: Die In-App-Browser von Instagram und TikTok schließen oft, ohne der
 // Seite vorher Bescheid zu geben; eine Meldung erst beim Verlassen käme dann nie an. Ereignisse:
 //   aufruf                      einmal pro Aufruf
-//   box-gesehen / box-klick     Kaufempfehlung zur Hälfte sichtbar / Klick auf einen Shop-Link; Detail sagt, welche:
+//   box-gesehen / box-klick     Kaufempfehlung zur Hälfte sichtbar / Klick auf einen Shop-Link (auf der Videoseite: Knopf zum Gerät, Detail video-<produkt>); Detail sagt, welche:
 //                               oben (Kasten „Meine Empfehlung“), modell-<Stufe 1–3>-<Abschnitt>, alternative-…, zubehoer, sonst andere
 //   rechner                     erste Eingabe im Rechner
 //   scroll                      25, 50, 75, 100 (Prozent der Seite)
@@ -2109,9 +2147,9 @@
     return "andere";
   }
   document.addEventListener("click", function (ev) {
-    var a = ev.target && ev.target.closest && ev.target.closest('a[rel~="sponsored"]');
+    var a = ev.target && ev.target.closest && ev.target.closest('a[rel~="sponsored"], a[data-zaehler]');
     if (!a) return;
-    merke("box-klick", box(a));
+    merke("box-klick", a.hasAttribute("data-zaehler") ? kurz(a.getAttribute("data-zaehler")) : box(a));
     senden();
   }, true);
   document.addEventListener("input", function (ev) {
