@@ -136,6 +136,10 @@
     return src ? `<figure class="foto ${cls}"><img src="${esc(src)}" alt="${esc(text)}" loading="lazy"></figure>` : "";
   }
 
+  // Helfer mit gemaltem Kachelbild unter /bilder/kacheln/<id>-400.webp und -800.webp (Startseite)
+  const KACHELBILDER = new Set(["saugroboter", "waschtrockner", "airfryer", "thermostate", "klimaanlage", "smarte-lampen", "sparduschkopf",
+    "balkonkraftwerk", "akkusauger", "reiskocher", "kaffeevollautomat", "kuechenmaschine-kochfunktion", "kuechenmaschine", "wassersprudler",
+    "mini-geschirrspueler", "reinigungsbuerste", "stretchdeckel", "kindle", "zahnbuerste"]);
   // Ein Standbild aus dem Erklärvideo, solange es kein Foto gibt
   function standbild(p) {
     const v = HAT_VIDEOS && VIDEOS[p.video];
@@ -720,8 +724,13 @@
       ? `<span class="statt"><span>${esc(p.statt).replace(/^(statt|instead of)\s+/i, "<b>$1</b> ")}</span></span>`
       : `<span class="cat">${esc(p.kategorie)}</span>`;
     // Standbilder erst als leerer Rahmen; gebaut werden sie, wenn ihre Tageszeit in die Nähe des Bildschirms kommt (unten)
-    const bild = p => `<div class="v-bild">${p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">`
-      : HAT_VIDEOS && VIDEOS[p.video] ? `<div class="buehne standbild" aria-hidden="true"></div>` : standbild(p)}</div>`;
+    // Gemalte Kachelbilder (Lukas hat sie am 16.11. pro Helfer ausgewählt). Neuer Helfer ohne Bild: Standbild aus dem Video.
+    // Das Video läuft am Handy weiterhin im Bild (darüber), am PC über dem Konto.
+    const kachelbild = p => KACHELBILDER.has(p.id)
+      ? `<img class="kachel-foto" src="/bilder/kacheln/${esc(p.id)}-400.webp" srcset="/bilder/kacheln/${esc(p.id)}-400.webp 400w, /bilder/kacheln/${esc(p.id)}-800.webp 800w" sizes="(max-width: 640px) 80vw, (max-width: 999px) 45vw, 340px" width="400" height="225" alt="" loading="lazy" decoding="async">`
+      : "";
+    const bild = p => `<div class="v-bild">${kachelbild(p) || (p.bild ? `<img src="${esc(p.bild)}" alt="${esc(p.name)}" loading="lazy">`
+      : HAT_VIDEOS && VIDEOS[p.video] ? `<div class="buehne standbild" aria-hidden="true"></div>` : standbild(p))}</div>`;
     // Ein Klick irgendwo auf die Kachel nimmt den Helfer ins Konto. Der Knopf sitzt auf dem oberen Rand, „Ansehen“ öffnet die Seite.
     const kachel = p => `
       <div class="kt-karte" id="zu-${esc(p.id)}" data-kt="${esc(p.id)}" data-id="${esc(p.id)}">
