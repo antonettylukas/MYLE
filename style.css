@@ -1086,3 +1086,38 @@ body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
   .kt-rg-tipp, .kt-rg-name { display: none; }
   .kt-rg-punkte { flex: 1; }
 }
+
+/* Zeitkonto als Warenkorb (Lukas 16.11.2026, Entwurf 2): hell mit Bildchen, Summe unten dunkel */
+.kt-konto.kt-korb { display: flex; flex-direction: column; min-height: 0; padding: 0; overflow: hidden; background: var(--karte-hg); color: var(--ink); border: 1px solid var(--karte-rand); box-shadow: var(--karte-schatten); }
+.kt-korb-kopf { flex: none; display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--line); font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
+.kt-korb-kopf:focus { outline: none; }
+.kt-korb-kopf svg { flex: none; width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.kt-korb-zahl { margin-left: auto; min-width: 26px; height: 26px; padding: 0 8px; border-radius: 999px; background: #ffe066; color: #12312a; font-family: var(--font-body); font-size: 0.85rem; font-weight: 800; display: grid; place-items: center; }
+.kt-korb-zahl[hidden] { display: none; }
+.kt-korb-liste { min-height: 0; overflow: auto; overscroll-behavior: contain; list-style: none; margin: 0; padding: 6px 8px; }
+.kt-korb-liste:empty { display: none; }
+.kt-korb-liste li { display: flex; align-items: center; gap: 4px; }
+.kt-korb-link { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 7px 8px; border-radius: 10px; color: inherit; text-decoration: none; }
+.kt-korb-link:hover { background: var(--accent-soft); }
+.kt-korb-link:focus-visible, .kt-korb-weg:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.kt-korb-bild { flex: none; width: 64px; height: 43px; border-radius: 8px; object-fit: cover; background: var(--v-himmel); }
+.kt-korb-text { display: flex; flex-direction: column; min-width: 0; }
+.kt-korb-text b { font-size: 0.93rem; line-height: 1.25; }
+.kt-korb-text small { color: var(--accent); font-weight: 700; font-size: 0.8rem; line-height: 1.35; }
+.kt-korb .kt-korb-text .kt-eigen { background: var(--accent-soft); color: var(--accent); }
+.kt-korb-weg { flex: none; width: 30px; height: 30px; margin-right: 2px; border: 0; border-radius: 50%; display: grid; place-items: center; background: transparent; color: var(--muted); cursor: pointer; }
+.kt-korb-weg svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.kt-korb-weg:hover { background: var(--accent-soft); color: var(--ink); }
+.kt-korb-leer { padding: 14px 18px; color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
+.kt-korb-leer[hidden] { display: none; }
+.kt-korb-summe { flex: none; padding: 14px 18px 16px; background: var(--band); color: var(--band-ink); }
+.kt-korb-zeile { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.kt-korb-zeile span { color: var(--band-muted); font-weight: 600; font-size: 0.9rem; }
+.kt-korb-zeile strong { font-family: var(--font-display); font-weight: 800; font-size: 1.55rem; line-height: 1.2; color: var(--marker); letter-spacing: -0.02em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.kt-korb .kt-tage, .kt-korb .kt-tage:empty { margin: 6px 0 0; font-size: 0.82rem; line-height: 1.4; color: var(--band-muted); }
+.kt-korb .kt-rundgang { margin-top: 12px; }
+.kt-korb-fuss { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--band-line); }
+.kt-korb-fuss .kt-klein { margin: 0; color: var(--band-muted); font-size: 0.75rem; }
+.kt-korb-fuss .kt-leeren { flex: none; font-size: 0.8rem; }
+/* Am PC: Konto wird nie höher als das Fenster, die Liste scrollt dann in sich */
+@media (min-width: 1000px) { .t1-fest { max-height: calc(100vh - 20px); box-sizing: border-box; } .t1-fest > .kt-korb { flex: 0 1 auto; } .t1-fest > .kt-schau { flex: none; } }

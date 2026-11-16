@@ -630,18 +630,29 @@
     return zeitkonto.k;
   }
 
-  // Die Kachel mit dem Zeitkonto: dunkel, mit Summe, Tagen, Anzahl und „Konto leeren“
+  // Das Zeitkonto als Warenkorb (Lukas 16.11.2026, Entwurf 2): oben hell die gewählten Helfer mit Bildchen, Klick springt
+  // zur Kachel, ✕ nimmt ihn raus; unten dunkel die Summen, Tage, Rundgang und „Konto leeren“
   function kontoKarte(cls = "") {
     return `
-      <div class="kt-konto${cls ? " " + cls : ""}">
-        <h3 class="kt-titel">${t("Dein Zeitkonto", "Your time account")}</h3>
-        <p class="kt-summe"><strong data-k="std"></strong><span>${t("mehr freie Zeit im Jahr", "more free time a year")}</span></p>
-        <p class="kt-tage" data-k="tage"></p>
-        <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
-        <a class="kt-rundgang" data-k-rundgang hidden></a>
-        <p class="kt-anzahl"><span data-k="anzahl"></span><button type="button" class="kt-leeren" data-k-leeren>${t("Konto leeren", "Empty account")}</button></p>
-        <p class="kt-klein" data-k="hinweis"></p>
+      <div class="kt-konto kt-korb${cls ? " " + cls : ""}">
+        <h3 class="kt-korb-kopf" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>${t("Dein Zeitkonto", "Your time account")}</span><span class="kt-korb-zahl" data-k="n"></span><span class="kt-wer" data-k="anzahl"></span></h3>
+        <ul class="kt-korb-liste" data-k-liste></ul>
+        <p class="kt-korb-leer" data-k-leer>${t("Noch leer. Tipp auf einen Helfer, dann landet er hier.", "Still empty. Tap a helper to add it here.")}</p>
+        <div class="kt-korb-summe">
+          <p class="kt-korb-zeile"><span>${t("Mehr Zeit im Jahr", "More time a year")}</span><strong data-k="std"></strong></p>
+          <p class="kt-korb-zeile"><span>${t("Gespart im Jahr", "Saved a year")}</span><strong data-k="eur"></strong></p>
+          <p class="kt-tage" data-k="tage"></p>
+          <a class="kt-rundgang" data-k-rundgang hidden></a>
+          <p class="kt-korb-fuss"><span class="kt-klein" data-k="hinweis"></span><button type="button" class="kt-leeren" data-k-leeren>${t("Konto leeren", "Empty account")}</button></p>
+        </div>
       </div>`;
+  }
+  // Eine Zeile im Warenkorb
+  function korbZeile(K, id) {
+    const p = K.P(id);
+    if (!p) return "";
+    const wert = `${esc(K.wertText(id))}${K.eigen(id) ? ` <span class="kt-eigen">${t("deine Zahlen", "your numbers")}</span>` : ""}`;
+    return `<li><a class="kt-korb-link" href="#zu-${esc(id)}"><img class="kt-korb-bild" src="/bilder/korb/${esc(id)}.webp" width="64" height="43" alt="" loading="lazy" decoding="async"><span class="kt-korb-text"><b>${esc(p.name)}</b><small>${wert}</small></span></a><button type="button" class="kt-korb-weg" data-korb-weg="${esc(id)}" aria-label="${esc(t("{name} aus dem Konto nehmen", "Remove {name} from the account", { name: p.name }))}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></li>`;
   }
 
   // Rundgang durch die Rechner (Lukas 16.11.2026): Ein Knopf im Konto führt der Reihe nach zu den Rechnern aller Helfer im Konto.
@@ -785,6 +796,9 @@
         b.querySelectorAll('[data-k="hinweis"]').forEach(el => { el.textContent = K.hinweisText(s); });
         b.querySelectorAll("[data-k-leeren]").forEach(el => { el.hidden = s.n === 0; });
         b.querySelectorAll("[data-k-rundgang]").forEach(rundgangKnopf);
+        b.querySelectorAll('[data-k="n"]').forEach(el => { el.textContent = s.n; el.hidden = s.n === 0; });
+        b.querySelectorAll("[data-k-liste]").forEach(el => { el.innerHTML = K.ids().map(id => korbZeile(K, id)).join(""); });
+        b.querySelectorAll("[data-k-leer]").forEach(el => { el.hidden = s.n > 0; });
       });
       ziel.querySelectorAll("[data-wahl]").forEach(b => b.setAttribute("aria-pressed", String(K.hat(b.dataset.wahl))));
       ziel.querySelectorAll("[data-kt]").forEach(el => el.classList.toggle("kt-an", K.hat(el.dataset.kt)));
@@ -801,6 +815,17 @@
       if (!el.closest) return;
       const b = el.closest("[data-wahl]");
       if (b) { ev.preventDefault(); K.setze(b.dataset.wahl, !K.hat(b.dataset.wahl)); K.hupf(b); return; }
+      const weg = el.closest("[data-korb-weg]");
+      if (weg) {
+        // Danach den Fokus auf die Zeile an gleicher Stelle setzen (oder auf den Kopf, wenn die Liste leer ist)
+        const liste = weg.closest("[data-k-liste]"), korb = weg.closest(".kt-korb");
+        const i = liste ? [...liste.children].indexOf(weg.closest("li")) : -1;
+        K.setze(weg.dataset.korbWeg, false);
+        const n = liste && liste.children[Math.min(i, liste.children.length - 1)];
+        const f = n ? n.querySelector("[data-korb-weg]") : korb && korb.querySelector(".kt-korb-kopf");
+        if (f) f.focus();
+        return;
+      }
       if (el.closest("[data-k-leeren]")) { K.leeren(); return; }
       if (el.closest("a, button, input, label, summary, select, textarea")) return;
       const k = el.closest(".kt-karte[data-kt]");
@@ -903,6 +928,7 @@
       </button>`;
     document.body.appendChild(l);
     l.addEventListener("click", klick);
+    l.addEventListener("click", ev => { if (ev.target.closest && ev.target.closest(".kt-korb-link")) auf(false); }); // zur Kachel: Blatt zu
     const lKnopf = l.querySelector(".kt-leiste-knopf"), blatt = l.querySelector(".kt-blatt");
     const auf = an => { lKnopf.setAttribute("aria-expanded", String(an)); blatt.hidden = !an; l.classList.toggle("kt-offen", an); };
     lKnopf.addEventListener("click", () => auf(lKnopf.getAttribute("aria-expanded") !== "true"));
