@@ -57,10 +57,10 @@ def seite(pre, slug, titel, og, beschreibung, h1, nojs, body_attr):
     kopf = kopf.replace("bilder/vorschau/saugroboter.jpg", bild)
     kopf = kopf.replace("/saugroboter\"", f"/{slug}\"")
     assert "saugroboter" not in kopf.replace(slug, ""), f"{pre}{slug}: saugroboter steht noch im Kopf"
-    skripte = re.findall(r'<script src="[^"]+"></script>', rumpf)
+    skripte = re.findall(r'<script src="[^"]+"(?: defer)?></script>', rumpf)
     v = re.search(r"\?v=(\w+)", skripte[0]).group(1)
     i = next(k for k, s in enumerate(skripte) if "app.js" in s)
-    skripte.insert(i, f'<script src="ratgeber.js?v={v}"></script>')
+    skripte.insert(i, f'<script src="ratgeber.js?v={v}" defer></script>')
     return (kopf + "</head>\n<!-- Diese Seite füllt sich aus ratgeber.js. -->\n" + f"<body {body_attr}>\n" + '<div id="kopf"></div>\n\n<main id="ratgeberseite">\n'
             f'  <noscript><section class="wrap leer"><p><strong>{e(h1)}</strong></p><p>{e(nojs)}</p></section></noscript>\n</main>\n\n<div id="fuss"></div>\n\n'
             + "\n".join(skripte) + "\n</body>\n</html>\n")

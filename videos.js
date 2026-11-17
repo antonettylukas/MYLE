@@ -3443,11 +3443,13 @@ VIDEOS["smarte-lampen"].poster = 4;
   // ohneFelder = Video wurde ohne Schriftfelder freigegeben und bleibt so
   const gemalt = (name, poster, liste, ohneFelder) => {
     const alt = VIDEOS[name].szenen, dateien = liste.map(z => z[2]).filter(Boolean);
-    VIDEOS[name] = { szenen: liste.map(([k, dauer, datei, nacht, inhalt, eigen, mit], i) => {
+    // Szenen erst bauen, wenn das Video gebraucht wird (spart Ladezeit auf jeder Seite; Website-Thread 17.11.)
+    let fertig = null;
+    VIDEOS[name] = { poster, get szenen() { return fertig || (fertig = liste.map(([k, dauer, datei, nacht, inhalt, eigen, mit], i) => {
       const a = eigen || alt[k];
       return { dauer, titel: a.titel, text: a.text, vorher: a.vorher,
         svg: datei ? `${ohneFelder ? '<g class="ohne-felder"></g>' : ""}${nacht ? NACHT : ""}${bild(datei, dauer, mit ? mit(dauer) : "")}${i === 0 ? vorladen(dateien.slice(1)) : ""}${inhalt(dauer)}` : alt[k].svg };
-    }), poster };
+    })); } };
   };
 
   gemalt("airfryer", 1, [
@@ -3814,9 +3816,19 @@ VIDEOS["smarte-lampen"].poster = 4;
 
 // Englische Seiten: Titel, Text und die Schrift in den Zeichnungen übersetzen (nur Texte, für die es eine Übersetzung gibt)
 if (typeof VIDEO_TEXTE !== "undefined") {
-  Object.values(VIDEOS).forEach(v => v.szenen.forEach(s => {
-    s.titel = T(s.titel);
-    s.text = T(s.text);
-    s.svg = s.svg.replace(/>([^<>]*[A-Za-zÄÖÜäöüß][^<>]*)</g, (alt, x) => { const k = x.trim(), e = T(k); return e === k ? alt : `>${x.replace(k, e)}<`; });
-  }));
+  // erst übersetzen, wenn ein Video gebraucht wird (Website-Thread 17.11.: spart Ladezeit auf en/fr/it)
+  Object.values(VIDEOS).forEach(v => {
+    let fertig = null;
+    const roh = Object.getOwnPropertyDescriptor(v, "szenen");
+    Object.defineProperty(v, "szenen", { configurable: true, enumerable: true, get() {
+      if (fertig) return fertig;
+      fertig = roh.get ? roh.get.call(v) : roh.value;
+      fertig.forEach(s => {
+        s.titel = T(s.titel);
+        s.text = T(s.text);
+        s.svg = s.svg.replace(/>([^<>]*[A-Za-zÄÖÜäöüß][^<>]*)</g, (alt, x) => { const k = x.trim(), e = T(k); return e === k ? alt : `>${x.replace(k, e)}<`; });
+      });
+      return fertig;
+    } });
+  });
 }
