@@ -28,7 +28,8 @@
   --statt-hg: #12312a; --statt-ink: var(--marker); --statt-wort: #3fc1a1; /* "Statt …"-Kasten: gelbe Schrift auf dem Logo-Grün, das Wort "Statt" im Grün, das die Seite auf dunklen Flächen nutzt; hell und dunkel gleich */
   --tile: #d3e7dd;
   --punkt-hg: #eef6e7; --punkt-rand: #b5cfc3; /* die drei Punkte auf der Startseite: helle Fläche mit sichtbarem Rand wie in der dunklen Version */
-  --glas: rgba(214, 233, 224, 0.6); --glas-licht: rgba(255, 255, 255, 0.85); --glas-rand: rgba(21, 33, 29, 0.10); --glas-liste: rgba(234, 243, 226, 0.9); --glas-hover: rgba(13, 110, 91, 0.10); /* Milchglas des Sprachschalters */
+  --glas-hover: rgba(13, 110, 91, 0.10);
+  --sm-a: rgba(255, 255, 255, 0.6); --sm-b: rgba(236, 245, 230, 0.36); --sm-r: rgba(255, 255, 255, 0.75); --sm-bl: 22px; --mm-a: rgba(255, 255, 255, 0.55); --mm-b: rgba(236, 245, 230, 0.42); --mm-r: rgba(255, 255, 255, 0.75); --mm-bl: 26px; /* Milchglas Schalter (sm) und Sprachmenü (mm), Wahl 17.11. */
   --band: #12312a;
   --band-ink: #eaf4f0;
   --band-muted: #b5cdc4;
@@ -58,7 +59,8 @@
     --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
     --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
     --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
-    --glas: rgba(255, 255, 255, 0.04); --glas-licht: rgba(255, 255, 255, 0.11); --glas-rand: rgba(255, 255, 255, 0.13); --glas-liste: rgba(23, 33, 30, 0.6); --glas-hover: rgba(63, 193, 161, 0.16);
+    --glas-hover: rgba(63, 193, 161, 0.16);
+    --sm-a: rgba(255, 255, 255, 0.16); --sm-b: rgba(255, 255, 255, 0.06); --sm-r: rgba(255, 255, 255, 0.22); --sm-bl: 22px; --mm-a: rgba(255, 255, 255, 0.14); --mm-b: rgba(255, 255, 255, 0.07); --mm-r: rgba(255, 255, 255, 0.22); --mm-bl: 26px;
     --band: #12312a; --band-ink: #e8f2ee; --band-muted: #a9c4ba;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 28px -14px rgba(0, 0, 0, 0.7);
     --shadow-pop: 0 2px 6px rgba(0, 0, 0, 0.45), 0 30px 64px -20px rgba(0, 0, 0, 0.9);
@@ -78,7 +80,8 @@
   --accent: #3fc1a1; --accent-ink: #062019; --accent-soft: rgba(63, 193, 161, 0.18); --minus-soft: rgba(157, 176, 168, 0.12);
   --marker: #e8c94a; --marker-ink: var(--logo-ink); --tile: #1f2d29;
   --punkt-hg: rgba(255, 255, 255, 0.06); --punkt-rand: rgba(255, 255, 255, 0.05);
-  --glas: rgba(255, 255, 255, 0.04); --glas-licht: rgba(255, 255, 255, 0.11); --glas-rand: rgba(255, 255, 255, 0.13); --glas-liste: rgba(23, 33, 30, 0.6); --glas-hover: rgba(63, 193, 161, 0.16);
+  --glas-hover: rgba(63, 193, 161, 0.16);
+  --sm-a: rgba(255, 255, 255, 0.16); --sm-b: rgba(255, 255, 255, 0.06); --sm-r: rgba(255, 255, 255, 0.22); --sm-bl: 22px; --mm-a: rgba(255, 255, 255, 0.14); --mm-b: rgba(255, 255, 255, 0.07); --mm-r: rgba(255, 255, 255, 0.22); --mm-bl: 26px;
   --band: #12312a; --band-ink: #e8f2ee; --band-muted: #a9c4ba;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 28px -14px rgba(0, 0, 0, 0.7);
   --shadow-pop: 0 2px 6px rgba(0, 0, 0, 0.45), 0 30px 64px -20px rgba(0, 0, 0, 0.9);
@@ -131,8 +134,8 @@ a { color: var(--accent); }
 .top nav a:hover { color: var(--ink); }
 /* Sprachschalter am Ende des Menüs: Knopf mit der Flagge der Sprache, darunter eine Liste aus Milchglas (die Seite dahinter verschwimmt) */
 .sprache { position: relative; align-self: center; }
-.sprache-knopf { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px 4px 4px; border: 1px solid var(--glas-rand); border-radius: 999px; background: linear-gradient(180deg, var(--glas-licht), var(--glas)); -webkit-backdrop-filter: blur(12px) saturate(160%); backdrop-filter: blur(12px) saturate(160%); box-shadow: inset 0 1px 0 var(--glas-licht), 0 4px 14px -8px rgba(21, 33, 29, 0.35); color: var(--ink); font: 700 0.78rem/1 var(--font-body); letter-spacing: 0.04em; cursor: pointer; transition: box-shadow 0.15s; }
-.sprache-knopf:hover, .sprache-knopf[aria-expanded="true"] { box-shadow: inset 0 1px 0 var(--glas-licht), 0 6px 18px -8px rgba(21, 33, 29, 0.5); }
+.sprache-knopf { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px 4px 4px; border: 1px solid var(--sm-r); border-radius: 999px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--sm-a), var(--sm-b)); -webkit-backdrop-filter: blur(var(--sm-bl)) saturate(170%); backdrop-filter: blur(var(--sm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 10px 28px -14px rgba(21, 33, 29, 0.55); color: var(--ink); font: 700 0.78rem/1 var(--font-body); letter-spacing: 0.04em; cursor: pointer; transition: box-shadow 0.15s; }
+.sprache-knopf:hover, .sprache-knopf[aria-expanded="true"] { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 12px 30px -12px rgba(21, 33, 29, 0.65); }
 .sprache-knopf:focus-visible, .sprache-liste a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .sprache-pfeil { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; opacity: 0.6; transition: transform 0.2s; }
 .sprache-knopf[aria-expanded="true"] .sprache-pfeil { transform: rotate(180deg); }
@@ -141,7 +144,7 @@ a { color: var(--accent); }
 .flagge-en { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 0 30 30"><clipPath id="t"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path fill="%23012169" d="M0 0h60v30H0z"/><path stroke="%23fff" stroke-width="6" d="M0 0l60 30m0-30L0 30"/><path stroke="%23C8102E" stroke-width="4" clip-path="url(%23t)" d="M0 0l60 30m0-30L0 30"/><path stroke="%23fff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="%23C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg>'); }
 .flagge-fr { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 3"><path fill="%23002395" d="M0 0h1v3H0z"/><path fill="%23fff" d="M1 0h1v3H1z"/><path fill="%23ED2939" d="M2 0h1v3H2z"/></svg>'); }
 .flagge-it { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 3"><path fill="%23009246" d="M0 0h1v3H0z"/><path fill="%23fff" d="M1 0h1v3H1z"/><path fill="%23CE2B37" d="M2 0h1v3H2z"/></svg>'); }
-.sprache-liste { position: absolute; z-index: 60; top: calc(100% + 8px); right: 0; min-width: 172px; margin: 0; padding: 6px; list-style: none; border: 1px solid var(--glas-rand); border-radius: 16px; background: var(--glas-liste); -webkit-backdrop-filter: blur(18px) saturate(180%); backdrop-filter: blur(18px) saturate(180%); box-shadow: inset 0 1px 0 var(--glas-licht), var(--shadow-pop); transform-origin: top right; animation: sprache-auf 0.16s ease-out; }
+.sprache-liste { position: absolute; z-index: 60; top: calc(100% + 8px); right: 0; min-width: 172px; margin: 0; padding: 6px; list-style: none; border: 1px solid var(--mm-r); border-radius: 16px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--mm-a), var(--mm-b)); -webkit-backdrop-filter: blur(var(--mm-bl)) saturate(170%); backdrop-filter: blur(var(--mm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), var(--shadow-pop); transform-origin: top right; animation: sprache-auf 0.16s ease-out; }
 .sprache.links .sprache-liste { right: auto; left: 0; transform-origin: top left; }
 .sprache-liste[hidden] { display: none; }
 .top .sprache-liste a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; color: var(--ink); font-size: 0.92rem; font-weight: 600; text-decoration: none; }
@@ -153,16 +156,16 @@ a { color: var(--accent); }
 
 /* Schalter Hell/Dunkel (Lukas 15.11.2026): Milchglas wie der Sprachschalter. Am PC rechts oben unter der Kopfzeile,
    schmaler am Ende des Menüs ganz rechts. Der Knopf rollt mit Sonne (hell) oder Mond (dunkel) hinüber. */
-.design-schalter { position: relative; flex: none; align-self: center; width: 64px; height: 34px; padding: 0; margin-left: auto; border: 1px solid var(--glas-rand); border-radius: 999px; background: linear-gradient(180deg, var(--glas-licht), var(--glas)); -webkit-backdrop-filter: blur(12px) saturate(160%); backdrop-filter: blur(12px) saturate(160%); box-shadow: inset 0 1px 0 var(--glas-licht), 0 4px 14px -8px rgba(21, 33, 29, 0.35); color: var(--muted); cursor: pointer; transition: box-shadow 0.15s; }
-.design-schalter:hover { box-shadow: inset 0 1px 0 var(--glas-licht), 0 6px 18px -8px rgba(21, 33, 29, 0.5); }
+.design-schalter { position: relative; flex: none; align-self: center; width: 78px; height: 40px; padding: 0; margin-left: auto; border: 1px solid var(--sm-r); border-radius: 999px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--sm-a), var(--sm-b)); -webkit-backdrop-filter: blur(var(--sm-bl)) saturate(170%); backdrop-filter: blur(var(--sm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 10px 28px -14px rgba(21, 33, 29, 0.55); color: var(--muted); cursor: pointer; transition: box-shadow 0.15s; }
+.design-schalter:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 12px 30px -12px rgba(21, 33, 29, 0.65); }
 .design-schalter:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .design-schalter svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.ds-spur { position: absolute; top: 50%; width: 14px; height: 14px; margin-top: -7px; opacity: 0.55; }
-.ds-hell { left: 9px; } .ds-dunkel { right: 9px; }
-.ds-knopf { position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%; background: var(--marker); color: #12312a; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); transition: transform 0.5s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.5s, color 0.5s; }
-.ds-knopf > span { position: absolute; inset: 5px; transition: opacity 0.35s, transform 0.5s; }
+.ds-spur { position: absolute; top: 50%; width: 16px; height: 16px; margin-top: -8px; opacity: 0.7; }
+.ds-hell { left: 13px; } .ds-dunkel { right: 13px; }
+.ds-knopf { position: absolute; top: 3px; left: 3px; width: 32px; height: 32px; border-radius: 50%; background: var(--marker); color: #12312a; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5); transition: transform 0.5s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.5s, color 0.5s; }
+.ds-knopf > span { position: absolute; inset: 6px; transition: opacity 0.35s, transform 0.5s; }
 .ds-mond { opacity: 0; transform: rotate(-90deg) scale(0.6); }
-.design-schalter[aria-checked="true"] .ds-knopf { transform: translateX(30px); background: #12312a; color: var(--marker); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 224, 102, 0.35); }
+.design-schalter[aria-checked="true"] .ds-knopf { transform: translateX(38px); background: #12312a; color: var(--marker); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 224, 102, 0.35); }
 .design-schalter[aria-checked="true"] .ds-sonne { opacity: 0; transform: rotate(90deg) scale(0.6); }
 .design-schalter[aria-checked="true"] .ds-mond { opacity: 1; transform: none; }
 @media (min-width: 1000px) {
