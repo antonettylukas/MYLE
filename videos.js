@@ -3287,6 +3287,460 @@ VIDEOS.balkonkraftwerk.poster = 2;
 VIDEOS.klimaanlage.poster = 3;
 VIDEOS["smarte-lampen"].poster = 4;
 
+// ============================================================
+// Gemalte Erklärvideos (Grafik-Thread, 17.11.2026)
+// Jede Szene ist ein gemaltes Bild (bilder/gemalt/…webp, freigestellt, Bühnenfarbe scheint durch)
+// mit einer langsamen Kamerafahrt. Schrift, Blasen, Haken, Uhren und Ringe bleiben Code wie bisher,
+// darum gelten hell/dunkel und die Übersetzungen weiter. Titel und Text unter dem Video kommen aus der
+// alten Szene, auf der die neue beruht. Jede Animation ist höchstens halb so lang wie vorher.
+// ============================================================
+(function () {
+  const GB = (window.MYLE_BILDER !== undefined ? window.MYLE_BILDER : "/bilder/") + "gemalt/";
+  // Das Bild zoomt während der Szene sanft um 4 % auf den Punkt fx/fy
+  // mit = Einblendungen, die am gemalten Teil kleben (Ring um die drehende Bürste): sie zoomen mit dem Bild
+  const bild = (datei, dauer, mit = "", fx = 160, fy = 96) =>
+    `<g transform="translate(${fx} ${fy})"><g><animateTransform attributeName="transform" type="scale" values="1;1.04" keyTimes="0;1" calcMode="spline" keySplines=".35 0 .65 1" dur="${dauer}s" fill="freeze"/><image href="${GB}${datei}" x="${-fx}" y="${-fy}" width="320" height="180" preserveAspectRatio="none"/>${mit ? `<g transform="translate(${-fx} ${-fy})">${mit}</g>` : ""}</g></g>`;
+  // Die übrigen Bilder des Videos schon in der ersten Szene laden, damit beim Szenenwechsel nichts nachlädt
+  const vorladen = dateien => `<g opacity="0">${dateien.map(d => `<image href="${GB}${d}" x="-20" y="-20" width="2" height="2"/>`).join("")}</g>`;
+  const NACHT = `<rect width="320" height="180" style="fill:#1e2a38"/>`;   // Nachtbühne wie im Storyboard, in hell und dunkel gleich
+  // Schrift auf dem Bild: ein leerer Rahmen darunter, damit hinterlegeSchrift() ein Feld in Bühnenfarbe dahinterlegt
+  const marke = (x, y, b, h) => `<rect x="${x}" y="${y}" width="${b}" height="${h}" fill="none" class="marke"/>`;
+  const schrift = (x, y, s, cls, d, anker = "middle", stil = "") =>
+    `<text x="${x}" y="${y}" text-anchor="${anker}" class="${cls} v-hoch" style="--d:${d}s${stil ? ";" + stil : ""}">${T(s)}</text>`;
+  // Blase wie blase(), bleibt aber stehen; fs = kleinere Schrift, wenn die Blase neben einem Kopf wenig Platz hat
+  const blase2 = (x, y, s, d, akzent, fs) => {
+    s = T(s);
+    const b = fs ? s.length * fs * 0.58 + 16 : s.length * 6.7 + 24, h = fs ? fs * 1.75 : 19;
+    return `<g transform="translate(${x} ${y})"><g class="v-pop" style="--d:${d}s"><rect x="${(-b / 2).toFixed(1)}" y="${(-h / 2 - 0.5).toFixed(1)}" width="${b.toFixed(1)}" height="${h.toFixed(1)}" rx="${(h / 2).toFixed(1)}" class="${akzent ? "blase-akzent" : "blase"}" filter="url(#v-sch)"/><text y="${fs ? (fs * 0.35).toFixed(1) : 3}" text-anchor="middle" class="t-klein ${akzent ? "hell" : ""}"${fs ? ` style="font-size:${fs}px"` : ""}>${s}</text></g></g>`;
+  };
+  // Schrift mit fester Farbe auf einem ruhigen Feld (Untertitel über unruhigen Malflächen); fs = Schriftgröße
+  const aufFeld = (x, y, s, cls, d, anker, stil, fs, grund) => {
+    s = T(s);
+    const b = s.length * fs * 0.56 + 10, h = fs * 1.5, x0 = anker === "middle" ? x - b / 2 : anker === "end" ? x - b + 5 : x - 5;
+    return `<g class="v-hoch" style="--d:${d}s"><rect x="${x0.toFixed(1)}" y="${(y - fs * 1.05).toFixed(1)}" width="${b.toFixed(1)}" height="${h.toFixed(1)}" rx="${(h / 2).toFixed(1)}" style="fill:${grund}"/><text x="${x}" y="${y}" text-anchor="${anker}" class="${cls}" style="${stil}">${s}</text></g>`;
+  };
+  const DUNKEL = "rgba(18,49,42,.8)", HELL = "rgba(240,246,242,.88)";
+  const pille = (x, y, s, d, grund, farbe) => {
+    s = T(s);
+    return `<g transform="translate(${x} ${y})"><g class="v-pop" style="--d:${d}s"><rect x="${-(s.length * 3.1 + 10)}" y="-8" width="${s.length * 6.2 + 20}" height="16" rx="8" style="fill:${grund}"/><text y="3.2" text-anchor="middle" class="t-klein" style="fill:${farbe}">${s}</text></g></g>`;
+  };
+  const ring = (x, y, r, gross, klein, d, len, stil = "") =>
+    `<g transform="translate(${x} ${y})" class="v-ein" style="--d:${d}s"><circle r="${r}" class="ring-bg"/><circle r="${r}" pathLength="1" class="ring v-zeichne" style="--d:${d}s;--len:${len}s" transform="rotate(-90)"/><text y="${stil ? 3.5 : 4}" text-anchor="middle" class="t-mittel fett"${stil ? ` style="${stil}"` : ""}>${T(gross)}</text>${klein ? `<text y="${r + 13}" text-anchor="middle" class="t-mini leise">${T(klein)}</text>` : ""}</g>`;
+  const uhrDreht = (x, y, klein, d) =>
+    `<g transform="translate(${x} ${y})" class="v-ein" style="--d:${d}s"><circle r="17" class="uhr" filter="url(#v-sch)"/><circle r="17" fill="url(#v-glanz)"/><g class="v-dreh" style="animation-duration:2.4s"><line y2="-11" class="zeiger"/></g><circle r="1.8" class="zeiger-nabe"/><text y="31" text-anchor="middle" class="t-mini leise">${T(klein)}</text></g>`;
+  const pop = (d, inhalt) => `<g class="v-pop" style="--d:${d}s">${inhalt}</g>`;
+
+  // ---------- Lukas 17.11.: „Schrift farblich hinterlegen“ ----------
+  // In gemalten Szenen steht keine Schrift frei auf dem Bild. Jede Schrift ohne eigenen Untergrund bekommt ein Feld:
+  // normale Schrift wie die Blasen (Fläche, Rand, Schatten; folgt hell/dunkel), feste helle Schrift ein dunkelgrünes Feld,
+  // feste dunkle Schrift ein helles. Zahlen auf Geräten (.auf-geraet) und Schrift in Blasen/Karten (.mit-grund) bleiben frei.
+  const schriftFelder = svg => {
+    const NS = "http://www.w3.org/2000/svg";
+    const liste = [], nacht = !!svg.querySelector('rect[style*="1e2a38"]');
+    svg.querySelectorAll("text").forEach(tx => {
+      if (tx.closest(".v-vorher, .v-nachher, .auf-geraet, .mit-grund, defs")) return;
+      let b;
+      try { b = tx.getBBox(); } catch (e) { return; }
+      if (!b.width) return;
+      const davor = tx.previousElementSibling;
+      if (davor && /^(rect|circle|ellipse|path)$/.test(davor.tagName) && !davor.classList.contains("marke")) {
+        const f = davor.getBBox(), mx = b.x + b.width / 2, my = b.y + b.height / 2;
+        if (f.width < 260 && mx > f.x && mx < f.x + f.width && my > f.y && my < f.y + f.height) return;
+      }
+      const haken = davor && davor.tagName === "g" && davor.querySelector(".haken-kreis") && tx.getAttribute("x") === "14";
+      liste.push({ tx, b, davor, haken, r: tx.getBoundingClientRect(), oben: 2, unten: 2 });
+    });
+    // Zwei Zeilen direkt untereinander: die Felder stoßen aneinander statt sich zu überdecken
+    liste.forEach(o => liste.forEach(u => {
+      if (o === u || o.haken || u.haken) return;
+      const k = o.r.height / o.b.height, luecke = (u.r.top - o.r.bottom) / k;
+      if (o.r.right > u.r.left && u.r.right > o.r.left && luecke > -2 && luecke < 4) { o.unten = Math.min(o.unten, Math.max(0.3, luecke / 2)); u.oben = Math.min(u.oben, Math.max(0.3, luecke / 2)); }
+    }));
+    liste.forEach(({ tx, b, davor, haken, oben, unten }) => {
+      const y0 = Math.min(b.y - oben, haken ? -9.5 : 1e9), y1 = Math.max(b.y + b.height + unten, haken ? 9.5 : -1e9), h = y1 - y0;
+      const x0 = haken ? -10 : b.x - 6, x1 = b.x + b.width + 6;
+      const feld = document.createElementNS(NS, "rect");
+      feld.setAttribute("x", x0.toFixed(1)); feld.setAttribute("y", y0.toFixed(1));
+      feld.setAttribute("width", (x1 - x0).toFixed(1)); feld.setAttribute("height", h.toFixed(1)); feld.setAttribute("rx", Math.min(h / 2, 9).toFixed(1));
+      if (/fill/.test(tx.getAttribute("style") || "") || tx.classList.contains("hell")) {
+        const m = (getComputedStyle(tx).fill.match(/[0-9.]+/g) || [0, 0, 0]).map(Number);
+        feld.setAttribute("style", 0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2] > 140 ? (nacht ? "fill:#24493d;stroke:rgba(232,239,236,.5);stroke-width:.5" : "fill:rgba(18,49,42,.86)") : "fill:#f5faf7;stroke:#c6dbd1");
+      } else { feld.setAttribute("class", "blase"); feld.setAttribute("filter", "url(#v-sch)"); }
+      // Bewegt sich die Schrift selbst (Klassen v-…), bewegt sich das Feld mit
+      const bewegung = [...tx.classList].filter(c => c.startsWith("v-"));
+      if (bewegung.length) {
+        const g = document.createElementNS(NS, "g");
+        bewegung.forEach(c => { tx.classList.remove(c); g.classList.add(c); });
+        const stil = (tx.getAttribute("style") || "").split(";").map(t => t.trim()).filter(Boolean);
+        g.setAttribute("style", stil.filter(t => t.startsWith("--")).join(";"));
+        const rest = stil.filter(t => !t.startsWith("--")).join(";");
+        if (rest) tx.setAttribute("style", rest); else tx.removeAttribute("style");
+        tx.replaceWith(g); g.append(feld, tx);
+      } else (haken ? davor : tx).before(feld);
+    });
+  };
+  const altesHinterlegen = hinterlegeSchrift;
+  hinterlegeSchrift = svg => (svg.querySelector('image[href*="gemalt/"]') && !svg.querySelector(".ohne-felder") ? schriftFelder(svg) : altesHinterlegen(svg));
+  window.hinterlegeSchrift = hinterlegeSchrift;
+
+  // ---------- Bewegung zeigen wie in den Reels (Lukas 17.11.) ----------
+  // Gelber Ring in der Ebene des drehenden Teils, zwei Pfeile laufen darauf um; dunkler Rand, damit er auf hellen Fliesen lesbar bleibt
+  const GELB = "#ffe066", RAND = "rgba(18,49,42,.62)";
+  const SPITZE = s => `M${1.3 * s} 0 L${-0.8 * s} ${1.1 * s} L${-0.8 * s} ${-1.1 * s} Z`;
+  const dreh = (x, y, rx, ry, d, takt = 1) => {
+    const bahn = `M${x + rx} ${y} A${rx} ${ry} 0 1 1 ${x - rx} ${y} A${rx} ${ry} 0 1 1 ${x + rx} ${y}`;
+    const lauf = `<animate attributeName="stroke-dashoffset" from="0" to="-100" dur="${takt}s" repeatCount="indefinite"/>`;
+    const kopf = v => `<path d="${SPITZE(2.3)}" fill="${GELB}" stroke="${RAND}" stroke-width="1" stroke-linejoin="round" paint-order="stroke"><animateMotion path="${bahn}" rotate="auto" dur="${takt}s" begin="${(-v * takt).toFixed(2)}s" repeatCount="indefinite"/></path>`;
+    return `<g class="v-ein" style="--d:${d}s"><path d="${bahn}" fill="none" stroke="${RAND}" stroke-width="2.4"/><path d="${bahn}" fill="none" stroke="rgba(255,224,102,.8)" stroke-width="1"/>` +
+      `<path d="${bahn}" pathLength="100" fill="none" stroke="${RAND}" stroke-width="3.4" stroke-dasharray="21 29" stroke-linecap="round">${lauf}</path>` +
+      `<path d="${bahn}" pathLength="100" fill="none" stroke="${GELB}" stroke-width="1.8" stroke-dasharray="21 29" stroke-linecap="round">${lauf}</path>${kopf(0.21)}${kopf(0.71)}</g>`;
+  };
+  // Hin und her von Hand (Schwamm): Doppelpfeil, der mitschrubbt
+  const pendel = (x, y, b, d) => {
+    const p = `M${-b / 2} 0 Q0 ${b * 0.12} ${b / 2} 0`, k = (px, w) => `<path d="${SPITZE(2.3)}" transform="translate(${px} 0) rotate(${w})" fill="${GELB}" stroke="${RAND}" stroke-width="1" stroke-linejoin="round" paint-order="stroke"/>`;
+    return `<g transform="translate(${x} ${y})"><g class="v-ein" style="--d:${d}s"><g><animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0" dur=".7s" repeatCount="indefinite"/><path d="${p}" fill="none" stroke="${RAND}" stroke-width="3.4" stroke-linecap="round"/><path d="${p}" fill="none" stroke="${GELB}" stroke-width="1.8" stroke-linecap="round"/>${k(b / 2 + 0.5, -10)}${k(-b / 2 - 0.5, 190)}</g></g></g>`;
+  };
+  // Gelbes Schild wie in den Reels, mit Linie zum Punkt, den es meint (Linie beginnt an der Seite zum Punkt)
+  const schildZu = (x, y, s, d, px, py) => {
+    s = T(s);
+    const b = s.length * 5.3 + 16, h = 15, unten = py > y, sx = Math.max(x - b / 2 + 8, Math.min(x + b / 2 - 8, px)), sy = unten ? y + h / 2 : y - h / 2;
+    return `<g class="v-pop" style="--d:${d}s"><line x1="${sx}" y1="${sy}" x2="${px}" y2="${py}" stroke="${RAND}" stroke-width="3" stroke-linecap="round"/><line x1="${sx}" y1="${sy}" x2="${px}" y2="${py}" stroke="${GELB}" stroke-width="1.4" stroke-linecap="round"/><circle cx="${px}" cy="${py}" r="2.2" fill="${GELB}" stroke="${RAND}" stroke-width="1.2" paint-order="stroke"/>` +
+      `<rect x="${(x - b / 2).toFixed(1)}" y="${y - h / 2}" width="${b.toFixed(1)}" height="${h}" rx="${h / 2}" fill="${GELB}" stroke="${RAND}" stroke-width=".8" filter="url(#v-sch)"/><text x="${x}" y="${y + 3.3}" text-anchor="middle" class="t-mini fett" style="fill:#12312a">${s}</text></g>`;
+  };
+  // Benachrichtigung als Sprechblase (Lukas 17.11.), Spitze zeigt aufs Handy; kurzer Ping am Handy
+  const meldung = (x, y, z1, z2, d, px, py) => {
+    z1 = T(z1); z2 = T(z2);
+    const b = Math.max(z1.length, z2.length) * 5.4 + 20, w = b / 2, h = 13, tx = px - x, r = 8;
+    const spitze = Math.max(-w + r + 3, Math.min(w - r - 9, tx - 5));
+    const pfad = `M${-w + r} ${-h} H${spitze} L${px - x} ${py - y} L${spitze + 9} ${-h} H${w - r} Q${w} ${-h} ${w} ${-h + r} V${h - r} Q${w} ${h} ${w - r} ${h} H${-w + r} Q${-w} ${h} ${-w} ${h - r} V${-h + r} Q${-w} ${-h} ${-w + r} ${-h} Z`;
+    return `<circle cx="${px}" cy="${py - 4}" r="7" fill="none" stroke="${GELB}" stroke-width="1.6" class="v-tipp" style="--d:${(d - 0.2).toFixed(2)}s"/>` +
+      `<g transform="translate(${x} ${y})" class="mit-grund"><g class="v-pop" style="--d:${d}s"><path d="${pfad}" class="blase" filter="url(#v-sch)"/><text y="-2" text-anchor="middle" class="t-mini fett">${z1}</text><text y="9" text-anchor="middle" class="t-mini">${z2}</text></g></g>`;
+  };
+  // Heizkosten als gelbes Schild mit laufender Zahl (Lukas 17.11., Sparduschkopf), Linie zum Gerät
+  const kosten = (x, y, z1, bis, d, lauf, px, py, b = 80) => {
+    z1 = T(z1); b = Math.max(b, z1.length * 5.9 + 12, (String(bis).length + 3 + T("Jahr").length) * 5.9 + 12);
+    const n = 12, h = 27, t0 = d + 0.35, sx = x - b / 2;
+    const zahlen = Array.from({ length: n }, (_, k) => k === n - 1 ? bis : Math.round(bis * k / (n - 1) / 10) * 10);
+    const zeit = k => (t0 + lauf * k / (n - 1)).toFixed(2);
+    const texte = zahlen.map((z, k) => `<text x="${x}" y="${y + 9}" text-anchor="middle" class="t-mini fett" style="fill:#12312a" visibility="${k ? "hidden" : "visible"}">${k ? `<set attributeName="visibility" to="visible" begin="${zeit(k)}s"/>` : ""}${k < n - 1 ? `<set attributeName="visibility" to="hidden" begin="${zeit(k + 1)}s"/>` : ""}${z} €/${T("Jahr")}</text>`).join("");
+    return `<g class="mit-grund"><g class="v-pop" style="--d:${d}s"><line x1="${sx + 4}" y1="${y}" x2="${px}" y2="${py}" stroke="${RAND}" stroke-width="3" stroke-linecap="round"/><line x1="${sx + 4}" y1="${y}" x2="${px}" y2="${py}" stroke="${GELB}" stroke-width="1.4" stroke-linecap="round"/><circle cx="${px}" cy="${py}" r="2.2" fill="${GELB}" stroke="${RAND}" stroke-width="1.2" paint-order="stroke"/>` +
+      `<rect x="${sx}" y="${y - h / 2}" width="${b}" height="${h}" rx="9" fill="${GELB}" stroke="${RAND}" stroke-width=".8" filter="url(#v-sch)"/><text x="${x}" y="${y - 3}" text-anchor="middle" class="t-mini" style="fill:#12312a">${z1}</text>${texte}</g></g>`;
+  };
+  // Gelbes Schild ohne Linie, eine Zeile
+  const schild = (x, y, s, d) => {
+    s = T(s);
+    const b = s.length * 5.6 + 18, h = 16;
+    return `<g class="mit-grund"><g class="v-pop" style="--d:${d}s"><rect x="${(x - b / 2).toFixed(1)}" y="${y - h / 2}" width="${b.toFixed(1)}" height="${h}" rx="8" fill="${GELB}" stroke="${RAND}" stroke-width=".8" filter="url(#v-sch)"/><text x="${x}" y="${y + 3.6}" text-anchor="middle" class="t-mini fett" style="fill:#12312a">${s}</text></g></g>`;
+  };
+
+  // Ein gemaltes Video aus den alten Szenen: [alte Szene, Dauer, Bild oder null (alte Code-Szene), nacht, Schrift(dauer) => svg]
+  // eigen = {titel, text, vorher} für eine Szene, die es im alten Video nicht gab; mit = Einblendungen am Bild;
+  // ohneFelder = Video wurde ohne Schriftfelder freigegeben und bleibt so
+  const gemalt = (name, poster, liste, ohneFelder) => {
+    const alt = VIDEOS[name].szenen, dateien = liste.map(z => z[2]).filter(Boolean);
+    VIDEOS[name] = { szenen: liste.map(([k, dauer, datei, nacht, inhalt, eigen, mit], i) => {
+      const a = eigen || alt[k];
+      return { dauer, titel: a.titel, text: a.text, vorher: a.vorher,
+        svg: datei ? `${ohneFelder ? '<g class="ohne-felder"></g>' : ""}${nacht ? NACHT : ""}${bild(datei, dauer, mit ? mit(dauer) : "")}${i === 0 ? vorladen(dateien.slice(1)) : ""}${inhalt(dauer)}` : alt[k].svg };
+    }), poster };
+  };
+
+  gemalt("airfryer", 1, [
+    [0, 3.5, "af-1.webp", false, dauer =>
+        marke(48.8, 157.4, 150, 14.0) +
+        ring(62.0, 43.8, 23.9, "15 Min", "danebenstehen", 0.3, dauer - 0.3 - .3) +
+        schrift(123.8, 167.7, "Danach: Pfanne und Herd schrubben.", "t-klein leise", 0.9, "middle")],
+    [1, 4.5, "af-2.webp", false, dauer =>
+        marke(35.6, 157.4, 52.9, 14.0) +
+        marke(116.3, 157.4, 42.9, 14.0) +
+        blase2(99.9, 17.4, "Piep! Beides fertig", 0.3, true) +
+        schrift(58.1, 48.6, "200°", "auf-geraet", 0.2, "middle", "font-size:9px;font-weight:700;fill:#ff9a3a") +
+        schrift(141.7, 48.6, "190°", "auf-geraet", 0.2, "middle", "font-size:9px;font-weight:700;fill:#ff9a3a") +
+        schrift(99.9, 50.9, "SYNC", "auf-geraet", 0.2, "middle", "font-size:6.2px;font-weight:800;fill:#f3f7f5") +
+        schrift(58.1, 56.2, "25 MIN", "auf-geraet", 0.2, "middle", "font-size:7px;font-weight:700;fill:#ff9a3a") +
+        schrift(141.7, 56.2, "12 MIN", "auf-geraet", 0.2, "middle", "font-size:7px;font-weight:700;fill:#ff9a3a") +
+        meldung(250, 87, "Airfryer · jetzt", "Dein Essen ist fertig", 0.74, 253, 63) +
+        haken(88.9, 77.7, 1.17) +
+        haken(164.7, 77.7, 1.61) +
+        schrift(62.0, 167.7, "Hähnchen", "t-mini leise", 2.04, "middle") +
+        schrift(137.8, 167.7, "Gemüse", "t-mini leise", 2.48, "middle")],
+    [4, 3, "af-3.webp", false, dauer =>
+        marke(229.3, 120.5, 20.3, 13.7) +
+        marke(71.6, 157.4, 46.6, 14.0) +
+        marke(219.2, 157.4, 40.5, 14.0) +
+        schrift(159.7, 25.3, "So viel Öl brauchst du", "t-mittel fett", 0.3, "middle") +
+        schrift(159.7, 100.7, "→", "t-gross leise", 0.64, "middle") +
+        schrift(239.4, 130.6, "1 EL", "t-gross", 0.97, "middle") +
+        schrift(94.9, 167.7, "Fritteuse", "t-klein leise", 1.31, "middle") +
+        schrift(239.5, 167.7, "Airfryer", "t-klein leise", 1.65, "middle")],
+    [5, 3, "af-4.webp", false, dauer =>
+        marke(30.1, 154.4, 123.1, 14.0) +
+        haken(275.2, 71.7, 0.3) +
+        schrift(30.1, 148.8, "Keine Pfanne,", "t-mittel fett", 0.75, "start") +
+        schrift(30.1, 164.8, "keinen Herd schrubben.", "t-mittel fett", 1.2, "start")],
+  ]);
+
+  gemalt("buerste", 1, [
+    [0, 3.5, "bu-1.webp", false, dauer =>
+        pop(0.3, uhr(291.2, 43.9, T("40 Min"), 0, 240)), null, dauer => pendel(70, 161, 30, .6)],
+    [1, 4, "bu-2.webp", false, dauer =>
+        funkel(100.0, 68.0, 0.4, 1) +
+        funkel(56.1, 72.0, 0.75, 1.2) +
+        funkel(80.1, 112.0, 1.1, 1.2), null, dauer => dreh(110, 166, 16, 5.2, .5, .8) + schildZu(70, 128, "Dreht sich von selbst", 1.1, 110, 160.8)],
+    [2, 3, "bu-3.webp", false, dauer =>
+        schrift(159.7, 29.3, "Ein Griff, vier Aufsätze", "t-mittel fett", 0.3, "middle") +
+        schrift(159.7, 167.7, "Scheuerpad: Backofen, Grill", "t-klein", 0.9, "middle"), null, dauer => dreh(66.5, 153, 21, 6.4, .6, .8)],
+  ]);
+
+  gemalt("deckel", 1, [
+    [0, 3.5, "de-1.webp", false, dauer =>
+        schrift(119.8, 25.3, "Frischhaltefolie, jeden Tag", "t-mittel fett", 0.3, "middle") +
+        schrift(261.3, 39.2, "Ein Stück pro Tag:", "t-klein leise", 0.75, "middle") +
+        schrift(261.4, 53.2, "365 Stück im Jahr", "t-klein fett", 1.2, "middle") +
+        aufFeld(82.0, 124.0, "FRISCHHALTEFOLIE", "t-mini fett", 1.65, "middle", "font-size:8px;fill:#5b3b23", 8, HELL)],
+    [1, 4, "de-2.webp", false, dauer =>
+        schrift(159.7, 27.3, "Drüberziehen, fertig", "t-mittel fett", 0.3, "middle") +
+        aufFeld(70.0, 148.8, "Schüssel", "t-klein fett", 0.75, "middle", "fill:#3b2f22", 11.5, HELL) +
+        aufFeld(159.7, 148.8, "Dose", "t-klein fett", 1.2, "middle", "fill:#3b2f22", 11.5, HELL) +
+        aufFeld(249.3, 148.8, "Melone", "t-klein fett", 1.65, "middle", "fill:#3b2f22", 11.5, HELL) +
+        schrift(159.7, 167.7, "Sechs Größen, passt auf vieles.", "t-mittel fett", 2.1, "middle", "fill:#fff8ec")],
+    [2, 3, "de-3.webp", false, dauer =>
+        marke(196.6, 116.5, 70.1, 14.0) +
+        zeile(189.6, 59.8, T("Wieder und wieder"), 0.3) +
+        zeile(189.6, 91.6, T("Spülmaschinenfest"), 0.75) +
+        funkel(174.0, 102.0, 0.4, 0.8) +
+        zeile(189.6, 123.5, T("Nichts klebt"), 1.2) +
+        funkel(136.1, 136.0, 0.75, 0.7)],
+  ]);
+
+  gemalt("waschtrockner", 2, [
+    [0, 3.5, "wt-1.webp", false, dauer =>
+        schrift(22.2, 13.9, "Aufhängen, warten, abnehmen", "t-mittel fett", 0.3, "start") +
+        ring(285.2, 47.8, 19.9, "1 Tag", "trocknen", 0.75, dauer - 0.75 - .3) +
+        schrift(159.7, 167.7, "Und danach noch bügeln.", "t-klein", 1.2, "middle", "fill:#3b2f22")],
+    [1, 3.5, "wt-2.webp", false, dauer =>
+        marke(212.5, 128.5, 76.0, 14.0) +
+        pop(0.3, uhr(291.2, 44.9, T("7:30"), 225, 180)) +
+        schrift(100.4, 44.4, "18:00", "auf-geraet", 0.2, "middle", "font-size:9px;font-weight:700;fill:#7ee2c4") +
+        zeile(205.5, 83.7, T("Wäsche rein"), 0.75) +
+        zeile(205.5, 109.6, T("Endzeit: 18 Uhr"), 1.2) +
+        zeile(205.5, 135.5, T("Ab zur Arbeit"), 1.65)],
+    [2, 3.5, "wt-3.webp", false, dauer =>
+        schrift(100.0, 33.0, "DAMPF", "auf-geraet", 0.2, "middle", "font-size:7.3px;font-weight:700;font-family:ui-monospace,Menlo,Consolas,monospace;fill:#8fe0c0") +
+        zeile(203.5, 67.7, T("Waschen"), 0.3) +
+        zeile(203.5, 99.6, T("Trocknen"), 0.75) +
+        zeile(203.5, 131.5, T("Weniger Falten"), 1.2)],
+    [3, 3.5, "wt-4.webp", false, dauer =>
+        pop(0.3, uhr(291.2, 44.9, T("18:00"), 180, 0)) +
+        schrift(68.7, 64.5, "FERTIG", "auf-geraet", 0.2, "middle", "font-size:5.0px;font-weight:700;font-family:ui-monospace,Menlo,Consolas,monospace;fill:#8fe0c0") +
+        funkel(178.1, 62.0, 0.4, 0.9) +
+        funkel(206.1, 84.0, 0.75, 1.2) +
+        funkel(146.0, 92.1, 1.1, 1) +
+        schrift(285.2, 121.0, "0 Min.", "t-gross", 0.75, "middle") +
+        schrift(285.2, 135.9, "aufhängen", "t-klein leise", 1.2, "middle")],
+  ]);
+
+  gemalt("akkusauger", 2, [
+    [0, 3.5, "as-1.webp", false, dauer =>
+        funkel(28.1, 112.0, 0.4, 0.8) +
+        schrift(159.7, 166.7, "In jedem Zimmer neu einstecken.", "t-klein", 0.9, "middle", "fill:#3b2f22")],
+    [1, 3, "as-2.webp", false, dauer =>
+        funkel(250.0, 134.0, 0.4, 0.8) +
+        funkel(140.0, 134.0, 0.75, 0.8) +
+        funkel(196.0, 136.0, 1.1, 0.8)],
+    [2, 3, "as-3.webp", false, dauer =>
+        schrift(159.7, 21.3, "Ein Gerät für alles", "t-mittel fett", 0.3, "middle") +
+        schrift(269.3, 95.1, "Auto", "t-gross", 0.75, "middle")],
+    [3, 3, "as-4.webp", false, dauer =>
+        zeile(167.7, 61.8, T("Lädt an der Wand"), 0.3) +
+        zeile(167.7, 93.6, T("Ohne Staubbeutel"), 0.75) +
+        zeile(167.7, 125.5, T("Immer griffbereit"), 1.2)],
+  ]);
+
+  gemalt("reiskocher", 2, [
+    [0, 3.5, "rk-1.webp", false, dauer =>
+        ring(269.3, 53.8, 19.9, "20 Min", "auf dem Herd", 0.3, dauer - 0.3 - .3, "font-size:10px") +
+        schrift(159.7, 167.7, "Danach: Topf einweichen und schrubben.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [1, 3.5, "rk-2.webp", false, dauer =>
+        marke(182.6, 100.6, 83.5, 14.0) +
+        zeile(175.6, 49.8, T("Reis rein"), 0.3) +
+        zeile(175.6, 78.7, T("Wasser dazu"), 0.75) +
+        schrift(91.9, 105.7, "37 MIN", "auf-geraet", 0.2, "middle", "font-size:8.5px;font-weight:700;fill:#ff9a3a") +
+        zeile(175.6, 107.6, T("Knopf drücken"), 1.2)],
+    [2, 3.5, "rk-2.webp", false, dauer =>
+        marke(190.6, 100.6, 89.1, 14.0) +
+        zeile(183.6, 49.8, T("Kocht nicht über"), 0.3) +
+        zeile(183.6, 78.7, T("Brennt nicht an"), 0.75) +
+        schrift(95.9, 104.1, "WARM", "auf-geraet", 0.2, "middle", "font-size:8.5px;font-weight:700;fill:#ff9a3a") +
+        zeile(183.6, 107.6, T("Hält dann warm"), 1.2)],
+    [3, 3, "rk-4.webp", false, dauer =>
+        funkel(152.0, 70.0, 0.4, 0.9) +
+        funkel(66.0, 80.0, 0.75, 1) +
+        funkel(156.1, 110.0, 1.1, 0.8) +
+        aufFeld(239.4, 144.8, "Kurz ausspülen, fertig", "t-klein", 0.3, "middle", "fill:#3b2f22", 11.5, HELL) +
+        schrift(159.7, 167.7, "Locker, und nichts brennt an.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+  ]);
+
+  gemalt("thermostate", 2, [
+    [0, 3.5, "th-1.webp", false, dauer =>
+        ring(225.4, 39.9, 19.9, "9 Std.", "niemand da", 0.3, dauer - 0.3 - .3) +
+        pop(0.75, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">läuft den ganzen Tag</text></g>") +
+        schrift(60.0, 72.9, "€", "auf-geraet", 0.2, "middle", "font-size:8px;font-weight:800;fill:#7a4d0a") +
+        pop(1.2, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>") +
+        schrift(84.0, 89.5, "€", "auf-geraet", 0.2, "middle", "font-size:8px;font-weight:800;fill:#7a4d0a") +
+        schrift(159.7, 167.7, "Heizkosten für eine leere Wohnung.", "t-klein", 1.65, "middle", "fill:#3b2f22")],
+    [1, 3.5, "th-2.webp", false, dauer =>
+        blase2(82.0, 13.9, "Spart Heizkosten", 0.3, true) +
+        pop(0.75, uhr(225.4, 35.9, T("7:30"), 225, 180)) +
+        pop(1.2, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#7ee2c4;font-size:15px;font-family:monospace;font-weight:700\">17°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Sparen</text></g>") +
+        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
+    [2, 3.5, "th-3.webp", false, dauer =>
+        blase2(82.0, 14.0, "Schön warm", 0.3, true) +
+        pop(0.75, uhr(225.4, 35.9, T("17:30"), 165, 180)) +
+        pop(1.2, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Warm</text></g>") +
+        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
+    [4, 3.5, "th-4.webp", false, dauer =>
+        zeile(20.2, 21.9, T("Alten Regler abschrauben"), 0.3, "t-klein") +
+        zeile(20.2, 43.8, T("Thermostat aufschrauben"), 0.75, "t-klein") +
+        zeile(20.2, 65.8, T("Kein Handwerker nötig"), 1.2, "t-klein") +
+        haken(243.3, 111.6, 1.65) +
+        schrift(226.7, 127.6, "21°", "auf-geraet", 0.2, "middle", "font-size:4.3px;font-weight:700;fill:#9fe0c4")],
+  ]);
+
+  gemalt("kuechenmaschine-kochfunktion", 2, [
+    [0, 3.5, "kf-1.webp", false, dauer =>
+        uhrDreht(50.1, 59.8, "danebenstehen", 0.3) +
+        schrift(159.7, 167.7, "Danach: Brett, Messer und zwei Töpfe spülen.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [1, 3, "kf-2.webp", false, dauer =>
+        zeile(175.6, 49.8, T("Zutaten rein"), 0.3) +
+        zeile(175.6, 78.7, T("Deckel drauf"), 0.75) +
+        zeile(175.6, 107.6, T("Programm wählen"), 1.2) +
+        schrift(95.9, 109.5, "SUPPE", "auf-geraet", 0.2, "middle", "font-size:8.5px;font-weight:700;fill:#ff9a3a")],
+    [2, 4, "kf-3.webp", false, dauer =>
+        schrift(253.3, 39.8, "Zeit für dich", "t-klein", 0.3, "middle") +
+        schrift(96.9, 123.5, "100°", "auf-geraet", 0.2, "middle", "font-size:8.5px;font-weight:700;fill:#ff9a3a")],
+    [4, 3, "kf-4.webp", false, dauer =>
+        schrift(243.3, 71.1, "Mixtopf, Messer, Deckel", "t-klein", 0.3, "middle") +
+        funkel(128.1, 92.1, 0.4, 0.9) +
+        funkel(48.0, 96.0, 0.75, 1) +
+        aufFeld(159.7, 167.7, "Kein Stapel mehr in der Spüle.", "t-klein", 0.9, "middle", "fill:#f3ead9", 11.5, DUNKEL)],
+  ]);
+
+  gemalt("kuechenmaschine", 2, [
+    [0, 3.5, "km-1.webp", false, dauer =>
+        ring(279.2, 65.8, 19.9, "8 Min", "mindestens", 0.3, dauer - 0.3 - .3, "font-size:10px") +
+        aufFeld(159.7, 167.7, "Danach: Hände und Arbeitsfläche voller Teig.", "t-klein", 0.9, "middle", "fill:#f3ead9", 11.5, DUNKEL)],
+    [1, 3, "km-2.webp", false, dauer =>
+        zeile(159.7, 49.8, T("Mehl und Zutaten rein"), 0.3) +
+        zeile(159.7, 78.7, T("Knethaken einsetzen"), 0.75) +
+        zeile(159.7, 107.6, T("Stufe wählen"), 1.2)],
+    [2, 3.5, "km-3.webp", false, dauer =>
+        ""],
+    [3, 3, "km-4.webp", false, dauer =>
+        marke(195.6, 68.7, 99.5, 14.0) +
+        schrift(95.9, 29.3, "Glatt und geschmeidig", "t-klein", 0.3, "middle") +
+        funkel(110.1, 30.0, 0.4, 0.7) +
+        funkel(128.1, 48.0, 0.75, 0.9) +
+        funkel(62.0, 52.0, 1.1, 1) +
+        schrift(245.3, 79.1, "Spülmaschinenfest", "t-klein", 0.75, "middle")],
+  ], true);
+
+  gemalt("wassersprudler", 2, [
+    [0, 3.5, "ws-1.webp", false, dauer =>
+        schrift(159.7, 167.7, "Und später muss das Leergut zurück.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [2, 3.5, "ws-2.webp", false, dauer =>
+        ""],
+    [3, 3.5, "ws-3.webp", false, dauer =>
+        ""],
+    [4, 3, "ws-4.webp", false, dauer =>
+        schrift(66.0, 55.2, "Die Ecke bleibt frei", "t-klein", 0.3, "middle") +
+        funkel(66.0, 70.0, 0.4, 0.8) +
+        funkel(100.0, 80.0, 0.75, 1.1) +
+        funkel(36.0, 84.0, 1.1, 0.9) +
+        aufFeld(159.7, 167.7, "Nur der Gaszylinder wird ab und zu getauscht.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+  ]);
+
+  gemalt("kaffeevollautomat", 2, [
+    [0, 3.5, "kv-1.webp", false, dauer =>
+        blase2(72.0, 29.9, "Behälter voll", 0.3) +
+        schrift(159.7, 167.7, "Jede Tasse eine neue Kapsel.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [2, 3, "kv-2.webp", false, dauer =>
+        zeile(175.6, 61.8, T("Bohnen oben rein"), 0.3) +
+        zeile(175.6, 90.6, T("Deckel zu"), 0.75)],
+    [3, 3.5, "kv-3.webp", false, dauer =>
+        blase2(213.5, 53.8, "Ein Knopf", 0.3) +
+        schrift(159.7, 167.7, "Frisch gemahlen. Das schmeckt man.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [5, 3, "kv-4.webp", false, dauer =>
+        zeile(145.7, 33.9, T("Cappuccino"), 0.3, "t-klein") +
+        zeile(145.7, 55.8, T("Latte macchiato"), 0.75, "t-klein") +
+        zeile(145.7, 77.7, T("Milchkaffee"), 1.2, "t-klein"), {"titel": "Auch mit Milch", "text": "Cappuccino, Latte macchiato oder Milchkaffee: Der Automat schäumt die Milch selbst auf."}],
+    [4, 3, "kv-5.webp", false, dauer =>
+        zeile(159.7, 39.8, T("Tropfschale leeren"), 0.3, "t-klein") +
+        zeile(159.7, 63.7, T("Kaffeesatz in den Biomüll"), 0.75, "t-klein") +
+        schrift(249.3, 95.0, "Biomüll", "t-mini leise", 1.2, "middle") +
+        funkel(250.0, 104.0, 0.4, 0.8)],
+  ]);
+
+  gemalt("balkonkraftwerk", 2, [
+    [0, 3.5, "bk-1.webp", false, dauer =>
+        blase2(121.8, 14.0, "Der Zähler dreht sich zügig", 0.3) +
+        aufFeld(159.7, 167.7, "Draußen scheint die Sonne aufs leere Dach.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [1, 3.5, "bk-2.webp", false, dauer =>
+        blase2(121.8, 14.0, "Stecker in die Außensteckdose", 0.3)],
+    [2, 3.5, "bk-3.webp", false, dauer =>
+        blase2(121.8, 14.0, "Der Zähler dreht langsamer", 0.3) +
+        funkel(30.0, 70.0, 0.4, 0.8) +
+        funkel(140.0, 104.0, 0.75, 0.8) +
+        funkel(69.0, 104.0, 1.1, 0.8) +
+        funkel(286.1, 124.0, 1.45, 0.7) +
+        funkel(238.1, 124.0, 1.8, 0.7) +
+        funkel(300.0, 132.0, 2.15, 0.6) +
+        funkel(252.0, 132.0, 2.5, 0.6) +
+        aufFeld(159.7, 167.7, "Ein Teil des Stroms kommt jetzt vom Dach.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [3, 3.5, "bk-4.webp", true, dauer =>
+        blase2(121.8, 14.0, "Tipp: mittags waschen", 0.3, true)],
+  ]);
+
+  gemalt("klimaanlage", 2, [
+    [0, 3.5, "kl-1.webp", false, dauer =>
+        blase2(111.8, 14.0, "Der Ventilator hilft kaum", 0.3) +
+        schrift(196.0, 40.2, "31 °C", "auf-geraet", 0.2, "middle", "font-size:7.0px;font-weight:700;fill:#e0602a") +
+        aufFeld(106.9, 167.7, "Die Sonne knallt aufs Fenster.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [2, 3.5, "kl-2.webp", false, dauer =>
+        schrift(155.6, 39.5, "31°C", "auf-geraet", 0.2, "middle", "font-size:8.2px;font-weight:700;fill:#ff7a3d") +
+        schrift(239.4, 97.0, "Dichtung", "t-mini", 0.3, "start", "fill:#15211d") +
+        aufFeld(106.9, 167.7, "Ohne Bohren, ohne Werkzeug.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [3, 3.5, "kl-3.webp", false, dauer =>
+        blase2(111.8, 14.0, "Die Wärme geht nach draußen", 0.3) +
+        schrift(196.0, 40.2, "25 °C", "auf-geraet", 0.2, "middle", "font-size:7.0px;font-weight:700;fill:#2d6fa3") +
+        aufFeld(106.9, 167.7, "Drinnen wird es spürbar kühler.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [4, 3.5, "kl-4.webp", true, dauer =>
+        schrift(196.0, 40.2, "19 °C", "auf-geraet", 0.2, "middle", "font-size:7.0px;font-weight:700;fill:#62bfff") +
+        schrift(106.9, 167.7, "Auch in heißen Nächten.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+  ]);
+
+  gemalt("smarte-lampen", 3, [
+    [0, 3.5, "sl-1.webp", true, dauer =>
+        schrift(159.7, 167.7, "Abends kommt sie nach Hause.", "t-klein", 0.9, "middle", "fill:#f3eadb")],
+    [2, 3.5, "sl-2.webp", false, dauer =>
+        schrift(221.0, 97.0, "Zentrale", "t-mini", 0.3, "middle") +
+        aufFeld(159.7, 167.7, "In der App wählst du Szenen.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [3, 3.5, "sl-3.webp", false, dauer =>
+        blase2(129.8, 14.0, "Licht geht von selbst an", 0.3) +
+        aufFeld(159.7, 167.7, "Die Lampen merken die Bewegung.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [4, 3.5, "sl-4.webp", false, dauer =>
+        blase2(129.8, 14.0, "Warm und gedimmt", 0.3) +
+        aufFeld(159.7, 167.7, "So wird es richtig gemütlich.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [5, 3, "sl-5.webp", false, dauer =>
+        blase2(129.8, 14.0, "Entspannt aufwachen", 0.3) +
+        aufFeld(159.7, 167.7, "Nach Zeitplan, jeden Morgen.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
+    [6, 3, "sl-6.webp", true, dauer =>
+        blase2(129.8, 14.0, "Alle Lampen gehen aus", 0.3) +
+        schrift(159.7, 167.7, "Der normale Schalter bleibt an.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+  ]);
+
+})();
+
 // Englische Seiten: Titel, Text und die Schrift in den Zeichnungen übersetzen (nur Texte, für die es eine Übersetzung gibt)
 if (typeof VIDEO_TEXTE !== "undefined") {
   Object.values(VIDEOS).forEach(v => v.szenen.forEach(s => {

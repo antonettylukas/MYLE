@@ -575,5 +575,14 @@ const VIDEO_TEXTE = {
   "Der normale Schalter bleibt an.": "The normal switch stays on.",
   // Schilder Vorher / Nachher
   "Vorher": "Before",
-  "Nachher": "After"
+  "Nachher": "After",
+  "Dreht sich von selbst": "Spins by itself",
+  "Behälter voll": "Bin full",
+  "Jede Tasse eine neue Kapsel.": "A new capsule for every cup.",
+  "Frisch gemahlen. Das schmeckt man.": "Freshly ground. You can taste it.",
+  "Cappuccino": "Cappuccino",
+  "Latte macchiato": "Latte macchiato",
+  "Milchkaffee": "Café au lait",
+  "Auch mit Milch": "With milk too",
+  "Cappuccino, Latte macchiato oder Milchkaffee: Der Automat schäumt die Milch selbst auf.": "Cappuccino, latte macchiato or café au lait: the machine froths the milk itself.",
 };

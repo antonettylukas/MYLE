@@ -575,5 +575,14 @@ const VIDEO_TEXTE = {
   "Der normale Schalter bleibt an.": "L’interruttore normale resta acceso.",
   // Schilder Vorher / Nachher
   "Vorher": "Prima",
-  "Nachher": "Dopo"
+  "Nachher": "Dopo",
+  "Dreht sich von selbst": "Gira da sola",
+  "Behälter voll": "Contenitore pieno",
+  "Jede Tasse eine neue Kapsel.": "Una capsula nuova per ogni tazza.",
+  "Frisch gemahlen. Das schmeckt man.": "Macinato al momento. Si sente.",
+  "Cappuccino": "Cappuccino",
+  "Latte macchiato": "Latte macchiato",
+  "Milchkaffee": "Caffellatte",
+  "Auch mit Milch": "Anche con il latte",
+  "Cappuccino, Latte macchiato oder Milchkaffee: Der Automat schäumt die Milch selbst auf.": "Cappuccino, latte macchiato o caffellatte: la macchina monta il latte da sola.",
 };
