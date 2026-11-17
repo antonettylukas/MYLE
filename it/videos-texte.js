@@ -585,4 +585,13 @@ const VIDEO_TEXTE = {
   "Milchkaffee": "Caffellatte",
   "Auch mit Milch": "Anche con il latte",
   "Cappuccino, Latte macchiato oder Milchkaffee: Der Automat schäumt die Milch selbst auf.": "Cappuccino, latte macchiato o caffellatte: la macchina monta il latte da sola.",
+  "Heizkosten": "Riscaldamento",
+  "Jahr": "anno",
+  "Rund 130 € weniger Heizkosten im Jahr": "Circa 130 € in meno di riscaldamento all'anno",
+  "Gleich lange geduscht, weniger bezahlt": "Stessa doccia, bolletta più leggera",
+  "Beispiel: Zwei Personen duschen je viermal pro Woche 8 Minuten, ein Durchlauferhitzer macht das Wasser mit Strom warm, der alte Duschkopf lässt 12 Liter pro Minute durch. Was es bei dir ist, zeigt der Rechner.": "Esempio: due persone fanno ciascuna quattro docce da 8 minuti a settimana, uno scaldabagno elettrico scalda l'acqua e il vecchio soffione fa passare 12 litri al minuto. Il calcolatore ti mostra quanto vale per te.",
+  "Vier Bücher": "Quattro libri",
+  "für den Urlaub": "per le vacanze",
+  "Putzt von selbst": "Spazzola da sola",
+  "Von Hand geputzt": "Spazzolino a mano",
 };

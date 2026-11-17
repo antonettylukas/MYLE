@@ -585,4 +585,13 @@ const VIDEO_TEXTE = {
   "Milchkaffee": "Café au lait",
   "Auch mit Milch": "Avec du lait aussi",
   "Cappuccino, Latte macchiato oder Milchkaffee: Der Automat schäumt die Milch selbst auf.": "Cappuccino, latte macchiato ou café au lait : la machine fait mousser le lait elle-même.",
+  "Heizkosten": "Chauffage",
+  "Jahr": "an",
+  "Rund 130 € weniger Heizkosten im Jahr": "Environ 130 € de chauffage en moins par an",
+  "Gleich lange geduscht, weniger bezahlt": "Même douche, facture plus légère",
+  "Beispiel: Zwei Personen duschen je viermal pro Woche 8 Minuten, ein Durchlauferhitzer macht das Wasser mit Strom warm, der alte Duschkopf lässt 12 Liter pro Minute durch. Was es bei dir ist, zeigt der Rechner.": "Exemple : deux personnes prennent chacune quatre douches de 8 minutes par semaine, un chauffe-eau électrique chauffe l'eau et l'ancienne pomme de douche laisse passer 12 litres par minute. Le calculateur vous montre ce que cela donne chez vous.",
+  "Vier Bücher": "Quatre livres",
+  "für den Urlaub": "pour les vacances",
+  "Putzt von selbst": "Brosse toute seule",
+  "Von Hand geputzt": "Brossage à la main",
 };

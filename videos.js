@@ -3396,9 +3396,9 @@ VIDEOS["smarte-lampen"].poster = 4;
       `<path d="${bahn}" pathLength="100" fill="none" stroke="${GELB}" stroke-width="1.8" stroke-dasharray="21 29" stroke-linecap="round">${lauf}</path>${kopf(0.21)}${kopf(0.71)}</g>`;
   };
   // Hin und her von Hand (Schwamm): Doppelpfeil, der mitschrubbt
-  const pendel = (x, y, b, d) => {
+  const pendel = (x, y, b, d, w = 0) => {
     const p = `M${-b / 2} 0 Q0 ${b * 0.12} ${b / 2} 0`, k = (px, w) => `<path d="${SPITZE(2.3)}" transform="translate(${px} 0) rotate(${w})" fill="${GELB}" stroke="${RAND}" stroke-width="1" stroke-linejoin="round" paint-order="stroke"/>`;
-    return `<g transform="translate(${x} ${y})"><g class="v-ein" style="--d:${d}s"><g><animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0" dur=".7s" repeatCount="indefinite"/><path d="${p}" fill="none" stroke="${RAND}" stroke-width="3.4" stroke-linecap="round"/><path d="${p}" fill="none" stroke="${GELB}" stroke-width="1.8" stroke-linecap="round"/>${k(b / 2 + 0.5, -10)}${k(-b / 2 - 0.5, 190)}</g></g></g>`;
+    return `<g transform="translate(${x} ${y}) rotate(${w})"><g class="v-ein" style="--d:${d}s"><g><animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0" dur=".7s" repeatCount="indefinite"/><path d="${p}" fill="none" stroke="${RAND}" stroke-width="3.4" stroke-linecap="round"/><path d="${p}" fill="none" stroke="${GELB}" stroke-width="1.8" stroke-linecap="round"/>${k(b / 2 + 0.5, -10)}${k(-b / 2 - 0.5, 190)}</g></g></g>`;
   };
   // Gelbes Schild wie in den Reels, mit Linie zum Punkt, den es meint (Linie beginnt an der Seite zum Punkt)
   const schildZu = (x, y, s, d, px, py) => {
@@ -3425,6 +3425,11 @@ VIDEOS["smarte-lampen"].poster = 4;
     const texte = zahlen.map((z, k) => `<text x="${x}" y="${y + 9}" text-anchor="middle" class="t-mini fett" style="fill:#12312a" visibility="${k ? "hidden" : "visible"}">${k ? `<set attributeName="visibility" to="visible" begin="${zeit(k)}s"/>` : ""}${k < n - 1 ? `<set attributeName="visibility" to="hidden" begin="${zeit(k + 1)}s"/>` : ""}${z} €/${T("Jahr")}</text>`).join("");
     return `<g class="mit-grund"><g class="v-pop" style="--d:${d}s"><line x1="${sx + 4}" y1="${y}" x2="${px}" y2="${py}" stroke="${RAND}" stroke-width="3" stroke-linecap="round"/><line x1="${sx + 4}" y1="${y}" x2="${px}" y2="${py}" stroke="${GELB}" stroke-width="1.4" stroke-linecap="round"/><circle cx="${px}" cy="${py}" r="2.2" fill="${GELB}" stroke="${RAND}" stroke-width="1.2" paint-order="stroke"/>` +
       `<rect x="${sx}" y="${y - h / 2}" width="${b}" height="${h}" rx="9" fill="${GELB}" stroke="${RAND}" stroke-width=".8" filter="url(#v-sch)"/><text x="${x}" y="${y - 3}" text-anchor="middle" class="t-mini" style="fill:#12312a">${z1}</text>${texte}</g></g>`;
+  };
+  // Drucksensor: Ring am Griff leuchtet erst grün, dann rot (zu fest), dann wieder grün
+  const druck = (x, y, r, d) => {
+    const f = `<animate attributeName="stroke" values="#3ecf8e;#ff4d4f;#ff4d4f;#3ecf8e;#3ecf8e" keyTimes="0;.12;.62;.74;1" dur="2.2s" begin="${d}s" fill="freeze"/>`;
+    return `<g class="v-ein" style="--d:${d}s"><circle cx="${x}" cy="${y}" r="${r + 2.6}" fill="none" stroke-width="4" stroke="#3ecf8e" opacity=".35">${f}</circle><circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke-width="2.2" stroke="#3ecf8e">${f}</circle></g>`;
   };
   // Gelbes Schild ohne Linie, eine Zeile
   const schild = (x, y, s, d) => {
@@ -3511,6 +3516,19 @@ VIDEOS["smarte-lampen"].poster = 4;
         funkel(174.0, 102.0, 0.4, 0.8) +
         zeile(189.6, 123.5, T("Nichts klebt"), 1.2) +
         funkel(136.1, 136.0, 0.75, 0.7)],
+  ]);
+
+  gemalt("kindle", 1, [
+    [0, 3.5, "ki-1.webp", false, dauer =>
+        pop(0.3, "<g transform=\"translate(258.1 46)\"><rect x=\"-48.0\" y=\"-17.0\" width=\"96\" height=\"34\" rx=\"9\" class=\"blase\" filter=\"url(#v-sch)\"></rect><rect x=\"-48.0\" y=\"-17.0\" width=\"96\" height=\"34\" fill=\"none\"></rect><text y=\"-3.5\" text-anchor=\"middle\" class=\"t-mittel fett\">Vier Bücher</text><rect x=\"-48.0\" y=\"-17.0\" width=\"96\" height=\"34\" fill=\"none\"></rect><text y=\"10.5\" text-anchor=\"middle\" class=\"t-mittel fett\">für den Urlaub</text></g>") +
+        pop(0.75, "<g transform=\"translate(258.1 100.0)\"><rect x=\"-44\" y=\"-18\" width=\"88\" height=\"46\" rx=\"8\" class=\"blase\" filter=\"url(#v-sch)\"></rect><rect x=\"-44\" y=\"-18\" width=\"88\" height=\"46\" fill=\"none\"></rect><text y=\"4\" text-anchor=\"middle\" class=\"t-gross\">1,5 kg</text><rect x=\"-44\" y=\"-18\" width=\"88\" height=\"46\" fill=\"none\"></rect><text y=\"20\" text-anchor=\"middle\" class=\"t-mini leise\">4 Bücher</text></g>") +
+        pop(1.2, "<g transform=\"translate(258.1 152.5)\"><rect x=\"-53.0\" y=\"-17.0\" width=\"106\" height=\"34\" rx=\"9\" class=\"blase\" filter=\"url(#v-sch)\"></rect><rect x=\"-53.0\" y=\"-17.0\" width=\"106\" height=\"34\" fill=\"none\"></rect><text y=\"-3.5\" text-anchor=\"middle\" class=\"t-klein leise\">Jedes Buch wiegt</text><rect x=\"-53.0\" y=\"-17.0\" width=\"106\" height=\"34\" fill=\"none\"></rect><text y=\"10.5\" text-anchor=\"middle\" class=\"t-klein leise\">300 bis 500 g.</text></g>")],
+    [1, 3.5, "ki-2.webp", false, dauer =>
+        pop(0.3, "<g transform=\"translate(256.1 72.0)\"><rect x=\"-52\" y=\"-19\" width=\"104\" height=\"62\" rx=\"9\" class=\"blase\" filter=\"url(#v-sch)\"></rect><rect x=\"-52\" y=\"-19\" width=\"104\" height=\"62\" fill=\"none\"></rect><text y=\"2\" text-anchor=\"middle\" class=\"t-gross\">200 g</text><rect x=\"-52\" y=\"-19\" width=\"104\" height=\"62\" fill=\"none\"></rect><text y=\"19\" text-anchor=\"middle\" class=\"t-mini leise\">leichter als</text><rect x=\"-52\" y=\"-19\" width=\"104\" height=\"62\" fill=\"none\"></rect><text y=\"32\" text-anchor=\"middle\" class=\"t-mini leise\">ein Taschenbuch</text></g>") +
+        schrift(256.1, 141.5, "Tausende Bücher", "t-gross", 0.75, "middle")],
+    [3, 4, "ki-3.webp", true, dauer =>
+        schrift(58.1, 75.1, "Akku: Wochen", "t-mini hell hell", 0.3, "middle") +
+        schrift(159.7, 160.8, "Licht eingebaut: lesen im Dunkeln", "t-klein hell hell", 0.75, "middle")],
   ]);
 
   gemalt("waschtrockner", 2, [
@@ -3607,6 +3625,16 @@ VIDEOS["smarte-lampen"].poster = 4;
         schrift(226.7, 127.6, "21°", "auf-geraet", 0.2, "middle", "font-size:4.3px;font-weight:700;fill:#9fe0c4")],
   ]);
 
+  gemalt("zahnbuerste", 1, [
+    [0, 3, "zb-1.webp", false, dauer =>
+        pop(0.3, "<g transform=\"translate(281.2 63)\"><circle r=\"18\" class=\"blase\" filter=\"url(#v-sch)\"></circle><circle r=\"18\" class=\"ring-bg\" style=\"fill:none\"></circle><text y=\"4\" text-anchor=\"middle\" class=\"t-mittel fett\">?</text><text y=\"32\" text-anchor=\"middle\" class=\"t-mini leise\">2 Min?</text></g>"), null, dauer => pendel(179, 51, 24, .5, -17) + schildZu(88, 60, "Von Hand geputzt", 1.0, 183, 64)],
+    [1, 3.5, "zb-2.webp", false, dauer =>
+        "", null, dauer => dreh(200, 57, 8, 5, .5, .5) + schildZu(88, 44, "Putzt von selbst", 1.0, 196, 53)],
+    [2, 3, "zb-3.webp", false, dauer =>
+        pille(210.0, 40.0, "So ist es richtig", 2.0, "#12312a", "#ffffff"), null, dauer => dreh(89, 75.5, 17, 14, .3, .5) + druck(173.5, 133.5, 9, .4)],
+    [4, 3.5, null, false, () => ""],   // alte Code-Szene unverändert
+  ]);
+
   gemalt("kuechenmaschine-kochfunktion", 2, [
     [0, 3.5, "kf-1.webp", false, dauer =>
         uhrDreht(50.1, 59.8, "danebenstehen", 0.3) +
@@ -3660,6 +3688,34 @@ VIDEOS["smarte-lampen"].poster = 4;
         aufFeld(159.7, 167.7, "Nur der Gaszylinder wird ab und zu getauscht.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
   ]);
 
+  gemalt("sparduschkopf", 2, [
+    [0, 3.5, "sd-1.webp", false, dauer =>
+        marke(245.1, 84.6, 56.5, 14.0) +
+        marke(172.0, 100.6, 67.1, 14.0) +
+        schrift(273.3, 95.0, "Messeimer", "t-mini leise", 0.3, "middle") +
+        schrift(205.6, 111.0, "Warmwasser", "t-mini leise", 0.75, "middle") +
+        aufFeld(159.7, 167.7, "Viel Wasser, und alles muss warm werden.", "t-klein", 1.2, "middle", "fill:#2b3338", 11.5, HELL), null, dauer => kosten(268, 46, "Heizkosten", 440, 1.0, 1.6, 219, 70, 76)],
+    [1, 3.5, "sd-2.webp", false, dauer =>
+        marke(182.6, 35.9, 107.6, 16.0) +
+        marke(182.6, 63.8, 113.8, 16.0) +
+        marke(182.6, 91.7, 122.3, 16.0) +
+        zeile(175.6, 43.9, T("Alten abschrauben"), 0.3) +
+        zeile(175.6, 71.8, T("Neuen anschrauben"), 0.75) +
+        zeile(175.6, 99.7, T("Meist ohne Werkzeug"), 1.2, "t-klein")],
+    [2, 3.5, "sd-3.webp", false, dauer =>
+        marke(245.1, 84.6, 56.5, 14.0) +
+        marke(172.0, 100.6, 67.1, 14.0) +
+        schrift(273.3, 95.0, "Messeimer", "t-mini leise", 0.3, "middle") +
+        schrift(205.6, 111.0, "Warmwasser", "t-mini leise", 0.75, "middle"), null, dauer => kosten(268, 46, "Heizkosten", 310, 1.0, 1.13, 219, 70, 76)],
+    [3, 3.5, "sd-4.webp", false, dauer =>
+        marke(101.7, 34.8, 115.9, 14.0) +
+        marke(49.7, 84.6, 84.7, 14.0) +
+        marke(188.0, 84.6, 79.1, 14.0) +
+        schrift(159.7, 45.2, "Gleich lange geduscht", "t-mittel fett", 0.3, "middle") +
+        schrift(92.0, 95.0, "Alter Duschkopf", "t-mini leise", 0.75, "middle") +
+        schrift(227.5, 95.0, "Sparduschkopf", "t-mini leise", 1.2, "middle"), {"titel": "Gleich lange geduscht, weniger bezahlt", "text": "Beispiel: Zwei Personen duschen je viermal pro Woche 8 Minuten, ein Durchlauferhitzer macht das Wasser mit Strom warm, der alte Duschkopf lässt 12 Liter pro Minute durch. Was es bei dir ist, zeigt der Rechner."}, dauer => schild(160, 67, "Rund 130 € weniger Heizkosten im Jahr", 1.3)],
+  ]);
+
   gemalt("kaffeevollautomat", 2, [
     [0, 3.5, "kv-1.webp", false, dauer =>
         blase2(72.0, 29.9, "Behälter voll", 0.3) +
@@ -3679,6 +3735,21 @@ VIDEOS["smarte-lampen"].poster = 4;
         zeile(159.7, 63.7, T("Kaffeesatz in den Biomüll"), 0.75, "t-klein") +
         schrift(249.3, 95.0, "Biomüll", "t-mini leise", 1.2, "middle") +
         funkel(250.0, 104.0, 0.4, 0.8)],
+  ]);
+
+  gemalt("mini-geschirrspueler", 3, [
+    [0, 3.5, "mg-1.webp", false, dauer =>
+        blase2(67.7, 39.8, "Und dann noch abtrocknen", 0.3, false, 8.3) +
+        schrift(159.7, 167.7, "Das Abtropfgitter läuft über.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [1, 3.5, "mg-2.webp", false, dauer =>
+        blase2(99.8, 39.9, "Tür zu", 0.3) +
+        schrift(159.7, 167.7, "Klein und direkt auf der Arbeitsplatte.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
+    [2, 3.5, "mg-3.webp", false, dauer =>
+        blase2(97.9, 39.9, "Die Maschine spült", 0.3) +
+        schrift(253.3, 63.1, "Zeit für dich", "t-klein", 0.75, "middle")],
+    [3, 3.5, "mg-4.webp", false, dauer =>
+        blase2(96.5, 35.9, "Nur noch ausräumen", 0.3) +
+        schrift(159.7, 167.7, "Kein Stapel mehr neben der Spüle.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
   ]);
 
   gemalt("balkonkraftwerk", 2, [
