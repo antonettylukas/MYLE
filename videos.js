@@ -3316,7 +3316,10 @@ VIDEOS["smarte-lampen"].poster = 4;
   // Schrift mit fester Farbe auf einem ruhigen Feld (Untertitel über unruhigen Malflächen); fs = Schriftgröße
   const aufFeld = (x, y, s, cls, d, anker, stil, fs, grund) => {
     s = T(s);
-    const b = s.length * fs * 0.56 + 10, h = fs * 1.5, x0 = anker === "middle" ? x - b / 2 : anker === "end" ? x - b + 5 : x - 5;
+    const b = s.length * fs * 0.56 + 10, h = fs * 1.5;
+    let x0 = anker === "middle" ? x - b / 2 : anker === "end" ? x - b + 5 : x - 5;
+    const v = Math.max(3 - x0, Math.min(0, 317 - x0 - b));   // längere Übersetzungen: Feld bleibt ganz auf der Bühne
+    x0 += v; x += v;
     return `<g class="v-hoch" style="--d:${d}s"><rect x="${x0.toFixed(1)}" y="${(y - fs * 1.05).toFixed(1)}" width="${b.toFixed(1)}" height="${h.toFixed(1)}" rx="${(h / 2).toFixed(1)}" style="fill:${grund}"/><text x="${x}" y="${y}" text-anchor="${anker}" class="${cls}" style="${stil}">${s}</text></g>`;
   };
   const DUNKEL = "rgba(18,49,42,.8)", HELL = "rgba(240,246,242,.88)";
@@ -3337,6 +3340,21 @@ VIDEOS["smarte-lampen"].poster = 4;
   const schriftFelder = svg => {
     const NS = "http://www.w3.org/2000/svg";
     const liste = [], nacht = !!svg.querySelector('rect[style*="1e2a38"]');
+    // Lage in Bühnen-Einheiten (320 x 180) nur aus den transform-Attributen; die CSS-Bewegung, die beim Aufbau gerade läuft, zählt nicht
+    const matrix = el => {
+      let m = new DOMMatrix();
+      for (let e = el; e && e !== svg; e = e.parentElement) {
+        const t = e.transform && e.transform.baseVal.consolidate();
+        if (t) { const a = t.matrix; m = new DOMMatrix([a.a, a.b, a.c, a.d, a.e, a.f]).multiply(m); }
+      }
+      return m;
+    };
+    const kasten = (m, x0, y0, x1, y1) => {
+      const p = [[x0, y0], [x1, y0], [x0, y1], [x1, y1]].map(([x, y]) => m.transformPoint(new DOMPoint(x, y)));
+      return { x0: Math.min(...p.map(q => q.x)), y0: Math.min(...p.map(q => q.y)), x1: Math.max(...p.map(q => q.x)), y1: Math.max(...p.map(q => q.y)) };
+    };
+    const fest = tx => /fill/.test(tx.getAttribute("style") || "") || tx.classList.contains("hell");
+    const vars = tx => (tx.getAttribute("style") || "").split(";").map(t => t.trim()).filter(t => t.startsWith("--"));
     svg.querySelectorAll("text").forEach(tx => {
       if (tx.closest(".v-vorher, .v-nachher, .auf-geraet, .mit-grund, defs")) return;
       let b;
@@ -3347,37 +3365,117 @@ VIDEOS["smarte-lampen"].poster = 4;
         const f = davor.getBBox(), mx = b.x + b.width / 2, my = b.y + b.height / 2;
         if (f.width < 260 && mx > f.x && mx < f.x + f.width && my > f.y && my < f.y + f.height) return;
       }
-      const haken = davor && davor.tagName === "g" && davor.querySelector(".haken-kreis") && tx.getAttribute("x") === "14";
-      liste.push({ tx, b, davor, haken, r: tx.getBoundingClientRect(), oben: 2, unten: 2 });
+      const haken = !!(davor && davor.tagName === "g" && davor.querySelector(".haken-kreis") && tx.getAttribute("x") === "14");
+      const mp = matrix(tx.parentElement);
+      liste.push({ tx, davor, haken, mp, B: kasten(matrix(tx), b.x, b.y, b.x + b.width, b.y + b.height),
+        art: fest(tx) ? "fest " + getComputedStyle(tx).fill : "thema",
+        bew: [...tx.classList].filter(c => c.startsWith("v-")).sort().join(" ") + "|" + vars(tx).sort().join(";"), oben: -1e9, unten: 1e9 });
     });
-    // Zwei Zeilen direkt untereinander: die Felder stoßen aneinander statt sich zu überdecken
+    // Zeilen direkt untereinander (Lücke unter 4, die Schriftkästen dürfen sich etwas überdecken):
+    // gleiche Gruppe und gleiche Bewegung → ein gemeinsames Feld wie eine Karte; sonst stoßen die Felder genau in der Mitte aneinander
+    const kopf = new Map(liste.map(o => [o, o])), paare = [];
+    const wurzel = o => (kopf.get(o) === o ? o : wurzel(kopf.get(o)));
     liste.forEach(o => liste.forEach(u => {
       if (o === u || o.haken || u.haken) return;
-      const k = o.r.height / o.b.height, luecke = (u.r.top - o.r.bottom) / k;
-      if (o.r.right > u.r.left && u.r.right > o.r.left && luecke > -2 && luecke < 4) { o.unten = Math.min(o.unten, Math.max(0.3, luecke / 2)); u.oben = Math.min(u.oben, Math.max(0.3, luecke / 2)); }
+      const luecke = u.B.y0 - o.B.y1;
+      if (!(o.B.x1 > u.B.x0 && u.B.x1 > o.B.x0 && o.B.y0 + o.B.y1 < u.B.y0 + u.B.y1 && luecke > -6 && luecke < 4)) return;
+      // echte Zeilen eines Schilds liegen weitgehend übereinander; nur am Rand berührende Nachbarn werden bloß in der Mitte getrennt
+      const zeilen = Math.min(o.B.x1, u.B.x1) - Math.max(o.B.x0, u.B.x0) >= 0.4 * Math.min(o.B.x1 - o.B.x0, u.B.x1 - u.B.x0);
+      if (zeilen && o.tx.parentNode === u.tx.parentNode && o.art === u.art && o.bew === u.bew) kopf.set(wurzel(u), wurzel(o));
+      else { const mitte = (o.B.y1 + u.B.y0) / 2; o.unten = Math.min(o.unten, mitte); u.oben = Math.max(u.oben, mitte); if (zeilen) paare.push([o, u]); }
     }));
-    liste.forEach(({ tx, b, davor, haken, oben, unten }) => {
-      const y0 = Math.min(b.y - oben, haken ? -9.5 : 1e9), y1 = Math.max(b.y + b.height + unten, haken ? 9.5 : -1e9), h = y1 - y0;
-      const x0 = haken ? -10 : b.x - 6, x1 = b.x + b.width + 6;
+    const gruppen = new Map();
+    liste.forEach(o => { const w = wurzel(o); if (!gruppen.has(w)) gruppen.set(w, []); gruppen.get(w).push(o); });
+    const felder = [...gruppen.values()].map(gr => {
+      gr.sort((a, c) => (a.tx.compareDocumentPosition(c.tx) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1));
+      const { haken, mp } = gr[0], rand = gr.length > 1 ? 2.5 : 2;
+      const F = { x0: Math.min(...gr.map(o => o.B.x0)) - 6, x1: Math.max(...gr.map(o => o.B.x1)) + 6,
+        y0: Math.max(Math.min(...gr.map(o => o.B.y0)) - rand, ...gr.map(o => o.oben)), y1: Math.min(Math.max(...gr.map(o => o.B.y1)) + rand, ...gr.map(o => o.unten)) };
+      if (haken) { const h = kasten(mp, -10, -9.5, -10, 9.5); F.x0 = h.x0; F.y0 = Math.min(F.y0, h.y0); F.y1 = Math.max(F.y1, h.y1); }
+      return { gr, F, haken };
+    });
+    // Felder, die aneinanderstoßen (Zeilen untereinander mit eigener Bewegung), rücken nur gemeinsam; Haken-Zeilen bleiben stehen
+    const feldVon = new Map(); felder.forEach(f => f.gr.forEach(o => feldVon.set(o, f)));
+    const eKopf = new Map(felder.map(f => [f, f])), eW = f => (eKopf.get(f) === f ? f : eW(eKopf.get(f)));
+    paare.forEach(([o, u]) => eKopf.set(eW(feldVon.get(u)), eW(feldVon.get(o))));
+    const eMap = new Map(); felder.forEach(f => { const w = eW(f); if (!eMap.has(w)) eMap.set(w, []); eMap.get(w).push(f); });
+    const E = [...eMap.values()].map(fs => ({ fs, fest: fs.some(f => f.haken), dx: 0, dy: 0 }));
+    const box = e => ({ x0: Math.min(...e.fs.map(f => f.F.x0)) + e.dx, x1: Math.max(...e.fs.map(f => f.F.x1)) + e.dx,
+      y0: Math.min(...e.fs.map(f => f.F.y0)) + e.dy, y1: Math.max(...e.fs.map(f => f.F.y1)) + e.dy });
+    // Ganz auf der Bühne: sonst rücken Feld und Schrift nach innen (3 Einheiten Abstand zum Rand)
+    E.forEach(e => {
+      if (e.fest) return;
+      const b = box(e);
+      if (b.x1 > 317) e.dx = 317 - b.x1;
+      if (b.x0 + e.dx < 3) e.dx = 3 - b.x0;
+      if (b.y0 < 3) e.dy = 3 - b.y0; else if (b.y1 > 177) e.dy = 177 - b.y1;
+    });
+    // Nicht unter andere Schilder rutschen (Blasen, Pillen, Untertitel, Vorher/Nachher, Lupe): seitlich ausweichen, höchstens 30 Einheiten
+    // (wichtig für längere Übersetzungen); stoßen zwei Felder aneinander, rückt das, bei dem es weniger braucht
+    const hindernisse = [];
+    svg.querySelectorAll("text").forEach(tx => {
+      const d = tx.previousElementSibling;
+      if (tx.closest("defs") || !d || !/^(rect|path)$/.test(d.tagName) || d.classList.contains("marke")) return;
+      let b, f;
+      try { b = tx.getBBox(); f = d.getBBox(); } catch (e) { return; }
+      const mx = b.x + b.width / 2, my = b.y + b.height / 2;
+      if (f.width < 260 && mx > f.x && mx < f.x + f.width && my > f.y && my < f.y + f.height) hindernisse.push(kasten(matrix(d), f.x, f.y, f.x + f.width, f.y + f.height));
+    });
+    svg.querySelectorAll("circle[filter]").forEach(c => {
+      const r = +c.getAttribute("r") || 0;
+      if (c.closest("defs") || r < 12) return;
+      const m = matrix(c), p = m.transformPoint(new DOMPoint(+c.getAttribute("cx") || 0, +c.getAttribute("cy") || 0));
+      hindernisse.push({ cx: p.x, cy: p.y, r: r * Math.hypot(m.a, m.b) + 2 });   // + Rand und Schatten
+    });
+    const stoss = (b, h) => {
+      if (h.r === undefined) return Math.min(b.x1, h.x1) - Math.max(b.x0, h.x0) > 0.5 && Math.min(b.y1, h.y1) - Math.max(b.y0, h.y0) > 0.5;
+      const nx = Math.max(b.x0, Math.min(h.cx, b.x1)), ny = Math.max(b.y0, Math.min(h.cy, b.y1));
+      return Math.hypot(nx - h.cx, ny - h.cy) < h.r - 0.5;
+    };
+    const versuche = (e, b, h) => {
+      let re, li;
+      if (h.r === undefined) { re = h.x1 + 1 - b.x0; li = h.x0 - 1 - b.x1; }
+      else { const dy = h.cy < b.y0 ? b.y0 - h.cy : h.cy > b.y1 ? h.cy - b.y1 : 0, w = Math.sqrt(Math.max(0, h.r * h.r - dy * dy)); re = h.cx + w + 1 - b.x0; li = h.cx - w - 1 - b.x1; }
+      return e.fest ? [] : [re, li].filter(d => Math.abs(d) <= 30 && b.x0 + d >= 3 && b.x1 + d <= 317).map(d => [e, d]);
+    };
+    const nimm = w => { w.sort((p, q) => Math.abs(p[1]) - Math.abs(q[1])); if (w.length) w[0][0].dx += w[0][1]; };
+    for (let runde = 0; runde < 3; runde++) {
+      E.forEach(e => hindernisse.forEach(h => { const b = box(e); if (stoss(b, h)) nimm(versuche(e, b, h)); }));
+      E.forEach((e, i) => E.forEach((g, j) => {
+        if (j <= i) return;
+        const a = box(e), c = box(g);
+        if (stoss(a, c)) nimm([...versuche(g, c, a), ...versuche(e, a, c)]);
+      }));
+    }
+    E.forEach(({ fs, dx, dy }) => fs.forEach(({ gr, F, haken }) => {
+      const { tx, davor, mp } = gr[0];
+      if (dx || dy) gr.forEach(o => ["x", "y"].forEach((a, j) => {
+        const d = j ? dy / o.mp.d : dx / o.mp.a;
+        if (d) o.tx.setAttribute(a, (parseFloat(o.tx.getAttribute(a) || 0) + d).toFixed(1));
+      }));
+      const L = kasten(mp.inverse(), F.x0 + dx, F.y0 + dy, F.x1 + dx, F.y1 + dy), h = L.y1 - L.y0;
       const feld = document.createElementNS(NS, "rect");
-      feld.setAttribute("x", x0.toFixed(1)); feld.setAttribute("y", y0.toFixed(1));
-      feld.setAttribute("width", (x1 - x0).toFixed(1)); feld.setAttribute("height", h.toFixed(1)); feld.setAttribute("rx", Math.min(h / 2, 9).toFixed(1));
-      if (/fill/.test(tx.getAttribute("style") || "") || tx.classList.contains("hell")) {
+      feld.setAttribute("x", L.x0.toFixed(1)); feld.setAttribute("y", L.y0.toFixed(1));
+      feld.setAttribute("width", (L.x1 - L.x0).toFixed(1)); feld.setAttribute("height", h.toFixed(1)); feld.setAttribute("rx", Math.min(h / 2, 9).toFixed(1));
+      if (fest(tx)) {
         const m = (getComputedStyle(tx).fill.match(/[0-9.]+/g) || [0, 0, 0]).map(Number);
         feld.setAttribute("style", 0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2] > 140 ? (nacht ? "fill:#24493d;stroke:rgba(232,239,236,.5);stroke-width:.5" : "fill:rgba(18,49,42,.86)") : "fill:#f5faf7;stroke:#c6dbd1");
       } else { feld.setAttribute("class", "blase"); feld.setAttribute("filter", "url(#v-sch)"); }
-      // Bewegt sich die Schrift selbst (Klassen v-…), bewegt sich das Feld mit
+      // Bewegt sich die Schrift selbst (Klassen v-…), bewegt sich das Feld mit: Feld und Zeilen in eine Gruppe mit dieser Bewegung
       const bewegung = [...tx.classList].filter(c => c.startsWith("v-"));
       if (bewegung.length) {
         const g = document.createElementNS(NS, "g");
-        bewegung.forEach(c => { tx.classList.remove(c); g.classList.add(c); });
-        const stil = (tx.getAttribute("style") || "").split(";").map(t => t.trim()).filter(Boolean);
-        g.setAttribute("style", stil.filter(t => t.startsWith("--")).join(";"));
-        const rest = stil.filter(t => !t.startsWith("--")).join(";");
-        if (rest) tx.setAttribute("style", rest); else tx.removeAttribute("style");
-        tx.replaceWith(g); g.append(feld, tx);
+        bewegung.forEach(c => g.classList.add(c));
+        g.setAttribute("style", vars(tx).join(";"));
+        tx.before(g); g.append(feld);
+        gr.forEach(o => {
+          bewegung.forEach(c => o.tx.classList.remove(c));
+          const rest = (o.tx.getAttribute("style") || "").split(";").map(t => t.trim()).filter(t => t && !t.startsWith("--")).join(";");
+          if (rest) o.tx.setAttribute("style", rest); else o.tx.removeAttribute("style");
+          g.append(o.tx);
+        });
       } else (haken ? davor : tx).before(feld);
-    });
+    }));
   };
   const altesHinterlegen = hinterlegeSchrift;
   hinterlegeSchrift = svg => (svg.querySelector('image[href*="gemalt/"]') && !svg.querySelector(".ohne-felder") ? schriftFelder(svg) : altesHinterlegen(svg));
@@ -3694,7 +3792,7 @@ VIDEOS["smarte-lampen"].poster = 4;
     [0, 3.5, "sd-1.webp", false, dauer =>
         marke(245.1, 84.6, 56.5, 14.0) +
         marke(172.0, 100.6, 67.1, 14.0) +
-        schrift(273.3, 95.0, "Messeimer", "t-mini leise", 0.3, "middle") +
+        schrift(282.0, 94.0, "Messeimer", "t-mini leise", 0.3, "middle") +
         schrift(205.6, 111.0, "Warmwasser", "t-mini leise", 0.75, "middle") +
         aufFeld(159.7, 167.7, "Viel Wasser, und alles muss warm werden.", "t-klein", 1.2, "middle", "fill:#2b3338", 11.5, HELL), null, dauer => kosten(268, 46, "Heizkosten", 440, 1.0, 1.6, 219, 70, 76)],
     [1, 3.5, "sd-2.webp", false, dauer =>
@@ -3707,7 +3805,7 @@ VIDEOS["smarte-lampen"].poster = 4;
     [2, 3.5, "sd-3.webp", false, dauer =>
         marke(245.1, 84.6, 56.5, 14.0) +
         marke(172.0, 100.6, 67.1, 14.0) +
-        schrift(273.3, 95.0, "Messeimer", "t-mini leise", 0.3, "middle") +
+        schrift(282.0, 94.0, "Messeimer", "t-mini leise", 0.3, "middle") +
         schrift(205.6, 111.0, "Warmwasser", "t-mini leise", 0.75, "middle"), null, dauer => kosten(268, 46, "Heizkosten", 310, 1.0, 1.13, 219, 70, 76)],
     [3, 3.5, "sd-4.webp", false, dauer =>
         marke(101.7, 34.8, 115.9, 14.0) +
