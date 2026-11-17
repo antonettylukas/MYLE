@@ -383,7 +383,7 @@
     kopf.outerHTML = `
       <header class="top"><div class="wrap">
         <a class="logo" href="./">${logo()}</a>
-        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="ratgeber"${["ratgeber", "ratgeber-liste"].includes(typ) ? ' aria-current="page"' : ""}>${t("Ratgeber", "Guides")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${sprachen}${designKnopf()}</nav>
+        <nav aria-label="${t("Hauptmenü", "Main menu")}"><a href="./#helfer">${t("Alle Helfer", "All helpers")}</a><a href="ratgeber"${["ratgeber", "ratgeber-liste"].includes(typ) ? ' aria-current="page"' : ""}>${t("Ratgeber", "Guides")}</a><a href="./#ueber-mich">${t("Über mich", "About me")}</a><a href="${nlLink}">Newsletter</a>${designKnopf()}${sprachen}</nav>
       </div></header>`;
     spracheSchalter();
     designSchalter();

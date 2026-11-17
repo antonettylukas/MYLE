@@ -133,7 +133,7 @@ a { color: var(--accent); }
 .top nav a { color: var(--kopf-text); text-decoration: none; }
 .top nav a:hover { color: var(--ink); }
 /* Sprachschalter am Ende des Menüs: Knopf mit der Flagge der Sprache, darunter eine Liste aus Milchglas (die Seite dahinter verschwimmt) */
-.sprache { position: relative; align-self: center; }
+.sprache { position: relative; align-self: center; margin-left: auto; }
 .sprache-knopf { display: inline-flex; align-items: center; justify-content: space-between; gap: 4px; box-sizing: border-box; width: 78px; height: 40px; padding: 0 8px 0 4px; border: 1px solid var(--sm-r); border-radius: 999px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--sm-a), var(--sm-b)); -webkit-backdrop-filter: blur(var(--sm-bl)) saturate(170%); backdrop-filter: blur(var(--sm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 10px 28px -14px rgba(21, 33, 29, 0.55); color: var(--ink); font: 700 0.78rem/1 var(--font-body); letter-spacing: 0.04em; cursor: pointer; transition: box-shadow 0.15s; }
 .sprache-knopf:hover, .sprache-knopf[aria-expanded="true"] { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 12px 30px -12px rgba(21, 33, 29, 0.65); }
 .sprache-knopf:focus-visible, .sprache-liste a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -157,7 +157,7 @@ a { color: var(--accent); }
 
 /* Schalter Hell/Dunkel (Lukas 15.11.2026): Milchglas wie der Sprachschalter. Am PC rechts oben unter der Kopfzeile,
    schmaler am Ende des Menüs ganz rechts. Der Knopf rollt mit Sonne (hell) oder Mond (dunkel) hinüber. */
-.design-schalter { position: relative; flex: none; align-self: center; width: 78px; height: 40px; padding: 0; margin-left: auto; border: 1px solid var(--sm-r); border-radius: 999px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--sm-a), var(--sm-b)); -webkit-backdrop-filter: blur(var(--sm-bl)) saturate(170%); backdrop-filter: blur(var(--sm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 10px 28px -14px rgba(21, 33, 29, 0.55); color: var(--muted); cursor: pointer; transition: box-shadow 0.15s; }
+.design-schalter { position: relative; flex: none; align-self: center; width: 78px; height: 40px; padding: 0; border: 1px solid var(--sm-r); border-radius: 999px; background: radial-gradient(140% 90% at 15% 0%, rgba(255, 255, 255, 0.35), transparent 55%), linear-gradient(180deg, var(--sm-a), var(--sm-b)); -webkit-backdrop-filter: blur(var(--sm-bl)) saturate(170%); backdrop-filter: blur(var(--sm-bl)) saturate(170%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 10px 28px -14px rgba(21, 33, 29, 0.55); color: var(--muted); cursor: pointer; transition: box-shadow 0.15s; }
 .design-schalter:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 -1px 0 rgba(21, 33, 29, 0.06), 0 12px 30px -12px rgba(21, 33, 29, 0.65); }
 .design-schalter:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .design-schalter svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -171,7 +171,7 @@ a { color: var(--accent); }
 .design-schalter[aria-checked="true"] .ds-mond { opacity: 1; transform: none; }
 @media (min-width: 1000px) {
   .top .wrap { position: relative; }
-  .design-schalter { position: absolute; z-index: 5; top: calc(100% + 18px); right: max(16px, env(safe-area-inset-right, 0px)); margin: 0; }
+  .sprache { position: absolute; z-index: 5; top: calc(100% + 18px); right: max(16px, env(safe-area-inset-right, 0px)); margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .ds-knopf, .ds-knopf > span { transition: none; } }
 @media (prefers-reduced-transparency: reduce) { .design-schalter { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
