@@ -3478,7 +3478,130 @@ VIDEOS["smarte-lampen"].poster = 4;
     }));
   };
   const altesHinterlegen = hinterlegeSchrift;
-  hinterlegeSchrift = svg => (svg.querySelector('image[href*="gemalt/"]') && !svg.querySelector(".ohne-felder") ? schriftFelder(svg) : altesHinterlegen(svg));
+  // ---------- Lukas 17.11. 14:28: Schrift etwas größer, nichts überlappt ----------
+  // Nach den Feldern: jedes Schild (Feld mit Schrift, Ring, Uhr, Blase, Haken-Zeile, Vorher/Nachher) wird um GROESSER um seine
+  // eigene Mitte vergrößert. Danach rücken Schilder, die sich berühren, auseinander: das spätere weicht auf dem kürzesten Weg aus
+  // (meist nach unten oder oben), Vorher/Nachher bleiben stehen; alles bleibt ganz auf der Bühne. Lage nur aus transform-Attributen.
+  const GROESSER = 1.15, LUFT = 2;
+  const schilderOrdnen = svg => {
+    const NS = "http://www.w3.org/2000/svg";
+    const matrix = el => {
+      let m = new DOMMatrix();
+      for (let e = el; e && e !== svg; e = e.parentElement) {
+        const t = e.transform && e.transform.baseVal.consolidate();
+        if (t) { const a = t.matrix; m = new DOMMatrix([a.a, a.b, a.c, a.d, a.e, a.f]).multiply(m); }
+      }
+      return m;
+    };
+    const huelle = (el, teile = []) => {
+      let B = null;
+      el.querySelectorAll("rect, circle, ellipse, text, path, polygon, polyline").forEach(f => {
+        // Zeigelinien (gestrichelt) zählen nicht zum Schild, sie dürfen über anderes laufen
+        if (f.closest("defs") || f.classList.contains("marke") || /blur/.test(f.getAttribute("filter") || "") || f.getAttribute("stroke-dasharray") || /dasharray/.test(f.getAttribute("style") || "")) return;
+        let b; try { b = f.getBBox(); } catch (e) { return; }
+        if (!b.width && !b.height) return;
+        const m = matrix(f);
+        let T = null;
+        [[b.x, b.y], [b.x + b.width, b.y], [b.x, b.y + b.height], [b.x + b.width, b.y + b.height]].forEach(([x, y]) => {
+          const q = m.transformPoint(new DOMPoint(x, y));
+          if (!T) T = { x0: q.x, y0: q.y, x1: q.x, y1: q.y };
+          else { T.x0 = Math.min(T.x0, q.x); T.y0 = Math.min(T.y0, q.y); T.x1 = Math.max(T.x1, q.x); T.y1 = Math.max(T.y1, q.y); }
+        });
+        teile.push(T);
+        if (!B) B = { ...T };
+        else { B.x0 = Math.min(B.x0, T.x0); B.y0 = Math.min(B.y0, T.y0); B.x1 = Math.max(B.x1, T.x1); B.y1 = Math.max(B.y1, T.y1); }
+      });
+      return B;
+    };
+    // Wann ist ein Schild zu sehen? Blasen mit v-takt verschwinden nach --len, v-weg nach --d; andere bleiben bis zum Ende
+    const zeitVon = el => {
+      let von = 0, bis = Infinity;
+      const zeitD = e => parseFloat(((e.getAttribute("style") || "").match(/--d:\s*([-\d.]+)/) || [])[1]);
+      const auf = [el, ...el.querySelectorAll("*")].find(e => e.classList && ["v-ein", "v-hoch", "v-pop", "v-schnapp"].some(c => e.classList.contains(c)) && !isNaN(zeitD(e)));
+      if (auf) von = zeitD(auf);
+      [el, ...el.querySelectorAll(".v-takt, .v-weg")].forEach(e => {
+        const st = e.getAttribute("style") || "", d = parseFloat((st.match(/--d:\s*([-\d.]+)/) || [])[1]), len = parseFloat((st.match(/--len:\s*([-\d.]+)/) || [])[1]);
+        if (isNaN(d)) return;
+        if (e.classList.contains("v-takt")) { von = Math.max(von, d); bis = Math.min(bis, d + (isNaN(len) ? 2 : len)); }
+        else if (e.classList.contains("v-weg")) bis = Math.min(bis, d);
+      });
+      return { von, bis };
+    };
+    const zugleich = (a, c) => a.zeit.von < c.zeit.bis - 0.05 && c.zeit.von < a.zeit.bis - 0.05;
+    const S = [];
+    [...svg.children].forEach(el => {
+      if (el.tagName === "defs" || el.querySelector("image") || el.classList.contains("auf-geraet") || el.classList.contains("marke")) return;
+      const texte = [...(el.tagName === "text" ? [el] : el.querySelectorAll("text"))].filter(t => !t.closest(".auf-geraet"));
+      if (!texte.length) return;
+      const roh = [];
+      let B = el.tagName === "text" ? null : huelle(el, roh);
+      if (!B) { try { const b = el.getBBox(); B = { x0: b.x, y0: b.y, x1: b.x + b.width, y1: b.y + b.height }; roh.push({ ...B }); } catch (e) { return; } }
+      const g = document.createElementNS(NS, "g");
+      el.before(g); g.append(el);
+      const cx = (B.x0 + B.x1) / 2, cy = (B.y0 + B.y1) / 2, gross = R => ({ x0: cx + (R.x0 - cx) * f, y0: cy + (R.y0 - cy) * f, x1: cx + (R.x1 - cx) * f, y1: cy + (R.y1 - cy) * f }), f = Math.min(GROESSER, 314 / (B.x1 - B.x0));   // breite Untertitel nur so weit, wie die Bühne reicht (zu breite werden kleiner)
+      const s = { g, cx, cy, f, dx: 0, dy: 0, zeit: zeitVon(el), fest: !!el.querySelector(".v-vorher, .v-nachher"),
+        b: gross(B), teile: roh.map(gross) };
+      S.push(s);
+    });
+    const box = (s, dx = s.dx, dy = s.dy) => ({ x0: s.b.x0 + dx - LUFT, y0: s.b.y0 + dy - LUFT, x1: s.b.x1 + dx + LUFT, y1: s.b.y1 + dy + LUFT });
+    const flaeche = (A, C) => Math.max(0, Math.min(A.x1, C.x1) - Math.max(A.x0, C.x0)) * Math.max(0, Math.min(A.y1, C.y1) - Math.max(A.y0, C.y0));
+    const teile = (s, dx = s.dx, dy = s.dy) => s.teile.map(t => ({ x0: t.x0 + dx - LUFT, y0: t.y0 + dy - LUFT, x1: t.x1 + dx + LUFT, y1: t.y1 + dy + LUFT }));
+    // Überdeckung zweier Schilder: nur ihre Teile (Feld, Ring, Uhr, Schrift) zählen, nicht die leere Fläche dazwischen
+    const deckung = (s, o, dx, dy) => {
+      if (!zugleich(s, o) || flaeche(box(s, dx, dy), box(o)) <= 0) return { a: 0 };
+      let a = 0, P = null, Q = null, max = 0;
+      teile(s, dx, dy).forEach(T => teile(o).forEach(U => { const f = flaeche(T, U); a += f; if (f > max) { max = f; P = T; Q = U; } }));
+      return { a, P, Q };
+    };
+    const draussen = B => B.x0 < 0.5 || B.x1 > 319.5 || B.y0 < 0.5 || B.y1 > 179.5;
+    S.forEach(s => {
+      if (s.fest) return;
+      const B = box(s);
+      if (B.x0 < 1) s.dx += 1 - B.x0; else if (B.x1 > 319) s.dx -= B.x1 - 319;
+      if (B.y0 < 1) s.dy += 1 - B.y0; else if (B.y1 > 179) s.dy -= B.y1 - 179;
+    });
+    // Auseinanderrücken: für das am stärksten überlappende Paar wird der günstigste Schritt gesucht (eines der beiden Schilder,
+    // vier Richtungen, auch nur bis zum Bühnenrand): wenig Weg, keine neue Überdeckung, nicht weit weg vom Platz im Storyboard
+    const kosten = (s, dx, dy) => {
+      let k = Math.abs(dx - s.dx) * 1.5 + Math.abs(dy - s.dy) + Math.max(0, Math.hypot(dx, dy) - 14) * 8;
+      if (draussen(box(s, dx, dy))) k += 1e7;
+      S.forEach(o => { if (o !== s) k += deckung(s, o, dx, dy).a * 4; });
+      return k;
+    };
+    for (let runde = 0; runde < 40; runde++) {
+      let paar = null, max = 0.3;
+      for (let i = 0; i < S.length; i++) for (let j = i + 1; j < S.length; j++) {
+        if (S[i].fest && S[j].fest) continue;
+        const d = deckung(S[i], S[j], S[i].dx, S[i].dy);
+        if (d.a > max) { max = d.a; paar = [S[i], S[j], d]; }
+      }
+      if (!paar) break;
+      let best = null;
+      [0, 1].forEach(n => {
+        const s = paar[n], o = paar[1 - n];
+        if (s.fest) return;
+        const d = deckung(s, o, s.dx, s.dy), A = d.Q, C = d.P, H = box(s);
+        const rand = ([x, y]) => [Math.max(1 - H.x0, Math.min(319 - H.x1, x)), Math.max(1 - H.y0, Math.min(179 - H.y1, y))];
+        const wege = [[0, A.y1 - C.y0], [0, A.y0 - C.y1], [A.x1 - C.x0, 0], [A.x0 - C.x1, 0]];
+        [...wege, ...wege.map(rand)].forEach(([x, y]) => {
+          const k = kosten(s, s.dx + x, s.dy + y) + (n === 0 ? 0.5 : 0);   // bei Gleichstand weicht das spätere Schild
+          if (!best || k < best.k) best = { s, k, dx: s.dx + x, dy: s.dy + y };
+        });
+      });
+      if (!best) break;
+      best.s.dx = best.dx; best.s.dy = best.dy;
+    }
+    S.forEach(s => s.g.setAttribute("data-o", [s.b.x0, s.b.y0, s.b.x1, s.b.y1].map(v => v.toFixed(0)).join(",") + " t" + s.zeit.von + "-" + s.zeit.bis));
+    S.forEach(s => s.g.setAttribute("transform", `translate(${(s.cx + s.dx).toFixed(2)} ${(s.cy + s.dy).toFixed(2)}) scale(${s.f.toFixed(3)}) translate(${(-s.cx).toFixed(2)} ${(-s.cy).toFixed(2)})`));
+  };
+  hinterlegeSchrift = svg => {
+    if (!svg.querySelector('image[href*="gemalt/"]')) return altesHinterlegen(svg);
+    if (svg.querySelector(".ohne-felder")) { if (!svg.dataset.geordnet) { svg.dataset.geordnet = "1"; altesHinterlegen(svg); schilderOrdnen(svg); } return; }
+    if (svg.dataset.geordnet) return;   // jede Grafik nur einmal
+    svg.dataset.geordnet = "1";
+    schriftFelder(svg);
+    schilderOrdnen(svg);
+  };
   window.hinterlegeSchrift = hinterlegeSchrift;
 
   // ---------- Bewegung zeigen wie in den Reels (Lukas 17.11.) ----------
@@ -3600,8 +3723,8 @@ VIDEOS["smarte-lampen"].poster = 4;
   gemalt("deckel", 1, [
     [0, 3.5, "de-1.webp", false, dauer =>
         schrift(119.8, 25.3, "Frischhaltefolie, jeden Tag", "t-mittel fett", 0.3, "middle") +
-        schrift(261.3, 39.2, "Ein Stück pro Tag:", "t-klein leise", 0.75, "middle") +
-        schrift(261.4, 53.2, "365 Stück im Jahr", "t-klein fett", 1.2, "middle") +
+        schrift(168.0, 62.0, "Ein Stück pro Tag:", "t-klein leise", 0.75, "middle") +
+        schrift(168.0, 77.0, "365 Stück im Jahr", "t-klein fett", 1.2, "middle") +
         aufFeld(82.0, 124.0, "FRISCHHALTEFOLIE", "t-mini fett", 1.65, "middle", "font-size:8px;fill:#5b3b23", 8, HELL)],
     [1, 4, "de-2.webp", false, dauer =>
         schrift(159.7, 27.3, "Drüberziehen, fertig", "t-mittel fett", 0.3, "middle") +
@@ -3638,7 +3761,7 @@ VIDEOS["smarte-lampen"].poster = 4;
         schrift(159.7, 167.7, "Und danach noch bügeln.", "t-klein", 1.2, "middle", "fill:#3b2f22")],
     [1, 3.5, "wt-2.webp", false, dauer =>
         marke(212.5, 128.5, 76.0, 14.0) +
-        pop(0.3, uhr(291.2, 44.9, T("7:30"), 225, 180)) +
+        pop(0.3, uhr(150.0, 32.0, T("7:30"), 225, 180)) +
         schrift(100.4, 44.4, "18:00", "auf-geraet", 0.2, "middle", "font-size:9px;font-weight:700;fill:#7ee2c4") +
         zeile(205.5, 83.7, T("Wäsche rein"), 0.75) +
         zeile(205.5, 109.6, T("Endzeit: 18 Uhr"), 1.2) +
@@ -3701,22 +3824,22 @@ VIDEOS["smarte-lampen"].poster = 4;
 
   gemalt("thermostate", 2, [
     [0, 3.5, "th-1.webp", false, dauer =>
-        ring(225.4, 39.9, 19.9, "9 Std.", "niemand da", 0.3, dauer - 0.3 - .3) +
-        pop(0.75, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">läuft den ganzen Tag</text></g>") +
+        ring(255.0, 52.0, 19.9, "9 Std.", "niemand da", 0.3, dauer - 0.3 - .3) +
+        pop(0.75, "<g transform=\"translate(140.0 58.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">läuft den ganzen Tag</text></g>") +
         schrift(60.0, 72.9, "€", "auf-geraet", 0.2, "middle", "font-size:8px;font-weight:800;fill:#7a4d0a") +
-        pop(1.2, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>") +
-        schrift(84.0, 89.5, "€", "auf-geraet", 0.2, "middle", "font-size:8px;font-weight:800;fill:#7a4d0a") +
+        pop(1.2, "<g transform=\"translate(0.0 0.0)\"><line x1=\"136\" y1=\"87\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>") +
+        schrift(90.0, 80.0, "€", "auf-geraet", 0.2, "middle", "font-size:8px;font-weight:800;fill:#7a4d0a") +
         schrift(159.7, 167.7, "Heizkosten für eine leere Wohnung.", "t-klein", 1.65, "middle", "fill:#3b2f22")],
     [1, 3.5, "th-2.webp", false, dauer =>
         blase2(82.0, 13.9, "Spart Heizkosten", 0.3, true) +
-        pop(0.75, uhr(225.4, 35.9, T("7:30"), 225, 180)) +
-        pop(1.2, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#7ee2c4;font-size:15px;font-family:monospace;font-weight:700\">17°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Sparen</text></g>") +
-        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
+        pop(0.75, uhr(222.0, 50.0, T("7:30"), 225, 180)) +
+        pop(1.2, "<g transform=\"translate(140.0 58.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#7ee2c4;font-size:15px;font-family:monospace;font-weight:700\">17°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Sparen</text></g>") +
+        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"136\" y1=\"87\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
     [2, 3.5, "th-3.webp", false, dauer =>
         blase2(82.0, 14.0, "Schön warm", 0.3, true) +
-        pop(0.75, uhr(225.4, 35.9, T("17:30"), 165, 180)) +
-        pop(1.2, "<g transform=\"translate(170.1 50.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Warm</text></g>") +
-        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"152\" y1=\"70\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
+        pop(0.75, uhr(222.0, 50.0, T("17:30"), 165, 180)) +
+        pop(1.2, "<g transform=\"translate(140.0 58.0)\"><circle r=\"27\" fill=\"#f7f9fa\" stroke=\"#cfd6da\" stroke-width=\"2\" filter=\"url(#v-sch)\"></circle> <rect x=\"-19\" y=\"-13\" width=\"38\" height=\"24\" rx=\"4\" fill=\"#151b1d\"></rect> <text y=\"5.5\" text-anchor=\"middle\" style=\"fill:#ffb060;font-size:15px;font-family:monospace;font-weight:700\">21°</text> <text y=\"40\" text-anchor=\"middle\" class=\"t-mini leise\">Heizplan: Warm</text></g>") +
+        pop(1.65, "<g transform=\"translate(0.0 0.0)\"><line x1=\"136\" y1=\"87\" x2=\"128\" y2=\"120\" stroke=\"#9aa5aa\" stroke-width=\"1\" stroke-dasharray=\"2 2\"></line></g>")],
     [4, 3.5, "th-4.webp", false, dauer =>
         zeile(20.2, 21.9, T("Alten Regler abschrauben"), 0.3, "t-klein") +
         zeile(20.2, 43.8, T("Thermostat aufschrauben"), 0.75, "t-klein") +
@@ -3767,7 +3890,7 @@ VIDEOS["smarte-lampen"].poster = 4;
     [3, 3, "km-4.webp", false, dauer =>
         marke(195.6, 68.7, 99.5, 14.0) +
         schrift(95.9, 29.3, "Glatt und geschmeidig", "t-klein", 0.3, "middle") +
-        funkel(110.1, 30.0, 0.4, 0.7) +
+        funkel(176.0, 44.0, 0.4, 0.7) +
         funkel(128.1, 48.0, 0.75, 0.9) +
         funkel(62.0, 52.0, 1.1, 1) +
         schrift(245.3, 79.1, "Spülmaschinenfest", "t-klein", 0.75, "middle")],
@@ -3839,7 +3962,7 @@ VIDEOS["smarte-lampen"].poster = 4;
 
   gemalt("mini-geschirrspueler", 3, [
     [0, 3.5, "mg-1.webp", false, dauer =>
-        blase2(67.7, 39.8, "Und dann noch abtrocknen", 0.3, false, 8.3) +
+        blase2(94.0, 39.8, "Und dann noch abtrocknen", 0.3, false, 10) +
         schrift(159.7, 167.7, "Das Abtropfgitter läuft über.", "t-klein", 0.9, "middle", "fill:#f3ead9")],
     [1, 3.5, "mg-2.webp", false, dauer =>
         blase2(99.8, 39.9, "Tür zu", 0.3) +
@@ -3882,7 +4005,7 @@ VIDEOS["smarte-lampen"].poster = 4;
         schrift(239.4, 97.0, "Dichtung", "t-mini", 0.3, "start", "fill:#15211d") +
         aufFeld(106.9, 167.7, "Ohne Bohren, ohne Werkzeug.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
     [3, 3.5, "kl-3.webp", false, dauer =>
-        blase2(111.8, 14.0, "Die Wärme geht nach draußen", 0.3) +
+        blase2(119.0, 14.0, "Die Wärme geht nach draußen", 0.3, false, 10.5) +
         schrift(196.0, 40.2, "25 °C", "auf-geraet", 0.2, "middle", "font-size:7.0px;font-weight:700;fill:#2d6fa3") +
         aufFeld(106.9, 167.7, "Drinnen wird es spürbar kühler.", "t-klein", 0.9, "middle", "fill:#3b2f22", 11.5, HELL)],
     [4, 3.5, "kl-4.webp", true, dauer =>
