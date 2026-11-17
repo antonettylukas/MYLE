@@ -491,7 +491,7 @@
   // man auf der Seite eines Helfers dessen Rechner umstellt, mit den eigenen Zahlen (Zeit und echtes Geld im Jahr, ohne den
   // Wert einer Freizeitstunde, sonst zählte die Zeit doppelt).
   // Gespeichert wird erst, wenn man das Konto selbst benutzt: localStorage „myle-zeitkonto“ (Datenschutzerklärung, Abschnitt 4).
-  // „Konto leeren“ löscht den Eintrag. Ohne Eintrag zeigt die Startseite drei Beispiel-Helfer und die Produktseiten kein Konto.
+  // „Konto leeren“ löscht den Eintrag. Ohne Eintrag ist das Konto leer (seit 17.11.2026, vorher drei Beispiel-Helfer auf der Startseite).
   function zeitkonto() {
     if (zeitkonto.k) return zeitkonto.k;
     const SCHLUESSEL = "myle-zeitkonto";
@@ -514,7 +514,7 @@
     const runde = w => ({ std: Math.max(0, Math.round(Number(w.std) || 0)), eur: Math.max(0, Math.round(Number(w.eur) || 0)) });
 
     // ---- Speicher ----
-    const BEISPIEL = typ === "start" ? START : [];
+    const BEISPIEL = []; // Besucher starten mit leerem Zeitkonto (Lukas 17.11.2026); früher: drei Beispiel-Helfer auf der Startseite (START)
     let wahl = new Set(BEISPIEL), eigene = {}, gespeichert = false;
     function laden() {
       let d;
