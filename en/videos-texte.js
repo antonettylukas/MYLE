@@ -15,6 +15,17 @@ const VIDEO_TEXTE = {
   "Nochmal abspielen": "Play again",
 
   // Video saugroboter
+  // gemalte Fassung (16.11.)
+  "8:30 Uhr: Tür zu, er legt los": "8:30 am: door shut, off it goes",
+  "Per Zeitplan startet er von selbst, auch über Türschwellen.": "On a schedule it starts by itself, even over door sills.",
+  "Holz und Fliesen wischt er, auf dem Teppich hebt er die Mopps und saugt nur.": "It mops wood and tiles; on the rug it lifts its mop pads and only vacuums.",
+  "Staub absaugen, Mopps waschen und trocknen macht die Station.": "The station empties the dust and washes and dries the mop pads.",
+  "Jeden Tag, in allen Räumen. Deine Putzzeit: null Minuten.": "Every day, in every room. Your cleaning time: zero minutes.",
+  "Mo–Fr": "Mon–Fri",
+  "saugen + wischen": "vacuum + mop",
+  "Startet allein": "Starts by itself",
+  "Teppich erkannt": "Rug detected",
+  "Mopps hoch, nur saugen": "Mop pads up, vacuum only",
   "8:30 Uhr: Du gehst zur Arbeit": "8:30 am: You head off to work",
   "Die Wohnung bleibt so zurück, wie sie ist. Staub inklusive.": "The flat stays just as it is. Dust included.",
   "Küche": "Kitchen",

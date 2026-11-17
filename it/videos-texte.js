@@ -15,6 +15,17 @@ const VIDEO_TEXTE = {
   "Nochmal abspielen": "Guarda di nuovo",
 
   // Video saugroboter
+  // gemalte Fassung (16.11.)
+  "8:30 Uhr: Tür zu, er legt los": "Ore 8:30: porta chiusa, si parte",
+  "Per Zeitplan startet er von selbst, auch über Türschwellen.": "Con la programmazione parte da solo, anche oltre le soglie.",
+  "Holz und Fliesen wischt er, auf dem Teppich hebt er die Mopps und saugt nur.": "Lava legno e piastrelle; sul tappeto solleva i panni e aspira soltanto.",
+  "Staub absaugen, Mopps waschen und trocknen macht die Station.": "La stazione svuota la polvere, lava e asciuga i panni.",
+  "Jeden Tag, in allen Räumen. Deine Putzzeit: null Minuten.": "Ogni giorno, in tutte le stanze. Il tuo tempo per pulire: zero minuti.",
+  "Mo–Fr": "lun–ven",
+  "saugen + wischen": "aspira + lava",
+  "Startet allein": "Parte da solo",
+  "Teppich erkannt": "Tappeto riconosciuto",
+  "Mopps hoch, nur saugen": "Panni sollevati, solo aspirazione",
   "8:30 Uhr: Du gehst zur Arbeit": "Ore 8:30: vai al lavoro",
   "Die Wohnung bleibt so zurück, wie sie ist. Staub inklusive.": "La casa resta così com’è. Polvere compresa.",
   "Küche": "Cucina",
