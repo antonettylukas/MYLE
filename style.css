@@ -174,7 +174,8 @@ a { color: var(--accent); }
   .design-schalter { position: absolute; z-index: 5; top: calc(100% + 18px); right: max(16px, env(safe-area-inset-right, 0px)); margin: 0; }
   .sprache { margin-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .ds-knopf, .ds-knopf > span { transition: none; } }
+/* Schalter rollt auch bei „Animationen reduzieren“ (Lukas 17.11.): nur die kleine Bewegung am Schalter bleibt, der große Kreis über die Seite entfällt (app.js) */
+@media (prefers-reduced-motion: reduce) { .design-schalter .ds-knopf { transition: transform 0.5s cubic-bezier(0.3, 1.3, 0.5, 1), background-color 0.5s, color 0.5s !important; } .design-schalter .ds-knopf > span { transition: opacity 0.35s, transform 0.5s !important; } }
 @media (prefers-reduced-transparency: reduce) { .design-schalter { background: var(--surface); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 /* Wechsel: Die neue Seite breitet sich als Kreis aus (app.js steuert ihn); ohne View Transitions blenden die Farben weich über */
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
