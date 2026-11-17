@@ -671,8 +671,8 @@
     }
     el.hidden = false;
     el.href = rundgangHref(r.ids, r.offen[0]);
-    el.textContent = r.offen.length === r.ids.length ? t("Mit deinen Zahlen rechnen", "Use your own numbers")
-      : t("Deine Zahlen: noch {n} offen", "Your numbers: {n} left", { n: r.offen.length });
+    // Immer derselbe Text (Lukas 17.11.2026), auch wenn schon einzelne Helfer mit eigenen Zahlen gerechnet sind
+    el.textContent = t("Mit deinen Zahlen rechnen", "Use your own numbers");
   }
   // Auf der Produktseite: Leiste oben mit Schritt, Punkten (Haken = eigene Zahlen) und „Weiter“
   function rundgangLeiste(id) {
@@ -1011,11 +1011,11 @@
       <div class="kt-blatt" id="kt-blatt" hidden>
         <div class="kt-konto kt-im-blatt">
           <h3 class="kt-titel">${t("Dein Zeitkonto", "Your time account")}</h3>
+          <a class="kt-rundgang kt-rundgang-oben" data-k-rundgang hidden></a>
           <p class="kt-summe"><strong data-k="std"></strong><span>${t("mehr freie Zeit im Jahr", "more free time a year")}</span></p>
           <p class="kt-tage" data-k="tage"></p>
           <p class="kt-summe"><strong data-k="eur"></strong><span>${t("gespart im Jahr", "saved a year")}</span></p>
           <ul class="kt-liste" data-k="liste"></ul>
-          <a class="kt-rundgang" data-k-rundgang hidden></a>
           <p class="kt-klein" data-k="hinweis"></p>
           <div class="kt-blatt-fuss"><a class="kt-alle" href="./#zu-${esc(id)}">${t("Alle Helfer ansehen", "See all helpers")}</a><button type="button" class="kt-leeren">${t("Konto leeren", "Empty account")}</button></div>
         </div>

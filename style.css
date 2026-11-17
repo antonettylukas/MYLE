@@ -1177,6 +1177,7 @@ body.kt-im-rundgang #rechner { scroll-margin-top: 70px; }
 .kt-korb-zeile strong { font-family: var(--font-display); font-weight: 800; font-size: 1.55rem; line-height: 1.2; color: var(--marker); letter-spacing: -0.02em; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .kt-korb .kt-tage, .kt-korb .kt-tage:empty { margin: 6px 0 0; font-size: 0.82rem; line-height: 1.4; color: var(--band-muted); }
 .kt-korb .kt-rundgang { margin-top: 12px; }
+.kt-konto .kt-rundgang-oben { margin: 12px 0 20px; }
 .kt-korb-fuss { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--band-line); }
 .kt-korb-fuss .kt-klein { margin: 0; color: var(--band-muted); font-size: 0.75rem; }
 .kt-korb-fuss .kt-leeren { flex: none; font-size: 0.8rem; }
