@@ -285,7 +285,7 @@ window.baueVideo = baueVideo;
 
   const ROBO = `<circle r="9" fill="#1c2326"/><circle cx="-2" cy="-2" r="9" fill="#0b4f41"/><circle cx="-4" cy="-4" r="9" class="robo"/><circle cx="-6" cy="-6" r="9" class="robo"/><circle cx="-6" cy="-6" r="9" fill="url(#v-glanz)"/><circle cx="-8" cy="-8" r="2.6" fill="#1c2326"/>`;
   const MOPPS = `<circle cx="2" cy="2" r="9.6" fill="#7cc8ff"/>`; // schauen vorn unter dem Roboter hervor
-  const amPlatz = (x, y) => `<g transform="translate(${x} ${y})">${MOPPS}${ROBO}</g>`;
+  const amPlatzV = (x, y) => `<g transform="translate(${x} ${y})">${MOPPS}${ROBO}</g>`;
   const STATION = [24, 29];
 
   // Eine Fahrt: Punkte, Geschwindigkeit (Bodeneinheiten pro Sekunde) und Startzeit in der Szene
@@ -308,7 +308,7 @@ window.baueVideo = baueVideo;
   });
 
   // Der fahrende Roboter: hüpft kurz über jede Türschwelle, auf dem Teppich sind die Mopps oben
-  const fahrender = f => {
+  const fahrenderV = f => {
     const [x0, y0] = f.punkte[0];
     const rel = "M" + f.punkte.map(([x, y]) => `${x - x0} ${y - y0}`).join(" L");
     const wechsel = teppichZeiten(f).flat();
@@ -348,7 +348,7 @@ window.baueVideo = baueVideo;
     return out;
   }).join("");
 
-  const wohnung = (boden, davor = "") => {
+  const wohnungV = (boden, davor = "") => {
     const A = P(0, 0), B = P(220, 0), D = P(0, 150), C = P(220, 150);
     const tuerL = P(190, 0), tuerR = P(214, 0);
     const linien = (n, f) => Array.from({ length: n }, (_, i) => f(i)).join("");
@@ -395,6 +395,43 @@ window.baueVideo = baueVideo;
       ${davor}`;
   };
 
+
+  // ---- Gemalte Fassung: gemalte Platten statt Vektorzeichnung, Bewegung bleibt Code ----
+  const GB = (window.MYLE_BILDER !== undefined ? window.MYLE_BILDER : "/bilder/") + "gemalt/";
+  const PL = {"x": -2.083, "y": 5.359, "w": 212.252, "h": 159.443}, ROB = {"w": 15, "r": 0.7319, "ax": 0.517, "ay": 0.586}, FIG = {"h": 50, "r": 0.448, "ax": 0.53}, ST = {"x": 35.1, "y": 32, "w": 113.7, "h": 130};
+  let maskeNr = 0;
+  const robBild = (x, y) => `<image href="${GB}sr-roboter.webp" x="${(x - ROB.w * ROB.ax).toFixed(2)}" y="${(y - ROB.w * ROB.r * ROB.ay).toFixed(2)}" width="${ROB.w}" height="${(ROB.w * ROB.r).toFixed(2)}"/>`;
+  const figurG = (x, y) => `<image href="${GB}sr-figur.webp" x="${(x - FIG.h * FIG.r * FIG.ax).toFixed(2)}" y="${(y + 14 - FIG.h).toFixed(2)}" width="${(FIG.h * FIG.r).toFixed(2)}" height="${FIG.h}"/>`;
+  const amPlatz = (x, y) => { const [sx, sy] = P(x, y); return `<!--R-->${robBild(sx, sy)}<!--/R-->`; };
+  const fahrender = f => {
+    const S = f.punkte.map(([x, y]) => P(x, y));
+    const [x0, y0] = S[0];
+    const rel = "M" + S.map(([x, y]) => `${(x - x0).toFixed(2)} ${(y - y0).toFixed(2)}`).join(" L");
+    let ls = [0], lb = [0];
+    for (let i = 1; i < S.length; i++) {
+      ls.push(ls[i - 1] + Math.hypot(S[i][0] - S[i - 1][0], S[i][1] - S[i - 1][1]));
+      lb.push(lb[i - 1] + Math.hypot(f.punkte[i][0] - f.punkte[i - 1][0], f.punkte[i][1] - f.punkte[i - 1][1]));
+    }
+    const kp = ls.map(v => (v / ls[ls.length - 1]).toFixed(4)).join(";"), kt = lb.map(v => (v / lb[lb.length - 1]).toFixed(4)).join(";");
+    const sp = schwellen(f);
+    const huckel = sp.length ? `<animateTransform attributeName="transform" type="translate" values="0 0;0 -2.4;0 0" dur=".4s" begin="${sp.map(t => (t - 0.2).toFixed(2) + "s").join(";")}"/>` : "";
+    return `<!--R--><g transform="translate(${x0.toFixed(2)} ${y0.toFixed(2)})"><g><g>${huckel}${robBild(0, 0)}</g><animateMotion dur="${f.dauer.toFixed(2)}s" begin="${f.start}s" fill="freeze" path="${rel}" calcMode="linear" keyPoints="${kp}" keyTimes="${kt}"/></g></g><!--/R-->`;
+  };
+  // Möbel und Wände der Vektorfassung als Maske: Spuren und Staub verschwinden hinter gemalten Möbeln
+  const moebel = (() => {
+    const s = wohnungV(""), a = s.indexOf("</g>", s.indexOf("<g transform=\"" + MATRIX)) + 4, e = s.indexOf("<!-- vordere Kanten -->");
+    return s.slice(a, e).replace(/fill="[^"]*"/g, 'fill="#000"').replace(/<!--[^>]*-->/g, "");
+  })();
+  const wohnung = (boden, davor = "") => {
+    const robo = [];
+    const flach = boden.replace(/<!--R-->([\s\S]*?)<!--\/R-->/g, (m, r) => { robo.push(r); return ""; });
+    const id = "sr-maske-" + (++maskeNr);
+    return `<defs><mask id="${id}" maskUnits="userSpaceOnUse" x="-20" y="-20" width="360" height="220"><rect x="-20" y="-20" width="360" height="220" fill="#fff"/>${moebel}</mask></defs>
+      <image href="${GB}sr-wohnung.webp" x="${PL.x}" y="${PL.y}" width="${PL.w}" height="${PL.h}" preserveAspectRatio="none"/>
+      <g mask="url(#${id})"><g transform="${MATRIX}">${flach}</g></g>
+      ${robo.join("")}${davor}`;
+  };
+
   // Die Fahrten: erst die Küche, dann über die Schwelle ins Wohnzimmer (Szene 2), dann Wohn- und Schlafzimmer (Szene 3)
   // Küche in zwei Teilen: A ab der Station, sobald die Tür zu ist (Szene 0), B nahtlos weiter bis zur Schwelle (Szene 1).
   // ERLEDIGT_A zeichnet in Szene 1 die schon gefahrene Spur von A ohne Animation (Start weit in der Vergangenheit).
@@ -414,95 +451,105 @@ window.baueVideo = baueVideo;
   const raumname = (x, y, name) => { const [sx, sy] = P(x, y); return `<text x="${sx.toFixed(1)}" y="${sy.toFixed(1)}" text-anchor="middle" class="raum">${name}</text>`; };
 
   // Seitenansicht: Roboter fährt vom Holz auf den Teppich und hebt die Mopps an
-  const seitenansicht = t0 => `
-    <g transform="translate(210 26)">
-      <rect width="102" height="130" rx="10" class="blase" filter="url(#v-sch)"/>
-      <g class="v-takt" style="--d:0s;--len:${(t0 - 0.3).toFixed(2)}s"><text x="51" y="26" text-anchor="middle" class="t-klein fett">Holz: wischen</text></g>
-      <g class="v-pop" style="--d:${(t0 - 0.3).toFixed(2)}s"><text x="51" y="24" text-anchor="middle" class="t-mittel fett">Teppich</text><text x="51" y="39" text-anchor="middle" class="t-mittel fett">erkannt</text></g>
-      <rect x="6" y="86" width="44" height="7" fill="url(#v-holz)"/>
-      <rect x="6" y="84.6" width="44" height="1.6" fill="#7cc8ff" opacity=".8"/>
-      <rect x="48" y="80" width="48" height="13" rx="2" fill="#b9c7c0"/>
-      ${Array.from({ length: 11 }, (_, i) => `<line x1="${51 + i * 4}" x2="${51 + i * 4}" y1="80.5" y2="84" stroke="#fff" stroke-width="1" opacity=".45"/>`).join("")}
-      <g class="v-geh" style="--dx:44px;--dy:0px;--d:${(t0 - 0.2).toFixed(2)}s;--len:1.1s">
-        <g class="v-geh" style="--dx:0px;--dy:-6px;--d:${(t0 + 0.05).toFixed(2)}s;--len:.3s">
-          <g class="v-geh" style="--dx:0px;--dy:-4px;--d:${(t0 - 0.35).toFixed(2)}s;--len:.3s">
-            <rect x="9" y="82" width="11" height="4" rx="1.5" fill="#7cc8ff"/><rect x="26" y="82" width="11" height="4" rx="1.5" fill="#7cc8ff"/>
-          </g>
-          <rect x="4" y="71" width="38" height="12" rx="5" class="robo"/>
-          <rect x="4" y="71" width="38" height="6" rx="3" fill="url(#v-glanz)"/>
-          <rect x="24" y="67" width="10" height="4" rx="1.5" fill="#1c2326"/>
-          <circle cx="11" cy="83.5" r="2.5" fill="#1c2326"/><circle cx="35" cy="83.5" r="2.5" fill="#1c2326"/>
-          <g class="v-takt" style="--d:${(t0 - 0.3).toFixed(2)}s;--len:1.6s">
-            <path d="M14.5 96 V90 M12 92.5 L14.5 90 L17 92.5" class="pfeil" style="stroke-width:1.6"/>
-            <path d="M31.5 96 V90 M29 92.5 L31.5 90 L34 92.5" class="pfeil" style="stroke-width:1.6"/>
+  const pille = (x, y, text, d, akzent) => { text = T(text); const w = text.length * 5.8 + 18, cx = Math.min(x, 316 - w / 2); return `<g transform="translate(${cx} ${y})"><g class="v-pop" style="--d:${d}s"><rect x="${-w / 2}" y="-10" width="${w}" height="19" rx="9.5" class="${akzent ? "blase-akzent" : "blase"}" filter="url(#v-sch)"/><text y="3" text-anchor="middle" class="t-klein ${akzent ? "hell" : ""}">${text}</text></g></g>`; };
+  const nahTeppich = () => `
+    <image href="${GB}sr-teppich.webp" x="0" y="0" width="320" height="180" preserveAspectRatio="none"/>
+    <g class="v-spur" style="--d:.15s;--len:1s"><rect x="-4" y="126.0" width="41.1" height="8" rx="4" fill="#3a2410" opacity=".14"/><rect x="-4" y="128.5" width="41.1" height="1.6" rx=".8" fill="#fff" opacity=".28"/></g>
+    ${[[151.2,125.5],[175.2,126.5],[199.2,125.0],[223.2,126.5],[247.2,125.5]].map(([x, y], i) => `<g transform="translate(${x} ${y + (i % 2 ? 1.5 : -1)})"><g class="v-weg" style="--d:${(2.5 + i * 0.2).toFixed(2)}s"><ellipse rx="1.3" ry=".8" fill="#6e6253" opacity=".85"/><ellipse cx="2.4" cy="1" rx=".7" ry=".5" fill="#6e6253" opacity=".7"/></g></g>`).join("")}
+    <g transform="translate(-137.0 135.0)">
+      <g class="v-geh" style="--dx:140.9px;--dy:0px;--d:.05s;--len:1.1s">
+        <g class="v-geh" style="--dx:10.0px;--dy:-7.5px;--d:2.05s;--len:.4s">
+          <g class="v-geh" style="--dx:120.0px;--dy:0px;--d:2.45s;--len:1.4s">
+            <ellipse cx="66.5" cy="0" rx="62.5" ry="2.2" fill="#000" opacity=".22" filter="url(#v-blur)"/>
+            <image href="${GB}sr-seite-raeder.webp" x="0" y="-42.1" width="133" height="42.1"/>
+            <g class="v-geh" style="--dx:0px;--dy:-6.0px;--d:1.35s;--len:.5s"><image href="${GB}sr-seite-mopps.webp" x="0" y="-42.1" width="133" height="42.1"/></g>
+            <image href="${GB}sr-seite-koerper.webp" x="0" y="-42.1" width="133" height="42.1"/>
+            <g class="v-takt" style="--d:1.3s;--len:1.1s">
+              <path d="M16.0 -8.0 v-9 m-3 3.2 l3 -3.2 l3 3.2" class="pfeil" style="stroke-width:1.8"/>
+              <path d="M117.0 -8.0 v-9 m-3 3.2 l3 -3.2 l3 3.2" class="pfeil" style="stroke-width:1.8"/>
+            </g>
           </g>
         </g>
       </g>
-      <g class="v-hoch" style="--d:${(t0 + 0.5).toFixed(2)}s"><text x="51" y="112" text-anchor="middle" class="t-klein fett">Mopps hoch,</text><text x="51" y="125" text-anchor="middle" class="t-klein leise">nur saugen</text></g>
+    </g>
+    <g transform="translate(143.2 111.9)"><g class="v-takt" style="--d:1.05s;--len:.9s">${[0, 1, 2].map(i => `<path d="M${i * 5} -${6 + i * 3} q${4 + i * 2} ${6 + i * 3} 0 ${12 + i * 6}" fill="none" stroke="var(--accent)" stroke-width="1.4" stroke-linecap="round" opacity="${(1 - i * 0.25).toFixed(2)}"/>`).join("")}</g></g>
+    ${blase(160, 26, "Holz: wischen", 0.1, 1.05)}
+    ${pille(160, 26, "Teppich erkannt", 1.2, true)}
+    ${pille(160, 50, "Mopps hoch, nur saugen", 1.45)}`;
+  // Seitenansicht mit eigenem Ablauf: wischt auf Holz, hält vor dem Teppich, hebt die Mopps sichtbar an, fährt dann rauf
+  const seitenansicht = () => `
+    <g transform="translate(210 26)">
+      <rect width="102" height="130" rx="10" class="blase" filter="url(#v-sch)"/>
+      <g class="v-takt" style="--d:0s;--len:1.05s"><rect x="10" y="12" width="82" height="20" fill="none"/><text x="51" y="26" text-anchor="middle" class="t-mittel fett">Holz: wischen</text></g>
+      <g class="v-pop" style="--d:1.05s"><rect x="10" y="10" width="82" height="34" fill="none"/><text x="51" y="24" text-anchor="middle" class="t-mittel fett">Teppich</text><rect x="10" y="10" width="82" height="34" fill="none"/><text x="51" y="39" text-anchor="middle" class="t-mittel fett">erkannt</text></g>
+      <rect x="4" y="88" width="48" height="8" fill="url(#v-holz)"/>
+      <rect x="4" y="86.6" width="40" height="1.6" rx=".8" fill="#5aa9e6" opacity=".85"/>
+      <rect x="52" y="83" width="46" height="13" rx="2" fill="#b9c7c0"/>
+      ${Array.from({ length: 11 }, (_, i) => `<line x1="${55 + i * 4}" x2="${55 + i * 4}" y1="83.5" y2="87" stroke="#fff" stroke-width="1" opacity=".45"/>`).join("")}
+      <g transform="translate(4 88)">
+        <g class="v-geh" style="--dx:6px;--dy:0px;--d:.1s;--len:.85s">
+          <g class="v-geh" style="--dx:44px;--dy:0px;--d:1.75s;--len:1s">
+            <g class="v-geh" style="--dx:0px;--dy:-5px;--d:1.75s;--len:.3s">
+              <rect x="0" y="-19" width="40" height="13" rx="5" fill="#efe9e1" stroke="#9a9186" stroke-width=".7"/>
+              <rect x="2.5" y="-12.5" width="31" height="3" rx="1.5" fill="#3b2f2a" opacity=".85"/>
+              <rect x="15" y="-23" width="10" height="4" rx="1.5" fill="#e4ddd2" stroke="#9a9186" stroke-width=".5"/><rect x="16" y="-20.8" width="8" height="1.2" fill="#b4412f"/>
+              <g class="v-geh" style="--dx:0px;--dy:-4.5px;--d:1.05s;--len:.45s">
+                <rect x="1" y="-6" width="13" height="6" rx="2" fill="#7cc8ff" stroke="#3f8fcf" stroke-width=".7"/>
+                <rect x="26" y="-6" width="13" height="6" rx="2" fill="#7cc8ff" stroke="#3f8fcf" stroke-width=".7"/>
+              </g>
+              <circle cx="20" cy="-3" r="3" fill="#1c2326"/>
+              <g class="v-takt" style="--d:1.05s;--len:1.4s">
+                <path d="M-5 -2 V-11 M-8 -7.5 L-5 -11 L-2 -7.5" class="pfeil" style="stroke-width:1.6"/>
+                <path d="M45 -2 V-11 M42 -7.5 L45 -11 L48 -7.5" class="pfeil" style="stroke-width:1.6"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g class="v-hoch" style="--d:1.3s"><text x="51" y="112" text-anchor="middle" class="t-klein fett">Mopps hoch,</text><text x="51" y="125" text-anchor="middle" class="t-klein leise">nur saugen</text></g>
     </g>`;
 
+  const KA = fahrt([STATION, [64, 29], [64, 44], [28, 44], [28, 58], [64, 58], [100, 58]], 120, 0.7);
+  const KA_FERTIG = fahrt(KA.punkte, 120, -20);
+  const REST2 = fahrt(REST.punkte, 270, 0.15);
+  const tSchw2 = schwellen(KA)[0], tTep2 = teppichZeiten(REST2)[0][0];
   VIDEOS.saugroboter = { szenen: [
     {
-      dauer: 4.5, titel: "8:30 Uhr: Du gehst zur Arbeit",
-      text: "Kaum ist die Tür zu, legt er los.",
-      svg: wohnung(spuren(KUECHE_A) + staub(KUECHE_A, true) + staub(KUECHE) + staub(REST) + fahrender(KUECHE_A),
-        `<g class="schrift-dunkel v-ein" style="--d:.15s">${raumname(70, 66, "Küche")}${raumname(50, 128, "Schlafen")}${raumname(160, 146, "Wohnen")}</g>`) +
-        `<g class="v-geh" style="--dx:21px;--dy:-12px;--d:.1s;--len:1.2s"><g class="v-weg" style="--d:1.05s">${figur(tuer[0], tuer[1] - 8)}</g></g>
-         ${blase(tuer[0], tuer[1] - 58, "Bis später!", 0.1, 1.3)}
-         ${uhr(272, 40, "8:30", 255, 180)}
-         <text x="272" y="110" text-anchor="middle" class="t-mittel fett v-hoch" style="--d:1.1s">Tür zu.</text>
-         <text x="272" y="126" text-anchor="middle" class="t-klein leise v-hoch" style="--d:1.2s">Ab ins Büro.</text>`
+      dauer: 3.5, titel: "8:30 Uhr: Tür zu, er legt los",
+      text: "Per Zeitplan startet er von selbst, auch über Türschwellen.",
+      svg: wohnung(spuren(KA) + staub(KA, true) + staub(REST) + fahrender(KA)) +
+        `<g class="v-geh" style="--dx:21px;--dy:-12px;--d:.1s;--len:.8s"><g class="v-weg" style="--d:.75s">${figurG(tuer[0], tuer[1] - 8)}</g></g>
+         ${blase(tuer[0], tuer[1] - 58, "Bis später!", 0.05, 0.9)}
+         ${uhr(266, 26, "8:30", 255, 180)}
+         <g transform="translate(233 74)"><g class="v-pop" style="--d:0.15s"><circle r="4.2" class="haken-kreis"/></g></g><g transform="translate(244 74)"><g class="v-pop" style="--d:0.22s"><circle r="4.2" class="haken-kreis"/></g></g><g transform="translate(255 74)"><g class="v-pop" style="--d:0.29s"><circle r="4.2" class="haken-kreis"/></g></g><g transform="translate(266 74)"><g class="v-pop" style="--d:0.36s"><circle r="4.2" class="haken-kreis"/></g></g><g transform="translate(277 74)"><g class="v-pop" style="--d:0.43s"><circle r="4.2" class="haken-kreis"/></g></g><g transform="translate(288 74)"><g class="v-pop" style="--d:0.50s"><circle r="4.2" class="blase"/></g></g><g transform="translate(299 74)"><g class="v-pop" style="--d:0.57s"><circle r="4.2" class="blase"/></g></g>
+         <g transform="translate(233 74)"><circle r="7" fill="none" stroke="var(--accent)" stroke-width="1.5" class="v-takt" style="--d:.7s;--len:.9s"/></g>
+         <g class="v-hoch" style="--d:.45s"><text x="266" y="97" text-anchor="middle" class="t-mittel fett">Mo–Fr</text><text x="266" y="110" text-anchor="middle" class="t-klein leise">saugen + wischen</text></g>
+         ${pille(266, 134, "Startet allein", 0.85, true)}
+         ${hinweis(schwelle[0], schwelle[1] - 27, "Schwelle? Kein Problem", tSchw2 - 0.3, 1.4)}`
     },
     {
-      dauer: 5, titel: "8:30 Uhr: Er startet selbstständig",
-      text: "Dein Zeitplan in der App sagt: jetzt. Er saugt und wischt Raum für Raum und fährt einfach über leichte Türschwellen.",
-      svg: wohnung(spuren(ERLEDIGT_A) + spuren(KUECHE) + staub(KUECHE, true) + staub(REST) + fahrender(KUECHE)) +
-        `${uhr(272, 30, "8:30", 255, 180)}
-         <g transform="translate(226 70)">
-           <rect width="88" height="104" rx="10" fill="url(#v-dunkel)" filter="url(#v-sch)"/><rect x="5" y="8" width="78" height="88" rx="6" class="screen"/>
-           <rect x="5" y="8" width="78" height="32" rx="6" fill="url(#v-glanz)" opacity=".5"/>
-           <text x="44" y="25" text-anchor="middle" class="t-klein fett">Zeitplan</text>
-           <text x="44" y="38.5" text-anchor="middle" class="t-mini leise" style="font-size:8.6px">Mo–Fr, 8:30 Uhr</text>
-           <text x="44" y="50" text-anchor="middle" class="t-mini leise" style="font-size:8.6px">Saugen + Wischen</text>
-           <rect x="31" y="59" width="26" height="14" rx="7" class="schalter v-faerb" style="--d:.1s"/>
-           <circle cx="50" cy="66" r="5" class="knopf v-knopf" style="--d:.1s"/>
-           <g transform="translate(44 86)"><g class="v-pop" style="--d:.3s"><rect x="-38" y="-8" width="76" height="16" rx="8" class="blase-akzent"/><text y="3" text-anchor="middle" class="t-mini hell">Startet jetzt</text></g></g>
-         </g>
-         ${hinweis(schwelle[0], schwelle[1] - 27, "Schwelle? Kein Problem", tSchwelle - 0.3, 2.6)}`
+      dauer: 4.5, titel: "Teppich erkannt: Er saugt nur",
+      text: "Holz und Fliesen wischt er, auf dem Teppich hebt er die Mopps und saugt nur.",
+      svg: nahTeppich()
     },
     {
-      dauer: 10, titel: "Teppich erkannt: Er saugt nur",
-      text: "Auf dem Teppich hebt er die Wischmopps oder die Walze an und saugt nur. Holz und Fliesen wischt er feucht.",
-      svg: wohnung(spuren(REST) + staub(REST, true) + fahrender(REST)) + seitenansicht(tTeppich)
+      dauer: 3, titel: "Die Station macht den Rest",
+      text: "Staub absaugen, Mopps waschen und trocknen macht die Station.",
+      svg: `<ellipse cx="92" cy="164" rx="62" ry="7" fill="#000" opacity=".12" filter="url(#v-blur)"/>
+         <image href="${GB}sr-station.webp" x="${ST.x}" y="${ST.y}" width="${ST.w}" height="${ST.h}"/>
+         ${zeile(170, 62, "Staub abgesaugt", 0.3)}
+         ${zeile(170, 94, "Mopps gewaschen", 0.9)}
+         ${zeile(170, 126, "Mopps getrocknet", 1.5)}
+         <text x="126" y="166" class="t-mini leise v-hoch" style="--d:1.9s">Beutel alle paar Wochen wechseln.</text>`
     },
     {
-      dauer: 7, titel: "Die Station macht den Rest",
-      text: "Staub abgesaugt, Mopps gewaschen und getrocknet. Du musst nichts auswringen und keinen Staubbehälter leeren.",
-      svg: `<ellipse cx="92" cy="166" rx="60" ry="8" fill="#000" opacity=".12" filter="url(#v-blur)"/>
-         <polygon points="130,50 152,36 152,138 130,152" fill="#cfd6da"/>
-         <polygon points="50,50 130,50 152,36 72,36" fill="#f6f8f9"/>
-         <rect x="50" y="50" width="80" height="102" fill="url(#v-metall)"/>
-         <rect x="50" y="50" width="80" height="102" fill="url(#v-glanz)" opacity=".4"/>
-         <rect x="58" y="58" width="64" height="48" rx="5" fill="#1c2326" opacity=".85"/>
-         <rect x="62" y="62" width="26" height="40" rx="3" fill="#2b3338"/><rect x="62" y="74" width="26" height="28" rx="3" fill="url(#v-blau-g)" opacity=".85"><animate attributeName="y" values="74;72;74" dur="2s" repeatCount="indefinite"/></rect><rect x="62" y="62" width="26" height="40" rx="3" fill="url(#v-glas)"/>
-         <rect x="92" y="62" width="26" height="40" rx="3" fill="#2b3338"/><rect x="92" y="86" width="26" height="16" rx="3" fill="#6f6a5a"/><rect x="92" y="62" width="26" height="40" rx="3" fill="url(#v-glas)"/>
-         <text x="75" y="114" text-anchor="middle" class="t-mini" style="font-size:7px;fill:#4a555a">Frisch</text><text x="105" y="114" text-anchor="middle" class="t-mini" style="font-size:7px;fill:#4a555a">Schmutz</text>
-         <rect x="60" y="120" width="60" height="24" rx="5" fill="#dfe5e8"/><rect x="60" y="120" width="60" height="24" rx="5" fill="url(#v-abdunkeln)" opacity=".4"/><text x="90" y="135" text-anchor="middle" class="t-mini" style="fill:#4a555a;font-size:8.5px">Staubbeutel</text>
-         ${[0, 1, 2, 3, 4, 5].map(i => partikel("M92 150 C92 138 100 136 104 122", 1.3, (i * 0.22).toFixed(2), 1.8, "staub"))}
-         <ellipse cx="92" cy="160" rx="26" ry="9" fill="#1c2326"/><ellipse cx="92" cy="156" rx="26" ry="9" fill="#0b4f41"/><ellipse cx="92" cy="152" rx="26" ry="9" class="robo"/><ellipse cx="92" cy="152" rx="26" ry="9" fill="url(#v-glanz)"/><circle cx="92" cy="150" r="3" fill="#1c2326"/>
-         ${zeile(170, 62, "Staub abgesaugt", 0.8)}
-         ${zeile(170, 94, "Mopps gewaschen", 2)}
-         ${zeile(170, 126, "Mopps getrocknet", 3.2)}
-         <text x="126" y="166" class="t-mini leise v-hoch" style="--d:4s">Beutel alle paar Wochen wechseln.</text>`
-    },
-    {
-      dauer: 6, titel: "17:30 Uhr: Alles sauber",
-      text: "Jeden Tag, in allen Räumen, ohne dass du daran denkst. Deine Putzzeit: null Minuten.",
+      dauer: 3, titel: "17:30 Uhr: Alles sauber",
+      text: "Jeden Tag, in allen Räumen. Deine Putzzeit: null Minuten.",
       svg: wohnung(amPlatz(...STATION)) +
-        `${[[62, 58, 0, 1.2], [150, 70, 0.5, 1.4], [190, 122, 1, 1.2], [58, 120, 0.3, 1.1], [130, 128, 0.8, 1.4], [176, 40, 1.3, 1]].map(([x, y, d, s]) => funkel(P(x, y)[0], P(x, y)[1] - 6, d, s)).join("")}
-         <g class="v-geh" style="--dx:-21px;--dy:12px;--d:.4s;--len:2.2s"><g class="v-ein" style="--d:.3s">${figur(tuer[0] + 21, tuer[1] - 20)}</g></g>
+        `${[[62, 58, 0, 1.2], [150, 70, 0.2, 1.4], [190, 122, 0.5, 1.2], [58, 120, 0.1, 1.1], [130, 128, 0.4, 1.4], [176, 40, 0.7, 1]].map(([x, y, d, s]) => funkel(P(x, y)[0], P(x, y)[1] - 6, d, s)).join("")}
+         <g class="v-geh" style="--dx:-21px;--dy:12px;--d:.2s;--len:1.1s"><g class="v-ein" style="--d:.15s">${figurG(tuer[0] + 21, tuer[1] - 20)}</g></g>
          ${uhr(272, 40, "17:30", 165, 180)}
-         <g transform="translate(272 112)"><g class="v-pop" style="--d:2.8s"><text text-anchor="middle" class="t-gross">0 Min.</text><text y="16" text-anchor="middle" class="t-klein leise">Putzzeit für dich</text></g></g>`
+         <g transform="translate(272 112)"><g class="v-pop" style="--d:1.2s"><text text-anchor="middle" class="t-gross">0 Min.</text><text y="16" text-anchor="middle" class="t-klein leise">Putzzeit für dich</text></g></g>`
     }
   ] };
 })();
@@ -3220,7 +3267,7 @@ window.baueVideo = baueVideo;
   ] };
 })();
 
-VIDEOS.saugroboter.poster = 4;
+VIDEOS.saugroboter.poster = 3;
 VIDEOS.airfryer.poster = 1;
 VIDEOS.buerste.poster = 1;
 VIDEOS.deckel.poster = 1;

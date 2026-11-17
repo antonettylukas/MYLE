@@ -15,6 +15,17 @@ const VIDEO_TEXTE = {
   "Nochmal abspielen": "Revoir",
 
   // Video saugroboter
+  // gemalte Fassung (16.11.)
+  "8:30 Uhr: Tür zu, er legt los": "8h30 : porte fermée, il se lance",
+  "Per Zeitplan startet er von selbst, auch über Türschwellen.": "Avec le planning, il démarre tout seul, même par-dessus les seuils.",
+  "Holz und Fliesen wischt er, auf dem Teppich hebt er die Mopps und saugt nur.": "Il lave le bois et le carrelage ; sur le tapis, il relève ses serpillières et aspire seulement.",
+  "Staub absaugen, Mopps waschen und trocknen macht die Station.": "La station vide la poussière, lave et sèche les serpillières.",
+  "Jeden Tag, in allen Räumen. Deine Putzzeit: null Minuten.": "Chaque jour, dans toutes les pièces. Votre temps de ménage : zéro minute.",
+  "Mo–Fr": "lun.–ven.",
+  "saugen + wischen": "aspirer + laver",
+  "Startet allein": "Démarre tout seul",
+  "Teppich erkannt": "Tapis détecté",
+  "Mopps hoch, nur saugen": "Serpillières relevées, aspiration seule",
   "8:30 Uhr: Du gehst zur Arbeit": "8 h 30\u202f: vous partez au travail",
   "Die Wohnung bleibt so zurück, wie sie ist. Staub inklusive.": "Le logement reste tel quel. Poussière comprise.",
   "Küche": "Cuisine",
@@ -52,7 +63,7 @@ const VIDEO_TEXTE = {
   "17:30 Uhr: Alles sauber": "17 h 30\u202f: tout est propre",
   "Jeden Tag, in allen Räumen, ohne dass du daran denkst. Deine Putzzeit: null Minuten.": "Chaque jour, dans toutes les pièces, sans que vous y pensiez. Votre temps de ménage\u202f: zéro minute.",
   "0 Min.": "0 min",
-  "Putzzeit für dich": "Ménage pour vous",
+  "Putzzeit für dich": "de ménage",
 
   // Video airfryer
   "Bisher: Am Herd mit der Pfanne": "Avant\u202f: aux fourneaux avec la poêle",
