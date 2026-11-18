@@ -92,6 +92,21 @@ for p in dateien(".html"):
 if len(versionen) > 1:
     fehler.append("Unterschiedliche ?v= auf den Seiten: " + ", ".join(f"{v} ({len(ps)} Seiten)" for v, ps in versionen.items()))
 
+# 5b. Seit 18.11. merkt sich der Browser JS und CSS ein Jahr lang (_headers). Wurde eine solche Datei geändert,
+# muss deshalb die Nummer ?v= gegenüber dem letzten Stand auf main erhöht worden sein, sonst sähen Besucher die alte Datei.
+try:
+    letzte = subprocess.run(["git", "rev-parse", "--verify", "-q", "origin/main"], capture_output=True, text=True)
+    if letzte.returncode == 0 and len(versionen) == 1:
+        jetzt = next(iter(versionen))
+        alt_html = subprocess.run(["git", "show", "origin/main:index.html"], capture_output=True, text=True).stdout
+        alt = set(re.findall(r"\?v=(\w+)", alt_html))
+        geaendert = [d for d in subprocess.run(["git", "diff", "--name-only", "origin/main", "--", "*.js", "*.css"],
+                                               capture_output=True, text=True).stdout.split() if not d.startswith((".github/", "functions/"))]
+        if geaendert and alt == {jetzt}:
+            fehler.append("JS/CSS geändert, aber ?v=%s ist noch dieselbe wie auf main (Browser würden die alte Datei behalten): %s" % (jetzt, ", ".join(geaendert[:5])))
+except Exception:
+    pass
+
 # 6. Weiterleitungen zeigen auf vorhandene Seiten
 for zeile in lies("_redirects").splitlines():
     teile = zeile.split()

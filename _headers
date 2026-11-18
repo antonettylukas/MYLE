@@ -1,0 +1,10 @@
+# Zwischenspeicher im Browser (Tempo, Lukas 18.11.): Skripte und Stile tragen ?v=… in der Adresse und bekommen bei jeder
+# Änderung eine neue Nummer, darum dürfen sie lange gemerkt werden. So fragt der Browser beim Wechsel von der Startseite
+# auf eine Produktseite nicht jedes Mal bei 8 Dateien nach. Die Schriften ändern sich nie.
+# Wichtig: Wer app.js, style.css, produkte.js usw. ändert, MUSS die Nummer ?v= in allen Seiten erhöhen (siehe pruefe.py).
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/schriften/*
+  Cache-Control: public, max-age=31536000, immutable
