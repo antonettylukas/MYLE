@@ -36,4 +36,15 @@ jobs:
         run: node .github/pruefung/qualitaet.js
       - name: Online stellen (vorschau nach main)
         if: github.ref == 'refs/heads/vorschau'
-        run: git push origin HEAD:main
+        run: |
+          git fetch origin main
+          echo "ALTER_STAND=$(git rev-parse origin/main)" >> "$GITHUB_ENV"
+          git push origin HEAD:main
+      # Geänderte Seiten per IndexNow an Bing, Yandex und Seznam melden. Erst nach dem Cloudflare-Build (ca. 1 bis 2 Minuten),
+      # damit die Suchmaschinen schon die neue Fassung sehen. Ein Fehler hier darf das Online-Stellen nicht kippen.
+      - name: Geänderte Seiten bei IndexNow melden
+        if: github.ref == 'refs/heads/vorschau'
+        continue-on-error: true
+        run: |
+          sleep 150
+          python3 .github/indexnow.py "$ALTER_STAND" HEAD
