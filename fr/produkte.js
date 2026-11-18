@@ -127,8 +127,8 @@ const PRODUKTE = [
     modelle: [
       {
         gruppe: "Avec rouleau laveur",
-        stufe: "Petit budget", spanne: "jusqu’à 400 €",
-        name: "ECOVACS DEEBOT T80 OMNI", preis: 349, preisText: "env. 335 à 350 €",
+        stufe: "Petit budget", spanne: "jusqu’à 500 €",
+        name: "ECOVACS DEEBOT T80 OMNI", preis: 449, preisText: "env. 440 à 460 €",
         punkte: [
           "La station le vide et lave le rouleau à l’eau chaude",
           "Lave en profondeur avec un rouleau qui se relève sur les tapis",
@@ -144,7 +144,7 @@ const PRODUKTE = [
       },
       {
         gruppe: "Avec rouleau laveur",
-        stufe: "Milieu de gamme", spanne: "de 400 à 700 €",
+        stufe: "Milieu de gamme", spanne: "de 500 à 700 €",
         name: "MOVA Z60 Ultra Roller Complete", preis: 649, empfohlen: true,
         punkte: [
           "Très bon en aspiration et en lavage dans le test (note 1,4, n° 2 chez smarthomeassistent.de)",
@@ -321,10 +321,10 @@ const PRODUKTE = [
           "Sèche avec une pompe à chaleur et consomme donc moins d’électricité et d’eau",
           "Lave 9 kg et sèche 6 kg d’une traite",
           "Avec programme vapeur pour rafraîchir le linge",
-          "Vainqueur du test chez Stiftung Warentest parmi quatre lavantes-séchantes (note 2,0, numéro 11/2023)"
+          "Vainqueur en 2023 du test de Stiftung Warentest parmi quatre lavantes-séchantes (note 2,0, numéro 11/2023)"
         ],
         fuer: "Pour vous si vous lavez beaucoup et voulez économiser de l’électricité à long terme. En échange, vous payez nettement plus à l’achat.",
-        hinweis: "Laver et sécher une pleine charge prend presque 10 heures. Le test date déjà de 2023.",
+        hinweis: "Laver et sécher une pleine charge prend presque 10 heures. Le test date de 2023. Lors du test plus récent (numéro 11/2026), elle n’a pas été testée à nouveau.",
         link: amazon("aeg l9wef80690 waschtrockner", "aeg l9wef80690 lave-linge séchant")
       }
     ],
@@ -333,12 +333,13 @@ const PRODUKTE = [
       { f: "Quelle quantité de linge peut-elle sécher\u202f?", a: "En général environ 6 kg, même si elle peut laver 9 ou 10 kg. 6 kg, c’est par exemple une quarantaine de T-shirts. Si vous voulez laver et sécher d’une traite, ne mettez que ce qu’elle peut sécher." },
       { f: "Je n’ai vraiment plus besoin de repasser\u202f?", a: "Pour les vêtements de tous les jours, le plus souvent pas. Un programme vapeur comme i-⁠Refresh sur ma Haier rafraîchit les vêtements et lisse les plis. Le seul point important\u202f: sortez le linge peu après le séchage et pliez-le, il reste ainsi lisse. Une chemise pour un rendez-vous important, vous lui donnerez peut-être quand même un petit coup de fer." },
       { f: "Le linge reste-t-il alors toute la journée dans le tambour\u202f?", a: "Oui, mais sec. Avec l’heure de fin, elle démarre juste assez tard pour avoir fini quand vous rentrez. D’ici là, le linge attend au sec dans le tambour. En revanche, ne laissez pas du linge mouillé pendant des heures, sinon il commence à sentir." },
-      { f: "Combien coûte le séchage\u202f?", a: "Sans pompe à chaleur, un séchage consomme selon l’appareil un peu plus de 2 à 2,5 kWh. Cela fait environ 80 centimes à 37 centimes le kWh. Avec trois charges par semaine, vous arrivez à un peu plus de 10 € par mois. Un appareil avec pompe à chaleur comme l’AEG consomme moins d’électricité et d’eau : Stiftung Warentest calcule pour lui environ 760 € de frais de fonctionnement en moins sur dix ans par rapport aux appareils de Bosch et Siemens testés." },
+      { f: "Combien coûte le séchage\u202f?", a: "Sans pompe à chaleur, un séchage consomme selon l’appareil un peu plus de 2 à 2,5 kWh. Cela fait environ 80 centimes à 37 centimes le kWh. Avec trois charges par semaine, vous arrivez à un peu plus de 10 € par mois. Un appareil avec pompe à chaleur comme l’AEG consomme moins d’électricité et d’eau : en 2023, Stiftung Warentest calculait pour lui environ 760 € de frais de fonctionnement en moins sur dix ans par rapport aux appareils de Bosch et Siemens testés à l’époque." },
       { f: "Que dois-je garder propre\u202f?", a: "De temps en temps, rincez le filtre à peluches en bas près de la pompe et le bac à lessive, et essuyez le joint en caoutchouc de la porte. Un programme chaud à tambour vide une fois par mois la garde fraîche." },
       { f: "A-t-elle besoin d’un branchement spécial\u202f?", a: "Non. Elle a besoin de la même arrivée d’eau, de la même évacuation et de la même prise qu’un lave-linge. Vous la mettez donc simplement à sa place." }
     ],
     quellen: [
       { name: "Stiftung Warentest\u202f: test des lavantes-séchantes (numéro 11/2023)", text: "quatre lavantes-séchantes, vainqueur AEG L9WEF80690 (note 2,0), meilleur rapport qualité-prix Bosch WNG24440 (note 2,1)" },
+      { name: "Stiftung Warentest\u202f: test des lavantes-séchantes (numéro 11/2026)", text: "quatre autres lavantes-séchantes, l’AEG L9WEF80690 n’a pas été testée à nouveau" },
       { name: "ETM Testmagazin (numéro 10/2024)", text: "Hisense WD5S1045BW très bon, 93 points sur 100" },
       { name: "Stiftung Warentest\u202f: sèche-linge avec aide au repassage (juin 2007)", text: "la vapeur fait gagner environ la moitié du temps de repassage" },
       { name: "Association allemande des fabricants de cosmétiques et de lessives (IKW)\u202f: chiffres de la lessive en Allemagne", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "environ 90 lessives par personne et par an, pour le calculateur (en allemand)" },

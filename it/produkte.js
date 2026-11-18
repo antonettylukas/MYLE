@@ -123,8 +123,8 @@ const PRODUKTE = [
     modelle: [
       {
         gruppe: "Con rullo lavante",
-        stufe: "Economico", spanne: "fino a 400 €",
-        name: "ECOVACS DEEBOT T80 OMNI", preis: 349, preisText: "circa da 335 a 350 €",
+        stufe: "Economico", spanne: "fino a 500 €",
+        name: "ECOVACS DEEBOT T80 OMNI", preis: 456, preisText: "circa da 440 a 460 €",
         punkte: [
           "La base lo svuota e lava il rullo con acqua calda",
           "Lava a fondo con un rullo che si solleva sui tappeti",
@@ -144,7 +144,7 @@ const PRODUKTE = [
       // lieferbar ist (verfuegbarkeit-15). T90S B0H94KQLMJ (Bianco): Buy Box, Verkauf und Versand Amazon, 707,97 €, nach Zürich lieferbar, darum preis 708.
       {
         gruppe: "Con rullo lavante",
-        stufe: "Fascia media", spanne: "da 400 a 750 €",
+        stufe: "Fascia media", spanne: "da 500 a 750 €",
         name: "ECOVACS DEEBOT T90S PRO OMNI", preis: 708, empfohlen: true,
         punkte: [
           "Voto 1,8 su smarthomeassistent.de, con un rapporto qualità-prezzo molto buono (voto 1,0)",
@@ -314,10 +314,10 @@ const PRODUKTE = [
           "Asciuga con pompa di calore e così consuma meno corrente e acqua",
           "Lava 9 kg e asciuga 6 kg in un colpo solo",
           "Con programma a vapore per rinfrescare i capi",
-          "Vincitrice del test di Stiftung Warentest su quattro lavasciuga (voto 2,0, numero 11/2023)"
+          "Nel 2023 vincitrice del test di Stiftung Warentest su quattro lavasciuga (voto 2,0, numero 11/2023)"
         ],
         fuer: "Per te se fai molti bucati e vuoi risparmiare corrente nel lungo periodo. In cambio all’inizio paghi molto di più.",
-        hinweis: "Lavare e asciugare un carico pieno richiede quasi 10 ore. Il test è già del 2023.",
+        hinweis: "Lavare e asciugare un carico pieno richiede quasi 10 ore. Il test è del 2023. Nel test più recente (numero 11/2026) non è stata provata di nuovo.",
         link: amazon("aeg l9wef80690 waschtrockner", "aeg l9wef80690 lavasciuga")
       }
     ],
@@ -326,12 +326,13 @@ const PRODUKTE = [
       { f: "Quanto bucato riesce ad asciugare?", a: "Di solito circa 6 kg, anche se può lavarne 9 o 10. 6 kg sono per esempio una quarantina di magliette. Se vuoi lavare e asciugare in un colpo solo, metti dentro solo quanto riesce ad asciugare." },
       { f: "Davvero non devo più stirare?", a: "Per i vestiti di tutti i giorni di solito no. Un programma a vapore come i-⁠Refresh della mia Haier rinfresca i vestiti e distende le pieghe. L’unica cosa importante: tira fuori il bucato subito dopo l’asciugatura e piegalo, così resta liscio. Una camicia per un appuntamento importante magari la ripassi comunque col ferro." },
       { f: "Il bucato resta poi tutto il giorno nel cestello?", a: "Sì, ma asciutto. Con l’ora di fine parte così tardi da finire quando torni a casa. Fino ad allora il bucato resta asciutto nel cestello. Il bucato bagnato invece non lasciarlo lì per ore, altrimenti comincia a puzzare." },
-      { f: "Quanto costa asciugare?", a: "Senza pompa di calore un’asciugatura consuma, a seconda dell’apparecchio, da poco più di 2 a 2,5 kWh di corrente. A 37 centesimi al kWh sono circa 80 centesimi. Con tre carichi a settimana arrivi a poco più di 10 € al mese. Un apparecchio con pompa di calore come l’AEG consuma meno corrente e acqua: Stiftung Warentest calcola per lui circa 760 € di costi di esercizio in meno in dieci anni rispetto agli apparecchi di Bosch e Siemens testati." },
+      { f: "Quanto costa asciugare?", a: "Senza pompa di calore un’asciugatura consuma, a seconda dell’apparecchio, da poco più di 2 a 2,5 kWh di corrente. A 37 centesimi al kWh sono circa 80 centesimi. Con tre carichi a settimana arrivi a poco più di 10 € al mese. Un apparecchio con pompa di calore come l’AEG consuma meno corrente e acqua: nel 2023 Stiftung Warentest calcolava per lui circa 760 € di costi di esercizio in meno in dieci anni rispetto agli apparecchi di Bosch e Siemens testati allora." },
       { f: "Cosa devo tenere pulito?", a: "Ogni tanto sciacqua il filtro dei pelucchi in basso vicino alla pompa e la vaschetta del detersivo, e pulisci la guarnizione in gomma dell’oblò. Una volta al mese un programma caldo a cestello vuoto la mantiene fresca." },
       { f: "Serve un allacciamento speciale?", a: "No. Le servono lo stesso attacco dell’acqua, lo stesso scarico e la stessa presa di una lavatrice. Quindi la metti semplicemente al suo posto." }
     ],
     quellen: [
       { name: "Stiftung Warentest: test delle lavasciuga (numero 11/2023)", text: "quattro lavasciuga, vincitrice AEG L9WEF80690 (voto 2,0), consiglio qualità-prezzo Bosch WNG24440 (voto 2,1)" },
+      { name: "Stiftung Warentest: test delle lavasciuga (numero 11/2026)", text: "altre quattro lavasciuga, la AEG L9WEF80690 non è stata provata di nuovo" },
       { name: "ETM Testmagazin (numero 10/2024)", text: "Hisense WD5S1045BW molto buona, 93 punti su 100" },
       { name: "Stiftung Warentest: asciugatrice con aiuto per lo stiro (giugno 2007)", text: "il vapore fa risparmiare circa metà del tempo di stiro" },
       { name: "Associazione tedesca dei produttori di cosmetici e detersivi (IKW): dati sul bucato in Germania", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "circa 90 lavaggi a persona all’anno, per il calcolatore (in tedesco)" },

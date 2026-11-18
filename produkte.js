@@ -124,6 +124,7 @@ const ASIN = {
   "haier i-pro serie 7 plus waschtrockner hwd100-bd14979u1": "B0BT4TNW2P",
   "aeg l9wef80690 waschtrockner": "B09CDPGXXV",
   "hisense wd5s1045bw waschtrockner": "B0BXFPSKNF",
+  "gorenje wd2pa1x64adw waschtrockner": "B0F3X9T6H6",
   "bosch serie 6 wng24443 waschtrockner": "B0HBQMP4HK",
   "cosori dual basket 8,5 l": "B0CHB7TNWH",
   "philips dual basket na352": "B0D4Q8QFTH",
@@ -390,16 +391,16 @@ const PRODUKTE = [
     modelle: [
       {
         stufe: "Günstig", spanne: "bis 550 €",
-        name: "Hisense WD5S1045BW", preis: 490, preisText: "ca. 470 bis 530 €",
+        name: "Gorenje WD2PA1X64ADW/DE", preis: 490, preisText: "ca. 450 bis 530 €",
         punkte: [
           "Wäscht 10,5 kg und trocknet 6 kg am Stück",
-          "Dosiert das Waschmittel selbst, du füllst nur ab und zu nach",
-          "Mit Dampfprogramm und App",
-          "Im Test sehr gut (93 von 100 Punkten bei ETM Testmagazin, Heft 10/2024)"
+          "Mit Endzeitvorwahl, auch per App steuerbar",
+          "Mit Dampfprogramm zum Auffrischen",
+          "Im Einzeltest sehr gut (94,9 von 100 Punkten bei ETM Testmagazin, Heft 10/2025)"
         ],
         fuer: "Für dich, wenn du Waschen und Trocknen in einem willst und auf den Preis achtest.",
-        hinweis: "Beim Waschen und Trocknen braucht er mehr Strom und Wasser als der AEG mit Wärmepumpe.",
-        link: amazon("hisense wd5s1045bw waschtrockner")
+        hinweis: "Das Waschmittel füllst du selbst ein. Beim Waschen und Trocknen braucht er mehr Strom und Wasser als der AEG mit Wärmepumpe.",
+        link: amazon("gorenje wd2pa1x64adw waschtrockner")
       },
       {
         stufe: "Mittelklasse", spanne: "550 bis 900 €",
@@ -424,10 +425,10 @@ const PRODUKTE = [
           "Trocknet mit Wärmepumpe und braucht so weniger Strom und Wasser",
           "Wäscht 9 kg und trocknet 6 kg am Stück",
           "Mit Dampfprogramm zum Auffrischen",
-          "Testsieger bei Stiftung Warentest unter vier Waschtrocknern (Note 2,0, Heft 11/2023)"
+          "War 2023 Testsieger bei Stiftung Warentest unter vier Waschtrocknern (Note 2,0, Heft 11/2023)"
         ],
         fuer: "Für dich, wenn du viel wäschst und auf lange Sicht Strom sparen willst. Dafür zahlst du am Anfang deutlich mehr.",
-        hinweis: "Waschen und Trocknen mit voller Ladung dauert fast 10 Stunden. Der Test ist schon von 2023.",
+        hinweis: "Waschen und Trocknen mit voller Ladung dauert fast 10 Stunden. Der Test ist von 2023. Beim neueren Test (Heft 11/2026) wurde er nicht noch einmal geprüft.",
         link: amazon("aeg l9wef80690 waschtrockner")
       }
     ],
@@ -436,13 +437,14 @@ const PRODUKTE = [
       { f: "Wie viel Wäsche kann er trocknen?", a: "Meist etwa 6 kg, auch wenn er 9 oder 10 kg waschen kann. 6 kg sind zum Beispiel rund 40 T-Shirts. Wenn du in einem Rutsch waschen und trocknen willst, füllst du nur so viel ein, wie er trocknen kann." },
       { f: "Muss ich wirklich nicht mehr bügeln?", a: "Bei Alltagskleidung meistens nicht. Ein Dampfprogramm wie i-\u2060Refresh bei meinem Haier frischt die Kleidung auf und glättet Falten. Wichtig ist nur, dass du die Wäsche bald nach dem Trocknen herausnimmst und zusammenlegst, dann bleibt sie glatt. Ein Hemd für einen wichtigen Termin bügelst du vielleicht trotzdem kurz nach." },
       { f: "Liegt die Wäsche dann den ganzen Tag in der Trommel?", a: "Ja, aber trocken. Mit der Endzeit fängt er erst so spät an, dass er fertig ist, wenn du heimkommst. Bis dahin liegt die Wäsche trocken in der Trommel. Nasse Wäsche solltest du dagegen nicht stundenlang liegen lassen, sonst fängt sie an zu riechen." },
-      { f: "Was kostet das Trocknen?", a: "Ohne Wärmepumpe braucht ein Trockengang je nach Gerät gut 2 bis 2,5 kWh Strom. Das sind bei 37 Cent pro kWh rund 80 Cent. Bei drei Ladungen pro Woche kommst du auf gut 10 € im Monat. Ein Gerät mit Wärmepumpe wie der AEG braucht weniger Strom und Wasser: Stiftung Warentest rechnet bei ihm mit rund 760 € weniger Betriebskosten in zehn Jahren als bei den getesteten Geräten von Bosch und Siemens." },
+      { f: "Was kostet das Trocknen?", a: "Ohne Wärmepumpe braucht ein Trockengang je nach Gerät gut 2 bis 2,5 kWh Strom. Das sind bei 37 Cent pro kWh rund 80 Cent. Bei drei Ladungen pro Woche kommst du auf gut 10 € im Monat. Ein Gerät mit Wärmepumpe wie der AEG braucht weniger Strom und Wasser: Stiftung Warentest rechnete 2023 bei ihm mit rund 760 € weniger Betriebskosten in zehn Jahren als bei den damals getesteten Geräten von Bosch und Siemens." },
       { f: "Was muss ich sauber halten?", a: "Ab und zu das Flusensieb unten an der Pumpe und das Waschmittelfach ausspülen und die Gummidichtung an der Tür abwischen. Einmal im Monat ein heißes Programm mit leerer Trommel hält ihn frisch." },
       { f: "Braucht er einen besonderen Anschluss?", a: "Nein. Er braucht denselben Wasseranschluss, denselben Abfluss und dieselbe Steckdose wie eine Waschmaschine. Du stellst ihn also einfach an ihren Platz." }
     ],
     quellen: [
       { name: "Stiftung Warentest: Waschtrockner im Test (Heft 11/2023)", text: "vier Waschtrockner, Testsieger AEG L9WEF80690 (Note 2,0), Preistipp Bosch WNG24440 (Note 2,1)" },
-      { name: "ETM Testmagazin (Heft 10/2024)", text: "Hisense WD5S1045BW sehr gut, 93 von 100 Punkten" },
+      { name: "Stiftung Warentest: Waschtrockner im Test (Heft 11/2026)", text: "vier weitere Waschtrockner, der AEG L9WEF80690 wurde nicht noch einmal geprüft" },
+      { name: "ETM Testmagazin (Heft 10/2025)", text: "Gorenje WD2PA1X64ADW/DE sehr gut, 94,9 von 100 Punkten, Einzeltest" },
       { name: "Stiftung Warentest: Trockner mit Bügelhilfe (Juni 2007)", text: "Dampf spart rund die Hälfte der Bügelzeit" },
       { name: "Industrieverband Körperpflege- und Waschmittel (IKW): Zahlen zum Waschen in Deutschland", url: "https://www.ikw.org/fileadmin/IKW_Dateien/Haushaltpflege_Bilder/Wissen/Informationsserie/WM/dateien/pdf/3_5.pdf", text: "im Schnitt 90 Wäschen pro Person und Jahr, für den Rechner" },
       { name: "IKW-Pressemitteilung „Mit 7 Tipps mehr als 400 Euro sparen beim Waschen, Trocknen und Spülen“ (Oktober 2023)", url: "https://www.ikw.org/fileadmin/IKW_Dateien/downloads/Haushaltspflege/2023_10_01_Mit_7_Tipps_Geld_sparen.pdf", text: "210 Wäschen im Jahr im Vier-Personen-Haushalt, für den Rechner" },
