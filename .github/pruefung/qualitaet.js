@@ -61,7 +61,7 @@ function starteServer() {
     const ext = path.extname(datei);
     let inhalt = fs.readFileSync(datei);
     const kopf = { "Content-Type": TYPEN[ext] || "application/octet-stream",
-      "Cache-Control": ext === ".html" ? "no-cache" : "public, max-age=14400" };
+      "Cache-Control": ext === ".html" ? "no-cache" : [".js", ".css", ".woff2"].includes(ext) ? "public, max-age=31536000, immutable" : "public, max-age=14400" }; // wie _headers auf myle.life
     if (PACKEN.has(ext) && /gzip/.test(req.headers["accept-encoding"] || "")) {
       inhalt = zlib.gzipSync(inhalt);
       kopf["Content-Encoding"] = "gzip";
