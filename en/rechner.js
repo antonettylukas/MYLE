@@ -547,7 +547,7 @@ const RECHNER = {
         vorher: [
           "You buy every kilowatt hour from your electricity supplier",
           "Fridge, router and standby run all day on your bill",
-          `About €${runde(w.verbrauch * w.strom)} of electricity a year`
+          `About €${runde(w.verbrauch * w.strom)} of electricity a year (based on ${w.verbrauch.toLocaleString("en-US")} kWh at €${String(w.strom)} per kWh)`
         ],
         nachher: mitSpeicher ? [
           "During the day, solar power flows through the socket into your home",
@@ -587,12 +587,12 @@ const RECHNER = {
         extra: `That's around ${gerundet.toLocaleString("en-GB")} litres less hot water a year.`,
         vorherTitel: "Old shower head",
         vorher: [
-          `Around ${Math.round(w.jetzt * w.minuten)} litres of hot water per shower`,
+          `Around ${Math.round(w.jetzt * w.minuten)} litres of hot water per shower (${String(w.jetzt)} litres per minute, ${w.minuten} minutes)`,
           w.warm === "strom" ? "Every litre is heated with electricity" : "The heating warms every litre",
           "You pay for water and sewage for every litre"
         ],
         nachher: [
-          `Around ${Math.round(NEU * w.minuten)} litres per shower`,
+          `Around ${Math.round(NEU * w.minuten)} litres per shower (${String(NEU)} litres per minute, ${w.minuten} minutes)`,
           "Shower just as long and just as warm",
           "Screwed on yourself in a few minutes"
         ]

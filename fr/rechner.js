@@ -548,7 +548,7 @@ const RECHNER = {
         vorher: [
           "Vous achetez chaque kilowattheure à votre fournisseur",
           "Réfrigérateur, box et veille tournent toute la journée sur votre facture",
-          `Environ ${runde(w.verbrauch * w.strom)} € d’électricité par an`
+          `Environ ${runde(w.verbrauch * w.strom)} € d’électricité par an (calculé avec ${w.verbrauch.toLocaleString("fr-FR")} kWh à ${String(w.strom).replace(".", ",")} € le kWh)`
         ],
         nachher: mitSpeicher ? [
           "En journée, l’électricité solaire arrive chez vous par la prise",
@@ -588,12 +588,12 @@ const RECHNER = {
         extra: `Cela fait environ ${gerundet.toLocaleString("fr-FR")} litres d’eau chaude en moins par an.`,
         vorherTitel: "Ancien pommeau",
         vorher: [
-          `Environ ${Math.round(w.jetzt * w.minuten)} litres d’eau chaude par douche`,
+          `Environ ${Math.round(w.jetzt * w.minuten)} litres d’eau chaude par douche (${String(w.jetzt).replace(".", ",")} litres par minute, ${w.minuten} minutes)`,
           w.warm === "strom" ? "Chaque litre est chauffé à l’électricité" : "Le chauffage chauffe chaque litre",
           "Vous payez l’eau et l’assainissement pour chaque litre"
         ],
         nachher: [
-          `Environ ${Math.round(NEU * w.minuten)} litres par douche`,
+          `Environ ${Math.round(NEU * w.minuten)} litres par douche (${String(NEU).replace(".", ",")} litres par minute, ${w.minuten} minutes)`,
           "Une douche aussi longue et aussi chaude",
           "Vissé vous-même en quelques minutes"
         ]

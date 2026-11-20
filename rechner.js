@@ -561,7 +561,7 @@ const RECHNER = {
         vorher: [
           "Jede Kilowattstunde kaufst du beim Stromanbieter",
           "Kühlschrank, Router und Standby laufen den ganzen Tag auf deine Rechnung",
-          `Rund ${runde(w.verbrauch * w.strom)} € Strom im Jahr`
+          `Rund ${runde(w.verbrauch * w.strom)} € Strom im Jahr (gerechnet mit ${w.verbrauch.toLocaleString("de-DE")} kWh und ${String(w.strom).replace(".", ",")} € pro kWh)`
         ],
         nachher: mitSpeicher ? [
           "Tagsüber fließt Solarstrom über die Steckdose in deine Wohnung",
@@ -601,12 +601,12 @@ const RECHNER = {
         extra: `Das sind rund ${gerundet.toLocaleString("de-DE")} Liter warmes Wasser weniger im Jahr.`,
         vorherTitel: "Alter Duschkopf",
         vorher: [
-          `Rund ${Math.round(w.jetzt * w.minuten)} Liter warmes Wasser pro Dusche`,
+          `Rund ${Math.round(w.jetzt * w.minuten)} Liter warmes Wasser pro Dusche (${String(w.jetzt).replace(".", ",")} Liter pro Minute, ${w.minuten} Minuten)`,
           w.warm === "strom" ? "Jeder Liter wird mit Strom warm gemacht" : "Die Heizung macht jeden Liter warm",
           "Wasser und Abwasser zahlst du für jeden Liter"
         ],
         nachher: [
-          `Rund ${Math.round(NEU * w.minuten)} Liter pro Dusche`,
+          `Rund ${Math.round(NEU * w.minuten)} Liter pro Dusche (${String(NEU).replace(".", ",")} Liter pro Minute, ${w.minuten} Minuten)`,
           "Gleich lange und gleich warm duschen",
           "In ein paar Minuten selbst angeschraubt"
         ]

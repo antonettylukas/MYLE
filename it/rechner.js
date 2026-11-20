@@ -547,7 +547,7 @@ const RECHNER = {
         vorher: [
           "Ogni kilowattora lo compri dal fornitore",
           "Frigorifero, router e standby vanno tutto il giorno in bolletta",
-          `Circa ${runde(w.verbrauch * w.strom)} € di corrente all’anno`
+          `Circa ${runde(w.verbrauch * w.strom)} € di corrente all’anno (calcolato con ${w.verbrauch.toLocaleString("it-IT")} kWh a ${String(w.strom).replace(".", ",")} € al kWh)`
         ],
         nachher: mitSpeicher ? [
           "Di giorno la corrente solare arriva in casa dalla presa",
@@ -587,12 +587,12 @@ const RECHNER = {
         extra: `Sono circa ${gerundet.toLocaleString("it-IT")} litri di acqua calda in meno all’anno.`,
         vorherTitel: "Vecchio soffione",
         vorher: [
-          `Circa ${Math.round(w.jetzt * w.minuten)} litri di acqua calda a doccia`,
+          `Circa ${Math.round(w.jetzt * w.minuten)} litri di acqua calda a doccia (${String(w.jetzt).replace(".", ",")} litri al minuto, ${w.minuten} minuti)`,
           w.warm === "strom" ? "Ogni litro viene scaldato con la corrente" : "Il riscaldamento scalda ogni litro",
           "Paghi acqua e fognatura per ogni litro"
         ],
         nachher: [
-          `Circa ${Math.round(NEU * w.minuten)} litri a doccia`,
+          `Circa ${Math.round(NEU * w.minuten)} litri a doccia (${String(NEU).replace(".", ",")} litri al minuto, ${w.minuten} minuti)`,
           "Doccia lunga e calda uguale",
           "Avvitato da te in pochi minuti"
         ]
