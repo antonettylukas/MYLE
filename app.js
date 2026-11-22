@@ -105,6 +105,26 @@
     const link = /^DEINPARTNERTAG/.test(id) || !id ? String(u || "").replace(/[?&]tag=DEINPARTNERTAG-21/g, "") : String(u || "").replace(/DEINPARTNERTAG-21/g, id);
     return SEITEN_ID && /^[a-z0-9-]+-2[01]$/.test(String(SEITEN_ID).trim()) ? link.replace(/([?&]tag=)[^&#]+/, "$1" + String(SEITEN_ID).trim()) : link;
   };
+  // MediaMarkt Schweiz (Awin 14040, Publisher 3145115): zusätzlicher Knopf NUR für Besucher aus der Schweiz (Awin-Gebiet CH).
+  // Erkannt an Zeitzone Europe/Zurich oder einer Browsersprache mit -CH, ohne Daten zu senden. Nur Modelle, die MediaMarkt CH
+  // selbst verkauft (Prüfung 22.11.2026, marketing/mediamarkt-ch-pruefung-2026-11-22.md Liste A). Schlüssel: Teil des Modellnamens, klein.
+  const IN_CH = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone === "Europe/Zurich" || (navigator.languages || [navigator.language]).some(l => /-CH$/i.test(l || "")); } catch (e) { return false; } })();
+  const MM_CH = [
+    ["dreame x60 pro ultra", "https://www.mediamarkt.ch/de/product/_dreame-x60-pro-ultra-complete-saug-und-wischroboter-2291234.html"],
+    ["philips dual basket 3000", "https://www.mediamarkt.ch/de/product/_philips-na35209-fritteuse-2750-w-kohlegraukupfer-2267929.html"],
+    ["magnifica evo next", "https://www.mediamarkt.ch/it/product/_de-longhi-magnifica-evo-next-kaffeevollautomat-silberschwarz-2265149.html"],
+    ["rivelia", "https://www.mediamarkt.ch/de/product/_de-longhi-exam440-55-b-rivelia-milk-2215773.html"],
+    ["crystal 3.0", "https://www.mediamarkt.ch/de/product/_sodastream-crystal-cqc-2171360.html"],
+    ["sonicare 5500", "https://www.mediamarkt.ch/de/product/_philips-sonicare-hx711902-sonicare-5500-elektrische-schallzahnburste-weissschwarz-reinigungstechnologie-schalltechnologie-2275650.html"],
+    ["oral-b io series 3n", "https://www.mediamarkt.ch/de/product/_oral-b-8006540730744-elektrische-zahnburste-matt-black-reinigungstechnologie-oszillierend-rotierend-2d-2255283.html"]
+  ];
+  const mmLink = name => {
+    if (!IN_CH) return "";
+    const n = String(name || "").toLowerCase();
+    const e = MM_CH.find(([k]) => n.includes(k));
+    return e ? `https://www.awin1.com/cread.php?awinmid=14040&awinaffid=3145115&ued=${encodeURIComponent(e[1])}` : "";
+  };
+  const mmKnopf = (name, cls = "buy buy-zweit") => { const u = mmLink(name); return u ? `<a class="${cls}" href="${esc(u)}" target="_blank" rel="sponsored nofollow noopener">${MM_KNOPF}</a>` : ""; };
   // keinModell (Feld in produkte.js): Im Amazon-Shop dieses Landes ist gerade keins der Modelle lieferbar.
   // Dann zeigt die Seite statt der Modelle eine Hinweiskarte. Die Modelle bleiben in produkte.js stehen,
   // damit der Rechner weiter mit ihren Preisen und Gruppen rechnet. Wird eins lieferbar, kommt keinModell wieder weg.
@@ -122,6 +142,7 @@
   const abPreis = g => Math.min(...g.modelle.map(m => Number(m.preis) || Infinity));
   // Amazon erlaubt keine eigenen Preisangaben neben Amazon-Links, darum nur Preisklassen
   const PREIS_KNOPF = t("Preis bei Amazon ansehen*", "See price on Amazon*");
+  const MM_KNOPF = t("Bei MediaMarkt Schweiz ansehen*", "See at MediaMarkt Switzerland*");
   // Erklärung des Sternchens direkt beim Link (Medienanstalten und Amazon verlangen sie in unmittelbarer Nähe)
   const WERBELINK = `<p class="werbelink">${t("* Werbelink", "* Advertising link")}</p>`;
   function badges(p) {
@@ -1365,6 +1386,7 @@
             <span class="price">${t("Preisklasse", "Price range")}${DOPPELPUNKT} ${esc(empf.stufe)}</span>
             <div class="empf-knoepfe">
               <a class="buy" href="${esc(partnerLink(empf.link))}" target="_blank" rel="sponsored nofollow noopener">${PREIS_KNOPF}</a>
+              ${mmKnopf(empf.name)}
               ${ms.length > 1 ? `<a class="zweit" href="#modelle">${mitGruppen ? t("Alle Modelle", "All models") : t("Alle {n} Preisklassen", "All {n} price ranges", { n: ms.length })}</a>` : ""}
             </div>
             ${WERBELINK}${andereGruppen}
@@ -1577,13 +1599,14 @@
         ${m.hinweis ? `<div class="modell-hinweis"><span class="block-titel">${t("Ehrlich gesagt", "To be honest")}</span><p>${esc(m.hinweis)}</p></div>` : ""}
         <div class="modell-knoepfe">
           <a class="buy${m.empfohlen ? "" : " buy-zweit"}" href="${esc(partnerLink(m.link))}" target="_blank" rel="sponsored nofollow noopener">${PREIS_KNOPF}</a>
+          ${mmKnopf(m.name)}
           ${WERBELINK}
         </div>
         ${alt.length ? `
         <div class="alternativen">
           <span class="alt-titel">${t("Auch gut", "Also good")}</span>
           <ul>${alt.map(a => `
-            <li><a href="${esc(partnerLink(a.link))}" target="_blank" rel="sponsored nofollow noopener">${esc(a.name)}*</a>${a.text ? `<span class="alt-text">${esc(a.text)}</span>` : ""}</li>`).join("")}</ul>
+            <li><a href="${esc(partnerLink(a.link))}" target="_blank" rel="sponsored nofollow noopener">${esc(a.name)}*</a>${mmLink(a.name) ? ` · <a href="${esc(mmLink(a.name))}" target="_blank" rel="sponsored nofollow noopener">${MM_KNOPF}</a>` : ""}${a.text ? `<span class="alt-text">${esc(a.text)}</span>` : ""}</li>`).join("")}</ul>
           ${WERBELINK}
         </div>` : ""}
       </article>`;

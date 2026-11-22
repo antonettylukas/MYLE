@@ -47,6 +47,7 @@ const UI_TEXTE = {
   "weniger als 1 Monat": "meno di 1 mese",
   "Monaten": "mesi",
   "Jahren": "anni",
+  "Bei MediaMarkt Schweiz ansehen*": "Vedi su MediaMarkt Svizzera*",
   "Preis bei Amazon ansehen*": "Vedi il prezzo su Amazon*",
   "Ansehen": "Vedi",
   "Sprache": "Lingua",
