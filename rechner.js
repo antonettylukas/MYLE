@@ -586,7 +586,7 @@ const RECHNER = {
         ] },
       { id: "jetzt", label: "Wie viel lässt dein Duschkopf jetzt durch?", hinweis: "Lass die Dusche 30 Sekunden in einen Eimer laufen und nimm die Liter mal zwei.", min: 9, max: 20, step: 0.5, wert: 12, einheit: "Liter pro Minute" },
       { id: "duschen", label: "Wie oft wird bei euch pro Woche geduscht?", hinweis: "Alle zusammen: Duschen zwei Personen je viermal, sind das 8.", min: 1, max: 35, step: 1, wert: 8, einheit: "× pro Woche" },
-      { id: "minuten", label: "Wie lange läuft das Wasser beim Duschen?", min: 2, max: 20, step: 1, wert: 8, einheit: "Minuten" }
+      { id: "minuten", label: "Wie lange läuft das Wasser beim Duschen?", hinweis: "Typisch sind 5 bis 10 Minuten.", min: 2, max: 15, step: 1, wert: 8, einheit: "Minuten" }
     ],
     berechne(w) {
       const NEU = 8.5;                                  // Liter pro Minute, die drei Modelle liegen im Test bei 8,2 bis 8,8
@@ -612,7 +612,7 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Ich vergleiche deinen jetzigen Duschkopf mit einem Sparduschkopf, der 8,5 Liter pro Minute durchlässt. So viel lassen die drei Modelle hier im Test von Stiftung Warentest durch, 8,2 bis 8,8 Liter. Ältere Duschköpfe lassen oft 10 bis 15 Liter pro Minute durch, ich starte bei 12. Um einen Liter Duschwasser von kalt auf etwa 37 Grad zu bringen, braucht es rund 0,03 kWh. Mit Strom rechne ich mit 37 Cent pro kWh (BDEW, August 2026), über die Heizung mit dem Gaspreis von rund 12 Cent (Statistisches Bundesamt und BDEW, 2026). Wasser und Abwasser kosten zusammen etwa 4 € pro Kubikmeter, also 0,4 Cent pro Liter. Alle Preise gelten für Deutschland, das Ergebnis ist ein grober Wert. Zeit sparst du nicht: Du duschst so lange wie vorher."
+    annahmen: "Ich vergleiche deinen jetzigen Duschkopf mit einem Sparduschkopf, der 8,5 Liter pro Minute durchlässt. So viel lassen die drei Modelle hier im Test von Stiftung Warentest durch, 8,2 bis 8,8 Liter. Ältere Duschköpfe lassen oft 10 bis 15 Liter pro Minute durch, ich starte bei 12. Typisch sind 5 bis 10 Minuten pro Dusche: in einer Civey-Umfrage für t-online (2023) ist das die größte Gruppe, in Berlin sind mehr als zwei Drittel nach höchstens 10 Minuten fertig (Berliner Wasserbetriebe 2023), und in der Schweiz sind es im Schnitt 5,5 Minuten, mit Haarewaschen 7,6 (GFS Zürich 2024). Ich starte bei 8 Minuten. Duschst du länger als 15 Minuten, sparst du entsprechend mehr. Bei den Duschen pro Woche starte ich mit 8: in Deutschland hat ein Haushalt im Schnitt 2 Personen (Statistisches Bundesamt, Mikrozensus 2025), und die meisten duschen nicht jeden Tag (Umfragen von Civey für t-online, vom Link-Institut für Galaxus und von den Berliner Wasserbetrieben, alle 2023). Darum rechne ich vorsichtig mit je vier Duschen. Um einen Liter Duschwasser von kalt auf etwa 37 Grad zu bringen, braucht es rund 0,03 kWh. Mit Strom rechne ich mit 37 Cent pro kWh (BDEW, August 2026), über die Heizung mit dem Gaspreis von rund 12 Cent (Statistisches Bundesamt und BDEW, 2026). Wasser und Abwasser kosten zusammen etwa 4 € pro Kubikmeter, also 0,4 Cent pro Liter. Alle Preise gelten für Deutschland, das Ergebnis ist ein grober Wert. Zeit sparst du nicht: Du duschst so lange wie vorher."
   },
   thermostate: {
     mit: "smarten Heizkörper-Thermostaten",

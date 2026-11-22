@@ -572,7 +572,7 @@ const RECHNER = {
         ] },
       { id: "jetzt", label: "How much does your shower head let through now?", hinweis: "Let the shower run into a bucket for 30 seconds and multiply the litres by two.", min: 9, max: 20, step: 0.5, wert: 12, einheit: "litres per minute" },
       { id: "duschen", label: "How many showers are taken in your home per week?", hinweis: "Everyone together: if two people shower four times each, that's 8.", min: 1, max: 35, step: 1, wert: 8, einheit: "× per week" },
-      { id: "minuten", label: "How long does the water run when showering?", min: 2, max: 20, step: 1, wert: 8, einheit: "minutes" }
+      { id: "minuten", label: "How long does the water run when showering?", hinweis: "Typically 5 to 10 minutes (surveys in Germany and Switzerland).", min: 2, max: 15, step: 1, wert: 8, einheit: "minutes" }
     ],
     berechne(w) {
       const NEU = 8.5;                                  // Liter pro Minute, die drei Modelle liegen im Test bei 8,2 bis 8,8
@@ -598,7 +598,7 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "I compare your current shower head with a water-saving one that lets through 8.5 litres per minute. That's how much the three models here let through in the Stiftung Warentest test, 8.2 to 8.8 litres. Older shower heads often let through 10 to 15 litres per minute; I start at 12. Heating one litre of shower water from cold to about 37 degrees takes around 0.03 kWh. For electricity I calculate with 37 cents per kWh (German Association of Energy and Water Industries BDEW, August 2026), for the heating with the gas price of around 12 cents (Federal Statistical Office and BDEW, 2026). Water and sewage together cost about €4 per cubic metre, so 0.4 cents per litre. All prices apply to Germany; the result is a rough figure. You don't save time: you shower as long as before."
+    annahmen: "I compare your current shower head with a water-saving one that lets through 8.5 litres per minute. That's how much the three models here let through in the Stiftung Warentest test, 8.2 to 8.8 litres. Older shower heads often let through 10 to 15 litres per minute; I start at 12. A typical shower lasts 5 to 10 minutes: in a Civey survey for t-online (Germany, 2023) that is the largest group, in Berlin more than two thirds are done within 10 minutes (Berliner Wasserbetriebe, Berlin's water utility, 2023), and in Switzerland the average is 5.5 minutes, 7.6 with hair washing (GFS Zürich, 2024). I start at 8 minutes. If you shower for longer than 15 minutes, you save correspondingly more. For showers per week I start at 8: in Germany a household has 2 people on average (Federal Statistical Office, microcensus 2025), and most people do not shower every day (surveys by Civey for t-online, by the Link Institute for Galaxus and by Berliner Wasserbetriebe, all 2023). So I cautiously assume four showers each. Heating one litre of shower water from cold to about 37 degrees takes around 0.03 kWh. For electricity I calculate with 37 cents per kWh (German Association of Energy and Water Industries BDEW, August 2026), for the heating with the gas price of around 12 cents (Federal Statistical Office and BDEW, 2026). Water and sewage together cost about €4 per cubic metre, so 0.4 cents per litre. All prices apply to Germany; the result is a rough figure. You don't save time: you shower as long as before."
   },
   thermostate: {
     mit: "smart radiator thermostats",
