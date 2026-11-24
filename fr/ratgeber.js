@@ -564,9 +564,9 @@ const RATGEBER = [
       }
     ],
     verweis: {
-      text: "Quels robots aspirateurs laveurs je recommande et combien de temps vous gagnez avec vos propres chiffres, vous le voyez sur ma page sur le robot aspirateur laveur. Mes conseils pour le bon aspirateur balai sont sur ma page sur l’aspirateur balai sans fil.",
+      text: "Quels robots aspirateurs laveurs je recommande et combien de temps vous gagnez avec vos propres chiffres, vous le voyez sur ma page sur le robot aspirateur laveur. Mes conseils pour le bon aspirateur balai sont sur ma page sur l’aspirateur balai sans fil. Pour la salle de bains et les joints, il y a ma page sur la brosse de nettoyage électrique.",
       knopf: "Vers le robot aspirateur laveur avec calculateur",
-      weitere: [{ knopf: "Vers l’aspirateur balai sans fil", link: "akkusauger" }]
+      weitere: [{ knopf: "Vers l’aspirateur balai sans fil", link: "akkusauger" }, { knopf: "Vers la brosse de nettoyage électrique", link: "reinigungsbuerste" }]
     },
     wannNichtTitel: "Quand un robot aspirateur laveur ne vous convient pas",
     wannNicht: [

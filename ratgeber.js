@@ -644,9 +644,9 @@ const RATGEBER = [
       }
     ],
     verweis: {
-      text: "Welche Saug- und Wischroboter ich empfehle und wie viel Zeit du mit deinen eigenen Zahlen sparst, siehst du auf meiner Seite zum Saug- und Wischroboter. Meine Tipps für den passenden Akku-Staubsauger stehen auf meiner Seite zum Akku-Staubsauger.",
+      text: "Welche Saug- und Wischroboter ich empfehle und wie viel Zeit du mit deinen eigenen Zahlen sparst, siehst du auf meiner Seite zum Saug- und Wischroboter. Meine Tipps für den passenden Akku-Staubsauger stehen auf meiner Seite zum Akku-Staubsauger. Fürs Bad und die Fugen gibt es meine Seite zur elektrischen Reinigungsbürste.",
       knopf: "Zum Saug- und Wischroboter mit Rechner",
-      weitere: [{ knopf: "Zum Akku-Staubsauger", link: "akkusauger" }]
+      weitere: [{ knopf: "Zum Akku-Staubsauger", link: "akkusauger" }, { knopf: "Zur elektrischen Reinigungsbürste", link: "reinigungsbuerste" }]
     },
     wannNichtTitel: "Wann eher kein Saug- und Wischroboter",
     wannNicht: [

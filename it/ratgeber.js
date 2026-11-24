@@ -564,9 +564,9 @@ const RATGEBER = [
       }
     ],
     verweis: {
-      text: "Quali robot aspirapolvere lavapavimenti consiglio e quanto tempo risparmi con i tuoi numeri lo vedi nella mia pagina sul robot aspirapolvere lavapavimenti. I miei consigli per l’aspirapolvere senza fili giusto sono nella mia pagina sull’aspirapolvere senza fili.",
+      text: "Quali robot aspirapolvere lavapavimenti consiglio e quanto tempo risparmi con i tuoi numeri lo vedi nella mia pagina sul robot aspirapolvere lavapavimenti. I miei consigli per l’aspirapolvere senza fili giusto sono nella mia pagina sull’aspirapolvere senza fili. Per il bagno e le fughe c’è la mia pagina sulla spazzola elettrica per la pulizia.",
       knopf: "Al robot aspirapolvere lavapavimenti con calcolatore",
-      weitere: [{ knopf: "All’aspirapolvere senza fili", link: "akkusauger" }]
+      weitere: [{ knopf: "All’aspirapolvere senza fili", link: "akkusauger" }, { knopf: "Alla spazzola elettrica per la pulizia", link: "reinigungsbuerste" }]
     },
     wannNichtTitel: "Quando un robot aspirapolvere lavapavimenti non fa per te",
     wannNicht: [

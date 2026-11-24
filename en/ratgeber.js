@@ -564,9 +564,9 @@ const RATGEBER = [
       }
     ],
     verweis: {
-      text: "Which robot vacuums and mops I recommend and how much time you save with your own numbers, you'll see on my robot vacuum and mop page. My tips for the right cordless vacuum are on my cordless vacuum page.",
+      text: "Which robot vacuums and mops I recommend and how much time you save with your own numbers, you'll see on my robot vacuum and mop page. My tips for the right cordless vacuum are on my cordless vacuum page. For the bathroom and grout, there is my electric cleaning brush page.",
       knopf: "To the robot vacuum and mop with calculator",
-      weitere: [{ knopf: "To the cordless vacuum", link: "akkusauger" }]
+      weitere: [{ knopf: "To the cordless vacuum", link: "akkusauger" }, { knopf: "To the electric cleaning brush", link: "reinigungsbuerste" }]
     },
     wannNichtTitel: "When a robot vacuum and mop is not the right choice",
     wannNicht: [
