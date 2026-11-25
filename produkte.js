@@ -1926,6 +1926,11 @@ const PRODUKTE = [
       "Verschmutzte Fugen und hartnäckige Flecken schafft sie nur mit einem kräftigen Reiniger",
       "Drückst du zu fest, wird sie langsamer oder schaltet ab"
     ],
+    erfahrung: {
+      titel: "Meine Erfahrung",
+      bild: "", bildText: "Foto: deine Reinigungsbürste",
+      text: "Seit ich die Bürste benutze, dauert das Badputzen nur noch halb so lang, und ins Schwitzen komme ich dabei gar nicht mehr."
+    },
     modelle: [
       {
         stufe: "Mittelklasse", spanne: "25 bis 40 €",

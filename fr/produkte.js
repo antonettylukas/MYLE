@@ -1667,6 +1667,11 @@ const PRODUKTE = [
       "Les joints encrassés et les taches tenaces, elle n’en vient à bout qu’avec un produit puissant",
       "Si vous appuyez trop fort, elle ralentit ou s’arrête"
     ],
+    erfahrung: {
+      titel: "Mon expérience",
+      bild: "", bildText: "Photo : votre brosse de nettoyage",
+      text: "Depuis que j’utilise la brosse, le nettoyage de la salle de bain prend deux fois moins de temps, et je ne transpire plus du tout."
+    },
     modelle: [
       {
         stufe: "Milieu de gamme", spanne: "de 25 à 40\u00a0€",
