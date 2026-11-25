@@ -66,7 +66,7 @@ const RECHNER = {
           { wert: "fritteuse", label: "Friteuse" }
         ] },
       { id: "anzahl", label: "Combien de fois cuisineriez-vous avec\u202f?", min: 1, max: 14, step: 1, wert: 4, einheit: "× par semaine" },
-      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." }
+      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.20, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." }
     ],
     berechne(w) {
       const PROFILE = {
@@ -203,7 +203,7 @@ const RECHNER = {
     felder: [
       { id: "ladungen", label: "Combien de fois faites-vous une lessive par semaine\u202f?", min: 1, max: 10, step: 1, wert: 3, einheit: "× par semaine", schnitt: [2, 3, 3.5, 4] },
       { id: "buegeln", label: "Combien de vêtements repassez-vous par semaine\u202f?", min: 0, max: 20, step: 1, wert: 4, einheit: "vêtements" },
-      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." }
+      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.20, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." }
     ],
     berechne(w) {
       const stromMonat = ((w.ladungen * 52) / 12) * 2.2 * w.strom;
@@ -515,7 +515,7 @@ const RECHNER = {
           { wert: "ostwest", label: "Vers l’est ou l’ouest" }
         ] },
       { id: "verbrauch", label: "Combien d’électricité consommez-vous par an ?", hinweis: "C’est indiqué sur votre facture d’électricité.", min: 800, max: 6000, step: 100, wert: 1900, einheit: "kWh par an", schnitt: [1200, 1900, 2400, 2600], schnittHinweis: "Les chiffres sur le curseur indiquent la moyenne d’un logement de 1, 2, 3 et 4 personnes (Stromspiegel allemand 2025, sans eau chaude électrique)." },
-      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." },
+      { id: "strom", label: "Votre prix de l’électricité", min: 0.15, max: 0.6, step: 0.01, wert: 0.20, einheit: "€ par kWh", schnitt: STROM_LAENDER, schnittHinweis: "Les lettres sur le curseur indiquent le prix moyen de l’électricité en France (FR), en Belgique (BE) et en Suisse (CH)." },
       { id: "speicher", label: "Combien coûte votre batterie ?", hinweis: "Le prix actuel est indiqué sur Amazon. Ajoutez une tête de lecture pour le compteur électrique si aucune n’est fournie.", min: 300, max: 1500, step: 10, wert: 450, einheit: "€" }
     ],
     berechne(w) {
@@ -548,7 +548,7 @@ const RECHNER = {
         vorher: [
           "Vous achetez chaque kilowattheure à votre fournisseur",
           "Réfrigérateur, box et veille tournent toute la journée sur votre facture",
-          `Environ ${runde(w.verbrauch * w.strom)} € d’électricité par an (calculé avec ${w.verbrauch.toLocaleString("fr-FR")} kWh à ${String(w.strom).replace(".", ",")} € le kWh)`
+          `Environ ${runde(w.verbrauch * w.strom)} € d’électricité par an (calculé avec ${w.verbrauch.toLocaleString("fr-FR")} kWh à ${w.strom.toFixed(2).replace(".", ",")} € le kWh)`
         ],
         nachher: mitSpeicher ? [
           "En journée, l’électricité solaire arrive chez vous par la prise",
@@ -607,7 +607,7 @@ const RECHNER = {
     preisHinweis: "Le prix actuel est indiqué sur Amazon. Je le multiplie par le nombre de vos radiateurs.",
     kaufpreis: w => w.preis * w.heizkoerper + w.zentrale,
     felder: [
-      { id: "heizkosten", label: "Combien payez-vous par an pour le chauffage\u202f?", hinweis: "C’est indiqué sur votre décompte de chauffage.", min: 200, max: 3000, step: 50, wert: 900, einheit: "€ par an", schnitt: [1250, 1750, 1950, 2200] },
+      { id: "heizkosten", label: "Combien payez-vous par an pour le chauffage\u202f?", hinweis: "C’est indiqué sur votre décompte de chauffage.", min: 200, max: 3000, step: 50, wert: 1150, einheit: "€ par an", schnitt: [1250, 1750, 1950, 2200] },
       { id: "bisher", label: "Comment chauffez-vous aujourd’hui\u202f?", typ: "auswahl", wert: "manchmal",
         optionen: [
           { wert: "durch", label: "Il tourne presque toujours" },
@@ -658,6 +658,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Avec un planning de chauffage, vous économisez en moyenne environ 10\u00a0% de frais de chauffage (co2online, Agence fédérale de l’environnement). Si votre chauffage tourne presque toujours, je compte 12\u00a0%\u202f; si vous baissez parfois vous-même, 8\u00a0%\u202f; et si vous baissez toujours, 4\u00a0%. À titre de comparaison\u202f: chaque degré en moins économise environ 6\u00a0% d’énergie de chauffage. Les piles coûtent environ 1\u00a0€ par tête thermostatique et par an, je le déduis. Baisser puis remonter un radiateur à la main prend environ 15 secondes, deux fois par jour. Ce temps, vous l’économisez si vous tournez vous-même aujourd’hui. Les chiffres sous le curseur des frais de chauffage\u202f: la surface moyenne d’un logement en Allemagne (Office fédéral de la statistique, microrecensement 2022), multipliée par le coût d’un chauffage au gaz selon le Heizspiegel 2026 de co2online (année de décompte 2025), environ 17\u00a0€ par m² et par an. Cela fait environ 1\u202f250\u00a0€ pour 1 personne, 1\u202f750\u00a0€ pour 2, 1\u202f950\u00a0€ pour 3 et 2\u202f200\u00a0€ pour 4 personnes ou plus. Avec une pompe à chaleur, c’est nettement moins, avec un chauffage urbain un peu plus. Pour les têtes avec centrale, son prix s’ajoute une fois. Avec un chauffage central dans un immeuble, seule une partie des frais est répartie selon la consommation : 50 à 70 % en Allemagne, au moins 55 % en Autriche et le plus souvent 50 à 70 % en Suisse. Si vous choisissez « Chauffage central avec décompte », je ne compte donc que 60 % de l’économie."
+    annahmen: "Avec un planning de chauffage, vous économisez en moyenne environ 10\u00a0% de frais de chauffage (co2online, Agence fédérale de l’environnement). Si votre chauffage tourne presque toujours, je compte 12\u00a0%\u202f; si vous baissez parfois vous-même, 8\u00a0%\u202f; et si vous baissez toujours, 4\u00a0%. À titre de comparaison\u202f: chaque degré en moins économise environ 6\u00a0% d’énergie de chauffage. Les piles coûtent environ 1\u00a0€ par tête thermostatique et par an, je le déduis. Baisser puis remonter un radiateur à la main prend environ 15 secondes, deux fois par jour. Ce temps, vous l’économisez si vous tournez vous-même aujourd’hui. Les chiffres sous le curseur des frais de chauffage\u202f: la surface moyenne d’un logement en Allemagne (Office fédéral de la statistique, microrecensement 2022), multipliée par le coût d’un chauffage au gaz selon le Heizspiegel 2026 de co2online (année de décompte 2025), environ 17\u00a0€ par m² et par an. Cela fait environ 1\u202f250\u00a0€ pour 1 personne, 1\u202f750\u00a0€ pour 2, 1\u202f950\u00a0€ pour 3 et 2\u202f200\u00a0€ pour 4 personnes ou plus. Je pars de 1\u202f150\u00a0€\u202f: en Allemagne, un appartement de 70\u00a0m² dans un immeuble chauffé au gaz naturel a coûté environ 1\u202f170\u00a0€ pour l’année de décompte 2025 selon le Heizspiegel 2026, et co2online prévoit 1\u202f120\u00a0€ pour 2026. Avec une pompe à chaleur, c’est nettement moins, avec un chauffage urbain un peu plus. Pour les têtes avec centrale, son prix s’ajoute une fois. Avec un chauffage central dans un immeuble, seule une partie des frais est répartie selon la consommation : 50 à 70 % en Allemagne, au moins 55 % en Autriche et le plus souvent 50 à 70 % en Suisse. Si vous choisissez « Chauffage central avec décompte », je ne compte donc que 60 % de l’économie."
   }
 };

@@ -79,7 +79,7 @@ const RECHNER = {
           { wert: "fritteuse", label: "Fritteuse" }
         ] },
       { id: "anzahl", label: "Wie oft würdest du damit kochen?", min: 1, max: 14, step: 1, wert: 4, einheit: "× pro Woche" },
-      { id: "strom", label: "Dein Strompreis", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ pro kWh", schnitt: STROM_LAENDER, schnittHinweis: "Die Kürzel am Regler zeigen den durchschnittlichen Strompreis in Deutschland (DE), Österreich (AT) und der Schweiz (CH)." }
+      { id: "strom", label: "Dein Strompreis", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ pro kWh", schnitt: STROM_LAENDER, schnittHinweis: "Die Kürzel am Regler zeigen den durchschnittlichen Strompreis in Deutschland (DE), Österreich (AT) und der Schweiz (CH)." }
     ],
     berechne(w) {
       const PROFILE = {
@@ -216,7 +216,7 @@ const RECHNER = {
     felder: [
       { id: "ladungen", label: "Wie oft wäschst du pro Woche?", min: 1, max: 10, step: 1, wert: 3, einheit: "× pro Woche", schnitt: [2, 3, 3.5, 4] },
       { id: "buegeln", label: "Wie viele Teile bügelst du pro Woche?", min: 0, max: 20, step: 1, wert: 4, einheit: "Teile" },
-      { id: "strom", label: "Dein Strompreis", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ pro kWh", schnitt: STROM_LAENDER, schnittHinweis: "Die Kürzel am Regler zeigen den durchschnittlichen Strompreis in Deutschland (DE), Österreich (AT) und der Schweiz (CH)." }
+      { id: "strom", label: "Dein Strompreis", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ pro kWh", schnitt: STROM_LAENDER, schnittHinweis: "Die Kürzel am Regler zeigen den durchschnittlichen Strompreis in Deutschland (DE), Österreich (AT) und der Schweiz (CH)." }
     ],
     berechne(w) {
       const stromMonat = ((w.ladungen * 52) / 12) * 2.2 * w.strom;
@@ -561,7 +561,7 @@ const RECHNER = {
         vorher: [
           "Jede Kilowattstunde kaufst du beim Stromanbieter",
           "Kühlschrank, Router und Standby laufen den ganzen Tag auf deine Rechnung",
-          `Rund ${runde(w.verbrauch * w.strom)} € Strom im Jahr (gerechnet mit ${w.verbrauch.toLocaleString("de-DE")} kWh und ${String(w.strom).replace(".", ",")} € pro kWh)`
+          `Rund ${runde(w.verbrauch * w.strom)} € Strom im Jahr (gerechnet mit ${w.verbrauch.toLocaleString("de-DE")} kWh und ${w.strom.toFixed(2).replace(".", ",")} € pro kWh)`
         ],
         nachher: mitSpeicher ? [
           "Tagsüber fließt Solarstrom über die Steckdose in deine Wohnung",
@@ -620,7 +620,7 @@ const RECHNER = {
     preisHinweis: "Den aktuellen Preis siehst du bei Amazon. Ich rechne ihn mal die Zahl deiner Heizkörper.",
     kaufpreis: w => w.preis * w.heizkoerper + w.zentrale,
     felder: [
-      { id: "heizkosten", label: "Was zahlst du im Jahr fürs Heizen?", hinweis: "Steht auf deiner Heizkostenabrechnung.", min: 200, max: 3000, step: 50, wert: 900, einheit: "€ pro Jahr", schnitt: [1250, 1750, 1950, 2200] },
+      { id: "heizkosten", label: "Was zahlst du im Jahr fürs Heizen?", hinweis: "Steht auf deiner Heizkostenabrechnung.", min: 200, max: 3000, step: 50, wert: 1150, einheit: "€ pro Jahr", schnitt: [1250, 1750, 1950, 2200] },
       { id: "bisher", label: "Wie heizt du bisher?", typ: "auswahl", wert: "manchmal",
         optionen: [
           { wert: "durch", label: "Läuft meist durch" },
@@ -671,6 +671,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Mit einem Heizplan sparst du im Schnitt etwa 10 % Heizkosten (co2online, Umweltbundesamt). Läuft deine Heizung bisher meist durch, rechne ich mit 12 %, drehst du manchmal selbst runter mit 8 % und immer mit 4 %. Zum Vergleich: Jedes Grad weniger spart rund 6 % Heizenergie. Batterien kosten etwa 1 € pro Thermostat und Jahr, das ziehe ich ab. Einen Heizkörper von Hand runter- und wieder hochdrehen dauert etwa 15 Sekunden, zweimal am Tag. Diese Zeit sparst du, wenn du bisher selbst drehst. Die Zahlen unter dem Regler für die Heizkosten: So groß ist eine Wohnung im Schnitt (Statistisches Bundesamt, Mikrozensus 2022), mal die Kosten einer Gasheizung laut Heizspiegel 2026 von co2online (Abrechnungsjahr 2025), rund 17 € pro m² im Jahr. Das sind etwa 1.250 € bei 1 Person, 1.750 € bei 2, 1.950 € bei 3 und 2.200 € bei 4 oder mehr Personen. Mit Wärmepumpe ist es deutlich weniger, mit Fernwärme etwas mehr. Bei Thermostaten mit Zentrale kommt ihr Preis einmal dazu. Bei einer Zentralheizung im Mehrfamilienhaus wird nur ein Teil der Kosten nach Verbrauch verteilt, in Deutschland 50 bis 70 %, in Österreich mindestens 55 % und in der Schweiz meist 50 bis 70 %. Wählst du „Zentralheizung mit Abrechnung“, rechne ich darum nur mit 60 % der Ersparnis."
+    annahmen: "Mit einem Heizplan sparst du im Schnitt etwa 10 % Heizkosten (co2online, Umweltbundesamt). Läuft deine Heizung bisher meist durch, rechne ich mit 12 %, drehst du manchmal selbst runter mit 8 % und immer mit 4 %. Zum Vergleich: Jedes Grad weniger spart rund 6 % Heizenergie. Batterien kosten etwa 1 € pro Thermostat und Jahr, das ziehe ich ab. Einen Heizkörper von Hand runter- und wieder hochdrehen dauert etwa 15 Sekunden, zweimal am Tag. Diese Zeit sparst du, wenn du bisher selbst drehst. Die Zahlen unter dem Regler für die Heizkosten: So groß ist eine Wohnung im Schnitt (Statistisches Bundesamt, Mikrozensus 2022), mal die Kosten einer Gasheizung laut Heizspiegel 2026 von co2online (Abrechnungsjahr 2025), rund 17 € pro m² im Jahr. Das sind etwa 1.250 € bei 1 Person, 1.750 € bei 2, 1.950 € bei 3 und 2.200 € bei 4 oder mehr Personen. Ich starte bei 1.150 €: eine 70 m² große Wohnung im Mehrfamilienhaus mit Erdgas kostete laut Heizspiegel 2026 im Abrechnungsjahr 2025 rund 1.170 €, für 2026 erwartet co2online 1.120 €. Mit Wärmepumpe ist es deutlich weniger, mit Fernwärme etwas mehr. Bei Thermostaten mit Zentrale kommt ihr Preis einmal dazu. Bei einer Zentralheizung im Mehrfamilienhaus wird nur ein Teil der Kosten nach Verbrauch verteilt, in Deutschland 50 bis 70 %, in Österreich mindestens 55 % und in der Schweiz meist 50 bis 70 %. Wählst du „Zentralheizung mit Abrechnung“, rechne ich darum nur mit 60 % der Ersparnis."
   }
 };

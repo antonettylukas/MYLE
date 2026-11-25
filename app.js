@@ -112,7 +112,7 @@
   const MM_CH = [
     ["dreame x60 pro ultra", "https://www.mediamarkt.ch/de/product/_dreame-x60-pro-ultra-complete-saug-und-wischroboter-2291234.html"],
     ["philips dual basket 3000", "https://www.mediamarkt.ch/de/product/_philips-na35209-fritteuse-2750-w-kohlegraukupfer-2267929.html"],
-    ["magnifica evo next", "https://www.mediamarkt.ch/it/product/_de-longhi-magnifica-evo-next-kaffeevollautomat-silberschwarz-2265149.html"],
+    ["magnifica evo next", "https://www.mediamarkt.ch/de/product/_de-longhi-magnifica-evo-next-kaffeevollautomat-silberschwarz-2265149.html"],
     ["rivelia", "https://www.mediamarkt.ch/de/product/_de-longhi-exam440-55-b-rivelia-milk-2215773.html"],
     ["crystal 3.0", "https://www.mediamarkt.ch/de/product/_sodastream-crystal-cqc-2171360.html"],
     ["sonicare 5500", "https://www.mediamarkt.ch/de/product/_philips-sonicare-hx711902-sonicare-5500-elektrische-schallzahnburste-weissschwarz-reinigungstechnologie-schalltechnologie-2275650.html"],

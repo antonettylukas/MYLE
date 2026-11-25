@@ -65,7 +65,7 @@ const RECHNER = {
           { wert: "fritteuse", label: "Friggitrice" }
         ] },
       { id: "anzahl", label: "Quante volte cucineresti con lei?", min: 1, max: 14, step: 1, wert: 4, einheit: "× a settimana" },
-      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." }
+      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.43, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." }
     ],
     berechne(w) {
       const PROFILE = {
@@ -202,7 +202,7 @@ const RECHNER = {
     felder: [
       { id: "ladungen", label: "Quante lavatrici fai a settimana?", min: 1, max: 10, step: 1, wert: 3, einheit: "× a settimana", schnitt: [2, 3, 3.5, 4] },
       { id: "buegeln", label: "Quanti capi stiri a settimana?", min: 0, max: 20, step: 1, wert: 4, einheit: "capi" },
-      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." }
+      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.43, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." }
     ],
     berechne(w) {
       const stromMonat = ((w.ladungen * 52) / 12) * 2.2 * w.strom;
@@ -514,7 +514,7 @@ const RECHNER = {
           { wert: "ostwest", label: "Verso est o ovest" }
         ] },
       { id: "verbrauch", label: "Quanta corrente consumate all’anno?", hinweis: "È scritto sulla bolletta della luce.", min: 800, max: 6000, step: 100, wert: 1900, einheit: "kWh all’anno", schnitt: [1200, 1900, 2400, 2600], schnittHinweis: "I numeri sul cursore mostrano la media di un appartamento con 1, 2, 3 e 4 persone (Stromspiegel tedesco 2025, senza acqua calda elettrica)." },
-      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." },
+      { id: "strom", label: "Il tuo prezzo della corrente", min: 0.2, max: 0.6, step: 0.01, wert: 0.43, einheit: "€ al kWh", schnitt: STROM_LAENDER, schnittHinweis: "Le sigle sul cursore mostrano il prezzo medio della corrente in Italia (IT) e in Svizzera (CH)." },
       { id: "speicher", label: "Quanto costa la tua batteria?", hinweis: "Il prezzo attuale lo vedi su Amazon. Aggiungi una testina di lettura per il contatore, se non è inclusa.", min: 300, max: 1500, step: 10, wert: 450, einheit: "€" }
     ],
     berechne(w) {
@@ -547,7 +547,7 @@ const RECHNER = {
         vorher: [
           "Ogni kilowattora lo compri dal fornitore",
           "Frigorifero, router e standby vanno tutto il giorno in bolletta",
-          `Circa ${runde(w.verbrauch * w.strom)} € di corrente all’anno (calcolato con ${w.verbrauch.toLocaleString("it-IT")} kWh a ${String(w.strom).replace(".", ",")} € al kWh)`
+          `Circa ${runde(w.verbrauch * w.strom)} € di corrente all’anno (calcolato con ${w.verbrauch.toLocaleString("it-IT")} kWh a ${w.strom.toFixed(2).replace(".", ",")} € al kWh)`
         ],
         nachher: mitSpeicher ? [
           "Di giorno la corrente solare arriva in casa dalla presa",
@@ -606,7 +606,7 @@ const RECHNER = {
     preisHinweis: "Il prezzo attuale lo vedi su Amazon. Lo moltiplico per il numero dei tuoi termosifoni.",
     kaufpreis: w => w.preis * w.heizkoerper + w.zentrale,
     felder: [
-      { id: "heizkosten", label: "Quanto paghi all’anno per il riscaldamento?", hinweis: "È scritto nel tuo conteggio delle spese di riscaldamento.", min: 200, max: 3000, step: 50, wert: 900, einheit: "€ all’anno", schnitt: [1250, 1750, 1950, 2200] },
+      { id: "heizkosten", label: "Quanto paghi all’anno per il riscaldamento?", hinweis: "È scritto nel tuo conteggio delle spese di riscaldamento.", min: 200, max: 3000, step: 50, wert: 1150, einheit: "€ all’anno", schnitt: [1250, 1750, 1950, 2200] },
       { id: "bisher", label: "Come scaldi adesso?", typ: "auswahl", wert: "manchmal",
         optionen: [
           { wert: "durch", label: "Resta quasi sempre acceso" },
@@ -657,6 +657,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "Con un programma di riscaldamento risparmi in media circa il 10% delle spese di riscaldamento (co2online, Agenzia federale per l’ambiente). Se il tuo riscaldamento finora resta quasi sempre acceso, calcolo il 12%; se a volte lo abbassi da solo, l’8%; e se lo abbassi sempre, il 4%. Per confronto: ogni grado in meno fa risparmiare circa il 6% di energia. Le batterie costano circa 1\u00a0€ per valvola all’anno, e lo tolgo. Abbassare e rialzare a mano un termosifone richiede circa 15 secondi, due volte al giorno. Questo tempo lo risparmi se finora giri tu le manopole. I numeri sotto il cursore delle spese di riscaldamento: quanto è grande in media un appartamento in Germania (Ufficio federale di statistica, microcensimento 2022), moltiplicato per il costo di un riscaldamento a gas secondo l’Heizspiegel 2026 di co2online (anno di conteggio 2025), circa 17\u00a0€ per m² all’anno. Sono circa 1.250\u00a0€ per 1 persona, 1.750\u00a0€ per 2, 1.950\u00a0€ per 3 e 2.200\u00a0€ per 4 o più persone. Con una pompa di calore è molto meno, con il teleriscaldamento un po’ di più. Per le valvole con centralina, il suo prezzo si aggiunge una volta. Con un riscaldamento centralizzato in un condominio solo una parte dei costi viene ripartita in base al consumo: dal 50 al 70% in Germania, almeno il 55% in Austria e di solito dal 50 al 70% in Svizzera. Se scegli „Centralizzato con conteggio“, conto quindi solo il 60% del risparmio."
+    annahmen: "Con un programma di riscaldamento risparmi in media circa il 10% delle spese di riscaldamento (co2online, Agenzia federale per l’ambiente). Se il tuo riscaldamento finora resta quasi sempre acceso, calcolo il 12%; se a volte lo abbassi da solo, l’8%; e se lo abbassi sempre, il 4%. Per confronto: ogni grado in meno fa risparmiare circa il 6% di energia. Le batterie costano circa 1\u00a0€ per valvola all’anno, e lo tolgo. Abbassare e rialzare a mano un termosifone richiede circa 15 secondi, due volte al giorno. Questo tempo lo risparmi se finora giri tu le manopole. I numeri sotto il cursore delle spese di riscaldamento: quanto è grande in media un appartamento in Germania (Ufficio federale di statistica, microcensimento 2022), moltiplicato per il costo di un riscaldamento a gas secondo l’Heizspiegel 2026 di co2online (anno di conteggio 2025), circa 17\u00a0€ per m² all’anno. Sono circa 1.250\u00a0€ per 1 persona, 1.750\u00a0€ per 2, 1.950\u00a0€ per 3 e 2.200\u00a0€ per 4 o più persone. Parto da 1.150\u00a0€: in Germania un appartamento di 70\u00a0m² in un condominio riscaldato a metano è costato circa 1.170\u00a0€ nell’anno di conteggio 2025 secondo l’Heizspiegel 2026, e co2online prevede 1.120\u00a0€ per il 2026. Con una pompa di calore è molto meno, con il teleriscaldamento un po’ di più. Per le valvole con centralina, il suo prezzo si aggiunge una volta. Con un riscaldamento centralizzato in un condominio solo una parte dei costi viene ripartita in base al consumo: dal 50 al 70% in Germania, almeno il 55% in Austria e di solito dal 50 al 70% in Svizzera. Se scegli „Centralizzato con conteggio“, conto quindi solo il 60% del risparmio."
   }
 };

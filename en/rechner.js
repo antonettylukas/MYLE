@@ -65,7 +65,7 @@ const RECHNER = {
           { wert: "fritteuse", label: "Deep fryer" }
         ] },
       { id: "anzahl", label: "How often would you cook with it?", min: 1, max: 14, step: 1, wert: 4, einheit: "× per week" },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.31, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
     ],
     berechne(w) {
       const PROFILE = {
@@ -202,7 +202,7 @@ const RECHNER = {
     felder: [
       { id: "ladungen", label: "How often do you do the washing per week?", min: 1, max: 10, step: 1, wert: 3, einheit: "× per week", schnitt: [2, 3, 3.5, 4] },
       { id: "buegeln", label: "How many items do you iron per week?", min: 0, max: 20, step: 1, wert: 4, einheit: "items" },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.35, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.31, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." }
     ],
     berechne(w) {
       const stromMonat = ((w.ladungen * 52) / 12) * 2.2 * w.strom;
@@ -514,7 +514,7 @@ const RECHNER = {
           { wert: "ostwest", label: "East or west" }
         ] },
       { id: "verbrauch", label: "How much electricity do you use per year?", hinweis: "It is on your electricity bill.", min: 800, max: 6000, step: 100, wert: 1900, einheit: "kWh per year", schnitt: [1200, 1900, 2400, 2600], schnittHinweis: "The numbers on the slider show the average for a flat with 1, 2, 3 and 4 people (German Stromspiegel 2025, without hot water from electricity)." },
-      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.37, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." },
+      { id: "strom", label: "Your electricity price", min: 0.2, max: 0.6, step: 0.01, wert: 0.31, einheit: "€ per kWh", schnitt: STROM_LAENDER, schnittHinweis: "The letters on the slider show the average electricity price in Great Britain (GB) and Ireland (IE)." },
       { id: "speicher", label: "How much does your battery cost?", hinweis: "You can see the current price on Amazon. Add a reading head for the electricity meter if none is included.", min: 300, max: 1500, step: 10, wert: 450, einheit: "€" }
     ],
     berechne(w) {
@@ -547,7 +547,7 @@ const RECHNER = {
         vorher: [
           "You buy every kilowatt hour from your electricity supplier",
           "Fridge, router and standby run all day on your bill",
-          `About €${runde(w.verbrauch * w.strom)} of electricity a year (based on ${w.verbrauch.toLocaleString("en-US")} kWh at €${String(w.strom)} per kWh)`
+          `About €${runde(w.verbrauch * w.strom)} of electricity a year (based on ${w.verbrauch.toLocaleString("en-US")} kWh at €${w.strom.toFixed(2)} per kWh)`
         ],
         nachher: mitSpeicher ? [
           "During the day, solar power flows through the socket into your home",
@@ -606,7 +606,7 @@ const RECHNER = {
     preisHinweis: "You can see the current price on Amazon. I multiply it by the number of your radiators.",
     kaufpreis: w => w.preis * w.heizkoerper + w.zentrale,
     felder: [
-      { id: "heizkosten", label: "What do you pay for heating per year?", hinweis: "It's on your heating bill.", min: 200, max: 3000, step: 50, wert: 900, einheit: "€ per year", schnitt: [1250, 1750, 1950, 2200] },
+      { id: "heizkosten", label: "What do you pay for heating per year?", hinweis: "It's on your heating bill.", min: 200, max: 3000, step: 50, wert: 1150, einheit: "€ per year", schnitt: [1250, 1750, 1950, 2200] },
       { id: "bisher", label: "How do you heat now?", typ: "auswahl", wert: "manchmal",
         optionen: [
           { wert: "durch", label: "Mostly left on" },
@@ -657,6 +657,6 @@ const RECHNER = {
         ]
       };
     },
-    annahmen: "With a heating plan you save about 10% of your heating costs on average (co2online, German Environment Agency). If your heating has mostly been left on, I calculate with 12%; if you sometimes turn it down yourself, 8%; and if you always do, 4%. For comparison: every degree less saves around 6% of heating energy. Batteries cost about €1 per thermostat per year, and I subtract that. Turning a radiator down and back up by hand takes about 15 seconds, twice a day. You save that time if you turn them yourself now. The numbers under the slider for heating costs: the average size of a home in Germany (Federal Statistical Office, Microcensus 2022), multiplied by the cost of gas heating according to co2online's Heizspiegel 2026 (billing year 2025), around €17 per m² a year. That's about €1,250 for 1 person, €1,750 for 2, €1,950 for 3 and €2,200 for 4 or more people. With a heat pump it's much less, with district heating a bit more. For thermostats with a hub, its price is added once. With central heating in a block of flats, only part of the costs is split by consumption: 50 to 70% in Germany, at least 55% in Austria and usually 50 to 70% in Switzerland. If you choose “Central heating with a heating bill”, I therefore only count 60% of the saving."
+    annahmen: "With a heating plan you save about 10% of your heating costs on average (co2online, German Environment Agency). If your heating has mostly been left on, I calculate with 12%; if you sometimes turn it down yourself, 8%; and if you always do, 4%. For comparison: every degree less saves around 6% of heating energy. Batteries cost about €1 per thermostat per year, and I subtract that. Turning a radiator down and back up by hand takes about 15 seconds, twice a day. You save that time if you turn them yourself now. The numbers under the slider for heating costs: the average size of a home in Germany (Federal Statistical Office, Microcensus 2022), multiplied by the cost of gas heating according to co2online's Heizspiegel 2026 (billing year 2025), around €17 per m² a year. That's about €1,250 for 1 person, €1,750 for 2, €1,950 for 3 and €2,200 for 4 or more people. I start at €1,150: in Germany, a 70 m² flat in an apartment building heated with natural gas cost around €1,170 in billing year 2025 according to the Heizspiegel 2026, and co2online expects €1,120 for 2026. With a heat pump it's much less, with district heating a bit more. For thermostats with a hub, its price is added once. With central heating in a block of flats, only part of the costs is split by consumption: 50 to 70% in Germany, at least 55% in Austria and usually 50 to 70% in Switzerland. If you choose “Central heating with a heating bill”, I therefore only count 60% of the saving."
   }
 };
